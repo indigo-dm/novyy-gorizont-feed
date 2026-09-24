@@ -73,4 +73,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GH_REPO: ${{ github.repository }}
-        run: gh issue comment "$ISSUE_NUMBER" --body "Настройки не применены: автоматическая проверка или сборка завершилась ошибкой. Запрос оставлен открытым для проверки."
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Настройки не применены: автоматическая проверка или сборка завершилась ошибкой. Запрос оставлен открытым для проверки."
