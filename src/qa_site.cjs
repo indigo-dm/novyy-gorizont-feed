@@ -15,6 +15,7 @@ const contentTypes = {
   '.css': 'text/css; charset=utf-8',
   '.js': 'application/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
+  '.jpg': 'image/jpeg',
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.ttf': 'font/truetype',
@@ -53,10 +54,20 @@ const contentTypes = {
   });
   const response = await page.goto(baseUrl, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.querySelector('#stat-source')?.textContent !== '—');
+  const inventoryData = await page.evaluate(() => fetch('inventory.json').then((response) => response.json()));
   const sourceAds = await page.locator('#stat-source').textContent();
-  const plans = await page.locator('#stat-plans').textContent();
+  const fullAds = await page.locator('#stat-plans').textContent();
   await page.click('[data-view="lots"]');
   const lotCards = await page.locator('.lot-card').count();
+  const paginationVisible = inventoryData.items.length <= 24 || await page.locator('#lots-pagination button').count() > 0;
+  const firstPageFirstId = await page.locator('.lot-card .lot-title span').first().textContent();
+  let paginationWorks = true;
+  if (inventoryData.items.length > 24) {
+    await page.getByRole('button', { name: '2', exact: true }).click();
+    const secondPageFirstId = await page.locator('.lot-card .lot-title span').first().textContent();
+    paginationWorks = Boolean(secondPageFirstId && secondPageFirstId !== firstPageFirstId);
+  }
+  await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-lots.png'), fullPage: true });
   await page.click('[data-view="promotions"]');
   await page.locator('[data-field="enabled"]').check();
   const matchingId = await page.evaluate(async () => {
@@ -90,11 +101,13 @@ const contentTypes = {
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
   await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && sourceAds === '218' && plans === '13' && lotCards === 13 && promoVisible && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(24, inventoryData.items.length) && paginationVisible && paginationWorks && promoVisible && !mobileOverflow && publishModalVisible,
     http_status: response ? response.status() : null,
     source_ads: sourceAds,
-    pilot_plans: plans,
-    lot_cards: lotCards,
+    full_demo_ads: fullAds,
+    displayed_lot_cards: lotCards,
+    pagination_visible: paginationVisible,
+    pagination_works: paginationWorks,
     live_promotion_preview: promoVisible,
     publish_confirmation: publishModalVisible,
     mobile_horizontal_overflow: mobileOverflow,

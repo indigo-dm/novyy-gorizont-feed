@@ -26,7 +26,8 @@
         <span class="status-dot"></span>
         <div><strong>Демо-режим</strong><small>Avito не подключён</small></div>
       </div>
-      <a class="sidebar-link" href="pilot-avito.xml" target="_blank" rel="noopener">Открыть XML ↗</a>
+      <a class="sidebar-link" href="full-avito-demo.xml" target="_blank" rel="noopener">Полный демо-XML ↗</a>
+      <a class="sidebar-link sidebar-link-secondary" href="pilot-avito.xml" target="_blank" rel="noopener">Пилотный XML ↗</a>
     </aside>
 
     <div class="workspace">
@@ -45,12 +46,12 @@
       <main>
         <section class="view active" id="view-dashboard">
           <div class="notice">
-            <div><strong>Безопасный пилот</strong><span>Изменения влияют только на демонстрационные планировки и не отправляются в Avito.</span></div>
-            <span class="notice-badge">PILOT</span>
+            <div><strong>Полный демонстрационный фид</strong><span>Все актуальные квартиры брендируются автоматически, но данные не отправляются в Avito.</span></div>
+            <span class="notice-badge">DEMO</span>
           </div>
           <div class="stats-grid">
             <article class="stat-card"><span>Квартир в Profitbase</span><strong id="stat-source">—</strong><small>актуальный источник</small></article>
-            <article class="stat-card"><span>Планировок в пилоте</span><strong id="stat-plans">—</strong><small>уникальные варианты</small></article>
+            <article class="stat-card"><span>Квартир в демо-фиде</span><strong id="stat-plans">—</strong><small>брендированные объявления</small></article>
             <article class="stat-card"><span>Активных акций</span><strong id="stat-promotions">—</strong><small>правила брендирования</small></article>
             <article class="stat-card"><span>Последнее обновление</span><strong class="stat-date" id="stat-updated">—</strong><small>московское время</small></article>
           </div>
@@ -59,7 +60,7 @@
               <div class="panel-heading"><div><p class="eyebrow">Как это работает</p><h2>От настройки до фида</h2></div></div>
               <ol class="flow-list">
                 <li><span>1</span><div><strong>Создайте правило</strong><small>Укажите текст акции и условия применения.</small></div></li>
-                <li><span>2</span><div><strong>Проверьте выборку</strong><small>Кабинет покажет подходящие планировки.</small></div></li>
+                <li><span>2</span><div><strong>Проверьте выборку</strong><small>Кабинет покажет подходящие квартиры.</small></div></li>
                 <li><span>3</span><div><strong>Посмотрите результат</strong><small>Плашка появится на макете до публикации.</small></div></li>
                 <li><span>4</span><div><strong>Подтвердите в GitHub</strong><small>После проверки фид пересоберётся автоматически.</small></div></li>
               </ol>
@@ -76,9 +77,10 @@
             <label><span>Дом</span><select id="filter-house"><option value="">Все дома</option></select></label>
             <label><span>Комнатность</span><select id="filter-rooms"><option value="">Любая</option></select></label>
             <label class="search-field"><span>Поиск по ID</span><input id="filter-search" type="search" placeholder="Например, 9290769"></label>
-            <div class="toolbar-count"><strong id="lots-count">0</strong><span>планировок</span></div>
+            <div class="toolbar-count"><strong id="lots-count">0</strong><span>квартир</span></div>
           </div>
           <div class="lots-grid" id="lots-grid"></div>
+          <nav class="pagination" id="lots-pagination" aria-label="Страницы квартир"></nav>
         </section>
 
         <section class="view" id="view-promotions">
@@ -97,7 +99,7 @@
         <section class="view" id="view-preview">
           <div class="preview-layout">
             <section class="panel preview-stage-panel">
-              <div class="panel-heading"><div><p class="eyebrow">Живой результат</p><h2>Предпросмотр карточки</h2></div><label class="compact-select"><span>Планировка</span><select id="preview-lot"></select></label></div>
+              <div class="panel-heading"><div><p class="eyebrow">Живой результат</p><h2>Предпросмотр карточки</h2></div><label class="compact-select"><span>Квартира</span><select id="preview-lot"></select></label></div>
               <div class="preview-stage">
                 <div class="preview-canvas" id="preview-canvas">
                   <img id="preview-image" src="" alt="Предпросмотр брендированной карточки">

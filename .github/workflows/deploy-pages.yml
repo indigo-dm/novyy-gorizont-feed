@@ -50,13 +50,13 @@ jobs:
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
         run: python src/fetch_feed.py
 
-      - name: Build pilot manifest and XML
+      - name: Build pilot and full demo feeds
         run: python src/build_pilot.py
 
       - name: Render branded images
         run: npm run render
 
-      - name: Validate pilot
+      - name: Validate demo feeds
         run: python src/validate_pilot.py
 
       - name: Build static site

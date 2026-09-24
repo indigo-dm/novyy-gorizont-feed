@@ -10,6 +10,8 @@
     activeRuleId: null,
     activeView: 'dashboard',
     filters: { house: '', rooms: '', search: '' },
+    page: 1,
+    pageSize: 24,
     previewId: null,
     dirty: false
   };
@@ -128,7 +130,7 @@
 
   function renderStats() {
     $('#stat-source').textContent = state.inventory.source_ads;
-    $('#stat-plans').textContent = state.inventory.unique_plans;
+    $('#stat-plans').textContent = state.inventory.full_ads || state.inventory.items.length;
     $('#stat-promotions').textContent = state.rules.filter(function (rule) { return rule.enabled; }).length;
     $('#stat-updated').textContent = formatDateTime(state.inventory.checked_at);
     if (state.inventory.items[0]) {
@@ -176,8 +178,31 @@
         (!search || item.id.toLowerCase().indexOf(search) >= 0);
     });
     $('#lots-count').textContent = items.length;
-    $('#lots-grid').innerHTML = items.length ? items.map(lotCard).join('') :
+    var pageCount = Math.max(1, Math.ceil(items.length / state.pageSize));
+    state.page = Math.min(Math.max(1, state.page), pageCount);
+    var start = (state.page - 1) * state.pageSize;
+    var visibleItems = items.slice(start, start + state.pageSize);
+    $('#lots-grid').innerHTML = visibleItems.length ? visibleItems.map(lotCard).join('') :
       '<div class="panel empty-state">По заданным фильтрам ничего не найдено.</div>';
+    var pagination = $('#lots-pagination');
+    if (items.length <= state.pageSize) {
+      pagination.innerHTML = '';
+    } else {
+      var buttons = '<button data-page="' + (state.page - 1) + '" ' + (state.page === 1 ? 'disabled' : '') + '>←</button>';
+      for (var page = 1; page <= pageCount; page += 1) {
+        buttons += '<button class="' + (page === state.page ? 'active' : '') + '" data-page="' + page + '">' + page + '</button>';
+      }
+      buttons += '<button data-page="' + (state.page + 1) + '" ' + (state.page === pageCount ? 'disabled' : '') + '>→</button>';
+      pagination.innerHTML = buttons;
+      $$('[data-page]', pagination).forEach(function (button) {
+        button.addEventListener('click', function () {
+          if (button.disabled) return;
+          state.page = Number(button.dataset.page);
+          renderLots();
+          document.getElementById('view-lots').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
     $$('[data-preview]', $('#lots-grid')).forEach(function (button) {
       button.addEventListener('click', function () {
         state.previewId = button.dataset.preview;
@@ -192,7 +217,7 @@
       var count = state.inventory.items.filter(function (item) { return ruleMatches(item, rule, false); }).length;
       return '<button class="rule-item ' + (rule.id === state.activeRuleId ? 'active' : '') + '" data-rule-id="' + esc(rule.id) + '">' +
         '<span class="rule-state ' + (rule.enabled ? 'on' : '') + '"></span><span class="rule-copy"><strong>' +
-        esc((index + 1) + '. ' + rule.name) + '</strong><small>' + count + ' планировок · ' + (rule.enabled ? 'включена' : 'выключена') +
+        esc((index + 1) + '. ' + rule.name) + '</strong><small>' + count + ' квартир · ' + (rule.enabled ? 'включена' : 'выключена') +
         '</small></span></button>';
     }).join('');
     $$('[data-rule-id]', $('#rules-list')).forEach(function (button) {
@@ -251,14 +276,14 @@
       (rule.area_max == null ? '' : esc(rule.area_max)) + '"></div></div>' +
       '<div class="field"><span>Период действия</span><div class="field-row"><input type="date" data-field="starts_at" value="' + esc(rule.starts_at) +
       '"><input type="date" data-field="ends_at" value="' + esc(rule.ends_at) + '"></div></div></div>' +
-      '<div class="match-block"><div class="match-heading"><div><p class="eyebrow">Результат условия</p><h2>Подходящие планировки</h2></div><div><strong>' +
+      '<div class="match-block"><div class="match-heading"><div><p class="eyebrow">Результат условия</p><h2>Подходящие квартиры</h2></div><div><strong>' +
       finalMatches.length + '</strong><span> из ' + groupMatches.length + ' после исключений</span></div></div>' +
       '<div class="match-list">' + (groupMatches.length ? groupMatches.map(function (item) {
         var excluded = rule.exclude_ids.indexOf(String(item.id)) >= 0;
         return '<div class="match-item"><div><strong>' + esc(item.house + ' · ' + item.rooms + 'к · ' + formatArea(item.area)) +
           '</strong><small>ID ' + esc(item.id) + '</small></div><button class="exclude-button ' + (excluded ? 'excluded' : '') +
           '" data-exclude="' + esc(item.id) + '">' + (excluded ? 'Вернуть' : 'Исключить') + '</button></div>';
-      }).join('') : '<div class="empty-state">Нет подходящих планировок.</div>') + '</div></div>';
+      }).join('') : '<div class="empty-state">Нет подходящих квартир.</div>') + '</div></div>';
 
     $$('[data-field]', editor).forEach(function (input) {
       var eventName = input.type === 'text' ? 'input' : 'change';
@@ -327,7 +352,7 @@
       $('#live-promo-text').textContent = rule.text;
       $('#applied-rule').innerHTML = '<span>Применяется правило</span><strong>' + esc(rule.name) + ': ' + esc(rule.text) + '</strong>';
     } else {
-      $('#applied-rule').innerHTML = '<span>Акция</span><strong>К этой планировке не применяется</strong>';
+      $('#applied-rule').innerHTML = '<span>Акция</span><strong>К этой квартире не применяется</strong>';
     }
   }
 
@@ -369,7 +394,7 @@
     var enabled = state.rules.filter(function (rule) { return rule.enabled; });
     var affected = state.inventory.items.filter(function (item) { return Boolean(appliedRule(item)); }).length;
     $('#publish-summary').innerHTML = '<strong>' + enabled.length + ' активных правил</strong><br>' +
-      affected + ' из ' + state.inventory.items.length + ' тестовых планировок получат акцию.';
+      affected + ' из ' + state.inventory.items.length + ' квартир получат акцию.';
     $('#publish-modal').classList.remove('hidden');
   }
 
@@ -407,9 +432,9 @@
     $$('[data-go]').forEach(function (button) {
       button.addEventListener('click', function () { navigate(button.dataset.go); });
     });
-    $('#filter-house').addEventListener('change', function (event) { state.filters.house = event.target.value; renderLots(); });
-    $('#filter-rooms').addEventListener('change', function (event) { state.filters.rooms = event.target.value; renderLots(); });
-    $('#filter-search').addEventListener('input', function (event) { state.filters.search = event.target.value; renderLots(); });
+    $('#filter-house').addEventListener('change', function (event) { state.filters.house = event.target.value; state.page = 1; renderLots(); });
+    $('#filter-rooms').addEventListener('change', function (event) { state.filters.rooms = event.target.value; state.page = 1; renderLots(); });
+    $('#filter-search').addEventListener('input', function (event) { state.filters.search = event.target.value; state.page = 1; renderLots(); });
     $('#preview-lot').addEventListener('change', function (event) { state.previewId = event.target.value; renderPreview(); });
     $('#add-rule').addEventListener('click', function () {
       if (state.rules.length >= 10) { showToast('Можно создать не более 10 правил.'); return; }

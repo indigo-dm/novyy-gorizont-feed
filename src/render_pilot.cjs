@@ -9,10 +9,12 @@ try {
 const { chromium } = playwright;
 
 const root = path.resolve(__dirname, '..');
-const manifest = JSON.parse(fs.readFileSync(path.join(root, 'output', 'pilot-manifest.json'), 'utf8'));
+const manifest = JSON.parse(fs.readFileSync(path.join(root, 'output', 'full-manifest.json'), 'utf8'));
 const config = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
 const outputDir = path.join(root, 'output', 'images');
 const previewDir = path.join(root, 'output', 'previews');
+fs.rmSync(outputDir, { recursive: true, force: true });
+fs.rmSync(previewDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
 fs.mkdirSync(previewDir, { recursive: true });
 
@@ -66,11 +68,13 @@ function htmlFor(item, includePromotion = true) {
   for (const item of manifest.items) {
     await page.setContent(htmlFor(item, false), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
-    await page.screenshot({ path: path.join(previewDir, `${item.id}.png`), type: 'png' });
-    await page.setContent(htmlFor(item, true), { waitUntil: 'load' });
-    await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({ path: path.join(previewDir, `${item.id}.jpg`), type: 'jpeg', quality: 82 });
+    if (item.promotion) {
+      await page.setContent(htmlFor(item, true), { waitUntil: 'load' });
+      await page.evaluate(() => document.fonts.ready);
+    }
     await page.screenshot({ path: path.join(outputDir, `${item.id}.png`), type: 'png' });
-    console.log(`${item.id}\t${item.house}\t${item.rooms}к\t${item.area} м²`);
   }
   await browser.close();
+  console.log(JSON.stringify({ rendered_ads: manifest.items.length, final_images: manifest.items.length, preview_images: manifest.items.length }));
 })();
