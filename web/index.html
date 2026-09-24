@@ -4,36 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="description" content="Кабинет управления демонстрационным брендированным фидом ЖК Новый Горизонт">
-  <title>Новый Горизонт — управление фидом</title>
+  <meta name="description" content="Feed Studio — управление брендированными фидами объектов недвижимости">
+  <title>Feed Studio — управление фидами</title>
   <link rel="icon" href="assets/logo-gold.svg" type="image/svg+xml">
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <a class="brand" href="#dashboard" aria-label="Новый Горизонт">
-        <img src="assets/logo-gold.svg" alt="Новый Горизонт">
+      <a class="brand" href="#dashboard" aria-label="Feed Studio">
+        <img id="sidebar-logo" src="assets/logo-gold.svg" alt="Логотип выбранного объекта">
         <span>Feed Studio</span>
       </a>
+      <div class="project-switcher">
+        <label for="project-select">Объект</label>
+        <div><select id="project-select" aria-label="Выбранный объект"></select><button id="add-project" aria-label="Добавить объект">+</button></div>
+      </div>
       <nav class="nav" aria-label="Разделы кабинета">
         <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span><span>Обзор</span></button>
         <button class="nav-item" data-view="lots"><span class="nav-icon">▦</span><span>Квартиры</span></button>
         <button class="nav-item" data-view="promotions"><span class="nav-icon">%</span><span>Акции</span></button>
+        <button class="nav-item" data-view="assets"><span class="nav-icon">◇</span><span>Материалы</span></button>
         <button class="nav-item" data-view="preview"><span class="nav-icon">◉</span><span>Предпросмотр</span></button>
       </nav>
       <div class="sidebar-note">
         <span class="status-dot"></span>
         <div><strong>Демо-режим</strong><small>Avito не подключён</small></div>
       </div>
-      <a class="sidebar-link" href="full-avito-demo.xml" target="_blank" rel="noopener">Полный демо-XML ↗</a>
-      <a class="sidebar-link sidebar-link-secondary" href="pilot-avito.xml" target="_blank" rel="noopener">Пилотный XML ↗</a>
+      <a class="sidebar-link" id="full-feed-link" href="full-avito-demo.xml" target="_blank" rel="noopener">Полный демо-XML ↗</a>
+      <a class="sidebar-link sidebar-link-secondary" id="pilot-feed-link" href="pilot-avito.xml" target="_blank" rel="noopener">Пилотный XML ↗</a>
     </aside>
 
     <div class="workspace">
       <header class="topbar">
         <div>
-          <p class="eyebrow">ЖК «Новый Горизонт»</p>
+          <p class="eyebrow" id="project-name">Выбранный объект</p>
           <h1 id="page-title">Обзор</h1>
         </div>
         <div class="top-actions">
@@ -96,6 +101,29 @@
           </div>
         </section>
 
+        <section class="view" id="view-assets">
+          <div class="notice">
+            <div><strong>Материалы выбранного объекта</strong><span>Файлы хранятся в GitHub и используются только при сборке фида этого ЖК.</span></div>
+            <span class="notice-badge">GITHUB</span>
+          </div>
+          <div class="assets-layout">
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">Фирменные материалы</p><h2>Логотип и ключевой рендер</h2></div><a class="button button-primary button-link" id="upload-assets" href="#" target="_blank" rel="noopener">Загрузить материалы</a></div>
+              <div class="asset-grid" id="asset-grid"></div>
+            </section>
+            <aside class="panel asset-guide">
+              <p class="eyebrow">Порядок обновления</p>
+              <h2>Как заменить файл</h2>
+              <ol class="flow-list">
+                <li><span>1</span><div><strong>Откройте загрузку</strong><small>GitHub откроет папку выбранного ЖК.</small></div></li>
+                <li><span>2</span><div><strong>Добавьте новый файл</strong><small>Используйте имя, указанное в карточке материала.</small></div></li>
+                <li><span>3</span><div><strong>Подтвердите коммит</strong><small>GitHub сохранит автора и историю изменения.</small></div></li>
+                <li><span>4</span><div><strong>Пересоберите фид</strong><small>После сборки новый материал появится во всех карточках объекта.</small></div></li>
+              </ol>
+            </aside>
+          </div>
+        </section>
+
         <section class="view" id="view-preview">
           <div class="preview-layout">
             <section class="panel preview-stage-panel">
@@ -130,6 +158,21 @@
       <div class="modal-actions">
         <button class="button button-secondary" id="cancel-publish">Отмена</button>
         <button class="button button-primary" id="confirm-publish">Перейти к подтверждению</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop hidden" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="modal">
+      <p class="eyebrow">Новый объект Profitbase</p>
+      <h2 id="project-modal-title">Добавить ЖК</h2>
+      <p>Сначала создадим изолированную папку проекта. Закрытая ссылка Profitbase и материалы подключаются на следующем шаге.</p>
+      <div class="project-form">
+        <label class="field"><span>Название объекта</span><input id="new-project-name" maxlength="80" placeholder="Например, ЖК Южный Берег"></label>
+        <label class="field"><span>Системное имя</span><input id="new-project-slug" maxlength="48" placeholder="yuzhnyy-bereg"></label>
+      </div>
+      <div class="modal-actions">
+        <button class="button button-secondary" id="cancel-project">Отмена</button>
+        <button class="button button-primary" id="confirm-project">Создать через GitHub</button>
       </div>
     </div>
   </div>

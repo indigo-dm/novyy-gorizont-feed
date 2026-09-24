@@ -4,9 +4,9 @@ import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
+from project_context import CONFIG_PATH, OUTPUT_DIR, WORK_DIR
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "output"
+OUTPUT = OUTPUT_DIR
 PILOT_MANIFEST = OUTPUT / "pilot-manifest.json"
 FULL_MANIFEST = OUTPUT / "full-manifest.json"
 PILOT_XML = OUTPUT / "pilot-avito.xml"
@@ -19,7 +19,7 @@ def xml_ids(path: Path) -> list[str]:
 
 
 def main() -> None:
-    config = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
+    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     pilot = json.loads(PILOT_MANIFEST.read_text(encoding="utf-8"))
     full = json.loads(FULL_MANIFEST.read_text(encoding="utf-8"))
     pilot_ids = [str(item["id"]) for item in pilot["items"]]
@@ -66,7 +66,7 @@ def main() -> None:
                 errors.append(f"Redundant Address remains for ad {expected_id} in {path.name}")
 
     for item in full["items"]:
-        plan = ROOT / str(item["plan_file"])
+        plan = WORK_DIR / str(item["plan_file"])
         if not plan.exists() or plan.stat().st_size == 0:
             errors.append(f"Missing plan image: {plan}")
 

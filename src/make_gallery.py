@@ -1,12 +1,11 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
+from project_context import OUTPUT_DIR, ROOT
 
-ROOT = Path(__file__).resolve().parents[1]
-manifest = json.loads((ROOT / "output" / "pilot-manifest.json").read_text(encoding="utf-8"))
+manifest = json.loads((OUTPUT_DIR / "pilot-manifest.json").read_text(encoding="utf-8"))
 items = manifest["items"]
 
 font_path = ROOT / "assets" / "Manrope-Variable.ttf"
@@ -32,7 +31,7 @@ for index, item in enumerate(items):
     row, col = divmod(index, cols)
     x = margin + col * (card_w + gap)
     y = header_h + margin + row * (card_h + gap)
-    image = Image.open(ROOT / "output" / item["output_file"]).convert("RGB")
+    image = Image.open(OUTPUT_DIR / item["output_file"]).convert("RGB")
     thumb = ImageOps.fit(image, (thumb_w, thumb_h), method=Image.Resampling.LANCZOS)
     canvas.paste(thumb, (x, y))
     draw.rectangle((x, y + thumb_h, x + card_w, y + card_h), fill="#00605C")
@@ -40,6 +39,6 @@ for index, item in enumerate(items):
     label = f"{item['house']} · {item['rooms']}к · {area} м² · ID {item['id']}"
     draw.text((x + 15, y + thumb_h + 13), label, font=label_font, fill="white")
 
-out = ROOT / "output" / "pilot-gallery.jpg"
+out = OUTPUT_DIR / "pilot-gallery.jpg"
 canvas.save(out, quality=91, optimize=True)
 print(out)

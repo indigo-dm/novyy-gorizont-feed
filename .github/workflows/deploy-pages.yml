@@ -3,6 +3,9 @@ name: Build and deploy pilot feed
 on:
   workflow_dispatch:
   workflow_call:
+  push:
+    paths:
+      - "projects/*/assets/**"
   schedule:
     - cron: "17 * * * *"
       timezone: "Europe/Moscow"
@@ -45,22 +48,11 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Download Profitbase feed
+      - name: Build and validate all project feeds
         env:
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
-        run: python src/fetch_feed.py
-
-      - name: Build pilot and full demo feeds
-        run: python src/build_pilot.py
-
-      - name: Render branded images
-        run: npm run render
-
-      - name: Validate demo feeds
-        run: python src/validate_pilot.py
-
-      - name: Build static site
-        run: python src/build_site.py
+          PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
+        run: python src/build_all.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v6

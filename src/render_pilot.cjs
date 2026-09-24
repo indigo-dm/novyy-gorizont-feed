@@ -9,10 +9,14 @@ try {
 const { chromium } = playwright;
 
 const root = path.resolve(__dirname, '..');
-const manifest = JSON.parse(fs.readFileSync(path.join(root, 'output', 'full-manifest.json'), 'utf8'));
-const config = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
-const outputDir = path.join(root, 'output', 'images');
-const previewDir = path.join(root, 'output', 'previews');
+const registry = JSON.parse(fs.readFileSync(path.join(root, 'projects.json'), 'utf8'));
+const projectSlug = process.env.PROJECT_SLUG || registry.default_project;
+const projectDir = path.join(root, 'projects', projectSlug);
+const workDir = path.join(root, 'work', projectSlug);
+const manifest = JSON.parse(fs.readFileSync(path.join(workDir, 'output', 'full-manifest.json'), 'utf8'));
+const config = JSON.parse(fs.readFileSync(path.join(projectDir, 'config.json'), 'utf8'));
+const outputDir = path.join(workDir, 'output', 'images');
+const previewDir = path.join(workDir, 'output', 'previews');
 fs.rmSync(outputDir, { recursive: true, force: true });
 fs.rmSync(previewDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
@@ -33,11 +37,11 @@ const formatPrice = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionD
 const roomTitle = (rooms) => `${rooms}-комнатная квартира`;
 
 const fontUrl = dataUrl(path.join(root, 'assets', 'Manrope-Variable.ttf'));
-const logoUrl = dataUrl(path.join(root, 'assets', 'logo-gold.svg'));
-const renderUrl = dataUrl(path.join(root, 'assets', 'selected-render.jpg'));
+const logoUrl = dataUrl(path.join(projectDir, 'assets', config.brand.logo));
+const renderUrl = dataUrl(path.join(projectDir, 'assets', config.brand.key_render));
 
 function htmlFor(item, includePromotion = true) {
-  const planUrl = dataUrl(path.join(root, item.plan_file));
+  const planUrl = dataUrl(path.join(workDir, item.plan_file));
   const promo = includePromotion && item.promotion
     ? `<div class="promo"><span>${esc(item.promotion.label)}</span>${esc(item.promotion.text)}</div>`
     : '';

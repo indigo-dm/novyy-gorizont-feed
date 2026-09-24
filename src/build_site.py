@@ -2,38 +2,45 @@ from __future__ import annotations
 
 import json
 import shutil
-from pathlib import Path
+
+from project_context import (
+    ASSETS_DIR,
+    CONFIG_PATH,
+    OUTPUT_DIR,
+    PROJECT,
+    PROJECT_SLUG,
+    ROOT,
+    RULES_PATH,
+    REGISTRY,
+)
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "output"
 SITE = ROOT / "site"
-WEB = ROOT / "web"
-ASSETS = ROOT / "assets"
+PROJECT_SITE = SITE / "projects" / PROJECT_SLUG
 
-manifest = json.loads((OUTPUT / "full-manifest.json").read_text(encoding="utf-8"))
-rules = json.loads((ROOT / "promotion-rules.json").read_text(encoding="utf-8"))
+manifest = json.loads((OUTPUT_DIR / "full-manifest.json").read_text(encoding="utf-8"))
+rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))
+config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
-if SITE.exists():
-    shutil.rmtree(SITE)
-(SITE / "images").mkdir(parents=True)
-(SITE / "previews").mkdir(parents=True)
-(SITE / "assets").mkdir(parents=True)
+if PROJECT_SITE.exists():
+    shutil.rmtree(PROJECT_SITE)
+(PROJECT_SITE / "images").mkdir(parents=True)
+(PROJECT_SITE / "previews").mkdir(parents=True)
+(PROJECT_SITE / "assets").mkdir(parents=True)
 
 for item in manifest["items"]:
-    source = OUTPUT / item["output_file"]
-    shutil.copy2(source, SITE / "images" / source.name)
-    preview = OUTPUT / "previews" / f"{item['id']}.jpg"
-    shutil.copy2(preview, SITE / "previews" / preview.name)
+    source = OUTPUT_DIR / item["output_file"]
+    shutil.copy2(source, PROJECT_SITE / "images" / source.name)
+    preview = OUTPUT_DIR / "previews" / f"{item['id']}.jpg"
+    shutil.copy2(preview, PROJECT_SITE / "previews" / preview.name)
 
-for filename in ("index.html", "app.css", "app.js"):
-    shutil.copy2(WEB / filename, SITE / filename)
-shutil.copy2(ASSETS / "Manrope-Variable.ttf", SITE / "assets" / "Manrope-Variable.ttf")
-shutil.copy2(ASSETS / "logo-gold.svg", SITE / "assets" / "logo-gold.svg")
-shutil.copy2(OUTPUT / "pilot-avito.xml", SITE / "pilot-avito.xml")
-shutil.copy2(OUTPUT / "full-avito-demo.xml", SITE / "full-avito-demo.xml")
-(SITE / ".nojekyll").write_text("", encoding="utf-8")
+if ASSETS_DIR.exists():
+    shutil.copytree(ASSETS_DIR, PROJECT_SITE / "assets", dirs_exist_ok=True)
 
+shutil.copy2(OUTPUT_DIR / "pilot-avito.xml", PROJECT_SITE / "pilot-avito.xml")
+shutil.copy2(OUTPUT_DIR / "full-avito-demo.xml", PROJECT_SITE / "full-avito-demo.xml")
+
+public_prefix = f"projects/{PROJECT_SLUG}"
 public_items = []
 for item in manifest["items"]:
     public_items.append({
@@ -46,23 +53,22 @@ for item in manifest["items"]:
         "floors": str(item["floors"]),
         "price": str(item["price"]),
         "decoration": item["decoration"],
-        "image": f"previews/{item['id']}.jpg",
-        "final_image": f"images/{item['id']}.png",
+        "image": f"{public_prefix}/previews/{item['id']}.jpg",
+        "final_image": f"{public_prefix}/images/{item['id']}.png",
         "promotion": item.get("promotion"),
     })
 
-(SITE / "inventory.json").write_text(json.dumps({
+inventory = {
+    "slug": PROJECT_SLUG,
     "project": manifest["project"],
     "checked_at": manifest["checked_at"],
     "source_ads": manifest["source_ads"],
     "full_ads": manifest["full_ads"],
     "unique_plans": manifest["unique_plans"],
     "items": public_items,
-}, ensure_ascii=False, indent=2), encoding="utf-8")
-(SITE / "settings.json").write_text(
-    json.dumps(rules, ensure_ascii=False, indent=2), encoding="utf-8"
-)
-(SITE / "status.json").write_text(json.dumps({
+}
+status = {
+    "slug": PROJECT_SLUG,
     "project": manifest["project"],
     "checked_at": manifest["checked_at"],
     "source_ads": manifest["source_ads"],
@@ -71,5 +77,88 @@ for item in manifest["items"]:
     "active_promotions": sum(1 for rule in rules.get("rules", []) if rule.get("enabled")),
     "publish_ready": False,
     "mode": "full-demo",
-}, ensure_ascii=False, indent=2), encoding="utf-8")
-print(SITE)
+}
+brand_assets = [
+    {
+        "key": "logo",
+        "name": "Логотип",
+        "description": "Основной логотип объекта для карточек.",
+        "filename": config["brand"].get("logo", "logo.svg"),
+        "required": True,
+    },
+    {
+        "key": "key_render",
+        "name": "Ключевой рендер",
+        "description": "Главное изображение проекта в левой части макета.",
+        "filename": config["brand"].get("key_render", "key-render.jpg"),
+        "required": True,
+    },
+]
+for asset in brand_assets:
+    path = ASSETS_DIR / asset["filename"]
+    asset["exists"] = path.exists()
+    asset["url"] = f"{public_prefix}/assets/{asset['filename']}" if path.exists() else ""
+
+assets_manifest = {
+    "project": manifest["project"],
+    "slug": PROJECT_SLUG,
+    "upload_url": (
+        "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/"
+        f"projects/{PROJECT_SLUG}/assets"
+    ),
+    "items": brand_assets,
+    "brand": {
+        "green": config["brand"]["green"],
+        "green_dark": config["brand"]["green_dark"],
+        "gold": config["brand"]["gold"],
+        "font": config["brand"]["font"],
+    },
+}
+
+for filename, payload in (
+    ("inventory.json", inventory),
+    ("settings.json", rules),
+    ("status.json", status),
+    ("assets.json", assets_manifest),
+):
+    (PROJECT_SITE / filename).write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+if PROJECT.get("compatibility_root"):
+    for filename in (
+        "pilot-avito.xml",
+        "full-avito-demo.xml",
+        "inventory.json",
+        "settings.json",
+        "status.json",
+        "assets.json",
+    ):
+        shutil.copy2(PROJECT_SITE / filename, SITE / filename)
+
+registry_path = SITE / "projects.json"
+if registry_path.exists():
+    public_registry = json.loads(registry_path.read_text(encoding="utf-8"))
+else:
+    public_registry = {
+        "version": 1,
+        "default_project": REGISTRY["default_project"],
+        "projects": [
+            {
+                "slug": item["slug"],
+                "name": item["name"],
+                "status": item.get("status", "setup"),
+                "available": False,
+                "base": f"projects/{item['slug']}",
+            }
+            for item in REGISTRY["projects"]
+        ],
+    }
+for item in public_registry["projects"]:
+    if item["slug"] == PROJECT_SLUG:
+        item["available"] = True
+registry_path.write_text(
+    json.dumps(public_registry, ensure_ascii=False, indent=2), encoding="utf-8"
+)
+
+print(json.dumps({"project": PROJECT_SLUG, "site": str(PROJECT_SITE)}, ensure_ascii=False))

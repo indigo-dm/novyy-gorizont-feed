@@ -1,4 +1,4 @@
-name: Apply feed settings
+name: Add Feed Studio project
 
 on:
   issues:
@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   apply:
-    if: github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]')
+    if: github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-project]')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -26,24 +26,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate and apply settings
+      - name: Validate and create project
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-        run: python src/apply_issue_settings.py
+        run: python src/apply_project_request.py
 
-      - name: Commit settings
+      - name: Commit project
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add projects/*/promotion-rules.json
-          if git diff --cached --quiet; then
-            echo "Settings are already current."
-          else
-            git commit -m "Apply feed settings from issue #${ISSUE_NUMBER}"
-            git push origin main
-          fi
+          git add projects.json projects/
+          git commit -m "Create Feed Studio project from issue #${ISSUE_NUMBER}"
+          git push origin main
 
   deploy:
     needs: apply
@@ -60,11 +56,11 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "Настройки проверены и применены. Демонстрационный фид успешно пересобран."
+          gh issue comment "$ISSUE_NUMBER" --body "Объект создан в Feed Studio. Добавьте материалы и настройте закрытую ссылку Profitbase, затем объект можно активировать."
           gh issue close "$ISSUE_NUMBER"
 
   report-failure:
-    if: failure() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]')
+    if: failure() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-project]')
     needs: [apply, deploy]
     runs-on: ubuntu-latest
     steps:
@@ -74,4 +70,4 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "Настройки не применены: автоматическая проверка или сборка завершилась ошибкой. Запрос оставлен открытым для проверки."
+          gh issue comment "$ISSUE_NUMBER" --body "Объект не создан: автоматическая проверка завершилась ошибкой."

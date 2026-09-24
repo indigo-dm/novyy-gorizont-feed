@@ -2,6 +2,7 @@ input/avito.xml
 cache/plans/
 output/
 site/
+work/
 node_modules/
 .env
 *.log

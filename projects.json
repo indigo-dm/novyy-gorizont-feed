@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "default_project": "novyy-gorizont",
+  "projects": [
+    {
+      "slug": "novyy-gorizont",
+      "name": "ЖК Новый Горизонт",
+      "status": "active",
+      "source_feed_secret": "PROFITBASE_FEED_URL",
+      "compatibility_root": true
+    }
+  ]
+}

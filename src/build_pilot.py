@@ -8,15 +8,13 @@ from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
+from project_context import CONFIG_PATH, INPUT_DIR, OUTPUT_DIR, RULES_PATH, WORK_DIR
 
-ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = ROOT / "config.json"
-RULES_PATH = ROOT / "promotion-rules.json"
-INPUT_XML = ROOT / "input" / "avito.xml"
-PILOT_MANIFEST_PATH = ROOT / "output" / "pilot-manifest.json"
-FULL_MANIFEST_PATH = ROOT / "output" / "full-manifest.json"
-PILOT_XML_PATH = ROOT / "output" / "pilot-avito.xml"
-FULL_XML_PATH = ROOT / "output" / "full-avito-demo.xml"
+INPUT_XML = INPUT_DIR / "avito.xml"
+PILOT_MANIFEST_PATH = OUTPUT_DIR / "pilot-manifest.json"
+FULL_MANIFEST_PATH = OUTPUT_DIR / "full-manifest.json"
+PILOT_XML_PATH = OUTPUT_DIR / "pilot-avito.xml"
+FULL_XML_PATH = OUTPUT_DIR / "full-avito-demo.xml"
 
 
 def node_text(parent: ET.Element, name: str, default: str = "") -> str:
@@ -148,7 +146,7 @@ def main() -> None:
             raise ValueError(f"Ad {ad_id} has no images")
         plan_url = urls[0]
         plan_file = f"cache/plans/{local_plan_name(plan_url)}"
-        plan_path = ROOT / plan_file
+        plan_path = WORK_DIR / plan_file
         if not plan_path.exists() or plan_path.stat().st_size == 0:
             download(plan_url, plan_path)
         house_id = node_text(ad, "NewDevelopmentId")

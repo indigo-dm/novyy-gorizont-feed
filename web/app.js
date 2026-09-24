@@ -2,10 +2,12 @@
   'use strict';
 
   var REPOSITORY = 'indigo-dm/novyy-gorizont-feed';
-  var DRAFT_KEY = 'novyy-gorizont-feed-rules-v1';
   var state = {
+    registry: null,
+    project: null,
     inventory: null,
     status: null,
+    assets: null,
     rules: [],
     activeRuleId: null,
     activeView: 'dashboard',
@@ -24,6 +26,7 @@
       .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
   };
   var clone = function (value) { return JSON.parse(JSON.stringify(value)); };
+  var draftKey = function () { return 'feed-studio-rules-v1-' + (state.project ? state.project.slug : 'default'); };
   var formatPrice = function (value) {
     return new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Number(value)) + ' ₽';
   };
@@ -91,7 +94,7 @@
   }
 
   function saveDraft(showMessage) {
-    localStorage.setItem(DRAFT_KEY, JSON.stringify({ version: 1, rules: state.rules }));
+    localStorage.setItem(draftKey(), JSON.stringify({ version: 1, rules: state.rules }));
     setDirty(false);
     if (showMessage) showToast('Черновик сохранён в этом браузере');
   }
@@ -122,10 +125,40 @@
     $$('.view').forEach(function (section) {
       section.classList.toggle('active', section.id === 'view-' + view);
     });
-    var titles = { dashboard: 'Обзор', lots: 'Квартиры', promotions: 'Акции', preview: 'Предпросмотр' };
+    var titles = { dashboard: 'Обзор', lots: 'Квартиры', promotions: 'Акции', assets: 'Материалы', preview: 'Предпросмотр' };
     $('#page-title').textContent = titles[view] || 'Управление фидом';
     window.location.hash = view;
     if (view === 'preview') renderPreview();
+    if (view === 'assets') renderAssets();
+  }
+
+  function renderProjectChrome() {
+    if (!state.project || !state.inventory) return;
+    $('#project-name').textContent = state.project.name;
+    document.title = state.project.name + ' — Feed Studio';
+    $('#project-select').value = state.project.slug;
+    $('#full-feed-link').href = state.project.base + '/full-avito-demo.xml';
+    $('#pilot-feed-link').href = state.project.base + '/pilot-avito.xml';
+    if (state.assets && state.assets.brand) {
+      document.documentElement.style.setProperty('--green', state.assets.brand.green);
+      document.documentElement.style.setProperty('--green-dark', state.assets.brand.green_dark);
+      document.documentElement.style.setProperty('--gold', state.assets.brand.gold);
+    }
+    var logo = state.assets && state.assets.items.find(function (item) { return item.key === 'logo'; });
+    $('#sidebar-logo').src = logo && logo.url ? logo.url : 'assets/logo-gold.svg';
+  }
+
+  function renderAssets() {
+    if (!state.assets) return;
+    $('#upload-assets').href = state.assets.upload_url;
+    $('#asset-grid').innerHTML = state.assets.items.map(function (asset) {
+      var preview = asset.exists ? '<img src="' + esc(asset.url) + '" alt="' + esc(asset.name) + '">' :
+        '<div class="asset-missing">Файл не загружен</div>';
+      return '<article class="asset-card"><div class="asset-preview">' + preview + '</div><div class="asset-copy"><div><strong>' +
+        esc(asset.name) + '</strong><span class="asset-status ' + (asset.exists ? 'ready' : '') + '">' +
+        (asset.exists ? 'Готово' : 'Требуется') + '</span></div><p>' + esc(asset.description) + '</p><code>' +
+        esc(asset.filename) + '</code></div></article>';
+    }).join('');
   }
 
   function renderStats() {
@@ -357,15 +390,17 @@
   }
 
   function renderAll() {
+    renderProjectChrome();
     renderStats();
     renderLots();
     renderRuleList();
     renderRuleEditor();
+    renderAssets();
     renderPreview();
   }
 
   function settingsPayload() {
-    return { version: 1, rules: state.rules.map(normalizeRule) };
+    return { version: 1, project: state.project.slug, rules: state.rules.map(normalizeRule) };
   }
 
   function validateSettings() {
@@ -403,7 +438,7 @@
     var body = 'Запрос на обновление настроек демонстрационного фида.\n\n' +
       'FEED_SETTINGS_JSON_START\n' + payload + '\nFEED_SETTINGS_JSON_END\n\n' +
       'Запрос сформирован кабинетом Feed Studio. Workflow применит его только от владельца репозитория.';
-    var title = '[feed-settings] Обновить акции';
+    var title = '[feed-settings] ' + state.project.name + ': обновить акции';
     var url = 'https://github.com/' + REPOSITORY + '/issues/new?title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(body);
     if (url.length > 7800) {
       showToast('Настройки слишком объёмные для отправки. Скачайте JSON и сократите исключения.');
@@ -420,9 +455,49 @@
     var blob = new Blob([data], { type: 'application/json;charset=utf-8' });
     var link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'promotion-rules.json';
+    link.download = state.project.slug + '-promotion-rules.json';
     link.click();
     URL.revokeObjectURL(link.href);
+  }
+
+  function slugify(value) {
+    var map = { а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'e', ж: 'zh', з: 'z', и: 'i', й: 'y', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o', п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'h', ц: 'ts', ч: 'ch', ш: 'sh', щ: 'sch', ы: 'y', э: 'e', ю: 'yu', я: 'ya', ь: '', ъ: '' };
+    return String(value || '').toLowerCase().split('').map(function (char) { return map[char] == null ? char : map[char]; }).join('')
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 48);
+  }
+
+  function openProjectModal() {
+    $('#new-project-slug').dataset.edited = '';
+    $('#new-project-name').value = '';
+    $('#new-project-slug').value = '';
+    $('#project-modal').classList.remove('hidden');
+    $('#new-project-name').focus();
+  }
+
+  function syncProjectIdentifiers() {
+    var slug = slugify($('#new-project-name').value);
+    if (!$('#new-project-slug').dataset.edited) $('#new-project-slug').value = slug;
+  }
+
+  function confirmProject() {
+    var name = $('#new-project-name').value.trim();
+    var slug = $('#new-project-slug').value.trim();
+    if (!name || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      showToast('Проверьте название и системное имя объекта.');
+      return;
+    }
+    if (state.registry.projects.some(function (project) { return project.slug === slug; })) {
+      showToast('Объект с таким системным именем уже существует.');
+      return;
+    }
+    var payload = { version: 1, name: name, slug: slug };
+    var body = 'Запрос на создание нового объекта Feed Studio.\n\n' +
+      'FEED_PROJECT_JSON_START\n' + JSON.stringify(payload, null, 2) + '\nFEED_PROJECT_JSON_END\n\n' +
+      'После создания нужно добавить закрытую ссылку Profitbase и фирменные материалы.';
+    var title = '[feed-project] Добавить ' + name;
+    window.open('https://github.com/' + REPOSITORY + '/issues/new?title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(body), '_blank', 'noopener');
+    $('#project-modal').classList.add('hidden');
+    showToast('Подтвердите создание объекта в GitHub');
   }
 
   function bindStaticEvents() {
@@ -451,30 +526,71 @@
     $('#publish-modal').addEventListener('click', function (event) {
       if (event.target.id === 'publish-modal') $('#publish-modal').classList.add('hidden');
     });
+    $('#project-select').addEventListener('change', function (event) { loadProject(event.target.value); });
+    $('#add-project').addEventListener('click', openProjectModal);
+    $('#cancel-project').addEventListener('click', function () { $('#project-modal').classList.add('hidden'); });
+    $('#confirm-project').addEventListener('click', confirmProject);
+    $('#project-modal').addEventListener('click', function (event) {
+      if (event.target.id === 'project-modal') $('#project-modal').classList.add('hidden');
+    });
+    $('#new-project-name').addEventListener('input', syncProjectIdentifiers);
+    $('#new-project-slug').addEventListener('input', function () {
+      this.dataset.edited = this.value ? '1' : '';
+    });
+  }
+
+  async function loadProject(slug) {
+    var project = state.registry.projects.find(function (item) { return item.slug === slug; });
+    if (!project) return;
+    if (!project.available) {
+      showToast('Объект создан, но источник Profitbase ещё не подключён.');
+      $('#project-select').value = state.project ? state.project.slug : state.registry.default_project;
+      return;
+    }
+    var base = project.base;
+    try {
+      var responses = await Promise.all([
+        fetch(base + '/inventory.json', { cache: 'no-store' }),
+        fetch(base + '/settings.json', { cache: 'no-store' }),
+        fetch(base + '/status.json', { cache: 'no-store' }),
+        fetch(base + '/assets.json', { cache: 'no-store' })
+      ]);
+      if (responses.some(function (response) { return !response.ok; })) throw new Error('Не удалось загрузить данные кабинета.');
+      var data = await Promise.all(responses.map(function (response) { return response.json(); }));
+      state.project = project;
+      state.inventory = data[0];
+      state.status = data[2];
+      state.assets = data[3];
+      var publishedRules = (data[1].rules || []).map(normalizeRule);
+      var draft = null;
+      try { draft = JSON.parse(localStorage.getItem(draftKey()) || 'null'); } catch (error) { draft = null; }
+      state.rules = draft && Array.isArray(draft.rules) ? draft.rules.map(normalizeRule) : publishedRules;
+      state.activeRuleId = state.rules[0] ? state.rules[0].id : null;
+      state.previewId = null;
+      state.page = 1;
+      state.filters = { house: '', rooms: '', search: '' };
+      populateFilters();
+      renderAll();
+      navigate(state.activeView);
+      setDirty(false);
+    } catch (error) {
+      document.querySelector('main').innerHTML = '<section class="panel empty-state"><div><h2>Кабинет временно недоступен</h2><p>' + esc(error.message) + '</p></div></section>';
+    }
   }
 
   async function init() {
     try {
-      var responses = await Promise.all([
-        fetch('inventory.json', { cache: 'no-store' }),
-        fetch('settings.json', { cache: 'no-store' }),
-        fetch('status.json', { cache: 'no-store' })
-      ]);
-      if (responses.some(function (response) { return !response.ok; })) throw new Error('Не удалось загрузить данные кабинета.');
-      var data = await Promise.all(responses.map(function (response) { return response.json(); }));
-      state.inventory = data[0];
-      state.status = data[2];
-      var publishedRules = (data[1].rules || []).map(normalizeRule);
-      var draft = null;
-      try { draft = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null'); } catch (error) { draft = null; }
-      state.rules = draft && Array.isArray(draft.rules) ? draft.rules.map(normalizeRule) : publishedRules;
-      state.activeRuleId = state.rules[0] ? state.rules[0].id : null;
-      populateFilters();
+      var response = await fetch('projects.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Не удалось загрузить список объектов.');
+      state.registry = await response.json();
+      $('#project-select').innerHTML = state.registry.projects.map(function (project) {
+        return '<option value="' + esc(project.slug) + '" ' + (project.available ? '' : 'disabled') + '>' +
+          esc(project.name) + (project.available ? '' : ' · настройка') + '</option>';
+      }).join('');
       bindStaticEvents();
-      renderAll();
       var requestedView = window.location.hash.replace('#', '');
-      navigate(['dashboard', 'lots', 'promotions', 'preview'].indexOf(requestedView) >= 0 ? requestedView : 'dashboard');
-      setDirty(false);
+      state.activeView = ['dashboard', 'lots', 'promotions', 'assets', 'preview'].indexOf(requestedView) >= 0 ? requestedView : 'dashboard';
+      await loadProject(state.registry.default_project);
     } catch (error) {
       document.querySelector('main').innerHTML = '<section class="panel empty-state"><div><h2>Кабинет временно недоступен</h2><p>' + esc(error.message) + '</p></div></section>';
     }

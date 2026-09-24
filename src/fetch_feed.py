@@ -1,18 +1,17 @@
 from __future__ import annotations
 
 import os
-from pathlib import Path
 from urllib.request import Request, urlopen
 
+from project_context import INPUT_DIR, PROJECT_SLUG
 
-ROOT = Path(__file__).resolve().parents[1]
-destination = ROOT / "input" / "avito.xml"
+destination = INPUT_DIR / "avito.xml"
 url = os.environ.get("PROFITBASE_FEED_URL", "").strip()
 
 if not url:
     raise SystemExit("PROFITBASE_FEED_URL GitHub Actions secret is not configured")
 
-request = Request(url, headers={"User-Agent": "novyy-gorizont-feed-generator/1.0"})
+request = Request(url, headers={"User-Agent": f"feed-studio/{PROJECT_SLUG}"})
 with urlopen(request, timeout=90) as response:
     content = response.read()
 

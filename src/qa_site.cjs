@@ -9,6 +9,9 @@ const { chromium } = playwright;
 
 const fs = require('fs');
 const siteRoot = path.join(__dirname, '..', 'site');
+const registryFile = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'projects.json'), 'utf8'));
+const qaOutput = path.join(__dirname, '..', 'work', registryFile.default_project, 'output');
+fs.mkdirSync(qaOutput, { recursive: true });
 const baseUrl = process.env.SITE_URL || 'http://feed.local/';
 const contentTypes = {
   '.html': 'text/html; charset=utf-8',
@@ -54,7 +57,9 @@ const contentTypes = {
   });
   const response = await page.goto(baseUrl, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.querySelector('#stat-source')?.textContent !== '—');
-  const inventoryData = await page.evaluate(() => fetch('inventory.json').then((response) => response.json()));
+  const projectData = await page.evaluate(() => fetch('projects.json').then((response) => response.json()));
+  const activeProject = projectData.projects.find((project) => project.slug === projectData.default_project);
+  const inventoryData = await page.evaluate((base) => fetch(base + '/inventory.json').then((response) => response.json()), activeProject.base);
   const sourceAds = await page.locator('#stat-source').textContent();
   const fullAds = await page.locator('#stat-plans').textContent();
   await page.click('[data-view="lots"]');
@@ -67,13 +72,13 @@ const contentTypes = {
     const secondPageFirstId = await page.locator('.lot-card .lot-title span').first().textContent();
     paginationWorks = Boolean(secondPageFirstId && secondPageFirstId !== firstPageFirstId);
   }
-  await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-lots.png'), fullPage: true });
+  await page.screenshot({ path: path.join(qaOutput, 'admin-lots.png'), fullPage: true });
   await page.click('[data-view="promotions"]');
   await page.locator('[data-field="enabled"]').check();
-  const matchingId = await page.evaluate(async () => {
+  const matchingId = await page.evaluate(async (base) => {
     const [inventory, settings] = await Promise.all([
-      fetch('inventory.json').then((response) => response.json()),
-      fetch('settings.json').then((response) => response.json())
+      fetch(base + '/inventory.json').then((response) => response.json()),
+      fetch(base + '/settings.json').then((response) => response.json())
     ]);
     const rule = settings.rules[0];
     const today = new Date().toISOString().slice(0, 10);
@@ -89,19 +94,30 @@ const contentTypes = {
       return true;
     };
     return inventory.items.find(matches)?.id || inventory.items[0]?.id;
-  });
+  }, activeProject.base);
   await page.click('[data-view="preview"]');
   await page.locator('#preview-lot').selectOption(String(matchingId));
   const promoVisible = await page.locator('#live-promo').isVisible();
-  await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-preview.png'), fullPage: true });
+  await page.screenshot({ path: path.join(qaOutput, 'admin-preview.png'), fullPage: true });
+  await page.click('[data-view="assets"]');
+  const assetCards = await page.locator('.asset-card').count();
+  const assetsReady = await page.locator('.asset-status.ready').count();
+  const uploadTargetsGitHub = (await page.locator('#upload-assets').getAttribute('href') || '').startsWith('https://github.com/indigo-dm/');
+  await page.waitForTimeout(250);
+  await page.screenshot({ path: path.join(qaOutput, 'admin-assets.png'), fullPage: true });
+  await page.click('#add-project');
+  const projectModalVisible = await page.locator('#project-modal').isVisible();
+  await page.fill('#new-project-name', 'ЖК Тестовый');
+  const generatedSlug = await page.locator('#new-project-slug').inputValue();
+  await page.click('#cancel-project');
   await page.setViewportSize({ width: 390, height: 844 });
   await page.click('[data-view="dashboard"]');
   const mobileOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
   await page.click('#publish-settings');
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
-  await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-mobile.png'), fullPage: true });
+  await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(24, inventoryData.items.length) && paginationVisible && paginationWorks && promoVisible && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(24, inventoryData.items.length) && paginationVisible && paginationWorks && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
     http_status: response ? response.status() : null,
     source_ads: sourceAds,
     full_demo_ads: fullAds,
@@ -109,6 +125,12 @@ const contentTypes = {
     pagination_visible: paginationVisible,
     pagination_works: paginationWorks,
     live_promotion_preview: promoVisible,
+    registered_projects: projectData.projects.length,
+    asset_cards: assetCards,
+    assets_ready: assetsReady,
+    github_upload_link: uploadTargetsGitHub,
+    project_create_modal: projectModalVisible,
+    generated_project_slug: generatedSlug,
     publish_confirmation: publishModalVisible,
     mobile_horizontal_overflow: mobileOverflow,
     browser_errors: errors

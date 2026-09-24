@@ -8,8 +8,6 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "promotion-rules.json"
-ALLOWED_HOUSES = {"3379663", "3379674"}
 ALLOWED_ROOMS = {"1", "2", "3", "4", "5"}
 
 
@@ -49,7 +47,7 @@ def iso_date(value: object, name: str) -> str:
     return result
 
 
-def validate(payload: object) -> dict[str, object]:
+def validate(payload: object, allowed_houses: set[str]) -> dict[str, object]:
     if not isinstance(payload, dict) or payload.get("version") != 1:
         raise ValueError("Unsupported settings format")
     source_rules = payload.get("rules")
@@ -84,7 +82,7 @@ def validate(payload: object) -> dict[str, object]:
             "enabled": bool(source.get("enabled", False)),
             "label": text(source.get("label"), "label", 24, "Акция"),
             "text": text(source.get("text"), "text", 60),
-            "house_ids": string_list(source.get("house_ids", []), "house_ids", ALLOWED_HOUSES),
+            "house_ids": string_list(source.get("house_ids", []), "house_ids", allowed_houses),
             "rooms": string_list(source.get("rooms", []), "rooms", ALLOWED_ROOMS),
             "area_min": area_min,
             "area_max": area_max,
@@ -107,11 +105,20 @@ def main() -> None:
         raise SystemExit("Settings JSON markers were not found in the issue body")
     try:
         payload = json.loads(match.group(1))
-        validated = validate(payload)
+        registry = json.loads((ROOT / "projects.json").read_text(encoding="utf-8"))
+        project_slug = str(payload.get("project") or registry["default_project"])
+        project = next((item for item in registry["projects"] if item.get("slug") == project_slug), None)
+        if project is None:
+            raise ValueError("Unknown project")
+        project_dir = ROOT / "projects" / project_slug
+        config = json.loads((project_dir / "config.json").read_text(encoding="utf-8"))
+        allowed_houses = set(str(value) for value in config.get("houses", {}))
+        validated = validate(payload, allowed_houses)
     except (ValueError, TypeError, json.JSONDecodeError) as error:
         raise SystemExit(f"Invalid feed settings: {error}") from error
-    OUTPUT.write_text(json.dumps(validated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"rules": len(validated["rules"]), "output": str(OUTPUT)}, ensure_ascii=False))
+    output = project_dir / "promotion-rules.json"
+    output.write_text(json.dumps(validated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"project": project_slug, "rules": len(validated["rules"]), "output": str(output)}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
