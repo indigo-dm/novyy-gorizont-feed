@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import copy
 import json
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
@@ -40,11 +42,24 @@ def local_plan_name(url: str) -> str:
     return f"{stem}{suffix}"
 
 
-def download(url: str, destination: Path) -> None:
+def download(url: str, destination: Path, attempts: int = 4) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     request = Request(url, headers={"User-Agent": "novyy-gorizont-feed-generator/1.0"})
-    with urlopen(request, timeout=60) as response:
-        destination.write_bytes(response.read())
+    for attempt in range(1, attempts + 1):
+        try:
+            with urlopen(request, timeout=60) as response:
+                destination.write_bytes(response.read())
+            return
+        except HTTPError as error:
+            retryable = error.code == 429 or 500 <= error.code < 600
+            if not retryable or attempt == attempts:
+                raise
+        except (URLError, TimeoutError):
+            if attempt == attempts:
+                raise
+        delay = 2 ** (attempt - 1)
+        print(f"Temporary download error for {url}; retry {attempt}/{attempts} in {delay}s")
+        time.sleep(delay)
 
 
 def active_promotion(item: dict[str, object], rules: list[dict[str, object]], today: str) -> dict[str, str] | None:
