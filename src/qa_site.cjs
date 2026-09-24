@@ -45,9 +45,12 @@ const contentTypes = {
     });
   }
   page.on('console', (message) => {
-    if (message.type() === 'error') errors.push(message.text());
+    if (message.type() === 'error' && !message.text().includes('Failed to load resource')) errors.push(message.text());
   });
   page.on('pageerror', (error) => errors.push(error.message));
+  page.on('response', (resourceResponse) => {
+    if (resourceResponse.status() >= 400) errors.push(`${resourceResponse.status()} ${resourceResponse.url()}`);
+  });
   const response = await page.goto(baseUrl, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.querySelector('#stat-source')?.textContent !== '—');
   const sourceAds = await page.locator('#stat-source').textContent();
