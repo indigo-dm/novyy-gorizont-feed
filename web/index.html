@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Кабинет управления демонстрационным брендированным фидом ЖК Новый Горизонт">
+  <title>Новый Горизонт — управление фидом</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Новый Горизонт">
+        <img src="assets/logo-gold.svg" alt="Новый Горизонт">
+        <span>Feed Studio</span>
+      </a>
+      <nav class="nav" aria-label="Разделы кабинета">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span><span>Обзор</span></button>
+        <button class="nav-item" data-view="lots"><span class="nav-icon">▦</span><span>Квартиры</span></button>
+        <button class="nav-item" data-view="promotions"><span class="nav-icon">%</span><span>Акции</span></button>
+        <button class="nav-item" data-view="preview"><span class="nav-icon">◉</span><span>Предпросмотр</span></button>
+      </nav>
+      <div class="sidebar-note">
+        <span class="status-dot"></span>
+        <div><strong>Демо-режим</strong><small>Avito не подключён</small></div>
+      </div>
+      <a class="sidebar-link" href="pilot-avito.xml" target="_blank" rel="noopener">Открыть XML ↗</a>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ЖК «Новый Горизонт»</p>
+          <h1 id="page-title">Обзор</h1>
+        </div>
+        <div class="top-actions">
+          <span class="saved-state" id="saved-state">Настройки загружены</span>
+          <button class="button button-secondary" id="save-draft">Сохранить черновик</button>
+          <button class="button button-primary" id="publish-settings">Опубликовать настройки</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="view active" id="view-dashboard">
+          <div class="notice">
+            <div><strong>Безопасный пилот</strong><span>Изменения влияют только на демонстрационные планировки и не отправляются в Avito.</span></div>
+            <span class="notice-badge">PILOT</span>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><span>Квартир в Profitbase</span><strong id="stat-source">—</strong><small>актуальный источник</small></article>
+            <article class="stat-card"><span>Планировок в пилоте</span><strong id="stat-plans">—</strong><small>уникальные варианты</small></article>
+            <article class="stat-card"><span>Активных акций</span><strong id="stat-promotions">—</strong><small>правила брендирования</small></article>
+            <article class="stat-card"><span>Последнее обновление</span><strong class="stat-date" id="stat-updated">—</strong><small>московское время</small></article>
+          </div>
+          <div class="dashboard-grid">
+            <article class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">Как это работает</p><h2>От настройки до фида</h2></div></div>
+              <ol class="flow-list">
+                <li><span>1</span><div><strong>Создайте правило</strong><small>Укажите текст акции и условия применения.</small></div></li>
+                <li><span>2</span><div><strong>Проверьте выборку</strong><small>Кабинет покажет подходящие планировки.</small></div></li>
+                <li><span>3</span><div><strong>Посмотрите результат</strong><small>Плашка появится на макете до публикации.</small></div></li>
+                <li><span>4</span><div><strong>Подтвердите в GitHub</strong><small>После проверки фид пересоберётся автоматически.</small></div></li>
+              </ol>
+            </article>
+            <article class="panel recent-panel">
+              <div class="panel-heading"><div><p class="eyebrow">Текущий макет</p><h2>Брендированный фид</h2></div><button class="text-button" data-go="preview">Открыть →</button></div>
+              <div class="mini-preview"><img id="dashboard-preview" src="" alt="Пример брендированной карточки"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-lots">
+          <div class="toolbar panel">
+            <label><span>Дом</span><select id="filter-house"><option value="">Все дома</option></select></label>
+            <label><span>Комнатность</span><select id="filter-rooms"><option value="">Любая</option></select></label>
+            <label class="search-field"><span>Поиск по ID</span><input id="filter-search" type="search" placeholder="Например, 9290769"></label>
+            <div class="toolbar-count"><strong id="lots-count">0</strong><span>планировок</span></div>
+          </div>
+          <div class="lots-grid" id="lots-grid"></div>
+        </section>
+
+        <section class="view" id="view-promotions">
+          <div class="promotion-layout">
+            <aside class="panel rules-panel">
+              <div class="panel-heading"><div><p class="eyebrow">Приоритет сверху вниз</p><h2>Правила</h2></div><button class="icon-button" id="add-rule" aria-label="Добавить акцию">+</button></div>
+              <div class="rules-list" id="rules-list"></div>
+              <p class="helper">Первое подходящее активное правило применяется к квартире.</p>
+            </aside>
+            <section class="panel editor-panel" id="rule-editor">
+              <div class="empty-state">Выберите или создайте правило акции.</div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-preview">
+          <div class="preview-layout">
+            <section class="panel preview-stage-panel">
+              <div class="panel-heading"><div><p class="eyebrow">Живой результат</p><h2>Предпросмотр карточки</h2></div><label class="compact-select"><span>Планировка</span><select id="preview-lot"></select></label></div>
+              <div class="preview-stage">
+                <div class="preview-canvas" id="preview-canvas">
+                  <img id="preview-image" src="" alt="Предпросмотр брендированной карточки">
+                  <div class="live-promo hidden" id="live-promo"><span id="live-promo-label"></span><strong id="live-promo-text"></strong></div>
+                </div>
+              </div>
+            </section>
+            <aside class="panel preview-info">
+              <p class="eyebrow">Выбранная квартира</p>
+              <h2 id="preview-title">—</h2>
+              <dl class="details" id="preview-details"></dl>
+              <div class="applied-rule" id="applied-rule"><span>Акция</span><strong>Не применяется</strong></div>
+              <button class="button button-secondary full-width" data-go="promotions">Изменить правила</button>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop hidden" id="publish-modal" role="dialog" aria-modal="true" aria-labelledby="publish-title">
+    <div class="modal">
+      <p class="eyebrow">Публикация настроек</p>
+      <h2 id="publish-title">Подтвердить изменение фида</h2>
+      <p>Откроется GitHub с подготовленным запросом. Нажмите <strong>Submit new issue</strong> — после этого настройки пройдут проверку, а демо-фид пересоберётся автоматически.</p>
+      <div class="modal-summary" id="publish-summary"></div>
+      <div class="modal-actions">
+        <button class="button button-secondary" id="cancel-publish">Отмена</button>
+        <button class="button button-primary" id="confirm-publish">Перейти к подтверждению</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

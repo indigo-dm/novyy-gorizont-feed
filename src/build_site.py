@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import html
 import json
 import shutil
 from pathlib import Path
@@ -9,41 +8,61 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output"
 SITE = ROOT / "site"
+WEB = ROOT / "web"
+ASSETS = ROOT / "assets"
+
 manifest = json.loads((OUTPUT / "pilot-manifest.json").read_text(encoding="utf-8"))
+rules = json.loads((ROOT / "promotion-rules.json").read_text(encoding="utf-8"))
 
 if SITE.exists():
     shutil.rmtree(SITE)
 (SITE / "images").mkdir(parents=True)
+(SITE / "assets").mkdir(parents=True)
 
 for item in manifest["items"]:
     source = OUTPUT / item["output_file"]
     shutil.copy2(source, SITE / "images" / source.name)
+
+for filename in ("index.html", "app.css", "app.js"):
+    shutil.copy2(WEB / filename, SITE / filename)
+shutil.copy2(ASSETS / "Manrope-Variable.ttf", SITE / "assets" / "Manrope-Variable.ttf")
+shutil.copy2(ASSETS / "logo-gold.svg", SITE / "assets" / "logo-gold.svg")
 shutil.copy2(OUTPUT / "pilot-avito.xml", SITE / "pilot-avito.xml")
 (SITE / ".nojekyll").write_text("", encoding="utf-8")
 
-cards = []
+public_items = []
 for item in manifest["items"]:
-    area = str(item["area"]).replace(".", ",")
-    label = f"{item['house']} · {item['rooms']}к · {area} м² · ID {item['id']}"
-    cards.append(
-        f'<article><img src="images/{html.escape(str(item["id"]))}.png" alt="{html.escape(label)}">'
-        f'<p>{html.escape(label)}</p></article>'
-    )
+    public_items.append({
+        "id": str(item["id"]),
+        "house_id": str(item["house_id"]),
+        "house": item["house"],
+        "rooms": str(item["rooms"]),
+        "area": str(item["area"]),
+        "floor": str(item["floor"]),
+        "floors": str(item["floors"]),
+        "price": str(item["price"]),
+        "decoration": item["decoration"],
+        "image": f"images/{item['id']}.png",
+        "promotion": item.get("promotion"),
+    })
 
-page = f'''<!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Пилот брендированного фида</title>
-<style>body{{margin:0;background:#f4f2ed;color:#123c3a;font:16px Arial,sans-serif}}main{{max-width:1400px;margin:auto;padding:40px}}h1{{margin:0 0 8px;font-size:38px}}.meta{{color:#65706f;margin-bottom:30px}}.notice{{padding:16px 20px;background:#cead75;color:#063b39;font-weight:700;margin:0 0 30px}}.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:24px}}article{{background:#00605c;color:white}}img{{display:block;width:100%;height:auto}}p{{margin:0;padding:14px 16px;font-size:18px}}</style></head>
-<body><main><h1>Пилот брендированного фида «Нового Горизонта»</h1>
-<div class="meta">Источник проверен: {html.escape(manifest['checked_at'])} · квартир: {manifest['source_ads']} · уникальных планировок: {manifest['unique_plans']}</div>
-<div class="notice">Демонстрационный фид. Не подключать к Avito без отдельного подтверждения.</div>
-<p><a href="pilot-avito.xml">Открыть тестовый XML</a></p><section class="grid">{''.join(cards)}</section></main></body></html>'''
-(SITE / "index.html").write_text(page, encoding="utf-8")
+(SITE / "inventory.json").write_text(json.dumps({
+    "project": manifest["project"],
+    "checked_at": manifest["checked_at"],
+    "source_ads": manifest["source_ads"],
+    "unique_plans": manifest["unique_plans"],
+    "items": public_items,
+}, ensure_ascii=False, indent=2), encoding="utf-8")
+(SITE / "settings.json").write_text(
+    json.dumps(rules, ensure_ascii=False, indent=2), encoding="utf-8"
+)
 (SITE / "status.json").write_text(json.dumps({
     "project": manifest["project"],
     "checked_at": manifest["checked_at"],
     "source_ads": manifest["source_ads"],
     "unique_plans": manifest["unique_plans"],
+    "active_promotions": sum(1 for rule in rules.get("rules", []) if rule.get("enabled")),
     "publish_ready": False,
+    "mode": "pilot",
 }, ensure_ascii=False, indent=2), encoding="utf-8")
 print(SITE)

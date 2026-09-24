@@ -34,8 +34,8 @@ const renderUrl = dataUrl(path.join(root, 'assets', 'selected-render.jpg'));
 
 function htmlFor(item) {
   const planUrl = dataUrl(path.join(root, item.plan_file));
-  const promo = config.promotion?.enabled
-    ? `<div class="promo"><span>${esc(config.promotion.label)}</span>${esc(config.promotion.text)}</div>`
+  const promo = item.promotion
+    ? `<div class="promo"><span>${esc(item.promotion.label)}</span>${esc(item.promotion.text)}</div>`
     : '';
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
   @font-face{font-family:Manrope;src:url('${fontUrl}') format('truetype');font-weight:200 800;font-style:normal}

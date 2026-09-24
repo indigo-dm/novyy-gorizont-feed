@@ -12,11 +12,5 @@
   "houses": {
     "3379663": "Дом 3",
     "3379674": "Дом 4"
-  },
-  "promotion": {
-    "enabled": false,
-    "label": "Скидка",
-    "text": "−10 000 ₽/м²",
-    "demo_only": true
   }
 }

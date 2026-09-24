@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": "demo-discount",
+      "name": "Демонстрационная скидка",
+      "enabled": false,
+      "label": "Скидка",
+      "text": "−10 000 ₽/м²",
+      "house_ids": [],
+      "rooms": [],
+      "area_min": null,
+      "area_max": null,
+      "starts_at": "",
+      "ends_at": "",
+      "include_ids": [],
+      "exclude_ids": []
+    }
+  ]
+}
