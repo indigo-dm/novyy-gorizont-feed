@@ -1,0 +1,17 @@
+{
+  "project": "ЖК Театрал",
+  "source_feed_key": "teatral",
+  "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images",
+  "brand": {
+    "green": "#00605C",
+    "green_dark": "#004C49",
+    "gold": "#CEAD75",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "logo": "logo.svg",
+    "key_render": "key-render.jpg"
+  },
+  "houses": {
+    "4974615": "Дом · ID 4974615"
+  }
+}
