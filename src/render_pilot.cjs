@@ -60,7 +60,7 @@ function htmlFor(item, includePromotion = true) {
     : '';
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
   @font-face{font-family:Manrope;src:url('${fontUrl}') format('truetype');font-weight:200 800;font-style:normal}
-  :root{--g:${config.brand.green};--gd:${config.brand.green_dark};--gold:${config.brand.gold};--w:#fff;--ink:#063b39;--muted:#6b7775}
+  :root{--g:${config.brand.green};--gd:${config.brand.green_dark};--gold:${config.brand.gold};--w:#fff;--ink:${config.brand.green_dark};--muted:${config.brand.gray || '#6b7775'}}
   *{box-sizing:border-box}html,body{margin:0;width:1200px;height:900px;overflow:hidden;font-family:Manrope,Arial,sans-serif;background:var(--g)}
   .canvas{position:relative;width:1200px;height:900px;color:var(--w);background:radial-gradient(circle at 4% 100%,rgba(206,173,117,.18),transparent 27%),linear-gradient(145deg,var(--g),var(--gd))}
   .left{position:absolute;left:56px;top:54px;width:470px;height:792px}.logo{width:350px;height:111px;object-fit:contain;object-position:left top}.logo-light-panel{padding:12px 18px;border-radius:14px;background:#fff}.logo-fallback{display:flex;flex-direction:column;justify-content:center;color:var(--gold);font-size:35px;line-height:1;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.logo-fallback small{margin-top:11px;color:rgba(255,255,255,.76);font-size:14px;font-weight:700;letter-spacing:.26em}

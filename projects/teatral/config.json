@@ -3,13 +3,64 @@
   "source_feed_key": "teatral",
   "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images",
   "brand": {
-    "green": "#00605C",
-    "green_dark": "#004C49",
-    "gold": "#CEAD75",
-    "white": "#FFFFFF",
+    "green": "#1F334B",
+    "green_dark": "#0A0A0A",
+    "gold": "#F2F1EC",
+    "gray": "#717B7D",
+    "white": "#F2F1EC",
     "font": "Manrope",
-    "logo": "logo.svg",
-    "key_render": "key-render.jpg"
+    "logo": "logo-teatral-light.png",
+    "key_render": "key-render.jpg",
+    "additional_logos": [
+      {
+        "name": "Тёмный логотип",
+        "filename": "logo-teatral-dark.png"
+      },
+      {
+        "name": "Фирменный знак",
+        "filename": "logo-mark.png"
+      }
+    ],
+    "additional_renders": [
+      {
+        "name": "Спортивная зона",
+        "filename": "render-fitness.jpg"
+      },
+      {
+        "name": "Подземный паркинг",
+        "filename": "render-parking.jpg"
+      },
+      {
+        "name": "Детская площадка",
+        "filename": "render-playground.jpg"
+      }
+    ],
+    "palette": [
+      {
+        "name": "Тёмно-синий",
+        "value": "#1F334B"
+      },
+      {
+        "name": "Сланцевый",
+        "value": "#546579"
+      },
+      {
+        "name": "Серый",
+        "value": "#717B7D"
+      },
+      {
+        "name": "Тауп",
+        "value": "#A7A79F"
+      },
+      {
+        "name": "Тёплый белый",
+        "value": "#F2F1EC"
+      },
+      {
+        "name": "Дополнительный",
+        "value": "#0A0A0A"
+      }
+    ]
   },
   "houses": {
     "4974615": "Дом · ID 4974615"

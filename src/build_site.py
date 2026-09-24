@@ -94,6 +94,16 @@ brand_assets = [
         "required": True,
     },
 ]
+for index, logo in enumerate(config["brand"].get("additional_logos", []), start=1):
+    brand_assets.append(
+        {
+            "key": f"additional_logo_{index}",
+            "name": logo.get("name", f"Дополнительный логотип {index}"),
+            "description": "Дополнительный вариант фирменного логотипа объекта.",
+            "filename": logo["filename"],
+            "required": False,
+        }
+    )
 for index, render in enumerate(config["brand"].get("additional_renders", []), start=1):
     brand_assets.append(
         {
@@ -124,6 +134,7 @@ assets_manifest = {
         "gray": config["brand"].get("gray", "#9B9B9B"),
         "white": config["brand"].get("white", "#FFFFFF"),
         "font": config["brand"]["font"],
+        "palette": config["brand"].get("palette"),
     },
 }
 
