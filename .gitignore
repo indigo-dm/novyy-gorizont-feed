@@ -1,0 +1,7 @@
+input/avito.xml
+cache/plans/
+output/
+site/
+node_modules/
+.env
+*.log

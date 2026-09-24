@@ -1,0 +1,72 @@
+name: Build and deploy pilot feed
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+      timezone: "Europe/Moscow"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install renderer
+        run: npm install --no-audit --no-fund
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Download Profitbase feed
+        env:
+          PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
+        run: python src/fetch_feed.py
+
+      - name: Build pilot manifest and XML
+        run: python src/build_pilot.py
+
+      - name: Render branded images
+        run: npm run render
+
+      - name: Validate pilot
+        run: python src/validate_pilot.py
+
+      - name: Build static site
+        run: python src/build_site.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

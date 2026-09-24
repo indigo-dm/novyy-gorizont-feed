@@ -1,0 +1,22 @@
+{
+  "project": "ЖК Новый Горизонт",
+  "source_feed_secret": "PROFITBASE_FEED_URL",
+  "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/images",
+  "brand": {
+    "green": "#00605C",
+    "green_dark": "#004C49",
+    "gold": "#CEAD75",
+    "white": "#FFFFFF",
+    "font": "Manrope"
+  },
+  "houses": {
+    "3379663": "Дом 3",
+    "3379674": "Дом 4"
+  },
+  "promotion": {
+    "enabled": false,
+    "label": "Скидка",
+    "text": "−10 000 ₽/м²",
+    "demo_only": true
+  }
+}

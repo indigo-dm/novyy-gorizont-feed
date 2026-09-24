@@ -1,0 +1,11 @@
+{
+  "name": "novyy-gorizont-feed",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "render": "node src/render_pilot.cjs"
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}
