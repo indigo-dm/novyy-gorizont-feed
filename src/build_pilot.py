@@ -118,6 +118,9 @@ def write_feed(
             raise ValueError(f"Ad {ad_id} has no image to replace")
         first_image.set("url", f"{public_base}/{ad_id}.png")
         first_image.text = None
+        address = clone.find("Address")
+        if address is not None and clone.find("NewDevelopmentId") is not None:
+            clone.remove(address)
         output_root.append(clone)
     ET.indent(output_root, space="  ")
     ET.ElementTree(output_root).write(destination, encoding="utf-8", xml_declaration=True)

@@ -62,6 +62,8 @@ def main() -> None:
             expected_url = f"{public_base}{expected_id}.png"
             if first_image is None or first_image.attrib.get("url") != expected_url:
                 errors.append(f"Unexpected branded image URL for ad {expected_id} in {path.name}")
+            if ad.find("NewDevelopmentId") is not None and ad.find("Address") is not None:
+                errors.append(f"Redundant Address remains for ad {expected_id} in {path.name}")
 
     for item in full["items"]:
         plan = ROOT / str(item["plan_file"])
