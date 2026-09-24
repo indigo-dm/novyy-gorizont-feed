@@ -35,6 +35,7 @@ shutil.copy2(SHARED_ASSETS / "indigo-logo.svg", SITE / "assets" / "indigo-logo.s
 (SITE / ".nojekyll").write_text("", encoding="utf-8")
 public_registry = {
     "version": 1,
+    "build_id": os.environ.get("BUILD_ID", "development"),
     "default_project": REGISTRY["default_project"],
     "projects": [
         {

@@ -4,6 +4,7 @@ import json
 import os
 import subprocess
 import sys
+from datetime import datetime, timezone
 
 from project_context import REGISTRY, ROOT
 
@@ -22,8 +23,11 @@ def main() -> None:
         feeds = {str(key): str(value).strip() for key, value in parsed.items() if str(value).strip()}
 
     default_slug = str(REGISTRY["default_project"])
+    build_id = os.environ.get("BUILD_ID", "").strip() or datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
     fallback_url = os.environ.get("PROFITBASE_FEED_URL", "").strip()
-    run([sys.executable, "src/prepare_site.py"], os.environ.copy())
+    build_env = os.environ.copy()
+    build_env["BUILD_ID"] = build_id
+    run([sys.executable, "src/prepare_site.py"], build_env)
 
     public_projects: list[dict[str, object]] = []
     node = os.environ.get("NODE_BINARY", "node")
@@ -40,7 +44,7 @@ def main() -> None:
         })
         if not available:
             continue
-        env = os.environ.copy()
+        env = build_env.copy()
         env["PROJECT_SLUG"] = slug
         env["PROFITBASE_FEED_URL"] = feed_url
         run([sys.executable, "src/fetch_feed.py"], env)
@@ -53,6 +57,7 @@ def main() -> None:
         raise RuntimeError("No configured project feeds were available")
     public_registry = {
         "version": 1,
+        "build_id": build_id,
         "default_project": default_slug,
         "projects": public_projects,
     }

@@ -13,7 +13,7 @@
     activeView: 'dashboard',
     filters: { house: '', rooms: '', search: '' },
     page: 1,
-    pageSize: 24,
+    pageSize: 12,
     previewId: null,
     dirty: false
   };
@@ -29,6 +29,12 @@
     return /^#[0-9a-f]{6}$/i.test(String(value || '')) ? String(value) : '#000000';
   };
   var clone = function (value) { return JSON.parse(JSON.stringify(value)); };
+  var cacheVersion = function () {
+    return state.registry && state.registry.build_id ? String(state.registry.build_id) : 'development';
+  };
+  var versionedUrl = function (url) {
+    return url + (url.indexOf('?') >= 0 ? '&' : '?') + 'v=' + encodeURIComponent(cacheVersion());
+  };
   var draftKey = function () { return 'feed-studio-rules-v1-' + (state.project ? state.project.slug : 'default'); };
   var formatPrice = function (value) {
     return new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Number(value)) + ' ₽';
@@ -152,7 +158,7 @@
     if (!state.assets) return;
     $('#upload-assets').href = state.assets.upload_url;
     $('#asset-grid').innerHTML = state.assets.items.map(function (asset) {
-      var preview = asset.exists ? '<img src="' + esc(asset.url) + '" alt="' + esc(asset.name) + '">' :
+      var preview = asset.exists ? '<img src="' + esc(versionedUrl(asset.url)) + '" alt="' + esc(asset.name) + '" loading="lazy" decoding="async">' :
         '<div class="asset-missing">Файл не загружен</div>';
       return '<article class="asset-card"><div class="asset-preview">' + preview + '</div><div class="asset-copy"><div><strong>' +
         esc(asset.name) + '</strong><span class="asset-status ' + (asset.exists ? 'ready' : '') + '">' +
@@ -178,7 +184,7 @@
     $('#stat-promotions').textContent = state.rules.filter(function (rule) { return rule.enabled; }).length;
     $('#stat-updated').textContent = formatDateTime(state.inventory.checked_at);
     if (state.inventory.items[0]) {
-      $('#dashboard-preview').src = state.inventory.items[0].image;
+      $('#dashboard-preview').src = versionedUrl(state.inventory.items[0].image);
     }
   }
 
@@ -207,7 +213,7 @@
   function lotCard(item) {
     var rule = appliedRule(item);
     return '<article class="lot-card">' +
-      '<div class="lot-image"><img src="' + esc(item.image) + '" alt="' + esc(item.house + ', ' + item.rooms + '-комнатная') + '">' +
+      '<div class="lot-image"><img src="' + esc(versionedUrl(item.thumbnail || item.image)) + '" alt="' + esc(item.house + ', ' + item.rooms + '-комнатная') + '" loading="lazy" decoding="async" width="480" height="360">' +
       '<span class="lot-badge">' + esc(item.house) + (rule ? ' · акция' : '') + '</span></div>' +
       '<div class="lot-body"><div class="lot-title"><strong>' + esc(item.rooms) + '-комнатная · ' + esc(formatArea(item.area)) + '</strong><span>ID ' + esc(item.id) + '</span></div>' +
       '<div class="lot-meta">' + esc(formatPrice(item.price)) + ' · этаж ' + esc(item.floor) + '/' + esc(item.floors) + '</div>' +
@@ -383,7 +389,7 @@
     var item = state.inventory.items.find(function (lot) { return lot.id === state.previewId; }) || state.inventory.items[0];
     state.previewId = item.id;
     $('#preview-lot').value = item.id;
-    $('#preview-image').src = item.image;
+    $('#preview-image').src = versionedUrl(item.image);
     $('#preview-title').textContent = item.rooms + '-комнатная, ' + formatArea(item.area);
     $('#preview-details').innerHTML =
       '<div><dt>Дом</dt><dd>' + esc(item.house) + '</dd></div><div><dt>ID</dt><dd>' + esc(item.id) + '</dd></div>' +
@@ -559,12 +565,13 @@
       return;
     }
     var base = project.base;
+    var version = '?v=' + encodeURIComponent(cacheVersion());
     try {
       var responses = await Promise.all([
-        fetch(base + '/inventory.json', { cache: 'no-store' }),
-        fetch(base + '/settings.json', { cache: 'no-store' }),
-        fetch(base + '/status.json', { cache: 'no-store' }),
-        fetch(base + '/assets.json', { cache: 'no-store' })
+        fetch(base + '/inventory.json' + version, { cache: 'force-cache' }),
+        fetch(base + '/settings.json' + version, { cache: 'force-cache' }),
+        fetch(base + '/status.json' + version, { cache: 'force-cache' }),
+        fetch(base + '/assets.json' + version, { cache: 'force-cache' })
       ]);
       if (responses.some(function (response) { return !response.ok; })) throw new Error('Не удалось загрузить данные кабинета.');
       var data = await Promise.all(responses.map(function (response) { return response.json(); }));
@@ -591,7 +598,7 @@
 
   async function init() {
     try {
-      var response = await fetch('projects.json', { cache: 'no-store' });
+      var response = await fetch('projects.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('Не удалось загрузить список объектов.');
       state.registry = await response.json();
       $('#project-select').innerHTML = state.registry.projects.map(function (project) {

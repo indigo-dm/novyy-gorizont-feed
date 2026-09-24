@@ -17,12 +17,15 @@ const manifest = JSON.parse(fs.readFileSync(path.join(workDir, 'output', 'full-m
 const config = JSON.parse(fs.readFileSync(path.join(projectDir, 'config.json'), 'utf8'));
 const outputDir = path.join(workDir, 'output', 'images');
 const previewDir = path.join(workDir, 'output', 'previews');
+const thumbnailDir = path.join(workDir, 'output', 'thumbnails');
 fs.rmSync(outputDir, { recursive: true, force: true });
 fs.rmSync(previewDir, { recursive: true, force: true });
+fs.rmSync(thumbnailDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
 fs.mkdirSync(previewDir, { recursive: true });
+fs.mkdirSync(thumbnailDir, { recursive: true });
 
-const mimeByExt = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.ttf': 'font/truetype' };
+const mimeByExt = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.ttf': 'font/truetype' };
 const dataUrl = (filePath) => {
   const ext = path.extname(filePath).toLowerCase();
   return `data:${mimeByExt[ext] || 'application/octet-stream'};base64,${fs.readFileSync(filePath).toString('base64')}`;
@@ -35,6 +38,36 @@ const esc = (value) => String(value ?? '')
 const formatNumber = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 2 }).format(Number(value));
 const formatPrice = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Number(value)) + ' ₽';
 const roomTitle = (rooms) => `${rooms}-комнатная квартира`;
+
+async function createWebpVariants(page, sourceBuffer) {
+  const source = `data:image/png;base64,${sourceBuffer.toString('base64')}`;
+  const encoded = await page.evaluate(async ({ sourceUrl }) => {
+    const image = await new Promise((resolve, reject) => {
+      const element = new Image();
+      element.onload = () => resolve(element);
+      element.onerror = reject;
+      element.src = sourceUrl;
+    });
+    const render = (width, height, quality) => {
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const context = canvas.getContext('2d');
+      context.imageSmoothingEnabled = true;
+      context.imageSmoothingQuality = 'high';
+      context.drawImage(image, 0, 0, width, height);
+      return canvas.toDataURL('image/webp', quality).split(',')[1];
+    };
+    return {
+      preview: render(960, 720, 0.8),
+      thumbnail: render(480, 360, 0.76)
+    };
+  }, { sourceUrl: source });
+  return {
+    preview: Buffer.from(encoded.preview, 'base64'),
+    thumbnail: Buffer.from(encoded.thumbnail, 'base64')
+  };
+}
 
 const fontUrl = dataUrl(path.join(root, 'assets', 'Manrope-Variable.ttf'));
 const logoPath = path.join(projectDir, 'assets', config.brand.logo);
@@ -85,7 +118,10 @@ function htmlFor(item, includePromotion = true) {
   for (const item of manifest.items) {
     await page.setContent(htmlFor(item, false), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
-    await page.screenshot({ path: path.join(previewDir, `${item.id}.jpg`), type: 'jpeg', quality: 82 });
+    const previewSource = await page.screenshot({ type: 'png' });
+    const webp = await createWebpVariants(page, previewSource);
+    fs.writeFileSync(path.join(previewDir, `${item.id}.webp`), webp.preview);
+    fs.writeFileSync(path.join(thumbnailDir, `${item.id}.webp`), webp.thumbnail);
     if (item.promotion) {
       await page.setContent(htmlFor(item, true), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready);
@@ -93,5 +129,5 @@ function htmlFor(item, includePromotion = true) {
     await page.screenshot({ path: path.join(outputDir, `${item.id}.png`), type: 'png' });
   }
   await browser.close();
-  console.log(JSON.stringify({ rendered_ads: manifest.items.length, final_images: manifest.items.length, preview_images: manifest.items.length }));
+  console.log(JSON.stringify({ rendered_ads: manifest.items.length, final_images: manifest.items.length, preview_images: manifest.items.length, thumbnail_images: manifest.items.length }));
 })();

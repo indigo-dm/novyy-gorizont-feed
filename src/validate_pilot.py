@@ -46,13 +46,17 @@ def main() -> None:
         errors.append("Pilot and full manifest counters disagree")
 
     expected_final = {f"{item_id}.png" for item_id in full_ids}
-    expected_previews = {f"{item_id}.jpg" for item_id in full_ids}
+    expected_previews = {f"{item_id}.webp" for item_id in full_ids}
+    expected_thumbnails = {f"{item_id}.webp" for item_id in full_ids}
     actual_final = {path.name for path in (OUTPUT / "images").glob("*.png")}
-    actual_previews = {path.name for path in (OUTPUT / "previews").glob("*.jpg")}
+    actual_previews = {path.name for path in (OUTPUT / "previews").glob("*.webp")}
+    actual_thumbnails = {path.name for path in (OUTPUT / "thumbnails").glob("*.webp")}
     if actual_final != expected_final:
         errors.append("Generated final image set does not match full manifest")
     if actual_previews != expected_previews:
         errors.append("Generated preview image set does not match full manifest")
+    if actual_thumbnails != expected_thumbnails:
+        errors.append("Generated thumbnail image set does not match full manifest")
 
     public_base = config["public_image_base_url"].rstrip("/") + "/"
     for path, ids in ((FULL_XML, full_ids), (PILOT_XML, pilot_ids)):
@@ -78,6 +82,7 @@ def main() -> None:
         "unique_plans": full["unique_plans"],
         "generated_images": len(actual_final),
         "preview_images": len(actual_previews),
+        "thumbnail_images": len(actual_thumbnails),
         "promoted_ads": sum(1 for item in full["items"] if item.get("promotion")),
         "publish_ready": full["publish_ready"],
         "errors": errors,

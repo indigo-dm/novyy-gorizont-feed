@@ -26,13 +26,16 @@ if PROJECT_SITE.exists():
     shutil.rmtree(PROJECT_SITE)
 (PROJECT_SITE / "images").mkdir(parents=True)
 (PROJECT_SITE / "previews").mkdir(parents=True)
+(PROJECT_SITE / "thumbnails").mkdir(parents=True)
 (PROJECT_SITE / "assets").mkdir(parents=True)
 
 for item in manifest["items"]:
     source = OUTPUT_DIR / item["output_file"]
     shutil.copy2(source, PROJECT_SITE / "images" / source.name)
-    preview = OUTPUT_DIR / "previews" / f"{item['id']}.jpg"
+    preview = OUTPUT_DIR / "previews" / f"{item['id']}.webp"
     shutil.copy2(preview, PROJECT_SITE / "previews" / preview.name)
+    thumbnail = OUTPUT_DIR / "thumbnails" / f"{item['id']}.webp"
+    shutil.copy2(thumbnail, PROJECT_SITE / "thumbnails" / thumbnail.name)
 
 if ASSETS_DIR.exists():
     shutil.copytree(ASSETS_DIR, PROJECT_SITE / "assets", dirs_exist_ok=True)
@@ -53,7 +56,8 @@ for item in manifest["items"]:
         "floors": str(item["floors"]),
         "price": str(item["price"]),
         "decoration": item["decoration"],
-        "image": f"{public_prefix}/previews/{item['id']}.jpg",
+        "image": f"{public_prefix}/previews/{item['id']}.webp",
+        "thumbnail": f"{public_prefix}/thumbnails/{item['id']}.webp",
         "final_image": f"{public_prefix}/images/{item['id']}.png",
         "promotion": item.get("promotion"),
     })

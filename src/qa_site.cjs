@@ -20,6 +20,7 @@ const contentTypes = {
   '.json': 'application/json; charset=utf-8',
   '.jpg': 'image/jpeg',
   '.png': 'image/png',
+  '.webp': 'image/webp',
   '.svg': 'image/svg+xml',
   '.ttf': 'font/truetype',
   '.xml': 'application/xml; charset=utf-8'
@@ -77,10 +78,14 @@ const contentTypes = {
   const fullAds = await page.locator('#stat-plans').textContent();
   await page.click('[data-view="lots"]');
   const lotCards = await page.locator('.lot-card').count();
-  const paginationVisible = inventoryData.items.length <= 24 || await page.locator('#lots-pagination button').count() > 0;
+  const paginationVisible = inventoryData.items.length <= 12 || await page.locator('#lots-pagination button').count() > 0;
   const firstPageFirstId = await page.locator('.lot-card .lot-title span').first().textContent();
+  const thumbnailImage = page.locator('.lot-card .lot-image img').first();
+  const optimizedThumbnail = (await thumbnailImage.getAttribute('src') || '').includes('/thumbnails/') &&
+    (await thumbnailImage.getAttribute('loading')) === 'lazy' &&
+    (await thumbnailImage.getAttribute('decoding')) === 'async';
   let paginationWorks = true;
-  if (inventoryData.items.length > 24) {
+  if (inventoryData.items.length > 12) {
     await page.getByRole('button', { name: '2', exact: true }).click();
     const secondPageFirstId = await page.locator('.lot-card .lot-title span').first().textContent();
     paginationWorks = Boolean(secondPageFirstId && secondPageFirstId !== firstPageFirstId);
@@ -130,7 +135,7 @@ const contentTypes = {
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(24, inventoryData.items.length) && paginationVisible && paginationWorks && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && optimizedThumbnail && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -139,6 +144,7 @@ const contentTypes = {
     displayed_lot_cards: lotCards,
     pagination_visible: paginationVisible,
     pagination_works: paginationWorks,
+    optimized_thumbnail: optimizedThumbnail,
     live_promotion_preview: promoVisible,
     registered_projects: projectData.projects.length,
     asset_cards: assetCards,
