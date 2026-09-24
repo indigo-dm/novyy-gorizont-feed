@@ -56,6 +56,19 @@ const contentTypes = {
     if (resourceResponse.status() >= 400) errors.push(`${resourceResponse.status()} ${resourceResponse.url()}`);
   });
   const response = await page.goto(baseUrl, { waitUntil: 'networkidle' });
+  const passwordGate = await page.locator('#access-gate').isVisible();
+  let passwordRejectsInvalid = false;
+  if (passwordGate) {
+    const password = process.env.FEED_STUDIO_PASSWORD || '';
+    if (!password) throw new Error('FEED_STUDIO_PASSWORD is required for protected-site QA');
+    await page.fill('#access-password', 'definitely-wrong-password');
+    await page.click('#access-form button[type="submit"]');
+    await page.waitForFunction(() => document.querySelector('#access-error')?.textContent === 'Неверный пароль.');
+    passwordRejectsInvalid = true;
+    await page.fill('#access-password', password);
+    await page.click('#access-form button[type="submit"]');
+    await page.waitForFunction(() => !document.body.classList.contains('access-locked'));
+  }
   await page.waitForFunction(() => document.querySelector('#stat-source')?.textContent !== '—');
   const projectData = await page.evaluate(() => fetch('projects.json').then((response) => response.json()));
   const activeProject = projectData.projects.find((project) => project.slug === projectData.default_project);
@@ -117,8 +130,10 @@ const contentTypes = {
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(24, inventoryData.items.length) && paginationVisible && paginationWorks && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(24, inventoryData.items.length) && paginationVisible && paginationWorks && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
     http_status: response ? response.status() : null,
+    password_gate: passwordGate,
+    invalid_password_rejected: passwordRejectsInvalid,
     source_ads: sourceAds,
     full_demo_ads: fullAds,
     displayed_lot_cards: lotCards,

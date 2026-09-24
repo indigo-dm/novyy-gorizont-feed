@@ -3,13 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex,notranslate">
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="Feed Studio — управление брендированными фидами объектов недвижимости">
   <title>Feed Studio — управление фидами</title>
   <link rel="icon" href="assets/logo-gold.svg" type="image/svg+xml">
   <link rel="stylesheet" href="app.css">
 </head>
-<body>
+<body class="access-locked">
+  <section class="access-gate" id="access-gate" aria-labelledby="access-title">
+    <div class="access-card">
+      <div class="access-mark" aria-hidden="true">FS</div>
+      <p class="access-eyebrow">Indigo DM</p>
+      <h1 id="access-title">Feed Studio</h1>
+      <p>Закрытый кабинет управления брендированными фидами.</p>
+      <form id="access-form">
+        <label for="access-password">Пароль</label>
+        <div class="access-field">
+          <input id="access-password" type="password" autocomplete="current-password" required autofocus>
+          <button type="submit">Войти</button>
+        </div>
+        <span class="access-error" id="access-error" role="alert" aria-live="polite"></span>
+      </form>
+    </div>
+  </section>
   <div class="app-shell">
     <aside class="sidebar">
       <a class="brand" href="#dashboard" aria-label="Feed Studio">
@@ -43,6 +61,7 @@
         </div>
         <div class="top-actions">
           <span class="saved-state" id="saved-state">Настройки загружены</span>
+          <button class="button button-secondary" id="logout-access">Выйти</button>
           <button class="button button-secondary" id="save-draft">Сохранить черновик</button>
           <button class="button button-primary" id="publish-settings">Опубликовать настройки</button>
         </div>
@@ -176,6 +195,7 @@
       </div>
     </div>
   </div>
-  <script src="app.js" defer></script>
+  <script src="access-config.js" defer></script>
+  <script src="access.js" defer></script>
 </body>
 </html>

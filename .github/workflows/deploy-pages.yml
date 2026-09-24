@@ -52,6 +52,7 @@ jobs:
         env:
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
           PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
+          FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
         run: python src/build_all.py
 
       - name: Configure Pages
