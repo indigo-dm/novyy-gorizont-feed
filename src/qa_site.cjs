@@ -12,7 +12,7 @@ const siteRoot = path.join(__dirname, '..', 'site');
 const registryFile = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'projects.json'), 'utf8'));
 const qaOutput = path.join(__dirname, '..', 'work', registryFile.default_project, 'output');
 fs.mkdirSync(qaOutput, { recursive: true });
-const baseUrl = process.env.SITE_URL || 'http://feed.local/';
+const baseUrl = process.env.SITE_URL || 'http://localhost/';
 const contentTypes = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -33,7 +33,7 @@ const contentTypes = {
   const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
   if (!process.env.SITE_URL) {
-    await page.route('http://feed.local/**', async (route) => {
+    await page.route('http://localhost/**', async (route) => {
       const url = new URL(route.request().url());
       const relativePath = decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname).replace(/^\/+/, '');
       const filePath = path.resolve(siteRoot, relativePath);

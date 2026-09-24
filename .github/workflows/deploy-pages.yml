@@ -5,7 +5,12 @@ on:
   workflow_call:
   push:
     paths:
+      - "assets/**"
+      - "web/**"
+      - "src/**"
+      - "projects.json"
       - "projects/*/assets/**"
+      - ".github/workflows/deploy-pages.yml"
   schedule:
     - cron: "17 * * * *"
       timezone: "Europe/Moscow"

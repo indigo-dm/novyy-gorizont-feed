@@ -31,6 +31,7 @@ if not re.fullmatch(r"[0-9a-f]{64}", password_hash):
 )
 shutil.copy2(SHARED_ASSETS / "Manrope-Variable.ttf", SITE / "assets" / "Manrope-Variable.ttf")
 shutil.copy2(SHARED_ASSETS / "logo-gold.svg", SITE / "assets" / "logo-gold.svg")
+shutil.copy2(SHARED_ASSETS / "indigo-logo.svg", SITE / "assets" / "indigo-logo.svg")
 (SITE / ".nojekyll").write_text("", encoding="utf-8")
 public_registry = {
     "version": 1,

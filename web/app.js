@@ -140,12 +140,9 @@
     $('#full-feed-link').href = state.project.base + '/full-avito-demo.xml';
     $('#pilot-feed-link').href = state.project.base + '/pilot-avito.xml';
     if (state.assets && state.assets.brand) {
-      document.documentElement.style.setProperty('--green', state.assets.brand.green);
-      document.documentElement.style.setProperty('--green-dark', state.assets.brand.green_dark);
-      document.documentElement.style.setProperty('--gold', state.assets.brand.gold);
+      document.documentElement.style.setProperty('--project-gold', state.assets.brand.gold);
+      document.documentElement.style.setProperty('--project-ink', state.assets.brand.green_dark);
     }
-    var logo = state.assets && state.assets.items.find(function (item) { return item.key === 'logo'; });
-    $('#sidebar-logo').src = logo && logo.url ? logo.url : 'assets/logo-gold.svg';
   }
 
   function renderAssets() {
