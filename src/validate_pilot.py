@@ -25,9 +25,12 @@ def main() -> None:
         errors.append("Pilot XML ids do not match manifest order")
     for item in manifest["items"]:
         image = ROOT / "output" / str(item["output_file"])
+        preview = ROOT / "output" / "previews" / image.name
         plan = ROOT / str(item["plan_file"])
         if not image.exists() or image.stat().st_size == 0:
             errors.append(f"Missing generated image: {image}")
+        if not preview.exists() or preview.stat().st_size == 0:
+            errors.append(f"Missing neutral preview image: {preview}")
         if not plan.exists() or plan.stat().st_size == 0:
             errors.append(f"Missing plan image: {plan}")
     result = {
@@ -36,6 +39,7 @@ def main() -> None:
         "pilot_ads": len(ads),
         "unique_plans": manifest["unique_plans"],
         "generated_images": len(list((ROOT / "output" / "images").glob("*.png"))),
+        "preview_images": len(list((ROOT / "output" / "previews").glob("*.png"))),
         "publish_ready": manifest["publish_ready"],
         "errors": errors,
     }

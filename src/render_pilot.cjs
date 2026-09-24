@@ -12,7 +12,9 @@ const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'output', 'pilot-manifest.json'), 'utf8'));
 const config = JSON.parse(fs.readFileSync(path.join(root, 'config.json'), 'utf8'));
 const outputDir = path.join(root, 'output', 'images');
+const previewDir = path.join(root, 'output', 'previews');
 fs.mkdirSync(outputDir, { recursive: true });
+fs.mkdirSync(previewDir, { recursive: true });
 
 const mimeByExt = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.ttf': 'font/truetype' };
 const dataUrl = (filePath) => {
@@ -32,9 +34,9 @@ const fontUrl = dataUrl(path.join(root, 'assets', 'Manrope-Variable.ttf'));
 const logoUrl = dataUrl(path.join(root, 'assets', 'logo-gold.svg'));
 const renderUrl = dataUrl(path.join(root, 'assets', 'selected-render.jpg'));
 
-function htmlFor(item) {
+function htmlFor(item, includePromotion = true) {
   const planUrl = dataUrl(path.join(root, item.plan_file));
-  const promo = item.promotion
+  const promo = includePromotion && item.promotion
     ? `<div class="promo"><span>${esc(item.promotion.label)}</span>${esc(item.promotion.text)}</div>`
     : '';
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
@@ -62,7 +64,10 @@ function htmlFor(item) {
   const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
   for (const item of manifest.items) {
-    await page.setContent(htmlFor(item), { waitUntil: 'load' });
+    await page.setContent(htmlFor(item, false), { waitUntil: 'load' });
+    await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({ path: path.join(previewDir, `${item.id}.png`), type: 'png' });
+    await page.setContent(htmlFor(item, true), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: path.join(outputDir, `${item.id}.png`), type: 'png' });
     console.log(`${item.id}\t${item.house}\t${item.rooms}к\t${item.area} м²`);

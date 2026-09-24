@@ -59,13 +59,28 @@ const contentTypes = {
   const lotCards = await page.locator('.lot-card').count();
   await page.click('[data-view="promotions"]');
   await page.locator('[data-field="enabled"]').check();
-  while (await page.locator('[data-array="house_ids"]:checked').count()) {
-    await page.locator('[data-array="house_ids"]:checked').first().uncheck();
-  }
-  while (await page.locator('[data-array="rooms"]:checked').count()) {
-    await page.locator('[data-array="rooms"]:checked').first().uncheck();
-  }
+  const matchingId = await page.evaluate(async () => {
+    const [inventory, settings] = await Promise.all([
+      fetch('inventory.json').then((response) => response.json()),
+      fetch('settings.json').then((response) => response.json())
+    ]);
+    const rule = settings.rules[0];
+    const today = new Date().toISOString().slice(0, 10);
+    const matches = (item) => {
+      if (rule.starts_at && today < rule.starts_at) return false;
+      if (rule.ends_at && today > rule.ends_at) return false;
+      if ((rule.exclude_ids || []).map(String).includes(String(item.id))) return false;
+      if ((rule.include_ids || []).length && !(rule.include_ids || []).map(String).includes(String(item.id))) return false;
+      if ((rule.house_ids || []).length && !(rule.house_ids || []).map(String).includes(String(item.house_id))) return false;
+      if ((rule.rooms || []).length && !(rule.rooms || []).map(String).includes(String(item.rooms))) return false;
+      if (rule.area_min != null && Number(item.area) < Number(rule.area_min)) return false;
+      if (rule.area_max != null && Number(item.area) > Number(rule.area_max)) return false;
+      return true;
+    };
+    return inventory.items.find(matches)?.id || inventory.items[0]?.id;
+  });
   await page.click('[data-view="preview"]');
+  await page.locator('#preview-lot').selectOption(String(matchingId));
   const promoVisible = await page.locator('#live-promo').isVisible();
   await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-preview.png'), fullPage: true });
   await page.setViewportSize({ width: 390, height: 844 });

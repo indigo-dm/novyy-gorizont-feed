@@ -17,11 +17,14 @@ rules = json.loads((ROOT / "promotion-rules.json").read_text(encoding="utf-8"))
 if SITE.exists():
     shutil.rmtree(SITE)
 (SITE / "images").mkdir(parents=True)
+(SITE / "previews").mkdir(parents=True)
 (SITE / "assets").mkdir(parents=True)
 
 for item in manifest["items"]:
     source = OUTPUT / item["output_file"]
     shutil.copy2(source, SITE / "images" / source.name)
+    preview = OUTPUT / "previews" / source.name
+    shutil.copy2(preview, SITE / "previews" / source.name)
 
 for filename in ("index.html", "app.css", "app.js"):
     shutil.copy2(WEB / filename, SITE / filename)
@@ -42,7 +45,8 @@ for item in manifest["items"]:
         "floors": str(item["floors"]),
         "price": str(item["price"]),
         "decoration": item["decoration"],
-        "image": f"images/{item['id']}.png",
+        "image": f"previews/{item['id']}.png",
+        "final_image": f"images/{item['id']}.png",
         "promotion": item.get("promotion"),
     })
 
