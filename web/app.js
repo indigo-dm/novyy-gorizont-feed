@@ -25,6 +25,9 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
   };
+  var safeColor = function (value) {
+    return /^#[0-9a-f]{6}$/i.test(String(value || '')) ? String(value) : '#000000';
+  };
   var clone = function (value) { return JSON.parse(JSON.stringify(value)); };
   var draftKey = function () { return 'feed-studio-rules-v1-' + (state.project ? state.project.slug : 'default'); };
   var formatPrice = function (value) {
@@ -155,6 +158,17 @@
         esc(asset.name) + '</strong><span class="asset-status ' + (asset.exists ? 'ready' : '') + '">' +
         (asset.exists ? 'Готово' : 'Требуется') + '</span></div><p>' + esc(asset.description) + '</p><code>' +
         esc(asset.filename) + '</code></div></article>';
+    }).join('');
+    var palette = [
+      { name: 'Основной', value: state.assets.brand.green },
+      { name: 'Акцент', value: state.assets.brand.gold },
+      { name: 'Серый', value: state.assets.brand.gray },
+      { name: 'Белый', value: state.assets.brand.white }
+    ];
+    $('#brand-palette').innerHTML = palette.map(function (color) {
+      var value = safeColor(color.value);
+      return '<div class="palette-item"><span class="palette-swatch" style="background:' + value + '"></span><div><strong>' +
+        esc(color.name) + '</strong><code>' + esc(value.toUpperCase()) + '</code></div></div>';
     }).join('');
   }
 

@@ -94,6 +94,16 @@ brand_assets = [
         "required": True,
     },
 ]
+for index, render in enumerate(config["brand"].get("additional_renders", []), start=1):
+    brand_assets.append(
+        {
+            "key": f"additional_render_{index}",
+            "name": render.get("name", f"Дополнительный рендер {index}"),
+            "description": "Дополнительный фирменный рендер объекта.",
+            "filename": render["filename"],
+            "required": False,
+        }
+    )
 for asset in brand_assets:
     path = ASSETS_DIR / asset["filename"]
     asset["exists"] = path.exists()
@@ -111,6 +121,8 @@ assets_manifest = {
         "green": config["brand"]["green"],
         "green_dark": config["brand"]["green_dark"],
         "gold": config["brand"]["gold"],
+        "gray": config["brand"].get("gray", "#9B9B9B"),
+        "white": config["brand"].get("white", "#FFFFFF"),
         "font": config["brand"]["font"],
     },
 }
