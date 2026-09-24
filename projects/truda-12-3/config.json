@@ -1,0 +1,17 @@
+{
+  "project": "ЖК Труда 12/3",
+  "source_feed_key": "truda-12-3",
+  "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images",
+  "brand": {
+    "green": "#00605C",
+    "green_dark": "#004C49",
+    "gold": "#CEAD75",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "logo": "logo.svg",
+    "key_render": "key-render.jpg"
+  },
+  "houses": {
+    "11849962": "Дом 12/3"
+  }
+}

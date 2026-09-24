@@ -1,0 +1,23 @@
+{
+  "project": "ЖК Вишнёвый сад",
+  "source_feed_key": "vishnevyy-sad",
+  "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/images",
+  "brand": {
+    "green": "#00605C",
+    "green_dark": "#004C49",
+    "gold": "#CEAD75",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "logo": "logo.svg",
+    "key_render": "key-render.jpg"
+  },
+  "houses": {
+    "8276816": "Дом · ID 8276816",
+    "8276823": "Дом · ID 8276823",
+    "8276825": "Дом · ID 8276825",
+    "9464265": "Дом · ID 9464265",
+    "9464277": "Дом · ID 9464277",
+    "9464279": "Дом · ID 9464279",
+    "9464402": "Дом · ID 9464402"
+  }
+}
