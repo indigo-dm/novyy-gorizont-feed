@@ -59,6 +59,12 @@ const contentTypes = {
   const lotCards = await page.locator('.lot-card').count();
   await page.click('[data-view="promotions"]');
   await page.locator('[data-field="enabled"]').check();
+  while (await page.locator('[data-array="house_ids"]:checked').count()) {
+    await page.locator('[data-array="house_ids"]:checked').first().uncheck();
+  }
+  while (await page.locator('[data-array="rooms"]:checked').count()) {
+    await page.locator('[data-array="rooms"]:checked').first().uncheck();
+  }
   await page.click('[data-view="preview"]');
   const promoVisible = await page.locator('#live-promo').isVisible();
   await page.screenshot({ path: path.join(__dirname, '..', 'output', 'admin-preview.png'), fullPage: true });
