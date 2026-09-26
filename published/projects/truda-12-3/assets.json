@@ -1,0 +1,62 @@
+{
+  "project": "ЖК Труда 12/3",
+  "slug": "truda-12-3",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/truda-12-3/assets",
+  "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
+  "items": [
+    {
+      "key": "logo",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для карточек.",
+      "filename": "logo-truda.png",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/logo-truda.png"
+    },
+    {
+      "key": "key_render",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "key-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/key-render.jpg"
+    },
+    {
+      "key": "additional_render_1",
+      "name": "Интерьер кухни",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-kitchen.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-kitchen.jpg"
+    },
+    {
+      "key": "additional_render_2",
+      "name": "Интерьер ванной",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-bathroom.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-bathroom.jpg"
+    },
+    {
+      "key": "additional_render_3",
+      "name": "Гардеробная",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-storage.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-storage.jpg"
+    }
+  ],
+  "brand": {
+    "green": "#194820",
+    "green_dark": "#194820",
+    "gold": "#72C451",
+    "gray": "#9B9B9B",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "palette": null
+  }
+}

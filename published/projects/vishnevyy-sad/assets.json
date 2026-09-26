@@ -1,0 +1,79 @@
+{
+  "project": "ЖК Вишнёвый сад",
+  "slug": "vishnevyy-sad",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/vishnevyy-sad/assets",
+  "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
+  "items": [
+    {
+      "key": "logo",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для карточек.",
+      "filename": "logo-vishnevyy-sad.png",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-vishnevyy-sad.png"
+    },
+    {
+      "key": "key_render",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "key-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/key-render.jpg"
+    },
+    {
+      "key": "additional_logo_1",
+      "name": "Фирменный знак",
+      "description": "Дополнительный вариант фирменного логотипа объекта.",
+      "filename": "logo-mark.png",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-mark.png"
+    },
+    {
+      "key": "additional_render_1",
+      "name": "Вид на территорию",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-aerial.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-aerial.jpg"
+    },
+    {
+      "key": "additional_render_2",
+      "name": "Фасад комплекса",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-facade.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-facade.jpg"
+    }
+  ],
+  "brand": {
+    "green": "#221E20",
+    "green_dark": "#221E20",
+    "gold": "#E21049",
+    "gray": "#A5A7A7",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "palette": [
+      {
+        "name": "Графитовый",
+        "value": "#221E20"
+      },
+      {
+        "name": "Вишнёвый",
+        "value": "#E21049"
+      },
+      {
+        "name": "Серый",
+        "value": "#A5A7A7"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  }
+}

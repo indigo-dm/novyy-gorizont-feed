@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "build_id": "bootstrap-20260926",
+  "default_project": "novyy-gorizont",
+  "projects": [
+    {
+      "slug": "novyy-gorizont",
+      "name": "ЖК Новый Горизонт",
+      "status": "active",
+      "available": true,
+      "base": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/data/projects/novyy-gorizont"
+    },
+    {
+      "slug": "vishnevyy-sad",
+      "name": "ЖК Вишнёвый сад",
+      "status": "active",
+      "available": true,
+      "base": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/data/projects/vishnevyy-sad"
+    },
+    {
+      "slug": "truda-12-3",
+      "name": "ЖК Труда 12/3",
+      "status": "active",
+      "available": true,
+      "base": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/data/projects/truda-12-3"
+    },
+    {
+      "slug": "teatral",
+      "name": "ЖК Театрал",
+      "status": "active",
+      "available": true,
+      "base": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/data/projects/teatral"
+    }
+  ]
+}

@@ -1,0 +1,3233 @@
+{
+  "slug": "teatral",
+  "project": "ЖК Театрал",
+  "checked_at": "2026-09-26T14:13:02+03:00",
+  "source_ads": 20,
+  "full_ads": 20,
+  "unique_plans": 8,
+  "source_tag_counts": {
+    "AdStatus": 20,
+    "Address": 20,
+    "BalconyOrLoggiaMulti": 18,
+    "Category": 20,
+    "ContactMethod": 20,
+    "ContactPhone": 20,
+    "Decoration": 20,
+    "Description": 20,
+    "Floor": 20,
+    "Floors": 20,
+    "HouseType": 20,
+    "Id": 20,
+    "KitchenSpace": 20,
+    "Latitude": 20,
+    "LivingSpace": 20,
+    "Longitude": 20,
+    "ManagerName": 20,
+    "MarketType": 20,
+    "NewDevelopmentId": 20,
+    "OperationType": 20,
+    "Price": 20,
+    "PropertyRights": 20,
+    "RoomType": 20,
+    "Rooms": 20,
+    "Square": 20,
+    "Status": 20,
+    "VideoURL": 19,
+    "BathroomMulti": 18
+  },
+  "parameter_catalog": [
+    {
+      "tag": "ViewFromWindows",
+      "name": "Вид из окон",
+      "kind": "multi",
+      "values": [
+        "Во двор",
+        "На улицу",
+        "На солнечную сторону"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "PassengerElevator",
+      "name": "Пассажирские лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "FreightElevator",
+      "name": "Грузовые лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "BathroomMulti",
+      "name": "Санузел",
+      "kind": "multi",
+      "values": [
+        "Раздельный",
+        "Совмещенный"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "CeilingHeight",
+      "name": "Высота потолков",
+      "kind": "number",
+      "min": 2,
+      "max": 10,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "Courtyard",
+      "name": "Двор",
+      "kind": "multi",
+      "values": [
+        "Закрытая территория",
+        "Детская площадка",
+        "Спортивная площадка"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "Parking",
+      "name": "Парковка",
+      "kind": "multi",
+      "values": [
+        "Подземная",
+        "Наземная многоуровневая",
+        "Открытая во дворе",
+        "За шлагбаумом во дворе",
+        "Гостевая"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "NDAdditionally",
+      "name": "Дополнительно о новостройке",
+      "kind": "multi",
+      "values": [
+        "Гардеробная",
+        "Панорамные окна"
+      ],
+      "supported": true
+    }
+  ],
+  "items": [
+    {
+      "id": "10479461",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "60.3",
+      "floor": "4",
+      "floors": "17",
+      "price": "14472000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479461.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479461.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479461.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-f72636c6b791",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bea7411f575.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479461.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-f72636c6b791",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bea7411f575.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479545",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70",
+      "floor": "3",
+      "floors": "17",
+      "price": "17010000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479545.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479545.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479545.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479545.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479550",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70.2",
+      "floor": "4",
+      "floors": "17",
+      "price": "17058600",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479550.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479550.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479550.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479550.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479560",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70.2",
+      "floor": "6",
+      "floors": "17",
+      "price": "17199000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479560.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479560.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479560.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479560.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479540",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70.7",
+      "floor": "2",
+      "floors": "17",
+      "price": "17180100",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479540.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479540.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479540.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-d1f8cf4dc8ae",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda77cd1771.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479540.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-d1f8cf4dc8ae",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda77cd1771.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479454",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "88.4",
+      "floor": "3",
+      "floors": "17",
+      "price": "21923200",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479454.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479454.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479454.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479454.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479448",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.2",
+      "floor": "2",
+      "floors": "17",
+      "price": "20516000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479448.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479448.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479448.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-8dad2fc3447d",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78b24e27.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479448.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-8dad2fc3447d",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78b24e27.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479496",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.4",
+      "floor": "10",
+      "floors": "17",
+      "price": "24138000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479496.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479496.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479496.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479496.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479460",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.6",
+      "floor": "4",
+      "floors": "17",
+      "price": "22220800",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479460.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479460.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479460.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479460.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479478",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.6",
+      "floor": "7",
+      "floors": "17",
+      "price": "23744000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479478.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479478.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479478.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479478.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479549",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "106",
+      "floor": "3",
+      "floors": "17",
+      "price": "23320000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479549.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479549.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479549.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-f4528203d537",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda787cf2ea.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479549.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-f4528203d537",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda787cf2ea.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479544",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "186.2",
+      "floor": "2",
+      "floors": "17",
+      "price": "30397709",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479544.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479544.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479544.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-9bbde0104175",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78519180.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479544.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-9bbde0104175",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78519180.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "10479480",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.2",
+      "floor": "8",
+      "floors": "17",
+      "price": "28644000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479480.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479480.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479480.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479480.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479462",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.3",
+      "floor": "5",
+      "floors": "17",
+      "price": "28666000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479462.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479462.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479462.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479462.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479492",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.3",
+      "floor": "10",
+      "floors": "17",
+      "price": "29317500",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479492.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479492.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479492.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479492.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479468",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.5",
+      "floor": "6",
+      "floors": "17",
+      "price": "28710000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479468.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479468.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479468.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479468.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479474",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.5",
+      "floor": "7",
+      "floors": "17",
+      "price": "28710000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479474.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479474.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479474.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479474.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479504",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.6",
+      "floor": "12",
+      "floors": "17",
+      "price": "29385000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479504.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479504.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479504.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479504.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479510",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.6",
+      "floor": "13",
+      "floors": "17",
+      "price": "29385000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479510.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479510.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479510.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479510.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    },
+    {
+      "id": "10479450",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "131.6",
+      "floor": "3",
+      "floors": "17",
+      "price": "28952000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/previews/10479450.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/thumbnails/10479450.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479450.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479450.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2019 @@
+{
+  "slug": "truda-12-3",
+  "project": "ЖК Труда 12/3",
+  "checked_at": "2026-09-26T14:15:07+03:00",
+  "source_ads": 16,
+  "full_ads": 16,
+  "unique_plans": 9,
+  "source_tag_counts": {
+    "AdStatus": 16,
+    "Address": 16,
+    "Category": 16,
+    "ContactMethod": 16,
+    "ContactPhone": 16,
+    "Description": 16,
+    "Floor": 16,
+    "Floors": 16,
+    "HouseType": 16,
+    "Id": 16,
+    "KitchenSpace": 16,
+    "LivingSpace": 16,
+    "ManagerName": 16,
+    "MarketType": 16,
+    "NewDevelopmentId": 16,
+    "OperationType": 16,
+    "Price": 16,
+    "PropertyRights": 16,
+    "Rooms": 16,
+    "Square": 16,
+    "Status": 16
+  },
+  "parameter_catalog": [
+    {
+      "tag": "ViewFromWindows",
+      "name": "Вид из окон",
+      "kind": "multi",
+      "values": [
+        "Во двор",
+        "На улицу",
+        "На солнечную сторону"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "PassengerElevator",
+      "name": "Пассажирские лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "FreightElevator",
+      "name": "Грузовые лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "BathroomMulti",
+      "name": "Санузел",
+      "kind": "multi",
+      "values": [
+        "Раздельный",
+        "Совмещенный"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "CeilingHeight",
+      "name": "Высота потолков",
+      "kind": "number",
+      "min": 2,
+      "max": 10,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "Courtyard",
+      "name": "Двор",
+      "kind": "multi",
+      "values": [
+        "Закрытая территория",
+        "Детская площадка",
+        "Спортивная площадка"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "Parking",
+      "name": "Парковка",
+      "kind": "multi",
+      "values": [
+        "Подземная",
+        "Наземная многоуровневая",
+        "Открытая во дворе",
+        "За шлагбаумом во дворе",
+        "Гостевая"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "NDAdditionally",
+      "name": "Дополнительно о новостройке",
+      "kind": "multi",
+      "values": [
+        "Гардеробная",
+        "Панорамные окна"
+      ],
+      "supported": true
+    }
+  ],
+  "items": [
+    {
+      "id": "15597038",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "55.9",
+      "floor": "8",
+      "floors": "10",
+      "price": "7826000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597038.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597038.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597038.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597038.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597044",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "55.9",
+      "floor": "9",
+      "floors": "10",
+      "price": "7826000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597044.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597044.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597044.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597044.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597050",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "55.9",
+      "floor": "10",
+      "floors": "10",
+      "price": "7826000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597050.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597050.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597050.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597050.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597053",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "56",
+      "floor": "10",
+      "floors": "10",
+      "price": "7840000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597053.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597053.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597053.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-515bdfe484f6",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a562b877a.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597053.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-515bdfe484f6",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a562b877a.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597030",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.3",
+      "floor": "6",
+      "floors": "10",
+      "price": "8410500",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597030.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597030.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597030.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597030.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597048",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.3",
+      "floor": "9",
+      "floors": "10",
+      "price": "8722000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597048.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597048.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597048.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597048.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597054",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.3",
+      "floor": "10",
+      "floors": "10",
+      "price": "8722000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597054.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597054.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597054.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597054.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597025",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "6",
+      "floors": "10",
+      "price": "8424000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597025.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597025.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597025.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597025.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597031",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "7",
+      "floors": "10",
+      "price": "8736000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597031.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597031.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597031.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597031.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597043",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "9",
+      "floors": "10",
+      "price": "8736000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597043.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597043.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597043.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597043.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597049",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "10",
+      "floors": "10",
+      "price": "8736000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597049.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597049.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597049.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597049.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597010",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "70.9",
+      "floor": "2",
+      "floors": "10",
+      "price": "9571500",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597010.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597010.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597010.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-763a505afaf2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc62d2bda.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597010.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-763a505afaf2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc62d2bda.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597011",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "70.9",
+      "floor": "2",
+      "floors": "10",
+      "price": "9571500",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597011.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597011.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597011.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-8c3d5734c159",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc626e9df.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597011.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-8c3d5734c159",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc626e9df.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597013",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "3",
+      "area": "91.3",
+      "floor": "3",
+      "floors": "10",
+      "price": "12325500",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597013.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597013.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597013.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-33088c18113f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/69148f56d6414.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597013.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-33088c18113f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/69148f56d6414.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597020",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "3",
+      "area": "91.3",
+      "floor": "4",
+      "floors": "10",
+      "price": "12325500",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597020.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597020.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597020.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-0a03a90e9950",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5e4470cee7.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597020.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-0a03a90e9950",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5e4470cee7.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    },
+    {
+      "id": "15597012",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "3",
+      "area": "93.6",
+      "floor": "2",
+      "floors": "10",
+      "price": "12636000",
+      "decoration": "Без отделки",
+      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/previews/15597012.webp",
+      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/thumbnails/15597012.webp",
+      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597012.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-a186a6037ba7",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc63434cf.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images/15597012.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-a186a6037ba7",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc63434cf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ]
+    }
+  ]
+}

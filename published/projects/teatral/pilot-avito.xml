@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Ads formatVersion="3" target="Avito.ru">
+  <Ad>
+    <Id>10479461</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>&lt;p&gt;Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Продается большая 1-комнатная квартира 60,3 кв.м. в новостройке в центре Ростова. Дом сдан.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Планировка&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– спальня 19 кв.м.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– кухня-гостиная 19,1 кв.м.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– продуманные зоны хранения&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– санузел 6 кв.м.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– панорамные окна&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– 4 этаж&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Локация&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– Школа - 2 мин.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– Детский сад - 5 мин.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– Медицинский центр - 3 мин.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– Ул. Пушкинская - 3 мин.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;– Парк Революции - 4 мин.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;ЖК "Театрал"&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Премиум локация&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Собственная котельная&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• 5-6 квартир на этаже&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Закрытая территория&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Впечатляющие стильные холлы&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Подземный паркинг&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;• Кафе, супермаркеты на 1 этаже&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!&lt;/p&gt;</Description>
+    <Price>14472000</Price>
+    <Square>60.3</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>4</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>2</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479461.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bea7411f575.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/shorts/7be4773ee5b4df5bc5fcdcb451f0d046/</VideoURL>
+  </Ad>
+  <Ad>
+    <Id>10479545</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается большая светлая 2-комнатная квартира 70 кв.м. в новостройке в центре Ростова. Дом сдан.&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– 2 изолированные комнаты&lt;br&gt;– кухня 15,6 кв.м.&lt;br&gt;– 2 санузла&lt;br&gt;– 3 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>17010000</Price>
+    <Square>70</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>3</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>2</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479545.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/shorts/5ceb3098f27243772def9b3f3b5ef6a6/</VideoURL>
+  </Ad>
+  <Ad>
+    <Id>10479540</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается большая светлая 2-комнатная квартира 70,7 кв.м. в новостройке в центре Ростова. Дом сдан.&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– 2 изолированные комнаты&lt;br&gt;– кухня 15,3 кв.м.&lt;br&gt;– 2 санузла&lt;br&gt;– 2 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>17180100</Price>
+    <Square>70.7</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>2</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>2</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479540.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bda77cd1771.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/shorts/5ceb3098f27243772def9b3f3b5ef6a6/</VideoURL>
+  </Ad>
+  <Ad>
+    <Id>10479454</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается просторная 3-комнатная квартира 88,4 кв.м. в новостройке у парка Революции. Дом сдан.&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– свободная планировка – создайте свое индивидуальное пространство&lt;br&gt;– юго-восточная сторона&lt;br&gt;– 3 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>21923200</Price>
+    <Square>88.4</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>3</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>3</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479454.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/</VideoURL>
+  </Ad>
+  <Ad>
+    <Id>10479448</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается просторная 3-комнатная квартира 89,2 кв.м. в новостройке у парка Революции. Дом сдан.&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– свободная планировка – создайте свое индивидуальное пространство&lt;br&gt;– увеличенное остекление&lt;br&gt;– юго-восточная сторона&lt;br&gt;– 2 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;&lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Подземный паркинг&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>20516000</Price>
+    <Square>89.2</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>2</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>3</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479448.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bda78b24e27.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/</VideoURL>
+  </Ad>
+  <Ad>
+    <Id>10479549</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается просторная светлая 3-комнатная квартира 106 кв.м. в новостройке у парка Революции. Дом сдан.&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– 3 изолированные комнаты&lt;br&gt;– мастер-спальня (со своим с/у)&lt;br&gt;– 2 санузла&lt;br&gt;– 3 лоджии по 5 кв.м.&lt;br&gt;– 3 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>23320000</Price>
+    <Square>106</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>3</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>3</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479549.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bda787cf2ea.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/video/be51779a1bec7e277fe2ca6d8bc29c66/</VideoURL>
+  </Ad>
+  <Ad>
+    <Id>10479544</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж дома в премиальной локации!&lt;br&gt;Продается эксклюзивная квартира с террасой площадью 186,2 кв.м. Новый ЖК бизнес-класса в центре Ростова. Дом сдан!&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– терраса 88,7 кв.м.&lt;br&gt;– 2 изолированные спальни&lt;br&gt;– просторная мастер-спальня (со своим с/у)&lt;br&gt;– большая кухня-гостиная 27,6 кв.м.&lt;br&gt;– 2 санузла&lt;br&gt;– 2 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>30397709</Price>
+    <Square>186.2</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>2</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>3</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479544.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bda78519180.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <AdStatus>Free</AdStatus>
+  </Ad>
+  <Ad>
+    <Id>10479450</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632043586</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.232951</Latitude>
+    <Longitude>39.742723</Longitude>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается просторная 4-комнатная квартира 131,6 кв.м. в новом ЖК у парка Революции. Дом сдан. &lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– 4 изолированные светлые комнаты&lt;br&gt;– большая кухня-гостиная 26,3 кв.м.&lt;br&gt;– 3 санузла&lt;br&gt;– 2 лоджии по 6,3 кв.м.&lt;br&gt;– 3 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>28952000</Price>
+    <Square>131.6</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>3</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>4974615</NewDevelopmentId>
+    <Rooms>4</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>17</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <Images>
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479450.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png" />
+    </Images>
+    <RoomType>
+      <Option>изолированные</Option>
+    </RoomType>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <AdStatus>Free</AdStatus>
+    <VideoURL>https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/</VideoURL>
+  </Ad>
+</Ads>

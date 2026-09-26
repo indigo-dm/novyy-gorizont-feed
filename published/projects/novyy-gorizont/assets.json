@@ -1,0 +1,35 @@
+{
+  "project": "ЖК Новый Горизонт",
+  "slug": "novyy-gorizont",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/novyy-gorizont/assets",
+  "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
+  "items": [
+    {
+      "key": "logo",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для карточек.",
+      "filename": "logo-gold.svg",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/logo-gold.svg"
+    },
+    {
+      "key": "key_render",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "selected-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/selected-render.jpg"
+    }
+  ],
+  "brand": {
+    "green": "#00605C",
+    "green_dark": "#004C49",
+    "gold": "#CEAD75",
+    "gray": "#9B9B9B",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "palette": null
+  }
+}
