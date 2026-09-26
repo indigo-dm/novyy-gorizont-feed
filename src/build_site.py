@@ -17,6 +17,48 @@ from project_context import (
 
 SITE = ROOT / "site"
 PROJECT_SITE = SITE / "projects" / PROJECT_SLUG
+PARAMETER_CATALOG = [
+    {
+        "tag": "ViewFromWindows",
+        "name": "Вид из окон",
+        "kind": "multi",
+        "values": ["Во двор", "На улицу", "На солнечную сторону"],
+        "supported": True,
+    },
+    {
+        "tag": "PassengerElevator",
+        "name": "Пассажирские лифты",
+        "kind": "select",
+        "values": [str(value) for value in range(1, 9)],
+        "supported": True,
+    },
+    {
+        "tag": "FreightElevator",
+        "name": "Грузовые лифты",
+        "kind": "select",
+        "values": [str(value) for value in range(1, 9)],
+        "supported": True,
+    },
+    {
+        "tag": "BathroomMulti",
+        "name": "Санузел",
+        "kind": "multi",
+        "values": ["Раздельный", "Совмещенный"],
+        "supported": True,
+    },
+    {
+        "tag": "CeilingHeight",
+        "name": "Высота потолков",
+        "kind": "number",
+        "min": 2,
+        "max": 10,
+        "step": 0.01,
+        "supported": True,
+    },
+    {"tag": "Courtyard", "name": "Двор", "kind": "multi", "values": [], "supported": False},
+    {"tag": "Parking", "name": "Парковка", "kind": "multi", "values": [], "supported": False},
+    {"tag": "NDAdditionally", "name": "Дополнительно о новостройке", "kind": "multi", "values": [], "supported": False},
+]
 
 manifest = json.loads((OUTPUT_DIR / "full-manifest.json").read_text(encoding="utf-8"))
 rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))
@@ -60,6 +102,10 @@ for item in manifest["items"]:
         "thumbnail": f"{public_prefix}/thumbnails/{item['id']}.webp",
         "final_image": f"{public_prefix}/images/{item['id']}.png",
         "promotion": item.get("promotion"),
+        "source_images": item.get("source_image_items", []),
+        "feed_images": item.get("feed_images", []),
+        "feed_parameters": item.get("feed_parameters", {}),
+        "source_tags": item.get("source_tags", []),
     })
 
 inventory = {
@@ -69,6 +115,8 @@ inventory = {
     "source_ads": manifest["source_ads"],
     "full_ads": manifest["full_ads"],
     "unique_plans": manifest["unique_plans"],
+    "source_tag_counts": manifest.get("source_tag_counts", {}),
+    "parameter_catalog": PARAMETER_CATALOG,
     "items": public_items,
 }
 status = {

@@ -9,12 +9,18 @@
     status: null,
     assets: null,
     rules: [],
+    imageSettings: { lot_overrides: {}, bulk_rules: [] },
+    parameterSettings: { lot_values: {}, bulk_rules: [] },
     activeRuleId: null,
     activeView: 'dashboard',
     filters: { house: '', rooms: '', search: '' },
+    imageFilters: { house: '', rooms: '', search: '' },
+    parameterFilters: { house: '', rooms: '', search: '' },
     page: 1,
     pageSize: 12,
     previewId: null,
+    imageLotId: null,
+    parameterLotId: null,
     dirty: false
   };
 
@@ -50,6 +56,53 @@
       day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'
     }).format(date);
   };
+  var emptyImageSettings = function () { return { lot_overrides: {}, bulk_rules: [] }; };
+  var emptyParameterSettings = function () { return { lot_values: {}, bulk_rules: [] }; };
+
+  function itemMatchesFilters(item, filters) {
+    var search = String(filters.search || '').trim().toLowerCase();
+    return (!filters.house || item.house_id === filters.house) &&
+      (!filters.rooms || item.rooms === filters.rooms) &&
+      (!search || item.id.toLowerCase().indexOf(search) >= 0);
+  }
+
+  function ruleMatchesSimple(item, rule) {
+    if ((rule.exclude_ids || []).indexOf(String(item.id)) >= 0) return false;
+    if ((rule.include_ids || []).length && (rule.include_ids || []).indexOf(String(item.id)) < 0) return false;
+    if ((rule.house_ids || []).length && (rule.house_ids || []).indexOf(String(item.house_id)) < 0) return false;
+    if ((rule.rooms || []).length && (rule.rooms || []).indexOf(String(item.rooms)) < 0) return false;
+    var area = Number(item.area);
+    if (rule.area_min != null && area < Number(rule.area_min)) return false;
+    if (rule.area_max != null && area > Number(rule.area_max)) return false;
+    return true;
+  }
+
+  function filterRuleFrom(filters, items) {
+    return {
+      house_ids: filters.house ? [filters.house] : [],
+      rooms: filters.rooms ? [filters.rooms] : [],
+      area_min: null,
+      area_max: null,
+      include_ids: filters.search ? items.map(function (item) { return item.id; }) : [],
+      exclude_ids: []
+    };
+  }
+
+  function normalizeImageSettings(value) {
+    var source = value && typeof value === 'object' ? value : {};
+    return {
+      lot_overrides: source.lot_overrides && typeof source.lot_overrides === 'object' ? clone(source.lot_overrides) : {},
+      bulk_rules: Array.isArray(source.bulk_rules) ? clone(source.bulk_rules) : []
+    };
+  }
+
+  function normalizeParameterSettings(value) {
+    var source = value && typeof value === 'object' ? value : {};
+    return {
+      lot_values: source.lot_values && typeof source.lot_values === 'object' ? clone(source.lot_values) : {},
+      bulk_rules: Array.isArray(source.bulk_rules) ? clone(source.bulk_rules) : []
+    };
+  }
 
   function emptyRule() {
     return {
@@ -103,7 +156,12 @@
   }
 
   function saveDraft(showMessage) {
-    localStorage.setItem(draftKey(), JSON.stringify({ version: 1, rules: state.rules }));
+    localStorage.setItem(draftKey(), JSON.stringify({
+      version: 2,
+      rules: state.rules,
+      image_settings: state.imageSettings,
+      parameter_settings: state.parameterSettings
+    }));
     setDirty(false);
     if (showMessage) showToast('Черновик сохранён в этом браузере');
   }
@@ -134,11 +192,13 @@
     $$('.view').forEach(function (section) {
       section.classList.toggle('active', section.id === 'view-' + view);
     });
-    var titles = { dashboard: 'Обзор', lots: 'Квартиры', promotions: 'Акции', assets: 'Материалы', preview: 'Предпросмотр' };
+    var titles = { dashboard: 'Обзор', lots: 'Квартиры', images: 'Изображения', parameters: 'Параметры', promotions: 'Акции', assets: 'Материалы', preview: 'Предпросмотр' };
     $('#page-title').textContent = titles[view] || 'Управление фидом';
     window.location.hash = view;
     if (view === 'preview') renderPreview();
     if (view === 'assets') renderAssets();
+    if (view === 'images') renderImages();
+    if (view === 'parameters') renderParameters();
   }
 
   function renderProjectChrome() {
@@ -195,19 +255,32 @@
       houses.set(String(item.house_id), item.house);
       rooms.add(String(item.rooms));
     });
-    $('#filter-house').innerHTML = '<option value="">Все дома</option>' +
+    var houseOptions = '<option value="">Все дома</option>' +
       Array.from(houses.entries()).map(function (entry) {
         return '<option value="' + esc(entry[0]) + '">' + esc(entry[1]) + '</option>';
       }).join('');
-    $('#filter-rooms').innerHTML = '<option value="">Любая</option>' +
+    var roomOptions = '<option value="">Любая</option>' +
       Array.from(rooms).sort().map(function (room) {
         return '<option value="' + esc(room) + '">' + esc(room) + '-комнатная</option>';
       }).join('');
-    $('#preview-lot').innerHTML = state.inventory.items.map(function (item) {
+    $('#filter-house').innerHTML = houseOptions;
+    $('#image-filter-house').innerHTML = houseOptions;
+    $('#parameter-filter-house').innerHTML = houseOptions;
+    $('#filter-rooms').innerHTML = roomOptions;
+    $('#image-filter-rooms').innerHTML = roomOptions;
+    $('#parameter-filter-rooms').innerHTML = roomOptions;
+    var lotOptions = state.inventory.items.map(function (item) {
       return '<option value="' + esc(item.id) + '">' + esc(item.house + ' · ' + item.rooms + 'к · ' + formatArea(item.area)) + '</option>';
     }).join('');
+    $('#preview-lot').innerHTML = lotOptions;
+    $('#image-lot').innerHTML = lotOptions;
+    $('#parameter-lot').innerHTML = lotOptions;
     if (!state.previewId && state.inventory.items[0]) state.previewId = state.inventory.items[0].id;
+    if (!state.imageLotId && state.inventory.items[0]) state.imageLotId = state.inventory.items[0].id;
+    if (!state.parameterLotId && state.inventory.items[0]) state.parameterLotId = state.inventory.items[0].id;
     $('#preview-lot').value = state.previewId || '';
+    $('#image-lot').value = state.imageLotId || '';
+    $('#parameter-lot').value = state.parameterLotId || '';
   }
 
   function lotCard(item) {
@@ -260,6 +333,275 @@
         navigate('preview');
       });
     });
+  }
+
+  function moveArrayItem(items, fromPosition, toPosition) {
+    var from = Number(fromPosition) - 1;
+    var to = Number(toPosition) - 1;
+    if (from < 0 || from >= items.length || to < 0 || to >= items.length) return items;
+    var copy = items.slice();
+    var moved = copy.splice(from, 1)[0];
+    copy.splice(to, 0, moved);
+    return copy;
+  }
+
+  function imageOverride(item) {
+    if (!state.imageSettings.lot_overrides[item.id]) {
+      state.imageSettings.lot_overrides[item.id] = { order: [], hidden: [], added: [] };
+    }
+    return state.imageSettings.lot_overrides[item.id];
+  }
+
+  function effectiveImages(item) {
+    var images = [{ id: 'brand-card', url: item.final_image, kind: 'generated', label: 'Брендированная карточка' }]
+      .concat((item.source_images || []).map(function (image) {
+        return { id: image.id, url: image.url, kind: 'source', label: 'Profitbase · исходная позиция ' + image.position };
+      }));
+    state.imageSettings.bulk_rules.forEach(function (rule) {
+      if (rule.enabled !== false && ruleMatchesSimple(item, rule)) {
+        images = moveArrayItem(images, rule.from_position, rule.to_position);
+      }
+    });
+    var override = state.imageSettings.lot_overrides[item.id] || { order: [], hidden: [], added: [] };
+    (override.added || []).forEach(function (image) {
+      images.push({ id: image.id, url: image.url, kind: 'added', label: 'Добавлено вручную' });
+    });
+    var hidden = override.hidden || [];
+    images = images.filter(function (image) { return hidden.indexOf(image.id) < 0; });
+    var ranks = new Map((override.order || []).map(function (id, index) { return [id, index]; }));
+    var sourceRanks = new Map(images.map(function (image, index) { return [image.id, index]; }));
+    images.sort(function (left, right) {
+      var leftRank = ranks.has(left.id) ? ranks.get(left.id) : ranks.size + sourceRanks.get(left.id);
+      var rightRank = ranks.has(right.id) ? ranks.get(right.id) : ranks.size + sourceRanks.get(right.id);
+      return leftRank - rightRank;
+    });
+    return images;
+  }
+
+  function filteredImageItems() {
+    return state.inventory.items.filter(function (item) { return itemMatchesFilters(item, state.imageFilters); });
+  }
+
+  function renderImageBulkRules() {
+    $('#image-bulk-rules').innerHTML = state.imageSettings.bulk_rules.length ? state.imageSettings.bulk_rules.map(function (rule) {
+      var count = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); }).length;
+      return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count +
+        ' квартир · ' + esc(rule.from_position) + ' → ' + esc(rule.to_position) + '</small></div><button data-delete-image-rule="' +
+        esc(rule.id) + '" aria-label="Удалить правило">×</button></div>';
+    }).join('') : '<p class="helper">Массовых правил пока нет.</p>';
+    $$('[data-delete-image-rule]', $('#image-bulk-rules')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        state.imageSettings.bulk_rules = state.imageSettings.bulk_rules.filter(function (rule) { return rule.id !== button.dataset.deleteImageRule; });
+        setDirty(true);
+        renderImages();
+      });
+    });
+  }
+
+  function renderImages() {
+    if (!state.inventory) return;
+    var filtered = filteredImageItems();
+    $('#image-filter-count').textContent = filtered.length;
+    if (!filtered.some(function (item) { return item.id === state.imageLotId; })) state.imageLotId = filtered[0] ? filtered[0].id : null;
+    $('#image-lot').innerHTML = filtered.map(function (item) {
+      return '<option value="' + esc(item.id) + '">' + esc(item.house + ' · ' + item.rooms + 'к · ID ' + item.id) + '</option>';
+    }).join('');
+    $('#image-lot').value = state.imageLotId || '';
+    var item = state.inventory.items.find(function (lot) { return lot.id === state.imageLotId; });
+    if (!item) {
+      $('#image-gallery').innerHTML = '<div class="parameter-empty">По выбранным фильтрам квартир нет.</div>';
+      $('#removed-images-wrap').classList.add('hidden');
+      renderImageBulkRules();
+      return;
+    }
+    var images = effectiveImages(item);
+    $('#image-gallery').innerHTML = images.map(function (image, index) {
+      var imageUrl = image.kind === 'generated' ? versionedUrl(image.url) : image.url;
+      return '<article class="image-item"><div class="image-item-preview"><img src="' + esc(imageUrl) + '" alt="Изображение ' +
+        (index + 1) + '" loading="lazy" decoding="async"><span class="image-position">' + (index + 1) + '</span><span class="image-kind">' +
+        esc(image.kind === 'generated' ? 'Feed Studio' : image.kind === 'source' ? 'Profitbase' : 'Добавлено') +
+        '</span></div><div class="image-item-copy"><small title="' + esc(image.label) + '">' + esc(image.label) +
+        '</small><div class="image-actions"><button data-image-left="' + esc(image.id) + '" ' + (index === 0 ? 'disabled' : '') +
+        '>← Выше</button><button data-image-right="' + esc(image.id) + '" ' + (index === images.length - 1 ? 'disabled' : '') +
+        '>Ниже →</button><button class="remove-image" data-remove-image="' + esc(image.id) + '" ' +
+        (image.kind === 'generated' ? 'disabled title="Брендированную карточку нельзя удалить"' : '') + '>×</button></div></div></article>';
+    }).join('');
+    function saveOrder(nextImages) {
+      imageOverride(item).order = nextImages.map(function (image) { return image.id; });
+      setDirty(true);
+      renderImages();
+    }
+    $$('[data-image-left]', $('#image-gallery')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        var index = images.findIndex(function (image) { return image.id === button.dataset.imageLeft; });
+        saveOrder(moveArrayItem(images, index + 1, index));
+      });
+    });
+    $$('[data-image-right]', $('#image-gallery')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        var index = images.findIndex(function (image) { return image.id === button.dataset.imageRight; });
+        saveOrder(moveArrayItem(images, index + 1, index + 2));
+      });
+    });
+    $$('[data-remove-image]', $('#image-gallery')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (button.disabled) return;
+        var override = imageOverride(item);
+        var current = images.find(function (image) { return image.id === button.dataset.removeImage; });
+        if (current.kind === 'added') override.added = override.added.filter(function (image) { return image.id !== current.id; });
+        else if (override.hidden.indexOf(current.id) < 0) override.hidden.push(current.id);
+        override.order = images.filter(function (image) { return image.id !== current.id; }).map(function (image) { return image.id; });
+        setDirty(true);
+        renderImages();
+      });
+    });
+    var override = state.imageSettings.lot_overrides[item.id] || { hidden: [] };
+    var hiddenImages = (item.source_images || []).filter(function (image) { return (override.hidden || []).indexOf(image.id) >= 0; });
+    $('#removed-images-wrap').classList.toggle('hidden', hiddenImages.length === 0);
+    $('#removed-images').innerHTML = hiddenImages.map(function (image) {
+      return '<div class="removed-image"><span>Profitbase · исходная позиция ' + esc(image.position) + '</span><button class="restore-image" data-restore-image="' +
+        esc(image.id) + '">Вернуть</button></div>';
+    }).join('');
+    $$('[data-restore-image]', $('#removed-images')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        var currentOverride = imageOverride(item);
+        currentOverride.hidden = currentOverride.hidden.filter(function (id) { return id !== button.dataset.restoreImage; });
+        setDirty(true);
+        renderImages();
+      });
+    });
+    renderImageBulkRules();
+  }
+
+  function supportedParameters() {
+    return (state.inventory.parameter_catalog || []).filter(function (item) { return item.supported; });
+  }
+
+  function parameterByTag(tag) {
+    return (state.inventory.parameter_catalog || []).find(function (item) { return item.tag === tag; });
+  }
+
+  function effectiveParameters(item) {
+    var values = {};
+    state.parameterSettings.bulk_rules.forEach(function (rule) {
+      if (rule.enabled !== false && ruleMatchesSimple(item, rule)) Object.assign(values, rule.values || {});
+    });
+    Object.assign(values, state.parameterSettings.lot_values[item.id] || {});
+    return values;
+  }
+
+  function parameterControl(catalog, value, prefix) {
+    if (!catalog) return '';
+    if (catalog.kind === 'multi') {
+      var selected = Array.isArray(value) ? value : [];
+      return '<div class="check-group">' + (catalog.values || []).map(function (option) {
+        return '<label class="check-chip"><input type="checkbox" data-' + prefix + '-multi="' + esc(catalog.tag) + '" value="' + esc(option) + '" ' +
+          (selected.indexOf(option) >= 0 ? 'checked' : '') + '><span>' + esc(option) + '</span></label>';
+      }).join('') + '</div>';
+    }
+    if (catalog.kind === 'number') {
+      return '<input type="number" data-' + prefix + '-value="' + esc(catalog.tag) + '" min="' + esc(catalog.min) + '" max="' +
+        esc(catalog.max) + '" step="' + esc(catalog.step) + '" value="' + esc(value || catalog.min) + '">';
+    }
+    return '<select data-' + prefix + '-value="' + esc(catalog.tag) + '">' + (catalog.values || []).map(function (option) {
+      return '<option value="' + esc(option) + '" ' + (String(value) === String(option) ? 'selected' : '') + '>' + esc(option) + '</option>';
+    }).join('') + '</select>';
+  }
+
+  function readParameterControl(root, catalog, prefix) {
+    if (catalog.kind === 'multi') {
+      return $$('[data-' + prefix + '-multi="' + catalog.tag + '"]:checked', root).map(function (input) { return input.value; });
+    }
+    var control = $('[data-' + prefix + '-value="' + catalog.tag + '"]', root);
+    return control ? control.value : '';
+  }
+
+  function filteredParameterItems() {
+    return state.inventory.items.filter(function (item) { return itemMatchesFilters(item, state.parameterFilters); });
+  }
+
+  function renderParameterBulkValue() {
+    var catalog = parameterByTag($('#bulk-parameter-tag').value);
+    $('#bulk-parameter-value').innerHTML = catalog ? '<label class="field"><span>Значение</span>' + parameterControl(catalog, catalog.kind === 'multi' ? [catalog.values[0]] : catalog.values ? catalog.values[0] : catalog.min, 'bulk-param') + '</label>' : '';
+  }
+
+  function renderParameterBulkRules() {
+    $('#parameter-bulk-rules').innerHTML = state.parameterSettings.bulk_rules.length ? state.parameterSettings.bulk_rules.map(function (rule) {
+      var count = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); }).length;
+      var labels = Object.keys(rule.values || {}).map(function (tag) { return (parameterByTag(tag) || { name: tag }).name; }).join(', ');
+      return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count + ' квартир · ' + esc(labels) +
+        '</small></div><button data-delete-parameter-rule="' + esc(rule.id) + '" aria-label="Удалить правило">×</button></div>';
+    }).join('') : '<p class="helper">Массовых правил пока нет.</p>';
+    $$('[data-delete-parameter-rule]', $('#parameter-bulk-rules')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        state.parameterSettings.bulk_rules = state.parameterSettings.bulk_rules.filter(function (rule) { return rule.id !== button.dataset.deleteParameterRule; });
+        setDirty(true);
+        renderParameters();
+      });
+    });
+  }
+
+  function renderParameters() {
+    if (!state.inventory) return;
+    var tagCounts = state.inventory.source_tag_counts || {};
+    var tags = Object.keys(tagCounts).sort();
+    $('#source-tags-count').textContent = tags.length + ' тегов';
+    $('#source-tags').innerHTML = tags.map(function (tag) {
+      return '<span class="tag-chip">' + esc(tag) + ' <strong>' + esc(tagCounts[tag]) + '</strong></span>';
+    }).join('');
+    var filtered = filteredParameterItems();
+    $('#parameter-filter-count').textContent = filtered.length;
+    if (!filtered.some(function (item) { return item.id === state.parameterLotId; })) state.parameterLotId = filtered[0] ? filtered[0].id : null;
+    $('#parameter-lot').innerHTML = filtered.map(function (item) {
+      return '<option value="' + esc(item.id) + '">' + esc(item.house + ' · ' + item.rooms + 'к · ID ' + item.id) + '</option>';
+    }).join('');
+    $('#parameter-lot').value = state.parameterLotId || '';
+    var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; });
+    var supported = supportedParameters();
+    var catalogOptions = supported.map(function (catalog) {
+      var count = tagCounts[catalog.tag] || 0;
+      return '<option value="' + esc(catalog.tag) + '">' + esc(catalog.name) + (count ? ' · уже есть в Profitbase' : '') + '</option>';
+    }).join('');
+    $('#new-parameter-tag').innerHTML = catalogOptions;
+    $('#bulk-parameter-tag').innerHTML = catalogOptions;
+    var deferred = (state.inventory.parameter_catalog || []).filter(function (catalog) { return !catalog.supported; }).map(function (catalog) { return catalog.tag; });
+    $('#parameter-catalog-note').textContent = deferred.length ? 'После сверки справочника Avito добавим: ' + deferred.join(', ') + '.' : '';
+    if (!item) {
+      $('#parameter-list').innerHTML = '<div class="parameter-empty">По выбранным фильтрам квартир нет.</div>';
+      renderParameterBulkValue();
+      renderParameterBulkRules();
+      return;
+    }
+    var values = effectiveParameters(item);
+    var tagsWithValues = Object.keys(values);
+    $('#parameter-list').innerHTML = tagsWithValues.length ? tagsWithValues.map(function (tag) {
+      var catalog = parameterByTag(tag);
+      var individual = Object.prototype.hasOwnProperty.call(state.parameterSettings.lot_values[item.id] || {}, tag);
+      return '<div class="parameter-row"><div class="parameter-row-title"><strong>' + esc(catalog ? catalog.name : tag) +
+        '</strong><code>' + esc(tag) + (individual ? ' · для лота' : ' · массовое правило') + '</code></div><div>' +
+        parameterControl(catalog, values[tag], 'param') + '</div><button class="remove-parameter" data-remove-parameter="' + esc(tag) + '" ' +
+        (individual ? '' : 'disabled title="Удалите массовое правило справа"') + '>×</button></div>';
+    }).join('') : '<div class="parameter-empty">Дополнительные параметры для этой квартиры ещё не назначены.</div>';
+    $$('[data-param-value]', $('#parameter-list')).concat($$('[data-param-multi]', $('#parameter-list'))).forEach(function (control) {
+      control.addEventListener('change', function () {
+        var tag = control.dataset.paramValue || control.dataset.paramMulti;
+        var catalog = parameterByTag(tag);
+        if (!state.parameterSettings.lot_values[item.id]) state.parameterSettings.lot_values[item.id] = {};
+        state.parameterSettings.lot_values[item.id][tag] = readParameterControl($('#parameter-list'), catalog, 'param');
+        setDirty(true);
+      });
+    });
+    $$('[data-remove-parameter]', $('#parameter-list')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (button.disabled) return;
+        delete state.parameterSettings.lot_values[item.id][button.dataset.removeParameter];
+        if (!Object.keys(state.parameterSettings.lot_values[item.id]).length) delete state.parameterSettings.lot_values[item.id];
+        setDirty(true);
+        renderParameters();
+      });
+    });
+    renderParameterBulkValue();
+    renderParameterBulkRules();
   }
 
   function renderRuleList() {
@@ -410,6 +752,8 @@
     renderProjectChrome();
     renderStats();
     renderLots();
+    renderImages();
+    renderParameters();
     renderRuleList();
     renderRuleEditor();
     renderAssets();
@@ -417,11 +761,19 @@
   }
 
   function settingsPayload() {
-    return { version: 1, project: state.project.slug, rules: state.rules.map(normalizeRule) };
+    return {
+      version: 2,
+      project: state.project.slug,
+      rules: state.rules.map(normalizeRule),
+      image_settings: clone(state.imageSettings),
+      parameter_settings: clone(state.parameterSettings)
+    };
   }
 
   function validateSettings() {
     if (state.rules.length > 10) return 'Допускается не более 10 правил.';
+    if (state.imageSettings.bulk_rules.length > 30) return 'Допускается не более 30 массовых правил изображений.';
+    if (state.parameterSettings.bulk_rules.length > 30) return 'Допускается не более 30 массовых правил параметров.';
     for (var i = 0; i < state.rules.length; i += 1) {
       var rule = state.rules[i];
       if (!rule.name.trim()) return 'У правила ' + (i + 1) + ' нет названия.';
@@ -446,7 +798,9 @@
     var enabled = state.rules.filter(function (rule) { return rule.enabled; });
     var affected = state.inventory.items.filter(function (item) { return Boolean(appliedRule(item)); }).length;
     $('#publish-summary').innerHTML = '<strong>' + enabled.length + ' активных правил</strong><br>' +
-      affected + ' из ' + state.inventory.items.length + ' квартир получат акцию.';
+      affected + ' из ' + state.inventory.items.length + ' квартир получат акцию.<br>' +
+      Object.keys(state.imageSettings.lot_overrides).length + ' индивидуальных галерей и ' + state.imageSettings.bulk_rules.length + ' массовых правил изображений.<br>' +
+      Object.keys(state.parameterSettings.lot_values).length + ' квартир с дополнительными параметрами и ' + state.parameterSettings.bulk_rules.length + ' массовых правил параметров.';
     $('#publish-modal').classList.remove('hidden');
   }
 
@@ -455,7 +809,7 @@
     var body = 'Запрос на обновление настроек демонстрационного фида.\n\n' +
       'FEED_SETTINGS_JSON_START\n' + payload + '\nFEED_SETTINGS_JSON_END\n\n' +
       'Запрос сформирован кабинетом Feed Studio. Workflow применит его только от владельца репозитория.';
-    var title = '[feed-settings] ' + state.project.name + ': обновить акции';
+    var title = '[feed-settings] ' + state.project.name + ': обновить настройки фида';
     var url = 'https://github.com/' + REPOSITORY + '/issues/new?title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(body);
     if (url.length > 7800) {
       showToast('Настройки слишком объёмные для отправки. Скачайте JSON и сократите исключения.');
@@ -527,6 +881,78 @@
     $('#filter-house').addEventListener('change', function (event) { state.filters.house = event.target.value; state.page = 1; renderLots(); });
     $('#filter-rooms').addEventListener('change', function (event) { state.filters.rooms = event.target.value; state.page = 1; renderLots(); });
     $('#filter-search').addEventListener('input', function (event) { state.filters.search = event.target.value; state.page = 1; renderLots(); });
+    $('#image-filter-house').addEventListener('change', function (event) { state.imageFilters.house = event.target.value; renderImages(); });
+    $('#image-filter-rooms').addEventListener('change', function (event) { state.imageFilters.rooms = event.target.value; renderImages(); });
+    $('#image-filter-search').addEventListener('input', function (event) { state.imageFilters.search = event.target.value; renderImages(); });
+    $('#image-lot').addEventListener('change', function (event) { state.imageLotId = event.target.value; renderImages(); });
+    $('#add-image-url').addEventListener('click', function () {
+      var item = state.inventory.items.find(function (lot) { return lot.id === state.imageLotId; });
+      var input = $('#new-image-url');
+      var url = input.value.trim();
+      if (!item || !/^https:\/\//i.test(url)) { showToast('Укажите корректную HTTPS-ссылку на изображение.'); return; }
+      var override = imageOverride(item);
+      var image = { id: 'add-' + Date.now().toString(36), url: url };
+      override.added.push(image);
+      override.order = effectiveImages(item).map(function (current) { return current.id; });
+      input.value = '';
+      setDirty(true);
+      renderImages();
+    });
+    $('#apply-image-bulk').addEventListener('click', function () {
+      var items = filteredImageItems();
+      var from = Number($('#bulk-image-from').value);
+      var to = Number($('#bulk-image-to').value);
+      if (!items.length) { showToast('По текущим фильтрам нет квартир.'); return; }
+      if (!Number.isInteger(from) || !Number.isInteger(to) || from < 1 || to < 1 || from > 40 || to > 40 || from === to) {
+        showToast('Проверьте исходную и новую позиции.'); return;
+      }
+      state.imageSettings.bulk_rules.push(Object.assign({
+        id: 'image-rule-' + Date.now(),
+        name: 'Перестановка ' + from + ' → ' + to,
+        enabled: true,
+        from_position: from,
+        to_position: to
+      }, filterRuleFrom(state.imageFilters, items)));
+      setDirty(true);
+      renderImages();
+      showToast('Массовое правило создано для ' + items.length + ' квартир');
+    });
+    $('#parameter-filter-house').addEventListener('change', function (event) { state.parameterFilters.house = event.target.value; renderParameters(); });
+    $('#parameter-filter-rooms').addEventListener('change', function (event) { state.parameterFilters.rooms = event.target.value; renderParameters(); });
+    $('#parameter-filter-search').addEventListener('input', function (event) { state.parameterFilters.search = event.target.value; renderParameters(); });
+    $('#parameter-lot').addEventListener('change', function (event) { state.parameterLotId = event.target.value; renderParameters(); });
+    $('#add-parameter').addEventListener('click', function () {
+      var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; });
+      var catalog = parameterByTag($('#new-parameter-tag').value);
+      if (!item || !catalog) return;
+      if (!state.parameterSettings.lot_values[item.id]) state.parameterSettings.lot_values[item.id] = {};
+      if (Object.prototype.hasOwnProperty.call(effectiveParameters(item), catalog.tag)) {
+        showToast('Этот параметр уже назначен квартире.'); return;
+      }
+      state.parameterSettings.lot_values[item.id][catalog.tag] = catalog.kind === 'multi' ? [catalog.values[0]] :
+        catalog.kind === 'number' ? String(catalog.min) : catalog.values[0];
+      setDirty(true);
+      renderParameters();
+    });
+    $('#bulk-parameter-tag').addEventListener('change', renderParameterBulkValue);
+    $('#apply-parameter-bulk').addEventListener('click', function () {
+      var items = filteredParameterItems();
+      var catalog = parameterByTag($('#bulk-parameter-tag').value);
+      if (!items.length) { showToast('По текущим фильтрам нет квартир.'); return; }
+      if (!catalog) return;
+      var value = readParameterControl($('#bulk-parameter-value'), catalog, 'bulk-param');
+      if (catalog.kind === 'multi' && !value.length) { showToast('Выберите хотя бы одно значение.'); return; }
+      var values = {}; values[catalog.tag] = value;
+      state.parameterSettings.bulk_rules.push(Object.assign({
+        id: 'parameter-rule-' + Date.now(),
+        name: catalog.name,
+        enabled: true,
+        values: values
+      }, filterRuleFrom(state.parameterFilters, items)));
+      setDirty(true);
+      renderParameters();
+      showToast('Параметр назначен для ' + items.length + ' квартир');
+    });
     $('#preview-lot').addEventListener('change', function (event) { state.previewId = event.target.value; renderPreview(); });
     $('#add-rule').addEventListener('click', function () {
       if (state.rules.length >= 10) { showToast('Можно создать не более 10 правил.'); return; }
@@ -583,10 +1009,16 @@
       var draft = null;
       try { draft = JSON.parse(localStorage.getItem(draftKey()) || 'null'); } catch (error) { draft = null; }
       state.rules = draft && Array.isArray(draft.rules) ? draft.rules.map(normalizeRule) : publishedRules;
+      state.imageSettings = normalizeImageSettings(draft && draft.image_settings != null ? draft.image_settings : data[1].image_settings || emptyImageSettings());
+      state.parameterSettings = normalizeParameterSettings(draft && draft.parameter_settings != null ? draft.parameter_settings : data[1].parameter_settings || emptyParameterSettings());
       state.activeRuleId = state.rules[0] ? state.rules[0].id : null;
       state.previewId = null;
+      state.imageLotId = null;
+      state.parameterLotId = null;
       state.page = 1;
       state.filters = { house: '', rooms: '', search: '' };
+      state.imageFilters = { house: '', rooms: '', search: '' };
+      state.parameterFilters = { house: '', rooms: '', search: '' };
       populateFilters();
       renderAll();
       navigate(state.activeView);
@@ -607,7 +1039,7 @@
       }).join('');
       bindStaticEvents();
       var requestedView = window.location.hash.replace('#', '');
-      state.activeView = ['dashboard', 'lots', 'promotions', 'assets', 'preview'].indexOf(requestedView) >= 0 ? requestedView : 'dashboard';
+      state.activeView = ['dashboard', 'lots', 'images', 'parameters', 'promotions', 'assets', 'preview'].indexOf(requestedView) >= 0 ? requestedView : 'dashboard';
       await loadProject(state.registry.default_project);
     } catch (error) {
       document.querySelector('main').innerHTML = '<section class="panel empty-state"><div><h2>Кабинет временно недоступен</h2><p>' + esc(error.message) + '</p></div></section>';

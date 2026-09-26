@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from project_context import CONFIG_PATH, OUTPUT_DIR, WORK_DIR
+from project_context import OUTPUT_DIR, WORK_DIR
 
 OUTPUT = OUTPUT_DIR
 PILOT_MANIFEST = OUTPUT / "pilot-manifest.json"
@@ -19,7 +19,6 @@ def xml_ids(path: Path) -> list[str]:
 
 
 def main() -> None:
-    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     pilot = json.loads(PILOT_MANIFEST.read_text(encoding="utf-8"))
     full = json.loads(FULL_MANIFEST.read_text(encoding="utf-8"))
     pilot_ids = [str(item["id"]) for item in pilot["items"]]
@@ -58,14 +57,23 @@ def main() -> None:
     if actual_thumbnails != expected_thumbnails:
         errors.append("Generated thumbnail image set does not match full manifest")
 
-    public_base = config["public_image_base_url"].rstrip("/") + "/"
+    manifests_by_path = {FULL_XML: full, PILOT_XML: pilot}
     for path, ids in ((FULL_XML, full_ids), (PILOT_XML, pilot_ids)):
         tree = ET.parse(path)
-        for ad, expected_id in zip(tree.getroot().findall("Ad"), ids, strict=True):
-            first_image = ad.find("./Images/Image")
-            expected_url = f"{public_base}{expected_id}.png"
-            if first_image is None or first_image.attrib.get("url") != expected_url:
-                errors.append(f"Unexpected branded image URL for ad {expected_id} in {path.name}")
+        manifest_items = manifests_by_path[path]["items"]
+        for ad, expected_id, item in zip(tree.getroot().findall("Ad"), ids, manifest_items, strict=True):
+            actual_urls = [image.attrib.get("url", "") for image in ad.findall("./Images/Image")]
+            expected_urls = [str(image["url"]) for image in item["feed_images"]]
+            if actual_urls != expected_urls:
+                errors.append(f"Image order does not match manifest for ad {expected_id} in {path.name}")
+            for tag, expected_value in item.get("feed_parameters", {}).items():
+                node = ad.find(str(tag))
+                if isinstance(expected_value, list):
+                    actual_value = [(option.text or "").strip() for option in node.findall("Option")] if node is not None else []
+                else:
+                    actual_value = (node.text or "").strip() if node is not None else ""
+                if actual_value != expected_value:
+                    errors.append(f"Parameter {tag} does not match manifest for ad {expected_id} in {path.name}")
             if ad.find("NewDevelopmentId") is not None and ad.find("Address") is not None:
                 errors.append(f"Redundant Address remains for ad {expected_id} in {path.name}")
 

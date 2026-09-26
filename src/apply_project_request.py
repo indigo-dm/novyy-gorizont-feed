@@ -62,7 +62,18 @@ def main() -> None:
         },
         "houses": {},
     }
-    rules = {"version": 1, "rules": []}
+    rules = {
+        "version": 2,
+        "rules": [],
+        "image_settings": {
+            "lot_overrides": {},
+            "bulk_rules": [],
+        },
+        "parameter_settings": {
+            "lot_values": {},
+            "bulk_rules": [],
+        },
+    }
     (project_dir / "config.json").write_text(
         json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

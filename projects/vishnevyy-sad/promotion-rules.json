@@ -1,4 +1,12 @@
 {
-  "version": 1,
-  "rules": []
+  "version": 2,
+  "rules": [],
+  "image_settings": {
+    "lot_overrides": {},
+    "bulk_rules": []
+  },
+  "parameter_settings": {
+    "lot_values": {},
+    "bulk_rules": []
+  }
 }

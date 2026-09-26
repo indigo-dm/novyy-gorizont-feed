@@ -41,6 +41,8 @@
       <nav class="nav" aria-label="Разделы кабинета">
         <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span><span>Обзор</span></button>
         <button class="nav-item" data-view="lots"><span class="nav-icon">▦</span><span>Квартиры</span></button>
+        <button class="nav-item" data-view="images"><span class="nav-icon">▧</span><span>Изображения</span></button>
+        <button class="nav-item" data-view="parameters"><span class="nav-icon">≡</span><span>Параметры</span></button>
         <button class="nav-item" data-view="promotions"><span class="nav-icon">%</span><span>Акции</span></button>
         <button class="nav-item" data-view="assets"><span class="nav-icon">◇</span><span>Материалы</span></button>
         <button class="nav-item" data-view="preview"><span class="nav-icon">◉</span><span>Предпросмотр</span></button>
@@ -105,6 +107,87 @@
           </div>
           <div class="lots-grid" id="lots-grid"></div>
           <nav class="pagination" id="lots-pagination" aria-label="Страницы квартир"></nav>
+        </section>
+
+        <section class="view" id="view-images">
+          <div class="notice">
+            <div><strong>Галерея объявлений</strong><span>Здесь показана итоговая последовательность: брендированная карточка и все изображения Profitbase.</span></div>
+            <span class="notice-badge">IMAGES</span>
+          </div>
+          <div class="toolbar panel media-toolbar">
+            <label><span>Дом</span><select id="image-filter-house"><option value="">Все дома</option></select></label>
+            <label><span>Комнатность</span><select id="image-filter-rooms"><option value="">Любая</option></select></label>
+            <label class="search-field"><span>Поиск по ID</span><input id="image-filter-search" type="search" placeholder="ID квартиры"></label>
+            <div class="toolbar-count"><strong id="image-filter-count">0</strong><span>в выборке</span></div>
+          </div>
+          <div class="media-layout">
+            <section class="panel media-editor">
+              <div class="panel-heading">
+                <div><p class="eyebrow">Отдельный лот</p><h2>Порядок изображений</h2></div>
+                <label class="compact-select"><span>Квартира</span><select id="image-lot"></select></label>
+              </div>
+              <p class="helper media-helper">Стрелками меняйте порядок. Изображения Profitbase можно исключить и вернуть. Брендированную карточку можно перемещать, но нельзя удалить.</p>
+              <div class="image-gallery" id="image-gallery"></div>
+              <div class="add-image-row">
+                <label class="field"><span>Добавить изображение по HTTPS-ссылке</span><input id="new-image-url" type="url" placeholder="https://.../image.jpg"></label>
+                <button class="button button-secondary" id="add-image-url">Добавить</button>
+              </div>
+              <div class="removed-images hidden" id="removed-images-wrap">
+                <h3>Исключённые изображения</h3>
+                <div id="removed-images"></div>
+              </div>
+            </section>
+            <aside class="panel bulk-panel">
+              <p class="eyebrow">Массовая операция</p>
+              <h2>Переставить для выборки</h2>
+              <p class="helper">Текущие фильтры слева определяют квартиры. Позиции считаются в итоговой галерее.</p>
+              <div class="field-row bulk-position-row">
+                <label class="field"><span>Из позиции</span><input id="bulk-image-from" type="number" min="1" max="40" value="3"></label>
+                <label class="field"><span>В позицию</span><input id="bulk-image-to" type="number" min="1" max="40" value="1"></label>
+              </div>
+              <button class="button button-primary full-width" id="apply-image-bulk">Создать массовое правило</button>
+              <div class="bulk-rules" id="image-bulk-rules"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-parameters">
+          <div class="notice">
+            <div><strong>Дополнительные параметры Avito</strong><span>На первом этапе доступны пять наиболее полезных тегов. Остальные значения подключим после проверки справочника Avito.</span></div>
+            <span class="notice-badge">BETA</span>
+          </div>
+          <div class="source-tags panel">
+            <div class="panel-heading"><div><p class="eyebrow">Исходный XML</p><h2>Что уже передаёт Profitbase</h2></div><span id="source-tags-count"></span></div>
+            <div class="tag-cloud" id="source-tags"></div>
+          </div>
+          <div class="toolbar panel media-toolbar">
+            <label><span>Дом</span><select id="parameter-filter-house"><option value="">Все дома</option></select></label>
+            <label><span>Комнатность</span><select id="parameter-filter-rooms"><option value="">Любая</option></select></label>
+            <label class="search-field"><span>Поиск по ID</span><input id="parameter-filter-search" type="search" placeholder="ID квартиры"></label>
+            <div class="toolbar-count"><strong id="parameter-filter-count">0</strong><span>в выборке</span></div>
+          </div>
+          <div class="media-layout">
+            <section class="panel parameter-editor">
+              <div class="panel-heading">
+                <div><p class="eyebrow">Отдельный лот</p><h2>Параметры квартиры</h2></div>
+                <label class="compact-select"><span>Квартира</span><select id="parameter-lot"></select></label>
+              </div>
+              <div class="parameter-list" id="parameter-list"></div>
+              <div class="add-parameter-row">
+                <label class="field"><span>Добавить параметр</span><select id="new-parameter-tag"></select></label>
+                <button class="button button-secondary" id="add-parameter">Добавить</button>
+              </div>
+              <p class="helper" id="parameter-catalog-note"></p>
+            </section>
+            <aside class="panel bulk-panel">
+              <p class="eyebrow">Массовая операция</p>
+              <h2>Назначить выборке</h2>
+              <label class="field"><span>Параметр</span><select id="bulk-parameter-tag"></select></label>
+              <div id="bulk-parameter-value"></div>
+              <button class="button button-primary full-width" id="apply-parameter-bulk">Создать массовое правило</button>
+              <div class="bulk-rules" id="parameter-bulk-rules"></div>
+            </aside>
+          </div>
         </section>
 
         <section class="view" id="view-promotions">

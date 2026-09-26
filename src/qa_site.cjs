@@ -91,6 +91,26 @@ const contentTypes = {
     paginationWorks = Boolean(secondPageFirstId && secondPageFirstId !== firstPageFirstId);
   }
   await page.screenshot({ path: path.join(qaOutput, 'admin-lots.png'), fullPage: true });
+  await page.click('[data-view="images"]');
+  const firstInventoryItem = inventoryData.items[0];
+  await page.locator('#image-lot').selectOption(String(firstInventoryItem.id));
+  const imageCards = await page.locator('.image-item').count();
+  const allSourceImagesVisible = imageCards === (firstInventoryItem.source_images || []).length + 1;
+  const brandCardProtected = await page.locator('[data-remove-image="brand-card"]').isDisabled();
+  await page.fill('#bulk-image-from', '3');
+  await page.fill('#bulk-image-to', '1');
+  await page.click('#apply-image-bulk');
+  const imageBulkRuleCreated = await page.locator('#image-bulk-rules .bulk-rule').count() === 1;
+  await page.screenshot({ path: path.join(qaOutput, 'admin-images.png'), fullPage: true });
+  await page.click('[data-view="parameters"]');
+  const sourceTagsVisible = await page.locator('#source-tags .tag-chip').count() > 10;
+  const supportedParameterCount = await page.locator('#new-parameter-tag option').count();
+  await page.locator('#parameter-lot').selectOption(String(firstInventoryItem.id));
+  await page.click('#add-parameter');
+  const individualParameterAdded = await page.locator('#parameter-list .parameter-row').count() === 1;
+  await page.click('#apply-parameter-bulk');
+  const parameterBulkRuleCreated = await page.locator('#parameter-bulk-rules .bulk-rule').count() === 1;
+  await page.screenshot({ path: path.join(qaOutput, 'admin-parameters.png'), fullPage: true });
   await page.click('[data-view="promotions"]');
   await page.locator('[data-field="enabled"]').check();
   const matchingId = await page.evaluate(async (base) => {
@@ -135,7 +155,7 @@ const contentTypes = {
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && optimizedThumbnail && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 5 && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -145,6 +165,13 @@ const contentTypes = {
     pagination_visible: paginationVisible,
     pagination_works: paginationWorks,
     optimized_thumbnail: optimizedThumbnail,
+    source_images_visible: allSourceImagesVisible,
+    brand_card_protected: brandCardProtected,
+    image_bulk_rule: imageBulkRuleCreated,
+    source_tags_visible: sourceTagsVisible,
+    supported_parameters: supportedParameterCount,
+    individual_parameter: individualParameterAdded,
+    parameter_bulk_rule: parameterBulkRuleCreated,
     live_promotion_preview: promoVisible,
     registered_projects: projectData.projects.length,
     asset_cards: assetCards,

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
       "id": "demo-discount",
@@ -20,5 +20,13 @@
       "include_ids": [],
       "exclude_ids": []
     }
-  ]
+  ],
+  "image_settings": {
+    "lot_overrides": {},
+    "bulk_rules": []
+  },
+  "parameter_settings": {
+    "lot_values": {},
+    "bulk_rules": []
+  }
 }

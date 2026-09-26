@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 import time
 from datetime import datetime, timedelta, timezone
@@ -104,6 +105,90 @@ def active_promotion(item: dict[str, object], rules: list[dict[str, object]], to
     return None
 
 
+def rule_matches(item: dict[str, object], rule: dict[str, object]) -> bool:
+    item_id = str(item["id"])
+    if item_id in {str(value) for value in rule.get("exclude_ids", [])}:
+        return False
+    included = {str(value) for value in rule.get("include_ids", [])}
+    if included and item_id not in included:
+        return False
+    house_ids = {str(value) for value in rule.get("house_ids", [])}
+    if house_ids and str(item["house_id"]) not in house_ids:
+        return False
+    rooms = {str(value) for value in rule.get("rooms", [])}
+    if rooms and str(item["rooms"]) not in rooms:
+        return False
+    area = float(str(item["area"] or 0))
+    if rule.get("area_min") is not None and area < float(str(rule["area_min"])):
+        return False
+    if rule.get("area_max") is not None and area > float(str(rule["area_max"])):
+        return False
+    return True
+
+
+def source_image_id(url: str) -> str:
+    return "src-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+
+
+def move_image(images: list[dict[str, str]], from_position: int, to_position: int) -> None:
+    source = from_position - 1
+    target = to_position - 1
+    if source < 0 or source >= len(images) or target < 0 or target >= len(images):
+        return
+    image = images.pop(source)
+    images.insert(target, image)
+
+
+def output_images(
+    item: dict[str, object], image_config: dict[str, object], public_base: str
+) -> list[dict[str, str]]:
+    images = [{
+        "id": "brand-card",
+        "url": f"{public_base}/{item['id']}.png",
+        "kind": "generated",
+    }]
+    images.extend({
+        "id": source_image_id(url),
+        "url": url,
+        "kind": "source",
+    } for url in item["source_images"])
+    for rule in image_config.get("bulk_rules", []):
+        if rule.get("enabled") and rule_matches(item, rule):
+            move_image(images, int(rule.get("from_position", 0)), int(rule.get("to_position", 0)))
+    override = image_config.get("lot_overrides", {}).get(str(item["id"]), {})
+    for added in override.get("added", []):
+        images.append({"id": str(added["id"]), "url": str(added["url"]), "kind": "added"})
+    hidden = {str(value) for value in override.get("hidden", [])}
+    images = [image for image in images if image["id"] not in hidden]
+    order = {str(image_id): index for index, image_id in enumerate(override.get("order", []))}
+    original = {image["id"]: index for index, image in enumerate(images)}
+    images.sort(key=lambda image: (order.get(image["id"], len(order) + original[image["id"]])))
+    return images
+
+
+def output_parameters(item: dict[str, object], parameter_config: dict[str, object]) -> dict[str, object]:
+    values: dict[str, object] = {}
+    for rule in parameter_config.get("bulk_rules", []):
+        if rule.get("enabled") and rule_matches(item, rule):
+            values.update(rule.get("values", {}))
+    values.update(parameter_config.get("lot_values", {}).get(str(item["id"]), {}))
+    return values
+
+
+def set_parameter(ad: ET.Element, tag: str, value: object) -> None:
+    node = ad.find(tag)
+    if node is None:
+        node = ET.SubElement(ad, tag)
+    else:
+        node.clear()
+    if isinstance(value, list):
+        for option in value:
+            child = ET.SubElement(node, "Option")
+            child.text = str(option)
+    else:
+        node.text = str(value)
+
+
 def sort_key(item: dict[str, object]) -> tuple[object, ...]:
     return (
         str(item["house_id"]),
@@ -118,7 +203,6 @@ def write_feed(
     source_root: ET.Element,
     ads_by_id: dict[str, ET.Element],
     items: list[dict[str, object]],
-    public_base: str,
     destination: Path,
 ) -> None:
     output_root = ET.Element(source_root.tag, source_root.attrib)
@@ -126,11 +210,14 @@ def write_feed(
         ad_id = str(item["id"])
         clone = copy.deepcopy(ads_by_id[ad_id])
         images = clone.find("Images")
-        first_image = images.find("Image") if images is not None else None
-        if first_image is None:
-            raise ValueError(f"Ad {ad_id} has no image to replace")
-        first_image.set("url", f"{public_base}/{ad_id}.png")
-        first_image.text = None
+        if images is None:
+            images = ET.SubElement(clone, "Images")
+        else:
+            images.clear()
+        for image in item["feed_images"]:
+            ET.SubElement(images, "Image", {"url": str(image["url"])})
+        for tag, value in item.get("feed_parameters", {}).items():
+            set_parameter(clone, str(tag), value)
         address = clone.find("Address")
         if address is not None and clone.find("NewDevelopmentId") is not None:
             clone.remove(address)
@@ -143,6 +230,8 @@ def main() -> None:
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     rules_config = json.loads(RULES_PATH.read_text(encoding="utf-8"))
     rules = list(rules_config.get("rules", []))
+    image_config = rules_config.get("image_settings", {})
+    parameter_config = rules_config.get("parameter_settings", {})
     tree = ET.parse(INPUT_XML)
     root = tree.getroot()
     ads = list(root.findall("Ad"))
@@ -179,6 +268,7 @@ def main() -> None:
             "plan_file": plan_file,
             "output_file": f"images/{ad_id}.png",
             "source_images": urls,
+            "source_tags": sorted(child.tag for child in ad if child.tag != "Images"),
         }
         items.append(item)
         representatives.setdefault(plan_url, item)
@@ -188,11 +278,29 @@ def main() -> None:
     pilot_items = sorted((copy.deepcopy(item) for item in representatives.values()), key=sort_key)
     checked_at = datetime.now(timezone(timedelta(hours=3))).isoformat(timespec="seconds")
     today = checked_at[:10]
+    public_base = config["public_image_base_url"].rstrip("/")
     for item in items:
         item["promotion"] = active_promotion(item, rules, today)
+        item["source_image_items"] = [
+            {"id": source_image_id(url), "url": url, "position": index}
+            for index, url in enumerate(item["source_images"], start=1)
+        ]
+        item["feed_images"] = output_images(item, image_config, public_base)
+        item["feed_parameters"] = output_parameters(item, parameter_config)
     promotions_by_id = {str(item["id"]): item.get("promotion") for item in items}
     for item in pilot_items:
         item["promotion"] = promotions_by_id[str(item["id"])]
+        item["source_image_items"] = [
+            {"id": source_image_id(url), "url": url, "position": index}
+            for index, url in enumerate(item["source_images"], start=1)
+        ]
+        item["feed_images"] = output_images(item, image_config, public_base)
+        item["feed_parameters"] = output_parameters(item, parameter_config)
+
+    source_tag_counts: dict[str, int] = {}
+    for item in items:
+        for tag in item["source_tags"]:
+            source_tag_counts[tag] = source_tag_counts.get(tag, 0) + 1
 
     shared = {
         "project": config["project"],
@@ -203,6 +311,7 @@ def main() -> None:
         "publish_ready": False,
         "publish_blocker": "Demonstration feed only. Do not connect to Avito until explicit approval.",
         "promotion_rules": rules_config,
+        "source_tag_counts": source_tag_counts,
     }
     full_manifest = {**shared, "full_ads": len(items), "items": items}
     pilot_manifest = {**shared, "pilot_ads": len(pilot_items), "items": pilot_items}
@@ -210,9 +319,8 @@ def main() -> None:
     FULL_MANIFEST_PATH.write_text(json.dumps(full_manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     PILOT_MANIFEST_PATH.write_text(json.dumps(pilot_manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    public_base = config["public_image_base_url"].rstrip("/")
-    write_feed(root, ads_by_id, items, public_base, FULL_XML_PATH)
-    write_feed(root, ads_by_id, pilot_items, public_base, PILOT_XML_PATH)
+    write_feed(root, ads_by_id, items, FULL_XML_PATH)
+    write_feed(root, ads_by_id, pilot_items, PILOT_XML_PATH)
     print(json.dumps({
         "source_ads": len(ads),
         "full_ads": len(items),
