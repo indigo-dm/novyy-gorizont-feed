@@ -15,6 +15,26 @@ on:
         required: false
         type: string
         default: ""
+  push:
+    branches:
+      - main
+    paths:
+      - "src/build_fast.py"
+      - "src/build_fast_data.py"
+      - "src/build_pilot.py"
+      - "src/build_site.py"
+      - "src/fetch_feed.py"
+      - "src/material_catalog.py"
+      - "src/parameter_catalog.py"
+      - "src/project_context.py"
+      - "src/sync_fast_data.py"
+      - "projects.json"
+      - "projects/*/config.json"
+      - "projects/*/promotion-rules.json"
+      - ".github/workflows/build-fast-data.yml"
+  schedule:
+    - cron: "17 * * * *"
+      timezone: "Europe/Moscow"
 
 permissions:
   contents: write

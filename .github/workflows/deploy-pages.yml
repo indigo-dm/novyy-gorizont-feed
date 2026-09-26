@@ -8,23 +8,12 @@ on:
       - "assets/**"
       - "src/build_all.py"
       - "src/build_pilot.py"
-      - "src/build_site.py"
-      - "src/fetch_feed.py"
-      - "src/material_catalog.py"
-      - "src/parameter_catalog.py"
-      - "src/prepare_site.py"
-      - "src/project_context.py"
       - "src/render_pilot.cjs"
       - "src/validate_pilot.py"
-      - "projects.json"
       - "projects/*/assets/**"
       - "!projects/*/assets/uploads/**"
       - "package.json"
       - "package-lock.json"
-      - ".github/workflows/deploy-pages.yml"
-  schedule:
-    - cron: "17 * * * *"
-      timezone: "Europe/Moscow"
 
 permissions:
   contents: write
