@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -19,6 +20,7 @@ def xml_ids(path: Path) -> list[str]:
 
 
 def main() -> None:
+    fast_build = os.environ.get("FAST_BUILD") == "1"
     pilot = json.loads(PILOT_MANIFEST.read_text(encoding="utf-8"))
     full = json.loads(FULL_MANIFEST.read_text(encoding="utf-8"))
     pilot_ids = [str(item["id"]) for item in pilot["items"]]
@@ -50,11 +52,11 @@ def main() -> None:
     actual_final = {path.name for path in (OUTPUT / "images").glob("*.png")}
     actual_previews = {path.name for path in (OUTPUT / "previews").glob("*.webp")}
     actual_thumbnails = {path.name for path in (OUTPUT / "thumbnails").glob("*.webp")}
-    if actual_final != expected_final:
+    if not fast_build and actual_final != expected_final:
         errors.append("Generated final image set does not match full manifest")
-    if actual_previews != expected_previews:
+    if not fast_build and actual_previews != expected_previews:
         errors.append("Generated preview image set does not match full manifest")
-    if actual_thumbnails != expected_thumbnails:
+    if not fast_build and actual_thumbnails != expected_thumbnails:
         errors.append("Generated thumbnail image set does not match full manifest")
 
     manifests_by_path = {FULL_XML: full, PILOT_XML: pilot}
@@ -77,10 +79,11 @@ def main() -> None:
             if ad.find("NewDevelopmentId") is not None and ad.find("Address") is not None:
                 errors.append(f"Redundant Address remains for ad {expected_id} in {path.name}")
 
-    for item in full["items"]:
-        plan = WORK_DIR / str(item["plan_file"])
-        if not plan.exists() or plan.stat().st_size == 0:
-            errors.append(f"Missing plan image: {plan}")
+    if not fast_build:
+        for item in full["items"]:
+            plan = WORK_DIR / str(item["plan_file"])
+            if not plan.exists() or plan.stat().st_size == 0:
+                errors.append(f"Missing plan image: {plan}")
 
     result = {
         "ok": not errors,

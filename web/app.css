@@ -18,7 +18,7 @@ button{cursor:pointer}
 .nav-item:hover{background:rgba(255,255,255,.07);color:#fff}
 .nav-item.active{background:var(--green);color:#fff;box-shadow:0 8px 22px rgba(126,63,242,.24)}
 .nav-icon{width:24px;color:var(--gold);font-size:20px;line-height:1;text-align:center}.nav-item.active .nav-icon{color:#fff}
-.sidebar-link{margin:14px 12px 0;color:rgba(255,255,255,.6);font-size:12px;text-decoration:none}.sidebar-link:hover{color:#fff}
+.sidebar-link{margin:14px 12px 0;color:rgba(255,255,255,.6);font-size:11px;line-height:1.35;text-decoration:none;white-space:nowrap}.sidebar-link:hover{color:#fff}
 .sidebar-link-secondary{margin-top:7px}
 .workspace{min-width:0}
 .topbar{height:108px;padding:22px 38px;border-bottom:1px solid var(--line);background:rgba(242,242,242,.92);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;gap:24px}

@@ -15,6 +15,9 @@ jobs:
   apply:
     if: github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]')
     runs-on: ubuntu-latest
+    outputs:
+      project: ${{ steps.settings.outputs.project }}
+      mode: ${{ steps.settings.outputs.mode }}
     steps:
       - name: Checkout main
         uses: actions/checkout@v7
@@ -27,6 +30,7 @@ jobs:
           python-version: "3.12"
 
       - name: Validate and apply settings
+        id: settings
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: python src/apply_issue_settings.py
@@ -45,13 +49,22 @@ jobs:
             git push origin main
           fi
 
-  deploy:
+  fast-deploy:
+    needs: apply
+    uses: ./.github/workflows/build-fast-data.yml
+    with:
+      project: ${{ needs.apply.outputs.project }}
+    secrets: inherit
+
+  full-deploy:
+    if: needs.apply.outputs.mode == 'full'
     needs: apply
     uses: ./.github/workflows/deploy-pages.yml
     secrets: inherit
 
   cleanup-uploads:
-    needs: [apply, deploy]
+    if: always() && needs.apply.result == 'success' && needs.fast-deploy.result == 'success' && (needs.full-deploy.result == 'success' || needs.full-deploy.result == 'skipped')
+    needs: [apply, fast-deploy, full-deploy]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -71,7 +84,8 @@ jobs:
         run: python src/cleanup_uploaded_images.py
 
   complete:
-    needs: [apply, deploy, cleanup-uploads]
+    if: always() && needs.cleanup-uploads.result == 'success'
+    needs: [cleanup-uploads]
     runs-on: ubuntu-latest
     steps:
       - name: Confirm and close request
@@ -84,8 +98,8 @@ jobs:
           gh issue close "$ISSUE_NUMBER"
 
   report-failure:
-    if: failure() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]')
-    needs: [apply, deploy, cleanup-uploads]
+    if: always() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]') && (needs.apply.result == 'failure' || needs.fast-deploy.result == 'failure' || needs.full-deploy.result == 'failure' || needs.cleanup-uploads.result == 'failure')
+    needs: [apply, fast-deploy, full-deploy, cleanup-uploads]
     runs-on: ubuntu-latest
     steps:
       - name: Report failure

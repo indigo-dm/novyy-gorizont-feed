@@ -60,6 +60,26 @@ async function github(env, path, options = {}) {
   return response.json();
 }
 
+async function githubRaw(env, path, branch) {
+  const encodedPath = path.split('/').map(encodeURIComponent).join('/');
+  const response = await fetch(
+    `https://api.github.com/repos/${env.GITHUB_REPOSITORY}/contents/${encodedPath}?ref=${encodeURIComponent(branch)}`,
+    {
+      headers: {
+        Accept: 'application/vnd.github.raw+json',
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        'User-Agent': 'indigo-feed-studio-upload',
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    }
+  );
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error(`GitHub ${response.status}: ${detail.slice(0, 240)}`);
+  }
+  return response;
+}
+
 async function ensureMediaBranch(env) {
   const branch = env.GITHUB_MEDIA_BRANCH || 'media';
   const refResponse = await fetch(`https://api.github.com/repos/${env.GITHUB_REPOSITORY}/git/ref/heads/${encodeURIComponent(branch)}`, {
@@ -172,15 +192,65 @@ async function settingsStatus(request, env, origin) {
   return json({ request: issue.number, status: 'building', updatedAt: issue.updated_at }, 200, origin, env);
 }
 
+const PUBLIC_DATA_FILES = new Set([
+  'inventory.json',
+  'settings.json',
+  'status.json',
+  'assets.json',
+  'source-profitbase.xml',
+  'full-avito-demo.xml',
+  'pilot-avito.xml'
+]);
+
+function publicDataTarget(path, env) {
+  if (path === '/data/projects.json') return 'published/projects.json';
+  const match = path.match(/^\/data\/projects\/([a-z0-9]+(?:-[a-z0-9]+)*)\/([^/]+)$/);
+  if (!match || !PUBLIC_DATA_FILES.has(match[2])) return '';
+  if (allowedProjects(env).size && !allowedProjects(env).has(match[1])) return '';
+  return `published/projects/${match[1]}/${match[2]}`;
+}
+
+async function publicData(request, env, path) {
+  const target = publicDataTarget(path, env);
+  if (!target) {
+    return new Response(JSON.stringify({ error: 'Файл не найден.' }), {
+      status: 404,
+      headers: { ...JSON_HEADERS, 'Access-Control-Allow-Origin': '*' }
+    });
+  }
+  const source = await githubRaw(env, target, env.GITHUB_DATA_BRANCH || 'feed-data');
+  const isXml = target.endsWith('.xml');
+  const headers = {
+    'Content-Type': isXml ? 'application/xml; charset=utf-8' : 'application/json; charset=utf-8',
+    'Cache-Control': 'no-store, max-age=0',
+    'Access-Control-Allow-Origin': '*',
+    'X-Content-Type-Options': 'nosniff'
+  };
+  const etag = source.headers.get('ETag');
+  if (etag) headers.ETag = etag;
+  return new Response(request.method === 'HEAD' ? null : source.body, { status: 200, headers });
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
+    const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+    if ((request.method === 'GET' || request.method === 'HEAD') && path.startsWith('/data/')) {
+      try {
+        return await publicData(request, env, path);
+      } catch (error) {
+        console.error(error);
+        return new Response(JSON.stringify({ error: 'Данные фида временно недоступны.' }), {
+          status: 502,
+          headers: { ...JSON_HEADERS, 'Access-Control-Allow-Origin': '*' }
+        });
+      }
+    }
     if (!env.ALLOWED_ORIGIN || origin !== env.ALLOWED_ORIGIN) {
       return json({ error: 'Источник запроса не разрешён.' }, 403, origin, env);
     }
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders(origin, env.ALLOWED_ORIGIN) });
     try {
-      const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
       if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
       if (request.method === 'POST' && path === '/settings') return await createSettingsRequest(request, env, origin);
       if (request.method === 'GET' && path === '/status') return await settingsStatus(request, env, origin);

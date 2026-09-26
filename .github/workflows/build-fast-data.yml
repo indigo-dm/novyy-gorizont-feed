@@ -1,0 +1,69 @@
+name: Build fast feed data
+
+on:
+  workflow_call:
+    inputs:
+      project:
+        description: Project slug; empty rebuilds every active project
+        required: false
+        type: string
+        default: ""
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Project slug; leave empty to rebuild all projects
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-data
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout application source
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build XML and interface data without rendering images
+        env:
+          PROJECT_SLUG: ${{ inputs.project }}
+          PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
+          PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
+          FEED_STUDIO_UPLOAD_URL: ${{ vars.FEED_STUDIO_UPLOAD_URL }}
+        run: python src/build_fast.py
+
+      - name: Checkout fast data branch
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          path: .feed-data
+
+      - name: Update published data
+        env:
+          PROJECT_SLUG: ${{ inputs.project }}
+        run: |
+          args=(--source fast-site --destination .feed-data/published)
+          if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
+          python src/sync_fast_data.py "${args[@]}"
+          git -C .feed-data config user.name "github-actions[bot]"
+          git -C .feed-data config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C .feed-data add published
+          if git -C .feed-data diff --cached --quiet; then
+            echo "Fast feed data is already current."
+          else
+            git -C .feed-data commit -m "Publish fast feed data"
+            git -C .feed-data push origin feed-data
+          fi

@@ -323,8 +323,20 @@ def main() -> None:
     except (ValueError, TypeError, json.JSONDecodeError) as error:
         raise SystemExit(f"Invalid feed settings: {error}") from error
     output = project_dir / "promotion-rules.json"
+    previous = json.loads(output.read_text(encoding="utf-8")) if output.exists() else {}
+    mode = "full" if previous.get("rules", []) != validated["rules"] else "fast"
     output.write_text(json.dumps(validated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"project": project_slug, "rules": len(validated["rules"]), "output": str(output)}, ensure_ascii=False))
+    github_output = os.environ.get("GITHUB_OUTPUT", "").strip()
+    if github_output:
+        with Path(github_output).open("a", encoding="utf-8") as handle:
+            handle.write(f"project={project_slug}\n")
+            handle.write(f"mode={mode}\n")
+    print(json.dumps({
+        "project": project_slug,
+        "mode": mode,
+        "rules": len(validated["rules"]),
+        "output": str(output),
+    }, ensure_ascii=False))
 
 
 if __name__ == "__main__":

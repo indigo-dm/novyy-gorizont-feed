@@ -2,7 +2,10 @@ input/avito.xml
 cache/plans/
 output/
 site/
+fast-site/
+.feed-data/
 work/
 node_modules/
+__pycache__/
 .env
 *.log

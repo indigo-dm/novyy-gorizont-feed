@@ -16,7 +16,7 @@ on:
       timezone: "Europe/Moscow"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
   actions: read
@@ -50,6 +50,12 @@ jobs:
       - name: Install renderer
         run: npm install --no-audit --no-fund
 
+      - name: Cache Chromium
+        uses: actions/cache@v5
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package.json') }}
+
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
@@ -72,3 +78,8 @@ jobs:
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  publish-data:
+    needs: build
+    uses: ./.github/workflows/build-fast-data.yml
+    secrets: inherit

@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import os
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -254,7 +255,7 @@ def main() -> None:
         plan_url = urls[0]
         plan_file = f"cache/plans/{local_plan_name(plan_url)}"
         plan_path = WORK_DIR / plan_file
-        if not plan_path.exists() or plan_path.stat().st_size == 0:
+        if os.environ.get("FAST_BUILD") != "1" and (not plan_path.exists() or plan_path.stat().st_size == 0):
             download(plan_url, plan_path)
         house_id = node_text(ad, "NewDevelopmentId")
         item: dict[str, object] = {

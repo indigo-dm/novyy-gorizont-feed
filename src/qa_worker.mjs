@@ -8,6 +8,7 @@ const env = {
   ALLOWED_ORIGIN: 'https://indigo-dm.github.io',
   ALLOWED_PROJECTS: 'novyy-gorizont',
   GITHUB_REPOSITORY: 'indigo-dm/novyy-gorizont-feed',
+  GITHUB_DATA_BRANCH: 'feed-data',
   GITHUB_TOKEN: 'qa-token'
 };
 
@@ -15,6 +16,12 @@ let issueState = 'open';
 let createdBody = '';
 globalThis.fetch = async (url, options = {}) => {
   const value = String(url);
+  if (value.includes('/contents/published/projects/novyy-gorizont/full-avito-demo.xml?ref=feed-data')) {
+    return new Response('<?xml version="1.0" encoding="UTF-8"?><Ads />', {
+      status: 200,
+      headers: { ETag: '"qa-etag"' }
+    });
+  }
   if (value.endsWith('/issues') && options.method === 'POST') {
     createdBody = JSON.parse(options.body).body;
     return Response.json({ number: 17, created_at: '2026-09-26T10:00:00Z' }, { status: 201 });
@@ -46,14 +53,20 @@ const building = await buildingResponse.json();
 issueState = 'closed';
 const publishedResponse = await worker.fetch(new Request('https://worker.example/status?request=17', { headers }), env);
 const published = await publishedResponse.json();
+const dataResponse = await worker.fetch(new Request('https://worker.example/data/projects/novyy-gorizont/full-avito-demo.xml'), env);
+const dataXml = await dataResponse.text();
+const headResponse = await worker.fetch(new Request('https://worker.example/data/projects/novyy-gorizont/full-avito-demo.xml', { method: 'HEAD' }), env);
 
 const result = {
   ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') &&
-    building.status === 'building' && published.status === 'published',
+    building.status === 'building' && published.status === 'published' &&
+    dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200,
   settings_status: settingsResponse.status,
   building_status: building.status,
   published_status: published.status,
-  deletion_forwarded: createdBody.includes('uploads/novyy-gorizont/9301142/add-test.jpg')
+  deletion_forwarded: createdBody.includes('uploads/novyy-gorizont/9301142/add-test.jpg'),
+  public_data_status: dataResponse.status,
+  public_data_head_status: headResponse.status
 };
 console.log(JSON.stringify(result, null, 2));
 if (!result.ok) process.exit(1);

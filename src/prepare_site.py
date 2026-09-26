@@ -17,7 +17,7 @@ if SITE.exists():
 (SITE / "assets").mkdir(parents=True)
 (SITE / "projects").mkdir(parents=True)
 
-for filename in ("index.html", "app.css", "app.js", "access.js"):
+for filename in ("index.html", "app.css", "app.js", "access.js", "runtime-config.js"):
     shutil.copy2(WEB / filename, SITE / filename)
 
 password_hash = os.environ.get("FEED_STUDIO_PASSWORD_HASH", "").strip().lower()

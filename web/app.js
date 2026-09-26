@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  var REPOSITORY = 'indigo-dm/novyy-gorizont-feed';
+  var RUNTIME = window.FEED_STUDIO_RUNTIME || {};
+  var REPOSITORY = String(RUNTIME.repository || 'indigo-dm/novyy-gorizont-feed');
+  var DATA_ROOT = String(RUNTIME.dataRoot || '').replace(/\/$/, '');
   var state = {
     registry: null,
     project: null,
@@ -46,8 +48,14 @@
   var cacheVersion = function () {
     return state.registry && state.registry.build_id ? String(state.registry.build_id) : 'development';
   };
+  var dataUrl = function (url) {
+    var value = String(url || '');
+    if (!value || /^(?:https?:|data:|blob:)/i.test(value)) return value;
+    return (DATA_ROOT ? DATA_ROOT + '/' : '') + value.replace(/^\/+/, '');
+  };
   var versionedUrl = function (url) {
-    return url + (url.indexOf('?') >= 0 ? '&' : '?') + 'v=' + encodeURIComponent(cacheVersion());
+    var resolved = dataUrl(url);
+    return resolved + (resolved.indexOf('?') >= 0 ? '&' : '?') + 'v=' + encodeURIComponent(cacheVersion());
   };
   var draftKey = function () { return 'feed-studio-rules-v1-' + (state.project ? state.project.slug : 'default'); };
   var operationKey = function () { return 'feed-studio-publish-v1-' + (state.project ? state.project.slug : 'default'); };
@@ -258,9 +266,10 @@
     $('#project-name').textContent = state.project.name;
     document.title = state.project.name + ' — Feed Studio';
     $('#project-select').value = state.project.slug;
-    $('#source-feed-link').href = state.project.base + '/source-profitbase.xml';
-    $('#full-feed-link').href = state.project.base + '/full-avito-demo.xml';
-    $('#pilot-feed-link').href = state.project.base + '/pilot-avito.xml';
+    var projectBase = dataUrl(state.project.base);
+    $('#source-feed-link').href = projectBase + '/source-profitbase.xml';
+    $('#full-feed-link').href = projectBase + '/full-avito-demo.xml';
+    $('#pilot-feed-link').href = projectBase + '/pilot-avito.xml';
     $('#full-feed-link').textContent = 'Полный фид · ' + state.inventory.full_ads + ' квартир ↗';
     $('#pilot-feed-link').textContent = 'Тестовый фид · ' + state.status.unique_plans + ' планировок ↗';
     if (state.assets && state.assets.brand) {
@@ -1008,7 +1017,7 @@
     var slug = state.project && state.project.slug;
     if (!slug) return;
     try {
-      var registryResponse = await fetch('projects.json?v=' + Date.now(), { cache: 'no-store' });
+      var registryResponse = await fetch(dataUrl('projects.json') + '?v=' + Date.now(), { cache: 'no-store' });
       if (registryResponse.ok) state.registry = await registryResponse.json();
       await loadProject(slug, true);
     } catch (error) {
@@ -1334,7 +1343,7 @@
       $('#project-select').value = state.project ? state.project.slug : state.registry.default_project;
       return;
     }
-    var base = project.base;
+    var base = dataUrl(project.base);
     var version = '?v=' + encodeURIComponent(cacheVersion());
     try {
       var responses = await Promise.all([
@@ -1383,7 +1392,7 @@
 
   async function init() {
     try {
-      var response = await fetch('projects.json', { cache: 'no-cache' });
+      var response = await fetch(dataUrl('projects.json'), { cache: 'no-cache' });
       if (!response.ok) throw new Error('Не удалось загрузить список объектов.');
       state.registry = await response.json();
       $('#project-select').innerHTML = state.registry.projects.map(function (project) {
