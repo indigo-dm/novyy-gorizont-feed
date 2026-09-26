@@ -17,7 +17,10 @@ def load_registry() -> dict[str, object]:
 
 
 REGISTRY = load_registry()
-PROJECT_SLUG = os.environ.get("PROJECT_SLUG", str(REGISTRY["default_project"])).strip()
+PROJECT_SLUG = (
+    os.environ.get("PROJECT_SLUG", "").strip()
+    or str(REGISTRY["default_project"])
+)
 PROJECT = next(
     (item for item in REGISTRY["projects"] if item.get("slug") == PROJECT_SLUG),
     None,
