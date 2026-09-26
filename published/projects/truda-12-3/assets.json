@@ -5,51 +5,91 @@
   "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
   "items": [
     {
-      "key": "logo",
-      "name": "Логотип",
-      "description": "Основной логотип объекта для карточек.",
-      "filename": "logo-truda.png",
-      "required": true,
-      "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/logo-truda.png"
-    },
-    {
-      "key": "key_render",
+      "key": "asset-1f87bc35b802",
       "name": "Ключевой рендер",
       "description": "Главное изображение проекта в левой части макета.",
       "filename": "key-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/key-render.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/key-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
     },
     {
-      "key": "additional_render_1",
-      "name": "Интерьер кухни",
-      "description": "Дополнительный фирменный рендер объекта.",
-      "filename": "render-kitchen.jpg",
+      "key": "asset-b604f86c5b2e",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-truda.png",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/logo-truda.png",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-25ae1d644651",
+      "name": "Logo Truda Stacked",
+      "description": "Загруженный фирменный материал объекта.",
+      "filename": "logo-truda-stacked.png",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-kitchen.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/logo-truda-stacked.png",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_2",
+      "key": "asset-8e6ce6d8a886",
+      "name": "Logo Truda White",
+      "description": "Загруженный фирменный материал объекта.",
+      "filename": "logo-truda-white.png",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/logo-truda-white.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-4e57c584baf2",
       "name": "Интерьер ванной",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-bathroom.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-bathroom.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-bathroom.jpg",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_3",
+      "key": "asset-6f9819941dea",
+      "name": "Интерьер кухни",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-kitchen.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-kitchen.jpg",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-090e98370bd8",
       "name": "Гардеробная",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-storage.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-storage.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/assets/render-storage.jpg",
+      "active_for": [],
+      "uploaded": false
     }
   ],
+  "current": {
+    "logo": "logo-truda.png",
+    "key_render": "key-render.jpg"
+  },
   "brand": {
     "green": "#194820",
     "green_dark": "#194820",

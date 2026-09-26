@@ -5,24 +5,36 @@
   "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
   "items": [
     {
-      "key": "logo",
+      "key": "asset-b8b92609b165",
       "name": "Логотип",
-      "description": "Основной логотип объекта для карточек.",
+      "description": "Основной логотип объекта для брендированных карточек.",
       "filename": "logo-gold.svg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/logo-gold.svg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/logo-gold.svg",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
     },
     {
-      "key": "key_render",
+      "key": "asset-e467147b5001",
       "name": "Ключевой рендер",
       "description": "Главное изображение проекта в левой части макета.",
       "filename": "selected-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/selected-render.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/selected-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
     }
   ],
+  "current": {
+    "logo": "logo-gold.svg",
+    "key_render": "selected-render.jpg"
+  },
   "brand": {
     "green": "#00605C",
     "green_dark": "#004C49",

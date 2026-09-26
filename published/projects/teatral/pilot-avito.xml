@@ -329,7 +329,7 @@
     <AdStatus>Free</AdStatus>
   </Ad>
   <Ad>
-    <Id>10479450</Id>
+    <Id>10479480</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
     <ContactPhone>+78632043586</ContactPhone>
@@ -338,11 +338,11 @@
     <PropertyRights>Застройщик</PropertyRights>
     <Latitude>47.232951</Latitude>
     <Longitude>39.742723</Longitude>
-    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается просторная 4-комнатная квартира 131,6 кв.м. в новом ЖК у парка Революции. Дом сдан. &lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– 4 изолированные светлые комнаты&lt;br&gt;– большая кухня-гостиная 26,3 кв.м.&lt;br&gt;– 3 санузла&lt;br&gt;– 2 лоджии по 6,3 кв.м.&lt;br&gt;– 3 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
-    <Price>28952000</Price>
-    <Square>131.6</Square>
+    <Description>Закрытие продаж! Последние квартиры в статусной локации Ростова.&lt;br&gt;Продается просторная 4-комнатная квартира 130,2 кв.м. в новом ЖК у парка Революции. Дом сдан.&lt;br&gt;&lt;br&gt;Планировка&lt;br&gt;– 4 изолированные светлые комнаты&lt;br&gt;– большая кухня-гостиная 26,3 кв.м.&lt;br&gt;– 3 санузла&lt;br&gt;– панорамные окна&lt;br&gt;– 2 лоджии по 6,3 кв.м.&lt;br&gt;– 8 этаж&lt;br&gt;&lt;br&gt;Локация&lt;br&gt;Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:&lt;br&gt;– Школа - 2 мин.&lt;br&gt;– Детский сад - 5 мин.&lt;br&gt;– Медицинский центр - 3 мин.&lt;br&gt;– Ул. Пушкинская - 3 мин.&lt;br&gt;– Парк Революции - 4 мин.&lt;br&gt;&lt;br&gt;ЖК "Театрал"&lt;br&gt;Дом бизнес-класса с выразительной архитектурой в центре Ростова. &lt;br&gt;• Премиум локация&lt;br&gt;• Собственная котельная&lt;br&gt;• 5-6 квартир на этаже&lt;br&gt;• Закрытая территория&lt;br&gt;• Впечатляющие стильные холлы&lt;br&gt;• Подземный паркинг&lt;br&gt;• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов&lt;br&gt;• Кафе, супермаркеты на 1 этаже&lt;br&gt;&lt;br&gt;Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</Description>
+    <Price>28644000</Price>
+    <Square>130.2</Square>
     <Decoration>Без отделки</Decoration>
-    <Floor>3</Floor>
+    <Floor>8</Floor>
     <Status>Квартира</Status>
     <MarketType>Новостройка</MarketType>
     <NewDevelopmentId>4974615</NewDevelopmentId>
@@ -355,7 +355,7 @@
       <Option>Лоджия</Option>
     </BalconyOrLoggiaMulti>
     <Images>
-      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479450.png" />
+      <Image url="https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images/10479480.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg" />

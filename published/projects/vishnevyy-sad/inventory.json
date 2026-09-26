@@ -1,35 +1,36 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-09-26T14:15:06+03:00",
-  "source_ads": 309,
-  "full_ads": 309,
+  "checked_at": "2026-09-26T23:59:58+03:00",
+  "source_ads": 308,
+  "full_ads": 308,
+  "excluded_ads": 0,
   "unique_plans": 167,
   "source_tag_counts": {
-    "AdStatus": 309,
-    "Address": 309,
-    "Category": 309,
-    "ContactMethod": 309,
-    "ContactPhone": 309,
-    "Decoration": 309,
-    "Description": 309,
-    "Floor": 309,
-    "Floors": 309,
-    "HouseType": 309,
-    "Id": 309,
-    "KitchenSpace": 309,
-    "Latitude": 278,
-    "LivingSpace": 309,
-    "Longitude": 278,
-    "ManagerName": 309,
-    "MarketType": 309,
-    "NewDevelopmentId": 309,
-    "OperationType": 309,
-    "Price": 309,
-    "PropertyRights": 309,
-    "Rooms": 309,
-    "Square": 309,
-    "Status": 309
+    "AdStatus": 308,
+    "Address": 308,
+    "Category": 308,
+    "ContactMethod": 308,
+    "ContactPhone": 308,
+    "Decoration": 308,
+    "Description": 308,
+    "Floor": 308,
+    "Floors": 308,
+    "HouseType": 308,
+    "Id": 308,
+    "KitchenSpace": 308,
+    "Latitude": 277,
+    "LivingSpace": 308,
+    "Longitude": 277,
+    "ManagerName": 308,
+    "MarketType": 308,
+    "NewDevelopmentId": 308,
+    "OperationType": 308,
+    "Price": 308,
+    "PropertyRights": 308,
+    "Rooms": 308,
+    "Square": 308,
+    "Status": 308
   },
   "parameter_catalog": [
     {
@@ -259,7 +260,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340411",
@@ -390,7 +392,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340280",
@@ -521,7 +524,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340228",
@@ -652,7 +656,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340366",
@@ -783,7 +788,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340242",
@@ -914,7 +920,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340359",
@@ -1045,7 +1052,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340331",
@@ -1176,7 +1184,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340235",
@@ -1307,7 +1316,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340340",
@@ -1438,7 +1448,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340313",
@@ -1569,7 +1580,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340261",
@@ -1700,7 +1712,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340326",
@@ -1831,7 +1844,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340354",
@@ -1962,7 +1976,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340230",
@@ -2093,7 +2108,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340251",
@@ -2224,7 +2240,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340365",
@@ -2355,7 +2372,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340312",
@@ -2486,7 +2504,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340310",
@@ -2617,7 +2636,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340237",
@@ -2748,7 +2768,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340361",
@@ -2879,7 +2900,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340306",
@@ -3010,7 +3032,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340374",
@@ -3141,7 +3164,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340274",
@@ -3272,7 +3296,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340267",
@@ -3403,7 +3428,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340295",
@@ -3534,7 +3560,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340281",
@@ -3665,7 +3692,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340296",
@@ -3796,7 +3824,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340288",
@@ -3927,7 +3956,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340412",
@@ -4058,7 +4088,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340254",
@@ -4189,7 +4220,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340413",
@@ -4320,7 +4352,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340364",
@@ -4451,7 +4484,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340353",
@@ -4582,7 +4616,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340325",
@@ -4713,7 +4748,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340367",
@@ -4844,7 +4880,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340257",
@@ -4975,7 +5012,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340243",
@@ -5106,7 +5144,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340389",
@@ -5237,7 +5276,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340403",
@@ -5368,7 +5408,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340375",
@@ -5499,7 +5540,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340410",
@@ -5630,7 +5672,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340382",
@@ -5761,7 +5804,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340396",
@@ -5892,7 +5936,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340265",
@@ -6023,7 +6068,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340279",
@@ -6154,7 +6200,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340300",
@@ -6285,7 +6332,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340368",
@@ -6416,7 +6464,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340272",
@@ -6547,7 +6596,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340258",
@@ -6678,7 +6728,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340252",
@@ -6809,7 +6860,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340238",
@@ -6940,7 +6992,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340277",
@@ -7071,7 +7124,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340362",
@@ -7202,7 +7256,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340415",
@@ -7333,7 +7388,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340348",
@@ -7464,7 +7520,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340401",
@@ -7595,7 +7652,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340308",
@@ -7726,7 +7784,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12340298",
@@ -7857,7 +7916,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346654",
@@ -7988,7 +8048,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346764",
@@ -8119,7 +8180,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346664",
@@ -8250,7 +8312,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346581",
@@ -8381,7 +8444,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346602",
@@ -8512,7 +8576,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346609",
@@ -8643,7 +8708,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346595",
@@ -8774,7 +8840,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346574",
@@ -8905,7 +8972,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346666",
@@ -9036,7 +9104,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346614",
@@ -9167,7 +9236,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346588",
@@ -9298,7 +9368,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346707",
@@ -9429,7 +9500,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346672",
@@ -9560,7 +9632,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346660",
@@ -9691,7 +9764,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346597",
@@ -9822,7 +9896,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346550",
@@ -9953,7 +10028,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346555",
@@ -10084,7 +10160,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346604",
@@ -10215,7 +10292,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346608",
@@ -10346,7 +10424,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346553",
@@ -10477,7 +10556,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346665",
@@ -10608,7 +10688,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346714",
@@ -10739,7 +10820,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346769",
@@ -10870,7 +10952,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346727",
@@ -11001,7 +11084,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346734",
@@ -11132,7 +11216,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346648",
@@ -11263,7 +11348,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346765",
@@ -11394,7 +11480,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346766",
@@ -11525,7 +11612,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346607",
@@ -11656,7 +11744,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346692",
@@ -11787,7 +11876,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346596",
@@ -11918,7 +12008,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346568",
@@ -12049,7 +12140,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346706",
@@ -12180,7 +12272,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346610",
@@ -12311,7 +12404,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346678",
@@ -12442,7 +12536,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346699",
@@ -12573,7 +12668,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346720",
@@ -12704,7 +12800,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346713",
@@ -12835,7 +12932,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346685",
@@ -12966,7 +13064,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346756",
@@ -13097,7 +13196,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346742",
@@ -13228,7 +13328,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346618",
@@ -13359,7 +13460,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346632",
@@ -13490,7 +13592,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346749",
@@ -13621,7 +13724,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346646",
@@ -13752,7 +13856,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346728",
@@ -13883,7 +13988,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346763",
@@ -14014,7 +14120,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346721",
@@ -14145,7 +14252,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346611",
@@ -14276,7 +14384,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346639",
@@ -14407,7 +14516,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346653",
@@ -14538,7 +14648,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346735",
@@ -14669,7 +14780,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346768",
@@ -14800,7 +14912,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346551",
@@ -14931,7 +15044,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346661",
@@ -15062,7 +15176,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346616",
@@ -15193,7 +15308,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346733",
@@ -15324,7 +15440,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346658",
@@ -15455,7 +15572,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346715",
@@ -15586,7 +15704,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346726",
@@ -15717,7 +15836,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346605",
@@ -15848,7 +15968,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "12346838",
@@ -15979,7 +16100,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826315",
@@ -16110,7 +16232,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826339",
@@ -16241,7 +16364,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826375",
@@ -16372,7 +16496,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826387",
@@ -16503,7 +16628,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826399",
@@ -16634,7 +16760,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826411",
@@ -16765,7 +16892,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826402",
@@ -16896,7 +17024,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826316",
@@ -17027,7 +17156,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826364",
@@ -17158,7 +17288,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826376",
@@ -17289,7 +17420,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826388",
@@ -17420,7 +17552,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826400",
@@ -17551,7 +17684,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826412",
@@ -17682,7 +17816,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826311",
@@ -17813,7 +17948,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826395",
@@ -17944,7 +18080,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826407",
@@ -18075,7 +18212,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826413",
@@ -18206,7 +18344,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826312",
@@ -18337,7 +18476,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826360",
@@ -18468,7 +18608,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826408",
@@ -18599,7 +18740,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826405",
@@ -18730,7 +18872,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826314",
@@ -18861,7 +19004,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826374",
@@ -18992,7 +19136,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826398",
@@ -19123,7 +19268,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826410",
@@ -19254,7 +19400,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826403",
@@ -19385,7 +19532,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826310",
@@ -19516,7 +19664,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826406",
@@ -19647,7 +19796,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826313",
@@ -19778,7 +19928,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826337",
@@ -19909,7 +20060,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826373",
@@ -20040,7 +20192,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826397",
@@ -20171,7 +20324,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826409",
@@ -20302,7 +20456,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13826404",
@@ -20433,7 +20588,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832108",
@@ -20564,7 +20720,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832132",
@@ -20695,7 +20852,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832144",
@@ -20826,7 +20984,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832156",
@@ -20957,7 +21116,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832168",
@@ -21088,7 +21248,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832204",
@@ -21219,7 +21380,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832099",
@@ -21350,7 +21512,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832111",
@@ -21481,7 +21644,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832135",
@@ -21612,7 +21776,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832147",
@@ -21743,7 +21908,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832159",
@@ -21874,7 +22040,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832171",
@@ -22005,7 +22172,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832195",
@@ -22136,7 +22304,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832109",
@@ -22267,7 +22436,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832145",
@@ -22398,7 +22568,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832157",
@@ -22529,7 +22700,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832169",
@@ -22660,7 +22832,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832205",
@@ -22791,7 +22964,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832104",
@@ -22922,7 +23096,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832116",
@@ -23053,7 +23228,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832128",
@@ -23184,7 +23360,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832140",
@@ -23315,7 +23492,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832164",
@@ -23446,7 +23624,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832200",
@@ -23577,7 +23756,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832110",
@@ -23708,7 +23888,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832105",
@@ -23839,7 +24020,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832117",
@@ -23970,7 +24152,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832141",
@@ -24101,7 +24284,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832153",
@@ -24232,7 +24416,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832165",
@@ -24363,7 +24548,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832177",
@@ -24494,7 +24680,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832201",
@@ -24625,7 +24812,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832102",
@@ -24756,7 +24944,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832114",
@@ -24887,7 +25076,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832198",
@@ -25018,7 +25208,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832107",
@@ -25149,7 +25340,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832203",
@@ -25280,7 +25472,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832196",
@@ -25411,7 +25604,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832103",
@@ -25542,7 +25736,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832199",
@@ -25673,7 +25868,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832106",
@@ -25804,7 +26000,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832130",
@@ -25935,7 +26132,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832142",
@@ -26066,7 +26264,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832154",
@@ -26197,7 +26396,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832166",
@@ -26328,7 +26528,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832178",
@@ -26459,7 +26660,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832202",
@@ -26590,7 +26792,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832101",
@@ -26721,7 +26924,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832161",
@@ -26852,7 +27056,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832173",
@@ -26983,7 +27188,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832197",
@@ -27114,7 +27320,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832779",
@@ -27245,7 +27452,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832803",
@@ -27376,7 +27584,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832815",
@@ -27507,7 +27716,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832827",
@@ -27638,7 +27848,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832839",
@@ -27769,7 +27980,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832851",
@@ -27900,7 +28112,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832746",
@@ -28031,7 +28244,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832758",
@@ -28162,7 +28376,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832770",
@@ -28293,7 +28508,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832794",
@@ -28424,7 +28640,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832806",
@@ -28555,7 +28772,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832830",
@@ -28686,7 +28904,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832842",
@@ -28817,7 +29036,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832756",
@@ -28948,7 +29168,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832780",
@@ -29079,7 +29300,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832804",
@@ -29210,7 +29432,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832816",
@@ -29341,7 +29564,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832828",
@@ -29472,7 +29696,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832840",
@@ -29603,7 +29828,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832852",
@@ -29734,7 +29960,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832751",
@@ -29865,7 +30092,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832775",
@@ -29996,7 +30224,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832799",
@@ -30127,7 +30356,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832811",
@@ -30258,7 +30488,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832823",
@@ -30389,7 +30620,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832835",
@@ -30520,7 +30752,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832847",
@@ -30651,7 +30884,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832757",
@@ -30782,7 +31016,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832817",
@@ -30913,7 +31148,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832829",
@@ -31044,7 +31280,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832841",
@@ -31175,7 +31412,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832853",
@@ -31306,7 +31544,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832752",
@@ -31437,138 +31676,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
-    },
-    {
-      "id": "13832776",
-      "house_id": "9464279",
-      "house": "Дом · ID 9464279",
-      "rooms": "1",
-      "area": "38.66",
-      "floor": "3",
-      "floors": "9",
-      "price": "5296420",
-      "decoration": "Без отделки",
-      "image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/previews/13832776.webp",
-      "thumbnail": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/thumbnails/13832776.webp",
-      "final_image": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/images/13832776.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-7c1bacf033a2",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/f04d1c3f1c242dad3ac77ebf03665e29.png",
-          "position": 1
-        },
-        {
-          "id": "src-5cb60c6fd14f",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-994afcc9bf88",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg",
-          "position": 8
-        }
       ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/images/13832776.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-7c1bacf033a2",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/f04d1c3f1c242dad3ac77ebf03665e29.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-5cb60c6fd14f",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-994afcc9bf88",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ]
+      "excluded_from_feed": false
     },
     {
       "id": "13832788",
@@ -31699,7 +31808,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832800",
@@ -31830,7 +31940,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832812",
@@ -31961,7 +32072,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832824",
@@ -32092,7 +32204,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832836",
@@ -32223,7 +32336,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832848",
@@ -32354,7 +32468,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832749",
@@ -32485,7 +32600,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832761",
@@ -32616,7 +32732,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832785",
@@ -32747,7 +32864,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832797",
@@ -32878,7 +32996,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832809",
@@ -33009,7 +33128,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832833",
@@ -33140,7 +33260,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832845",
@@ -33271,7 +33392,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832754",
@@ -33402,7 +33524,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832802",
@@ -33533,7 +33656,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832814",
@@ -33664,7 +33788,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832826",
@@ -33795,7 +33920,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832838",
@@ -33926,7 +34052,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832850",
@@ -34057,7 +34184,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832747",
@@ -34188,7 +34316,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832759",
@@ -34319,7 +34448,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832807",
@@ -34450,7 +34580,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832750",
@@ -34581,7 +34712,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832846",
@@ -34712,7 +34844,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832753",
@@ -34843,7 +34976,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832777",
@@ -34974,7 +35108,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832801",
@@ -35105,7 +35240,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832813",
@@ -35236,7 +35372,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832837",
@@ -35367,7 +35504,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832849",
@@ -35498,7 +35636,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832748",
@@ -35629,7 +35768,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832760",
@@ -35760,7 +35900,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832772",
@@ -35891,7 +36032,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832796",
@@ -36022,7 +36164,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832808",
@@ -36153,7 +36296,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832820",
@@ -36284,7 +36428,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832832",
@@ -36415,7 +36560,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "13832844",
@@ -36546,7 +36692,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195870",
@@ -36685,7 +36832,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195853",
@@ -36824,7 +36972,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195859",
@@ -36963,7 +37112,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195865",
@@ -37102,7 +37252,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195871",
@@ -37241,7 +37392,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195849",
@@ -37380,7 +37532,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195877",
@@ -37519,7 +37672,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195855",
@@ -37658,7 +37812,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195861",
@@ -37797,7 +37952,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195887",
@@ -37936,7 +38092,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195867",
@@ -38075,7 +38232,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195892",
@@ -38214,7 +38372,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195854",
@@ -38353,7 +38512,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195866",
@@ -38492,7 +38652,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195872",
@@ -38631,7 +38792,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195876",
@@ -38770,7 +38932,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195886",
@@ -38909,7 +39072,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195891",
@@ -39048,7 +39212,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195850",
@@ -39187,7 +39352,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195856",
@@ -39326,7 +39492,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195862",
@@ -39465,7 +39632,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195868",
@@ -39604,7 +39772,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195851",
@@ -39743,7 +39912,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195857",
@@ -39882,7 +40052,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195869",
@@ -40021,7 +40192,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195874",
@@ -40160,7 +40332,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195889",
@@ -40299,7 +40472,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195873",
@@ -40438,7 +40612,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195878",
@@ -40577,7 +40752,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195883",
@@ -40716,7 +40892,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     },
     {
       "id": "17195888",
@@ -40855,7 +41032,8 @@
         "Rooms",
         "Square",
         "Status"
-      ]
+      ],
+      "excluded_from_feed": false
     }
   ]
 }

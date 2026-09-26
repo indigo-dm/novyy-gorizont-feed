@@ -5,69 +5,91 @@
   "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
   "items": [
     {
-      "key": "logo",
-      "name": "Логотип",
-      "description": "Основной логотип объекта для карточек.",
-      "filename": "logo-teatral-light.png",
-      "required": true,
-      "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/logo-teatral-light.png"
-    },
-    {
-      "key": "key_render",
+      "key": "asset-1f87bc35b802",
       "name": "Ключевой рендер",
       "description": "Главное изображение проекта в левой части макета.",
       "filename": "key-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/key-render.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/key-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
     },
     {
-      "key": "additional_logo_1",
-      "name": "Тёмный логотип",
-      "description": "Дополнительный вариант фирменного логотипа объекта.",
-      "filename": "logo-teatral-dark.png",
-      "required": false,
+      "key": "asset-33f57af6f7b6",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-teatral-light.png",
+      "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/logo-teatral-dark.png"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/logo-teatral-light.png",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
     },
     {
-      "key": "additional_logo_2",
+      "key": "asset-768702bb2d5e",
       "name": "Фирменный знак",
       "description": "Дополнительный вариант фирменного логотипа объекта.",
       "filename": "logo-mark.png",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/logo-mark.png"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/logo-mark.png",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_1",
+      "key": "asset-d4155048cc37",
+      "name": "Тёмный логотип",
+      "description": "Дополнительный вариант фирменного логотипа объекта.",
+      "filename": "logo-teatral-dark.png",
+      "required": false,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/logo-teatral-dark.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-82b8051cf988",
       "name": "Спортивная зона",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-fitness.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/render-fitness.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/render-fitness.jpg",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_2",
+      "key": "asset-6fec358e01fb",
       "name": "Подземный паркинг",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-parking.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/render-parking.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/render-parking.jpg",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_3",
+      "key": "asset-ce63d74b588d",
       "name": "Детская площадка",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-playground.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/render-playground.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/assets/render-playground.jpg",
+      "active_for": [],
+      "uploaded": false
     }
   ],
+  "current": {
+    "logo": "logo-teatral-light.png",
+    "key_render": "key-render.jpg"
+  },
   "brand": {
     "green": "#1F334B",
     "green_dark": "#0A0A0A",

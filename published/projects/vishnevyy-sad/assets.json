@@ -5,51 +5,69 @@
   "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
   "items": [
     {
-      "key": "logo",
-      "name": "Логотип",
-      "description": "Основной логотип объекта для карточек.",
-      "filename": "logo-vishnevyy-sad.png",
-      "required": true,
-      "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-vishnevyy-sad.png"
-    },
-    {
-      "key": "key_render",
+      "key": "asset-1f87bc35b802",
       "name": "Ключевой рендер",
       "description": "Главное изображение проекта в левой части макета.",
       "filename": "key-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/key-render.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/key-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
     },
     {
-      "key": "additional_logo_1",
+      "key": "asset-2ddfcca3116b",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-vishnevyy-sad.png",
+      "required": true,
+      "exists": true,
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-vishnevyy-sad.png",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-768702bb2d5e",
       "name": "Фирменный знак",
       "description": "Дополнительный вариант фирменного логотипа объекта.",
       "filename": "logo-mark.png",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-mark.png"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-mark.png",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_1",
+      "key": "asset-8763072bb24f",
       "name": "Вид на территорию",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-aerial.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-aerial.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-aerial.jpg",
+      "active_for": [],
+      "uploaded": false
     },
     {
-      "key": "additional_render_2",
+      "key": "asset-4e01f6a28f9d",
       "name": "Фасад комплекса",
       "description": "Дополнительный фирменный рендер объекта.",
       "filename": "render-facade.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-facade.jpg"
+      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-facade.jpg",
+      "active_for": [],
+      "uploaded": false
     }
   ],
+  "current": {
+    "logo": "logo-vishnevyy-sad.png",
+    "key_render": "key-render.jpg"
+  },
   "brand": {
     "green": "#221E20",
     "green_dark": "#221E20",
