@@ -247,8 +247,35 @@ def pending_upload_deletions(value: object, project_slug: str) -> list[dict[str,
     return result
 
 
-def validate(payload: object, allowed_houses: set[str], project_slug: str) -> dict[str, object]:
-    if not isinstance(payload, dict) or payload.get("version") not in {1, 2}:
+def material_settings(value: object, project_dir: Path, config: dict[str, object]) -> dict[str, str]:
+    source = value if isinstance(value, dict) else {}
+    brand = config.get("brand") if isinstance(config.get("brand"), dict) else {}
+    assets_dir = (project_dir / "assets").resolve()
+    result: dict[str, str] = {}
+    for role, fallback in (
+        ("logo", str(brand.get("logo") or "logo.svg")),
+        ("key_render", str(brand.get("key_render") or "key-render.jpg")),
+    ):
+        filename = text(source.get(role), f"material_settings.{role}", 180, fallback).replace("\\", "/")
+        if filename.startswith("/") or ".." in Path(filename).parts or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]*", filename):
+            raise ValueError(f"material_settings.{role} contains an unsafe path")
+        if Path(filename).suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp", ".svg"}:
+            raise ValueError(f"material_settings.{role} has an unsupported file type")
+        target = (assets_dir / filename).resolve()
+        if assets_dir not in target.parents or not target.is_file():
+            raise ValueError(f"material_settings.{role} does not exist")
+        result[role] = filename
+    return result
+
+
+def validate(
+    payload: object,
+    allowed_houses: set[str],
+    project_slug: str,
+    project_dir: Path,
+    config: dict[str, object],
+) -> dict[str, object]:
+    if not isinstance(payload, dict) or payload.get("version") not in {1, 2, 3}:
         raise ValueError("Unsupported settings format")
     source_rules = payload.get("rules")
     if not isinstance(source_rules, list) or len(source_rules) > 10:
@@ -291,11 +318,16 @@ def validate(payload: object, allowed_houses: set[str], project_slug: str) -> di
             "include_ids": include_ids,
             "exclude_ids": exclude_ids,
         })
+    excluded_lot_ids = string_list(payload.get("excluded_lot_ids", []), "excluded_lot_ids")
+    if any(not value.isdigit() for value in excluded_lot_ids):
+        raise ValueError("excluded_lot_ids must contain digits only")
     return {
         "version": 2,
         "rules": rules,
+        "excluded_lot_ids": excluded_lot_ids,
         "image_settings": image_settings(payload.get("image_settings", {}), allowed_houses, project_slug),
         "parameter_settings": parameter_settings(payload.get("parameter_settings", {}), allowed_houses),
+        "material_settings": material_settings(payload.get("material_settings", {}), project_dir, config),
         "pending_upload_deletions": pending_upload_deletions(payload.get("pending_upload_deletions"), project_slug),
     }
 
@@ -319,12 +351,27 @@ def main() -> None:
         project_dir = ROOT / "projects" / project_slug
         config = json.loads((project_dir / "config.json").read_text(encoding="utf-8"))
         allowed_houses = set(str(value) for value in config.get("houses", {}))
-        validated = validate(payload, allowed_houses, project_slug)
+        validated = validate(payload, allowed_houses, project_slug, project_dir, config)
     except (ValueError, TypeError, json.JSONDecodeError) as error:
         raise SystemExit(f"Invalid feed settings: {error}") from error
     output = project_dir / "promotion-rules.json"
     previous = json.loads(output.read_text(encoding="utf-8")) if output.exists() else {}
-    mode = "full" if previous.get("rules", []) != validated["rules"] else "fast"
+    previous_materials = {
+        "logo": str(config.get("brand", {}).get("logo") or "logo.svg"),
+        "key_render": str(config.get("brand", {}).get("key_render") or "key-render.jpg"),
+    }
+    selected_materials = validated["material_settings"]
+    mode = "full" if (
+        previous.get("rules", []) != validated["rules"]
+        or previous_materials != selected_materials
+    ) else "fast"
+    if not isinstance(config.get("brand"), dict):
+        raise SystemExit("Invalid project config: brand settings are missing")
+    config["brand"]["logo"] = selected_materials["logo"]
+    config["brand"]["key_render"] = selected_materials["key_render"]
+    (project_dir / "config.json").write_text(
+        json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     output.write_text(json.dumps(validated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     github_output = os.environ.get("GITHUB_OUTPUT", "").strip()
     if github_output:

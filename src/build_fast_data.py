@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from parameter_catalog import PARAMETER_CATALOG
+from material_catalog import build_material_catalog
 from project_context import (
     ASSETS_DIR,
     CONFIG_PATH,
@@ -42,7 +43,7 @@ config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
 PROJECT_SITE.mkdir(parents=True, exist_ok=True)
 shutil.copy2(OUTPUT_DIR / "pilot-avito.xml", PROJECT_SITE / "pilot-avito.xml")
-shutil.copy2(OUTPUT_DIR / "full-avito-demo.xml", PROJECT_SITE / "full-avito-demo.xml")
+shutil.copy2(OUTPUT_DIR / "avito.xml", PROJECT_SITE / "avito.xml")
 shutil.copy2(INPUT_DIR / "avito.xml", PROJECT_SITE / "source-profitbase.xml")
 
 public_items = []
@@ -66,6 +67,7 @@ for item in manifest["items"]:
         "feed_images": item.get("feed_images", []),
         "feed_parameters": item.get("feed_parameters", {}),
         "source_tags": item.get("source_tags", []),
+        "excluded_from_feed": bool(item.get("excluded_from_feed")),
     })
 
 inventory = {
@@ -74,6 +76,7 @@ inventory = {
     "checked_at": manifest["checked_at"],
     "source_ads": manifest["source_ads"],
     "full_ads": manifest["full_ads"],
+    "excluded_ads": manifest.get("excluded_ads", 0),
     "unique_plans": manifest["unique_plans"],
     "source_tag_counts": manifest.get("source_tag_counts", {}),
     "parameter_catalog": PARAMETER_CATALOG,
@@ -85,48 +88,18 @@ status = {
     "checked_at": manifest["checked_at"],
     "source_ads": manifest["source_ads"],
     "full_ads": manifest["full_ads"],
+    "excluded_ads": manifest.get("excluded_ads", 0),
     "unique_plans": manifest["unique_plans"],
     "active_promotions": sum(1 for rule in rules.get("rules", []) if rule.get("enabled")),
     "publish_ready": False,
     "mode": "fast-data",
 }
 
-brand_assets = [
-    {
-        "key": "logo",
-        "name": "Логотип",
-        "description": "Основной логотип объекта для карточек.",
-        "filename": config["brand"].get("logo", "logo.svg"),
-        "required": True,
-    },
-    {
-        "key": "key_render",
-        "name": "Ключевой рендер",
-        "description": "Главное изображение проекта в левой части макета.",
-        "filename": config["brand"].get("key_render", "key-render.jpg"),
-        "required": True,
-    },
-]
-for index, logo in enumerate(config["brand"].get("additional_logos", []), start=1):
-    brand_assets.append({
-        "key": f"additional_logo_{index}",
-        "name": logo.get("name", f"Дополнительный логотип {index}"),
-        "description": "Дополнительный вариант фирменного логотипа объекта.",
-        "filename": logo["filename"],
-        "required": False,
-    })
-for index, render in enumerate(config["brand"].get("additional_renders", []), start=1):
-    brand_assets.append({
-        "key": f"additional_render_{index}",
-        "name": render.get("name", f"Дополнительный рендер {index}"),
-        "description": "Дополнительный фирменный рендер объекта.",
-        "filename": render["filename"],
-        "required": False,
-    })
-for asset in brand_assets:
-    path = ASSETS_DIR / asset["filename"]
-    asset["exists"] = path.exists()
-    asset["url"] = absolute_asset(f"projects/{PROJECT_SLUG}/assets/{asset['filename']}") if path.exists() else ""
+brand_assets, current_materials = build_material_catalog(
+    config["brand"],
+    ASSETS_DIR,
+    lambda filename: absolute_asset(f"projects/{PROJECT_SLUG}/assets/{filename}"),
+)
 
 assets_manifest = {
     "project": manifest["project"],
@@ -137,6 +110,7 @@ assets_manifest = {
     ),
     "upload_service_url": os.environ.get("FEED_STUDIO_UPLOAD_URL", "").strip(),
     "items": brand_assets,
+    "current": current_materials,
     "brand": {
         "green": config["brand"]["green"],
         "green_dark": config["brand"]["green_dark"],

@@ -18,7 +18,7 @@ INPUT_XML = INPUT_DIR / "avito.xml"
 PILOT_MANIFEST_PATH = OUTPUT_DIR / "pilot-manifest.json"
 FULL_MANIFEST_PATH = OUTPUT_DIR / "full-manifest.json"
 PILOT_XML_PATH = OUTPUT_DIR / "pilot-avito.xml"
-FULL_XML_PATH = OUTPUT_DIR / "full-avito-demo.xml"
+FULL_XML_PATH = OUTPUT_DIR / "avito.xml"
 
 
 def node_text(parent: ET.Element, name: str, default: str = "") -> str:
@@ -241,7 +241,6 @@ def main() -> None:
     ads = list(root.findall("Ad"))
 
     items: list[dict[str, object]] = []
-    representatives: dict[str, dict[str, object]] = {}
     ads_by_id: dict[str, ET.Element] = {}
     for ad in ads:
         ad_id = node_text(ad, "Id")
@@ -275,10 +274,16 @@ def main() -> None:
             "source_tags": sorted(child.tag for child in ad if child.tag != "Images"),
         }
         items.append(item)
-        representatives.setdefault(plan_url, item)
         ads_by_id[ad_id] = ad
 
     items.sort(key=sort_key)
+    excluded_lot_ids = {str(value) for value in rules_config.get("excluded_lot_ids", [])}
+    for item in items:
+        item["excluded_from_feed"] = str(item["id"]) in excluded_lot_ids
+    feed_items = [item for item in items if not item["excluded_from_feed"]]
+    representatives: dict[str, dict[str, object]] = {}
+    for item in feed_items:
+        representatives.setdefault(str(item["plan_url"]), item)
     pilot_items = sorted((copy.deepcopy(item) for item in representatives.values()), key=sort_key)
     checked_at = datetime.now(timezone(timedelta(hours=3))).isoformat(timespec="seconds")
     today = checked_at[:10]
@@ -317,17 +322,23 @@ def main() -> None:
         "promotion_rules": rules_config,
         "source_tag_counts": source_tag_counts,
     }
-    full_manifest = {**shared, "full_ads": len(items), "items": items}
+    full_manifest = {
+        **shared,
+        "full_ads": len(feed_items),
+        "excluded_ads": len(items) - len(feed_items),
+        "items": items,
+    }
     pilot_manifest = {**shared, "pilot_ads": len(pilot_items), "items": pilot_items}
     FULL_MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
     FULL_MANIFEST_PATH.write_text(json.dumps(full_manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     PILOT_MANIFEST_PATH.write_text(json.dumps(pilot_manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    write_feed(root, ads_by_id, items, FULL_XML_PATH)
+    write_feed(root, ads_by_id, feed_items, FULL_XML_PATH)
     write_feed(root, ads_by_id, pilot_items, PILOT_XML_PATH)
     print(json.dumps({
         "source_ads": len(ads),
-        "full_ads": len(items),
+        "full_ads": len(feed_items),
+        "excluded_ads": len(items) - len(feed_items),
         "pilot_ads": len(pilot_items),
         "unique_plans": len(pilot_items),
         "full_xml": str(FULL_XML_PATH),

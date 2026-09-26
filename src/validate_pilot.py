@@ -11,7 +11,7 @@ OUTPUT = OUTPUT_DIR
 PILOT_MANIFEST = OUTPUT / "pilot-manifest.json"
 FULL_MANIFEST = OUTPUT / "full-manifest.json"
 PILOT_XML = OUTPUT / "pilot-avito.xml"
-FULL_XML = OUTPUT / "full-avito-demo.xml"
+FULL_XML = OUTPUT / "avito.xml"
 
 
 def xml_ids(path: Path) -> list[str]:
@@ -25,24 +25,28 @@ def main() -> None:
     full = json.loads(FULL_MANIFEST.read_text(encoding="utf-8"))
     pilot_ids = [str(item["id"]) for item in pilot["items"]]
     full_ids = [str(item["id"]) for item in full["items"]]
+    feed_items = [item for item in full["items"] if not item.get("excluded_from_feed")]
+    feed_ids = [str(item["id"]) for item in feed_items]
     pilot_xml_ids = xml_ids(PILOT_XML)
     full_xml_ids = xml_ids(FULL_XML)
     errors: list[str] = []
 
-    if full["source_ads"] != full["full_ads"] or full["full_ads"] != len(full_ids):
+    if full["source_ads"] != len(full_ids):
         errors.append("Full manifest does not contain every source ad")
+    if full["full_ads"] != len(feed_ids):
+        errors.append("Full feed count does not match included manifest items")
     if len(set(full_ids)) != len(full_ids):
         errors.append("Duplicate ids in full manifest")
-    if full_xml_ids != full_ids:
-        errors.append("Full XML ids do not match full manifest order")
+    if full_xml_ids != feed_ids:
+        errors.append("Full XML ids do not match included manifest items")
     if pilot["unique_plans"] != len(pilot_ids):
         errors.append("Pilot manifest item count does not match unique_plans")
     if len(set(pilot_ids)) != len(pilot_ids):
         errors.append("Duplicate ids in pilot manifest")
     if pilot_xml_ids != pilot_ids:
         errors.append("Pilot XML ids do not match pilot manifest order")
-    if not set(pilot_ids).issubset(set(full_ids)):
-        errors.append("Pilot ids are not a subset of full ids")
+    if not set(pilot_ids).issubset(set(feed_ids)):
+        errors.append("Pilot ids are not a subset of included full-feed ids")
     if pilot["source_ads"] != full["source_ads"] or pilot["unique_plans"] != full["unique_plans"]:
         errors.append("Pilot and full manifest counters disagree")
 
@@ -59,10 +63,10 @@ def main() -> None:
     if not fast_build and actual_thumbnails != expected_thumbnails:
         errors.append("Generated thumbnail image set does not match full manifest")
 
-    manifests_by_path = {FULL_XML: full, PILOT_XML: pilot}
-    for path, ids in ((FULL_XML, full_ids), (PILOT_XML, pilot_ids)):
+    manifest_items_by_path = {FULL_XML: feed_items, PILOT_XML: pilot["items"]}
+    for path, ids in ((FULL_XML, feed_ids), (PILOT_XML, pilot_ids)):
         tree = ET.parse(path)
-        manifest_items = manifests_by_path[path]["items"]
+        manifest_items = manifest_items_by_path[path]
         for ad, expected_id, item in zip(tree.getroot().findall("Ad"), ids, manifest_items, strict=True):
             actual_urls = [image.attrib.get("url", "") for image in ad.findall("./Images/Image")]
             expected_urls = [str(image["url"]) for image in item["feed_images"]]
@@ -89,12 +93,13 @@ def main() -> None:
         "ok": not errors,
         "source_ads": full["source_ads"],
         "full_ads": len(full_xml_ids),
+        "excluded_ads": len(full_ids) - len(feed_ids),
         "pilot_ads": len(pilot_xml_ids),
         "unique_plans": full["unique_plans"],
         "generated_images": len(actual_final),
         "preview_images": len(actual_previews),
         "thumbnail_images": len(actual_thumbnails),
-        "promoted_ads": sum(1 for item in full["items"] if item.get("promotion")),
+        "promoted_ads": sum(1 for item in feed_items if item.get("promotion")),
         "publish_ready": full["publish_ready"],
         "errors": errors,
     }

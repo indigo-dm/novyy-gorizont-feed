@@ -12,7 +12,7 @@ PROJECT_FILES = (
     "status.json",
     "assets.json",
     "source-profitbase.xml",
-    "full-avito-demo.xml",
+    "avito.xml",
     "pilot-avito.xml",
 )
 
@@ -51,6 +51,9 @@ def main() -> None:
         target_project.mkdir(parents=True, exist_ok=True)
         for filename in PROJECT_FILES:
             shutil.copy2(source_project / filename, target_project / filename)
+        legacy_feed = target_project / "full-avito-demo.xml"
+        if legacy_feed.exists():
+            legacy_feed.unlink()
 
     existing_registry_path.write_text(
         json.dumps(registry, ensure_ascii=False, indent=2), encoding="utf-8"
