@@ -114,8 +114,11 @@ function htmlFor(item, includePromotion = true) {
   if (process.env.CHROME_PATH) launchOptions.executablePath = process.env.CHROME_PATH;
   else if (process.platform === 'win32') launchOptions.executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
   const browser = await chromium.launch(launchOptions);
-  const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
-  for (const item of manifest.items) {
+  const requestedConcurrency = Number(process.env.RENDER_CONCURRENCY || 4);
+  const concurrency = Math.max(1, Math.min(6, Number.isFinite(requestedConcurrency) ? Math.floor(requestedConcurrency) : 4));
+  let nextIndex = 0;
+
+  async function renderItem(page, item) {
     await page.setContent(htmlFor(item, false), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     const previewSource = await page.screenshot({ type: 'png' });
@@ -128,6 +131,23 @@ function htmlFor(item, includePromotion = true) {
     }
     await page.screenshot({ path: path.join(outputDir, `${item.id}.png`), type: 'png' });
   }
+
+  async function renderWorker() {
+    const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
+    try {
+      while (nextIndex < manifest.items.length) {
+        const item = manifest.items[nextIndex++];
+        await renderItem(page, item);
+      }
+    } finally {
+      await page.close();
+    }
+  }
+
+  await Promise.all(Array.from(
+    { length: Math.min(concurrency, Math.max(1, manifest.items.length)) },
+    () => renderWorker()
+  ));
   await browser.close();
-  console.log(JSON.stringify({ rendered_ads: manifest.items.length, final_images: manifest.items.length, preview_images: manifest.items.length, thumbnail_images: manifest.items.length }));
+  console.log(JSON.stringify({ rendered_ads: manifest.items.length, final_images: manifest.items.length, preview_images: manifest.items.length, thumbnail_images: manifest.items.length, concurrency }));
 })();
