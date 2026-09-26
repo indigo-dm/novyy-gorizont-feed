@@ -118,6 +118,9 @@ def rule_matches(item: dict[str, object], rule: dict[str, object]) -> bool:
     rooms = {str(value) for value in rule.get("rooms", [])}
     if rooms and str(item["rooms"]) not in rooms:
         return False
+    floors = {str(value) for value in rule.get("floors", [])}
+    if floors and str(item["floor"]) not in floors:
+        return False
     area = float(str(item["area"] or 0))
     if rule.get("area_min") is not None and area < float(str(rule["area_min"])):
         return False

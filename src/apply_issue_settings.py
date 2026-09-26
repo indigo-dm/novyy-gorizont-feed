@@ -93,11 +93,15 @@ def filters(source: dict[str, object], name: str, allowed_houses: set[str]) -> d
         raise ValueError(f"{name}: area_min is greater than area_max")
     include_ids = string_list(source.get("include_ids", []), f"{name}.include_ids")
     exclude_ids = string_list(source.get("exclude_ids", []), f"{name}.exclude_ids")
+    floors = string_list(source.get("floors", []), f"{name}.floors")
     if any(not value.isdigit() for value in include_ids + exclude_ids):
         raise ValueError(f"{name}: lot ids must contain digits only")
+    if any(not value.isdigit() or not 1 <= int(value) <= 300 for value in floors):
+        raise ValueError(f"{name}: floors must contain numbers between 1 and 300")
     return {
         "house_ids": string_list(source.get("house_ids", []), f"{name}.house_ids", allowed_houses),
         "rooms": string_list(source.get("rooms", []), f"{name}.rooms", ALLOWED_ROOMS),
+        "floors": floors,
         "area_min": area_min,
         "area_max": area_max,
         "include_ids": include_ids,

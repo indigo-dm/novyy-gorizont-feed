@@ -13,14 +13,17 @@
     parameterSettings: { lot_values: {}, bulk_rules: [] },
     activeRuleId: null,
     activeView: 'dashboard',
-    filters: { house: '', rooms: '', search: '' },
-    imageFilters: { house: '', rooms: '', search: '' },
-    parameterFilters: { house: '', rooms: '', search: '' },
+    filters: { house: '', rooms: '', floor: '', search: '' },
+    imageFilters: { house: '', rooms: '', floor: '', search: '' },
+    parameterFilters: { house: '', rooms: '', floor: '', search: '' },
     page: 1,
     pageSize: 12,
     previewId: null,
     imageLotId: null,
     parameterLotId: null,
+    imageUploadBusy: false,
+    imageUploadMessage: '',
+    imageUploadTone: '',
     dirty: false
   };
 
@@ -63,6 +66,7 @@
     var search = String(filters.search || '').trim().toLowerCase();
     return (!filters.house || item.house_id === filters.house) &&
       (!filters.rooms || item.rooms === filters.rooms) &&
+      (!filters.floor || String(item.floor) === filters.floor) &&
       (!search || item.id.toLowerCase().indexOf(search) >= 0);
   }
 
@@ -71,6 +75,7 @@
     if ((rule.include_ids || []).length && (rule.include_ids || []).indexOf(String(item.id)) < 0) return false;
     if ((rule.house_ids || []).length && (rule.house_ids || []).indexOf(String(item.house_id)) < 0) return false;
     if ((rule.rooms || []).length && (rule.rooms || []).indexOf(String(item.rooms)) < 0) return false;
+    if ((rule.floors || []).length && (rule.floors || []).indexOf(String(item.floor)) < 0) return false;
     var area = Number(item.area);
     if (rule.area_min != null && area < Number(rule.area_min)) return false;
     if (rule.area_max != null && area > Number(rule.area_max)) return false;
@@ -81,6 +86,7 @@
     return {
       house_ids: filters.house ? [filters.house] : [],
       rooms: filters.rooms ? [filters.rooms] : [],
+      floors: filters.floor ? [filters.floor] : [],
       area_min: null,
       area_max: null,
       include_ids: filters.search ? items.map(function (item) { return item.id; }) : [],
@@ -206,8 +212,11 @@
     $('#project-name').textContent = state.project.name;
     document.title = state.project.name + ' — Feed Studio';
     $('#project-select').value = state.project.slug;
+    $('#source-feed-link').href = state.project.base + '/source-profitbase.xml';
     $('#full-feed-link').href = state.project.base + '/full-avito-demo.xml';
     $('#pilot-feed-link').href = state.project.base + '/pilot-avito.xml';
+    $('#full-feed-link').textContent = 'Полный фид · ' + state.inventory.full_ads + ' квартир ↗';
+    $('#pilot-feed-link').textContent = 'Тестовый фид · ' + state.status.unique_plans + ' планировок ↗';
     if (state.assets && state.assets.brand) {
       document.documentElement.style.setProperty('--project-gold', state.assets.brand.gold);
       document.documentElement.style.setProperty('--project-ink', state.assets.brand.green_dark);
@@ -251,9 +260,11 @@
   function populateFilters() {
     var houses = new Map();
     var rooms = new Set();
+    var floors = new Set();
     state.inventory.items.forEach(function (item) {
       houses.set(String(item.house_id), item.house);
       rooms.add(String(item.rooms));
+      floors.add(String(item.floor));
     });
     var houseOptions = '<option value="">Все дома</option>' +
       Array.from(houses.entries()).map(function (entry) {
@@ -263,12 +274,19 @@
       Array.from(rooms).sort().map(function (room) {
         return '<option value="' + esc(room) + '">' + esc(room) + '-комнатная</option>';
       }).join('');
+    var floorOptions = '<option value="">Любой</option>' +
+      Array.from(floors).sort(function (left, right) { return Number(left) - Number(right); }).map(function (floor) {
+        return '<option value="' + esc(floor) + '">' + esc(floor) + '</option>';
+      }).join('');
     $('#filter-house').innerHTML = houseOptions;
     $('#image-filter-house').innerHTML = houseOptions;
     $('#parameter-filter-house').innerHTML = houseOptions;
     $('#filter-rooms').innerHTML = roomOptions;
     $('#image-filter-rooms').innerHTML = roomOptions;
     $('#parameter-filter-rooms').innerHTML = roomOptions;
+    $('#filter-floor').innerHTML = floorOptions;
+    $('#image-filter-floor').innerHTML = floorOptions;
+    $('#parameter-filter-floor').innerHTML = floorOptions;
     var lotOptions = state.inventory.items.map(function (item) {
       return '<option value="' + esc(item.id) + '">' + esc(item.house + ' · ' + item.rooms + 'к · ' + formatArea(item.area)) + '</option>';
     }).join('');
@@ -294,12 +312,7 @@
   }
 
   function renderLots() {
-    var search = state.filters.search.trim().toLowerCase();
-    var items = state.inventory.items.filter(function (item) {
-      return (!state.filters.house || item.house_id === state.filters.house) &&
-        (!state.filters.rooms || item.rooms === state.filters.rooms) &&
-        (!search || item.id.toLowerCase().indexOf(search) >= 0);
-    });
+    var items = state.inventory.items.filter(function (item) { return itemMatchesFilters(item, state.filters); });
     $('#lots-count').textContent = items.length;
     var pageCount = Math.max(1, Math.ceil(items.length / state.pageSize));
     state.page = Math.min(Math.max(1, state.page), pageCount);
@@ -349,7 +362,108 @@
     if (!state.imageSettings.lot_overrides[item.id]) {
       state.imageSettings.lot_overrides[item.id] = { order: [], hidden: [], added: [] };
     }
-    return state.imageSettings.lot_overrides[item.id];
+    var override = state.imageSettings.lot_overrides[item.id];
+    if (!Array.isArray(override.order)) override.order = [];
+    if (!Array.isArray(override.hidden)) override.hidden = [];
+    if (!Array.isArray(override.added)) override.added = [];
+    return override;
+  }
+
+  function addImageToItem(item, image) {
+    var override = imageOverride(item);
+    if ((override.added || []).length >= 20) throw new Error('Для одного лота можно добавить не более 20 изображений.');
+    override.added.push(image);
+    override.order = effectiveImages(item).map(function (current) { return current.id; });
+    setDirty(true);
+  }
+
+  function uploadServiceUrl() {
+    return state.assets && /^https:\/\//i.test(String(state.assets.upload_service_url || '')) ? String(state.assets.upload_service_url) : '';
+  }
+
+  function renderImageUploadState() {
+    var zone = $('#image-drop-zone');
+    var button = $('#choose-image-file');
+    var status = $('#image-upload-status');
+    if (!zone || !button || !status) return;
+    var available = Boolean(uploadServiceUrl() && state.imageLotId);
+    zone.classList.toggle('disabled', !available);
+    zone.classList.toggle('uploading', state.imageUploadBusy);
+    button.disabled = !available || state.imageUploadBusy;
+    status.className = 'image-upload-status' + (state.imageUploadTone ? ' ' + state.imageUploadTone : '');
+    status.textContent = state.imageUploadMessage || (available ? 'Изображение будет уменьшено до 2000 px и сохранено в GitHub.' : 'Загрузка файлов станет доступна после подключения защищённого хранилища.');
+  }
+
+  function setImageUploadMessage(message, tone) {
+    state.imageUploadMessage = message || '';
+    state.imageUploadTone = tone || '';
+    renderImageUploadState();
+  }
+
+  async function optimizeImageFile(file) {
+    var allowed = ['image/jpeg', 'image/png', 'image/webp'];
+    if (!file || allowed.indexOf(file.type) < 0) throw new Error('Выберите изображение JPG, PNG или WebP.');
+    if (file.size > 20 * 1024 * 1024) throw new Error('Исходный файл не должен превышать 20 МБ.');
+    var bitmap = await createImageBitmap(file);
+    var maxSide = 2000;
+    var scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
+    var width = Math.max(1, Math.round(bitmap.width * scale));
+    var height = Math.max(1, Math.round(bitmap.height * scale));
+    var canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    var context = canvas.getContext('2d', { alpha: false });
+    context.fillStyle = '#ffffff';
+    context.fillRect(0, 0, width, height);
+    context.drawImage(bitmap, 0, 0, width, height);
+    if (bitmap.close) bitmap.close();
+    var blob = await new Promise(function (resolve) { canvas.toBlob(resolve, 'image/jpeg', 0.88); });
+    if (!blob) throw new Error('Не удалось подготовить изображение.');
+    if (blob.size > 10 * 1024 * 1024) throw new Error('После оптимизации файл превышает 10 МБ.');
+    var name = String(file.name || 'image').replace(/\.[^.]+$/, '').replace(/[^A-Za-zА-Яа-яЁё0-9_-]+/g, '-').slice(0, 60) || 'image';
+    return new File([blob], name + '.jpg', { type: 'image/jpeg' });
+  }
+
+  async function uploadImageFile(file) {
+    var item = state.inventory.items.find(function (lot) { return lot.id === state.imageLotId; });
+    var endpoint = uploadServiceUrl();
+    if (!item || !endpoint || state.imageUploadBusy) return;
+    var credential = window.FEED_STUDIO_CREDENTIAL && window.FEED_STUDIO_CREDENTIAL.get ? window.FEED_STUDIO_CREDENTIAL.get() : '';
+    if (!credential) {
+      credential = window.prompt('Введите пароль Feed Studio для загрузки файла:') || '';
+      if (credential && window.FEED_STUDIO_CREDENTIAL && window.FEED_STUDIO_CREDENTIAL.set) window.FEED_STUDIO_CREDENTIAL.set(credential);
+    }
+    if (!credential) return;
+    state.imageUploadBusy = true;
+    setImageUploadMessage('Оптимизируем и загружаем изображение…', '');
+    try {
+      var optimized = await optimizeImageFile(file);
+      var body = new FormData();
+      body.append('project', state.project.slug);
+      body.append('lot', item.id);
+      body.append('file', optimized, optimized.name);
+      var response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + credential },
+        body: body
+      });
+      var payload = await response.json().catch(function () { return {}; });
+      if (!response.ok) {
+        if (response.status === 401 && window.FEED_STUDIO_CREDENTIAL && window.FEED_STUDIO_CREDENTIAL.set) window.FEED_STUDIO_CREDENTIAL.set('');
+        throw new Error(payload.error || 'Сервис загрузки вернул ошибку.');
+      }
+      if (!/^https:\/\//i.test(String(payload.url || '')) || !/^[A-Za-z0-9_-]+$/.test(String(payload.id || ''))) {
+        throw new Error('Сервис загрузки вернул некорректный ответ.');
+      }
+      addImageToItem(item, { id: String(payload.id), url: String(payload.url) });
+      setImageUploadMessage('Изображение загружено и добавлено в галерею.', 'success');
+      renderImages();
+    } catch (error) {
+      setImageUploadMessage(error.message || 'Не удалось загрузить изображение.', 'error');
+    } finally {
+      state.imageUploadBusy = false;
+      renderImageUploadState();
+    }
   }
 
   function effectiveImages(item) {
@@ -385,8 +499,9 @@
   function renderImageBulkRules() {
     $('#image-bulk-rules').innerHTML = state.imageSettings.bulk_rules.length ? state.imageSettings.bulk_rules.map(function (rule) {
       var count = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); }).length;
+      var floorLabel = (rule.floors || []).length ? ' · этаж ' + rule.floors.join(', ') : '';
       return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count +
-        ' квартир · ' + esc(rule.from_position) + ' → ' + esc(rule.to_position) + '</small></div><button data-delete-image-rule="' +
+        ' квартир' + esc(floorLabel) + ' · ' + esc(rule.from_position) + ' → ' + esc(rule.to_position) + '</small></div><button data-delete-image-rule="' +
         esc(rule.id) + '" aria-label="Удалить правило">×</button></div>';
     }).join('') : '<p class="helper">Массовых правил пока нет.</p>';
     $$('[data-delete-image-rule]', $('#image-bulk-rules')).forEach(function (button) {
@@ -412,6 +527,7 @@
       $('#image-gallery').innerHTML = '<div class="parameter-empty">По выбранным фильтрам квартир нет.</div>';
       $('#removed-images-wrap').classList.add('hidden');
       renderImageBulkRules();
+      renderImageUploadState();
       return;
     }
     var images = effectiveImages(item);
@@ -424,7 +540,8 @@
         '</small><div class="image-actions"><button data-image-left="' + esc(image.id) + '" ' + (index === 0 ? 'disabled' : '') +
         '>← Выше</button><button data-image-right="' + esc(image.id) + '" ' + (index === images.length - 1 ? 'disabled' : '') +
         '>Ниже →</button><button class="remove-image" data-remove-image="' + esc(image.id) + '" ' +
-        (image.kind === 'generated' ? 'disabled title="Брендированную карточку нельзя удалить"' : '') + '>×</button></div></div></article>';
+        (image.kind === 'generated' ? 'disabled title="Брендированную карточку нельзя исключить"' :
+          'title="Не включать изображение в новый фид Avito"') + '>Исключить из фида</button></div></div></article>';
     }).join('');
     function saveOrder(nextImages) {
       imageOverride(item).order = nextImages.map(function (image) { return image.id; });
@@ -448,19 +565,23 @@
         if (button.disabled) return;
         var override = imageOverride(item);
         var current = images.find(function (image) { return image.id === button.dataset.removeImage; });
-        if (current.kind === 'added') override.added = override.added.filter(function (image) { return image.id !== current.id; });
-        else if (override.hidden.indexOf(current.id) < 0) override.hidden.push(current.id);
+        if (current && override.hidden.indexOf(current.id) < 0) override.hidden.push(current.id);
         override.order = images.filter(function (image) { return image.id !== current.id; }).map(function (image) { return image.id; });
         setDirty(true);
         renderImages();
       });
     });
     var override = state.imageSettings.lot_overrides[item.id] || { hidden: [] };
-    var hiddenImages = (item.source_images || []).filter(function (image) { return (override.hidden || []).indexOf(image.id) >= 0; });
+    var hiddenIds = override.hidden || [];
+    var hiddenImages = (item.source_images || []).map(function (image) {
+      return { id: image.id, url: image.url, label: 'Profitbase · исходная позиция ' + image.position, kind: 'source' };
+    }).concat((override.added || []).map(function (image) {
+      return { id: image.id, url: image.url, label: 'Добавлено вручную', kind: 'added' };
+    })).filter(function (image) { return hiddenIds.indexOf(image.id) >= 0; });
     $('#removed-images-wrap').classList.toggle('hidden', hiddenImages.length === 0);
     $('#removed-images').innerHTML = hiddenImages.map(function (image) {
-      return '<div class="removed-image"><span>Profitbase · исходная позиция ' + esc(image.position) + '</span><button class="restore-image" data-restore-image="' +
-        esc(image.id) + '">Вернуть</button></div>';
+      return '<div class="removed-image"><img src="' + esc(image.url) + '" alt="" loading="lazy" decoding="async"><span>' +
+        esc(image.label) + '</span><button class="restore-image" data-restore-image="' + esc(image.id) + '">Вернуть в фид</button></div>';
     }).join('');
     $$('[data-restore-image]', $('#removed-images')).forEach(function (button) {
       button.addEventListener('click', function () {
@@ -471,6 +592,7 @@
       });
     });
     renderImageBulkRules();
+    renderImageUploadState();
   }
 
   function supportedParameters() {
@@ -529,7 +651,8 @@
     $('#parameter-bulk-rules').innerHTML = state.parameterSettings.bulk_rules.length ? state.parameterSettings.bulk_rules.map(function (rule) {
       var count = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); }).length;
       var labels = Object.keys(rule.values || {}).map(function (tag) { return (parameterByTag(tag) || { name: tag }).name; }).join(', ');
-      return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count + ' квартир · ' + esc(labels) +
+      var floorLabel = (rule.floors || []).length ? ' · этаж ' + rule.floors.join(', ') : '';
+      return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count + ' квартир' + esc(floorLabel) + ' · ' + esc(labels) +
         '</small></div><button data-delete-parameter-rule="' + esc(rule.id) + '" aria-label="Удалить правило">×</button></div>';
     }).join('') : '<p class="helper">Массовых правил пока нет.</p>';
     $$('[data-delete-parameter-rule]', $('#parameter-bulk-rules')).forEach(function (button) {
@@ -880,22 +1003,50 @@
     });
     $('#filter-house').addEventListener('change', function (event) { state.filters.house = event.target.value; state.page = 1; renderLots(); });
     $('#filter-rooms').addEventListener('change', function (event) { state.filters.rooms = event.target.value; state.page = 1; renderLots(); });
+    $('#filter-floor').addEventListener('change', function (event) { state.filters.floor = event.target.value; state.page = 1; renderLots(); });
     $('#filter-search').addEventListener('input', function (event) { state.filters.search = event.target.value; state.page = 1; renderLots(); });
     $('#image-filter-house').addEventListener('change', function (event) { state.imageFilters.house = event.target.value; renderImages(); });
     $('#image-filter-rooms').addEventListener('change', function (event) { state.imageFilters.rooms = event.target.value; renderImages(); });
+    $('#image-filter-floor').addEventListener('change', function (event) { state.imageFilters.floor = event.target.value; renderImages(); });
     $('#image-filter-search').addEventListener('input', function (event) { state.imageFilters.search = event.target.value; renderImages(); });
     $('#image-lot').addEventListener('change', function (event) { state.imageLotId = event.target.value; renderImages(); });
+    $('#choose-image-file').addEventListener('click', function (event) {
+      event.stopPropagation();
+      if (!uploadServiceUrl()) return;
+      $('#image-file-input').click();
+    });
+    $('#image-file-input').addEventListener('change', function (event) {
+      var file = event.target.files && event.target.files[0];
+      event.target.value = '';
+      if (file) uploadImageFile(file);
+    });
+    var dropZone = $('#image-drop-zone');
+    dropZone.addEventListener('click', function () { if (uploadServiceUrl()) $('#image-file-input').click(); });
+    dropZone.addEventListener('keydown', function (event) {
+      if ((event.key === 'Enter' || event.key === ' ') && uploadServiceUrl()) { event.preventDefault(); $('#image-file-input').click(); }
+    });
+    ['dragenter', 'dragover'].forEach(function (eventName) {
+      dropZone.addEventListener(eventName, function (event) { event.preventDefault(); if (uploadServiceUrl()) dropZone.classList.add('dragover'); });
+    });
+    ['dragleave', 'drop'].forEach(function (eventName) {
+      dropZone.addEventListener(eventName, function (event) { event.preventDefault(); dropZone.classList.remove('dragover'); });
+    });
+    dropZone.addEventListener('drop', function (event) {
+      var file = event.dataTransfer && event.dataTransfer.files && event.dataTransfer.files[0];
+      if (file && uploadServiceUrl()) uploadImageFile(file);
+    });
     $('#add-image-url').addEventListener('click', function () {
       var item = state.inventory.items.find(function (lot) { return lot.id === state.imageLotId; });
       var input = $('#new-image-url');
       var url = input.value.trim();
       if (!item || !/^https:\/\//i.test(url)) { showToast('Укажите корректную HTTPS-ссылку на изображение.'); return; }
-      var override = imageOverride(item);
-      var image = { id: 'add-' + Date.now().toString(36), url: url };
-      override.added.push(image);
-      override.order = effectiveImages(item).map(function (current) { return current.id; });
+      try {
+        addImageToItem(item, { id: 'add-' + Date.now().toString(36), url: url });
+      } catch (error) {
+        showToast(error.message);
+        return;
+      }
       input.value = '';
-      setDirty(true);
       renderImages();
     });
     $('#apply-image-bulk').addEventListener('click', function () {
@@ -919,6 +1070,7 @@
     });
     $('#parameter-filter-house').addEventListener('change', function (event) { state.parameterFilters.house = event.target.value; renderParameters(); });
     $('#parameter-filter-rooms').addEventListener('change', function (event) { state.parameterFilters.rooms = event.target.value; renderParameters(); });
+    $('#parameter-filter-floor').addEventListener('change', function (event) { state.parameterFilters.floor = event.target.value; renderParameters(); });
     $('#parameter-filter-search').addEventListener('input', function (event) { state.parameterFilters.search = event.target.value; renderParameters(); });
     $('#parameter-lot').addEventListener('change', function (event) { state.parameterLotId = event.target.value; renderParameters(); });
     $('#add-parameter').addEventListener('click', function () {
@@ -1015,10 +1167,13 @@
       state.previewId = null;
       state.imageLotId = null;
       state.parameterLotId = null;
+      state.imageUploadBusy = false;
+      state.imageUploadMessage = '';
+      state.imageUploadTone = '';
       state.page = 1;
-      state.filters = { house: '', rooms: '', search: '' };
-      state.imageFilters = { house: '', rooms: '', search: '' };
-      state.parameterFilters = { house: '', rooms: '', search: '' };
+      state.filters = { house: '', rooms: '', floor: '', search: '' };
+      state.imageFilters = { house: '', rooms: '', floor: '', search: '' };
+      state.parameterFilters = { house: '', rooms: '', floor: '', search: '' };
       populateFilters();
       renderAll();
       navigate(state.activeView);

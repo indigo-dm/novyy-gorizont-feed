@@ -33,6 +33,18 @@ const contentTypes = {
   else if (process.platform === 'win32') launchOptions.executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
   const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+  const tinyPng = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAwBAQDJxQ8AAAAASUVORK5CYII=', 'base64');
+  await page.route('https://uploads.example.test/**', async (route) => {
+    if (route.request().method() === 'POST') {
+      await route.fulfill({
+        status: 201,
+        contentType: 'application/json',
+        body: JSON.stringify({ id: 'add-qa-upload', url: 'https://uploads.example.test/media/qa-upload.jpg' })
+      });
+      return;
+    }
+    await route.fulfill({ status: 200, contentType: 'image/png', body: tinyPng });
+  });
   if (!process.env.SITE_URL) {
     await page.route('http://localhost/**', async (route) => {
       const url = new URL(route.request().url());
@@ -76,6 +88,17 @@ const contentTypes = {
   const inventoryData = await page.evaluate((base) => fetch(base + '/inventory.json').then((response) => response.json()), activeProject.base);
   const sourceAds = await page.locator('#stat-source').textContent();
   const fullAds = await page.locator('#stat-plans').textContent();
+  const sourceFeedHref = await page.locator('#source-feed-link').getAttribute('href');
+  const fullFeedLabel = await page.locator('#full-feed-link').textContent();
+  const pilotFeedLabel = await page.locator('#pilot-feed-link').textContent();
+  const sourceFeedSnapshot = await page.evaluate(async (href) => {
+    const response = await fetch(href);
+    const documentNode = new DOMParser().parseFromString(await response.text(), 'application/xml');
+    return { ok: response.ok, ads: documentNode.querySelectorAll('Ad').length };
+  }, sourceFeedHref);
+  const sourceFeedAvailable = sourceFeedSnapshot.ok && sourceFeedSnapshot.ads === inventoryData.source_ads;
+  const feedLabelsClear = fullFeedLabel === `Полный фид · ${inventoryData.full_ads} квартир ↗` &&
+    pilotFeedLabel === `Тестовый фид · ${await page.evaluate((base) => fetch(base + '/status.json').then((response) => response.json()).then((status) => status.unique_plans), activeProject.base)} планировок ↗`;
   await page.click('[data-view="lots"]');
   const lotCards = await page.locator('.lot-card').count();
   const paginationVisible = inventoryData.items.length <= 12 || await page.locator('#lots-pagination button').count() > 0;
@@ -90,19 +113,54 @@ const contentTypes = {
     const secondPageFirstId = await page.locator('.lot-card .lot-title span').first().textContent();
     paginationWorks = Boolean(secondPageFirstId && secondPageFirstId !== firstPageFirstId);
   }
+  const firstFloor = String(inventoryData.items[0].floor);
+  await page.locator('#filter-floor').selectOption(firstFloor);
+  const floorLotCount = await page.locator('.lot-card').count();
+  const expectedFloorCount = inventoryData.items.filter((item) => String(item.floor) === firstFloor).length;
+  const lotFloorFilterWorks = floorLotCount === Math.min(12, expectedFloorCount);
+  await page.locator('#filter-floor').selectOption('');
   await page.screenshot({ path: path.join(qaOutput, 'admin-lots.png'), fullPage: true });
   await page.click('[data-view="images"]');
   const firstInventoryItem = inventoryData.items[0];
+  await page.locator('#image-filter-floor').selectOption(firstFloor);
+  const imageFloorCount = Number(await page.locator('#image-filter-count').textContent());
+  const imageFloorFilterWorks = imageFloorCount === expectedFloorCount;
   await page.locator('#image-lot').selectOption(String(firstInventoryItem.id));
   const imageCards = await page.locator('.image-item').count();
   const allSourceImagesVisible = imageCards === (firstInventoryItem.source_images || []).length + 1;
   const brandCardProtected = await page.locator('[data-remove-image="brand-card"]').isDisabled();
+  const firstSourceImageId = String(firstInventoryItem.source_images[0].id);
+  await page.locator(`[data-remove-image="${firstSourceImageId}"]`).click();
+  const sourceImageExcluded = await page.locator('.image-item').count() === imageCards - 1 &&
+    await page.locator(`[data-restore-image="${firstSourceImageId}"]`).isVisible();
+  await page.locator(`[data-restore-image="${firstSourceImageId}"]`).click();
+  const sourceImageRestored = await page.locator('.image-item').count() === imageCards;
+  const uploadDropZoneAvailable = !(await page.locator('#choose-image-file').isDisabled());
+  const uploadFixture = fs.readFileSync(path.join(siteRoot, firstInventoryItem.thumbnail));
+  await page.locator('#image-file-input').setInputFiles({ name: 'qa-upload.webp', mimeType: 'image/webp', buffer: uploadFixture });
+  await page.waitForFunction(() => document.querySelector('#image-upload-status')?.textContent.includes('загружено'));
+  const uploadedImageVisible = await page.locator('.image-item').count() === imageCards + 1;
+  await page.locator('[data-remove-image="add-qa-upload"]').click();
+  await page.click('#save-draft');
+  const uploadedImageExcludedWithoutDeletion = await page.evaluate((lotId) => {
+    const draftKey = Object.keys(localStorage).find((key) => key.indexOf('feed-studio-rules-v1-') === 0);
+    if (!draftKey) return false;
+    const draft = JSON.parse(localStorage.getItem(draftKey));
+    const override = draft.image_settings.lot_overrides[String(lotId)];
+    return override.added.some((image) => image.id === 'add-qa-upload') && override.hidden.includes('add-qa-upload');
+  }, firstInventoryItem.id);
+  const uploadedImageShownAsExcluded = await page.locator('[data-restore-image="add-qa-upload"]').isVisible();
+  await page.locator('[data-restore-image="add-qa-upload"]').click();
+  const uploadedImageRestored = await page.locator('.image-item').count() === imageCards + 1;
   await page.fill('#bulk-image-from', '3');
   await page.fill('#bulk-image-to', '1');
   await page.click('#apply-image-bulk');
   const imageBulkRuleCreated = await page.locator('#image-bulk-rules .bulk-rule').count() === 1;
   await page.screenshot({ path: path.join(qaOutput, 'admin-images.png'), fullPage: true });
   await page.click('[data-view="parameters"]');
+  await page.locator('#parameter-filter-floor').selectOption(firstFloor);
+  const parameterFloorCount = Number(await page.locator('#parameter-filter-count').textContent());
+  const parameterFloorFilterWorks = parameterFloorCount === expectedFloorCount;
   const sourceTagsVisible = await page.locator('#source-tags .tag-chip').count() > 10;
   const supportedParameterCount = await page.locator('#new-parameter-tag option').count();
   await page.locator('#parameter-lot').selectOption(String(firstInventoryItem.id));
@@ -155,18 +213,32 @@ const contentTypes = {
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
     source_ads: sourceAds,
     full_demo_ads: fullAds,
+    source_feed_available: sourceFeedAvailable,
+    feed_labels_clear: feedLabelsClear,
     displayed_lot_cards: lotCards,
     pagination_visible: paginationVisible,
     pagination_works: paginationWorks,
+    lot_floor_filter: lotFloorFilterWorks,
+    lot_floor_filter_displayed: floorLotCount,
+    lot_floor_filter_expected: Math.min(12, expectedFloorCount),
+    image_floor_filter: imageFloorFilterWorks,
+    parameter_floor_filter: parameterFloorFilterWorks,
     optimized_thumbnail: optimizedThumbnail,
     source_images_visible: allSourceImagesVisible,
     brand_card_protected: brandCardProtected,
+    source_image_excluded: sourceImageExcluded,
+    source_image_restored: sourceImageRestored,
+    upload_drop_zone: uploadDropZoneAvailable,
+    uploaded_image_visible: uploadedImageVisible,
+    uploaded_image_excluded_without_deletion: uploadedImageExcludedWithoutDeletion,
+    uploaded_image_shown_as_excluded: uploadedImageShownAsExcluded,
+    uploaded_image_restored: uploadedImageRestored,
     image_bulk_rule: imageBulkRuleCreated,
     source_tags_visible: sourceTagsVisible,
     supported_parameters: supportedParameterCount,

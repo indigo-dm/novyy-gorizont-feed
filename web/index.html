@@ -51,8 +51,9 @@
         <span class="status-dot"></span>
         <div><strong>Демо-режим</strong><small>Avito не подключён</small></div>
       </div>
-      <a class="sidebar-link" id="full-feed-link" href="full-avito-demo.xml" target="_blank" rel="noopener">Полный демо-XML ↗</a>
-      <a class="sidebar-link sidebar-link-secondary" id="pilot-feed-link" href="pilot-avito.xml" target="_blank" rel="noopener">Пилотный XML ↗</a>
+      <a class="sidebar-link" id="source-feed-link" href="source-profitbase.xml" target="_blank" rel="noopener">Полученный фид из Profitbase ↗</a>
+      <a class="sidebar-link sidebar-link-secondary" id="full-feed-link" href="full-avito-demo.xml" target="_blank" rel="noopener">Полный фид ↗</a>
+      <a class="sidebar-link sidebar-link-secondary" id="pilot-feed-link" href="pilot-avito.xml" target="_blank" rel="noopener">Тестовый фид ↗</a>
     </aside>
 
     <div class="workspace">
@@ -102,6 +103,7 @@
           <div class="toolbar panel">
             <label><span>Дом</span><select id="filter-house"><option value="">Все дома</option></select></label>
             <label><span>Комнатность</span><select id="filter-rooms"><option value="">Любая</option></select></label>
+            <label><span>Этаж</span><select id="filter-floor"><option value="">Любой</option></select></label>
             <label class="search-field"><span>Поиск по ID</span><input id="filter-search" type="search" placeholder="Например, 9290769"></label>
             <div class="toolbar-count"><strong id="lots-count">0</strong><span>квартир</span></div>
           </div>
@@ -117,6 +119,7 @@
           <div class="toolbar panel media-toolbar">
             <label><span>Дом</span><select id="image-filter-house"><option value="">Все дома</option></select></label>
             <label><span>Комнатность</span><select id="image-filter-rooms"><option value="">Любая</option></select></label>
+            <label><span>Этаж</span><select id="image-filter-floor"><option value="">Любой</option></select></label>
             <label class="search-field"><span>Поиск по ID</span><input id="image-filter-search" type="search" placeholder="ID квартиры"></label>
             <div class="toolbar-count"><strong id="image-filter-count">0</strong><span>в выборке</span></div>
           </div>
@@ -126,14 +129,27 @@
                 <div><p class="eyebrow">Отдельный лот</p><h2>Порядок изображений</h2></div>
                 <label class="compact-select"><span>Квартира</span><select id="image-lot"></select></label>
               </div>
-              <p class="helper media-helper">Стрелками меняйте порядок. Изображения Profitbase можно исключить и вернуть. Брендированную карточку можно перемещать, но нельзя удалить.</p>
+              <p class="helper media-helper">Стрелками меняйте порядок. Кнопка «Исключить из фида» не удаляет файл из Profitbase или хранилища: изображение просто не попадёт в новый XML для Avito, и его можно будет вернуть. Брендированную карточку можно перемещать, но нельзя исключить.</p>
               <div class="image-gallery" id="image-gallery"></div>
-              <div class="add-image-row">
-                <label class="field"><span>Добавить изображение по HTTPS-ссылке</span><input id="new-image-url" type="url" placeholder="https://.../image.jpg"></label>
-                <button class="button button-secondary" id="add-image-url">Добавить</button>
-              </div>
+              <section class="image-upload-block">
+                <input id="image-file-input" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+                <div class="image-drop-zone" id="image-drop-zone" role="button" tabindex="0" aria-label="Добавить изображение с компьютера">
+                  <span class="image-drop-icon">＋</span>
+                  <div><strong>Перетащите изображение сюда</strong><small>JPG, PNG или WebP · файл будет оптимизирован перед загрузкой</small></div>
+                  <button class="button button-secondary" id="choose-image-file" type="button">Выбрать файл</button>
+                </div>
+                <p class="image-upload-status" id="image-upload-status"></p>
+              </section>
+              <details class="url-alternative">
+                <summary>Добавить по HTTPS-ссылке</summary>
+                <div class="add-image-row">
+                  <label class="field"><span>Адрес изображения</span><input id="new-image-url" type="url" placeholder="https://.../image.jpg"></label>
+                  <button class="button button-secondary" id="add-image-url">Добавить</button>
+                </div>
+              </details>
               <div class="removed-images hidden" id="removed-images-wrap">
-                <h3>Исключённые изображения</h3>
+                <h3>Не попадут в фид Avito</h3>
+                <p>Файлы остаются в источнике или хранилище. Здесь их можно вернуть в итоговую галерею.</p>
                 <div id="removed-images"></div>
               </div>
             </section>
@@ -163,6 +179,7 @@
           <div class="toolbar panel media-toolbar">
             <label><span>Дом</span><select id="parameter-filter-house"><option value="">Все дома</option></select></label>
             <label><span>Комнатность</span><select id="parameter-filter-rooms"><option value="">Любая</option></select></label>
+            <label><span>Этаж</span><select id="parameter-filter-floor"><option value="">Любой</option></select></label>
             <label class="search-field"><span>Поиск по ID</span><input id="parameter-filter-search" type="search" placeholder="ID квартиры"></label>
             <div class="toolbar-count"><strong id="parameter-filter-count">0</strong><span>в выборке</span></div>
           </div>

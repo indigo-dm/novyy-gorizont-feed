@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 
 from project_context import (
     ASSETS_DIR,
     CONFIG_PATH,
+    INPUT_DIR,
     OUTPUT_DIR,
     PROJECT,
     PROJECT_SLUG,
@@ -108,6 +110,7 @@ if ASSETS_DIR.exists():
 
 shutil.copy2(OUTPUT_DIR / "pilot-avito.xml", PROJECT_SITE / "pilot-avito.xml")
 shutil.copy2(OUTPUT_DIR / "full-avito-demo.xml", PROJECT_SITE / "full-avito-demo.xml")
+shutil.copy2(INPUT_DIR / "avito.xml", PROJECT_SITE / "source-profitbase.xml")
 
 public_prefix = f"projects/{PROJECT_SLUG}"
 public_items = []
@@ -202,6 +205,7 @@ assets_manifest = {
         "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/"
         f"projects/{PROJECT_SLUG}/assets"
     ),
+    "upload_service_url": os.environ.get("FEED_STUDIO_UPLOAD_URL", "").strip(),
     "items": brand_assets,
     "brand": {
         "green": config["brand"]["green"],
@@ -228,6 +232,7 @@ if PROJECT.get("compatibility_root"):
     for filename in (
         "pilot-avito.xml",
         "full-avito-demo.xml",
+        "source-profitbase.xml",
         "inventory.json",
         "settings.json",
         "status.json",

@@ -9,7 +9,13 @@
   var error = document.getElementById('access-error');
   var logout = document.getElementById('logout-access');
   var sessionKey = 'feed-studio-access:' + expectedHash.slice(0, 16);
+  var credentialKey = sessionKey + ':upload-credential';
   var failures = 0;
+
+  window.FEED_STUDIO_CREDENTIAL = {
+    get: function () { return sessionStorage.getItem(credentialKey) || ''; },
+    set: function (value) { sessionStorage.setItem(credentialKey, String(value || '')); }
+  };
 
   function validConfig() {
     return /^[0-9a-f]{64}$/.test(expectedHash) && window.crypto && window.crypto.subtle;
@@ -47,6 +53,7 @@
 
   logout.addEventListener('click', function () {
     sessionStorage.removeItem(sessionKey);
+    sessionStorage.removeItem(credentialKey);
     window.location.reload();
   });
 
@@ -63,6 +70,7 @@
     try {
       var actualHash = await sha256(input.value);
       if (actualHash === expectedHash) {
+        window.FEED_STUDIO_CREDENTIAL.set(input.value);
         input.value = '';
         unlock();
         return;
