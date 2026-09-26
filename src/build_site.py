@@ -55,9 +55,33 @@ PARAMETER_CATALOG = [
         "step": 0.01,
         "supported": True,
     },
-    {"tag": "Courtyard", "name": "Двор", "kind": "multi", "values": [], "supported": False},
-    {"tag": "Parking", "name": "Парковка", "kind": "multi", "values": [], "supported": False},
-    {"tag": "NDAdditionally", "name": "Дополнительно о новостройке", "kind": "multi", "values": [], "supported": False},
+    {
+        "tag": "Courtyard",
+        "name": "Двор",
+        "kind": "multi",
+        "values": ["Закрытая территория", "Детская площадка", "Спортивная площадка"],
+        "supported": True,
+    },
+    {
+        "tag": "Parking",
+        "name": "Парковка",
+        "kind": "multi",
+        "values": [
+            "Подземная",
+            "Наземная многоуровневая",
+            "Открытая во дворе",
+            "За шлагбаумом во дворе",
+            "Гостевая",
+        ],
+        "supported": True,
+    },
+    {
+        "tag": "NDAdditionally",
+        "name": "Дополнительно о новостройке",
+        "kind": "multi",
+        "values": ["Гардеробная", "Панорамные окна"],
+        "supported": True,
+    },
 ]
 
 manifest = json.loads((OUTPUT_DIR / "full-manifest.json").read_text(encoding="utf-8"))

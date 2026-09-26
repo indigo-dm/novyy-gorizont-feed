@@ -14,13 +14,31 @@ ALLOWED_PARAMETERS = {
     "ViewFromWindows",
     "PassengerElevator",
     "FreightElevator",
+    "Courtyard",
+    "Parking",
     "BathroomMulti",
     "CeilingHeight",
+    "NDAdditionally",
 }
-MULTI_PARAMETERS = {"ViewFromWindows", "BathroomMulti"}
+MULTI_PARAMETERS = {
+    "ViewFromWindows",
+    "Courtyard",
+    "Parking",
+    "BathroomMulti",
+    "NDAdditionally",
+}
 PARAMETER_OPTIONS = {
     "ViewFromWindows": {"Во двор", "На улицу", "На солнечную сторону"},
+    "Courtyard": {"Закрытая территория", "Детская площадка", "Спортивная площадка"},
+    "Parking": {
+        "Подземная",
+        "Наземная многоуровневая",
+        "Открытая во дворе",
+        "За шлагбаумом во дворе",
+        "Гостевая",
+    },
     "BathroomMulti": {"Раздельный", "Совмещенный"},
+    "NDAdditionally": {"Гардеробная", "Панорамные окна"},
 }
 
 
