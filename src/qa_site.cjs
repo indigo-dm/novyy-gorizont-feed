@@ -33,14 +33,28 @@ const contentTypes = {
   else if (process.platform === 'win32') launchOptions.executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
   const browser = await chromium.launch(launchOptions);
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+  let firstQaLotId = '';
   const tinyPng = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFElEQVR42mNkYGD4z8DAwMDAxAADAAwBAQDJxQ8AAAAASUVORK5CYII=', 'base64');
   await page.route('https://uploads.example.test/**', async (route) => {
-    if (route.request().method() === 'POST') {
+    const requestUrl = new URL(route.request().url());
+    if (route.request().method() === 'POST' && requestUrl.pathname === '/upload') {
       await route.fulfill({
         status: 201,
         contentType: 'application/json',
-        body: JSON.stringify({ id: 'add-qa-upload', url: 'https://uploads.example.test/media/qa-upload.jpg' })
+        body: JSON.stringify({
+          id: 'add-qa-upload',
+          url: 'https://uploads.example.test/media/qa-upload.jpg',
+          path: `uploads/${registryFile.default_project}/${firstQaLotId || 'unknown'}/add-qa-upload.jpg`
+        })
       });
+      return;
+    }
+    if (route.request().method() === 'POST' && requestUrl.pathname === '/settings') {
+      await route.fulfill({ status: 202, contentType: 'application/json', body: JSON.stringify({ request: 999, status: 'queued' }) });
+      return;
+    }
+    if (route.request().method() === 'GET' && requestUrl.pathname === '/status') {
+      await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ request: 999, status: 'published', completedAt: new Date().toISOString() }) });
       return;
     }
     await route.fulfill({ status: 200, contentType: 'image/png', body: tinyPng });
@@ -122,6 +136,7 @@ const contentTypes = {
   await page.screenshot({ path: path.join(qaOutput, 'admin-lots.png'), fullPage: true });
   await page.click('[data-view="images"]');
   const firstInventoryItem = inventoryData.items[0];
+  firstQaLotId = String(firstInventoryItem.id);
   await page.locator('#image-filter-floor').selectOption(firstFloor);
   const imageFloorCount = Number(await page.locator('#image-filter-count').textContent());
   const imageFloorFilterWorks = imageFloorCount === expectedFloorCount;
@@ -152,6 +167,17 @@ const contentTypes = {
   const uploadedImageShownAsExcluded = await page.locator('[data-restore-image="add-qa-upload"]').isVisible();
   await page.locator('[data-restore-image="add-qa-upload"]').click();
   const uploadedImageRestored = await page.locator('.image-item').count() === imageCards + 1;
+  page.once('dialog', (dialog) => dialog.accept());
+  await page.locator('[data-delete-upload="add-qa-upload"]').click();
+  await page.click('#save-draft');
+  const uploadedImagePhysicalDeletionQueued = await page.evaluate((lotId) => {
+    const draftKey = Object.keys(localStorage).find((key) => key.indexOf('feed-studio-rules-v1-') === 0);
+    if (!draftKey) return false;
+    const draft = JSON.parse(localStorage.getItem(draftKey));
+    const override = draft.image_settings.lot_overrides[String(lotId)];
+    return !override.added.some((image) => image.id === 'add-qa-upload') &&
+      draft.pending_upload_deletions.some((entry) => entry.id === 'add-qa-upload' && entry.lot === String(lotId));
+  }, firstInventoryItem.id);
   await page.fill('#bulk-image-from', '3');
   await page.fill('#bulk-image-to', '1');
   await page.click('#apply-image-bulk');
@@ -211,9 +237,13 @@ const contentTypes = {
   const mobileOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
   await page.click('#publish-settings');
   const publishModalVisible = await page.locator('#publish-modal').isVisible();
+  const pagesBeforePublish = page.context().pages().length;
+  await page.click('#confirm-publish');
+  await page.waitForFunction(() => document.querySelector('#saved-state')?.textContent.includes('Изменения применены'));
+  const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -239,6 +269,7 @@ const contentTypes = {
     uploaded_image_excluded_without_deletion: uploadedImageExcludedWithoutDeletion,
     uploaded_image_shown_as_excluded: uploadedImageShownAsExcluded,
     uploaded_image_restored: uploadedImageRestored,
+    uploaded_image_physical_deletion_queued: uploadedImagePhysicalDeletionQueued,
     image_bulk_rule: imageBulkRuleCreated,
     source_tags_visible: sourceTagsVisible,
     supported_parameters: supportedParameterCount,
@@ -252,6 +283,7 @@ const contentTypes = {
     project_create_modal: projectModalVisible,
     generated_project_slug: generatedSlug,
     publish_confirmation: publishModalVisible,
+    automatic_publish: automaticPublishWorks,
     mobile_horizontal_overflow: mobileOverflow,
     browser_errors: errors
   };

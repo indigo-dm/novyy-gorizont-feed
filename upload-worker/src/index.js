@@ -3,7 +3,7 @@ const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache
 function corsHeaders(origin, allowedOrigin) {
   return {
     'Access-Control-Allow-Origin': origin === allowedOrigin ? origin : allowedOrigin,
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Authorization, Content-Type',
     'Access-Control-Max-Age': '86400',
     Vary: 'Origin'
@@ -126,6 +126,52 @@ async function upload(request, env, origin) {
   return json({ id: imageId, url, path, size: file.size }, 201, origin, env);
 }
 
+function allowedProjects(env) {
+  return new Set(String(env.ALLOWED_PROJECTS || '').split(',').map((value) => value.trim()).filter(Boolean));
+}
+
+async function createSettingsRequest(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const payload = await request.json();
+  const project = String(payload && payload.project || '').trim();
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) || (allowedProjects(env).size && !allowedProjects(env).has(project))) {
+    return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  }
+  if (!payload || payload.version !== 2 || !Array.isArray(payload.rules) || typeof payload.image_settings !== 'object' || typeof payload.parameter_settings !== 'object') {
+    return json({ error: 'Некорректный формат настроек.' }, 400, origin, env);
+  }
+  const settings = JSON.stringify(payload, null, 2);
+  if (settings.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической обработки.' }, 413, origin, env);
+  const body = 'Запрос на автоматическое обновление настроек фида.\n\n' +
+    'FEED_SETTINGS_JSON_START\n' + settings + '\nFEED_SETTINGS_JSON_END\n\n' +
+    'Запрос создан Feed Studio автоматически. Ручное подтверждение не требуется.';
+  const issue = await github(env, '/issues', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: `[feed-settings] ${project}: обновить настройки фида`,
+      body
+    })
+  });
+  return json({ request: issue.number, status: 'queued', createdAt: issue.created_at }, 202, origin, env);
+}
+
+async function settingsStatus(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const requestNumber = new URL(request.url).searchParams.get('request') || '';
+  if (!/^\d{1,12}$/.test(requestNumber)) return json({ error: 'Некорректный номер операции.' }, 400, origin, env);
+  const issue = await github(env, `/issues/${requestNumber}`);
+  if (!String(issue.title || '').startsWith('[feed-settings]')) return json({ error: 'Операция не относится к настройкам фида.' }, 404, origin, env);
+  if (issue.state === 'closed') {
+    return json({ request: issue.number, status: 'published', completedAt: issue.closed_at || issue.updated_at }, 200, origin, env);
+  }
+  const comments = await github(env, `/issues/${requestNumber}/comments?per_page=30`);
+  const failure = comments.find((comment) => /не применены|завершилась ошибкой/i.test(String(comment.body || '')));
+  if (failure) {
+    return json({ request: issue.number, status: 'failed', message: String(failure.body || 'Сборка завершилась ошибкой.') }, 200, origin, env);
+  }
+  return json({ request: issue.number, status: 'building', updatedAt: issue.updated_at }, 200, origin, env);
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
@@ -133,12 +179,15 @@ export default {
       return json({ error: 'Источник запроса не разрешён.' }, 403, origin, env);
     }
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders(origin, env.ALLOWED_ORIGIN) });
-    if (request.method !== 'POST') return json({ error: 'Метод не поддерживается.' }, 405, origin, env);
     try {
-      return await upload(request, env, origin);
+      const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+      if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
+      if (request.method === 'POST' && path === '/settings') return await createSettingsRequest(request, env, origin);
+      if (request.method === 'GET' && path === '/status') return await settingsStatus(request, env, origin);
+      return json({ error: 'Метод или адрес не поддерживается.' }, 405, origin, env);
     } catch (error) {
       console.error(error);
-      return json({ error: 'Не удалось сохранить изображение. Повторите попытку.' }, 502, origin, env);
+      return json({ error: 'Сервис временно недоступен. Повторите попытку.' }, 502, origin, env);
     }
   }
 };

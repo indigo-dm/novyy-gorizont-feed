@@ -50,8 +50,28 @@ jobs:
     uses: ./.github/workflows/deploy-pages.yml
     secrets: inherit
 
-  complete:
+  cleanup-uploads:
     needs: [apply, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Delete uploaded images removed from the feed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_MEDIA_BRANCH: media
+        run: python src/cleanup_uploaded_images.py
+
+  complete:
+    needs: [apply, deploy, cleanup-uploads]
     runs-on: ubuntu-latest
     steps:
       - name: Confirm and close request
@@ -60,12 +80,12 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "Настройки проверены и применены. Демонстрационный фид успешно пересобран."
+          gh issue comment "$ISSUE_NUMBER" --body "Настройки проверены и применены. Готовый фид успешно пересобран."
           gh issue close "$ISSUE_NUMBER"
 
   report-failure:
     if: failure() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]')
-    needs: [apply, deploy]
+    needs: [apply, deploy, cleanup-uploads]
     runs-on: ubuntu-latest
     steps:
       - name: Report failure

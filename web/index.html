@@ -47,10 +47,6 @@
         <button class="nav-item" data-view="assets"><span class="nav-icon">◇</span><span>Материалы</span></button>
         <button class="nav-item" data-view="preview"><span class="nav-icon">◉</span><span>Предпросмотр</span></button>
       </nav>
-      <div class="sidebar-note">
-        <span class="status-dot"></span>
-        <div><strong>Демо-режим</strong><small>Avito не подключён</small></div>
-      </div>
       <a class="sidebar-link" id="source-feed-link" href="source-profitbase.xml" target="_blank" rel="noopener">Полученный фид из Profitbase ↗</a>
       <a class="sidebar-link sidebar-link-secondary" id="full-feed-link" href="full-avito-demo.xml" target="_blank" rel="noopener">Полный фид ↗</a>
       <a class="sidebar-link sidebar-link-secondary" id="pilot-feed-link" href="pilot-avito.xml" target="_blank" rel="noopener">Тестовый фид ↗</a>
@@ -63,22 +59,22 @@
           <h1 id="page-title">Обзор</h1>
         </div>
         <div class="top-actions">
-          <span class="saved-state" id="saved-state">Настройки загружены</span>
+          <span class="saved-state" id="saved-state" role="status" aria-live="polite">Настройки загружены</span>
           <button class="button button-secondary" id="logout-access">Выйти</button>
           <button class="button button-secondary" id="save-draft">Сохранить черновик</button>
-          <button class="button button-primary" id="publish-settings">Опубликовать настройки</button>
+          <button class="button button-primary" id="publish-settings">Применить к фиду</button>
         </div>
       </header>
 
       <main>
         <section class="view active" id="view-dashboard">
           <div class="notice">
-            <div><strong>Полный демонстрационный фид</strong><span>Все актуальные квартиры брендируются автоматически, но данные не отправляются в Avito.</span></div>
-            <span class="notice-badge">DEMO</span>
+            <div><strong>Готовый фид для Avito</strong><span>Все актуальные квартиры обрабатываются автоматически. Ссылку на готовый XML необходимо указать в кабинете Avito этого объекта.</span></div>
+            <span class="notice-badge">XML</span>
           </div>
           <div class="stats-grid">
             <article class="stat-card"><span>Квартир в Profitbase</span><strong id="stat-source">—</strong><small>актуальный источник</small></article>
-            <article class="stat-card"><span>Квартир в демо-фиде</span><strong id="stat-plans">—</strong><small>брендированные объявления</small></article>
+            <article class="stat-card"><span>Квартир в готовом фиде</span><strong id="stat-plans">—</strong><small>брендированные объявления</small></article>
             <article class="stat-card"><span>Активных акций</span><strong id="stat-promotions">—</strong><small>правила брендирования</small></article>
             <article class="stat-card"><span>Последнее обновление</span><strong class="stat-date" id="stat-updated">—</strong><small>московское время</small></article>
           </div>
@@ -89,7 +85,7 @@
                 <li><span>1</span><div><strong>Создайте правило</strong><small>Укажите текст акции и условия применения.</small></div></li>
                 <li><span>2</span><div><strong>Проверьте выборку</strong><small>Кабинет покажет подходящие квартиры.</small></div></li>
                 <li><span>3</span><div><strong>Посмотрите результат</strong><small>Плашка появится на макете до публикации.</small></div></li>
-                <li><span>4</span><div><strong>Подтвердите в GitHub</strong><small>После проверки фид пересоберётся автоматически.</small></div></li>
+                <li><span>4</span><div><strong>Примените изменения</strong><small>Feed Studio самостоятельно проверит настройки и покажет статус пересборки.</small></div></li>
               </ol>
             </article>
             <article class="panel recent-panel">
@@ -273,11 +269,11 @@
     <div class="modal">
       <p class="eyebrow">Публикация настроек</p>
       <h2 id="publish-title">Подтвердить изменение фида</h2>
-      <p>Откроется GitHub с подготовленным запросом. Нажмите <strong>Submit new issue</strong> — после этого настройки пройдут проверку, а демо-фид пересоберётся автоматически.</p>
+      <p>Feed Studio автоматически проверит и сохранит настройки, пересоберёт фид и сообщит, когда новая версия будет опубликована.</p>
       <div class="modal-summary" id="publish-summary"></div>
       <div class="modal-actions">
         <button class="button button-secondary" id="cancel-publish">Отмена</button>
-        <button class="button button-primary" id="confirm-publish">Перейти к подтверждению</button>
+        <button class="button button-primary" id="confirm-publish">Применить к фиду</button>
       </div>
     </div>
   </div>

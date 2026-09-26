@@ -24,6 +24,11 @@
     imageUploadBusy: false,
     imageUploadMessage: '',
     imageUploadTone: '',
+    pendingUploadDeletions: [],
+    publishOperation: null,
+    publishPollTimer: null,
+    publishBusy: false,
+    draftSaved: false,
     dirty: false
   };
 
@@ -45,6 +50,7 @@
     return url + (url.indexOf('?') >= 0 ? '&' : '?') + 'v=' + encodeURIComponent(cacheVersion());
   };
   var draftKey = function () { return 'feed-studio-rules-v1-' + (state.project ? state.project.slug : 'default'); };
+  var operationKey = function () { return 'feed-studio-publish-v1-' + (state.project ? state.project.slug : 'default'); };
   var formatPrice = function (value) {
     return new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Number(value)) + ' ₽';
   };
@@ -154,11 +160,48 @@
     showToast.timer = window.setTimeout(function () { toast.classList.remove('show'); }, 3200);
   }
 
+  function renderSavedState() {
+    var label = $('#saved-state');
+    if (!label) return;
+    label.className = 'saved-state';
+    if (state.publishOperation && ['queued', 'building'].indexOf(state.publishOperation.status) >= 0) {
+      label.textContent = state.publishOperation.status === 'queued' ? 'Настройки приняты · ожидают сборки' : 'Фид пересобирается…';
+      label.classList.add('processing');
+      return;
+    }
+    if (state.publishOperation && state.publishOperation.status === 'failed') {
+      label.textContent = 'Изменения не применены · повторите';
+      label.classList.add('error');
+      return;
+    }
+    if (state.publishOperation && state.publishOperation.status === 'published') {
+      label.textContent = 'Изменения применены · ' + formatDateTime(state.publishOperation.completedAt);
+      label.classList.add('success');
+      return;
+    }
+    if (state.dirty) {
+      label.textContent = 'Есть несохранённые изменения';
+      label.classList.add('unsaved');
+      return;
+    }
+    if (state.draftSaved) {
+      label.textContent = 'Черновик сохранён · не применён';
+      return;
+    }
+    label.textContent = state.status && state.status.checked_at ? 'Фид опубликован · ' + formatDateTime(state.status.checked_at) : 'Настройки загружены';
+    label.classList.add('success');
+  }
+
   function setDirty(value) {
     state.dirty = value;
-    var label = $('#saved-state');
-    label.textContent = value ? 'Есть несохранённые изменения' : 'Настройки сохранены';
-    label.classList.toggle('unsaved', value);
+    if (value) {
+      state.draftSaved = false;
+      if (state.publishOperation && ['published', 'failed'].indexOf(state.publishOperation.status) >= 0) {
+        state.publishOperation = null;
+        if (state.project) localStorage.removeItem(operationKey());
+      }
+    }
+    renderSavedState();
   }
 
   function saveDraft(showMessage) {
@@ -166,9 +209,12 @@
       version: 2,
       rules: state.rules,
       image_settings: state.imageSettings,
-      parameter_settings: state.parameterSettings
+      parameter_settings: state.parameterSettings,
+      pending_upload_deletions: state.pendingUploadDeletions
     }));
-    setDirty(false);
+    state.dirty = false;
+    state.draftSaved = true;
+    renderSavedState();
     if (showMessage) showToast('Черновик сохранён в этом браузере');
   }
 
@@ -381,6 +427,42 @@
     return state.assets && /^https:\/\//i.test(String(state.assets.upload_service_url || '')) ? String(state.assets.upload_service_url) : '';
   }
 
+  function serviceEndpoint(path) {
+    return uploadServiceUrl().replace(/\/+$/, '') + path;
+  }
+
+  function managedUploadPath(item, image) {
+    if (!item || !image || image.kind !== 'added' || !/^add-[A-Za-z0-9_-]+$/.test(String(image.id || ''))) return '';
+    var expected = new RegExp('^uploads/' + state.project.slug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/' +
+      String(item.id).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '/' + String(image.id).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\.(?:jpg|jpeg|png|webp)$', 'i');
+    if (expected.test(String(image.path || ''))) return String(image.path);
+    try {
+      var parsed = new URL(String(image.url || ''));
+      var prefix = '/' + REPOSITORY + '/media/';
+      if (parsed.hostname !== 'raw.githubusercontent.com' || parsed.pathname.indexOf(prefix) !== 0) return '';
+      var derived = decodeURIComponent(parsed.pathname.slice(prefix.length));
+      return expected.test(derived) ? derived : '';
+    } catch (error) {
+      return '';
+    }
+  }
+
+  function queueUploadedImageDeletion(item, image) {
+    var path = managedUploadPath(item, image);
+    if (!path) return;
+    if (!window.confirm('Файл будет безвозвратно удалён после успешной публикации нового фида. Продолжить?')) return;
+    var override = imageOverride(item);
+    override.added = override.added.filter(function (entry) { return entry.id !== image.id; });
+    override.hidden = override.hidden.filter(function (id) { return id !== image.id; });
+    override.order = override.order.filter(function (id) { return id !== image.id; });
+    if (!state.pendingUploadDeletions.some(function (entry) { return entry.path === path; })) {
+      state.pendingUploadDeletions.push({ lot: String(item.id), id: String(image.id), path: path });
+    }
+    setDirty(true);
+    renderImages();
+    showToast('Файл будет удалён после применения изменений к фиду');
+  }
+
   function renderImageUploadState() {
     var zone = $('#image-drop-zone');
     var button = $('#choose-image-file');
@@ -442,7 +524,7 @@
       body.append('project', state.project.slug);
       body.append('lot', item.id);
       body.append('file', optimized, optimized.name);
-      var response = await fetch(endpoint, {
+      var response = await fetch(serviceEndpoint('/upload'), {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + credential },
         body: body
@@ -455,7 +537,7 @@
       if (!/^https:\/\//i.test(String(payload.url || '')) || !/^[A-Za-z0-9_-]+$/.test(String(payload.id || ''))) {
         throw new Error('Сервис загрузки вернул некорректный ответ.');
       }
-      addImageToItem(item, { id: String(payload.id), url: String(payload.url) });
+      addImageToItem(item, { id: String(payload.id), url: String(payload.url), path: String(payload.path || '') });
       setImageUploadMessage('Изображение загружено и добавлено в галерею.', 'success');
       renderImages();
     } catch (error) {
@@ -478,7 +560,7 @@
     });
     var override = state.imageSettings.lot_overrides[item.id] || { order: [], hidden: [], added: [] };
     (override.added || []).forEach(function (image) {
-      images.push({ id: image.id, url: image.url, kind: 'added', label: 'Добавлено вручную' });
+      images.push({ id: image.id, url: image.url, path: image.path || '', kind: 'added', label: 'Добавлено вручную' });
     });
     var hidden = override.hidden || [];
     images = images.filter(function (image) { return hidden.indexOf(image.id) < 0; });
@@ -533,6 +615,8 @@
     var images = effectiveImages(item);
     $('#image-gallery').innerHTML = images.map(function (image, index) {
       var imageUrl = image.kind === 'generated' ? versionedUrl(image.url) : image.url;
+      var deleteUpload = managedUploadPath(item, image) ? '<button class="delete-upload" data-delete-upload="' + esc(image.id) +
+        '" title="Физически удалить загруженный файл">Удалить файл</button>' : '';
       return '<article class="image-item"><div class="image-item-preview"><img src="' + esc(imageUrl) + '" alt="Изображение ' +
         (index + 1) + '" loading="lazy" decoding="async"><span class="image-position">' + (index + 1) + '</span><span class="image-kind">' +
         esc(image.kind === 'generated' ? 'Feed Studio' : image.kind === 'source' ? 'Profitbase' : 'Добавлено') +
@@ -541,7 +625,7 @@
         '>← Выше</button><button data-image-right="' + esc(image.id) + '" ' + (index === images.length - 1 ? 'disabled' : '') +
         '>Ниже →</button><button class="remove-image" data-remove-image="' + esc(image.id) + '" ' +
         (image.kind === 'generated' ? 'disabled title="Брендированную карточку нельзя исключить"' :
-          'title="Не включать изображение в новый фид Avito"') + '>Исключить из фида</button></div></div></article>';
+          'title="Не включать изображение в новый фид Avito"') + '>Исключить из фида</button>' + deleteUpload + '</div></div></article>';
     }).join('');
     function saveOrder(nextImages) {
       imageOverride(item).order = nextImages.map(function (image) { return image.id; });
@@ -571,17 +655,25 @@
         renderImages();
       });
     });
+    $$('[data-delete-upload]', $('#image-gallery')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        var current = images.find(function (image) { return image.id === button.dataset.deleteUpload; });
+        if (current) queueUploadedImageDeletion(item, current);
+      });
+    });
     var override = state.imageSettings.lot_overrides[item.id] || { hidden: [] };
     var hiddenIds = override.hidden || [];
     var hiddenImages = (item.source_images || []).map(function (image) {
       return { id: image.id, url: image.url, label: 'Profitbase · исходная позиция ' + image.position, kind: 'source' };
     }).concat((override.added || []).map(function (image) {
-      return { id: image.id, url: image.url, label: 'Добавлено вручную', kind: 'added' };
+      return { id: image.id, url: image.url, path: image.path || '', label: 'Добавлено вручную', kind: 'added' };
     })).filter(function (image) { return hiddenIds.indexOf(image.id) >= 0; });
     $('#removed-images-wrap').classList.toggle('hidden', hiddenImages.length === 0);
     $('#removed-images').innerHTML = hiddenImages.map(function (image) {
+      var deleteUpload = managedUploadPath(item, image) ? '<button class="delete-upload" data-delete-hidden-upload="' + esc(image.id) +
+        '">Удалить файл</button>' : '';
       return '<div class="removed-image"><img src="' + esc(image.url) + '" alt="" loading="lazy" decoding="async"><span>' +
-        esc(image.label) + '</span><button class="restore-image" data-restore-image="' + esc(image.id) + '">Вернуть в фид</button></div>';
+        esc(image.label) + '</span><button class="restore-image" data-restore-image="' + esc(image.id) + '">Вернуть в фид</button>' + deleteUpload + '</div>';
     }).join('');
     $$('[data-restore-image]', $('#removed-images')).forEach(function (button) {
       button.addEventListener('click', function () {
@@ -589,6 +681,12 @@
         currentOverride.hidden = currentOverride.hidden.filter(function (id) { return id !== button.dataset.restoreImage; });
         setDirty(true);
         renderImages();
+      });
+    });
+    $$('[data-delete-hidden-upload]', $('#removed-images')).forEach(function (button) {
+      button.addEventListener('click', function () {
+        var current = hiddenImages.find(function (image) { return image.id === button.dataset.deleteHiddenUpload; });
+        if (current) queueUploadedImageDeletion(item, current);
       });
     });
     renderImageBulkRules();
@@ -889,8 +987,72 @@
       project: state.project.slug,
       rules: state.rules.map(normalizeRule),
       image_settings: clone(state.imageSettings),
-      parameter_settings: clone(state.parameterSettings)
+      parameter_settings: clone(state.parameterSettings),
+      pending_upload_deletions: clone(state.pendingUploadDeletions)
     };
+  }
+
+  function stopPublishPolling() {
+    if (state.publishPollTimer) window.clearTimeout(state.publishPollTimer);
+    state.publishPollTimer = null;
+  }
+
+  function storePublishOperation(operation) {
+    state.publishOperation = operation;
+    if (operation && state.project) localStorage.setItem(operationKey(), JSON.stringify(operation));
+    else if (state.project) localStorage.removeItem(operationKey());
+    renderSavedState();
+  }
+
+  async function refreshPublishedProject() {
+    var slug = state.project && state.project.slug;
+    if (!slug) return;
+    try {
+      var registryResponse = await fetch('projects.json?v=' + Date.now(), { cache: 'no-store' });
+      if (registryResponse.ok) state.registry = await registryResponse.json();
+      await loadProject(slug, true);
+    } catch (error) {
+      showToast('Фид опубликован. Обновите страницу, чтобы загрузить новые данные.');
+    }
+  }
+
+  async function pollPublishStatus() {
+    stopPublishPolling();
+    var operation = state.publishOperation;
+    if (!operation || !operation.request || ['published', 'failed'].indexOf(operation.status) >= 0 || !uploadServiceUrl()) return;
+    var credential = window.FEED_STUDIO_CREDENTIAL && window.FEED_STUDIO_CREDENTIAL.get ? window.FEED_STUDIO_CREDENTIAL.get() : '';
+    if (!credential) return;
+    try {
+      var response = await fetch(serviceEndpoint('/status?request=' + encodeURIComponent(operation.request)), {
+        method: 'GET',
+        headers: { Authorization: 'Bearer ' + credential },
+        cache: 'no-store'
+      });
+      var payload = await response.json().catch(function () { return {}; });
+      if (!response.ok) throw new Error(payload.error || 'Не удалось получить статус публикации.');
+      operation.status = String(payload.status || operation.status);
+      operation.completedAt = payload.completedAt || operation.completedAt || '';
+      operation.message = payload.message || '';
+      storePublishOperation(operation);
+      if (operation.status === 'published') {
+        state.pendingUploadDeletions = [];
+        state.draftSaved = false;
+        state.dirty = false;
+        localStorage.removeItem(draftKey());
+        localStorage.removeItem(operationKey());
+        showToast('Изменения применены, готовый фид опубликован');
+        await refreshPublishedProject();
+        return;
+      }
+      if (operation.status === 'failed') {
+        state.draftSaved = true;
+        showToast(operation.message || 'Сборка завершилась ошибкой. Настройки сохранены в черновике.');
+        return;
+      }
+    } catch (error) {
+      renderSavedState();
+    }
+    state.publishPollTimer = window.setTimeout(pollPublishStatus, 15000);
   }
 
   function validateSettings() {
@@ -912,6 +1074,10 @@
   }
 
   function openPublishModal() {
+    if (state.publishOperation && ['queued', 'building'].indexOf(state.publishOperation.status) >= 0) {
+      showToast('Предыдущие изменения ещё применяются. Дождитесь окончания пересборки.');
+      return;
+    }
     var error = validateSettings();
     if (error) {
       showToast(error);
@@ -923,25 +1089,50 @@
     $('#publish-summary').innerHTML = '<strong>' + enabled.length + ' активных правил</strong><br>' +
       affected + ' из ' + state.inventory.items.length + ' квартир получат акцию.<br>' +
       Object.keys(state.imageSettings.lot_overrides).length + ' индивидуальных галерей и ' + state.imageSettings.bulk_rules.length + ' массовых правил изображений.<br>' +
-      Object.keys(state.parameterSettings.lot_values).length + ' квартир с дополнительными параметрами и ' + state.parameterSettings.bulk_rules.length + ' массовых правил параметров.';
+      Object.keys(state.parameterSettings.lot_values).length + ' квартир с дополнительными параметрами и ' + state.parameterSettings.bulk_rules.length + ' массовых правил параметров.' +
+      (state.pendingUploadDeletions.length ? '<br><strong>' + state.pendingUploadDeletions.length + ' загруженных файлов будут физически удалены после публикации.</strong>' : '');
     $('#publish-modal').classList.remove('hidden');
   }
 
-  function confirmPublish() {
-    var payload = JSON.stringify(settingsPayload(), null, 2);
-    var body = 'Запрос на обновление настроек демонстрационного фида.\n\n' +
-      'FEED_SETTINGS_JSON_START\n' + payload + '\nFEED_SETTINGS_JSON_END\n\n' +
-      'Запрос сформирован кабинетом Feed Studio. Workflow применит его только от владельца репозитория.';
-    var title = '[feed-settings] ' + state.project.name + ': обновить настройки фида';
-    var url = 'https://github.com/' + REPOSITORY + '/issues/new?title=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(body);
-    if (url.length > 7800) {
-      showToast('Настройки слишком объёмные для отправки. Скачайте JSON и сократите исключения.');
-      downloadSettings();
+  async function confirmPublish() {
+    if (state.publishBusy) return;
+    if (!uploadServiceUrl()) {
+      showToast('Сервис автоматического применения настроек пока недоступен.');
       return;
     }
-    window.open(url, '_blank', 'noopener');
-    $('#publish-modal').classList.add('hidden');
-    showToast('Подтвердите запрос в открывшемся окне GitHub');
+    var credential = window.FEED_STUDIO_CREDENTIAL && window.FEED_STUDIO_CREDENTIAL.get ? window.FEED_STUDIO_CREDENTIAL.get() : '';
+    if (!credential) {
+      showToast('Выйдите и войдите в Feed Studio повторно.');
+      return;
+    }
+    state.publishBusy = true;
+    $('#confirm-publish').disabled = true;
+    $('#confirm-publish').textContent = 'Отправляем…';
+    saveDraft(false);
+    try {
+      var response = await fetch(serviceEndpoint('/settings'), {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + credential, 'Content-Type': 'application/json' },
+        body: JSON.stringify(settingsPayload())
+      });
+      var payload = await response.json().catch(function () { return {}; });
+      if (!response.ok) {
+        if (response.status === 401 && window.FEED_STUDIO_CREDENTIAL && window.FEED_STUDIO_CREDENTIAL.set) window.FEED_STUDIO_CREDENTIAL.set('');
+        throw new Error(payload.error || 'Не удалось отправить настройки.');
+      }
+      storePublishOperation({ request: payload.request, status: payload.status || 'queued', project: state.project.slug, createdAt: payload.createdAt || new Date().toISOString() });
+      $('#publish-modal').classList.add('hidden');
+      showToast('Настройки приняты. Следим за пересборкой фида.');
+      pollPublishStatus();
+    } catch (error) {
+      state.draftSaved = true;
+      renderSavedState();
+      showToast(error.message || 'Не удалось отправить настройки.');
+    } finally {
+      state.publishBusy = false;
+      $('#confirm-publish').disabled = false;
+      $('#confirm-publish').textContent = 'Применить к фиду';
+    }
   }
 
   function downloadSettings() {
@@ -1134,7 +1325,8 @@
     });
   }
 
-  async function loadProject(slug) {
+  async function loadProject(slug, preservePublication) {
+    stopPublishPolling();
     var project = state.registry.projects.find(function (item) { return item.slug === slug; });
     if (!project) return;
     if (!project.available) {
@@ -1163,6 +1355,11 @@
       state.rules = draft && Array.isArray(draft.rules) ? draft.rules.map(normalizeRule) : publishedRules;
       state.imageSettings = normalizeImageSettings(draft && draft.image_settings != null ? draft.image_settings : data[1].image_settings || emptyImageSettings());
       state.parameterSettings = normalizeParameterSettings(draft && draft.parameter_settings != null ? draft.parameter_settings : data[1].parameter_settings || emptyParameterSettings());
+      state.pendingUploadDeletions = draft && Array.isArray(draft.pending_upload_deletions) ? clone(draft.pending_upload_deletions) : [];
+      state.draftSaved = Boolean(draft);
+      if (!preservePublication) {
+        try { state.publishOperation = JSON.parse(localStorage.getItem(operationKey()) || 'null'); } catch (error) { state.publishOperation = null; }
+      }
       state.activeRuleId = state.rules[0] ? state.rules[0].id : null;
       state.previewId = null;
       state.imageLotId = null;
@@ -1178,6 +1375,7 @@
       renderAll();
       navigate(state.activeView);
       setDirty(false);
+      pollPublishStatus();
     } catch (error) {
       document.querySelector('main').innerHTML = '<section class="panel empty-state"><div><h2>Кабинет временно недоступен</h2><p>' + esc(error.message) + '</p></div></section>';
     }

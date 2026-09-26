@@ -139,7 +139,7 @@ def settings_map(value: object, name: str) -> dict[str, object]:
     }
 
 
-def image_settings(value: object, allowed_houses: set[str]) -> dict[str, object]:
+def image_settings(value: object, allowed_houses: set[str], project_slug: str) -> dict[str, object]:
     source = value if isinstance(value, dict) else {}
     raw_overrides = source.get("lot_overrides", {})
     if not isinstance(raw_overrides, dict) or len(raw_overrides) > 250:
@@ -159,7 +159,14 @@ def image_settings(value: object, allowed_houses: set[str]) -> dict[str, object]
             image_id = text(item.get("id"), "image id", 80)
             if not re.fullmatch(r"[A-Za-z0-9_-]+", image_id):
                 raise ValueError(f"Added image {index} for lot {lot_id} has an invalid id")
-            clean_added.append({"id": image_id, "url": http_url(item.get("url"), "image url")})
+            clean_item = {"id": image_id, "url": http_url(item.get("url"), "image url")}
+            path = str(item.get("path") or "").strip()
+            if path:
+                expected = rf"uploads/{re.escape(project_slug)}/{re.escape(lot_id)}/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+                if not re.fullmatch(expected, path, flags=re.IGNORECASE):
+                    raise ValueError(f"Added image {index} for lot {lot_id} has an invalid managed path")
+                clean_item["path"] = path
+            clean_added.append(clean_item)
         overrides[lot_id] = {
             "order": string_list(raw.get("order", []), "image order"),
             "hidden": string_list(raw.get("hidden", []), "hidden images"),
@@ -219,7 +226,28 @@ def parameter_settings(value: object, allowed_houses: set[str]) -> dict[str, obj
     return {"lot_values": lots, "bulk_rules": rules}
 
 
-def validate(payload: object, allowed_houses: set[str]) -> dict[str, object]:
+def pending_upload_deletions(value: object, project_slug: str) -> list[dict[str, str]]:
+    if value is None:
+        return []
+    if not isinstance(value, list) or len(value) > 50:
+        raise ValueError("pending_upload_deletions must be a list with no more than 50 items")
+    result: list[dict[str, str]] = []
+    for index, item in enumerate(value, start=1):
+        if not isinstance(item, dict):
+            raise ValueError(f"Pending upload deletion {index} is invalid")
+        lot_id = text(item.get("lot"), "upload deletion lot", 20)
+        image_id = text(item.get("id"), "upload deletion image id", 80)
+        path = text(item.get("path"), "upload deletion path", 260)
+        if not lot_id.isdigit() or not re.fullmatch(r"add-[A-Za-z0-9_-]+", image_id):
+            raise ValueError(f"Pending upload deletion {index} has invalid identifiers")
+        expected = rf"uploads/{re.escape(project_slug)}/{re.escape(lot_id)}/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+        if not re.fullmatch(expected, path, flags=re.IGNORECASE):
+            raise ValueError(f"Pending upload deletion {index} is outside the managed upload folder")
+        result.append({"lot": lot_id, "id": image_id, "path": path})
+    return result
+
+
+def validate(payload: object, allowed_houses: set[str], project_slug: str) -> dict[str, object]:
     if not isinstance(payload, dict) or payload.get("version") not in {1, 2}:
         raise ValueError("Unsupported settings format")
     source_rules = payload.get("rules")
@@ -266,8 +294,9 @@ def validate(payload: object, allowed_houses: set[str]) -> dict[str, object]:
     return {
         "version": 2,
         "rules": rules,
-        "image_settings": image_settings(payload.get("image_settings", {}), allowed_houses),
+        "image_settings": image_settings(payload.get("image_settings", {}), allowed_houses, project_slug),
         "parameter_settings": parameter_settings(payload.get("parameter_settings", {}), allowed_houses),
+        "pending_upload_deletions": pending_upload_deletions(payload.get("pending_upload_deletions"), project_slug),
     }
 
 
@@ -290,7 +319,7 @@ def main() -> None:
         project_dir = ROOT / "projects" / project_slug
         config = json.loads((project_dir / "config.json").read_text(encoding="utf-8"))
         allowed_houses = set(str(value) for value in config.get("houses", {}))
-        validated = validate(payload, allowed_houses)
+        validated = validate(payload, allowed_houses, project_slug)
     except (ValueError, TypeError, json.JSONDecodeError) as error:
         raise SystemExit(f"Invalid feed settings: {error}") from error
     output = project_dir / "promotion-rules.json"
