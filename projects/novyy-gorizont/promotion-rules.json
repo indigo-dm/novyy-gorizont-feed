@@ -22,7 +22,24 @@
     }
   ],
   "image_settings": {
-    "lot_overrides": {},
+    "lot_overrides": {
+      "9301142": {
+        "order": [
+          "src-37186d11dc7f",
+          "brand-card",
+          "src-507ce1e3318f",
+          "src-789df0983ac5",
+          "src-c171c42b470d",
+          "src-c0e35a50e7a8",
+          "src-f3dab7ff7fd7",
+          "src-88f1dd8da582",
+          "src-48ba4aab152e",
+          "src-d15e86bea438"
+        ],
+        "hidden": [],
+        "added": []
+      }
+    },
     "bulk_rules": []
   },
   "parameter_settings": {
