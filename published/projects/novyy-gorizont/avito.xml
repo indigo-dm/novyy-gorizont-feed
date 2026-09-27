@@ -3735,47 +3735,6 @@
     <AdStatus>Free</AdStatus>
   </Ad>
   <Ad>
-    <Id>11924149</Id>
-    <ContactMethod>По телефону и в сообщениях</ContactMethod>
-    <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78633034388</ContactPhone>
-    <Category>Квартиры</Category>
-    <OperationType>Продам</OperationType>
-    <PropertyRights>Застройщик</PropertyRights>
-    <Description>ЖК Новый Горизонт 4 дом! &lt;br&gt; &lt;br&gt;&lt;br&gt;&lt;br&gt;▪️ Приятные цены  &lt;br&gt;&lt;br&gt;▪️ 5 квартир на этаже  &lt;br&gt;&lt;br&gt;▪️ Комфортные планировки  &lt;br&gt;&lt;br&gt;▪️ 2 комн. квартиры с прекрасными видовыми характеристиками  &lt;br&gt;&lt;br&gt;▪️ Абсолютное отсутствие студий  &lt;br&gt;&lt;br&gt;▪️ Размещение инфраструктуры на 1ом этаже</Description>
-    <Price>5858510</Price>
-    <Square>46.13</Square>
-    <Decoration>Без отделки</Decoration>
-    <Floor>5</Floor>
-    <Status>Квартира</Status>
-    <MarketType>Новостройка</MarketType>
-    <NewDevelopmentId>3379674</NewDevelopmentId>
-    <Rooms>2</Rooms>
-    <KitchenSpace>7.24</KitchenSpace>
-    <LivingSpace>26.05</LivingSpace>
-    <Floors>22</Floors>
-    <HouseType>Монолитно-кирпичный</HouseType>
-    <BalconyOrLoggiaMulti>
-      <Option>Лоджия</Option>
-    </BalconyOrLoggiaMulti>
-    <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/images/11924149.png" />
-      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62fba7084a55d.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg" />
-    </Images>
-    <RoomType>
-      <Option>Изолированные</Option>
-    </RoomType>
-    <AdStatus>Free</AdStatus>
-  </Ad>
-  <Ad>
     <Id>11924189</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
