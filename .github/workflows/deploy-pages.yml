@@ -44,14 +44,8 @@ on:
   push:
     paths:
       - "assets/**"
-      - "src/build_all.py"
-      - "src/build_pilot.py"
-      - "src/render_pilot.cjs"
-      - "src/validate_pilot.py"
       - "projects/*/assets/**"
       - "!projects/*/assets/uploads/**"
-      - "package.json"
-      - "package-lock.json"
 
 permissions:
   contents: write
