@@ -509,11 +509,11 @@ async function createFeedRefreshRequest(request, env, origin) {
   }
   const requestId = `refresh-${Date.now().toString(36)}-${crypto.randomUUID().slice(0, 8)}`;
   const requestedAt = new Date().toISOString();
-  await github(env, '/actions/workflows/deploy-pages.yml/dispatches', {
+  await github(env, '/dispatches', {
     method: 'POST',
     body: JSON.stringify({
-      ref: env.GITHUB_SOURCE_BRANCH || 'main',
-      inputs: { project, render_ids: 'changed', request_id: requestId }
+      event_type: 'profitbase-refresh',
+      client_payload: { project, render_ids: 'changed', request_id: requestId }
     })
   });
   await saveRefreshOperation(env, { request: requestId, project, requestedAt });
@@ -534,7 +534,7 @@ async function feedRefreshStatus(request, env, origin) {
   const marker = await env.FEED_STORAGE.get(refreshMarkerKey(requestId));
   if (!marker) return json({ error: 'Операция обновления не найдена или уже удалена.' }, 404, origin, env);
   const operation = await marker.json();
-  const runs = await github(env, '/actions/workflows/deploy-pages.yml/runs?event=workflow_dispatch&per_page=50');
+  const runs = await github(env, '/actions/workflows/deploy-pages.yml/runs?event=repository_dispatch&per_page=50');
   const sourceRun = (runs.workflow_runs || []).find((run) => String(run.display_title || '').includes(`[${requestId}]`));
   const sourceStatus = workflowStatus(sourceRun, 'building');
   if (sourceStatus === 'queued') {
@@ -544,7 +544,7 @@ async function feedRefreshStatus(request, env, origin) {
     return json({ request: requestId, project: operation.project, status: 'building', runUrl: sourceRun.html_url || '', updatedAt: sourceRun.updated_at || '' }, 200, origin, env);
   }
   if (sourceStatus === 'failed') {
-    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Обновление Profitbase завершилось ошибкой.', runUrl: sourceRun.html_url || '' }, 200, origin, env);
+    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Не удалось обновить выбранный объект. Profitbase не ответил после повторных попыток либо сборка завершилась ошибкой.', runUrl: sourceRun.html_url || '' }, 200, origin, env);
   }
 
   if (!operation.frontendDispatchedAt) {

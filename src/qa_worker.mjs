@@ -90,8 +90,10 @@ globalThis.fetch = async (url, options = {}) => {
     frontendDeployDispatched = JSON.parse(options.body).event_type === 'feed-data-updated';
     return new Response(null, { status: 204 });
   }
-  if (value.endsWith('/actions/workflows/deploy-pages.yml/dispatches') && options.method === 'POST') {
-    refreshDispatchInputs = JSON.parse(options.body).inputs;
+  if (value.endsWith('/repos/indigo-dm/novyy-gorizont-feed/dispatches') && options.method === 'POST') {
+    const payload = JSON.parse(options.body);
+    if (payload.event_type !== 'profitbase-refresh') return Response.json({ message: 'wrong event' }, { status: 422 });
+    refreshDispatchInputs = payload.client_payload;
     refreshRequestId = refreshDispatchInputs.request_id;
     return new Response(null, { status: 204 });
   }

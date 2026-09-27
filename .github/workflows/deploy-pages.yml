@@ -1,5 +1,5 @@
 name: Build and publish branded feeds
-run-name: "Feed build ${{ inputs.project || 'all-projects' }} [${{ inputs.request_id || github.run_id }}]"
+run-name: "Feed build ${{ inputs.project || github.event.client_payload.project || 'all-projects' }} [${{ inputs.request_id || github.event.client_payload.request_id || github.run_id }}]"
 
 on:
   workflow_dispatch:
@@ -19,6 +19,8 @@ on:
         required: false
         type: string
         default: ""
+  repository_dispatch:
+    types: [profitbase-refresh]
   schedule:
     - cron: "0 0,13 * * *"
       timezone: "Europe/Moscow"
@@ -122,8 +124,8 @@ jobs:
 
       - name: Build and validate affected project cards
         env:
-          PROJECT_SLUG: ${{ inputs.project }}
-          RENDER_IDS: ${{ inputs.render_ids || (github.event_name == 'schedule' && 'changed') || '' }}
+          PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
+          RENDER_IDS: ${{ inputs.render_ids || github.event.client_payload.render_ids || (github.event_name == 'schedule' && 'changed') || '' }}
           RENDER_CACHE_DIR: render-cache
           PUBLISHED_DATA_DIR: .feed-data/published
           SITE_PREPARED: "1"
@@ -136,7 +138,7 @@ jobs:
 
       - name: Update generated data branch
         env:
-          PROJECT_SLUG: ${{ inputs.project }}
+          PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
         run: |
           args=(--source site --destination .feed-data/published)
           if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
@@ -153,7 +155,7 @@ jobs:
 
       - name: Publish changed project files to Cloudflare R2
         env:
-          PROJECT_SLUG: ${{ inputs.project }}
+          PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
           CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}

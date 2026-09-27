@@ -34,6 +34,9 @@ def main() -> None:
         run([sys.executable, "src/prepare_site.py"], build_env)
 
     public_projects: list[dict[str, object]] = []
+    attempted_projects: list[str] = []
+    built_projects: list[str] = []
+    failed_projects: list[str] = []
     node = os.environ.get("NODE_BINARY", "node")
     for project in REGISTRY["projects"]:
         slug = str(project["slug"])
@@ -50,14 +53,27 @@ def main() -> None:
         })
         if not available:
             continue
+        attempted_projects.append(slug)
         env = build_env.copy()
         env["PROJECT_SLUG"] = slug
         env["PROFITBASE_FEED_URL"] = feed_url
-        run([sys.executable, "src/fetch_feed.py"], env)
+        try:
+            run([sys.executable, "src/fetch_feed.py"], env)
+        except subprocess.CalledProcessError:
+            if requested_slug:
+                raise
+            failed_projects.append(slug)
+            print(
+                f"::warning title=Profitbase refresh skipped::{slug}: source feed download failed; "
+                "the previously published project files will be kept",
+                file=sys.stderr,
+            )
+            continue
         run([sys.executable, "src/build_pilot.py"], env)
         run([node, "src/render_pilot.cjs"], env)
         run([sys.executable, "src/validate_pilot.py"], env)
         run([sys.executable, "src/build_site.py"], env)
+        built_projects.append(slug)
 
     if requested_slug:
         registry_path = ROOT / "site" / "projects.json"
@@ -77,8 +93,12 @@ def main() -> None:
         else:
             public_registry.setdefault("projects", []).append(built)
     else:
-        if not any(item["available"] for item in public_projects):
+        if not attempted_projects:
             raise RuntimeError("No configured project feeds were available")
+        if not built_projects:
+            raise RuntimeError(
+                "All configured project builds failed; previously published feeds remain unchanged"
+            )
         public_registry = {
             "version": 1,
             "build_id": build_id,
@@ -88,6 +108,11 @@ def main() -> None:
     (ROOT / "site" / "projects.json").write_text(
         json.dumps(public_registry, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    if failed_projects:
+        print(
+            "Kept previous published files for failed projects: " + ", ".join(failed_projects),
+            file=sys.stderr,
+        )
     print(json.dumps(public_registry, ensure_ascii=False))
 
 
