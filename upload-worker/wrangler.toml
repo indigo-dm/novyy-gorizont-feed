@@ -13,6 +13,7 @@ ALLOWED_PROJECTS = "novyy-gorizont,vishnevyy-sad,truda-12-3,teatral"
 MAX_FILE_BYTES = "10485760"
 PUBLIC_ACCESS_PASSWORD_HASH = "8dce592bb594f861bf4b21de5955aa5b64a5547763b0b7ee97cb159572c628a3"
 PUBLIC_BASE_URL = "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev"
+FRONTEND_FEED_ROOT = "https://indigo-dm.github.io/feed-studio/feeds"
 LEGACY_MEDIA_ROOT = "https://indigo-dm.github.io/novyy-gorizont-feed"
 ORPHAN_RETENTION_DAYS = "7"
 

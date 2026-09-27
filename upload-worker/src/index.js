@@ -492,6 +492,40 @@ function refreshMarkerKey(requestId) {
   return `refresh-operations/${requestId}.json`;
 }
 
+const REFRESH_SOURCE_TIMEOUT_MS = 20 * 60 * 1000;
+const REFRESH_FRONTEND_TIMEOUT_MS = 10 * 60 * 1000;
+
+async function sourceRefreshState(env, operation) {
+  const statusObject = await env.FEED_STORAGE.get(`published/projects/${operation.project}/status.json`);
+  if (!statusObject) return null;
+  const status = await statusObject.json();
+  const checkedAt = String(status.checked_at || '');
+  const checkedAtMs = Date.parse(checkedAt);
+  const requestedAtMs = Date.parse(operation.requestedAt || '');
+  if (!Number.isFinite(checkedAtMs) || !Number.isFinite(requestedAtMs) || checkedAtMs < requestedAtMs - 1000) return null;
+  return { checkedAt, status };
+}
+
+async function digestHex(bytes) {
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
+}
+
+async function frontendFeedMatches(env, operation) {
+  const stored = await env.FEED_STORAGE.get(`published/projects/${operation.project}/avito.xml`);
+  if (!stored) return false;
+  const feedRoot = String(env.FRONTEND_FEED_ROOT || 'https://indigo-dm.github.io/feed-studio/feeds').replace(/\/+$/, '');
+  const response = await fetch(`${feedRoot}/${encodeURIComponent(operation.project)}/avito.xml?v=${encodeURIComponent(operation.request)}`, {
+    cache: 'no-store',
+    headers: { 'User-Agent': 'indigo-feed-studio-status' }
+  });
+  if (!response.ok) return false;
+  const [storedBytes, publicBytes] = await Promise.all([stored.arrayBuffer(), response.arrayBuffer()]);
+  if (storedBytes.byteLength !== publicBytes.byteLength) return false;
+  const [storedDigest, publicDigest] = await Promise.all([digestHex(storedBytes), digestHex(publicBytes)]);
+  return storedDigest === publicDigest;
+}
+
 async function saveRefreshOperation(env, operation) {
   if (!r2Available(env)) throw new Error('R2 storage is unavailable');
   await env.FEED_STORAGE.put(refreshMarkerKey(operation.request), JSON.stringify(operation), {
@@ -520,12 +554,6 @@ async function createFeedRefreshRequest(request, env, origin) {
   return json({ request: requestId, project, status: 'queued', requestedAt }, 202, origin, env);
 }
 
-function workflowStatus(run, activeStatus) {
-  if (!run) return 'queued';
-  if (run.status !== 'completed') return activeStatus;
-  return run.conclusion === 'success' ? 'success' : 'failed';
-}
-
 async function feedRefreshStatus(request, env, origin) {
   if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
   const requestId = new URL(request.url).searchParams.get('request') || '';
@@ -534,44 +562,35 @@ async function feedRefreshStatus(request, env, origin) {
   const marker = await env.FEED_STORAGE.get(refreshMarkerKey(requestId));
   if (!marker) return json({ error: 'Операция обновления не найдена или уже удалена.' }, 404, origin, env);
   const operation = await marker.json();
-  const runs = await github(env, '/actions/workflows/deploy-pages.yml/runs?event=repository_dispatch&per_page=50');
-  const sourceRun = (runs.workflow_runs || []).find((run) => String(run.display_title || '').includes(`[${requestId}]`));
-  const sourceStatus = workflowStatus(sourceRun, 'building');
-  if (sourceStatus === 'queued') {
-    return json({ request: requestId, project: operation.project, status: 'queued', requestedAt: operation.requestedAt }, 200, origin, env);
+  const requestedAtMs = Date.parse(operation.requestedAt || '');
+  const sourceState = await sourceRefreshState(env, operation);
+  if (!sourceState) {
+    if (Number.isFinite(requestedAtMs) && Date.now() - requestedAtMs > REFRESH_SOURCE_TIMEOUT_MS) {
+      return json({ request: requestId, project: operation.project, status: 'failed', message: 'Обновление Profitbase не завершилось за 20 минут. Повторите попытку.' }, 200, origin, env);
+    }
+    return json({ request: requestId, project: operation.project, status: 'building', requestedAt: operation.requestedAt }, 200, origin, env);
   }
-  if (sourceStatus === 'building') {
-    return json({ request: requestId, project: operation.project, status: 'building', runUrl: sourceRun.html_url || '', updatedAt: sourceRun.updated_at || '' }, 200, origin, env);
-  }
-  if (sourceStatus === 'failed') {
-    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Не удалось обновить выбранный объект. Profitbase не ответил после повторных попыток либо сборка завершилась ошибкой.', runUrl: sourceRun.html_url || '' }, 200, origin, env);
+
+  if (await frontendFeedMatches(env, operation)) {
+    operation.completedAt = operation.completedAt || new Date().toISOString();
+    operation.sourceCompletedAt = sourceState.checkedAt;
+    await saveRefreshOperation(env, operation);
+    return json({ request: requestId, project: operation.project, status: 'published', completedAt: operation.completedAt }, 200, origin, env);
   }
 
   if (!operation.frontendDispatchedAt) {
     await dispatchFrontendDeploy(env);
     operation.frontendDispatchedAt = new Date().toISOString();
-    operation.sourceCompletedAt = sourceRun.updated_at || operation.frontendDispatchedAt;
+    operation.sourceCompletedAt = sourceState.checkedAt;
     await saveRefreshOperation(env, operation);
     return json({ request: requestId, project: operation.project, status: 'deploying', updatedAt: operation.frontendDispatchedAt }, 200, origin, env);
   }
 
-  const frontendRepository = String(env.GITHUB_FRONTEND_REPOSITORY || 'indigo-dm/feed-studio');
-  const frontendRuns = await githubRepository(env, frontendRepository, '/actions/workflows/deploy-pages.yml/runs?event=repository_dispatch&per_page=30');
-  const dispatchedAt = new Date(operation.frontendDispatchedAt).getTime() - 5000;
-  const frontendRun = (frontendRuns.workflow_runs || []).find((run) => new Date(run.created_at || 0).getTime() >= dispatchedAt);
-  const frontendStatus = workflowStatus(frontendRun, 'deploying');
-  if (frontendStatus === 'failed') {
-    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Данные обновлены, но публикация Feed Studio завершилась ошибкой.', runUrl: frontendRun.html_url || '' }, 200, origin, env);
+  const frontendDispatchedAtMs = Date.parse(operation.frontendDispatchedAt);
+  if (Number.isFinite(frontendDispatchedAtMs) && Date.now() - frontendDispatchedAtMs > REFRESH_FRONTEND_TIMEOUT_MS) {
+    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Данные обновлены, но публичный XML не появился за 10 минут. Повторите попытку.' }, 200, origin, env);
   }
-  if (frontendStatus !== 'success') {
-    return json({ request: requestId, project: operation.project, status: 'deploying', runUrl: frontendRun && frontendRun.html_url || '', updatedAt: frontendRun && frontendRun.updated_at || operation.frontendDispatchedAt }, 200, origin, env);
-  }
-  operation.completedAt = frontendRun.updated_at || new Date().toISOString();
-  if (!operation.frontendRunId) {
-    operation.frontendRunId = frontendRun.id;
-    await saveRefreshOperation(env, operation);
-  }
-  return json({ request: requestId, project: operation.project, status: 'published', completedAt: operation.completedAt, runUrl: frontendRun.html_url || '' }, 200, origin, env);
+  return json({ request: requestId, project: operation.project, status: 'deploying', updatedAt: operation.frontendDispatchedAt }, 200, origin, env);
 }
 
 const PUBLIC_DATA_FILES = new Set([
