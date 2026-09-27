@@ -73,7 +73,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: ${{ vars.R2_BUCKET }}
+          R2_BUCKET: indigo-feed-studio
         run: |
           args=(--source fast-site --data-only)
           if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
