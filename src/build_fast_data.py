@@ -25,7 +25,7 @@ FAST_SITE = Path(os.environ.get("FAST_SITE_DIR", ROOT / "fast-site"))
 PROJECT_SITE = FAST_SITE / "projects" / PROJECT_SLUG
 PAGES_ROOT = os.environ.get(
     "FEED_ASSET_PUBLIC_ROOT",
-    "https://indigo-dm.github.io/novyy-gorizont-feed",
+    "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media",
 ).rstrip("/")
 DATA_ROOT = os.environ.get(
     "FEED_DATA_PUBLIC_ROOT",

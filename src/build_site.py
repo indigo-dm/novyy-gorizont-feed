@@ -21,6 +21,10 @@ from material_catalog import build_material_catalog
 
 SITE = ROOT / "site"
 PROJECT_SITE = SITE / "projects" / PROJECT_SLUG
+ASSET_ROOT = os.environ.get(
+    "FEED_ASSET_PUBLIC_ROOT",
+    "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media",
+).rstrip("/")
 manifest = json.loads((OUTPUT_DIR / "full-manifest.json").read_text(encoding="utf-8"))
 rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))
 config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
@@ -47,7 +51,7 @@ shutil.copy2(OUTPUT_DIR / "pilot-avito.xml", PROJECT_SITE / "pilot-avito.xml")
 shutil.copy2(OUTPUT_DIR / "avito.xml", PROJECT_SITE / "avito.xml")
 shutil.copy2(INPUT_DIR / "avito.xml", PROJECT_SITE / "source-profitbase.xml")
 
-public_prefix = f"projects/{PROJECT_SLUG}"
+public_prefix = f"{ASSET_ROOT}/projects/{PROJECT_SLUG}"
 public_items = []
 for item in manifest["items"]:
     public_items.append({

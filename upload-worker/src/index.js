@@ -33,6 +33,47 @@ function bytesToBase64(bytes) {
   return btoa(binary);
 }
 
+function encodedPath(path) {
+  return String(path || '').split('/').map(encodeURIComponent).join('/');
+}
+
+function publicBase(request, env) {
+  return String(env.PUBLIC_BASE_URL || new URL(request.url).origin).replace(/\/+$/, '');
+}
+
+function r2Available(env) {
+  return Boolean(env.FEED_STORAGE && typeof env.FEED_STORAGE.get === 'function');
+}
+
+function safeStorageKey(value) {
+  const key = String(value || '').replace(/^\/+/, '');
+  if (!key || key.includes('\\') || key.split('/').some((part) => !part || part === '.' || part === '..')) return '';
+  return key;
+}
+
+function mimeForKey(key) {
+  if (/\.json$/i.test(key)) return 'application/json; charset=utf-8';
+  if (/\.xml$/i.test(key)) return 'application/xml; charset=utf-8';
+  if (/\.png$/i.test(key)) return 'image/png';
+  if (/\.jpe?g$/i.test(key)) return 'image/jpeg';
+  if (/\.webp$/i.test(key)) return 'image/webp';
+  if (/\.svg$/i.test(key)) return 'image/svg+xml';
+  if (/\.ttf$/i.test(key)) return 'font/ttf';
+  return 'application/octet-stream';
+}
+
+function objectResponse(object, request, cacheControl) {
+  const headers = new Headers({
+    'Access-Control-Allow-Origin': '*',
+    'X-Content-Type-Options': 'nosniff',
+    'Cache-Control': cacheControl
+  });
+  if (object && typeof object.writeHttpMetadata === 'function') object.writeHttpMetadata(headers);
+  if (!headers.has('Content-Type')) headers.set('Content-Type', mimeForKey(object && object.key));
+  if (object && object.httpEtag) headers.set('ETag', object.httpEtag);
+  return new Response(request.method === 'HEAD' ? null : object.body, { status: 200, headers });
+}
+
 function validMagic(bytes, mime) {
   if (mime === 'image/jpeg') return bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
   if (mime === 'image/png') return bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47;
@@ -157,6 +198,27 @@ async function upload(request, env, origin) {
   const stamp = Date.now().toString(36);
   const imageId = `add-${stamp}-${digest.slice(0, 10)}`;
   const path = `uploads/${project}/${lot}/${imageId}.${extension}`;
+  if (r2Available(env)) {
+    await env.FEED_STORAGE.put(path, bytes, {
+      httpMetadata: {
+        contentType: file.type,
+        cacheControl: 'public, max-age=300, must-revalidate'
+      },
+      customMetadata: {
+        project,
+        lot,
+        imageId,
+        uploadedAt: new Date().toISOString()
+      }
+    });
+    return json({
+      id: imageId,
+      url: `${publicBase(request, env)}/media/${encodedPath(path)}`,
+      path,
+      size: file.size,
+      storage: 'r2'
+    }, 201, origin, env);
+  }
   const branch = await ensureMediaBranch(env);
   await github(env, `/contents/${path.split('/').map(encodeURIComponent).join('/')}`, {
     method: 'PUT',
@@ -166,8 +228,8 @@ async function upload(request, env, origin) {
       branch
     })
   });
-  const encodedPath = path.split('/').map(encodeURIComponent).join('/');
-  const url = `https://raw.githubusercontent.com/${env.GITHUB_REPOSITORY}/${encodeURIComponent(branch)}/${encodedPath}`;
+  const githubPath = encodedPath(path);
+  const url = `https://raw.githubusercontent.com/${env.GITHUB_REPOSITORY}/${encodeURIComponent(branch)}/${githubPath}`;
   return json({ id: imageId, url, path, size: file.size }, 201, origin, env);
 }
 
@@ -269,6 +331,89 @@ function allowedProjects(env) {
   return new Set(String(env.ALLOWED_PROJECTS || '').split(',').map((value) => value.trim()).filter(Boolean));
 }
 
+function pendingDeletionPaths(payload, project) {
+  const source = Array.isArray(payload && payload.pending_upload_deletions) ? payload.pending_upload_deletions : [];
+  return source.slice(0, 50).map((item) => {
+    const lot = String(item && item.lot || '');
+    const id = String(item && item.id || '');
+    const path = safeStorageKey(item && item.path);
+    const expected = new RegExp(`^uploads/${project.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/${lot.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\.(?:jpg|jpeg|png|webp)$`, 'i');
+    return /^\d{1,20}$/.test(lot) && /^add-[A-Za-z0-9_-]+$/.test(id) && expected.test(path) ? path : '';
+  }).filter(Boolean);
+}
+
+async function rememberOperation(env, issueNumber, project, payload) {
+  if (!r2Available(env)) return;
+  const deletionPaths = pendingDeletionPaths(payload, project);
+  if (!deletionPaths.length) return;
+  await env.FEED_STORAGE.put(`operations/${issueNumber}.json`, JSON.stringify({
+    project,
+    deletionPaths,
+    createdAt: new Date().toISOString()
+  }), {
+    httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+  });
+}
+
+async function completeOperation(env, issueNumber) {
+  if (!r2Available(env)) return 0;
+  const markerKey = `operations/${issueNumber}.json`;
+  const marker = await env.FEED_STORAGE.get(markerKey);
+  if (!marker) return 0;
+  const payload = await marker.json();
+  const deletionPaths = Array.isArray(payload && payload.deletionPaths)
+    ? payload.deletionPaths.map(safeStorageKey).filter((path) => /^uploads\//.test(path))
+    : [];
+  if (deletionPaths.length) await env.FEED_STORAGE.delete(deletionPaths);
+  await env.FEED_STORAGE.delete(markerKey);
+  return deletionPaths.length;
+}
+
+function collectReferencedUploads(settings, referenced) {
+  const overrides = settings && settings.image_settings && settings.image_settings.lot_overrides;
+  if (!overrides || typeof overrides !== 'object') return;
+  for (const override of Object.values(overrides)) {
+    for (const image of Array.isArray(override && override.added) ? override.added : []) {
+      const path = safeStorageKey(image && image.path);
+      if (/^uploads\//.test(path)) referenced.add(path);
+    }
+  }
+}
+
+async function cleanupOrphanUploads(env) {
+  if (!r2Available(env)) return { scanned: 0, deleted: 0 };
+  const referenced = new Set();
+  for (const project of allowedProjects(env)) {
+    const settings = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
+    if (!settings) continue;
+    try {
+      collectReferencedUploads(await settings.json(), referenced);
+    } catch (error) {
+      console.error(`Cannot parse settings for ${project}`, error);
+    }
+  }
+  const retentionDays = Math.max(1, Number(env.ORPHAN_RETENTION_DAYS || 7));
+  const cutoff = Date.now() - retentionDays * 86400000;
+  let cursor;
+  let scanned = 0;
+  let deleted = 0;
+  do {
+    const page = await env.FEED_STORAGE.list({ prefix: 'uploads/', cursor, limit: 1000 });
+    const stale = [];
+    for (const object of page.objects || []) {
+      scanned += 1;
+      const uploaded = object.uploaded instanceof Date ? object.uploaded.getTime() : new Date(object.uploaded || 0).getTime();
+      if (!referenced.has(object.key) && uploaded && uploaded < cutoff) stale.push(object.key);
+    }
+    if (stale.length) {
+      await env.FEED_STORAGE.delete(stale);
+      deleted += stale.length;
+    }
+    cursor = page.truncated ? page.cursor : undefined;
+  } while (cursor);
+  return { scanned, deleted };
+}
+
 async function createSettingsRequest(request, env, origin) {
   if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
   const payload = await request.json();
@@ -291,6 +436,7 @@ async function createSettingsRequest(request, env, origin) {
       body
     })
   });
+  await rememberOperation(env, issue.number, project, payload);
   return json({ request: issue.number, status: 'queued', createdAt: issue.created_at }, 202, origin, env);
 }
 
@@ -301,12 +447,13 @@ async function settingsStatus(request, env, origin) {
   const issue = await github(env, `/issues/${requestNumber}`);
   if (!String(issue.title || '').startsWith('[feed-settings]')) return json({ error: 'Операция не относится к настройкам фида.' }, 404, origin, env);
   if (issue.state === 'closed') {
+    const deletedUploads = await completeOperation(env, issue.number);
     try {
       await dispatchFrontendDeploy(env);
     } catch (error) {
       console.error(error);
     }
-    return json({ request: issue.number, status: 'published', completedAt: issue.closed_at || issue.updated_at }, 200, origin, env);
+    return json({ request: issue.number, status: 'published', completedAt: issue.closed_at || issue.updated_at, deletedUploads }, 200, origin, env);
   }
   const comments = await github(env, `/issues/${requestNumber}/comments?per_page=30`);
   const failure = comments.find((comment) => /не применены|завершилась ошибкой/i.test(String(comment.body || '')));
@@ -342,6 +489,12 @@ async function publicData(request, env, path) {
       headers: { ...JSON_HEADERS, 'Access-Control-Allow-Origin': '*' }
     });
   }
+  if (r2Available(env)) {
+    const object = request.method === 'HEAD'
+      ? await env.FEED_STORAGE.head(target)
+      : await env.FEED_STORAGE.get(target);
+    if (object) return objectResponse(object, request, 'no-store, max-age=0');
+  }
   const source = await githubRaw(env, target, env.GITHUB_DATA_BRANCH || 'feed-data');
   const isXml = target.endsWith('.xml');
   const headers = {
@@ -353,6 +506,35 @@ async function publicData(request, env, path) {
   const etag = source.headers.get('ETag');
   if (etag) headers.ETag = etag;
   return new Response(request.method === 'HEAD' ? null : source.body, { status: 200, headers });
+}
+
+async function publicMedia(request, env, path) {
+  let decoded;
+  try {
+    decoded = decodeURIComponent(path.replace(/^\/media\//, ''));
+  } catch {
+    decoded = '';
+  }
+  const key = safeStorageKey(decoded);
+  const allowed = /^(?:projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/(?:images|previews|thumbnails|assets)\/|uploads\/)/.test(key);
+  if (!allowed) return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });
+  if (r2Available(env)) {
+    const object = request.method === 'HEAD'
+      ? await env.FEED_STORAGE.head(key)
+      : await env.FEED_STORAGE.get(key);
+    if (object) return objectResponse(object, request, 'public, max-age=300, must-revalidate');
+  }
+  if (/^projects\//.test(key) && env.LEGACY_MEDIA_ROOT) {
+    const legacy = await fetch(`${String(env.LEGACY_MEDIA_ROOT).replace(/\/+$/, '')}/${encodedPath(key)}`);
+    if (legacy.ok) {
+      const headers = new Headers(legacy.headers);
+      headers.set('Access-Control-Allow-Origin', '*');
+      headers.set('Cache-Control', 'public, max-age=300, must-revalidate');
+      headers.set('X-Content-Type-Options', 'nosniff');
+      return new Response(request.method === 'HEAD' ? null : legacy.body, { status: 200, headers });
+    }
+  }
+  return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });
 }
 
 export default {
@@ -367,6 +549,17 @@ export default {
         return new Response(JSON.stringify({ error: 'Данные фида временно недоступны.' }), {
           status: 502,
           headers: { ...JSON_HEADERS, 'Access-Control-Allow-Origin': '*' }
+        });
+      }
+    }
+    if ((request.method === 'GET' || request.method === 'HEAD') && path.startsWith('/media/')) {
+      try {
+        return await publicMedia(request, env, path);
+      } catch (error) {
+        console.error(error);
+        return new Response('Media temporarily unavailable', {
+          status: 502,
+          headers: { 'Access-Control-Allow-Origin': '*', 'Cache-Control': 'no-store' }
         });
       }
     }
@@ -385,5 +578,8 @@ export default {
       console.error(error);
       return json({ error: 'Сервис временно недоступен. Повторите попытку.' }, 502, origin, env);
     }
+  },
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(cleanupOrphanUploads(env).then((result) => console.log(JSON.stringify({ event: 'r2-cleanup', ...result }))));
   }
 };

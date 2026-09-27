@@ -1,4 +1,4 @@
-name: Build and deploy pilot feed
+name: Build and publish branded feeds
 
 on:
   workflow_dispatch:
@@ -42,8 +42,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
   actions: read
 
 concurrency:
@@ -53,9 +51,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -102,7 +97,7 @@ jobs:
         env:
           PUBLISHED_DATA_DIR: .feed-data/published
           RENDER_CACHE_DIR: render-cache
-          CURRENT_PAGES_ROOT: https://indigo-dm.github.io/novyy-gorizont-feed
+          CURRENT_PAGES_ROOT: https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media
         run: python src/seed_render_cache.py
 
       - name: Prepare current site snapshot
@@ -125,23 +120,35 @@ jobs:
           PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
           FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
           FEED_STUDIO_UPLOAD_URL: ${{ vars.FEED_STUDIO_UPLOAD_URL }}
+          FEED_ASSET_PUBLIC_ROOT: https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media
         run: python src/build_all.py
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v6
+      - name: Update generated data branch
+        env:
+          PROJECT_SLUG: ${{ inputs.project }}
+        run: |
+          args=(--source site --destination .feed-data/published)
+          if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
+          python src/sync_fast_data.py "${args[@]}"
+          git -C .feed-data config user.name "github-actions[bot]"
+          git -C .feed-data config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C .feed-data add published
+          if git -C .feed-data diff --cached --quiet; then
+            echo "Generated feed data is already current."
+          else
+            git -C .feed-data commit -m "Publish generated feed data"
+            git -C .feed-data push origin feed-data
+          fi
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-
-      - name: Deploy Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
-
-  publish-data:
-    needs: build
-    uses: ./.github/workflows/build-fast-data.yml
-    with:
-      project: ${{ inputs.project }}
-    secrets: inherit
+      - name: Publish changed project files to Cloudflare R2
+        env:
+          PROJECT_SLUG: ${{ inputs.project }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ vars.R2_BUCKET }}
+        run: |
+          aws --version
+          args=(--source site)
+          if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
+          python src/publish_r2.py "${args[@]}"

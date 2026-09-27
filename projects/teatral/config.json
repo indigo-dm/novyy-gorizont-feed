@@ -1,7 +1,7 @@
 {
   "project": "ЖК Театрал",
   "source_feed_key": "teatral",
-  "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/teatral/images",
+  "public_image_base_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images",
   "brand": {
     "green": "#1F334B",
     "green_dark": "#0A0A0A",
