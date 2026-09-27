@@ -66,7 +66,8 @@ function objectResponse(object, request, cacheControl) {
   const headers = new Headers({
     'Access-Control-Allow-Origin': '*',
     'X-Content-Type-Options': 'nosniff',
-    'Cache-Control': cacheControl
+    'Cache-Control': cacheControl,
+    'X-Feed-Storage': 'r2'
   });
   if (object && typeof object.writeHttpMetadata === 'function') object.writeHttpMetadata(headers);
   if (!headers.has('Content-Type')) headers.set('Content-Type', mimeForKey(object && object.key));
@@ -501,7 +502,8 @@ async function publicData(request, env, path) {
     'Content-Type': isXml ? 'application/xml; charset=utf-8' : 'application/json; charset=utf-8',
     'Cache-Control': 'no-store, max-age=0',
     'Access-Control-Allow-Origin': '*',
-    'X-Content-Type-Options': 'nosniff'
+    'X-Content-Type-Options': 'nosniff',
+    'X-Feed-Storage': 'github-feed-data'
   };
   const etag = source.headers.get('ETag');
   if (etag) headers.ETag = etag;
@@ -519,9 +521,10 @@ async function publicMedia(request, env, path) {
   const allowed = /^(?:projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/(?:images|previews|thumbnails|assets)\/|uploads\/)/.test(key);
   if (!allowed) return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });
   if (r2Available(env)) {
+    const storageKey = /^projects\//.test(key) ? `media/${key}` : key;
     const object = request.method === 'HEAD'
-      ? await env.FEED_STORAGE.head(key)
-      : await env.FEED_STORAGE.get(key);
+      ? await env.FEED_STORAGE.head(storageKey)
+      : await env.FEED_STORAGE.get(storageKey);
     if (object) return objectResponse(object, request, 'public, max-age=300, must-revalidate');
   }
   if (/^projects\//.test(key) && env.LEGACY_MEDIA_ROOT) {
@@ -531,6 +534,7 @@ async function publicMedia(request, env, path) {
       headers.set('Access-Control-Allow-Origin', '*');
       headers.set('Cache-Control', 'public, max-age=300, must-revalidate');
       headers.set('X-Content-Type-Options', 'nosniff');
+      headers.set('X-Feed-Storage', 'legacy-pages');
       return new Response(request.method === 'HEAD' ? null : legacy.body, { status: 200, headers });
     }
   }

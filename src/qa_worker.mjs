@@ -47,6 +47,9 @@ const feedStorage = new FakeR2();
 await feedStorage.put('published/projects/novyy-gorizont/avito.xml', '<?xml version="1.0" encoding="UTF-8"?><Ads />', {
   httpMetadata: { contentType: 'application/xml; charset=utf-8' }
 });
+await feedStorage.put('media/projects/novyy-gorizont/images/qa-generated.png', new Uint8Array([0x89, 0x50, 0x4e, 0x47]), {
+  httpMetadata: { contentType: 'image/png' }
+});
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-test.jpg', 'delete-me', '2026-09-01T00:00:00Z');
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-orphan.jpg', 'orphan', '2026-09-01T00:00:00Z');
 const env = {
@@ -123,6 +126,7 @@ const imageUploadResponse = await worker.fetch(new Request('https://worker.examp
 }), env);
 const imageUpload = await imageUploadResponse.json();
 const mediaResponse = await worker.fetch(new Request(imageUpload.url), env);
+const generatedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png'), env);
 
 const materialBody = new FormData();
 materialBody.append('project', 'novyy-gorizont');
@@ -153,6 +157,7 @@ const result = {
   ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
     materialUploadResponse.status === 201 && materialUploadCreated && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
     imageUploadResponse.status === 201 && imageUpload.storage === 'r2' && imageUpload.url.startsWith('https://worker.example/media/uploads/') && mediaResponse.status === 200 &&
+    generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && frontendDeployDispatched &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
     !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-test.jpg') &&
@@ -169,6 +174,8 @@ const result = {
   image_upload_status: imageUploadResponse.status,
   image_storage: imageUpload.storage,
   media_status: mediaResponse.status,
+  generated_media_status: generatedMediaResponse.status,
+  generated_media_storage: generatedMediaResponse.headers.get('X-Feed-Storage'),
   public_data_status: dataResponse.status,
   public_data_head_status: headResponse.status,
   orphan_cleanup: !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg')
