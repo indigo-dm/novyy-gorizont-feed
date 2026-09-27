@@ -1,12 +1,12 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-09-27T09:23:20+03:00",
-  "source_ads": 308,
-  "full_ads": 308,
+  "checked_at": "2026-09-27T12:28:04+03:00",
+  "source_ads": 307,
+  "full_ads": 307,
   "excluded_ads": 0,
   "unique_plans": 167,
   "active_promotions": 0,
   "publish_ready": false,
-  "mode": "fast-data"
+  "mode": "full-demo"
 }

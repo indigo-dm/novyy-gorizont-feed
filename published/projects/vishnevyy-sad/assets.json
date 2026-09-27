@@ -11,7 +11,7 @@
       "filename": "key-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/key-render.jpg",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/vishnevyy-sad/assets/key-render.jpg",
       "active_for": [
         "key_render"
       ],
@@ -24,7 +24,7 @@
       "filename": "logo-vishnevyy-sad.png",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-vishnevyy-sad.png",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/vishnevyy-sad/assets/logo-vishnevyy-sad.png",
       "active_for": [
         "logo"
       ],
@@ -37,7 +37,7 @@
       "filename": "logo-mark.png",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/logo-mark.png",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/vishnevyy-sad/assets/logo-mark.png",
       "active_for": [],
       "uploaded": false
     },
@@ -48,7 +48,7 @@
       "filename": "render-aerial.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-aerial.jpg",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/vishnevyy-sad/assets/render-aerial.jpg",
       "active_for": [],
       "uploaded": false
     },
@@ -59,7 +59,7 @@
       "filename": "render-facade.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/vishnevyy-sad/assets/render-facade.jpg",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/vishnevyy-sad/assets/render-facade.jpg",
       "active_for": [],
       "uploaded": false
     }

@@ -1,12 +1,12 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-09-27T09:23:18+03:00",
+  "checked_at": "2026-09-27T12:28:01+03:00",
   "source_ads": 217,
   "full_ads": 217,
   "excluded_ads": 0,
   "unique_plans": 13,
   "active_promotions": 1,
   "publish_ready": false,
-  "mode": "fast-data"
+  "mode": "full-demo"
 }

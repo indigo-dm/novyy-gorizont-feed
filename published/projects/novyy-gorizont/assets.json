@@ -11,7 +11,7 @@
       "filename": "logo-gold.svg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/logo-gold.svg",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/assets/logo-gold.svg",
       "active_for": [
         "logo"
       ],
@@ -24,7 +24,7 @@
       "filename": "selected-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/novyy-gorizont/assets/selected-render.jpg",
+      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/assets/selected-render.jpg",
       "active_for": [
         "key_render"
       ],
