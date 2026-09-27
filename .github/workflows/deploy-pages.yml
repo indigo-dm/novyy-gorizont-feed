@@ -2,7 +2,32 @@ name: Build and deploy pilot feed
 
 on:
   workflow_dispatch:
+    inputs:
+      project:
+        description: Project slug; empty rebuilds every active project
+        required: false
+        type: string
+        default: ""
+      render_ids:
+        description: Comma-separated lot ids, changed, or all
+        required: false
+        type: string
+        default: ""
+  schedule:
+    - cron: "27 * * * *"
+      timezone: "Europe/Moscow"
   workflow_call:
+    inputs:
+      project:
+        description: Project slug; empty rebuilds every active project
+        required: false
+        type: string
+        default: ""
+      render_ids:
+        description: Comma-separated lot ids or all
+        required: false
+        type: string
+        default: ""
   push:
     paths:
       - "assets/**"
@@ -37,6 +62,12 @@ jobs:
         with:
           ref: main
 
+      - name: Checkout current published data
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          path: .feed-data
+
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
@@ -56,11 +87,40 @@ jobs:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('package.json') }}
 
+      - name: Restore rendered card cache
+        uses: actions/cache@v5
+        with:
+          path: render-cache
+          key: ${{ runner.os }}-rendered-cards-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-rendered-cards-
+
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Build and validate all project feeds
+      - name: Seed unchanged rendered cards
         env:
+          PUBLISHED_DATA_DIR: .feed-data/published
+          RENDER_CACHE_DIR: render-cache
+          CURRENT_PAGES_ROOT: https://indigo-dm.github.io/novyy-gorizont-feed
+        run: python src/seed_render_cache.py
+
+      - name: Prepare current site snapshot
+        env:
+          FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
+          PUBLISHED_DATA_DIR: .feed-data/published
+          RENDER_CACHE_DIR: render-cache
+        run: |
+          python src/prepare_site.py
+          python src/seed_site.py
+
+      - name: Build and validate affected project cards
+        env:
+          PROJECT_SLUG: ${{ inputs.project }}
+          RENDER_IDS: ${{ inputs.render_ids || (github.event_name == 'schedule' && 'changed') || '' }}
+          RENDER_CACHE_DIR: render-cache
+          PUBLISHED_DATA_DIR: .feed-data/published
+          SITE_PREPARED: "1"
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
           PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
           FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
@@ -82,4 +142,6 @@ jobs:
   publish-data:
     needs: build
     uses: ./.github/workflows/build-fast-data.yml
+    with:
+      project: ${{ inputs.project }}
     secrets: inherit

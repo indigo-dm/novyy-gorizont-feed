@@ -25,14 +25,20 @@ def main() -> None:
     default_slug = str(REGISTRY["default_project"])
     build_id = os.environ.get("BUILD_ID", "").strip() or datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
     fallback_url = os.environ.get("PROFITBASE_FEED_URL", "").strip()
+    requested_slug = os.environ.get("PROJECT_SLUG", "").strip()
+    if requested_slug and not any(str(item["slug"]) == requested_slug for item in REGISTRY["projects"]):
+        raise ValueError(f"Unknown project: {requested_slug}")
     build_env = os.environ.copy()
     build_env["BUILD_ID"] = build_id
-    run([sys.executable, "src/prepare_site.py"], build_env)
+    if os.environ.get("SITE_PREPARED") != "1":
+        run([sys.executable, "src/prepare_site.py"], build_env)
 
     public_projects: list[dict[str, object]] = []
     node = os.environ.get("NODE_BINARY", "node")
     for project in REGISTRY["projects"]:
         slug = str(project["slug"])
+        if requested_slug and slug != requested_slug:
+            continue
         feed_url = feeds.get(slug, "") or (fallback_url if slug == default_slug else "")
         available = bool(feed_url and project.get("status") == "active")
         public_projects.append({
@@ -53,14 +59,32 @@ def main() -> None:
         run([sys.executable, "src/validate_pilot.py"], env)
         run([sys.executable, "src/build_site.py"], env)
 
-    if not any(item["available"] for item in public_projects):
-        raise RuntimeError("No configured project feeds were available")
-    public_registry = {
-        "version": 1,
-        "build_id": build_id,
-        "default_project": default_slug,
-        "projects": public_projects,
-    }
+    if requested_slug:
+        registry_path = ROOT / "site" / "projects.json"
+        public_registry = json.loads(registry_path.read_text(encoding="utf-8")) if registry_path.is_file() else {
+            "version": 1,
+            "default_project": default_slug,
+            "projects": [],
+        }
+        public_registry["build_id"] = build_id
+        built = next((item for item in public_projects if item["slug"] == requested_slug), None)
+        if built is None or not built["available"]:
+            raise RuntimeError(f"Configured project feed is unavailable: {requested_slug}")
+        for item in public_registry.get("projects", []):
+            if item.get("slug") == requested_slug:
+                item.update(built)
+                break
+        else:
+            public_registry.setdefault("projects", []).append(built)
+    else:
+        if not any(item["available"] for item in public_projects):
+            raise RuntimeError("No configured project feeds were available")
+        public_registry = {
+            "version": 1,
+            "build_id": build_id,
+            "default_project": default_slug,
+            "projects": public_projects,
+        }
     (ROOT / "site" / "projects.json").write_text(
         json.dumps(public_registry, ensure_ascii=False, indent=2), encoding="utf-8"
     )

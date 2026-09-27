@@ -239,6 +239,7 @@ def main() -> None:
     tree = ET.parse(INPUT_XML)
     root = tree.getroot()
     ads = list(root.findall("Ad"))
+    selective_render = os.environ.get("RENDER_IDS", "").strip().lower() not in ("", "all")
 
     items: list[dict[str, object]] = []
     ads_by_id: dict[str, ET.Element] = {}
@@ -254,7 +255,11 @@ def main() -> None:
         plan_url = urls[0]
         plan_file = f"cache/plans/{local_plan_name(plan_url)}"
         plan_path = WORK_DIR / plan_file
-        if os.environ.get("FAST_BUILD") != "1" and (not plan_path.exists() or plan_path.stat().st_size == 0):
+        if (
+            os.environ.get("FAST_BUILD") != "1"
+            and not selective_render
+            and (not plan_path.exists() or plan_path.stat().st_size == 0)
+        ):
             download(plan_url, plan_path)
         house_id = node_text(ad, "NewDevelopmentId")
         item: dict[str, object] = {

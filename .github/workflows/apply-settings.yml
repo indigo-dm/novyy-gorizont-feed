@@ -18,11 +18,18 @@ jobs:
     outputs:
       project: ${{ steps.settings.outputs.project }}
       mode: ${{ steps.settings.outputs.mode }}
+      render_ids: ${{ steps.settings.outputs.render_ids }}
     steps:
       - name: Checkout main
         uses: actions/checkout@v7
         with:
           ref: main
+
+      - name: Checkout current published inventory
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          path: .feed-data
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -33,6 +40,7 @@ jobs:
         id: settings
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
+          PUBLISHED_INVENTORY_ROOT: .feed-data/published
         run: python src/apply_issue_settings.py
 
       - name: Commit settings
@@ -61,6 +69,9 @@ jobs:
     if: needs.apply.outputs.mode == 'full'
     needs: apply
     uses: ./.github/workflows/deploy-pages.yml
+    with:
+      project: ${{ needs.apply.outputs.project }}
+      render_ids: ${{ needs.apply.outputs.render_ids }}
     secrets: inherit
 
   cleanup-uploads:

@@ -247,11 +247,20 @@ def pending_upload_deletions(value: object, project_slug: str) -> list[dict[str,
     return result
 
 
-def material_settings(value: object, project_dir: Path, config: dict[str, object]) -> dict[str, str]:
+def hex_color(value: object, name: str, fallback: str = "") -> str:
+    candidate = str(value if value not in (None, "") else fallback).strip().upper()
+    if re.fullmatch(r"[0-9A-F]{6}", candidate):
+        candidate = "#" + candidate
+    if not re.fullmatch(r"#[0-9A-F]{6}", candidate):
+        raise ValueError(f"{name} must be a HEX color in #RRGGBB format")
+    return candidate
+
+
+def material_settings(value: object, project_dir: Path, config: dict[str, object]) -> dict[str, object]:
     source = value if isinstance(value, dict) else {}
     brand = config.get("brand") if isinstance(config.get("brand"), dict) else {}
     assets_dir = (project_dir / "assets").resolve()
-    result: dict[str, str] = {}
+    result: dict[str, object] = {}
     for role, fallback in (
         ("logo", str(brand.get("logo") or "logo.svg")),
         ("key_render", str(brand.get("key_render") or "key-render.jpg")),
@@ -265,7 +274,100 @@ def material_settings(value: object, project_dir: Path, config: dict[str, object
         if assets_dir not in target.parents or not target.is_file():
             raise ValueError(f"material_settings.{role} does not exist")
         result[role] = filename
+    primary_color = hex_color(
+        source.get("primary_color"),
+        "material_settings.primary_color",
+        str(brand.get("green") or "#000000"),
+    )
+    fallback_palette = brand.get("palette")
+    if not isinstance(fallback_palette, list) or not fallback_palette:
+        fallback_palette = [
+            {"name": "Основной", "value": brand.get("green")},
+            {"name": "Акцент", "value": brand.get("gold")},
+            {"name": "Серый", "value": brand.get("gray", "#9B9B9B")},
+            {"name": "Белый", "value": brand.get("white", "#FFFFFF")},
+        ]
+    raw_palette = source.get("palette") if "palette" in source else fallback_palette
+    if not isinstance(raw_palette, list) or not 1 <= len(raw_palette) <= 24:
+        raise ValueError("material_settings.palette must contain from 1 to 24 colors")
+    palette: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for index, item in enumerate(raw_palette, start=1):
+        color = item if isinstance(item, dict) else {"value": item}
+        color_value = hex_color(color.get("value"), f"material_settings.palette[{index}].value")
+        if color_value in seen:
+            raise ValueError("material_settings.palette contains duplicate colors")
+        seen.add(color_value)
+        palette.append({
+            "name": text(color.get("name"), f"material_settings.palette[{index}].name", 48, f"Цвет {index}"),
+            "value": color_value,
+        })
+    if primary_color not in seen:
+        raise ValueError("material_settings.primary_color must be present in the palette")
+    result["primary_color"] = primary_color
+    result["palette"] = palette
     return result
+
+
+def promotion_signature(
+    item: dict[str, object], rules: list[dict[str, object]], today: str
+) -> tuple[str, str] | None:
+    item_id = str(item.get("id") or "")
+    house_id = str(item.get("house_id") or "")
+    rooms = str(item.get("rooms") or "")
+    area = float(str(item.get("area") or 0))
+    for rule in rules:
+        if not rule.get("enabled"):
+            continue
+        starts_at = str(rule.get("starts_at") or "")
+        ends_at = str(rule.get("ends_at") or "")
+        if starts_at and today < starts_at:
+            continue
+        if ends_at and today > ends_at:
+            continue
+        if item_id in {str(value) for value in rule.get("exclude_ids", [])}:
+            continue
+        included = {str(value) for value in rule.get("include_ids", [])}
+        if included and item_id not in included:
+            continue
+        houses = {str(value) for value in rule.get("house_ids", [])}
+        if houses and house_id not in houses:
+            continue
+        room_values = {str(value) for value in rule.get("rooms", [])}
+        if room_values and rooms not in room_values:
+            continue
+        if rule.get("area_min") is not None and area < float(str(rule["area_min"])):
+            continue
+        if rule.get("area_max") is not None and area > float(str(rule["area_max"])):
+            continue
+        return str(rule.get("label") or "Акция"), str(rule.get("text") or "")
+    return None
+
+
+def promotion_render_ids(
+    previous_rules: list[dict[str, object]],
+    selected_rules: list[dict[str, object]],
+    project_slug: str,
+) -> list[str] | None:
+    inventory_root = os.environ.get("PUBLISHED_INVENTORY_ROOT", "").strip()
+    if not inventory_root:
+        return None
+    inventory_path = Path(inventory_root) / "projects" / project_slug / "inventory.json"
+    if not inventory_path.is_file():
+        return None
+    inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+    items = inventory.get("items") if isinstance(inventory, dict) else None
+    if not isinstance(items, list):
+        return None
+    today = date.today().isoformat()
+    return [
+        str(item.get("id"))
+        for item in items
+        if isinstance(item, dict)
+        and item.get("id") is not None
+        and promotion_signature(item, previous_rules, today)
+        != promotion_signature(item, selected_rules, today)
+    ]
 
 
 def validate(
@@ -356,19 +458,29 @@ def main() -> None:
         raise SystemExit(f"Invalid feed settings: {error}") from error
     output = project_dir / "promotion-rules.json"
     previous = json.loads(output.read_text(encoding="utf-8")) if output.exists() else {}
-    previous_materials = {
-        "logo": str(config.get("brand", {}).get("logo") or "logo.svg"),
-        "key_render": str(config.get("brand", {}).get("key_render") or "key-render.jpg"),
-    }
+    previous_materials = material_settings({}, project_dir, config)
     selected_materials = validated["material_settings"]
-    mode = "full" if (
-        previous.get("rules", []) != validated["rules"]
-        or previous_materials != selected_materials
-    ) else "fast"
+    render_material_fields = ("logo", "key_render", "primary_color")
+    global_render_change = any(
+        previous_materials[field] != selected_materials[field]
+        for field in render_material_fields
+    )
+    rules_changed = previous.get("rules", []) != validated["rules"]
+    affected_ids: list[str] | None = []
+    if global_render_change:
+        affected_ids = None
+    elif rules_changed:
+        affected_ids = promotion_render_ids(
+            previous.get("rules", []), validated["rules"], project_slug
+        )
+    mode = "full" if affected_ids is None or bool(affected_ids) else "fast"
+    render_ids = "all" if affected_ids is None else ",".join(affected_ids)
     if not isinstance(config.get("brand"), dict):
         raise SystemExit("Invalid project config: brand settings are missing")
     config["brand"]["logo"] = selected_materials["logo"]
     config["brand"]["key_render"] = selected_materials["key_render"]
+    config["brand"]["green"] = selected_materials["primary_color"]
+    config["brand"]["palette"] = selected_materials["palette"]
     (project_dir / "config.json").write_text(
         json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
@@ -378,9 +490,11 @@ def main() -> None:
         with Path(github_output).open("a", encoding="utf-8") as handle:
             handle.write(f"project={project_slug}\n")
             handle.write(f"mode={mode}\n")
+            handle.write(f"render_ids={render_ids}\n")
     print(json.dumps({
         "project": project_slug,
         "mode": mode,
+        "render_ids": render_ids,
         "rules": len(validated["rules"]),
         "output": str(output),
     }, ensure_ascii=False))

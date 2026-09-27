@@ -18,12 +18,66 @@ const config = JSON.parse(fs.readFileSync(path.join(projectDir, 'config.json'), 
 const outputDir = path.join(workDir, 'output', 'images');
 const previewDir = path.join(workDir, 'output', 'previews');
 const thumbnailDir = path.join(workDir, 'output', 'thumbnails');
-fs.rmSync(outputDir, { recursive: true, force: true });
-fs.rmSync(previewDir, { recursive: true, force: true });
-fs.rmSync(thumbnailDir, { recursive: true, force: true });
-fs.mkdirSync(outputDir, { recursive: true });
-fs.mkdirSync(previewDir, { recursive: true });
-fs.mkdirSync(thumbnailDir, { recursive: true });
+const renderCacheRoot = String(process.env.RENDER_CACHE_DIR || '').trim();
+const renderCacheProject = renderCacheRoot ? path.join(path.resolve(renderCacheRoot), projectSlug) : '';
+for (const [folder, destination] of [['images', outputDir], ['previews', previewDir], ['thumbnails', thumbnailDir]]) {
+  fs.rmSync(destination, { recursive: true, force: true });
+  fs.mkdirSync(destination, { recursive: true });
+  const cached = renderCacheProject ? path.join(renderCacheProject, folder) : '';
+  if (cached && fs.existsSync(cached)) fs.cpSync(cached, destination, { recursive: true });
+}
+
+const requestedRenderIds = String(process.env.RENDER_IDS || '').trim();
+const renderEveryItem = !requestedRenderIds || requestedRenderIds.toLowerCase() === 'all';
+const changedOnly = requestedRenderIds.toLowerCase() === 'changed';
+const renderIdSet = new Set(changedOnly
+  ? []
+  : requestedRenderIds.split(',').map((value) => value.trim()).filter(Boolean));
+const publishedDataDir = String(process.env.PUBLISHED_DATA_DIR || '').trim();
+const previousInventoryPath = publishedDataDir
+  ? path.join(path.resolve(publishedDataDir), 'projects', projectSlug, 'inventory.json')
+  : '';
+const previousInventory = previousInventoryPath && fs.existsSync(previousInventoryPath)
+  ? JSON.parse(fs.readFileSync(previousInventoryPath, 'utf8'))
+  : { items: [] };
+const previousItems = new Map((previousInventory.items || []).map((item) => [String(item.id), item]));
+const sourceImageUrl = (item) => {
+  if (item.plan_url) return String(item.plan_url);
+  const images = item.source_image_items || item.source_images || [];
+  const first = images[0];
+  return String(first && typeof first === 'object' ? first.url : first || '');
+};
+const cardSignature = (item) => JSON.stringify({
+  house: String(item.house || ''),
+  rooms: String(item.rooms || ''),
+  area: String(item.area || ''),
+  floor: String(item.floor || ''),
+  floors: String(item.floors || ''),
+  price: String(item.price || ''),
+  decoration: String(item.decoration || ''),
+  plan_url: sourceImageUrl(item),
+  promotion: item.promotion || null
+});
+const sourceCardChanged = (item) => {
+  const previous = previousItems.get(String(item.id));
+  return previous ? cardSignature(previous) !== cardSignature(item) : false;
+};
+const manifestIds = new Set(manifest.items.map((item) => String(item.id)));
+for (const [directory, extension] of [[outputDir, '.png'], [previewDir, '.webp'], [thumbnailDir, '.webp']]) {
+  for (const filename of fs.readdirSync(directory)) {
+    if (path.extname(filename).toLowerCase() === extension && !manifestIds.has(path.basename(filename, extension))) {
+      fs.rmSync(path.join(directory, filename), { force: true });
+    }
+  }
+}
+const hasCompleteRender = (item) => fs.existsSync(path.join(outputDir, `${item.id}.png`)) &&
+  fs.existsSync(path.join(previewDir, `${item.id}.webp`)) &&
+  fs.existsSync(path.join(thumbnailDir, `${item.id}.webp`));
+const changedSourceIds = new Set(manifest.items.filter(sourceCardChanged).map((item) => String(item.id)));
+const itemsToRender = manifest.items.filter((item) => renderEveryItem ||
+  renderIdSet.has(String(item.id)) ||
+  changedSourceIds.has(String(item.id)) ||
+  !hasCompleteRender(item));
 
 const mimeByExt = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.ttf': 'font/truetype' };
 const dataUrl = (filePath) => {
@@ -38,6 +92,28 @@ const esc = (value) => String(value ?? '')
 const formatNumber = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 2 }).format(Number(value));
 const formatPrice = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Number(value)) + ' ₽';
 const roomTitle = (rooms) => `${rooms}-комнатная квартира`;
+
+async function ensurePlanFile(item) {
+  const destination = path.join(workDir, item.plan_file);
+  if (fs.existsSync(destination) && fs.statSync(destination).size) return;
+  fs.mkdirSync(path.dirname(destination), { recursive: true });
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch(item.plan_url, { headers: { 'User-Agent': 'feed-studio-renderer/1.0' } });
+      if (!response.ok) throw new Error(`HTTP ${response.status} for ${item.plan_url}`);
+      const temporary = `${destination}.part`;
+      fs.writeFileSync(temporary, Buffer.from(await response.arrayBuffer()));
+      fs.rmSync(destination, { force: true });
+      fs.renameSync(temporary, destination);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) await new Promise((resolve) => setTimeout(resolve, 2 ** (attempt - 1) * 1000));
+    }
+  }
+  throw lastError;
+}
 
 async function createWebpVariants(page, sourceBuffer) {
   const source = `data:image/png;base64,${sourceBuffer.toString('base64')}`;
@@ -110,15 +186,13 @@ function htmlFor(item, includePromotion = true) {
 }
 
 (async () => {
-  const launchOptions = { headless: true };
-  if (process.env.CHROME_PATH) launchOptions.executablePath = process.env.CHROME_PATH;
-  else if (process.platform === 'win32') launchOptions.executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
-  const browser = await chromium.launch(launchOptions);
   const requestedConcurrency = Number(process.env.RENDER_CONCURRENCY || 4);
   const concurrency = Math.max(1, Math.min(6, Number.isFinite(requestedConcurrency) ? Math.floor(requestedConcurrency) : 4));
   let nextIndex = 0;
+  let browser;
 
   async function renderItem(page, item) {
+    await ensurePlanFile(item);
     await page.setContent(htmlFor(item, false), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     const previewSource = await page.screenshot({ type: 'png' });
@@ -135,8 +209,8 @@ function htmlFor(item, includePromotion = true) {
   async function renderWorker() {
     const page = await browser.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
     try {
-      while (nextIndex < manifest.items.length) {
-        const item = manifest.items[nextIndex++];
+      while (nextIndex < itemsToRender.length) {
+        const item = itemsToRender[nextIndex++];
         await renderItem(page, item);
       }
     } finally {
@@ -144,10 +218,33 @@ function htmlFor(item, includePromotion = true) {
     }
   }
 
-  await Promise.all(Array.from(
-    { length: Math.min(concurrency, Math.max(1, manifest.items.length)) },
-    () => renderWorker()
-  ));
-  await browser.close();
-  console.log(JSON.stringify({ rendered_ads: manifest.items.length, final_images: manifest.items.length, preview_images: manifest.items.length, thumbnail_images: manifest.items.length, concurrency }));
+  if (itemsToRender.length) {
+    const launchOptions = { headless: true };
+    if (process.env.CHROME_PATH) launchOptions.executablePath = process.env.CHROME_PATH;
+    else if (process.platform === 'win32') launchOptions.executablePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+    browser = await chromium.launch(launchOptions);
+    await Promise.all(Array.from(
+      { length: Math.min(concurrency, itemsToRender.length) },
+      () => renderWorker()
+    ));
+    await browser.close();
+  }
+  if (renderCacheProject) {
+    fs.rmSync(renderCacheProject, { recursive: true, force: true });
+    for (const [folder, source] of [['images', outputDir], ['previews', previewDir], ['thumbnails', thumbnailDir]]) {
+      fs.cpSync(source, path.join(renderCacheProject, folder), { recursive: true });
+    }
+  }
+  console.log(JSON.stringify({
+    project: projectSlug,
+    total_ads: manifest.items.length,
+    rendered_ads: itemsToRender.length,
+    reused_ads: manifest.items.length - itemsToRender.length,
+    requested_ids: renderEveryItem ? 'all' : (changedOnly ? 'changed' : renderIdSet.size),
+    changed_source_ids: changedSourceIds.size,
+    final_images: manifest.items.length,
+    preview_images: manifest.items.length,
+    thumbnail_images: manifest.items.length,
+    concurrency
+  }));
 })();

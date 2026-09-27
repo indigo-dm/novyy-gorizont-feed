@@ -58,7 +58,12 @@ const settingsResponse = await worker.fetch(new Request('https://worker.example/
     excluded_lot_ids: ['9301142'],
     image_settings: { lot_overrides: {}, bulk_rules: [] },
     parameter_settings: { lot_values: {}, bulk_rules: [] },
-    material_settings: { logo: 'logo-gold.svg', key_render: 'selected-render.jpg' },
+    material_settings: {
+      logo: 'logo-gold.svg',
+      key_render: 'selected-render.jpg',
+      primary_color: '#123ABC',
+      palette: [{ name: 'Основной', value: '#123ABC' }, { name: 'Акцент', value: '#CEAD75' }]
+    },
     pending_upload_deletions: [{ lot: '9301142', id: 'add-test', path: 'uploads/novyy-gorizont/9301142/add-test.jpg' }]
   })
 }), env);
@@ -86,7 +91,7 @@ const dataXml = await dataResponse.text();
 const headResponse = await worker.fetch(new Request('https://worker.example/data/projects/novyy-gorizont/avito.xml', { method: 'HEAD' }), env);
 
 const result = {
-  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
+  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
     materialUploadResponse.status === 201 && materialUploadCreated && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
     building.status === 'building' && published.status === 'published' && frontendDeployDispatched &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200,
@@ -96,7 +101,7 @@ const result = {
   frontend_deploy_dispatched: frontendDeployDispatched,
   deletion_forwarded: createdBody.includes('uploads/novyy-gorizont/9301142/add-test.jpg'),
   excluded_lot_forwarded: createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"'),
-  material_settings_forwarded: createdBody.includes('material_settings'),
+  material_settings_forwarded: createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"'),
   material_upload_status: materialUploadResponse.status,
   material_list_status: materialListResponse.status,
   public_data_status: dataResponse.status,

@@ -21,6 +21,7 @@ def xml_ids(path: Path) -> list[str]:
 
 def main() -> None:
     fast_build = os.environ.get("FAST_BUILD") == "1"
+    selective_render = os.environ.get("RENDER_IDS", "").strip().lower() not in ("", "all")
     pilot = json.loads(PILOT_MANIFEST.read_text(encoding="utf-8"))
     full = json.loads(FULL_MANIFEST.read_text(encoding="utf-8"))
     pilot_ids = [str(item["id"]) for item in pilot["items"]]
@@ -83,7 +84,7 @@ def main() -> None:
             if ad.find("NewDevelopmentId") is not None and ad.find("Address") is not None:
                 errors.append(f"Redundant Address remains for ad {expected_id} in {path.name}")
 
-    if not fast_build:
+    if not fast_build and not selective_render:
         for item in full["items"]:
             plan = WORK_DIR / str(item["plan_file"])
             if not plan.exists() or plan.stat().st_size == 0:
