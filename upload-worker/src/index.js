@@ -91,8 +91,8 @@ function validMagic(bytes, mime) {
   return false;
 }
 
-async function github(env, path, options = {}) {
-  const response = await fetch(`https://api.github.com/repos/${env.GITHUB_REPOSITORY}${path}`, {
+async function githubRepository(env, repository, path, options = {}) {
+  const response = await fetch(`https://api.github.com/repos/${repository}${path}`, {
     ...options,
     headers: {
       Accept: 'application/vnd.github+json',
@@ -107,7 +107,12 @@ async function github(env, path, options = {}) {
     const detail = await response.text();
     throw new Error(`GitHub ${response.status}: ${detail.slice(0, 240)}`);
   }
+  if (response.status === 204) return null;
   return response.json();
+}
+
+async function github(env, path, options = {}) {
+  return githubRepository(env, env.GITHUB_REPOSITORY, path, options);
 }
 
 async function githubRaw(env, path, branch) {
@@ -412,7 +417,26 @@ async function cleanupOrphanUploads(env) {
     }
     cursor = page.truncated ? page.cursor : undefined;
   } while (cursor);
-  return { scanned, deleted };
+  let markerScanned = 0;
+  let markerDeleted = 0;
+  for (const prefix of ['operations/', 'refresh-operations/']) {
+    let markerCursor;
+    do {
+      const page = await env.FEED_STORAGE.list({ prefix, cursor: markerCursor, limit: 1000 });
+      const stale = [];
+      for (const object of page.objects || []) {
+        markerScanned += 1;
+        const uploaded = object.uploaded instanceof Date ? object.uploaded.getTime() : new Date(object.uploaded || 0).getTime();
+        if (uploaded && uploaded < cutoff) stale.push(object.key);
+      }
+      if (stale.length) {
+        await env.FEED_STORAGE.delete(stale);
+        markerDeleted += stale.length;
+      }
+      markerCursor = page.truncated ? page.cursor : undefined;
+    } while (markerCursor);
+  }
+  return { scanned, deleted, markerScanned, markerDeleted };
 }
 
 async function createSettingsRequest(request, env, origin) {
@@ -462,6 +486,92 @@ async function settingsStatus(request, env, origin) {
     return json({ request: issue.number, status: 'failed', message: String(failure.body || 'Сборка завершилась ошибкой.') }, 200, origin, env);
   }
   return json({ request: issue.number, status: 'building', updatedAt: issue.updated_at }, 200, origin, env);
+}
+
+function refreshMarkerKey(requestId) {
+  return `refresh-operations/${requestId}.json`;
+}
+
+async function saveRefreshOperation(env, operation) {
+  if (!r2Available(env)) throw new Error('R2 storage is unavailable');
+  await env.FEED_STORAGE.put(refreshMarkerKey(operation.request), JSON.stringify(operation), {
+    httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+  });
+}
+
+async function createFeedRefreshRequest(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Хранилище операций временно недоступно.' }, 503, origin, env);
+  const payload = await request.json();
+  const project = String(payload && payload.project || '').trim();
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) || (allowedProjects(env).size && !allowedProjects(env).has(project))) {
+    return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  }
+  const requestId = `refresh-${Date.now().toString(36)}-${crypto.randomUUID().slice(0, 8)}`;
+  const requestedAt = new Date().toISOString();
+  await github(env, '/actions/workflows/deploy-pages.yml/dispatches', {
+    method: 'POST',
+    body: JSON.stringify({
+      ref: env.GITHUB_SOURCE_BRANCH || 'main',
+      inputs: { project, render_ids: 'changed', request_id: requestId }
+    })
+  });
+  await saveRefreshOperation(env, { request: requestId, project, requestedAt });
+  return json({ request: requestId, project, status: 'queued', requestedAt }, 202, origin, env);
+}
+
+function workflowStatus(run, activeStatus) {
+  if (!run) return 'queued';
+  if (run.status !== 'completed') return activeStatus;
+  return run.conclusion === 'success' ? 'success' : 'failed';
+}
+
+async function feedRefreshStatus(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const requestId = new URL(request.url).searchParams.get('request') || '';
+  if (!/^refresh-[a-z0-9-]{8,80}$/.test(requestId)) return json({ error: 'Некорректный номер операции.' }, 400, origin, env);
+  if (!r2Available(env)) return json({ error: 'Хранилище операций временно недоступно.' }, 503, origin, env);
+  const marker = await env.FEED_STORAGE.get(refreshMarkerKey(requestId));
+  if (!marker) return json({ error: 'Операция обновления не найдена или уже удалена.' }, 404, origin, env);
+  const operation = await marker.json();
+  const runs = await github(env, '/actions/workflows/deploy-pages.yml/runs?event=workflow_dispatch&per_page=50');
+  const sourceRun = (runs.workflow_runs || []).find((run) => String(run.display_title || '').includes(`[${requestId}]`));
+  const sourceStatus = workflowStatus(sourceRun, 'building');
+  if (sourceStatus === 'queued') {
+    return json({ request: requestId, project: operation.project, status: 'queued', requestedAt: operation.requestedAt }, 200, origin, env);
+  }
+  if (sourceStatus === 'building') {
+    return json({ request: requestId, project: operation.project, status: 'building', runUrl: sourceRun.html_url || '', updatedAt: sourceRun.updated_at || '' }, 200, origin, env);
+  }
+  if (sourceStatus === 'failed') {
+    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Обновление Profitbase завершилось ошибкой.', runUrl: sourceRun.html_url || '' }, 200, origin, env);
+  }
+
+  if (!operation.frontendDispatchedAt) {
+    await dispatchFrontendDeploy(env);
+    operation.frontendDispatchedAt = new Date().toISOString();
+    operation.sourceCompletedAt = sourceRun.updated_at || operation.frontendDispatchedAt;
+    await saveRefreshOperation(env, operation);
+    return json({ request: requestId, project: operation.project, status: 'deploying', updatedAt: operation.frontendDispatchedAt }, 200, origin, env);
+  }
+
+  const frontendRepository = String(env.GITHUB_FRONTEND_REPOSITORY || 'indigo-dm/feed-studio');
+  const frontendRuns = await githubRepository(env, frontendRepository, '/actions/workflows/deploy-pages.yml/runs?event=repository_dispatch&per_page=30');
+  const dispatchedAt = new Date(operation.frontendDispatchedAt).getTime() - 5000;
+  const frontendRun = (frontendRuns.workflow_runs || []).find((run) => new Date(run.created_at || 0).getTime() >= dispatchedAt);
+  const frontendStatus = workflowStatus(frontendRun, 'deploying');
+  if (frontendStatus === 'failed') {
+    return json({ request: requestId, project: operation.project, status: 'failed', message: 'Данные обновлены, но публикация Feed Studio завершилась ошибкой.', runUrl: frontendRun.html_url || '' }, 200, origin, env);
+  }
+  if (frontendStatus !== 'success') {
+    return json({ request: requestId, project: operation.project, status: 'deploying', runUrl: frontendRun && frontendRun.html_url || '', updatedAt: frontendRun && frontendRun.updated_at || operation.frontendDispatchedAt }, 200, origin, env);
+  }
+  operation.completedAt = frontendRun.updated_at || new Date().toISOString();
+  if (!operation.frontendRunId) {
+    operation.frontendRunId = frontendRun.id;
+    await saveRefreshOperation(env, operation);
+  }
+  return json({ request: requestId, project: operation.project, status: 'published', completedAt: operation.completedAt, runUrl: frontendRun.html_url || '' }, 200, origin, env);
 }
 
 const PUBLIC_DATA_FILES = new Set([
@@ -577,6 +687,8 @@ export default {
       if (request.method === 'GET' && path === '/materials') return await listMaterials(request, env, origin);
       if (request.method === 'POST' && path === '/settings') return await createSettingsRequest(request, env, origin);
       if (request.method === 'GET' && path === '/status') return await settingsStatus(request, env, origin);
+      if (request.method === 'POST' && path === '/refresh') return await createFeedRefreshRequest(request, env, origin);
+      if (request.method === 'GET' && path === '/refresh/status') return await feedRefreshStatus(request, env, origin);
       return json({ error: 'Метод или адрес не поддерживается.' }, 405, origin, env);
     } catch (error) {
       console.error(error);

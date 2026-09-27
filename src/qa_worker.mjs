@@ -52,6 +52,8 @@ await feedStorage.put('media/projects/novyy-gorizont/images/qa-generated.png', n
 });
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-test.jpg', 'delete-me', '2026-09-01T00:00:00Z');
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-orphan.jpg', 'orphan', '2026-09-01T00:00:00Z');
+feedStorage.seed('operations/999.json', '{}', '2026-09-01T00:00:00Z');
+feedStorage.seed('refresh-operations/refresh-stale-marker.json', '{}', '2026-09-01T00:00:00Z');
 const env = {
   PUBLIC_ACCESS_PASSWORD_HASH: passwordHash,
   ALLOWED_ORIGIN: 'https://indigo-dm.github.io',
@@ -69,6 +71,8 @@ let issueState = 'open';
 let createdBody = '';
 let materialUploadCreated = false;
 let frontendDeployDispatched = false;
+let refreshDispatchInputs = null;
+let refreshRequestId = '';
 globalThis.fetch = async (url, options = {}) => {
   const value = String(url);
   if (value.endsWith('/issues') && options.method === 'POST') {
@@ -85,6 +89,32 @@ globalThis.fetch = async (url, options = {}) => {
   if (value.endsWith('/repos/indigo-dm/feed-studio/dispatches') && options.method === 'POST') {
     frontendDeployDispatched = JSON.parse(options.body).event_type === 'feed-data-updated';
     return new Response(null, { status: 204 });
+  }
+  if (value.endsWith('/actions/workflows/deploy-pages.yml/dispatches') && options.method === 'POST') {
+    refreshDispatchInputs = JSON.parse(options.body).inputs;
+    refreshRequestId = refreshDispatchInputs.request_id;
+    return new Response(null, { status: 204 });
+  }
+  if (value.includes('/repos/indigo-dm/novyy-gorizont-feed/actions/workflows/deploy-pages.yml/runs?')) {
+    return Response.json({ workflow_runs: [{
+      id: 41,
+      display_title: `Feed build novyy-gorizont [${refreshRequestId}]`,
+      status: 'completed',
+      conclusion: 'success',
+      created_at: '2026-09-27T11:00:00Z',
+      updated_at: '2026-09-27T11:02:00Z',
+      html_url: 'https://github.example/source-run'
+    }] });
+  }
+  if (value.includes('/repos/indigo-dm/feed-studio/actions/workflows/deploy-pages.yml/runs?')) {
+    return Response.json({ workflow_runs: [{
+      id: 42,
+      status: 'completed',
+      conclusion: 'success',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+      html_url: 'https://github.example/frontend-run'
+    }] });
   }
   if (value.endsWith('/issues/17')) {
     return Response.json({ number: 17, state: issueState, title: '[feed-settings] novyy-gorizont: обновить настройки фида', closed_at: issueState === 'closed' ? '2026-09-26T10:30:00Z' : null });
@@ -149,6 +179,17 @@ const dataResponse = await worker.fetch(new Request('https://worker.example/data
 const dataXml = await dataResponse.text();
 const headResponse = await worker.fetch(new Request('https://worker.example/data/projects/novyy-gorizont/avito.xml', { method: 'HEAD' }), env);
 
+const refreshResponse = await worker.fetch(new Request('https://worker.example/refresh', {
+  method: 'POST',
+  headers,
+  body: JSON.stringify({ project: 'novyy-gorizont' })
+}), env);
+const refreshAccepted = await refreshResponse.json();
+const refreshDeployingResponse = await worker.fetch(new Request(`https://worker.example/refresh/status?request=${encodeURIComponent(refreshAccepted.request)}`, { headers }), env);
+const refreshDeploying = await refreshDeployingResponse.json();
+const refreshPublishedResponse = await worker.fetch(new Request(`https://worker.example/refresh/status?request=${encodeURIComponent(refreshAccepted.request)}`, { headers }), env);
+const refreshPublished = await refreshPublishedResponse.json();
+
 let cleanupPromise;
 await worker.scheduled({}, env, { waitUntil(promise) { cleanupPromise = promise; } });
 await cleanupPromise;
@@ -160,8 +201,12 @@ const result = {
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && frontendDeployDispatched &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
+    refreshResponse.status === 202 && refreshDispatchInputs?.project === 'novyy-gorizont' && refreshDispatchInputs?.render_ids === 'changed' && refreshDispatchInputs?.request_id === refreshAccepted.request &&
+    refreshDeploying.status === 'deploying' && refreshPublished.status === 'published' &&
     !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-test.jpg') &&
-    !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg'),
+    !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg') &&
+    !feedStorage.objects.has('operations/999.json') &&
+    !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json'),
   settings_status: settingsResponse.status,
   building_status: building.status,
   published_status: published.status,
@@ -178,7 +223,10 @@ const result = {
   generated_media_storage: generatedMediaResponse.headers.get('X-Feed-Storage'),
   public_data_status: dataResponse.status,
   public_data_head_status: headResponse.status,
-  orphan_cleanup: !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg')
+  refresh_statuses: [refreshDeploying.status, refreshPublished.status],
+  refresh_changed_only: refreshDispatchInputs?.render_ids === 'changed',
+  orphan_cleanup: !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg'),
+  operation_cleanup: !feedStorage.objects.has('operations/999.json') && !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json')
 };
 console.log(JSON.stringify(result, null, 2));
 if (!result.ok) process.exit(1);
