@@ -54,7 +54,6 @@ def sync_project_data(
         command.extend(["--include", filename])
     command.extend([
         "--delete",
-        "--size-only",
         "--cache-control",
         "no-store, max-age=0",
         "--endpoint-url",
