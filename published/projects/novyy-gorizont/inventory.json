@@ -1,11 +1,11 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-09-29T03:42:46+03:00",
+  "checked_at": "2026-09-29T19:11:57+03:00",
   "source_ads": 215,
   "full_ads": 215,
   "excluded_ads": 0,
-  "unique_plans": 13,
+  "unique_plans": 14,
   "source_tag_counts": {
     "AdStatus": 215,
     "Address": 215,
@@ -13,7 +13,7 @@
     "Category": 215,
     "ContactMethod": 215,
     "ContactPhone": 215,
-    "DealType": 3,
+    "DealType": 4,
     "Decoration": 215,
     "Description": 215,
     "Floor": 215,
@@ -132,6 +132,149 @@
     }
   ],
   "items": [
+    {
+      "id": "9290600",
+      "house_id": "3379663",
+      "house": "Дом 3",
+      "rooms": "1",
+      "area": "43.1",
+      "floor": "2",
+      "floors": "22",
+      "price": "6163300",
+      "decoration": "Без отделки",
+      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/previews/9290600.webp",
+      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/thumbnails/9290600.webp",
+      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/images/9290600.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b4181d2c294f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/615889b22f0c8.png",
+          "position": 1
+        },
+        {
+          "id": "src-507ce1e3318f",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/6287767692163.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-789df0983ac5",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-c171c42b470d",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-c0e35a50e7a8",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-f3dab7ff7fd7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-88f1dd8da582",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-48ba4aab152e",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-d15e86bea438",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/61588ebd09210.jpg",
+          "position": 9
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/images/9290600.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b4181d2c294f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/615889b22f0c8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-507ce1e3318f",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/6287767692163.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-789df0983ac5",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-c171c42b470d",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-c0e35a50e7a8",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f3dab7ff7fd7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-88f1dd8da582",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-48ba4aab152e",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d15e86bea438",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/61588ebd09210.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "DealType",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "excluded_from_feed": false
+    },
     {
       "id": "9290769",
       "house_id": "3379663",
@@ -6217,153 +6360,6 @@
         {
           "id": "brand-card",
           "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/images/11923790.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-bbfd53206577",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba705853a1.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "BalconyOrLoggiaMulti",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "LivingSpace",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "RoomType",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "excluded_from_feed": false
-    },
-    {
-      "id": "11924000",
-      "house_id": "3379674",
-      "house": "Дом 4",
-      "rooms": "1",
-      "area": "42.66",
-      "floor": "17",
-      "floors": "22",
-      "price": "5247180",
-      "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/previews/11924000.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/thumbnails/11924000.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/images/11924000.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
-      "source_images": [
-        {
-          "id": "src-bbfd53206577",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba705853a1.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "position": 9
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/images/11924000.png",
           "kind": "generated"
         },
         {
