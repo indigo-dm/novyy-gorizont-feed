@@ -9,7 +9,25 @@
     "white": "#FFFFFF",
     "font": "Manrope",
     "logo": "logo-gold.svg",
-    "key_render": "selected-render.jpg"
+    "key_render": "selected-render.jpg",
+    "palette": [
+      {
+        "name": "Основной",
+        "value": "#00605C"
+      },
+      {
+        "name": "Акцент",
+        "value": "#CEAD75"
+      },
+      {
+        "name": "Серый",
+        "value": "#9B9B9B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
   },
   "houses": {
     "3379663": "Дом 3",
