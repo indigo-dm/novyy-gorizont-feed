@@ -104,7 +104,7 @@ jobs:
         env:
           PUBLISHED_DATA_DIR: .feed-data/published
           RENDER_CACHE_DIR: render-cache
-          CURRENT_PAGES_ROOT: https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media
+          CURRENT_PAGES_ROOT: https://feed-api.indigo-dm.ru/media
         run: python src/seed_render_cache.py
 
       - name: Prepare current site snapshot
@@ -126,8 +126,8 @@ jobs:
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
           PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
           FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
-          FEED_STUDIO_UPLOAD_URL: ${{ vars.FEED_STUDIO_UPLOAD_URL }}
-          FEED_ASSET_PUBLIC_ROOT: https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media
+          FEED_STUDIO_UPLOAD_URL: https://feed-api.indigo-dm.ru
+          FEED_ASSET_PUBLIC_ROOT: https://feed-api.indigo-dm.ru/media
         run: python src/build_all.py
 
       - name: Update generated data branch

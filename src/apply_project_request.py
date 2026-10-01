@@ -48,7 +48,7 @@ def main() -> None:
         "project": name,
         "source_feed_key": slug,
         "public_image_base_url": (
-            "https://indigo-dm.github.io/novyy-gorizont-feed/"
+            "https://feed-api.indigo-dm.ru/media/"
             f"projects/{slug}/images"
         ),
         "brand": {

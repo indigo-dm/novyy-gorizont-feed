@@ -23,7 +23,7 @@ SITE = ROOT / "site"
 PROJECT_SITE = SITE / "projects" / PROJECT_SLUG
 ASSET_ROOT = os.environ.get(
     "FEED_ASSET_PUBLIC_ROOT",
-    "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media",
+    "https://feed-api.indigo-dm.ru/media",
 ).rstrip("/")
 manifest = json.loads((OUTPUT_DIR / "full-manifest.json").read_text(encoding="utf-8"))
 rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))

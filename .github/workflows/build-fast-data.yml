@@ -41,7 +41,7 @@ jobs:
           PROJECT_SLUG: ${{ inputs.project }}
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
           PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
-          FEED_STUDIO_UPLOAD_URL: ${{ vars.FEED_STUDIO_UPLOAD_URL }}
+          FEED_STUDIO_UPLOAD_URL: https://feed-api.indigo-dm.ru
         run: python src/build_fast.py
 
       - name: Checkout fast data branch

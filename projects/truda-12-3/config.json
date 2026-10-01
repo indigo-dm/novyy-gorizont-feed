@@ -1,7 +1,7 @@
 {
   "project": "ЖК Труда 12/3",
   "source_feed_key": "truda-12-3",
-  "public_image_base_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images",
+  "public_image_base_url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images",
   "brand": {
     "green": "#194820",
     "green_dark": "#194820",

@@ -14,7 +14,7 @@ from project_context import ROOT
 PUBLISHED = Path(os.environ.get("PUBLISHED_DATA_DIR", ROOT / ".feed-data" / "published"))
 CACHE = Path(os.environ.get("RENDER_CACHE_DIR", ROOT / "render-cache"))
 PUBLIC_ROOT = os.environ.get(
-    "CURRENT_PAGES_ROOT", "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media"
+    "CURRENT_PAGES_ROOT", "https://feed-api.indigo-dm.ru/media"
 ).rstrip("/")
 
 

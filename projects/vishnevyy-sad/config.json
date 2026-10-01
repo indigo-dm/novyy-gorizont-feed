@@ -1,7 +1,7 @@
 {
   "project": "ЖК Вишнёвый сад",
   "source_feed_key": "vishnevyy-sad",
-  "public_image_base_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/vishnevyy-sad/images",
+  "public_image_base_url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images",
   "brand": {
     "green": "#221E20",
     "green_dark": "#221E20",
