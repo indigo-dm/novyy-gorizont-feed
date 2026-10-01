@@ -19,11 +19,6 @@ on:
         required: false
         type: string
         default: ""
-  repository_dispatch:
-    types: [profitbase-refresh]
-  schedule:
-    - cron: "0 0,13 * * *"
-      timezone: "Europe/Moscow"
   workflow_call:
     inputs:
       project:

@@ -1,7 +1,19 @@
 name: Refresh fast feed data
+run-name: "Fast feed refresh ${{ inputs.project || github.event.client_payload.project || 'all-projects' }}"
 
 on:
   workflow_dispatch:
+    inputs:
+      project:
+        description: Project slug; leave empty to refresh all projects
+        required: false
+        type: string
+        default: ""
+  repository_dispatch:
+    types: [profitbase-refresh]
+  schedule:
+    - cron: "0 0,13 * * *"
+      timezone: "Europe/Moscow"
 
 permissions:
   contents: write
@@ -9,4 +21,6 @@ permissions:
 jobs:
   refresh:
     uses: ./.github/workflows/build-fast-data.yml
+    with:
+      project: ${{ inputs.project || github.event.client_payload.project || '' }}
     secrets: inherit
