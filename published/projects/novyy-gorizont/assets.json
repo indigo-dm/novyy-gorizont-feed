@@ -2,7 +2,7 @@
   "project": "ЖК Новый Горизонт",
   "slug": "novyy-gorizont",
   "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/novyy-gorizont/assets",
-  "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
+  "upload_service_url": "https://feed-api.indigo-dm.ru",
   "items": [
     {
       "key": "asset-b8b92609b165",
@@ -11,7 +11,7 @@
       "filename": "logo-gold.svg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/assets/logo-gold.svg",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/assets/logo-gold.svg",
       "active_for": [
         "logo"
       ],
@@ -24,7 +24,7 @@
       "filename": "selected-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/novyy-gorizont/assets/selected-render.jpg",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/assets/selected-render.jpg",
       "active_for": [
         "key_render"
       ],

@@ -1,10 +1,42 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Ads formatVersion="3" target="Avito.ru">
   <Ad>
+    <Id>15597039</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Description>Сдача в 2026!&lt;br&gt;Продаётся просторная 1-комнатная квартира 42,5 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, поликлиника, остановки, магазины, ПВЗ и т.д.&lt;br&gt;&lt;br&gt;О квартире:&lt;br&gt;— большая кухня 14,7 кв.м.&lt;br&gt;— 1 изолированная спальня&lt;br&gt;— продуманные места для хранения&lt;br&gt;— просторный балкон&lt;br&gt;— 8 этаж&lt;br&gt;&lt;br&gt;ЖК «Труда 12/3»:&lt;br&gt;• камерный дом&lt;br&gt;• всего 46 квартир&lt;br&gt;• 4-6 квартир на этаже&lt;br&gt;• увеличенное остекление&lt;br&gt;• подземный паркинг&lt;br&gt;• колясочная&lt;br&gt;• технический этаж&lt;br&gt;&lt;br&gt;Расположение:&lt;br&gt;— 200 м. до проспекта Ленина&lt;br&gt;— остановка рядом с домом&lt;br&gt;— 1 мин. пешком до школы, 6 мин. – до садика&lt;br&gt;— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.&lt;br&gt;&lt;br&gt;Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.&lt;br&gt;&lt;br&gt;☎️ Звоните — расскажем подробнее об этой и других квартирах!</Description>
+    <Price>6800000</Price>
+    <Square>42.5</Square>
+    <Floor>8</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>11849962</NewDevelopmentId>
+    <Rooms>1</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>10</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <Images>
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597039.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5609d314.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg" />
+    </Images>
+    <AdStatus>Free</AdStatus>
+  </Ad>
+  <Ad>
     <Id>15597038</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -21,7 +53,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597038.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597038.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -36,7 +68,7 @@
     <Id>15597053</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -53,7 +85,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597053.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597053.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b7a562b877a.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -68,7 +100,7 @@
     <Id>15597030</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -85,7 +117,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597030.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597030.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -100,7 +132,7 @@
     <Id>15597025</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -117,7 +149,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597025.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597025.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -132,7 +164,7 @@
     <Id>15597010</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -149,7 +181,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597010.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597010.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc62d2bda.jpg" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -164,7 +196,7 @@
     <Id>15597011</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -181,7 +213,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597011.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597011.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc626e9df.jpg" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -196,7 +228,7 @@
     <Id>15597013</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -213,7 +245,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597013.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597013.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/69148f56d6414.jpg" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -228,7 +260,7 @@
     <Id>15597020</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -245,7 +277,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597020.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597020.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b5e4470cee7.jpg" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />
@@ -260,7 +292,7 @@
     <Id>15597012</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632040852</ContactPhone>
+    <ContactPhone>+7 (928) 113-14-25</ContactPhone>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
     <PropertyRights>Застройщик</PropertyRights>
@@ -277,7 +309,7 @@
     <Floors>10</Floors>
     <HouseType>Монолитно-кирпичный</HouseType>
     <Images>
-      <Image url="https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/truda-12-3/images/15597012.png" />
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597012.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc63434cf.jpg" />
       <Image url="https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png" />
       <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png" />

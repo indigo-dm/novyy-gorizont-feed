@@ -1,7 +1,7 @@
 {
   "slug": "teatral",
   "project": "ЖК Театрал",
-  "checked_at": "2026-10-01T03:14:27+03:00",
+  "checked_at": "2026-10-01T14:28:26+03:00",
   "source_ads": 20,
   "full_ads": 20,
   "excluded_ads": 0,
@@ -145,9 +145,9 @@
       "floors": "17",
       "price": "14472000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479461.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479461.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479461.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479461.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479461.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479461.png",
       "promotion": null,
       "source_images": [
         {
@@ -204,7 +204,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479461.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479461.png",
           "kind": "generated"
         },
         {
@@ -300,9 +300,9 @@
       "floors": "17",
       "price": "17010000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479545.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479545.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479545.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479545.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479545.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479545.png",
       "promotion": null,
       "source_images": [
         {
@@ -359,7 +359,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479545.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479545.png",
           "kind": "generated"
         },
         {
@@ -456,9 +456,9 @@
       "floors": "17",
       "price": "17058600",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479550.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479550.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479550.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479550.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479550.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479550.png",
       "promotion": null,
       "source_images": [
         {
@@ -515,7 +515,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479550.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479550.png",
           "kind": "generated"
         },
         {
@@ -612,9 +612,9 @@
       "floors": "17",
       "price": "17199000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479560.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479560.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479560.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479560.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479560.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479560.png",
       "promotion": null,
       "source_images": [
         {
@@ -671,7 +671,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479560.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479560.png",
           "kind": "generated"
         },
         {
@@ -768,9 +768,9 @@
       "floors": "17",
       "price": "17180100",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479540.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479540.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479540.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479540.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479540.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479540.png",
       "promotion": null,
       "source_images": [
         {
@@ -827,7 +827,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479540.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479540.png",
           "kind": "generated"
         },
         {
@@ -924,9 +924,9 @@
       "floors": "17",
       "price": "21923200",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479454.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479454.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479454.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479454.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479454.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479454.png",
       "promotion": null,
       "source_images": [
         {
@@ -983,7 +983,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479454.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479454.png",
           "kind": "generated"
         },
         {
@@ -1080,9 +1080,9 @@
       "floors": "17",
       "price": "20516000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479448.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479448.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479448.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479448.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479448.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479448.png",
       "promotion": null,
       "source_images": [
         {
@@ -1139,7 +1139,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479448.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479448.png",
           "kind": "generated"
         },
         {
@@ -1235,9 +1235,9 @@
       "floors": "17",
       "price": "24138000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479496.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479496.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479496.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479496.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479496.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479496.png",
       "promotion": null,
       "source_images": [
         {
@@ -1294,7 +1294,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479496.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479496.png",
           "kind": "generated"
         },
         {
@@ -1391,9 +1391,9 @@
       "floors": "17",
       "price": "22220800",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479460.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479460.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479460.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479460.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479460.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479460.png",
       "promotion": null,
       "source_images": [
         {
@@ -1450,7 +1450,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479460.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479460.png",
           "kind": "generated"
         },
         {
@@ -1547,9 +1547,9 @@
       "floors": "17",
       "price": "23744000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479478.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479478.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479478.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479478.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479478.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479478.png",
       "promotion": null,
       "source_images": [
         {
@@ -1606,7 +1606,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479478.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479478.png",
           "kind": "generated"
         },
         {
@@ -1702,9 +1702,9 @@
       "floors": "17",
       "price": "23320000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479549.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479549.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479549.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479549.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479549.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479549.png",
       "promotion": null,
       "source_images": [
         {
@@ -1761,7 +1761,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479549.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479549.png",
           "kind": "generated"
         },
         {
@@ -1858,9 +1858,9 @@
       "floors": "17",
       "price": "30397709",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479544.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479544.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479544.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479544.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479544.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479544.png",
       "promotion": null,
       "source_images": [
         {
@@ -1917,7 +1917,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479544.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479544.png",
           "kind": "generated"
         },
         {
@@ -2012,9 +2012,9 @@
       "floors": "17",
       "price": "28644000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479480.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479480.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479480.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479480.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479480.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479480.png",
       "promotion": null,
       "source_images": [
         {
@@ -2071,7 +2071,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479480.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479480.png",
           "kind": "generated"
         },
         {
@@ -2168,9 +2168,9 @@
       "floors": "17",
       "price": "28666000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479462.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479462.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479462.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479462.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479462.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479462.png",
       "promotion": null,
       "source_images": [
         {
@@ -2227,7 +2227,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479462.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479462.png",
           "kind": "generated"
         },
         {
@@ -2324,9 +2324,9 @@
       "floors": "17",
       "price": "29317500",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479492.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479492.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479492.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479492.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479492.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479492.png",
       "promotion": null,
       "source_images": [
         {
@@ -2383,7 +2383,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479492.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479492.png",
           "kind": "generated"
         },
         {
@@ -2480,9 +2480,9 @@
       "floors": "17",
       "price": "28710000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479468.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479468.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479468.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479468.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479468.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479468.png",
       "promotion": null,
       "source_images": [
         {
@@ -2539,7 +2539,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479468.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479468.png",
           "kind": "generated"
         },
         {
@@ -2636,9 +2636,9 @@
       "floors": "17",
       "price": "28710000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479474.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479474.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479474.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479474.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479474.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479474.png",
       "promotion": null,
       "source_images": [
         {
@@ -2695,7 +2695,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479474.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479474.png",
           "kind": "generated"
         },
         {
@@ -2792,9 +2792,9 @@
       "floors": "17",
       "price": "29385000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479504.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479504.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479504.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479504.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479504.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479504.png",
       "promotion": null,
       "source_images": [
         {
@@ -2851,7 +2851,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479504.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479504.png",
           "kind": "generated"
         },
         {
@@ -2948,9 +2948,9 @@
       "floors": "17",
       "price": "29385000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479510.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479510.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479510.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479510.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479510.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479510.png",
       "promotion": null,
       "source_images": [
         {
@@ -3007,7 +3007,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479510.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479510.png",
           "kind": "generated"
         },
         {
@@ -3104,9 +3104,9 @@
       "floors": "17",
       "price": "28952000",
       "decoration": "Без отделки",
-      "image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/previews/10479450.webp",
-      "thumbnail": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/thumbnails/10479450.webp",
-      "final_image": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479450.png",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479450.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479450.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479450.png",
       "promotion": null,
       "source_images": [
         {
@@ -3163,7 +3163,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/images/10479450.png",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479450.png",
           "kind": "generated"
         },
         {

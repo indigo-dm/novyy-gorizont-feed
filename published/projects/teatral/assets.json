@@ -2,7 +2,7 @@
   "project": "ЖК Театрал",
   "slug": "teatral",
   "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/teatral/assets",
-  "upload_service_url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev",
+  "upload_service_url": "https://feed-api.indigo-dm.ru",
   "items": [
     {
       "key": "asset-1f87bc35b802",
@@ -11,7 +11,7 @@
       "filename": "key-render.jpg",
       "required": true,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/key-render.jpg",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/key-render.jpg",
       "active_for": [
         "key_render"
       ],
@@ -24,7 +24,7 @@
       "filename": "logo-teatral-light.png",
       "required": true,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/logo-teatral-light.png",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/logo-teatral-light.png",
       "active_for": [
         "logo"
       ],
@@ -37,7 +37,7 @@
       "filename": "logo-mark.png",
       "required": false,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/logo-mark.png",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/logo-mark.png",
       "active_for": [],
       "uploaded": false
     },
@@ -48,7 +48,7 @@
       "filename": "logo-teatral-dark.png",
       "required": false,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/logo-teatral-dark.png",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/logo-teatral-dark.png",
       "active_for": [],
       "uploaded": false
     },
@@ -59,7 +59,7 @@
       "filename": "render-fitness.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/render-fitness.jpg",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/render-fitness.jpg",
       "active_for": [],
       "uploaded": false
     },
@@ -70,7 +70,7 @@
       "filename": "render-parking.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/render-parking.jpg",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/render-parking.jpg",
       "active_for": [],
       "uploaded": false
     },
@@ -81,7 +81,7 @@
       "filename": "render-playground.jpg",
       "required": false,
       "exists": true,
-      "url": "https://indigo-feed-studio-upload.indigo-dm-tech.workers.dev/media/projects/teatral/assets/render-playground.jpg",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/teatral/assets/render-playground.jpg",
       "active_for": [],
       "uploaded": false
     }
