@@ -21,6 +21,7 @@
       "exclude_ids": []
     }
   ],
+  "excluded_lot_ids": [],
   "image_settings": {
     "lot_overrides": {
       "9301142": {
@@ -45,5 +46,29 @@
   "parameter_settings": {
     "lot_values": {},
     "bulk_rules": []
-  }
+  },
+  "material_settings": {
+    "logo": "logo-gold.svg",
+    "key_render": "selected-render.jpg",
+    "primary_color": "#00605C",
+    "palette": [
+      {
+        "name": "Основной",
+        "value": "#00605C"
+      },
+      {
+        "name": "Акцент",
+        "value": "#CEAD75"
+      },
+      {
+        "name": "Серый",
+        "value": "#9B9B9B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  },
+  "pending_upload_deletions": []
 }
