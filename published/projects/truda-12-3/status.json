@@ -1,12 +1,12 @@
 {
   "slug": "truda-12-3",
   "project": "ЖК Труда 12/3",
-  "checked_at": "2026-10-01T14:42:08+03:00",
+  "checked_at": "2026-10-02T03:30:23+03:00",
   "source_ads": 17,
   "full_ads": 17,
   "excluded_ads": 0,
   "unique_plans": 10,
   "active_promotions": 0,
   "publish_ready": false,
-  "mode": "full-demo"
+  "mode": "fast-data"
 }
