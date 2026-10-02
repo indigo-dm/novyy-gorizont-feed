@@ -1,36 +1,36 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-10-02T03:30:21+03:00",
-  "source_ads": 304,
-  "full_ads": 304,
+  "checked_at": "2026-10-02T19:04:56+03:00",
+  "source_ads": 300,
+  "full_ads": 300,
   "excluded_ads": 0,
-  "unique_plans": 166,
+  "unique_plans": 162,
   "source_tag_counts": {
-    "AdStatus": 304,
-    "Address": 304,
-    "Category": 304,
-    "ContactMethod": 304,
-    "ContactPhone": 304,
-    "Decoration": 304,
-    "Description": 304,
-    "Floor": 304,
-    "Floors": 304,
-    "HouseType": 304,
-    "Id": 304,
-    "KitchenSpace": 304,
-    "Latitude": 273,
-    "LivingSpace": 304,
-    "Longitude": 273,
-    "ManagerName": 304,
-    "MarketType": 304,
-    "NewDevelopmentId": 304,
-    "OperationType": 304,
-    "Price": 304,
-    "PropertyRights": 304,
-    "Rooms": 304,
-    "Square": 304,
-    "Status": 304
+    "AdStatus": 300,
+    "Address": 300,
+    "Category": 300,
+    "ContactMethod": 300,
+    "ContactPhone": 300,
+    "Decoration": 300,
+    "Description": 300,
+    "Floor": 300,
+    "Floors": 300,
+    "HouseType": 300,
+    "Id": 300,
+    "KitchenSpace": 300,
+    "Latitude": 269,
+    "LivingSpace": 300,
+    "Longitude": 269,
+    "ManagerName": 300,
+    "MarketType": 300,
+    "NewDevelopmentId": 300,
+    "OperationType": 300,
+    "Price": 300,
+    "PropertyRights": 300,
+    "Rooms": 300,
+    "Square": 300,
+    "Status": 300
   },
   "parameter_catalog": [
     {
@@ -5016,138 +5016,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "12340243",
-      "house_id": "8276816",
-      "house": "Дом · ID 8276816",
-      "rooms": "1",
-      "area": "45.9",
-      "floor": "7",
-      "floors": "10",
-      "price": "6655500",
-      "decoration": "Без отделки",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12340243.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12340243.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12340243.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-4973eabfb921",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64ddbfac71d7d.png",
-          "position": 1
-        },
-        {
-          "id": "src-626c849a13cf",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88e8402f84.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-bf4d5f286af0",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64db62b5cfb77.png",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12340243.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-4973eabfb921",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64ddbfac71d7d.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-626c849a13cf",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88e8402f84.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-bf4d5f286af0",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64db62b5cfb77.png",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "excluded_from_feed": false
-    },
-    {
       "id": "12340389",
       "house_id": "8276816",
       "house": "Дом · ID 8276816",
@@ -7524,138 +7392,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "12340308",
-      "house_id": "8276816",
-      "house": "Дом · ID 8276816",
-      "rooms": "2",
-      "area": "53.3",
-      "floor": "1",
-      "floors": "10",
-      "price": "7568600",
-      "decoration": "Без отделки",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12340308.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12340308.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12340308.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-2feea903f299",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64ba975eea92a.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-626c849a13cf",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88e8402f84.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-22d3185e5f40",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64ba99b723d13.jpg",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12340308.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-2feea903f299",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64ba975eea92a.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-626c849a13cf",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88e8402f84.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-22d3185e5f40",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64ba99b723d13.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "excluded_from_feed": false
-    },
-    {
       "id": "12340298",
       "house_id": "8276816",
       "house": "Дом · ID 8276816",
@@ -8415,138 +8151,6 @@
         {
           "id": "src-3f894e4a32a4",
           "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe29aa3e.png",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "excluded_from_feed": false
-    },
-    {
-      "id": "12346609",
-      "house_id": "8276823",
-      "house": "Дом · ID 8276823",
-      "rooms": "1",
-      "area": "34.8",
-      "floor": "9",
-      "floors": "9",
-      "price": "5498400",
-      "decoration": "Без отделки",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12346609.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12346609.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346609.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-d740726b97ce",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/69383172be25e.png",
-          "position": 1
-        },
-        {
-          "id": "src-7b2d65bbcd45",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-1f3fb1972c5a",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346609.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-d740726b97ce",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/69383172be25e.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-7b2d65bbcd45",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-1f3fb1972c5a",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
           "kind": "source"
         }
       ],
@@ -15807,138 +15411,6 @@
         {
           "id": "src-1f3fb1972c5a",
           "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "excluded_from_feed": false
-    },
-    {
-      "id": "12346838",
-      "house_id": "8276825",
-      "house": "Дом · ID 8276825",
-      "rooms": "1",
-      "area": "48.63",
-      "floor": "4",
-      "floors": "4",
-      "price": "5400000",
-      "decoration": "Без отделки",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12346838.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12346838.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346838.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-a854d57b95dc",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64c2559d848e1.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-4c61e7af7723",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ee5a01ed.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-216783fa6655",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64c38bfe6c9e8.jpg",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346838.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-a854d57b95dc",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64c2559d848e1.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-4c61e7af7723",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ee5a01ed.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-216783fa6655",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64c38bfe6c9e8.jpg",
           "kind": "source"
         }
       ],
