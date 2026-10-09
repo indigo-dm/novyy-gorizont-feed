@@ -57,6 +57,62 @@
     var resolved = dataUrl(url);
     return resolved + (resolved.indexOf('?') >= 0 ? '&' : '?') + 'v=' + encodeURIComponent(cacheVersion());
   };
+  var absoluteUrl = function (url) {
+    var value = dataUrl(url);
+    if (!value) return '';
+    try {
+      return new URL(value, document.baseURI || window.location.href).href;
+    } catch (error) {
+      return value;
+    }
+  };
+  var appendQuery = function (url, name, value) {
+    return url + (url.indexOf('?') >= 0 ? '&' : '?') +
+      encodeURIComponent(name) + '=' + encodeURIComponent(value);
+  };
+
+  async function requestJson(url, label) {
+    var target = absoluteUrl(url);
+    var lastError = null;
+    for (var attempt = 0; attempt < 2; attempt += 1) {
+      var requestUrl = attempt ? appendQuery(target, '_retry', Date.now()) : target;
+      try {
+        var response = await fetch(requestUrl, {
+          cache: 'no-store',
+          credentials: 'omit',
+          redirect: 'follow'
+        });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        var source = await response.text();
+        if (source.charCodeAt(0) === 0xFEFF) source = source.slice(1);
+        if (!source.trim()) throw new Error('пустой ответ');
+        try {
+          return JSON.parse(source);
+        } catch (parseError) {
+          throw new Error('ответ не является JSON');
+        }
+      } catch (error) {
+        lastError = error;
+      }
+    }
+    throw new Error('Не удалось загрузить ' + label + ': ' +
+      (lastError && lastError.message ? lastError.message : 'неизвестная ошибка'));
+  }
+
+  async function loadRegistry() {
+    var primary = dataUrl('projects.json');
+    var backup = 'https://feed-api.indigo-dm.ru/data/projects.json';
+    try {
+      return await requestJson(appendQuery(primary, 'v', Date.now()), 'список объектов');
+    } catch (primaryError) {
+      if (absoluteUrl(primary) === backup) throw primaryError;
+      try {
+        return await requestJson(appendQuery(backup, 'v', Date.now()), 'резервный список объектов');
+      } catch (backupError) {
+        throw new Error(primaryError.message + '. Резервный источник: ' + backupError.message);
+      }
+    }
+  }
   var draftKey = function () { return 'feed-studio-rules-v1-' + (state.project ? state.project.slug : 'default'); };
   var operationKey = function () { return 'feed-studio-publish-v1-' + (state.project ? state.project.slug : 'default'); };
   var formatPrice = function (value) {
@@ -1272,8 +1328,7 @@
     var slug = state.project && state.project.slug;
     if (!slug) return;
     try {
-      var registryResponse = await fetch(dataUrl('projects.json') + '?v=' + Date.now(), { cache: 'no-store' });
-      if (registryResponse.ok) state.registry = await registryResponse.json();
+      state.registry = await loadRegistry();
       await loadProject(slug, true);
     } catch (error) {
       showToast('Фид опубликован. Обновите страницу, чтобы загрузить новые данные.');
@@ -1634,14 +1689,12 @@
     var base = dataUrl(project.base);
     var version = '?v=' + encodeURIComponent(cacheVersion());
     try {
-      var responses = await Promise.all([
-        fetch(base + '/inventory.json' + version, { cache: 'force-cache' }),
-        fetch(base + '/settings.json' + version, { cache: 'force-cache' }),
-        fetch(base + '/status.json' + version, { cache: 'force-cache' }),
-        fetch(base + '/assets.json' + version, { cache: 'force-cache' })
+      var data = await Promise.all([
+        requestJson(base + '/inventory.json' + version, 'inventory.json'),
+        requestJson(base + '/settings.json' + version, 'settings.json'),
+        requestJson(base + '/status.json' + version, 'status.json'),
+        requestJson(base + '/assets.json' + version, 'assets.json')
       ]);
-      if (responses.some(function (response) { return !response.ok; })) throw new Error('Не удалось загрузить данные кабинета.');
-      var data = await Promise.all(responses.map(function (response) { return response.json(); }));
       state.project = project;
       state.inventory = data[0];
       state.status = data[2];
@@ -1680,9 +1733,7 @@
 
   async function init() {
     try {
-      var response = await fetch(dataUrl('projects.json'), { cache: 'no-cache' });
-      if (!response.ok) throw new Error('Не удалось загрузить список объектов.');
-      state.registry = await response.json();
+      state.registry = await loadRegistry();
       $('#project-select').innerHTML = state.registry.projects.map(function (project) {
         var ready = projectIsReady(project);
         return '<option value="' + esc(project.slug) + '" ' + (ready ? '' : 'disabled') + '>' +
