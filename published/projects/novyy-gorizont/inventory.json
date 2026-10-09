@@ -1,7 +1,7 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-10-09T11:47:42+03:00",
+  "checked_at": "2026-10-09T13:19:26+03:00",
   "source_ads": 212,
   "full_ads": 212,
   "excluded_ads": 0,
@@ -713,14 +713,14 @@
       ],
       "feed_images": [
         {
-          "id": "src-37186d11dc7f",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/615889563f504.png",
-          "kind": "source"
-        },
-        {
           "id": "brand-card",
           "url": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/9301142.png",
           "kind": "generated"
+        },
+        {
+          "id": "src-37186d11dc7f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/615889563f504.png",
+          "kind": "source"
         },
         {
           "id": "src-507ce1e3318f",
@@ -833,12 +833,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923755.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923755.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923755.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -1006,12 +1001,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923860.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923860.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923860.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -1179,12 +1169,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924175.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924175.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924175.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -1352,12 +1337,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923655.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923655.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923655.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -1525,12 +1505,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923760.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923760.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923760.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -1698,12 +1673,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923865.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923865.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923865.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -1871,12 +1841,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924075.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924075.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924075.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -2044,12 +2009,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924180.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924180.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924180.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -2217,12 +2177,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924285.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924285.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924285.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -2390,12 +2345,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924390.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924390.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924390.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -2563,12 +2513,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923660.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923660.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923660.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -2736,12 +2681,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923765.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923765.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923765.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -2909,12 +2849,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923870.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923870.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923870.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -3082,12 +3017,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923975.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923975.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923975.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -3255,12 +3185,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924080.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924080.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924080.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -3428,12 +3353,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924185.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924185.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924185.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -3601,12 +3521,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924395.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924395.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924395.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -3774,12 +3689,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923875.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923875.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923875.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -3947,12 +3857,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924085.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924085.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924085.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -4120,12 +4025,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924190.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924190.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924190.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -4293,12 +4193,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924295.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924295.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924295.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -4466,12 +4361,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924400.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924400.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924400.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -4639,12 +4529,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923670.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923670.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923670.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -4812,12 +4697,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923775.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923775.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923775.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -4985,12 +4865,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924090.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924090.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924090.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -5158,12 +5033,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924195.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924195.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924195.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -5331,12 +5201,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924300.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924300.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924300.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -5504,12 +5369,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924405.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924405.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924405.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -5677,12 +5537,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923675.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923675.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923675.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -5850,12 +5705,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923780.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923780.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923780.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -6023,12 +5873,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923885.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923885.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923885.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -6196,12 +6041,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923990.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923990.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923990.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -6369,12 +6209,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924305.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924305.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924305.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -6542,12 +6377,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924410.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924410.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924410.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -6715,12 +6545,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923680.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923680.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923680.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -6888,12 +6713,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923785.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923785.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923785.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -7061,12 +6881,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924100.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924100.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924100.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -7234,12 +7049,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924205.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924205.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924205.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -7407,12 +7217,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923790.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923790.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923790.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -7580,12 +7385,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924105.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924105.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924105.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -7753,12 +7553,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924315.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924315.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924315.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -7926,12 +7721,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924110.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924110.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924110.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -8099,12 +7889,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924320.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924320.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924320.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -8272,12 +8057,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924225.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924225.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924225.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-bbfd53206577",
@@ -8445,12 +8225,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924335.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924335.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924335.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-edf1bde12a37",
@@ -8618,12 +8393,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923858.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923858.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923858.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -8791,12 +8561,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924068.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924068.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924068.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -8964,12 +8729,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923758.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923758.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923758.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -9137,12 +8897,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923863.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923863.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923863.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -9310,12 +9065,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923968.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923968.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923968.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -9483,12 +9233,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924073.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924073.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924073.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -9656,12 +9401,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924178.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924178.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924178.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -9829,12 +9569,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923763.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923763.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923763.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -10002,12 +9737,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923868.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923868.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923868.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -10175,12 +9905,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923973.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923973.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923973.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -10348,12 +10073,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924078.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924078.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924078.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -10521,12 +10241,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924183.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924183.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924183.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -10694,12 +10409,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924393.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924393.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924393.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -10867,12 +10577,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923873.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923873.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923873.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -11040,12 +10745,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923978.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923978.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923978.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -11213,12 +10913,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924083.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924083.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924083.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -11386,12 +11081,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924188.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924188.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924188.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -11559,12 +11249,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924293.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924293.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924293.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -11732,12 +11417,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924398.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924398.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924398.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -11905,12 +11585,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923668.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923668.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923668.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -12078,12 +11753,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923773.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923773.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923773.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -12251,12 +11921,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924088.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924088.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924088.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -12424,12 +12089,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924193.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924193.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924193.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -12597,12 +12257,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924298.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924298.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924298.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -12770,12 +12425,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924403.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924403.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924403.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -12943,12 +12593,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923673.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923673.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923673.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -13116,12 +12761,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923778.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923778.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923778.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -13289,12 +12929,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923883.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923883.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923883.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -13462,12 +13097,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923988.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923988.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923988.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -13635,12 +13265,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924303.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924303.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924303.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -13808,12 +13433,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924408.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924408.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924408.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -13981,12 +13601,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923678.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923678.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923678.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -14154,12 +13769,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923783.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923783.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923783.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -14327,12 +13937,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924098.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924098.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924098.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -14500,12 +14105,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924203.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924203.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924203.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -14673,12 +14273,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923683.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923683.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923683.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
@@ -14846,12 +14441,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924223.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924223.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924223.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-44156cf8aa1d",
@@ -15019,12 +14609,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924333.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924333.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924333.png",
-      "promotion": {
-        "rule_id": "demo-discount",
-        "name": "Демонстрационная скидка",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-39b451ba8663",
