@@ -1,36 +1,36 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-10-09T11:47:45+03:00",
-  "source_ads": 300,
-  "full_ads": 300,
+  "checked_at": "2026-10-09T13:48:41+03:00",
+  "source_ads": 301,
+  "full_ads": 301,
   "excluded_ads": 0,
   "unique_plans": 162,
   "source_tag_counts": {
-    "AdStatus": 300,
-    "Address": 300,
-    "Category": 300,
-    "ContactMethod": 300,
-    "ContactPhone": 300,
-    "Decoration": 300,
-    "Description": 300,
-    "Floor": 300,
-    "Floors": 300,
-    "HouseType": 300,
-    "Id": 300,
-    "KitchenSpace": 300,
-    "Latitude": 269,
-    "LivingSpace": 300,
-    "Longitude": 269,
-    "ManagerName": 300,
-    "MarketType": 300,
-    "NewDevelopmentId": 300,
-    "OperationType": 300,
-    "Price": 300,
-    "PropertyRights": 300,
-    "Rooms": 300,
-    "Square": 300,
-    "Status": 300
+    "AdStatus": 301,
+    "Address": 301,
+    "Category": 301,
+    "ContactMethod": 301,
+    "ContactPhone": 301,
+    "Decoration": 301,
+    "Description": 301,
+    "Floor": 301,
+    "Floors": 301,
+    "HouseType": 301,
+    "Id": 301,
+    "KitchenSpace": 301,
+    "Latitude": 270,
+    "LivingSpace": 301,
+    "Longitude": 270,
+    "ManagerName": 301,
+    "MarketType": 301,
+    "NewDevelopmentId": 301,
+    "OperationType": 301,
+    "Price": 301,
+    "PropertyRights": 301,
+    "Rooms": 301,
+    "Square": 301,
+    "Status": 301
   },
   "parameter_catalog": [
     {
@@ -40489,6 +40489,164 @@
         "Square": "52.34",
         "Decoration": "Без отделки",
         "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "9464279",
+        "Rooms": "2",
+        "Floors": "9",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "13832807",
+      "house_id": "9464279",
+      "house": "Дом · ID 9464279",
+      "rooms": "2",
+      "area": "52.34",
+      "floor": "6",
+      "floors": "9",
+      "price": "7327600",
+      "decoration": "Без отделки",
+      "plan_id": "plan-a4513bdd204c",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/13832807.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/13832807.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/13832807.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-a4513bdd204c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/2a359bd1bee59cabf8450e816e3726cd.png",
+          "position": 1
+        },
+        {
+          "id": "src-5cb60c6fd14f",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png",
+          "position": 2
+        },
+        {
+          "id": "src-b040c37e1715",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-9ead460df0d9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-2edf9c52ac82",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-5c37f3bbff91",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-5daac3957db8",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-994afcc9bf88",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg",
+          "position": 8
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/13832807.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-a4513bdd204c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/2a359bd1bee59cabf8450e816e3726cd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-5cb60c6fd14f",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-b040c37e1715",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-9ead460df0d9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-2edf9c52ac82",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5c37f3bbff91",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5daac3957db8",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-994afcc9bf88",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "13832807",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632098967",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Аксай, Аксайский район, Ростовская область, Ленина",
+        "Latitude": "47.282374",
+        "Longitude": "39.862154",
+        "Description": "Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.",
+        "Price": "7327600",
+        "Square": "52.34",
+        "Decoration": "Без отделки",
+        "Floor": "6",
         "Status": "Квартира",
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464279",

@@ -9145,6 +9145,42 @@
     <AdStatus>Free</AdStatus>
   </Ad>
   <Ad>
+    <Id>13832807</Id>
+    <ContactMethod>По телефону и в сообщениях</ContactMethod>
+    <ManagerName>Отдел продаж</ManagerName>
+    <ContactPhone>+78632098967</ContactPhone>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Latitude>47.282374</Latitude>
+    <Longitude>39.862154</Longitude>
+    <Description>Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.</Description>
+    <Price>7327600</Price>
+    <Square>52.34</Square>
+    <Decoration>Без отделки</Decoration>
+    <Floor>6</Floor>
+    <Status>Квартира</Status>
+    <MarketType>Новостройка</MarketType>
+    <NewDevelopmentId>9464279</NewDevelopmentId>
+    <Rooms>2</Rooms>
+    <KitchenSpace />
+    <LivingSpace />
+    <Floors>9</Floors>
+    <HouseType>Монолитно-кирпичный</HouseType>
+    <Images>
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/13832807.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/2a359bd1bee59cabf8450e816e3726cd.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg" />
+      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg" />
+    </Images>
+    <AdStatus>Free</AdStatus>
+  </Ad>
+  <Ad>
     <Id>13832750</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
