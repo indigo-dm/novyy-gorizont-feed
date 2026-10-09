@@ -914,7 +914,7 @@
     if (!catalog) return '';
     if (catalog.kind === 'richtext') {
       var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; }) || state.inventory.items[0];
-      return item ? richTextMarkup(value || '{{Description}}', item, prefix === 'bulk-param') : '';
+      return item ? richTextMarkup(value || '', item, prefix === 'bulk-param') : '';
     }
     if (catalog.kind === 'multi') {
       var selected = Array.isArray(value) ? value : [];
@@ -951,7 +951,7 @@
   function renderParameterBulkValue() {
     var catalog = parameterByTag($('#bulk-parameter-tag').value);
     var root = $('#bulk-parameter-value');
-    var defaultValue = catalog && catalog.kind === 'richtext' ? '{{Description}}' : catalog && catalog.kind === 'multi' ? [catalog.values[0]] : catalog && catalog.values ? catalog.values[0] : catalog ? catalog.min : '';
+    var defaultValue = catalog && catalog.kind === 'richtext' ? '' : catalog && catalog.kind === 'multi' ? [catalog.values[0]] : catalog && catalog.values ? catalog.values[0] : catalog ? catalog.min : '';
     root.innerHTML = catalog ? '<label class="field"><span>Значение</span>' + parameterControl(catalog, defaultValue, 'bulk-param') + '</label>' : '';
     if (catalog && catalog.kind === 'richtext') {
       var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; }) || state.inventory.items[0];

@@ -207,6 +207,10 @@ const contentTypes = {
   const sourceTagsVisible = await page.locator('#source-tags .tag-chip').count() > 10;
   const supportedParameterCount = await page.locator('#new-parameter-tag option').count();
   const bulkParameterCount = await page.locator('#bulk-parameter-tag option').count();
+  await page.locator('#bulk-parameter-tag').selectOption('Description');
+  const bulkDescriptionShortcodeExcluded = await page.locator('#bulk-parameter-value [data-description-shortcode] option[value="Description"]').count() === 0;
+  const bulkDescriptionStartsEmpty = !(await page.locator('#bulk-parameter-value [data-rich-editor]').innerHTML()).includes('{{Description}}') &&
+    !(await page.locator('#bulk-parameter-value [data-rich-editor]').innerText()).trim();
   await page.locator('#parameter-lot').selectOption(String(firstInventoryItem.id));
   const descriptionEditorVisible = await page.locator('#description-editor-wrap [data-rich-editor]').isVisible();
   const shortcodeAvailable = await page.locator('#description-editor-wrap [data-description-shortcode] option').count() >= 5;
@@ -269,7 +273,7 @@ const contentTypes = {
   const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -303,6 +307,8 @@ const contentTypes = {
     source_tags_visible: sourceTagsVisible,
     supported_parameters: supportedParameterCount,
     bulk_supported_parameters: bulkParameterCount,
+    bulk_description_shortcode_excluded: bulkDescriptionShortcodeExcluded,
+    bulk_description_starts_empty: Boolean(bulkDescriptionStartsEmpty),
     description_editor: descriptionEditorVisible,
     description_shortcodes: shortcodeAvailable,
     description_shortcode_excluded: descriptionShortcodeExcluded,
