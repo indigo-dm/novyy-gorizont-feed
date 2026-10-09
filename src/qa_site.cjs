@@ -144,6 +144,12 @@ const contentTypes = {
   await page.locator('#image-filter-floor').selectOption(firstFloor);
   const imageFloorCount = Number(await page.locator('#image-filter-count').textContent());
   const imageFloorFilterWorks = imageFloorCount === expectedFloorCount;
+  await page.locator('#image-filter-floor').selectOption('');
+  const imagePlan = String(firstInventoryItem.plan_id || '');
+  const expectedImagePlanCount = inventoryData.items.filter((item) => String(item.plan_id) === imagePlan).length;
+  await page.locator('#image-filter-plan').selectOption(imagePlan);
+  const imagePlanCount = Number(await page.locator('#image-filter-count').textContent());
+  const imagePlanFilterWorks = Boolean(imagePlan) && imagePlanCount === expectedImagePlanCount;
   await page.locator('#image-lot').selectOption(String(firstInventoryItem.id));
   const imageCards = await page.locator('.image-item').count();
   const allSourceImagesVisible = imageCards === (firstInventoryItem.source_images || []).length + 1;
@@ -185,7 +191,8 @@ const contentTypes = {
   await page.fill('#bulk-image-from', '3');
   await page.fill('#bulk-image-to', '1');
   await page.click('#apply-image-bulk');
-  const imageBulkRuleCreated = await page.locator('#image-bulk-rules .bulk-rule').count() === 1;
+  const imageBulkRuleCreated = await page.locator('#image-bulk-rules .bulk-rule').count() === 1 &&
+    (await page.locator('#image-bulk-rules .bulk-rule').innerText()).includes('выбранная планировка');
   await page.screenshot({ path: path.join(qaOutput, 'admin-images.png'), fullPage: true });
   await page.click('[data-view="parameters"]');
   await page.locator('#parameter-filter-floor').selectOption(firstFloor);
@@ -291,7 +298,7 @@ const contentTypes = {
   const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && bulkDescriptionExpandVisible && bulkDescriptionModalVisible && bulkDescriptionModalSize.width > 700 && bulkDescriptionModalSize.height >= 320 && bulkDescriptionContentPreserved && bulkDescriptionEscapeCloses && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && imagePlanFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && bulkDescriptionExpandVisible && bulkDescriptionModalVisible && bulkDescriptionModalSize.width > 700 && bulkDescriptionModalSize.height >= 320 && bulkDescriptionContentPreserved && bulkDescriptionEscapeCloses && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -307,6 +314,7 @@ const contentTypes = {
     lot_floor_filter_displayed: floorLotCount,
     lot_floor_filter_expected: Math.min(12, expectedFloorCount),
     image_floor_filter: imageFloorFilterWorks,
+    image_plan_filter: imagePlanFilterWorks,
     parameter_floor_filter: parameterFloorFilterWorks,
     parameter_plan_filter: parameterPlanFilterWorks,
     parameter_toolbar_layout: parameterToolbarLayout,

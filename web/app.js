@@ -16,7 +16,7 @@
     activeRuleId: null,
     activeView: 'dashboard',
     filters: { house: '', rooms: '', floor: '', search: '' },
-    imageFilters: { house: '', rooms: '', floor: '', search: '' },
+    imageFilters: { house: '', rooms: '', floor: '', plan: '', search: '' },
     parameterFilters: { house: '', rooms: '', floor: '', plan: '', search: '' },
     page: 1,
     pageSize: 12,
@@ -369,6 +369,7 @@
     $('#filter-floor').innerHTML = floorOptions;
     $('#image-filter-floor').innerHTML = floorOptions;
     $('#parameter-filter-floor').innerHTML = floorOptions;
+    $('#image-filter-plan').innerHTML = planOptions;
     $('#parameter-filter-plan').innerHTML = planOptions;
     var lotOptions = state.inventory.items.map(function (item) {
       return '<option value="' + esc(item.id) + '">' + esc(item.house + ' · ' + item.rooms + 'к · ' + formatArea(item.area)) + '</option>';
@@ -619,8 +620,9 @@
     $('#image-bulk-rules').innerHTML = state.imageSettings.bulk_rules.length ? state.imageSettings.bulk_rules.map(function (rule) {
       var count = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); }).length;
       var floorLabel = (rule.floors || []).length ? ' · этаж ' + rule.floors.join(', ') : '';
+      var planLabel = (rule.plan_ids || []).length ? ' · выбранная планировка' : '';
       return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count +
-        ' квартир' + esc(floorLabel) + ' · ' + esc(rule.from_position) + ' → ' + esc(rule.to_position) + '</small></div><button data-delete-image-rule="' +
+        ' квартир' + esc(floorLabel + planLabel) + ' · ' + esc(rule.from_position) + ' → ' + esc(rule.to_position) + '</small></div><button data-delete-image-rule="' +
         esc(rule.id) + '" aria-label="Удалить правило">×</button></div>';
     }).join('') : '<p class="helper">Массовых правил пока нет.</p>';
     $$('[data-delete-image-rule]', $('#image-bulk-rules')).forEach(function (button) {
@@ -1480,6 +1482,7 @@
     $('#image-filter-house').addEventListener('change', function (event) { state.imageFilters.house = event.target.value; renderImages(); });
     $('#image-filter-rooms').addEventListener('change', function (event) { state.imageFilters.rooms = event.target.value; renderImages(); });
     $('#image-filter-floor').addEventListener('change', function (event) { state.imageFilters.floor = event.target.value; renderImages(); });
+    $('#image-filter-plan').addEventListener('change', function (event) { state.imageFilters.plan = event.target.value; renderImages(); });
     $('#image-filter-search').addEventListener('input', function (event) { state.imageFilters.search = event.target.value; renderImages(); });
     $('#image-lot').addEventListener('change', function (event) { state.imageLotId = event.target.value; renderImages(); });
     $('#choose-image-file').addEventListener('click', function (event) {
@@ -1659,7 +1662,7 @@
       state.imageUploadTone = '';
       state.page = 1;
       state.filters = { house: '', rooms: '', floor: '', search: '' };
-      state.imageFilters = { house: '', rooms: '', floor: '', search: '' };
+      state.imageFilters = { house: '', rooms: '', floor: '', plan: '', search: '' };
       state.parameterFilters = { house: '', rooms: '', floor: '', plan: '', search: '' };
       populateFilters();
       renderAll();
