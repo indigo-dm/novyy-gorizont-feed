@@ -211,6 +211,24 @@ const contentTypes = {
   const bulkDescriptionShortcodeExcluded = await page.locator('#bulk-parameter-value [data-description-shortcode] option[value="Description"]').count() === 0;
   const bulkDescriptionStartsEmpty = !(await page.locator('#bulk-parameter-value [data-rich-editor]').innerHTML()).includes('{{Description}}') &&
     !(await page.locator('#bulk-parameter-value [data-rich-editor]').innerText()).trim();
+  const bulkDescriptionExpandVisible = await page.locator('#bulk-parameter-value [data-expand-description]').isVisible();
+  await page.locator('#bulk-parameter-value [data-expand-description]').click();
+  const bulkDescriptionModalVisible = await page.locator('#description-modal').isVisible();
+  const bulkDescriptionModalSize = await page.locator('#description-modal-body [data-rich-editor]').evaluate((editor) => {
+    const box = editor.getBoundingClientRect();
+    return { width: Math.round(box.width), height: Math.round(box.height) };
+  });
+  await page.locator('#description-modal .description-modal').screenshot({ path: path.join(qaOutput, 'admin-bulk-description-modal.png') });
+  await page.locator('#description-modal-body [data-rich-editor]').evaluate((editor) => {
+    editor.innerHTML = '<p>Комнат: {{Rooms}}</p>';
+    editor.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: 'insertText' }));
+  });
+  await page.locator('#close-description-modal').click();
+  const bulkDescriptionContentPreserved = (await page.locator('#bulk-parameter-value [data-rich-editor]').innerHTML()).includes('{{Rooms}}');
+  await page.locator('#bulk-parameter-value [data-expand-description]').click();
+  await page.keyboard.press('Escape');
+  const bulkDescriptionEscapeCloses = !(await page.locator('#description-modal').isVisible()) &&
+    await page.locator('#bulk-parameter-value [data-rich-editor]').isVisible();
   await page.locator('#parameter-lot').selectOption(String(firstInventoryItem.id));
   const descriptionEditorVisible = await page.locator('#description-editor-wrap [data-rich-editor]').isVisible();
   const shortcodeAvailable = await page.locator('#description-editor-wrap [data-description-shortcode] option').count() >= 5;
@@ -273,7 +291,7 @@ const contentTypes = {
   const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && bulkDescriptionExpandVisible && bulkDescriptionModalVisible && bulkDescriptionModalSize.width > 700 && bulkDescriptionModalSize.height >= 320 && bulkDescriptionContentPreserved && bulkDescriptionEscapeCloses && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -309,6 +327,11 @@ const contentTypes = {
     bulk_supported_parameters: bulkParameterCount,
     bulk_description_shortcode_excluded: bulkDescriptionShortcodeExcluded,
     bulk_description_starts_empty: Boolean(bulkDescriptionStartsEmpty),
+    bulk_description_expand_visible: bulkDescriptionExpandVisible,
+    bulk_description_modal_visible: bulkDescriptionModalVisible,
+    bulk_description_modal_size: bulkDescriptionModalSize,
+    bulk_description_content_preserved: bulkDescriptionContentPreserved,
+    bulk_description_escape_closes: bulkDescriptionEscapeCloses,
     description_editor: descriptionEditorVisible,
     description_shortcodes: shortcodeAvailable,
     description_shortcode_excluded: descriptionShortcodeExcluded,

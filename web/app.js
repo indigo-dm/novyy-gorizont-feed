@@ -82,6 +82,7 @@
     id: 'ID лота', house: 'Дом', rooms: 'Комнат', area: 'Площадь', floor: 'Этаж', floors: 'Этажей в доме',
     price: 'Цена', decoration: 'Отделка'
   };
+  var expandedDescriptionEditor = null;
   var emptyImageSettings = function () { return { lot_overrides: {}, bulk_rules: [] }; };
   var emptyParameterSettings = function () { return { lot_values: {}, bulk_rules: [] }; };
 
@@ -815,12 +816,43 @@
     }).join('');
   }
 
+  function closeExpandedDescriptionEditor() {
+    var modal = $('#description-modal');
+    var body = $('#description-modal-body');
+    var restore = expandedDescriptionEditor;
+    if (restore && restore.box) {
+      if (restore.parent && restore.parent.isConnected) {
+        if (restore.next && restore.next.parentNode === restore.parent) restore.parent.insertBefore(restore.box, restore.next);
+        else restore.parent.appendChild(restore.box);
+      } else if (body && body.contains(restore.box)) {
+        body.removeChild(restore.box);
+      }
+    }
+    expandedDescriptionEditor = null;
+    if (modal) modal.classList.add('hidden');
+    document.body.classList.remove('description-modal-open');
+  }
+
+  function openExpandedDescriptionEditor(box) {
+    var modal = $('#description-modal');
+    var body = $('#description-modal-body');
+    if (!box || !modal || !body) return;
+    closeExpandedDescriptionEditor();
+    expandedDescriptionEditor = { box: box, parent: box.parentNode, next: box.nextSibling };
+    body.appendChild(box);
+    modal.classList.remove('hidden');
+    document.body.classList.add('description-modal-open');
+    var editor = $('[data-rich-editor]', box);
+    if (editor) window.requestAnimationFrame(function () { editor.focus(); });
+  }
+
   function richTextMarkup(value, item, compact) {
     return '<div class="richtext-box ' + (compact ? 'bulk-richtext' : '') + '">' +
       '<div class="richtext-toolbar"><button type="button" data-rich-command="bold" title="Жирный"><strong>Ж</strong></button>' +
       '<button type="button" data-rich-command="italic" title="Курсив"><em>К</em></button>' +
       '<button type="button" data-rich-command="insertUnorderedList" title="Маркированный список">• Список</button>' +
-      '<button type="button" data-rich-command="insertOrderedList" title="Нумерованный список">1. Список</button></div>' +
+      '<button type="button" data-rich-command="insertOrderedList" title="Нумерованный список">1. Список</button>' +
+      (compact ? '<button type="button" class="richtext-expand" data-expand-description>Развернуть редактор</button>' : '') + '</div>' +
       '<div class="shortcode-row"><select data-description-shortcode>' + descriptionShortcodeOptions(item) + '</select>' +
       '<button type="button" data-insert-shortcode>Вставить поле</button></div>' +
       '<div class="richtext-editor" contenteditable="true" data-rich-editor spellcheck="true">' + sanitizeDescriptionHtml(value) + '</div>' +
@@ -867,6 +899,8 @@
       document.execCommand('insertText', false, '{{' + select.value + '}}');
       rememberSelection(); update(true);
     });
+    var expand = $('[data-expand-description]', root);
+    if (expand) expand.addEventListener('click', function () { openExpandedDescriptionEditor(expand.closest('.richtext-box')); });
     update(false);
   }
 
@@ -949,6 +983,7 @@
   }
 
   function renderParameterBulkValue() {
+    closeExpandedDescriptionEditor();
     var catalog = parameterByTag($('#bulk-parameter-tag').value);
     var root = $('#bulk-parameter-value');
     var defaultValue = catalog && catalog.kind === 'richtext' ? '' : catalog && catalog.kind === 'multi' ? [catalog.values[0]] : catalog && catalog.values ? catalog.values[0] : catalog ? catalog.min : '';
@@ -1525,6 +1560,13 @@
       renderParameters();
     });
     $('#bulk-parameter-tag').addEventListener('change', renderParameterBulkValue);
+    $('#close-description-modal').addEventListener('click', closeExpandedDescriptionEditor);
+    $('#description-modal').addEventListener('click', function (event) {
+      if (event.target.id === 'description-modal') closeExpandedDescriptionEditor();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !$('#description-modal').classList.contains('hidden')) closeExpandedDescriptionEditor();
+    });
     $('#apply-parameter-bulk').addEventListener('click', function () {
       var items = filteredParameterItems();
       var catalog = parameterByTag($('#bulk-parameter-tag').value);
