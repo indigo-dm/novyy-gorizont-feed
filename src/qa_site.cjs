@@ -198,12 +198,24 @@ const contentTypes = {
   const parameterPlanCount = Number(await page.locator('#parameter-filter-count').textContent());
   const parameterPlanFilterWorks = Boolean(firstPlan) && parameterPlanCount === expectedPlanCount;
   await page.locator('#parameter-filter-plan').selectOption('');
+  const parameterToolbarLayout = await page.evaluate(() => {
+    const planBox = document.querySelector('#parameter-filter-plan').getBoundingClientRect();
+    const searchBox = document.querySelector('#parameter-filter-search').getBoundingClientRect();
+    const countBox = document.querySelector('.parameter-toolbar .toolbar-count').getBoundingClientRect();
+    return { planWidth: Math.round(planBox.width), singleRow: planBox.top < searchBox.bottom && searchBox.top < planBox.bottom && planBox.top < countBox.bottom && countBox.top < planBox.bottom };
+  });
   const sourceTagsVisible = await page.locator('#source-tags .tag-chip').count() > 10;
   const supportedParameterCount = await page.locator('#new-parameter-tag option').count();
   const bulkParameterCount = await page.locator('#bulk-parameter-tag option').count();
   await page.locator('#parameter-lot').selectOption(String(firstInventoryItem.id));
   const descriptionEditorVisible = await page.locator('#description-editor-wrap [data-rich-editor]').isVisible();
   const shortcodeAvailable = await page.locator('#description-editor-wrap [data-description-shortcode] option').count() >= 5;
+  const descriptionShortcodeExcluded = await page.locator('#description-editor-wrap [data-description-shortcode] option[value="Description"]').count() === 0;
+  const sourceAddress = String(firstInventoryItem.source_values?.Address || '').replace(/\s+/g, ' ').trim();
+  const addressOption = page.locator('#description-editor-wrap [data-description-shortcode] option[value="Address"]');
+  const addressOptionText = await addressOption.innerText();
+  const addressOptionTitle = await addressOption.getAttribute('title');
+  const addressShownFully = Boolean(sourceAddress) && addressOptionText.endsWith(sourceAddress) && String(addressOptionTitle || '').endsWith(sourceAddress);
   await page.click('#add-parameter');
   const individualParameterAdded = await page.locator('#parameter-list .parameter-row').count() === 1;
   await page.click('#apply-parameter-bulk');
@@ -257,7 +269,7 @@ const contentTypes = {
   const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && descriptionEditorVisible && shortcodeAvailable && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -275,6 +287,7 @@ const contentTypes = {
     image_floor_filter: imageFloorFilterWorks,
     parameter_floor_filter: parameterFloorFilterWorks,
     parameter_plan_filter: parameterPlanFilterWorks,
+    parameter_toolbar_layout: parameterToolbarLayout,
     optimized_thumbnail: optimizedThumbnail,
     source_images_visible: allSourceImagesVisible,
     brand_card_protected: brandCardProtected,
@@ -292,6 +305,8 @@ const contentTypes = {
     bulk_supported_parameters: bulkParameterCount,
     description_editor: descriptionEditorVisible,
     description_shortcodes: shortcodeAvailable,
+    description_shortcode_excluded: descriptionShortcodeExcluded,
+    address_shown_fully: addressShownFully,
     individual_parameter: individualParameterAdded,
     parameter_bulk_rule: parameterBulkRuleCreated,
     live_promotion_preview: promoVisible,

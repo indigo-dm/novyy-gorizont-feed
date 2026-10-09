@@ -798,8 +798,10 @@
 
   function descriptionShortcodeOptions(item) {
     var values = descriptionValues(item);
-    var preferred = ['Description', 'Rooms', 'Square', 'Floor', 'Floors', 'Price', 'Decoration', 'Address', 'Id', 'NewDevelopmentId'];
-    var keys = Object.keys(values).filter(function (key) { return values[key] != null && String(values[key]).trim(); });
+    var preferred = ['Rooms', 'Square', 'Floor', 'Floors', 'Price', 'Decoration', 'Address', 'Id', 'NewDevelopmentId'];
+    var keys = Object.keys(values).filter(function (key) {
+      return key !== DESCRIPTION_TAG && values[key] != null && String(values[key]).trim();
+    });
     keys.sort(function (left, right) {
       var leftIndex = preferred.indexOf(left); var rightIndex = preferred.indexOf(right);
       if (leftIndex < 0) leftIndex = preferred.length + keys.indexOf(left);
@@ -807,8 +809,9 @@
       return leftIndex - rightIndex;
     });
     return keys.map(function (key) {
-      var preview = key === 'Description' ? 'текст Profitbase' : String(values[key]).replace(/\s+/g, ' ').slice(0, 42);
-      return '<option value="' + esc(key) + '">' + esc((shortcodeLabels[key] || key) + ' · ' + preview) + '</option>';
+      var preview = String(values[key]).replace(/\s+/g, ' ').trim();
+      var label = (shortcodeLabels[key] || key) + ' · ' + preview;
+      return '<option value="' + esc(key) + '" title="' + esc(label) + '">' + esc(label) + '</option>';
     }).join('');
   }
 
