@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import html
 import json
 import os
+import re
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -122,6 +124,9 @@ def rule_matches(item: dict[str, object], rule: dict[str, object]) -> bool:
     floors = {str(value) for value in rule.get("floors", [])}
     if floors and str(item["floor"]) not in floors:
         return False
+    plans = {str(value) for value in rule.get("plan_ids", [])}
+    if plans and str(item["plan_id"]) not in plans:
+        return False
     area = float(str(item["area"] or 0))
     if rule.get("area_min") is not None and area < float(str(rule["area_min"])):
         return False
@@ -132,6 +137,54 @@ def rule_matches(item: dict[str, object], rule: dict[str, object]) -> bool:
 
 def source_image_id(url: str) -> str:
     return "src-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+
+
+def plan_id(url: str) -> str:
+    return "plan-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+
+
+SHORTCODE_PATTERN = re.compile(r"\{\{([A-Za-z][A-Za-z0-9_:-]{0,63})\}\}")
+
+
+def source_values(ad: ET.Element) -> dict[str, str]:
+    values: dict[str, str] = {}
+    for child in ad:
+        if child.tag == "Images" or len(child):
+            continue
+        value = (child.text or "").strip()
+        if value:
+            values[str(child.tag)] = value
+    return values
+
+
+def render_description(template: object, item: dict[str, object]) -> str:
+    values = {str(key): str(value) for key, value in dict(item.get("source_values", {})).items()}
+    values.setdefault("Description", str(item.get("source_description", "")))
+    aliases = {
+        "id": item.get("id", ""),
+        "house": item.get("house", ""),
+        "rooms": item.get("rooms", ""),
+        "area": item.get("area", ""),
+        "floor": item.get("floor", ""),
+        "floors": item.get("floors", ""),
+        "price": item.get("price", ""),
+        "decoration": item.get("decoration", ""),
+    }
+    values.update({key: str(value) for key, value in aliases.items()})
+
+    def replacement(match: re.Match[str]) -> str:
+        key = match.group(1)
+        value = values.get(key, "")
+        if key == "Description":
+            return value
+        return html.escape(value, quote=False)
+
+    result = SHORTCODE_PATTERN.sub(replacement, str(template))
+    if not result.strip():
+        raise ValueError(f"Description for ad {item['id']} is empty after shortcode substitution")
+    if len(result) > 7500:
+        raise ValueError(f"Description for ad {item['id']} exceeds 7500 characters")
+    return result
 
 
 def move_image(images: list[dict[str, str]], from_position: int, to_position: int) -> None:
@@ -176,6 +229,8 @@ def output_parameters(item: dict[str, object], parameter_config: dict[str, objec
         if rule.get("enabled") and rule_matches(item, rule):
             values.update(rule.get("values", {}))
     values.update(parameter_config.get("lot_values", {}).get(str(item["id"]), {}))
+    if "Description" in values:
+        values["Description"] = render_description(values["Description"], item)
     return values
 
 
@@ -253,6 +308,7 @@ def main() -> None:
         if not urls:
             raise ValueError(f"Ad {ad_id} has no images")
         plan_url = urls[0]
+        values = source_values(ad)
         plan_file = f"cache/plans/{local_plan_name(plan_url)}"
         plan_path = WORK_DIR / plan_file
         if (
@@ -273,10 +329,13 @@ def main() -> None:
             "price": node_text(ad, "Price"),
             "decoration": node_text(ad, "Decoration") or "Без отделки",
             "plan_url": plan_url,
+            "plan_id": plan_id(plan_url),
             "plan_file": plan_file,
             "output_file": f"images/{ad_id}.png",
             "source_images": urls,
             "source_tags": sorted(child.tag for child in ad if child.tag != "Images"),
+            "source_values": values,
+            "source_description": values.get("Description", values.get("description", "")),
         }
         items.append(item)
         ads_by_id[ad_id] = ad

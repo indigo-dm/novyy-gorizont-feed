@@ -59,6 +59,7 @@ for item in manifest["items"]:
         "floors": str(item["floors"]),
         "price": str(item["price"]),
         "decoration": item["decoration"],
+        "plan_id": item["plan_id"],
         "image": absolute_asset(f"{prefix}/previews/{item['id']}.webp"),
         "thumbnail": absolute_asset(f"{prefix}/thumbnails/{item['id']}.webp"),
         "final_image": absolute_asset(f"{prefix}/images/{item['id']}.png"),
@@ -67,6 +68,8 @@ for item in manifest["items"]:
         "feed_images": item.get("feed_images", []),
         "feed_parameters": item.get("feed_parameters", {}),
         "source_tags": item.get("source_tags", []),
+        "source_values": item.get("source_values", {}),
+        "source_description": item.get("source_description", ""),
         "excluded_from_feed": bool(item.get("excluded_from_feed")),
     })
 

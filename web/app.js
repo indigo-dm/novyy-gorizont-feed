@@ -17,7 +17,7 @@
     activeView: 'dashboard',
     filters: { house: '', rooms: '', floor: '', search: '' },
     imageFilters: { house: '', rooms: '', floor: '', search: '' },
-    parameterFilters: { house: '', rooms: '', floor: '', search: '' },
+    parameterFilters: { house: '', rooms: '', floor: '', plan: '', search: '' },
     page: 1,
     pageSize: 12,
     previewId: null,
@@ -73,6 +73,15 @@
       day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'
     }).format(date);
   };
+  var DESCRIPTION_TAG = 'Description';
+  var DESCRIPTION_TAGS = ['P', 'BR', 'STRONG', 'EM', 'UL', 'OL', 'LI'];
+  var shortcodeLabels = {
+    Id: 'ID лота', NewDevelopmentId: 'ID новостройки', Rooms: 'Комнат', Square: 'Площадь',
+    Floor: 'Этаж', Floors: 'Этажей в доме', Price: 'Цена', Decoration: 'Отделка',
+    Address: 'Адрес', Category: 'Категория', OperationType: 'Тип сделки', Description: 'Исходное описание',
+    id: 'ID лота', house: 'Дом', rooms: 'Комнат', area: 'Площадь', floor: 'Этаж', floors: 'Этажей в доме',
+    price: 'Цена', decoration: 'Отделка'
+  };
   var emptyImageSettings = function () { return { lot_overrides: {}, bulk_rules: [] }; };
   var emptyParameterSettings = function () { return { lot_values: {}, bulk_rules: [] }; };
 
@@ -81,6 +90,7 @@
     return (!filters.house || item.house_id === filters.house) &&
       (!filters.rooms || item.rooms === filters.rooms) &&
       (!filters.floor || String(item.floor) === filters.floor) &&
+      (!filters.plan || String(item.plan_id) === filters.plan) &&
       (!search || item.id.toLowerCase().indexOf(search) >= 0);
   }
 
@@ -90,6 +100,7 @@
     if ((rule.house_ids || []).length && (rule.house_ids || []).indexOf(String(item.house_id)) < 0) return false;
     if ((rule.rooms || []).length && (rule.rooms || []).indexOf(String(item.rooms)) < 0) return false;
     if ((rule.floors || []).length && (rule.floors || []).indexOf(String(item.floor)) < 0) return false;
+    if ((rule.plan_ids || []).length && (rule.plan_ids || []).indexOf(String(item.plan_id)) < 0) return false;
     var area = Number(item.area);
     if (rule.area_min != null && area < Number(rule.area_min)) return false;
     if (rule.area_max != null && area > Number(rule.area_max)) return false;
@@ -101,6 +112,7 @@
       house_ids: filters.house ? [filters.house] : [],
       rooms: filters.rooms ? [filters.rooms] : [],
       floors: filters.floor ? [filters.floor] : [],
+      plan_ids: filters.plan ? [filters.plan] : [],
       area_min: null,
       area_max: null,
       include_ids: filters.search ? items.map(function (item) { return item.id; }) : [],
@@ -316,10 +328,17 @@
     var houses = new Map();
     var rooms = new Set();
     var floors = new Set();
+    var plans = new Map();
     state.inventory.items.forEach(function (item) {
       houses.set(String(item.house_id), item.house);
       rooms.add(String(item.rooms));
       floors.add(String(item.floor));
+      var planKey = String(item.plan_id || '');
+      if (planKey) {
+        var plan = plans.get(planKey) || { rooms: item.rooms, area: item.area, count: 0 };
+        plan.count += 1;
+        plans.set(planKey, plan);
+      }
     });
     var houseOptions = '<option value="">Все дома</option>' +
       Array.from(houses.entries()).map(function (entry) {
@@ -333,6 +352,13 @@
       Array.from(floors).sort(function (left, right) { return Number(left) - Number(right); }).map(function (floor) {
         return '<option value="' + esc(floor) + '">' + esc(floor) + '</option>';
       }).join('');
+    var planOptions = '<option value="">Любая</option>' +
+      Array.from(plans.entries()).sort(function (left, right) {
+        return Number(left[1].rooms) - Number(right[1].rooms) || Number(left[1].area) - Number(right[1].area);
+      }).map(function (entry) {
+        var plan = entry[1];
+        return '<option value="' + esc(entry[0]) + '">' + esc(plan.rooms + 'к · ' + formatArea(plan.area) + ' · ' + plan.count + ' кв.') + '</option>';
+      }).join('');
     $('#filter-house').innerHTML = houseOptions;
     $('#image-filter-house').innerHTML = houseOptions;
     $('#parameter-filter-house').innerHTML = houseOptions;
@@ -342,6 +368,7 @@
     $('#filter-floor').innerHTML = floorOptions;
     $('#image-filter-floor').innerHTML = floorOptions;
     $('#parameter-filter-floor').innerHTML = floorOptions;
+    $('#parameter-filter-plan').innerHTML = planOptions;
     var lotOptions = state.inventory.items.map(function (item) {
       return '<option value="' + esc(item.id) + '">' + esc(item.house + ' · ' + item.rooms + 'к · ' + formatArea(item.area)) + '</option>';
     }).join('');
@@ -702,6 +729,167 @@
     renderImageUploadState();
   }
 
+  function sanitizeDescriptionHtml(value) {
+    var source = String(value || '').trim();
+    if (!source) return '';
+    if (!/<\/?[a-z][\s\S]*>/i.test(source)) {
+      return source.split(/\n{2,}/).map(function (paragraph) {
+        return '<p>' + esc(paragraph).replace(/\n/g, '<br>') + '</p>';
+      }).join('');
+    }
+    var doc = new DOMParser().parseFromString('<body>' + source + '</body>', 'text/html');
+    function clean(node) {
+      Array.from(node.childNodes).forEach(clean);
+      if (node.nodeType !== 1 || node === doc.body) return;
+      var tag = node.tagName;
+      if (tag === 'B' || tag === 'I') {
+        var replacement = doc.createElement(tag === 'B' ? 'strong' : 'em');
+        while (node.firstChild) replacement.appendChild(node.firstChild);
+        node.replaceWith(replacement);
+        node = replacement;
+        tag = node.tagName;
+      }
+      if (DESCRIPTION_TAGS.indexOf(tag) < 0) {
+        if (['SCRIPT', 'STYLE', 'IFRAME', 'OBJECT'].indexOf(tag) >= 0) node.remove();
+        else node.replaceWith.apply(node, Array.from(node.childNodes));
+        return;
+      }
+      Array.from(node.attributes).forEach(function (attribute) { node.removeAttribute(attribute.name); });
+    }
+    clean(doc.body);
+    return doc.body.innerHTML.trim();
+  }
+
+  function descriptionValues(item) {
+    var values = Object.assign({}, item.source_values || {});
+    Object.assign(values, {
+      id: item.id, house: item.house, rooms: item.rooms, area: item.area,
+      floor: item.floor, floors: item.floors, price: item.price, decoration: item.decoration
+    });
+    if (!values.Description) values.Description = item.source_description || '';
+    return values;
+  }
+
+  function resolveDescription(template, item) {
+    var values = descriptionValues(item);
+    var result = String(template || '').replace(/\{\{([A-Za-z][A-Za-z0-9_:-]{0,63})\}\}/g, function (_match, key) {
+      if (key === 'Description') return sanitizeDescriptionHtml(values[key] || '');
+      return esc(values[key] == null ? '' : values[key]);
+    });
+    return sanitizeDescriptionHtml(result);
+  }
+
+  function descriptionTemplate(item) {
+    var value = item.source_description || '';
+    var origin = 'Profitbase';
+    state.parameterSettings.bulk_rules.forEach(function (rule) {
+      if (rule.enabled !== false && ruleMatchesSimple(item, rule) && rule.values && rule.values[DESCRIPTION_TAG] != null) {
+        value = rule.values[DESCRIPTION_TAG];
+        origin = 'массовое правило';
+      }
+    });
+    var individual = state.parameterSettings.lot_values[item.id] || {};
+    if (individual[DESCRIPTION_TAG] != null) {
+      value = individual[DESCRIPTION_TAG];
+      origin = 'индивидуальная настройка';
+    }
+    return { value: sanitizeDescriptionHtml(value), origin: origin, individual: individual[DESCRIPTION_TAG] != null };
+  }
+
+  function descriptionShortcodeOptions(item) {
+    var values = descriptionValues(item);
+    var preferred = ['Description', 'Rooms', 'Square', 'Floor', 'Floors', 'Price', 'Decoration', 'Address', 'Id', 'NewDevelopmentId'];
+    var keys = Object.keys(values).filter(function (key) { return values[key] != null && String(values[key]).trim(); });
+    keys.sort(function (left, right) {
+      var leftIndex = preferred.indexOf(left); var rightIndex = preferred.indexOf(right);
+      if (leftIndex < 0) leftIndex = preferred.length + keys.indexOf(left);
+      if (rightIndex < 0) rightIndex = preferred.length + keys.indexOf(right);
+      return leftIndex - rightIndex;
+    });
+    return keys.map(function (key) {
+      var preview = key === 'Description' ? 'текст Profitbase' : String(values[key]).replace(/\s+/g, ' ').slice(0, 42);
+      return '<option value="' + esc(key) + '">' + esc((shortcodeLabels[key] || key) + ' · ' + preview) + '</option>';
+    }).join('');
+  }
+
+  function richTextMarkup(value, item, compact) {
+    return '<div class="richtext-box ' + (compact ? 'bulk-richtext' : '') + '">' +
+      '<div class="richtext-toolbar"><button type="button" data-rich-command="bold" title="Жирный"><strong>Ж</strong></button>' +
+      '<button type="button" data-rich-command="italic" title="Курсив"><em>К</em></button>' +
+      '<button type="button" data-rich-command="insertUnorderedList" title="Маркированный список">• Список</button>' +
+      '<button type="button" data-rich-command="insertOrderedList" title="Нумерованный список">1. Список</button></div>' +
+      '<div class="shortcode-row"><select data-description-shortcode>' + descriptionShortcodeOptions(item) + '</select>' +
+      '<button type="button" data-insert-shortcode>Вставить поле</button></div>' +
+      '<div class="richtext-editor" contenteditable="true" data-rich-editor spellcheck="true">' + sanitizeDescriptionHtml(value) + '</div>' +
+      '<div class="description-preview" data-description-preview></div><div class="description-counter" data-description-counter></div></div>';
+  }
+
+  function bindRichTextEditor(root, item, onChange) {
+    var editor = $('[data-rich-editor]', root);
+    if (!editor) return;
+    var savedRange = null;
+    function rememberSelection() {
+      var selection = window.getSelection();
+      if (selection && selection.rangeCount && editor.contains(selection.anchorNode)) savedRange = selection.getRangeAt(0).cloneRange();
+    }
+    function update(emitChange) {
+      var clean = sanitizeDescriptionHtml(editor.innerHTML);
+      var preview = $('[data-description-preview]', root);
+      var counter = $('[data-description-counter]', root);
+      if (preview) preview.innerHTML = resolveDescription(clean, item);
+      if (counter) counter.textContent = resolveDescription(clean, item).replace(/<[^>]*>/g, '').length + ' / 7500 символов';
+      if (emitChange && onChange) onChange(clean);
+    }
+    ['keyup', 'mouseup', 'focus'].forEach(function (eventName) { editor.addEventListener(eventName, rememberSelection); });
+    editor.addEventListener('input', function () { rememberSelection(); update(true); });
+    editor.addEventListener('paste', function (event) {
+      event.preventDefault();
+      document.execCommand('insertText', false, event.clipboardData.getData('text/plain'));
+    });
+    $$('[data-rich-command]', root).forEach(function (button) {
+      button.addEventListener('mousedown', function (event) { event.preventDefault(); });
+      button.addEventListener('click', function () {
+        editor.focus();
+        if (savedRange) { var selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(savedRange); }
+        document.execCommand(button.dataset.richCommand, false, null);
+        rememberSelection(); update(true);
+      });
+    });
+    var insert = $('[data-insert-shortcode]', root);
+    if (insert) insert.addEventListener('click', function () {
+      var select = $('[data-description-shortcode]', root);
+      if (!select || !select.value) return;
+      editor.focus();
+      if (savedRange) { var selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(savedRange); }
+      document.execCommand('insertText', false, '{{' + select.value + '}}');
+      rememberSelection(); update(true);
+    });
+    update(false);
+  }
+
+  function renderDescriptionEditor(item) {
+    var wrap = $('#description-editor-wrap');
+    if (!item) { wrap.innerHTML = ''; return; }
+    var template = descriptionTemplate(item);
+    wrap.innerHTML = '<div class="description-editor-card"><div class="description-editor-heading"><div><strong>Описание</strong>' +
+      '<small>Тег Description · источник: ' + esc(template.origin) + '</small></div>' +
+      (template.individual ? '<button type="button" class="description-reset" id="reset-description">Сбросить правку лота</button>' : '') +
+      '</div>' + richTextMarkup(template.value, item, false) + '</div>';
+    bindRichTextEditor(wrap, item, function (value) {
+      var current = descriptionTemplate(item).value;
+      if (value === current && !(state.parameterSettings.lot_values[item.id] || {})[DESCRIPTION_TAG]) return;
+      if (!state.parameterSettings.lot_values[item.id]) state.parameterSettings.lot_values[item.id] = {};
+      state.parameterSettings.lot_values[item.id][DESCRIPTION_TAG] = value;
+      setDirty(true);
+    });
+    var reset = $('#reset-description', wrap);
+    if (reset) reset.addEventListener('click', function () {
+      delete state.parameterSettings.lot_values[item.id][DESCRIPTION_TAG];
+      if (!Object.keys(state.parameterSettings.lot_values[item.id]).length) delete state.parameterSettings.lot_values[item.id];
+      setDirty(true); renderParameters();
+    });
+  }
+
   function supportedParameters() {
     return (state.inventory.parameter_catalog || []).filter(function (item) { return item.supported; });
   }
@@ -721,6 +909,10 @@
 
   function parameterControl(catalog, value, prefix) {
     if (!catalog) return '';
+    if (catalog.kind === 'richtext') {
+      var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; }) || state.inventory.items[0];
+      return item ? richTextMarkup(value || '{{Description}}', item, prefix === 'bulk-param') : '';
+    }
     if (catalog.kind === 'multi') {
       var selected = Array.isArray(value) ? value : [];
       return '<div class="check-group">' + (catalog.values || []).map(function (option) {
@@ -738,6 +930,10 @@
   }
 
   function readParameterControl(root, catalog, prefix) {
+    if (catalog.kind === 'richtext') {
+      var editor = $('[data-rich-editor]', root);
+      return editor ? sanitizeDescriptionHtml(editor.innerHTML) : '';
+    }
     if (catalog.kind === 'multi') {
       return $$('[data-' + prefix + '-multi="' + catalog.tag + '"]:checked', root).map(function (input) { return input.value; });
     }
@@ -751,7 +947,13 @@
 
   function renderParameterBulkValue() {
     var catalog = parameterByTag($('#bulk-parameter-tag').value);
-    $('#bulk-parameter-value').innerHTML = catalog ? '<label class="field"><span>Значение</span>' + parameterControl(catalog, catalog.kind === 'multi' ? [catalog.values[0]] : catalog.values ? catalog.values[0] : catalog.min, 'bulk-param') + '</label>' : '';
+    var root = $('#bulk-parameter-value');
+    var defaultValue = catalog && catalog.kind === 'richtext' ? '{{Description}}' : catalog && catalog.kind === 'multi' ? [catalog.values[0]] : catalog && catalog.values ? catalog.values[0] : catalog ? catalog.min : '';
+    root.innerHTML = catalog ? '<label class="field"><span>Значение</span>' + parameterControl(catalog, defaultValue, 'bulk-param') + '</label>' : '';
+    if (catalog && catalog.kind === 'richtext') {
+      var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; }) || state.inventory.items[0];
+      if (item) bindRichTextEditor(root, item, null);
+    }
   }
 
   function renderParameterBulkRules() {
@@ -759,7 +961,8 @@
       var count = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); }).length;
       var labels = Object.keys(rule.values || {}).map(function (tag) { return (parameterByTag(tag) || { name: tag }).name; }).join(', ');
       var floorLabel = (rule.floors || []).length ? ' · этаж ' + rule.floors.join(', ') : '';
-      return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count + ' квартир' + esc(floorLabel) + ' · ' + esc(labels) +
+      var planLabel = (rule.plan_ids || []).length ? ' · выбранная планировка' : '';
+      return '<div class="bulk-rule"><div><strong>' + esc(rule.name) + '</strong><small>' + count + ' квартир' + esc(floorLabel + planLabel) + ' · ' + esc(labels) +
         '</small></div><button data-delete-parameter-rule="' + esc(rule.id) + '" aria-label="Удалить правило">×</button></div>';
     }).join('') : '<p class="helper">Массовых правил пока нет.</p>';
     $$('[data-delete-parameter-rule]', $('#parameter-bulk-rules')).forEach(function (button) {
@@ -788,22 +991,30 @@
     $('#parameter-lot').value = state.parameterLotId || '';
     var item = state.inventory.items.find(function (lot) { return lot.id === state.parameterLotId; });
     var supported = supportedParameters();
-    var catalogOptions = supported.map(function (catalog) {
+    var catalogOptions = supported.filter(function (catalog) { return catalog.tag !== DESCRIPTION_TAG; }).map(function (catalog) {
+      var count = tagCounts[catalog.tag] || 0;
+      return '<option value="' + esc(catalog.tag) + '">' + esc(catalog.name) + (count ? ' · уже есть в Profitbase' : '') + '</option>';
+    }).join('');
+    var bulkCatalogOptions = supported.map(function (catalog) {
       var count = tagCounts[catalog.tag] || 0;
       return '<option value="' + esc(catalog.tag) + '">' + esc(catalog.name) + (count ? ' · уже есть в Profitbase' : '') + '</option>';
     }).join('');
     $('#new-parameter-tag').innerHTML = catalogOptions;
-    $('#bulk-parameter-tag').innerHTML = catalogOptions;
+    var selectedBulkTag = $('#bulk-parameter-tag').value;
+    $('#bulk-parameter-tag').innerHTML = bulkCatalogOptions;
+    if (selectedBulkTag && parameterByTag(selectedBulkTag)) $('#bulk-parameter-tag').value = selectedBulkTag;
     var deferred = (state.inventory.parameter_catalog || []).filter(function (catalog) { return !catalog.supported; }).map(function (catalog) { return catalog.tag; });
     $('#parameter-catalog-note').textContent = deferred.length ? 'После сверки справочника Avito добавим: ' + deferred.join(', ') + '.' : '';
     if (!item) {
+      renderDescriptionEditor(null);
       $('#parameter-list').innerHTML = '<div class="parameter-empty">По выбранным фильтрам квартир нет.</div>';
       renderParameterBulkValue();
       renderParameterBulkRules();
       return;
     }
+    renderDescriptionEditor(item);
     var values = effectiveParameters(item);
-    var tagsWithValues = Object.keys(values);
+    var tagsWithValues = Object.keys(values).filter(function (tag) { return tag !== DESCRIPTION_TAG; });
     $('#parameter-list').innerHTML = tagsWithValues.length ? tagsWithValues.map(function (tag) {
       var catalog = parameterByTag(tag);
       var individual = Object.prototype.hasOwnProperty.call(state.parameterSettings.lot_values[item.id] || {}, tag);
@@ -1079,6 +1290,29 @@
         return 'В правиле «' + rule.name + '» дата начала позже даты окончания.';
       }
     }
+    var descriptionError = '';
+    Object.keys(state.parameterSettings.lot_values).some(function (lotId) {
+      var template = state.parameterSettings.lot_values[lotId][DESCRIPTION_TAG];
+      if (template == null) return false;
+      var item = state.inventory.items.find(function (lot) { return lot.id === lotId; });
+      var result = item ? resolveDescription(template, item) : '';
+      if (!result.replace(/<[^>]*>/g, '').trim()) descriptionError = 'Описание квартиры ' + lotId + ' не может быть пустым.';
+      else if (result.length > 7500) descriptionError = 'Описание квартиры ' + lotId + ' превышает 7500 символов.';
+      return Boolean(descriptionError);
+    });
+    if (descriptionError) return descriptionError;
+    state.parameterSettings.bulk_rules.some(function (rule) {
+      var template = rule.values && rule.values[DESCRIPTION_TAG];
+      if (template == null) return false;
+      var matching = state.inventory.items.filter(function (item) { return ruleMatchesSimple(item, rule); });
+      return matching.some(function (item) {
+        var result = resolveDescription(template, item);
+        if (!result.replace(/<[^>]*>/g, '').trim()) descriptionError = 'Массовое описание даёт пустой текст для квартиры ' + item.id + '.';
+        else if (result.length > 7500) descriptionError = 'Массовое описание для квартиры ' + item.id + ' превышает 7500 символов.';
+        return Boolean(descriptionError);
+      });
+    });
+    if (descriptionError) return descriptionError;
     return '';
   }
 
@@ -1271,6 +1505,7 @@
     $('#parameter-filter-house').addEventListener('change', function (event) { state.parameterFilters.house = event.target.value; renderParameters(); });
     $('#parameter-filter-rooms').addEventListener('change', function (event) { state.parameterFilters.rooms = event.target.value; renderParameters(); });
     $('#parameter-filter-floor').addEventListener('change', function (event) { state.parameterFilters.floor = event.target.value; renderParameters(); });
+    $('#parameter-filter-plan').addEventListener('change', function (event) { state.parameterFilters.plan = event.target.value; renderParameters(); });
     $('#parameter-filter-search').addEventListener('input', function (event) { state.parameterFilters.search = event.target.value; renderParameters(); });
     $('#parameter-lot').addEventListener('change', function (event) { state.parameterLotId = event.target.value; renderParameters(); });
     $('#add-parameter').addEventListener('click', function () {
@@ -1294,6 +1529,7 @@
       if (!catalog) return;
       var value = readParameterControl($('#bulk-parameter-value'), catalog, 'bulk-param');
       if (catalog.kind === 'multi' && !value.length) { showToast('Выберите хотя бы одно значение.'); return; }
+      if (catalog.kind === 'richtext' && !String(value).replace(/<[^>]*>/g, '').trim()) { showToast('Описание не может быть пустым.'); return; }
       var values = {}; values[catalog.tag] = value;
       state.parameterSettings.bulk_rules.push(Object.assign({
         id: 'parameter-rule-' + Date.now(),
@@ -1379,7 +1615,7 @@
       state.page = 1;
       state.filters = { house: '', rooms: '', floor: '', search: '' };
       state.imageFilters = { house: '', rooms: '', floor: '', search: '' };
-      state.parameterFilters = { house: '', rooms: '', floor: '', search: '' };
+      state.parameterFilters = { house: '', rooms: '', floor: '', plan: '', search: '' };
       populateFilters();
       renderAll();
       navigate(state.activeView);

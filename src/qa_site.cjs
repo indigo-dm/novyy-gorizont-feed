@@ -191,9 +191,19 @@ const contentTypes = {
   await page.locator('#parameter-filter-floor').selectOption(firstFloor);
   const parameterFloorCount = Number(await page.locator('#parameter-filter-count').textContent());
   const parameterFloorFilterWorks = parameterFloorCount === expectedFloorCount;
+  await page.locator('#parameter-filter-floor').selectOption('');
+  const firstPlan = String(firstInventoryItem.plan_id || '');
+  const expectedPlanCount = inventoryData.items.filter((item) => String(item.plan_id) === firstPlan).length;
+  await page.locator('#parameter-filter-plan').selectOption(firstPlan);
+  const parameterPlanCount = Number(await page.locator('#parameter-filter-count').textContent());
+  const parameterPlanFilterWorks = Boolean(firstPlan) && parameterPlanCount === expectedPlanCount;
+  await page.locator('#parameter-filter-plan').selectOption('');
   const sourceTagsVisible = await page.locator('#source-tags .tag-chip').count() > 10;
   const supportedParameterCount = await page.locator('#new-parameter-tag option').count();
+  const bulkParameterCount = await page.locator('#bulk-parameter-tag option').count();
   await page.locator('#parameter-lot').selectOption(String(firstInventoryItem.id));
+  const descriptionEditorVisible = await page.locator('#description-editor-wrap [data-rich-editor]').isVisible();
+  const shortcodeAvailable = await page.locator('#description-editor-wrap [data-description-shortcode] option').count() >= 5;
   await page.click('#add-parameter');
   const individualParameterAdded = await page.locator('#parameter-list .parameter-row').count() === 1;
   await page.click('#apply-parameter-bulk');
@@ -247,7 +257,7 @@ const contentTypes = {
   const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && descriptionEditorVisible && shortcodeAvailable && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -264,6 +274,7 @@ const contentTypes = {
     lot_floor_filter_expected: Math.min(12, expectedFloorCount),
     image_floor_filter: imageFloorFilterWorks,
     parameter_floor_filter: parameterFloorFilterWorks,
+    parameter_plan_filter: parameterPlanFilterWorks,
     optimized_thumbnail: optimizedThumbnail,
     source_images_visible: allSourceImagesVisible,
     brand_card_protected: brandCardProtected,
@@ -278,6 +289,9 @@ const contentTypes = {
     image_bulk_rule: imageBulkRuleCreated,
     source_tags_visible: sourceTagsVisible,
     supported_parameters: supportedParameterCount,
+    bulk_supported_parameters: bulkParameterCount,
+    description_editor: descriptionEditorVisible,
+    description_shortcodes: shortcodeAvailable,
     individual_parameter: individualParameterAdded,
     parameter_bulk_rule: parameterBulkRuleCreated,
     live_promotion_preview: promoVisible,

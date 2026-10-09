@@ -173,7 +173,7 @@
 
         <section class="view" id="view-parameters">
           <div class="notice">
-            <div><strong>Дополнительные параметры Avito</strong><span>Доступны все восемь выбранных тегов с допустимыми значениями из справочника Avito.</span></div>
+            <div><strong>Параметры Avito</strong><span>Доступны девять управляемых тегов, включая форматируемое описание с шорткодами.</span></div>
             <span class="notice-badge">BETA</span>
           </div>
           <div class="source-tags panel">
@@ -184,6 +184,7 @@
             <label><span>Дом</span><select id="parameter-filter-house"><option value="">Все дома</option></select></label>
             <label><span>Комнатность</span><select id="parameter-filter-rooms"><option value="">Любая</option></select></label>
             <label><span>Этаж</span><select id="parameter-filter-floor"><option value="">Любой</option></select></label>
+            <label><span>Планировка</span><select id="parameter-filter-plan"><option value="">Любая</option></select></label>
             <label class="search-field"><span>Поиск по ID</span><input id="parameter-filter-search" type="search" placeholder="ID квартиры"></label>
             <div class="toolbar-count"><strong id="parameter-filter-count">0</strong><span>в выборке</span></div>
           </div>
@@ -193,6 +194,7 @@
                 <div><p class="eyebrow">Отдельный лот</p><h2>Параметры квартиры</h2></div>
                 <label class="compact-select"><span>Квартира</span><select id="parameter-lot"></select></label>
               </div>
+              <div id="description-editor-wrap"></div>
               <div class="parameter-list" id="parameter-list"></div>
               <div class="add-parameter-row">
                 <label class="field"><span>Добавить параметр</span><select id="new-parameter-tag"></select></label>

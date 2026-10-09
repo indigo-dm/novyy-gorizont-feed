@@ -12,8 +12,8 @@ on:
   repository_dispatch:
     types: [profitbase-refresh]
   schedule:
-    - cron: "0 0,13 * * *"
-      timezone: "Europe/Moscow"
+    # GitHub Actions cron is evaluated in UTC. Moscow is UTC+3 year-round.
+    - cron: "0 10,21 * * *"
 
 permissions:
   contents: write

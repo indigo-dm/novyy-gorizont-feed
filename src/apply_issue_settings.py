@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from html.parser import HTMLParser
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
@@ -11,6 +12,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_ROOMS = {"1", "2", "3", "4", "5"}
 ALLOWED_PARAMETERS = {
+    "Description",
     "ViewFromWindows",
     "PassengerElevator",
     "FreightElevator",
@@ -20,6 +22,7 @@ ALLOWED_PARAMETERS = {
     "CeilingHeight",
     "NDAdditionally",
 }
+ALLOWED_DESCRIPTION_TAGS = {"p", "br", "strong", "em", "ul", "ol", "li"}
 MULTI_PARAMETERS = {
     "ViewFromWindows",
     "Courtyard",
@@ -94,14 +97,18 @@ def filters(source: dict[str, object], name: str, allowed_houses: set[str]) -> d
     include_ids = string_list(source.get("include_ids", []), f"{name}.include_ids")
     exclude_ids = string_list(source.get("exclude_ids", []), f"{name}.exclude_ids")
     floors = string_list(source.get("floors", []), f"{name}.floors")
+    plan_ids = string_list(source.get("plan_ids", []), f"{name}.plan_ids")
     if any(not value.isdigit() for value in include_ids + exclude_ids):
         raise ValueError(f"{name}: lot ids must contain digits only")
     if any(not value.isdigit() or not 1 <= int(value) <= 300 for value in floors):
         raise ValueError(f"{name}: floors must contain numbers between 1 and 300")
+    if any(not re.fullmatch(r"plan-[0-9a-f]{12}", value) for value in plan_ids):
+        raise ValueError(f"{name}: plan_ids contains an invalid layout id")
     return {
         "house_ids": string_list(source.get("house_ids", []), f"{name}.house_ids", allowed_houses),
         "rooms": string_list(source.get("rooms", []), f"{name}.rooms", ALLOWED_ROOMS),
         "floors": floors,
+        "plan_ids": plan_ids,
         "area_min": area_min,
         "area_max": area_max,
         "include_ids": include_ids,
@@ -109,9 +116,53 @@ def filters(source: dict[str, object], name: str, allowed_houses: set[str]) -> d
     }
 
 
+class DescriptionHTMLValidator(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.stack: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag not in ALLOWED_DESCRIPTION_TAGS or attrs:
+            raise ValueError("Description contains unsupported HTML")
+        if tag != "br":
+            self.stack.append(tag)
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag != "br" or attrs:
+            raise ValueError("Description contains unsupported HTML")
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "br":
+            return
+        if not self.stack or self.stack.pop() != tag:
+            raise ValueError("Description contains incorrectly nested HTML")
+
+    def finish(self) -> None:
+        if self.stack:
+            raise ValueError("Description contains unclosed HTML tags")
+
+
+def description_template(value: object, name: str) -> str:
+    result = str(value or "").strip()
+    if not result:
+        raise ValueError(f"{name} must not be empty")
+    if len(result) > 12000:
+        raise ValueError(f"{name} exceeds the template limit")
+    validator = DescriptionHTMLValidator()
+    validator.feed(result)
+    validator.close()
+    validator.finish()
+    without_shortcodes = re.sub(r"\{\{[A-Za-z][A-Za-z0-9_:-]{0,63}\}\}", "", result)
+    if "{{" in without_shortcodes or "}}" in without_shortcodes:
+        raise ValueError(f"{name} contains an invalid shortcode")
+    return result
+
+
 def parameter_value(tag: str, value: object, name: str) -> object:
     if tag not in ALLOWED_PARAMETERS:
         raise ValueError(f"{name} contains an unsupported parameter: {tag}")
+    if tag == "Description":
+        return description_template(value, name)
     if tag in MULTI_PARAMETERS:
         values = string_list(value, name)
         if not values or len(values) > 12:

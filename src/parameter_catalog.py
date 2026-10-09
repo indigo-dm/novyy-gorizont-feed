@@ -1,5 +1,12 @@
 PARAMETER_CATALOG = [
     {
+        "tag": "Description",
+        "name": "Описание",
+        "kind": "richtext",
+        "max": 7500,
+        "supported": True,
+    },
+    {
         "tag": "ViewFromWindows",
         "name": "Вид из окон",
         "kind": "multi",
