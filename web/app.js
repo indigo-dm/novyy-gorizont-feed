@@ -86,6 +86,10 @@
   var emptyImageSettings = function () { return { lot_overrides: {}, bulk_rules: [] }; };
   var emptyParameterSettings = function () { return { lot_values: {}, bulk_rules: [] }; };
 
+  function projectIsReady(project) {
+    return Boolean(project && (project.available || project.status === 'active'));
+  }
+
   function itemMatchesFilters(item, filters) {
     var search = String(filters.search || '').trim().toLowerCase();
     return (!filters.house || item.house_id === filters.house) &&
@@ -1622,7 +1626,7 @@
     stopPublishPolling();
     var project = state.registry.projects.find(function (item) { return item.slug === slug; });
     if (!project) return;
-    if (!project.available) {
+    if (!projectIsReady(project)) {
       showToast('Объект создан, но источник Profitbase ещё не подключён.');
       $('#project-select').value = state.project ? state.project.slug : state.registry.default_project;
       return;
@@ -1680,8 +1684,9 @@
       if (!response.ok) throw new Error('Не удалось загрузить список объектов.');
       state.registry = await response.json();
       $('#project-select').innerHTML = state.registry.projects.map(function (project) {
-        return '<option value="' + esc(project.slug) + '" ' + (project.available ? '' : 'disabled') + '>' +
-          esc(project.name) + (project.available ? '' : ' · настройка') + '</option>';
+        var ready = projectIsReady(project);
+        return '<option value="' + esc(project.slug) + '" ' + (ready ? '' : 'disabled') + '>' +
+          esc(project.name) + (ready ? '' : ' · настройка') + '</option>';
       }).join('');
       bindStaticEvents();
       var requestedView = window.location.hash.replace('#', '');
