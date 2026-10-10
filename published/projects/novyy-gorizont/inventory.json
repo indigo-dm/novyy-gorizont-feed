@@ -1,37 +1,37 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-10-10T03:34:20+03:00",
-  "source_ads": 212,
-  "full_ads": 212,
+  "checked_at": "2026-10-10T18:46:50+03:00",
+  "source_ads": 211,
+  "full_ads": 211,
   "excluded_ads": 0,
   "unique_plans": 14,
   "source_tag_counts": {
-    "AdStatus": 212,
-    "Address": 212,
-    "BalconyOrLoggiaMulti": 212,
-    "Category": 212,
-    "ContactMethod": 212,
-    "ContactPhone": 212,
+    "AdStatus": 211,
+    "Address": 211,
+    "BalconyOrLoggiaMulti": 211,
+    "Category": 211,
+    "ContactMethod": 211,
+    "ContactPhone": 211,
     "DealType": 4,
-    "Decoration": 212,
-    "Description": 212,
-    "Floor": 212,
-    "Floors": 212,
-    "HouseType": 212,
-    "Id": 212,
-    "KitchenSpace": 212,
-    "LivingSpace": 212,
-    "ManagerName": 212,
-    "MarketType": 212,
-    "NewDevelopmentId": 212,
-    "OperationType": 212,
-    "Price": 212,
-    "PropertyRights": 212,
-    "RoomType": 212,
-    "Rooms": 212,
-    "Square": 212,
-    "Status": 212
+    "Decoration": 211,
+    "Description": 211,
+    "Floor": 211,
+    "Floors": 211,
+    "HouseType": 211,
+    "Id": 211,
+    "KitchenSpace": 211,
+    "LivingSpace": 211,
+    "ManagerName": 211,
+    "MarketType": 211,
+    "NewDevelopmentId": 211,
+    "OperationType": 211,
+    "Price": 211,
+    "PropertyRights": 211,
+    "RoomType": 211,
+    "Rooms": 211,
+    "Square": 211,
+    "Status": 211
   },
   "parameter_catalog": [
     {
@@ -14918,174 +14918,6 @@
         "Square": "46.13",
         "Decoration": "Без отделки",
         "Floor": "3",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "3379674",
-        "Rooms": "2",
-        "KitchenSpace": "7.24",
-        "LivingSpace": "26.05",
-        "Floors": "22",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "ЖК Новый Горизонт 4 дом! <br> <br><br><br>▪️ Приятные цены  <br><br>▪️ 5 квартир на этаже  <br><br>▪️ Комфортные планировки  <br><br>▪️ 2 комн. квартиры с прекрасными видовыми характеристиками  <br><br>▪️ Абсолютное отсутствие студий  <br><br>▪️ Размещение инфраструктуры на 1ом этаже",
-      "excluded_from_feed": false
-    },
-    {
-      "id": "11923829",
-      "house_id": "3379674",
-      "house": "Дом 4",
-      "rooms": "2",
-      "area": "46.13",
-      "floor": "4",
-      "floors": "22",
-      "price": "5858510",
-      "decoration": "Без отделки",
-      "plan_id": "plan-93d9bf578e20",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923829.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923829.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923829.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-93d9bf578e20",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba707ae7e0.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "position": 9
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923829.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-93d9bf578e20",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba707ae7e0.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "BalconyOrLoggiaMulti",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "LivingSpace",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "RoomType",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "11923829",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+7 (999) 449-90-80",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Ростов-на-Дону, Ростовская область, Тибетская",
-        "Description": "ЖК Новый Горизонт 4 дом! <br> <br><br><br>▪️ Приятные цены  <br><br>▪️ 5 квартир на этаже  <br><br>▪️ Комфортные планировки  <br><br>▪️ 2 комн. квартиры с прекрасными видовыми характеристиками  <br><br>▪️ Абсолютное отсутствие студий  <br><br>▪️ Размещение инфраструктуры на 1ом этаже",
-        "Price": "5858510",
-        "Square": "46.13",
-        "Decoration": "Без отделки",
-        "Floor": "4",
         "Status": "Квартира",
         "MarketType": "Новостройка",
         "NewDevelopmentId": "3379674",
