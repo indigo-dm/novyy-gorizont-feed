@@ -22,10 +22,9 @@ on:
   workflow_call:
     inputs:
       project:
-        description: Project slug; empty rebuilds every active project
-        required: false
+        description: Exact project slug
+        required: true
         type: string
-        default: ""
       render_ids:
         description: Comma-separated lot ids or all
         required: false
@@ -36,18 +35,12 @@ on:
         required: false
         type: string
         default: ""
-  push:
-    paths:
-      - "assets/**"
-      - "projects/*/assets/**"
-      - "!projects/*/assets/uploads/**"
-
 permissions:
   contents: write
   actions: read
 
 concurrency:
-  group: pages
+  group: pages-${{ inputs.project || github.event.client_payload.project || 'explicit-all-projects' }}
   cancel-in-progress: true
 
 jobs:

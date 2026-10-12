@@ -90,6 +90,10 @@ def main() -> None:
     REGISTRY_PATH.write_text(
         json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+    output_path = os.environ.get("GITHUB_OUTPUT", "").strip()
+    if output_path:
+        with Path(output_path).open("a", encoding="utf-8") as output:
+            output.write(f"project={slug}\n")
     print(json.dumps({"slug": slug, "name": name, "status": "setup"}, ensure_ascii=False))
 
 

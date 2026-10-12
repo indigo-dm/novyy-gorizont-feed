@@ -1,0 +1,70 @@
+name: Publish project materials
+run-name: "Publish materials for ${{ inputs.project }}"
+
+on:
+  workflow_call:
+    inputs:
+      project:
+        description: Exact project slug
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Exact project slug
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: project-materials-${{ inputs.project }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout application source
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Checkout current published data
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          path: .feed-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Prepare project materials and registry
+        env:
+          PUBLISHED_DATA_DIR: .feed-data/published
+          RENDER_CACHE_DIR: render-cache
+        run: python src/seed_site.py
+
+      - name: Update published project registry
+        run: |
+          cp site/projects.json .feed-data/published/projects.json
+          git -C .feed-data config user.name "github-actions[bot]"
+          git -C .feed-data config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C .feed-data add published/projects.json
+          if git -C .feed-data diff --cached --quiet; then
+            echo "Published project registry is already current."
+          else
+            git -C .feed-data commit -m "Publish project registry"
+            git -C .feed-data push origin feed-data
+          fi
+
+      - name: Publish only selected project materials to Cloudflare R2
+        env:
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: indigo-feed-studio
+        run: python src/publish_project_assets.py --source site --project "${{ inputs.project }}"
