@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_ROOMS = {"1", "2", "3", "4", "5"}
 ALLOWED_PARAMETERS = {
     "Description",
+    "Rooms",
     "ViewFromWindows",
     "PassengerElevator",
     "FreightElevator",
@@ -163,6 +164,11 @@ def parameter_value(tag: str, value: object, name: str) -> object:
         raise ValueError(f"{name} contains an unsupported parameter: {tag}")
     if tag == "Description":
         return description_template(value, name)
+    if tag == "Rooms":
+        result = int(str(value))
+        if result < 1 or result > 20:
+            raise ValueError(f"{name} is outside the allowed range")
+        return str(result)
     if tag in MULTI_PARAMETERS:
         values = string_list(value, name)
         if not values or len(values) > 12:

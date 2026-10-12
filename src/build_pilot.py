@@ -157,13 +157,23 @@ def source_values(ad: ET.Element) -> dict[str, str]:
     return values
 
 
-def render_description(template: object, item: dict[str, object]) -> str:
+def render_description(
+    template: object,
+    item: dict[str, object],
+    parameter_values: dict[str, object] | None = None,
+) -> str:
     values = {str(key): str(value) for key, value in dict(item.get("source_values", {})).items()}
     values.setdefault("Description", str(item.get("source_description", "")))
+    effective_values = {
+        str(key): str(value)
+        for key, value in (parameter_values or {}).items()
+        if key != "Description"
+    }
+    values.update(effective_values)
     aliases = {
         "id": item.get("id", ""),
         "house": item.get("house", ""),
-        "rooms": item.get("rooms", ""),
+        "rooms": effective_values.get("Rooms", item.get("rooms", "")),
         "area": item.get("area", ""),
         "floor": item.get("floor", ""),
         "floors": item.get("floors", ""),
@@ -230,7 +240,7 @@ def output_parameters(item: dict[str, object], parameter_config: dict[str, objec
             values.update(rule.get("values", {}))
     values.update(parameter_config.get("lot_values", {}).get(str(item["id"]), {}))
     if "Description" in values:
-        values["Description"] = render_description(values["Description"], item)
+        values["Description"] = render_description(values["Description"], item, values)
     return values
 
 

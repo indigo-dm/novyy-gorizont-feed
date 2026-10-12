@@ -7,6 +7,15 @@ PARAMETER_CATALOG = [
         "supported": True,
     },
     {
+        "tag": "Rooms",
+        "name": "Количество комнат",
+        "kind": "number",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "supported": True,
+    },
+    {
         "tag": "ViewFromWindows",
         "name": "Вид из окон",
         "kind": "multi",
