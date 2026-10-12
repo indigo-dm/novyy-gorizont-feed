@@ -111,6 +111,17 @@ jobs:
           python src/prepare_site.py
           python src/seed_site.py
 
+      - name: Load protected Profitbase source addresses
+        env:
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
+        run: |
+          mkdir -p .source-feeds
+          aws s3 sync s3://indigo-feed-studio/private/source-feeds .source-feeds --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" --only-show-errors
+          python src/prepare_source_feeds.py --source .source-feeds
+
       - name: Build and validate affected project cards
         env:
           PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
@@ -119,7 +130,6 @@ jobs:
           PUBLISHED_DATA_DIR: .feed-data/published
           SITE_PREPARED: "1"
           PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
-          PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
           FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
           FEED_STUDIO_UPLOAD_URL: https://feed-api.indigo-dm.ru
           FEED_ASSET_PUBLIC_ROOT: https://feed-api.indigo-dm.ru/media

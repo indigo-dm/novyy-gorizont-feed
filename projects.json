@@ -29,6 +29,13 @@
       "status": "active",
       "source_feed_key": "teatral",
       "compatibility_root": false
+    },
+    {
+      "slug": "orion",
+      "name": "ЖК Орион",
+      "status": "setup",
+      "source_feed_key": "orion",
+      "compatibility_root": false
     }
   ]
 }

@@ -4,6 +4,7 @@ output/
 site/
 fast-site/
 .feed-data/
+.source-feeds/
 work/
 node_modules/
 __pycache__/

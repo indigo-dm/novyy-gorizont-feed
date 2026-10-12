@@ -89,6 +89,25 @@ globalThis.fetch = async (url, options = {}) => {
   if (value.includes('/contents/projects/novyy-gorizont/assets/uploads?ref=main')) {
     return Response.json([{ type: 'file', name: 'mat-qa-demo-render.png', size: 64 }]);
   }
+  if (value.includes('/contents/projects/novyy-gorizont/config.json?ref=main')) {
+    return Response.json({
+      project: 'ЖК Новый Горизонт',
+      brand: {
+        green: '#00605C', green_dark: '#004C49', gold: '#CEAD75', gray: '#9B9B9B', white: '#FFFFFF', font: 'Manrope',
+        logo: 'logo-gold.svg', key_render: 'selected-render.jpg',
+        palette: [{ name: 'Основной', value: '#00605C' }]
+      }
+    });
+  }
+  if (value.includes('/contents/projects/novyy-gorizont/promotion-rules.json?ref=main')) {
+    return Response.json({ version: 2, rules: [], image_settings: { lot_overrides: {}, bulk_rules: [] }, parameter_settings: { lot_values: {}, bulk_rules: [] } });
+  }
+  if (value.includes('/contents/projects/novyy-gorizont/assets?ref=main')) {
+    return Response.json([
+      { type: 'file', name: 'logo-gold.svg', size: 64 },
+      { type: 'file', name: 'selected-render.jpg', size: 64 }
+    ]);
+  }
   if (value.endsWith('/repos/indigo-dm/feed-studio/dispatches') && options.method === 'POST') {
     frontendDeployDispatched = JSON.parse(options.body).event_type === 'feed-data-updated';
     frontendFeedPublished = frontendDeployDispatched;
@@ -161,6 +180,20 @@ const materialUpload = await materialUploadResponse.json();
 const materialListResponse = await worker.fetch(new Request('https://worker.example/materials?project=novyy-gorizont', { headers }), env);
 const materialList = await materialListResponse.json();
 
+const setupResponse = await worker.fetch(new Request('https://worker.example/project/setup?project=novyy-gorizont', { headers }), env);
+const setup = await setupResponse.json();
+
+const sourceEmptyResponse = await worker.fetch(new Request('https://worker.example/source-feed?project=novyy-gorizont', { headers }), env);
+const sourceEmpty = await sourceEmptyResponse.json();
+const sourceSaveResponse = await worker.fetch(new Request('https://worker.example/source-feed', {
+  method: 'POST',
+  headers,
+  body: JSON.stringify({ project: 'novyy-gorizont', url: 'https://profitbase.example/private-feed?token=qa-secret' })
+}), env);
+const sourceSaved = await sourceSaveResponse.json();
+const sourceStatusResponse = await worker.fetch(new Request('https://worker.example/source-feed?project=novyy-gorizont', { headers }), env);
+const sourceStatus = await sourceStatusResponse.json();
+
 const buildingResponse = await worker.fetch(new Request('https://worker.example/status?request=17', { headers }), env);
 const building = await buildingResponse.json();
 issueState = 'closed';
@@ -195,6 +228,10 @@ await cleanupPromise;
 const result = {
   ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
     materialUploadResponse.status === 201 && materialUploadCreated && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
+    setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' &&
+    sourceEmptyResponse.status === 200 && sourceEmpty.configured === false && sourceSaveResponse.status === 200 && sourceSaved.hostname === 'profitbase.example' &&
+    sourceStatusResponse.status === 200 && sourceStatus.configured === true && sourceStatus.hostname === 'profitbase.example' && !JSON.stringify(sourceStatus).includes('qa-secret') &&
+    feedStorage.objects.has('private/source-feeds/novyy-gorizont.json') &&
     imageUploadResponse.status === 201 && imageUpload.storage === 'r2' && imageUpload.url.startsWith('https://worker.example/media/uploads/') && mediaResponse.status === 200 &&
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
@@ -214,6 +251,9 @@ const result = {
   material_settings_forwarded: createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"'),
   material_upload_status: materialUploadResponse.status,
   material_list_status: materialListResponse.status,
+  setup_status: setupResponse.status,
+  source_feed_statuses: [sourceEmptyResponse.status, sourceSaveResponse.status, sourceStatusResponse.status],
+  source_feed_masked: !JSON.stringify(sourceStatus).includes('qa-secret'),
   image_upload_status: imageUploadResponse.status,
   image_storage: imageUpload.storage,
   media_status: mediaResponse.status,

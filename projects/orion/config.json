@@ -1,0 +1,53 @@
+{
+  "project": "ЖК Орион",
+  "source_feed_key": "orion",
+  "public_image_base_url": "https://feed-api.indigo-dm.ru/media/projects/orion/images",
+  "brand": {
+    "green": "#3F245C",
+    "green_dark": "#1D1D1B",
+    "gold": "#924694",
+    "gray": "#48277F",
+    "white": "#FFFFFF",
+    "font": "Gilroy",
+    "logo": "logo-orion-gradient.png",
+    "logo_panel": "light",
+    "key_render": "key-render.jpg",
+    "additional_logos": [
+      {
+        "name": "Логотип · фиолетовый",
+        "filename": "logo-orion-purple.png"
+      },
+      {
+        "name": "Логотип · чёрный",
+        "filename": "logo-orion-black.png"
+      },
+      {
+        "name": "Фирменный знак",
+        "filename": "logo-orion-mark.png"
+      }
+    ],
+    "palette": [
+      {
+        "name": "Основной фиолетовый",
+        "value": "#3F245C"
+      },
+      {
+        "name": "Промежуточный фиолетовый",
+        "value": "#48277F"
+      },
+      {
+        "name": "Акцентный фиолетовый",
+        "value": "#924694"
+      },
+      {
+        "name": "Чёрный",
+        "value": "#1D1D1B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  },
+  "houses": {}
+}

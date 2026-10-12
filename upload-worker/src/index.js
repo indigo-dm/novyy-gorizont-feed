@@ -337,6 +337,141 @@ function allowedProjects(env) {
   return new Set(String(env.ALLOWED_PROJECTS || '').split(',').map((value) => value.trim()).filter(Boolean));
 }
 
+function validProject(project, env) {
+  return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) &&
+    (!allowedProjects(env).size || allowedProjects(env).has(project));
+}
+
+function sourceFeedKey(project) {
+  return `private/source-feeds/${project}.json`;
+}
+
+async function sourceFeedStatus(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const project = String(new URL(request.url).searchParams.get('project') || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
+  const stored = await env.FEED_STORAGE.get(sourceFeedKey(project));
+  if (!stored) return json({ project, configured: false }, 200, origin, env);
+  const payload = await stored.json();
+  let hostname = '';
+  try { hostname = new URL(String(payload.url || '')).hostname; } catch (error) { hostname = ''; }
+  return json({
+    project,
+    configured: Boolean(hostname),
+    hostname,
+    updatedAt: String(payload.updated_at || '')
+  }, 200, origin, env);
+}
+
+async function saveSourceFeed(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
+  const payload = await request.json();
+  const project = String(payload && payload.project || '').trim();
+  const value = String(payload && payload.url || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  if (!value || value.length > 4096) return json({ error: 'Укажите адрес родительского фида.' }, 400, origin, env);
+  let parsed;
+  try { parsed = new URL(value); } catch (error) { return json({ error: 'Укажите корректную HTTPS-ссылку.' }, 400, origin, env); }
+  if (parsed.protocol !== 'https:' || !parsed.hostname || parsed.username || parsed.password) {
+    return json({ error: 'Допускается только HTTPS-ссылка без логина и пароля в адресе.' }, 400, origin, env);
+  }
+  const updatedAt = new Date().toISOString();
+  await env.FEED_STORAGE.put(sourceFeedKey(project), JSON.stringify({
+    version: 1,
+    project,
+    url: parsed.href,
+    updated_at: updatedAt
+  }), {
+    httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+  });
+  return json({ project, configured: true, hostname: parsed.hostname, updatedAt }, 200, origin, env);
+}
+
+async function projectSetup(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const project = String(new URL(request.url).searchParams.get('project') || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  const branch = env.GITHUB_SOURCE_BRANCH || 'main';
+  const [configResponse, settingsResponse, entries] = await Promise.all([
+    githubRaw(env, `projects/${project}/config.json`, branch),
+    githubRaw(env, `projects/${project}/promotion-rules.json`, branch),
+    github(env, `/contents/${encodedPath(`projects/${project}/assets`)}?ref=${encodeURIComponent(branch)}`)
+  ]);
+  const config = await configResponse.json();
+  const settings = await settingsResponse.json();
+  const files = (Array.isArray(entries) ? entries : []).filter((entry) =>
+    entry && entry.type === 'file' && /\.(?:jpe?g|png|webp|svg)$/i.test(String(entry.name || ''))
+  );
+  const brand = config && typeof config.brand === 'object' ? config.brand : {};
+  const descriptions = new Map();
+  descriptions.set(String(brand.logo || ''), ['Логотип', 'Основной логотип объекта для брендированных карточек.']);
+  descriptions.set(String(brand.key_render || ''), ['Ключевой рендер', 'Главное изображение проекта в левой части макета.']);
+  for (const [index, item] of (Array.isArray(brand.additional_logos) ? brand.additional_logos : []).entries()) {
+    if (item && item.filename) descriptions.set(String(item.filename), [String(item.name || `Дополнительный логотип ${index + 1}`), 'Дополнительный вариант фирменного логотипа объекта.']);
+  }
+  for (const [index, item] of (Array.isArray(brand.additional_renders) ? brand.additional_renders : []).entries()) {
+    if (item && item.filename) descriptions.set(String(item.filename), [String(item.name || `Дополнительный рендер ${index + 1}`), 'Дополнительный фирменный рендер объекта.']);
+  }
+  const items = files.map((entry) => {
+    const filename = String(entry.name);
+    const details = descriptions.get(filename) || [filename.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '), 'Фирменный материал объекта.'];
+    const activeFor = [];
+    if (filename === brand.logo) activeFor.push('logo');
+    if (filename === brand.key_render) activeFor.push('key_render');
+    return {
+      key: `asset-${filename.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()}`,
+      name: details[0],
+      description: details[1],
+      filename,
+      required: activeFor.length > 0,
+      exists: true,
+      url: rawGithubUrl(env, branch, `projects/${project}/assets/${filename}`),
+      active_for: activeFor,
+      uploaded: false
+    };
+  });
+  for (const [filename, details] of descriptions.entries()) {
+    if (!filename || items.some((item) => item.filename === filename)) continue;
+    const activeFor = [];
+    if (filename === brand.logo) activeFor.push('logo');
+    if (filename === brand.key_render) activeFor.push('key_render');
+    items.push({
+      key: `asset-${filename.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()}`,
+      name: details[0],
+      description: details[1],
+      filename,
+      required: activeFor.length > 0,
+      exists: false,
+      url: '',
+      active_for: activeFor,
+      uploaded: false
+    });
+  }
+  return json({
+    project,
+    name: String(config.project || project),
+    settings,
+    assets: {
+      project: String(config.project || project),
+      slug: project,
+      upload_service_url: publicBase(request, env),
+      items,
+      current: { logo: String(brand.logo || ''), key_render: String(brand.key_render || '') },
+      brand: {
+        green: String(brand.green || '#00605C'),
+        green_dark: String(brand.green_dark || brand.green || '#004C49'),
+        gold: String(brand.gold || '#CEAD75'),
+        gray: String(brand.gray || '#9B9B9B'),
+        white: String(brand.white || '#FFFFFF'),
+        font: String(brand.font || 'Manrope'),
+        palette: Array.isArray(brand.palette) ? brand.palette : []
+      }
+    }
+  }, 200, origin, env);
+}
+
 function pendingDeletionPaths(payload, project) {
   const source = Array.isArray(payload && payload.pending_upload_deletions) ? payload.pending_upload_deletions : [];
   return source.slice(0, 50).map((item) => {
@@ -704,6 +839,9 @@ export default {
       if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
       if (request.method === 'POST' && path === '/materials/upload') return await materialUpload(request, env, origin);
       if (request.method === 'GET' && path === '/materials') return await listMaterials(request, env, origin);
+      if (request.method === 'GET' && path === '/project/setup') return await projectSetup(request, env, origin);
+      if (request.method === 'GET' && path === '/source-feed') return await sourceFeedStatus(request, env, origin);
+      if (request.method === 'POST' && path === '/source-feed') return await saveSourceFeed(request, env, origin);
       if (request.method === 'POST' && path === '/settings') return await createSettingsRequest(request, env, origin);
       if (request.method === 'GET' && path === '/status') return await settingsStatus(request, env, origin);
       if (request.method === 'POST' && path === '/refresh') return await createFeedRefreshRequest(request, env, origin);
