@@ -1,7 +1,7 @@
 {
   "slug": "truda-12-3",
   "project": "ЖК Труда 12/3",
-  "checked_at": "2026-10-12T03:17:57+03:00",
+  "checked_at": "2026-10-12T17:10:16+03:00",
   "source_ads": 16,
   "full_ads": 16,
   "excluded_ads": 0,
@@ -35,6 +35,15 @@
       "name": "Описание",
       "kind": "richtext",
       "max": 7500,
+      "supported": true
+    },
+    {
+      "tag": "Rooms",
+      "name": "Количество комнат",
+      "kind": "number",
+      "min": 1,
+      "max": 20,
+      "step": 1,
       "supported": true
     },
     {

@@ -1,7 +1,7 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-10-12T03:17:54+03:00",
+  "checked_at": "2026-10-12T17:08:34+03:00",
   "source_ads": 301,
   "full_ads": 301,
   "excluded_ads": 0,
@@ -38,6 +38,15 @@
       "name": "Описание",
       "kind": "richtext",
       "max": 7500,
+      "supported": true
+    },
+    {
+      "tag": "Rooms",
+      "name": "Количество комнат",
+      "kind": "number",
+      "min": 1,
+      "max": 20,
+      "step": 1,
       "supported": true
     },
     {
