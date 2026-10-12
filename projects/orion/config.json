@@ -12,6 +12,16 @@
     "logo": "logo-orion-gradient.png",
     "logo_panel": "light",
     "key_render": "key-render.jpg",
+    "additional_renders": [
+      {
+        "name": "Двор с детской площадкой",
+        "filename": "render-courtyard.jpg"
+      },
+      {
+        "name": "Двор и парковка",
+        "filename": "render-courtyard-parking.jpg"
+      }
+    ],
     "additional_logos": [
       {
         "name": "Логотип · фиолетовый",
