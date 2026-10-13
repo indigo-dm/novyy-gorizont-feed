@@ -303,7 +303,10 @@ def main() -> None:
     parameter_config = rules_config.get("parameter_settings", {})
     tree = ET.parse(INPUT_XML)
     root = tree.getroot()
-    ads = list(root.findall("Ad"))
+    ads = [
+        ad for ad in root.findall("Ad")
+        if len(ad) or ad.attrib or (ad.text or "").strip()
+    ]
     selective_render = os.environ.get("RENDER_IDS", "").strip().lower() not in ("", "all")
 
     items: list[dict[str, object]] = []
