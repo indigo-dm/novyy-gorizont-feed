@@ -43,7 +43,7 @@ def main() -> None:
         if requested_slug and slug != requested_slug:
             continue
         feed_url = feeds.get(slug, "") or (fallback_url if slug == default_slug else "")
-        available = bool(feed_url and project.get("status") == "active")
+        available = bool(feed_url)
         public_projects.append({
             "slug": slug,
             "name": project["name"],

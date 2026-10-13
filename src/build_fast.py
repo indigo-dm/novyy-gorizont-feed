@@ -46,8 +46,9 @@ def main() -> None:
         build_project(requested, build_id)
         return
     for project in REGISTRY["projects"]:
-        if project.get("status") == "active":
-            build_project(str(project["slug"]), build_id)
+        slug = str(project["slug"])
+        if project.get("status") == "active" or feed_url(slug):
+            build_project(slug, build_id)
 
 
 if __name__ == "__main__":
