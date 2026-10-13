@@ -144,6 +144,7 @@ const settingsResponse = await worker.fetch(new Request('https://worker.example/
     excluded_lot_ids: ['9301142'],
     image_settings: { lot_overrides: {}, bulk_rules: [] },
     parameter_settings: { lot_values: {}, bulk_rules: [] },
+    card_settings: { show_house_badge: false, show_decoration: true },
     material_settings: {
       logo: 'logo-gold.svg',
       key_render: 'selected-render.jpg',
@@ -226,7 +227,7 @@ await worker.scheduled({}, env, { waitUntil(promise) { cleanupPromise = promise;
 await cleanupPromise;
 
 const result = {
-  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
+  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"card_settings"') && createdBody.includes('"show_house_badge": false') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
     materialUploadResponse.status === 201 && materialUploadCreated && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
     setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' &&
     sourceEmptyResponse.status === 200 && sourceEmpty.configured === false && sourceSaveResponse.status === 200 && sourceSaved.hostname === 'profitbase.example' &&
@@ -249,6 +250,7 @@ const result = {
   deletion_forwarded: createdBody.includes('uploads/novyy-gorizont/9301142/add-test.jpg'),
   excluded_lot_forwarded: createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"'),
   material_settings_forwarded: createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"'),
+  card_settings_forwarded: createdBody.includes('"card_settings"') && createdBody.includes('"show_house_badge": false'),
   material_upload_status: materialUploadResponse.status,
   material_list_status: materialListResponse.status,
   setup_status: setupResponse.status,

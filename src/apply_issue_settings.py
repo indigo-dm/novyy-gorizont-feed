@@ -366,6 +366,17 @@ def material_settings(value: object, project_dir: Path, config: dict[str, object
     return result
 
 
+def card_settings(value: object, config: dict[str, object]) -> dict[str, bool]:
+    source = value if isinstance(value, dict) else {}
+    brand = config.get("brand") if isinstance(config.get("brand"), dict) else {}
+    result: dict[str, bool] = {}
+    for field in ("show_house_badge", "show_decoration"):
+        if field in source and not isinstance(source[field], bool):
+            raise ValueError(f"card_settings.{field} must be a boolean")
+        result[field] = source.get(field, brand.get(field, True)) is not False
+    return result
+
+
 def promotion_signature(
     item: dict[str, object], rules: list[dict[str, object]], today: str
 ) -> tuple[str, str] | None:
@@ -487,6 +498,7 @@ def validate(
         "image_settings": image_settings(payload.get("image_settings", {}), allowed_houses, project_slug),
         "parameter_settings": parameter_settings(payload.get("parameter_settings", {}), allowed_houses),
         "material_settings": material_settings(payload.get("material_settings", {}), project_dir, config),
+        "card_settings": card_settings(payload.get("card_settings", {}), config),
         "pending_upload_deletions": pending_upload_deletions(payload.get("pending_upload_deletions"), project_slug),
     }
 
@@ -517,11 +529,13 @@ def main() -> None:
     previous = json.loads(output.read_text(encoding="utf-8")) if output.exists() else {}
     previous_materials = material_settings({}, project_dir, config)
     selected_materials = validated["material_settings"]
+    previous_card_settings = card_settings({}, config)
+    selected_card_settings = validated["card_settings"]
     render_material_fields = ("logo", "key_render", "primary_color")
     global_render_change = any(
         previous_materials[field] != selected_materials[field]
         for field in render_material_fields
-    )
+    ) or previous_card_settings != selected_card_settings
     rules_changed = previous.get("rules", []) != validated["rules"]
     affected_ids: list[str] | None = []
     if global_render_change:
@@ -538,6 +552,8 @@ def main() -> None:
     config["brand"]["key_render"] = selected_materials["key_render"]
     config["brand"]["green"] = selected_materials["primary_color"]
     config["brand"]["palette"] = selected_materials["palette"]
+    config["brand"]["show_house_badge"] = selected_card_settings["show_house_badge"]
+    config["brand"]["show_decoration"] = selected_card_settings["show_decoration"]
     (project_dir / "config.json").write_text(
         json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

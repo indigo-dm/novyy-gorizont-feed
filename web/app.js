@@ -13,6 +13,7 @@
     rules: [],
     imageSettings: { lot_overrides: {}, bulk_rules: [] },
     parameterSettings: { lot_values: {}, bulk_rules: [] },
+    cardSettings: { show_house_badge: true, show_decoration: true },
     activeRuleId: null,
     activeView: 'dashboard',
     filters: { house: '', rooms: '', floor: '', search: '' },
@@ -85,6 +86,7 @@
   var expandedDescriptionEditor = null;
   var emptyImageSettings = function () { return { lot_overrides: {}, bulk_rules: [] }; };
   var emptyParameterSettings = function () { return { lot_values: {}, bulk_rules: [] }; };
+  var emptyCardSettings = function () { return { show_house_badge: true, show_decoration: true }; };
 
   function projectIsReady(project) {
     return Boolean(project && (project.available || project.status === 'active'));
@@ -138,6 +140,14 @@
     return {
       lot_values: source.lot_values && typeof source.lot_values === 'object' ? clone(source.lot_values) : {},
       bulk_rules: Array.isArray(source.bulk_rules) ? clone(source.bulk_rules) : []
+    };
+  }
+
+  function normalizeCardSettings(value) {
+    var source = value && typeof value === 'object' ? value : {};
+    return {
+      show_house_badge: source.show_house_badge !== false,
+      show_decoration: source.show_decoration !== false
     };
   }
 
@@ -235,6 +245,7 @@
       rules: state.rules,
       image_settings: state.imageSettings,
       parameter_settings: state.parameterSettings,
+      card_settings: state.cardSettings,
       pending_upload_deletions: state.pendingUploadDeletions
     }));
     state.dirty = false;
@@ -317,6 +328,8 @@
       return '<div class="palette-item"><span class="palette-swatch" style="background:' + value + '"></span><div><strong>' +
         esc(color.name) + '</strong><code>' + esc(value.toUpperCase()) + '</code></div></div>';
     }).join('');
+    $('#show-house-badge').checked = state.cardSettings.show_house_badge;
+    $('#show-decoration').checked = state.cardSettings.show_decoration;
   }
 
   function renderStats() {
@@ -1252,6 +1265,7 @@
       rules: state.rules.map(normalizeRule),
       image_settings: clone(state.imageSettings),
       parameter_settings: clone(state.parameterSettings),
+      card_settings: clone(state.cardSettings),
       pending_upload_deletions: clone(state.pendingUploadDeletions)
     };
   }
@@ -1377,6 +1391,7 @@
       affected + ' из ' + state.inventory.items.length + ' квартир получат акцию.<br>' +
       Object.keys(state.imageSettings.lot_overrides).length + ' индивидуальных галерей и ' + state.imageSettings.bulk_rules.length + ' массовых правил изображений.<br>' +
       Object.keys(state.parameterSettings.lot_values).length + ' квартир с дополнительными параметрами и ' + state.parameterSettings.bulk_rules.length + ' массовых правил параметров.' +
+      '<br>Плашка дома: <strong>' + (state.cardSettings.show_house_badge ? 'показывается' : 'скрыта') + '</strong>; тип отделки: <strong>' + (state.cardSettings.show_decoration ? 'показывается' : 'скрыт') + '</strong>.' +
       (state.pendingUploadDeletions.length ? '<br><strong>' + state.pendingUploadDeletions.length + ' загруженных файлов будут физически удалены после публикации.</strong>' : '');
     $('#publish-modal').classList.remove('hidden');
   }
@@ -1594,6 +1609,14 @@
       showToast('Параметр назначен для ' + items.length + ' квартир');
     });
     $('#preview-lot').addEventListener('change', function (event) { state.previewId = event.target.value; renderPreview(); });
+    $('#show-house-badge').addEventListener('change', function (event) {
+      state.cardSettings.show_house_badge = event.target.checked;
+      setDirty(true);
+    });
+    $('#show-decoration').addEventListener('change', function (event) {
+      state.cardSettings.show_decoration = event.target.checked;
+      setDirty(true);
+    });
     $('#add-rule').addEventListener('click', function () {
       if (state.rules.length >= 10) { showToast('Можно создать не более 10 правил.'); return; }
       var rule = emptyRule();
@@ -1652,6 +1675,7 @@
       state.rules = draft && Array.isArray(draft.rules) ? draft.rules.map(normalizeRule) : publishedRules;
       state.imageSettings = normalizeImageSettings(draft && draft.image_settings != null ? draft.image_settings : data[1].image_settings || emptyImageSettings());
       state.parameterSettings = normalizeParameterSettings(draft && draft.parameter_settings != null ? draft.parameter_settings : data[1].parameter_settings || emptyParameterSettings());
+      state.cardSettings = normalizeCardSettings(draft && draft.card_settings != null ? draft.card_settings : data[1].card_settings || emptyCardSettings());
       state.pendingUploadDeletions = draft && Array.isArray(draft.pending_upload_deletions) ? clone(draft.pending_upload_deletions) : [];
       state.draftSaved = Boolean(draft);
       if (!preservePublication) {

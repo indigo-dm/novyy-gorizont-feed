@@ -7,6 +7,7 @@ try {
   playwright = require('C:/Users/vdovi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 }
 const { chromium } = playwright;
+const { optionalElements } = require('./card_layout.cjs');
 
 const root = path.resolve(__dirname, '..');
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'projects.json'), 'utf8'));
@@ -167,6 +168,7 @@ function htmlFor(item, includePromotion = true) {
   const promo = includePromotion && item.promotion
     ? `<div class="promo"><span>${esc(item.promotion.label)}</span>${esc(item.promotion.text)}</div>`
     : '';
+  const { houseBadge, decoration } = optionalElements(config.brand, item, esc);
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
   @font-face{font-family:Manrope;src:url('${fontUrl}') format('truetype');font-weight:200 800;font-style:normal}
   :root{--g:${config.brand.green};--gd:${config.brand.green_dark};--gold:${config.brand.gold};--w:#fff;--ink:${config.brand.green_dark};--muted:${config.brand.gray || '#6b7775'}}
@@ -182,7 +184,7 @@ function htmlFor(item, includePromotion = true) {
   .plan{position:absolute;top:24px;left:30px;width:500px;height:606px;display:flex;align-items:center;justify-content:center;overflow:hidden}.plan img{max-width:100%;max-height:100%;object-fit:contain;display:block}
   .rule{position:absolute;left:30px;right:30px;top:644px;height:1px;background:#dfe5e3}.metrics{position:absolute;left:28px;right:28px;bottom:26px;height:106px;display:grid;grid-template-columns:.85fr 1.35fr 1fr;align-items:center}
   .metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid #dfe5e3}.label{margin-bottom:6px;font-size:16px;line-height:1;font-weight:600;color:var(--muted);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.value{font-size:43px;line-height:1;font-weight:800;color:var(--g);white-space:nowrap}.value small{font-size:23px;font-weight:700}
-  </style></head><body><main class="canvas"><section class="left">${logo}<div class="house">${esc(item.house)}</div>${promo}<div class="render">${keyRender}</div><div class="lot">${esc(roomTitle(item.rooms))}</div><div class="finish">${esc(item.decoration)}</div><div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">Комнат</div><div class="value">${esc(item.rooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
+  </style></head><body><main class="canvas"><section class="left">${logo}${houseBadge}${promo}<div class="render">${keyRender}</div><div class="lot">${esc(roomTitle(item.rooms))}</div>${decoration}<div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">Комнат</div><div class="value">${esc(item.rooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
 }
 
 (async () => {

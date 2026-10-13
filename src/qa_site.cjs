@@ -280,6 +280,19 @@ const contentTypes = {
   const assetCards = await page.locator('.asset-card').count();
   const assetsReady = await page.locator('.asset-status.ready').count();
   const uploadTargetsGitHub = (await page.locator('#upload-assets').getAttribute('href') || '').startsWith('https://github.com/indigo-dm/');
+  const cardOptionsDefaultOn = await page.locator('#show-house-badge').isChecked() &&
+    await page.locator('#show-decoration').isChecked();
+  await page.locator('#show-house-badge').uncheck();
+  await page.locator('#show-decoration').uncheck();
+  await page.click('#save-draft');
+  const cardOptionsSaved = await page.evaluate(() => {
+    const draftKey = Object.keys(localStorage).find((key) => key.indexOf('feed-studio-rules-v1-') === 0);
+    const draft = draftKey ? JSON.parse(localStorage.getItem(draftKey)) : null;
+    return draft?.card_settings?.show_house_badge === false && draft?.card_settings?.show_decoration === false;
+  });
+  await page.locator('#show-house-badge').check();
+  await page.locator('#show-decoration').check();
+  await page.click('#save-draft');
   await page.waitForTimeout(250);
   await page.screenshot({ path: path.join(qaOutput, 'admin-assets.png'), fullPage: true });
   await page.click('#add-project');
@@ -298,7 +311,7 @@ const contentTypes = {
   const automaticPublishWorks = page.context().pages().length === pagesBeforePublish;
   await page.screenshot({ path: path.join(qaOutput, 'admin-mobile.png'), fullPage: true });
   const result = {
-    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && imagePlanFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && bulkDescriptionExpandVisible && bulkDescriptionModalVisible && bulkDescriptionModalSize.width > 700 && bulkDescriptionModalSize.height >= 320 && bulkDescriptionContentPreserved && bulkDescriptionEscapeCloses && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
+    ok: response && response.ok() && errors.length === 0 && passwordGate && passwordRejectsInvalid && projectData.projects.length >= 1 && sourceAds === String(inventoryData.source_ads) && fullAds === String(inventoryData.full_ads) && sourceFeedAvailable && sourceFeedSingleLine && feedLabelsClear && lotCards === Math.min(12, inventoryData.items.length) && paginationVisible && paginationWorks && lotFloorFilterWorks && imageFloorFilterWorks && imagePlanFilterWorks && parameterFloorFilterWorks && parameterPlanFilterWorks && parameterToolbarLayout.planWidth <= 270 && parameterToolbarLayout.singleRow && optimizedThumbnail && allSourceImagesVisible && brandCardProtected && sourceImageExcluded && sourceImageRestored && uploadDropZoneAvailable && uploadedImageVisible && uploadedImageExcludedWithoutDeletion && uploadedImageShownAsExcluded && uploadedImageRestored && uploadedImagePhysicalDeletionQueued && imageBulkRuleCreated && sourceTagsVisible && supportedParameterCount === 8 && bulkParameterCount === 9 && bulkDescriptionShortcodeExcluded && bulkDescriptionStartsEmpty && bulkDescriptionExpandVisible && bulkDescriptionModalVisible && bulkDescriptionModalSize.width > 700 && bulkDescriptionModalSize.height >= 320 && bulkDescriptionContentPreserved && bulkDescriptionEscapeCloses && descriptionEditorVisible && shortcodeAvailable && descriptionShortcodeExcluded && addressShownFully && individualParameterAdded && parameterBulkRuleCreated && promoVisible && assetCards >= 2 && assetsReady >= 2 && uploadTargetsGitHub && cardOptionsDefaultOn && cardOptionsSaved && projectModalVisible && generatedSlug === 'zhk-testovyy' && !mobileOverflow && publishModalVisible && automaticPublishWorks,
     http_status: response ? response.status() : null,
     password_gate: passwordGate,
     invalid_password_rejected: passwordRejectsInvalid,
@@ -350,6 +363,8 @@ const contentTypes = {
     registered_projects: projectData.projects.length,
     asset_cards: assetCards,
     assets_ready: assetsReady,
+    card_options_default_on: cardOptionsDefaultOn,
+    card_options_saved: cardOptionsSaved,
     github_upload_link: uploadTargetsGitHub,
     project_create_modal: projectModalVisible,
     generated_project_slug: generatedSlug,
