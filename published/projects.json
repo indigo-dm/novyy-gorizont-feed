@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "build_id": "20261013022836",
+  "build_id": "20261013082539",
   "default_project": "novyy-gorizont",
   "projects": [
     {
@@ -35,7 +35,7 @@
       "slug": "orion",
       "name": "ЖК Орион",
       "status": "setup",
-      "available": false,
+      "available": true,
       "base": "https://feed-api.indigo-dm.ru/data/projects/orion"
     }
   ]

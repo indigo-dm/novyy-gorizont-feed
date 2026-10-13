@@ -1,0 +1,123 @@
+{
+  "project": "ЖК Орион",
+  "slug": "orion",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/orion/assets",
+  "upload_service_url": "https://feed-api.indigo-dm.ru",
+  "items": [
+    {
+      "key": "asset-1f87bc35b802",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "key-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/key-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-7e67fc37689b",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-orion-gradient.png",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-gradient.png",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-329bd8bf7d98",
+      "name": "Логотип · чёрный",
+      "description": "Дополнительный вариант фирменного логотипа объекта.",
+      "filename": "logo-orion-black.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-black.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-b46a8dd0a314",
+      "name": "Фирменный знак",
+      "description": "Дополнительный вариант фирменного логотипа объекта.",
+      "filename": "logo-orion-mark.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-mark.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-42d8bf1f1034",
+      "name": "Логотип · фиолетовый",
+      "description": "Дополнительный вариант фирменного логотипа объекта.",
+      "filename": "logo-orion-purple.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-purple.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-e6b962056771",
+      "name": "Двор и парковка",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-courtyard-parking.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/render-courtyard-parking.jpg",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-86e9bf8b81ad",
+      "name": "Двор с детской площадкой",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-courtyard.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/render-courtyard.jpg",
+      "active_for": [],
+      "uploaded": false
+    }
+  ],
+  "current": {
+    "logo": "logo-orion-gradient.png",
+    "key_render": "key-render.jpg"
+  },
+  "brand": {
+    "green": "#3F245C",
+    "green_dark": "#1D1D1B",
+    "gold": "#924694",
+    "gray": "#48277F",
+    "white": "#FFFFFF",
+    "font": "Gilroy",
+    "palette": [
+      {
+        "name": "Основной фиолетовый",
+        "value": "#3F245C"
+      },
+      {
+        "name": "Промежуточный фиолетовый",
+        "value": "#48277F"
+      },
+      {
+        "name": "Акцентный фиолетовый",
+        "value": "#924694"
+      },
+      {
+        "name": "Чёрный",
+        "value": "#1D1D1B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  }
+}

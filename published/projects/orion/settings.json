@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "rules": [],
+  "excluded_lot_ids": [],
+  "image_settings": {
+    "lot_overrides": {},
+    "bulk_rules": []
+  },
+  "parameter_settings": {
+    "lot_values": {},
+    "bulk_rules": []
+  },
+  "material_settings": {
+    "logo": "logo-orion-gradient.png",
+    "key_render": "key-render.jpg",
+    "primary_color": "#3F245C",
+    "palette": [
+      {
+        "name": "Основной фиолетовый",
+        "value": "#3F245C"
+      },
+      {
+        "name": "Промежуточный фиолетовый",
+        "value": "#48277F"
+      },
+      {
+        "name": "Акцентный фиолетовый",
+        "value": "#924694"
+      },
+      {
+        "name": "Чёрный",
+        "value": "#1D1D1B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  },
+  "pending_upload_deletions": []
+}
