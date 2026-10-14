@@ -48,6 +48,13 @@ const feedStorage = new FakeR2();
 await feedStorage.put('published/projects/novyy-gorizont/avito.xml', '<?xml version="1.0" encoding="UTF-8"?><Ads />', {
   httpMetadata: { contentType: 'application/xml; charset=utf-8' }
 });
+await feedStorage.put('published/projects/novyy-gorizont/settings.json', JSON.stringify({
+  material_settings: {
+    logo: 'logo-gold.svg',
+    key_render: 'selected-render.jpg',
+    background_render: 'uploads/mat-qa-active.png'
+  }
+}), { httpMetadata: { contentType: 'application/json; charset=utf-8' } });
 await feedStorage.put('media/projects/novyy-gorizont/images/qa-generated.png', new Uint8Array([0x89, 0x50, 0x4e, 0x47]), {
   httpMetadata: { contentType: 'image/png' }
 });
@@ -73,6 +80,11 @@ let issueState = 'open';
 let createdBody = '';
 let materialUploadCreated = false;
 let materialUploadAttempts = 0;
+let materialDeleteRequests = 0;
+const materialFiles = new Map([
+  ['mat-qa-demo-render.png', { type: 'file', name: 'mat-qa-demo-render.png', size: 64, sha: '1111111111111111111111111111111111111111' }],
+  ['mat-qa-active.png', { type: 'file', name: 'mat-qa-active.png', size: 64, sha: '2222222222222222222222222222222222222222' }]
+]);
 let frontendDeployDispatched = false;
 let frontendFeedPublished = false;
 let refreshDispatchInputs = null;
@@ -89,8 +101,22 @@ globalThis.fetch = async (url, options = {}) => {
     materialUploadCreated = true;
     return Response.json({ content: { sha: 'qa-material-sha' } }, { status: 201 });
   }
+  const materialFileMatch = value.match(/\/contents\/projects\/novyy-gorizont\/assets\/uploads\/([^?]+)(?:\?ref=main)?$/);
+  if (materialFileMatch && (!options.method || options.method === 'GET')) {
+    const entry = materialFiles.get(decodeURIComponent(materialFileMatch[1]));
+    return entry ? Response.json(entry) : Response.json({ message: 'Not Found' }, { status: 404 });
+  }
+  if (materialFileMatch && options.method === 'DELETE') {
+    const name = decodeURIComponent(materialFileMatch[1]);
+    const payload = JSON.parse(options.body);
+    const entry = materialFiles.get(name);
+    if (!entry || payload.sha !== entry.sha) return Response.json({ message: 'Conflict' }, { status: 409 });
+    materialFiles.delete(name);
+    materialDeleteRequests += 1;
+    return Response.json({ commit: { sha: 'qa-delete-commit' } }, { status: 200 });
+  }
   if (value.includes('/contents/projects/novyy-gorizont/assets/uploads?ref=main')) {
-    return Response.json([{ type: 'file', name: 'mat-qa-demo-render.png', size: 64 }]);
+    return Response.json(Array.from(materialFiles.values()));
   }
   if (value.includes('/contents/projects/novyy-gorizont/config.json?ref=main')) {
     return Response.json({
@@ -187,6 +213,19 @@ const materialUploadResponse = await worker.fetch(new Request('https://worker.ex
 const materialUpload = await materialUploadResponse.json();
 const materialListResponse = await worker.fetch(new Request('https://worker.example/materials?project=novyy-gorizont', { headers }), env);
 const materialList = await materialListResponse.json();
+const materialDeleteResponse = await worker.fetch(new Request('https://worker.example/materials', {
+  method: 'DELETE',
+  headers,
+  body: JSON.stringify({ project: 'novyy-gorizont', filename: 'uploads/mat-qa-demo-render.png' })
+}), env);
+const materialDeleted = await materialDeleteResponse.json();
+const activeMaterialDeleteResponse = await worker.fetch(new Request('https://worker.example/materials', {
+  method: 'DELETE',
+  headers,
+  body: JSON.stringify({ project: 'novyy-gorizont', filename: 'uploads/mat-qa-active.png' })
+}), env);
+const materialListAfterDeleteResponse = await worker.fetch(new Request('https://worker.example/materials?project=novyy-gorizont', { headers }), env);
+const materialListAfterDelete = await materialListAfterDeleteResponse.json();
 
 const setupResponse = await worker.fetch(new Request('https://worker.example/project/setup?project=novyy-gorizont', { headers }), env);
 const setup = await setupResponse.json();
@@ -235,7 +274,8 @@ await cleanupPromise;
 
 const result = {
   ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"background_render": "selected-render.jpg"') && createdBody.includes('"card_settings"') && createdBody.includes('"show_key_render": false') && createdBody.includes('"show_house_badge": false') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
-    materialUploadResponse.status === 201 && materialUploadCreated && materialUploadAttempts === 2 && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
+    materialUploadResponse.status === 201 && materialUploadCreated && materialUploadAttempts === 2 && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 2 &&
+    materialDeleteResponse.status === 200 && materialDeleted.deleted === true && materialDeleteRequests === 1 && activeMaterialDeleteResponse.status === 409 && materialListAfterDelete.items.length === 1 &&
     setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' && setup.assets.brand.background_color === '#00605C' &&
     sourceEmptyResponse.status === 200 && sourceEmpty.configured === false && sourceSaveResponse.status === 200 && sourceSaved.hostname === 'profitbase.example' &&
     sourceStatusResponse.status === 200 && sourceStatus.configured === true && sourceStatus.hostname === 'profitbase.example' && !JSON.stringify(sourceStatus).includes('qa-secret') &&
@@ -260,6 +300,8 @@ const result = {
   card_settings_forwarded: createdBody.includes('"card_settings"') && createdBody.includes('"show_house_badge": false'),
   material_upload_status: materialUploadResponse.status,
   material_list_status: materialListResponse.status,
+  material_delete_statuses: [materialDeleteResponse.status, activeMaterialDeleteResponse.status],
+  material_list_after_delete: materialListAfterDelete.items.length,
   setup_status: setupResponse.status,
   source_feed_statuses: [sourceEmptyResponse.status, sourceSaveResponse.status, sourceStatusResponse.status],
   source_feed_masked: !JSON.stringify(sourceStatus).includes('qa-secret'),

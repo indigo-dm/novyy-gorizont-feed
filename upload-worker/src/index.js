@@ -4,7 +4,7 @@ const PUBLIC_ACCESS_PASSWORD_HASH = '8dce592bb594f861bf4b21de5955aa5b64a5547763b
 function corsHeaders(origin, allowedOrigin) {
   return {
     'Access-Control-Allow-Origin': origin === allowedOrigin ? origin : allowedOrigin,
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
     'Access-Control-Allow-Headers': 'Authorization, Content-Type',
     'Access-Control-Max-Age': '86400',
     Vary: 'Origin'
@@ -308,6 +308,64 @@ async function materialUpload(request, env, origin) {
     uploaded: true,
     active_for: []
   }, 201, origin, env);
+}
+
+function collectMaterialReferences(settings, references) {
+  const materials = settings && typeof settings.material_settings === 'object' ? settings.material_settings : {};
+  for (const role of ['logo', 'key_render', 'background_render']) {
+    const filename = String(materials[role] || '');
+    if (filename) references.add(filename);
+  }
+}
+
+async function publishedMaterialReferences(env, project) {
+  const references = new Set();
+  if (r2Available(env)) {
+    const stored = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
+    if (stored) collectMaterialReferences(await stored.json(), references);
+  }
+  const branch = env.GITHUB_SOURCE_BRANCH || 'main';
+  const response = await githubRaw(env, `projects/${project}/promotion-rules.json`, branch);
+  collectMaterialReferences(await response.json(), references);
+  return references;
+}
+
+async function deleteMaterial(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const payload = await request.json();
+  const project = String(payload && payload.project || '').trim();
+  const filename = String(payload && payload.filename || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  if (!/^uploads\/mat-[a-z0-9-]+\.(?:jpe?g|png|webp|svg)$/i.test(filename)) {
+    return json({ error: 'Удалять можно только материалы, загруженные через интерфейс.' }, 400, origin, env);
+  }
+  const references = await publishedMaterialReferences(env, project);
+  if (references.has(filename)) {
+    return json({ error: 'Материал используется опубликованными настройками. Сначала назначьте другой материал и примените изменения к фиду.' }, 409, origin, env);
+  }
+  const branch = env.GITHUB_SOURCE_BRANCH || 'main';
+  const path = `projects/${project}/assets/${filename}`;
+  let entry;
+  try {
+    entry = await github(env, `/contents/${encodedPath(path)}?ref=${encodeURIComponent(branch)}`);
+  } catch (error) {
+    if (/GitHub 404:/.test(String(error && error.message || ''))) {
+      return json({ error: 'Материал уже удалён или не найден.' }, 404, origin, env);
+    }
+    throw error;
+  }
+  if (!entry || !/^[0-9a-f]{40}$/i.test(String(entry.sha || ''))) {
+    return json({ error: 'Не удалось подтвердить файл перед удалением.' }, 502, origin, env);
+  }
+  await github(env, `/contents/${encodedPath(path)}`, {
+    method: 'DELETE',
+    body: JSON.stringify({
+      message: `Delete unused brand material for ${project}`,
+      sha: entry.sha,
+      branch
+    })
+  });
+  return json({ deleted: true, project, filename }, 200, origin, env);
 }
 
 async function listMaterials(request, env, origin) {
@@ -725,7 +783,7 @@ async function feedRefreshStatus(request, env, origin) {
   const sourceState = await sourceRefreshState(env, operation);
   if (!sourceState) {
     if (Number.isFinite(requestedAtMs) && Date.now() - requestedAtMs > REFRESH_SOURCE_TIMEOUT_MS) {
-      return json({ request: requestId, project: operation.project, status: 'failed', message: 'Обновление Profitbase не завершилось за 20 минут. Повторите попытку.' }, 200, origin, env);
+      return json({ request: requestId, project: operation.project, status: 'failed', message: 'Обновление исходного фида не завершилось за 20 минут. Повторите попытку.' }, 200, origin, env);
     }
     return json({ request: requestId, project: operation.project, status: 'building', requestedAt: operation.requestedAt }, 200, origin, env);
   }
@@ -862,6 +920,7 @@ export default {
     try {
       if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
       if (request.method === 'POST' && path === '/materials/upload') return await materialUpload(request, env, origin);
+      if (request.method === 'DELETE' && path === '/materials') return await deleteMaterial(request, env, origin);
       if (request.method === 'GET' && path === '/materials') return await listMaterials(request, env, origin);
       if (request.method === 'GET' && path === '/project/setup') return await projectSetup(request, env, origin);
       if (request.method === 'GET' && path === '/source-feed') return await sourceFeedStatus(request, env, origin);
