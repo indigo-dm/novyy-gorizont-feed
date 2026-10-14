@@ -3,6 +3,7 @@
 function visibility(brand) {
   const settings = brand && typeof brand === 'object' ? brand : {};
   return {
+    showKeyRender: settings.show_key_render !== false,
     showHouseBadge: settings.show_house_badge !== false,
     showDecoration: settings.show_decoration !== false
   };

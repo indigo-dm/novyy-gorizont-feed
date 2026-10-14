@@ -7,7 +7,7 @@ try {
   playwright = require('C:/Users/vdovi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 }
 const { chromium } = playwright;
-const { optionalElements } = require('./card_layout.cjs');
+const { optionalElements, visibility } = require('./card_layout.cjs');
 
 const root = path.resolve(__dirname, '..');
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'projects.json'), 'utf8'));
@@ -149,13 +149,22 @@ async function createWebpVariants(page, sourceBuffer) {
 const fontUrl = dataUrl(path.join(root, 'assets', 'Manrope-Variable.ttf'));
 const logoPath = path.join(projectDir, 'assets', config.brand.logo);
 const renderPath = path.join(projectDir, 'assets', config.brand.key_render);
+const backgroundRenderPath = config.brand.background_render
+  ? path.join(projectDir, 'assets', config.brand.background_render)
+  : '';
 const logoUrl = fs.existsSync(logoPath) ? dataUrl(logoPath) : '';
 const renderUrl = fs.existsSync(renderPath) ? dataUrl(renderPath) : '';
+const backgroundRenderUrl = backgroundRenderPath && fs.existsSync(backgroundRenderPath) ? dataUrl(backgroundRenderPath) : '';
 const logoClass = config.brand.logo_panel === 'light' ? 'logo logo-light-panel' : 'logo';
 const renderPosition = {
   left: 'left center',
   right: 'right center',
 }[config.brand.key_render_align] || 'center';
+const darkenHex = (value, factor = 0.72) => {
+  const normalized = /^#[0-9a-f]{6}$/i.test(String(value || '')) ? String(value) : '#000000';
+  const channels = [1, 3, 5].map((offset) => Math.max(0, Math.min(255, Math.round(parseInt(normalized.slice(offset, offset + 2), 16) * factor))));
+  return `#${channels.map((channel) => channel.toString(16).padStart(2, '0')).join('')}`;
+};
 
 function htmlFor(item, includePromotion = true) {
   const planUrl = dataUrl(path.join(workDir, item.plan_file));
@@ -165,26 +174,34 @@ function htmlFor(item, includePromotion = true) {
   const keyRender = renderUrl
     ? `<img src="${renderUrl}">`
     : `<div class="render-fallback"><span>Жилой комплекс</span><strong>${esc(config.project.replace(/^ЖК\s+/i, ''))}</strong></div>`;
+  const backgroundRender = backgroundRenderUrl ? `<img class="background-render" src="${backgroundRenderUrl}">` : '';
   const promo = includePromotion && item.promotion
     ? `<div class="promo"><span>${esc(item.promotion.label)}</span>${esc(item.promotion.text)}</div>`
     : '';
   const { houseBadge, decoration } = optionalElements(config.brand, item, esc);
+  const cardVisibility = visibility(config.brand);
+  const render = cardVisibility.showKeyRender ? `<div class="render">${keyRender}</div>` : '';
+  const primary = config.brand.green || '#00605C';
+  const background = config.brand.background_color || primary;
+  const textColor = config.brand.text_color || config.brand.white || '#FFFFFF';
+  const subtitleColor = config.brand.subtitle_color || config.brand.gray || '#9B9B9B';
+  const darkBackground = darkenHex(background);
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
   @font-face{font-family:Manrope;src:url('${fontUrl}') format('truetype');font-weight:200 800;font-style:normal}
-  :root{--g:${config.brand.green};--gd:${config.brand.green_dark};--gold:${config.brand.gold};--w:#fff;--ink:${config.brand.green_dark};--muted:${config.brand.gray || '#6b7775'}}
-  *{box-sizing:border-box}html,body{margin:0;width:1200px;height:900px;overflow:hidden;font-family:Manrope,Arial,sans-serif;background:var(--g)}
-  .canvas{position:relative;width:1200px;height:900px;color:var(--w);background:radial-gradient(circle at 4% 100%,rgba(206,173,117,.18),transparent 27%),linear-gradient(145deg,var(--g),var(--gd))}
-  .left{position:absolute;left:56px;top:54px;width:470px;height:792px}.logo{width:350px;height:111px;object-fit:contain;object-position:left top}.logo-light-panel{padding:12px 18px;border-radius:14px;background:#fff}.logo-fallback{display:flex;flex-direction:column;justify-content:center;color:var(--gold);font-size:35px;line-height:1;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.logo-fallback small{margin-top:11px;color:rgba(255,255,255,.76);font-size:14px;font-weight:700;letter-spacing:.26em}
-  .house{position:absolute;top:126px;left:0;height:42px;display:flex;align-items:center;padding:0 18px;border:1px solid rgba(255,255,255,.52);border-radius:100px;font-size:19px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-  .promo{position:absolute;top:126px;right:0;height:42px;display:flex;align-items:center;padding:0 17px;border-radius:100px;background:var(--gold);color:var(--ink);font-size:18px;font-weight:800;white-space:nowrap}.promo span{margin-right:8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-  .render{position:absolute;top:181px;width:470px;height:405px;padding:8px;border:2px solid var(--gold);background:rgba(255,255,255,.1)}.render img{width:100%;height:100%;display:block;object-fit:cover;object-position:${renderPosition}}.render-fallback{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;text-align:center;background:radial-gradient(circle at 50% 35%,rgba(206,173,117,.28),transparent 34%),linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.08))}.render-fallback:before{content:'◆';margin-bottom:28px;color:var(--gold);font-size:54px}.render-fallback span{margin-bottom:13px;color:rgba(255,255,255,.7);font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.render-fallback strong{font-size:34px;line-height:1.12;text-transform:uppercase}
-  .lot{position:absolute;top:616px;width:470px;font-size:28px;line-height:1.15;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.finish{position:absolute;top:660px;font-size:18px;color:rgba(255,255,255,.78)}
-  .price{position:absolute;left:0;bottom:0;width:405px;height:92px;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--ink);font-size:36px;font-weight:800;letter-spacing:-.02em}
+  :root{--primary:${primary};--bg:${background};--bg-dark:${darkBackground};--text:${textColor};--subtitle:${subtitleColor};--ink:${config.brand.green_dark || primary}}
+  *{box-sizing:border-box}html,body{margin:0;width:1200px;height:900px;overflow:hidden;font-family:Manrope,Arial,sans-serif;background:var(--bg)}
+  .canvas{position:relative;width:1200px;height:900px;color:var(--text);background:linear-gradient(145deg,var(--bg),var(--bg-dark))}.canvas:after{content:'';position:absolute;inset:0;background:var(--bg);opacity:.6}.background-render{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.46}
+  .left,.card{z-index:1}.left{position:absolute;left:56px;top:54px;width:470px;height:792px}.logo{width:350px;height:111px;object-fit:contain;object-position:left top}.logo-light-panel{padding:12px 18px;border-radius:14px;background:#fff}.logo-fallback{display:flex;flex-direction:column;justify-content:center;color:var(--primary);font-size:35px;line-height:1;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.logo-fallback small{margin-top:11px;color:var(--subtitle);font-size:14px;font-weight:700;letter-spacing:.26em}
+  .house{position:absolute;top:126px;left:0;height:42px;display:flex;align-items:center;padding:0 18px;border:1px solid currentColor;border-radius:100px;font-size:19px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+  .promo{position:absolute;top:126px;right:0;height:42px;display:flex;align-items:center;padding:0 17px;border-radius:100px;background:var(--primary);color:var(--text);font-size:18px;font-weight:800;white-space:nowrap}.promo span{margin-right:8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .render{position:absolute;top:181px;width:470px;height:405px;padding:8px;border:2px solid var(--primary);background:rgba(255,255,255,.1)}.render img{width:100%;height:100%;display:block;object-fit:cover;object-position:${renderPosition}}.render-fallback{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.08))}.render-fallback:before{content:'◆';margin-bottom:28px;color:var(--primary);font-size:54px}.render-fallback span{margin-bottom:13px;color:var(--subtitle);font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.render-fallback strong{font-size:34px;line-height:1.12;text-transform:uppercase}
+  .lot{position:absolute;top:616px;width:470px;font-size:28px;line-height:1.15;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.finish{position:absolute;top:660px;font-size:18px;color:var(--subtitle)}
+  .price{position:absolute;left:0;bottom:0;width:405px;height:92px;display:flex;align-items:center;justify-content:center;background:var(--primary);color:var(--text);font-size:36px;font-weight:800;letter-spacing:-.02em}
   .card{position:absolute;top:54px;right:56px;width:560px;height:792px;background:#fff;color:var(--ink);box-shadow:0 20px 55px rgba(0,33,31,.2)}
   .plan{position:absolute;top:24px;left:30px;width:500px;height:606px;display:flex;align-items:center;justify-content:center;overflow:hidden}.plan img{max-width:100%;max-height:100%;object-fit:contain;display:block}
   .rule{position:absolute;left:30px;right:30px;top:644px;height:1px;background:#dfe5e3}.metrics{position:absolute;left:28px;right:28px;bottom:26px;height:106px;display:grid;grid-template-columns:.85fr 1.35fr 1fr;align-items:center}
-  .metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid #dfe5e3}.label{margin-bottom:6px;font-size:16px;line-height:1;font-weight:600;color:var(--muted);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.value{font-size:43px;line-height:1;font-weight:800;color:var(--g);white-space:nowrap}.value small{font-size:23px;font-weight:700}
-  </style></head><body><main class="canvas"><section class="left">${logo}${houseBadge}${promo}<div class="render">${keyRender}</div><div class="lot">${esc(roomTitle(item.rooms))}</div>${decoration}<div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">Комнат</div><div class="value">${esc(item.rooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
+  .metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid #dfe5e3}.label{margin-bottom:6px;font-size:16px;line-height:1;font-weight:600;color:var(--subtitle);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.value{font-size:43px;line-height:1;font-weight:800;color:var(--primary);white-space:nowrap}.value small{font-size:23px;font-weight:700}
+  </style></head><body><main class="canvas">${backgroundRender}<section class="left">${logo}${houseBadge}${promo}${render}<div class="lot">${esc(roomTitle(item.rooms))}</div>${decoration}<div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">Комнат</div><div class="value">${esc(item.rooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
 }
 
 (async () => {

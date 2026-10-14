@@ -21,6 +21,7 @@ def build_material_catalog(
     current = {
         "logo": str(brand.get("logo") or "logo.svg"),
         "key_render": str(brand.get("key_render") or "key-render.jpg"),
+        "background_render": str(brand.get("background_render") or ""),
     }
     metadata: dict[str, dict[str, str]] = {
         current["logo"]: {
@@ -32,6 +33,11 @@ def build_material_catalog(
             "description": "Главное изображение проекта в левой части макета.",
         },
     }
+    if current["background_render"]:
+        metadata[current["background_render"]] = {
+            "name": "Фоновый рендер",
+            "description": "Изображение, используемое фоном брендированной карточки.",
+        }
     for index, item in enumerate(brand.get("additional_logos", []), start=1):
         if not isinstance(item, dict) or not item.get("filename"):
             continue
@@ -49,7 +55,7 @@ def build_material_catalog(
             "description": "Дополнительный фирменный рендер объекта.",
         }
 
-    filenames = set(metadata)
+    filenames = {filename for filename in metadata if filename}
     if assets_dir.is_dir():
         filenames.update(
             path.relative_to(assets_dir).as_posix()

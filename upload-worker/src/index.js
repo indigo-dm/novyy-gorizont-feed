@@ -92,23 +92,29 @@ function validMagic(bytes, mime) {
 }
 
 async function githubRepository(env, repository, path, options = {}) {
-  const response = await fetch(`https://api.github.com/repos/${repository}${path}`, {
-    ...options,
-    headers: {
-      Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
-      'Content-Type': 'application/json',
-      'User-Agent': 'indigo-feed-studio-upload',
-      'X-GitHub-Api-Version': '2022-11-28',
-      ...(options.headers || {})
+  let lastError = null;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const response = await fetch(`https://api.github.com/repos/${repository}${path}`, {
+      ...options,
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        'Content-Type': 'application/json',
+        'User-Agent': 'indigo-feed-studio-upload',
+        'X-GitHub-Api-Version': '2022-11-28',
+        ...(options.headers || {})
+      }
+    });
+    if (response.ok) {
+      if (response.status === 204) return null;
+      return response.json();
     }
-  });
-  if (!response.ok) {
     const detail = await response.text();
-    throw new Error(`GitHub ${response.status}: ${detail.slice(0, 240)}`);
+    lastError = new Error(`GitHub ${response.status}: ${detail.slice(0, 240)}`);
+    if (![409, 429, 500, 502, 503, 504].includes(response.status) || attempt === 2) throw lastError;
+    await new Promise((resolve) => setTimeout(resolve, 250 * (attempt + 1)));
   }
-  if (response.status === 204) return null;
-  return response.json();
+  throw lastError || new Error('GitHub request failed');
 }
 
 async function github(env, path, options = {}) {
@@ -277,14 +283,22 @@ async function materialUpload(request, env, origin) {
   const relative = `uploads/${filename}`;
   const path = `projects/${project}/assets/${relative}`;
   const branch = env.GITHUB_SOURCE_BRANCH || 'main';
-  await github(env, `/contents/${path.split('/').map(encodeURIComponent).join('/')}`, {
-    method: 'PUT',
-    body: JSON.stringify({
-      message: `Upload brand material for ${project}`,
-      content: bytesToBase64(bytes),
-      branch
-    })
-  });
+  try {
+    await github(env, `/contents/${path.split('/').map(encodeURIComponent).join('/')}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        message: `Upload brand material for ${project}`,
+        content: bytesToBase64(bytes),
+        branch
+      })
+    });
+  } catch (error) {
+    console.error('Material upload failed', { project, path, message: String(error && error.message || error) });
+    const message = /GitHub (?:401|403):/.test(String(error && error.message || ''))
+      ? 'Сервис загрузки потерял доступ к хранилищу. Сообщите администратору.'
+      : 'Не удалось сохранить материал. Повторите загрузку через несколько секунд.';
+    return json({ error: message }, 503, origin, env);
+  }
   return json({
     id: assetId,
     name: String(file.name || filename).replace(/\.[^.]+$/, ''),
@@ -408,6 +422,7 @@ async function projectSetup(request, env, origin) {
   const descriptions = new Map();
   descriptions.set(String(brand.logo || ''), ['Логотип', 'Основной логотип объекта для брендированных карточек.']);
   descriptions.set(String(brand.key_render || ''), ['Ключевой рендер', 'Главное изображение проекта в левой части макета.']);
+  if (brand.background_render) descriptions.set(String(brand.background_render), ['Фоновый рендер', 'Изображение, используемое фоном брендированной карточки.']);
   for (const [index, item] of (Array.isArray(brand.additional_logos) ? brand.additional_logos : []).entries()) {
     if (item && item.filename) descriptions.set(String(item.filename), [String(item.name || `Дополнительный логотип ${index + 1}`), 'Дополнительный вариант фирменного логотипа объекта.']);
   }
@@ -420,6 +435,7 @@ async function projectSetup(request, env, origin) {
     const activeFor = [];
     if (filename === brand.logo) activeFor.push('logo');
     if (filename === brand.key_render) activeFor.push('key_render');
+    if (filename === brand.background_render) activeFor.push('background_render');
     return {
       key: `asset-${filename.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()}`,
       name: details[0],
@@ -437,6 +453,7 @@ async function projectSetup(request, env, origin) {
     const activeFor = [];
     if (filename === brand.logo) activeFor.push('logo');
     if (filename === brand.key_render) activeFor.push('key_render');
+    if (filename === brand.background_render) activeFor.push('background_render');
     items.push({
       key: `asset-${filename.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase()}`,
       name: details[0],
@@ -458,9 +475,16 @@ async function projectSetup(request, env, origin) {
       slug: project,
       upload_service_url: publicBase(request, env),
       items,
-      current: { logo: String(brand.logo || ''), key_render: String(brand.key_render || '') },
+      current: {
+        logo: String(brand.logo || ''),
+        key_render: String(brand.key_render || ''),
+        background_render: String(brand.background_render || '')
+      },
       brand: {
         green: String(brand.green || '#00605C'),
+        background_color: String(brand.background_color || brand.green || '#00605C'),
+        text_color: String(brand.text_color || brand.white || '#FFFFFF'),
+        subtitle_color: String(brand.subtitle_color || brand.gray || '#9B9B9B'),
         green_dark: String(brand.green_dark || brand.green || '#004C49'),
         gold: String(brand.gold || '#CEAD75'),
         gray: String(brand.gray || '#9B9B9B'),
@@ -581,7 +605,7 @@ async function createSettingsRequest(request, env, origin) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) || (allowedProjects(env).size && !allowedProjects(env).has(project))) {
     return json({ error: 'Неизвестный объект.' }, 400, origin, env);
   }
-  if (!payload || ![2, 3].includes(payload.version) || !Array.isArray(payload.rules) || !Array.isArray(payload.excluded_lot_ids || []) || typeof payload.image_settings !== 'object' || typeof payload.parameter_settings !== 'object' || (payload.version >= 3 && typeof payload.material_settings !== 'object')) {
+  if (!payload || ![2, 3, 4].includes(payload.version) || !Array.isArray(payload.rules) || !Array.isArray(payload.excluded_lot_ids || []) || typeof payload.image_settings !== 'object' || typeof payload.parameter_settings !== 'object' || (payload.version >= 3 && typeof payload.material_settings !== 'object')) {
     return json({ error: 'Некорректный формат настроек.' }, 400, origin, env);
   }
   const settings = JSON.stringify(payload, null, 2);

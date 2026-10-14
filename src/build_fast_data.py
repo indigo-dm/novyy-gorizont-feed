@@ -116,6 +116,9 @@ assets_manifest = {
     "current": current_materials,
     "brand": {
         "green": config["brand"]["green"],
+        "background_color": config["brand"].get("background_color", config["brand"]["green"]),
+        "text_color": config["brand"].get("text_color", config["brand"].get("white", "#FFFFFF")),
+        "subtitle_color": config["brand"].get("subtitle_color", config["brand"].get("gray", "#9B9B9B")),
         "green_dark": config["brand"]["green_dark"],
         "gold": config["brand"]["gold"],
         "gray": config["brand"].get("gray", "#9B9B9B"),

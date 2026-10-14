@@ -331,11 +331,22 @@ def material_settings(value: object, project_dir: Path, config: dict[str, object
         if assets_dir not in target.parents or not target.is_file():
             raise ValueError(f"material_settings.{role} does not exist")
         result[role] = filename
-    primary_color = hex_color(
-        source.get("primary_color"),
-        "material_settings.primary_color",
-        str(brand.get("green") or "#000000"),
-    )
+    background_render = str(source.get("background_render") or brand.get("background_render") or "").strip().replace("\\", "/")
+    if background_render:
+        if background_render.startswith("/") or ".." in Path(background_render).parts or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._/-]*", background_render):
+            raise ValueError("material_settings.background_render contains an unsafe path")
+        if Path(background_render).suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"}:
+            raise ValueError("material_settings.background_render has an unsupported file type")
+        background_target = (assets_dir / background_render).resolve()
+        if assets_dir not in background_target.parents or not background_target.is_file():
+            raise ValueError("material_settings.background_render does not exist")
+    result["background_render"] = background_render
+    color_roles = {
+        "primary_color": hex_color(source.get("primary_color"), "material_settings.primary_color", str(brand.get("green") or "#000000")),
+        "background_color": hex_color(source.get("background_color"), "material_settings.background_color", str(brand.get("background_color") or brand.get("green") or "#000000")),
+        "text_color": hex_color(source.get("text_color"), "material_settings.text_color", str(brand.get("text_color") or brand.get("white") or "#FFFFFF")),
+        "subtitle_color": hex_color(source.get("subtitle_color"), "material_settings.subtitle_color", str(brand.get("subtitle_color") or brand.get("gray") or "#9B9B9B")),
+    }
     fallback_palette = brand.get("palette")
     if not isinstance(fallback_palette, list) or not fallback_palette:
         fallback_palette = [
@@ -359,9 +370,13 @@ def material_settings(value: object, project_dir: Path, config: dict[str, object
             "name": text(color.get("name"), f"material_settings.palette[{index}].name", 48, f"Цвет {index}"),
             "value": color_value,
         })
-    if primary_color not in seen:
-        raise ValueError("material_settings.primary_color must be present in the palette")
-    result["primary_color"] = primary_color
+    for role, color_value in color_roles.items():
+        if color_value not in seen:
+            if len(palette) >= 24:
+                raise ValueError(f"material_settings.{role} must be present in the palette")
+            palette.append({"name": role.replace("_color", "").replace("_", " ").title(), "value": color_value})
+            seen.add(color_value)
+        result[role] = color_value
     result["palette"] = palette
     return result
 
@@ -370,7 +385,7 @@ def card_settings(value: object, config: dict[str, object]) -> dict[str, bool]:
     source = value if isinstance(value, dict) else {}
     brand = config.get("brand") if isinstance(config.get("brand"), dict) else {}
     result: dict[str, bool] = {}
-    for field in ("show_house_badge", "show_decoration"):
+    for field in ("show_key_render", "show_house_badge", "show_decoration"):
         if field in source and not isinstance(source[field], bool):
             raise ValueError(f"card_settings.{field} must be a boolean")
         result[field] = source.get(field, brand.get(field, True)) is not False
@@ -445,7 +460,7 @@ def validate(
     project_dir: Path,
     config: dict[str, object],
 ) -> dict[str, object]:
-    if not isinstance(payload, dict) or payload.get("version") not in {1, 2, 3}:
+    if not isinstance(payload, dict) or payload.get("version") not in {1, 2, 3, 4}:
         raise ValueError("Unsupported settings format")
     source_rules = payload.get("rules")
     if not isinstance(source_rules, list) or len(source_rules) > 10:
@@ -492,7 +507,7 @@ def validate(
     if any(not value.isdigit() for value in excluded_lot_ids):
         raise ValueError("excluded_lot_ids must contain digits only")
     return {
-        "version": 2,
+        "version": 4,
         "rules": rules,
         "excluded_lot_ids": excluded_lot_ids,
         "image_settings": image_settings(payload.get("image_settings", {}), allowed_houses, project_slug),
@@ -531,7 +546,10 @@ def main() -> None:
     selected_materials = validated["material_settings"]
     previous_card_settings = card_settings({}, config)
     selected_card_settings = validated["card_settings"]
-    render_material_fields = ("logo", "key_render", "primary_color")
+    render_material_fields = (
+        "logo", "key_render", "background_render", "primary_color",
+        "background_color", "text_color", "subtitle_color",
+    )
     global_render_change = any(
         previous_materials[field] != selected_materials[field]
         for field in render_material_fields
@@ -550,8 +568,13 @@ def main() -> None:
         raise SystemExit("Invalid project config: brand settings are missing")
     config["brand"]["logo"] = selected_materials["logo"]
     config["brand"]["key_render"] = selected_materials["key_render"]
+    config["brand"]["background_render"] = selected_materials["background_render"]
     config["brand"]["green"] = selected_materials["primary_color"]
+    config["brand"]["background_color"] = selected_materials["background_color"]
+    config["brand"]["text_color"] = selected_materials["text_color"]
+    config["brand"]["subtitle_color"] = selected_materials["subtitle_color"]
     config["brand"]["palette"] = selected_materials["palette"]
+    config["brand"]["show_key_render"] = selected_card_settings["show_key_render"]
     config["brand"]["show_house_badge"] = selected_card_settings["show_house_badge"]
     config["brand"]["show_decoration"] = selected_card_settings["show_decoration"]
     (project_dir / "config.json").write_text(

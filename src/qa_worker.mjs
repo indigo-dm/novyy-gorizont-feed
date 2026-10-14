@@ -72,6 +72,7 @@ const env = {
 let issueState = 'open';
 let createdBody = '';
 let materialUploadCreated = false;
+let materialUploadAttempts = 0;
 let frontendDeployDispatched = false;
 let frontendFeedPublished = false;
 let refreshDispatchInputs = null;
@@ -83,6 +84,8 @@ globalThis.fetch = async (url, options = {}) => {
     return Response.json({ number: 17, created_at: '2026-09-26T10:00:00Z' }, { status: 201 });
   }
   if (value.includes('/contents/projects/novyy-gorizont/assets/uploads/') && options.method === 'PUT') {
+    materialUploadAttempts += 1;
+    if (materialUploadAttempts === 1) return Response.json({ message: 'temporary failure' }, { status: 503 });
     materialUploadCreated = true;
     return Response.json({ content: { sha: 'qa-material-sha' } }, { status: 201 });
   }
@@ -93,9 +96,9 @@ globalThis.fetch = async (url, options = {}) => {
     return Response.json({
       project: 'ЖК Новый Горизонт',
       brand: {
-        green: '#00605C', green_dark: '#004C49', gold: '#CEAD75', gray: '#9B9B9B', white: '#FFFFFF', font: 'Manrope',
-        logo: 'logo-gold.svg', key_render: 'selected-render.jpg',
-        palette: [{ name: 'Основной', value: '#00605C' }]
+        green: '#00605C', background_color: '#00605C', text_color: '#FFFFFF', subtitle_color: '#9B9B9B', green_dark: '#004C49', gold: '#CEAD75', gray: '#9B9B9B', white: '#FFFFFF', font: 'Manrope',
+        logo: 'logo-gold.svg', key_render: 'selected-render.jpg', background_render: '',
+        palette: [{ name: 'Основной', value: '#00605C' }, { name: 'Белый', value: '#FFFFFF' }, { name: 'Серый', value: '#9B9B9B' }]
       }
     });
   }
@@ -138,18 +141,22 @@ const settingsResponse = await worker.fetch(new Request('https://worker.example/
   method: 'POST',
   headers,
   body: JSON.stringify({
-    version: 3,
+    version: 4,
     project: 'novyy-gorizont',
     rules: [],
     excluded_lot_ids: ['9301142'],
     image_settings: { lot_overrides: {}, bulk_rules: [] },
     parameter_settings: { lot_values: {}, bulk_rules: [] },
-    card_settings: { show_house_badge: false, show_decoration: true },
+    card_settings: { show_key_render: false, show_house_badge: false, show_decoration: true },
     material_settings: {
       logo: 'logo-gold.svg',
       key_render: 'selected-render.jpg',
+      background_render: 'selected-render.jpg',
       primary_color: '#123ABC',
-      palette: [{ name: 'Основной', value: '#123ABC' }, { name: 'Акцент', value: '#CEAD75' }]
+      background_color: '#00605C',
+      text_color: '#FFFFFF',
+      subtitle_color: '#9B9B9B',
+      palette: [{ name: 'Основной', value: '#123ABC' }, { name: 'Фон', value: '#00605C' }, { name: 'Белый', value: '#FFFFFF' }, { name: 'Серый', value: '#9B9B9B' }]
     },
     pending_upload_deletions: [{ lot: '9301142', id: 'add-test', path: 'uploads/novyy-gorizont/9301142/add-test.jpg' }]
   })
@@ -227,9 +234,9 @@ await worker.scheduled({}, env, { waitUntil(promise) { cleanupPromise = promise;
 await cleanupPromise;
 
 const result = {
-  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"card_settings"') && createdBody.includes('"show_house_badge": false') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
-    materialUploadResponse.status === 201 && materialUploadCreated && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
-    setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' &&
+  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"background_render": "selected-render.jpg"') && createdBody.includes('"card_settings"') && createdBody.includes('"show_key_render": false') && createdBody.includes('"show_house_badge": false') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
+    materialUploadResponse.status === 201 && materialUploadCreated && materialUploadAttempts === 2 && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 1 &&
+    setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' && setup.assets.brand.background_color === '#00605C' &&
     sourceEmptyResponse.status === 200 && sourceEmpty.configured === false && sourceSaveResponse.status === 200 && sourceSaved.hostname === 'profitbase.example' &&
     sourceStatusResponse.status === 200 && sourceStatus.configured === true && sourceStatus.hostname === 'profitbase.example' && !JSON.stringify(sourceStatus).includes('qa-secret') &&
     feedStorage.objects.has('private/source-feeds/novyy-gorizont.json') &&
