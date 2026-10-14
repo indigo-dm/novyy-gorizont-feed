@@ -1,6 +1,26 @@
 export async function onRequest(context) {
   try {
-    const response = await context.env.FEED_API.fetch(context.request);
+    const request = context.request;
+    const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+    let forwardedRequest = request;
+
+    // A multipart body forwarded as the original request stream can arrive at a
+    // service binding without its opening boundary. Rebuild upload forms here
+    // so the runtime generates a fresh Content-Type boundary matching the body.
+    if (request.method === 'POST' && (path === '/' || path === '/upload' || path === '/materials/upload')) {
+      const form = await request.formData();
+      const headers = new Headers(request.headers);
+      headers.delete('Content-Type');
+      headers.delete('Content-Length');
+      forwardedRequest = new Request(request.url, {
+        method: request.method,
+        headers,
+        body: form,
+        redirect: request.redirect
+      });
+    }
+
+    const response = await context.env.FEED_API.fetch(forwardedRequest);
     const headers = new Headers(response.headers);
     headers.set('X-Feed-Gateway', 'cloudflare-pages');
     return new Response(response.body, {
@@ -23,4 +43,3 @@ export async function onRequest(context) {
     );
   }
 }
-
