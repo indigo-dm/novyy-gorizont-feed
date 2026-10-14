@@ -1,33 +1,33 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-10-14T03:12:26+03:00",
-  "source_ads": 160,
-  "full_ads": 160,
+  "checked_at": "2026-10-14T17:56:31+03:00",
+  "source_ads": 162,
+  "full_ads": 162,
   "excluded_ads": 0,
   "unique_plans": 49,
   "source_tag_counts": {
-    "AdStatus": 160,
-    "Address": 160,
-    "ApartmentNumber": 160,
-    "Category": 160,
-    "CompanyName": 160,
-    "ContactMethod": 160,
-    "ContactPhone": 160,
-    "Decoration": 160,
-    "Description": 160,
-    "Floor": 160,
-    "Floors": 160,
-    "HouseType": 160,
-    "Id": 160,
-    "MarketType": 160,
-    "OperationType": 160,
-    "Price": 160,
-    "PropertyRights": 160,
-    "Rooms": 160,
-    "Square": 160,
-    "Status": 160,
-    "NewDevelopmentId": 76
+    "AdStatus": 162,
+    "Address": 162,
+    "ApartmentNumber": 162,
+    "Category": 162,
+    "CompanyName": 162,
+    "ContactMethod": 162,
+    "ContactPhone": 162,
+    "Decoration": 162,
+    "Description": 162,
+    "Floor": 162,
+    "Floors": 162,
+    "HouseType": 162,
+    "Id": 162,
+    "MarketType": 162,
+    "OperationType": 162,
+    "Price": 162,
+    "PropertyRights": 162,
+    "Rooms": 162,
+    "Square": 162,
+    "Status": 162,
+    "NewDevelopmentId": 78
   },
   "parameter_catalog": [
     {
@@ -20153,6 +20153,200 @@
       "excluded_from_feed": false
     },
     {
+      "id": "407635860",
+      "house_id": "10189300",
+      "house": "Дом 10189300",
+      "rooms": "1",
+      "area": "48.6",
+      "floor": "16",
+      "floors": "20",
+      "price": "8310600",
+      "decoration": "Без отделки",
+      "plan_id": "plan-cb3d1afa41c9",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635860.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635860.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635860.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-cb3d1afa41c9",
+          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/49398ec48280b70aec3aec9acc4c360c44d6edf4.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-076d776e1543",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
+          "position": 2
+        },
+        {
+          "id": "src-90e6a4ccf8d6",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-7cab611efc16",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-9d5328ff27f7",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-37ea5d298181",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-a8e124ab67c8",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-122880f50bee",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-72809fab8046",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
+          "position": 9
+        },
+        {
+          "id": "src-08c7a6610b27",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
+          "position": 10
+        },
+        {
+          "id": "src-5c8508a9b0ed",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
+          "position": 11
+        },
+        {
+          "id": "src-26f7b8b3e333",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
+          "position": 12
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635860.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-cb3d1afa41c9",
+          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/49398ec48280b70aec3aec9acc4c360c44d6edf4.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-076d776e1543",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
+          "kind": "source"
+        },
+        {
+          "id": "src-90e6a4ccf8d6",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-7cab611efc16",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-9d5328ff27f7",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-37ea5d298181",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-a8e124ab67c8",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-122880f50bee",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-72809fab8046",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-08c7a6610b27",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5c8508a9b0ed",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-26f7b8b3e333",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "ApartmentNumber",
+        "Category",
+        "CompanyName",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "407635860",
+        "AdStatus": "Free",
+        "ContactPhone": "+7 (863) 333-26-38",
+        "ContactMethod": "По телефону",
+        "NewDevelopmentId": "10189300",
+        "Description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "Price": "8310600",
+        "Rooms": "1",
+        "Square": "48.6",
+        "Floor": "16",
+        "Floors": "20",
+        "HouseType": "Монолитный",
+        "MarketType": "Новостройка",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
+        "ApartmentNumber": "172",
+        "Status": "Квартира",
+        "Decoration": "Без отделки",
+        "CompanyName": "Орион"
+      },
+      "source_description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
+      "excluded_from_feed": false
+    },
+    {
       "id": "407635908",
       "house_id": "10189300",
       "house": "Дом 10189300",
@@ -20339,6 +20533,200 @@
         "PropertyRights": "Застройщик",
         "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
         "ApartmentNumber": "216",
+        "Status": "Квартира",
+        "Decoration": "Без отделки",
+        "CompanyName": "Орион"
+      },
+      "source_description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "407635764",
+      "house_id": "10189300",
+      "house": "Дом 10189300",
+      "rooms": "1",
+      "area": "48.71",
+      "floor": "9",
+      "floors": "20",
+      "price": "8329410",
+      "decoration": "Без отделки",
+      "plan_id": "plan-cb3d1afa41c9",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635764.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635764.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635764.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-cb3d1afa41c9",
+          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/49398ec48280b70aec3aec9acc4c360c44d6edf4.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-076d776e1543",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
+          "position": 2
+        },
+        {
+          "id": "src-90e6a4ccf8d6",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-7cab611efc16",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-9d5328ff27f7",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-37ea5d298181",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-a8e124ab67c8",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-122880f50bee",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-72809fab8046",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
+          "position": 9
+        },
+        {
+          "id": "src-08c7a6610b27",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
+          "position": 10
+        },
+        {
+          "id": "src-5c8508a9b0ed",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
+          "position": 11
+        },
+        {
+          "id": "src-26f7b8b3e333",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
+          "position": 12
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635764.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-cb3d1afa41c9",
+          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/49398ec48280b70aec3aec9acc4c360c44d6edf4.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-076d776e1543",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
+          "kind": "source"
+        },
+        {
+          "id": "src-90e6a4ccf8d6",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-7cab611efc16",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-9d5328ff27f7",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-37ea5d298181",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-a8e124ab67c8",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-122880f50bee",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-72809fab8046",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-08c7a6610b27",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5c8508a9b0ed",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-26f7b8b3e333",
+          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "ApartmentNumber",
+        "Category",
+        "CompanyName",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "407635764",
+        "AdStatus": "Free",
+        "ContactPhone": "+7 (863) 333-26-38",
+        "ContactMethod": "По телефону",
+        "NewDevelopmentId": "10189300",
+        "Description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "Price": "8329410",
+        "Rooms": "1",
+        "Square": "48.71",
+        "Floor": "9",
+        "Floors": "20",
+        "HouseType": "Монолитный",
+        "MarketType": "Новостройка",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
+        "ApartmentNumber": "95",
         "Status": "Квартира",
         "Decoration": "Без отделки",
         "CompanyName": "Орион"

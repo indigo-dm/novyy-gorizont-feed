@@ -88,10 +88,14 @@
   ],
   "current": {
     "logo": "logo-truda.png",
-    "key_render": "key-render.jpg"
+    "key_render": "key-render.jpg",
+    "background_render": ""
   },
   "brand": {
     "green": "#194820",
+    "background_color": "#194820",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#9B9B9B",
     "green_dark": "#194820",
     "gold": "#72C451",
     "gray": "#9B9B9B",

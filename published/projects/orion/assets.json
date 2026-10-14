@@ -88,10 +88,14 @@
   ],
   "current": {
     "logo": "logo-orion-gradient.png",
-    "key_render": "key-render.jpg"
+    "key_render": "key-render.jpg",
+    "background_render": ""
   },
   "brand": {
     "green": "#3F245C",
+    "background_color": "#3F245C",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#48277F",
     "green_dark": "#1D1D1B",
     "gold": "#924694",
     "gray": "#48277F",

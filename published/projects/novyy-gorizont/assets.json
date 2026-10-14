@@ -33,10 +33,14 @@
   ],
   "current": {
     "logo": "logo-gold.svg",
-    "key_render": "selected-render.jpg"
+    "key_render": "selected-render.jpg",
+    "background_render": ""
   },
   "brand": {
     "green": "#00605C",
+    "background_color": "#00605C",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#9B9B9B",
     "green_dark": "#004C49",
     "gold": "#CEAD75",
     "gray": "#9B9B9B",
