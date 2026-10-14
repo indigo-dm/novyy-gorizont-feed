@@ -81,10 +81,26 @@ let createdBody = '';
 let materialUploadCreated = false;
 let materialUploadAttempts = 0;
 let materialDeleteRequests = 0;
+let projectConfigUpdates = 0;
 const materialFiles = new Map([
   ['mat-qa-demo-render.png', { type: 'file', name: 'mat-qa-demo-render.png', size: 64, sha: '1111111111111111111111111111111111111111' }],
   ['mat-qa-active.png', { type: 'file', name: 'mat-qa-active.png', size: 64, sha: '2222222222222222222222222222222222222222' }]
 ]);
+const rootMaterialFiles = new Map([
+  ['logo-gold.svg', { type: 'file', name: 'logo-gold.svg', size: 64, sha: '3333333333333333333333333333333333333333' }],
+  ['selected-render.jpg', { type: 'file', name: 'selected-render.jpg', size: 64, sha: '4444444444444444444444444444444444444444' }],
+  ['unused-render.jpg', { type: 'file', name: 'unused-render.jpg', size: 64, sha: '5555555555555555555555555555555555555555' }]
+]);
+let projectConfigSha = '6666666666666666666666666666666666666666';
+let projectConfig = {
+  project: 'ЖК Новый Горизонт',
+  brand: {
+    green: '#00605C', background_color: '#00605C', text_color: '#FFFFFF', subtitle_color: '#9B9B9B', green_dark: '#004C49', gold: '#CEAD75', gray: '#9B9B9B', white: '#FFFFFF', font: 'Manrope',
+    logo: 'logo-gold.svg', key_render: 'selected-render.jpg', background_render: '',
+    additional_renders: [{ name: 'Неиспользуемый рендер', filename: 'unused-render.jpg' }],
+    palette: [{ name: 'Основной', value: '#00605C' }, { name: 'Белый', value: '#FFFFFF' }, { name: 'Серый', value: '#9B9B9B' }]
+  }
+};
 let frontendDeployDispatched = false;
 let frontendFeedPublished = false;
 let refreshDispatchInputs = null;
@@ -118,24 +134,38 @@ globalThis.fetch = async (url, options = {}) => {
   if (value.includes('/contents/projects/novyy-gorizont/assets/uploads?ref=main')) {
     return Response.json(Array.from(materialFiles.values()));
   }
+  const rootMaterialMatch = value.match(/\/contents\/projects\/novyy-gorizont\/assets\/([^/?]+)(?:\?ref=main)?$/);
+  if (rootMaterialMatch && (!options.method || options.method === 'GET')) {
+    const entry = rootMaterialFiles.get(decodeURIComponent(rootMaterialMatch[1]));
+    return entry ? Response.json(entry) : Response.json({ message: 'Not Found' }, { status: 404 });
+  }
+  if (rootMaterialMatch && options.method === 'DELETE') {
+    const name = decodeURIComponent(rootMaterialMatch[1]);
+    const payload = JSON.parse(options.body);
+    const entry = rootMaterialFiles.get(name);
+    if (!entry || payload.sha !== entry.sha) return Response.json({ message: 'Conflict' }, { status: 409 });
+    rootMaterialFiles.delete(name);
+    materialDeleteRequests += 1;
+    return Response.json({ commit: { sha: 'qa-root-delete-commit' } }, { status: 200 });
+  }
   if (value.includes('/contents/projects/novyy-gorizont/config.json?ref=main')) {
-    return Response.json({
-      project: 'ЖК Новый Горизонт',
-      brand: {
-        green: '#00605C', background_color: '#00605C', text_color: '#FFFFFF', subtitle_color: '#9B9B9B', green_dark: '#004C49', gold: '#CEAD75', gray: '#9B9B9B', white: '#FFFFFF', font: 'Manrope',
-        logo: 'logo-gold.svg', key_render: 'selected-render.jpg', background_render: '',
-        palette: [{ name: 'Основной', value: '#00605C' }, { name: 'Белый', value: '#FFFFFF' }, { name: 'Серый', value: '#9B9B9B' }]
-      }
-    });
+    const accept = String(options.headers && (options.headers.Accept || options.headers.accept) || '');
+    if (accept.includes('raw')) return Response.json(projectConfig);
+    return Response.json({ sha: projectConfigSha, encoding: 'base64', content: Buffer.from(JSON.stringify(projectConfig), 'utf8').toString('base64') });
+  }
+  if (value.endsWith('/contents/projects/novyy-gorizont/config.json') && options.method === 'PUT') {
+    const payload = JSON.parse(options.body);
+    if (payload.sha !== projectConfigSha) return Response.json({ message: 'Conflict' }, { status: 409 });
+    projectConfig = JSON.parse(Buffer.from(payload.content, 'base64').toString('utf8'));
+    projectConfigSha = '7777777777777777777777777777777777777777';
+    projectConfigUpdates += 1;
+    return Response.json({ content: { sha: projectConfigSha } });
   }
   if (value.includes('/contents/projects/novyy-gorizont/promotion-rules.json?ref=main')) {
     return Response.json({ version: 2, rules: [], image_settings: { lot_overrides: {}, bulk_rules: [] }, parameter_settings: { lot_values: {}, bulk_rules: [] } });
   }
   if (value.includes('/contents/projects/novyy-gorizont/assets?ref=main')) {
-    return Response.json([
-      { type: 'file', name: 'logo-gold.svg', size: 64 },
-      { type: 'file', name: 'selected-render.jpg', size: 64 }
-    ]);
+    return Response.json(Array.from(rootMaterialFiles.values()));
   }
   if (value.endsWith('/repos/indigo-dm/feed-studio/dispatches') && options.method === 'POST') {
     frontendDeployDispatched = JSON.parse(options.body).event_type === 'feed-data-updated';
@@ -224,6 +254,12 @@ const activeMaterialDeleteResponse = await worker.fetch(new Request('https://wor
   headers,
   body: JSON.stringify({ project: 'novyy-gorizont', filename: 'uploads/mat-qa-active.png' })
 }), env);
+const rootMaterialDeleteResponse = await worker.fetch(new Request('https://worker.example/materials', {
+  method: 'DELETE',
+  headers,
+  body: JSON.stringify({ project: 'novyy-gorizont', filename: 'unused-render.jpg' })
+}), env);
+const rootMaterialDeleted = await rootMaterialDeleteResponse.json();
 const materialListAfterDeleteResponse = await worker.fetch(new Request('https://worker.example/materials?project=novyy-gorizont', { headers }), env);
 const materialListAfterDelete = await materialListAfterDeleteResponse.json();
 
@@ -274,8 +310,8 @@ await cleanupPromise;
 
 const result = {
   ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"background_render": "selected-render.jpg"') && createdBody.includes('"card_settings"') && createdBody.includes('"show_key_render": false') && createdBody.includes('"show_house_badge": false') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
-    materialUploadResponse.status === 201 && materialUploadCreated && materialUploadAttempts === 2 && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 2 &&
-    materialDeleteResponse.status === 200 && materialDeleted.deleted === true && materialDeleteRequests === 1 && activeMaterialDeleteResponse.status === 409 && materialListAfterDelete.items.length === 1 &&
+    materialUploadResponse.status === 201 && materialUploadCreated && materialUploadAttempts === 2 && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 5 &&
+    materialDeleteResponse.status === 200 && materialDeleted.deleted === true && activeMaterialDeleteResponse.status === 409 && rootMaterialDeleteResponse.status === 200 && rootMaterialDeleted.deleted === true && materialDeleteRequests === 2 && projectConfigUpdates === 1 && !projectConfig.brand.additional_renders.some((item) => item.filename === 'unused-render.jpg') && materialListAfterDelete.items.length === 3 &&
     setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' && setup.assets.brand.background_color === '#00605C' &&
     sourceEmptyResponse.status === 200 && sourceEmpty.configured === false && sourceSaveResponse.status === 200 && sourceSaved.hostname === 'profitbase.example' &&
     sourceStatusResponse.status === 200 && sourceStatus.configured === true && sourceStatus.hostname === 'profitbase.example' && !JSON.stringify(sourceStatus).includes('qa-secret') &&
@@ -300,7 +336,8 @@ const result = {
   card_settings_forwarded: createdBody.includes('"card_settings"') && createdBody.includes('"show_house_badge": false'),
   material_upload_status: materialUploadResponse.status,
   material_list_status: materialListResponse.status,
-  material_delete_statuses: [materialDeleteResponse.status, activeMaterialDeleteResponse.status],
+  material_delete_statuses: [materialDeleteResponse.status, activeMaterialDeleteResponse.status, rootMaterialDeleteResponse.status],
+  material_config_cleaned: projectConfigUpdates === 1 && !projectConfig.brand.additional_renders.some((item) => item.filename === 'unused-render.jpg'),
   material_list_after_delete: materialListAfterDelete.items.length,
   setup_status: setupResponse.status,
   source_feed_statuses: [sourceEmptyResponse.status, sourceSaveResponse.status, sourceStatusResponse.status],

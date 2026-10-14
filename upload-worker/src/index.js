@@ -318,16 +318,64 @@ function collectMaterialReferences(settings, references) {
   }
 }
 
-async function publishedMaterialReferences(env, project) {
+async function publishedMaterialState(env, project) {
   const references = new Set();
-  if (r2Available(env)) {
-    const stored = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
-    if (stored) collectMaterialReferences(await stored.json(), references);
-  }
+  const materialSettings = {};
+  const mergeSettings = (settings) => {
+    const materials = settings && typeof settings.material_settings === 'object' ? settings.material_settings : {};
+    Object.assign(materialSettings, materials);
+    collectMaterialReferences(settings, references);
+  };
   const branch = env.GITHUB_SOURCE_BRANCH || 'main';
   const response = await githubRaw(env, `projects/${project}/promotion-rules.json`, branch);
-  collectMaterialReferences(await response.json(), references);
-  return references;
+  mergeSettings(await response.json());
+  if (r2Available(env)) {
+    const stored = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
+    if (stored) mergeSettings(await stored.json());
+  }
+  return { references, materialSettings };
+}
+
+function decodeGithubContent(value) {
+  const binary = atob(String(value || '').replace(/\s+/g, ''));
+  const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+async function removeMaterialFromProjectConfig(env, project, filename, branch, materialSettings) {
+  const path = `projects/${project}/config.json`;
+  const entry = await github(env, `/contents/${encodedPath(path)}?ref=${encodeURIComponent(branch)}`);
+  if (!entry || !/^[0-9a-f]{40}$/i.test(String(entry.sha || '')) || entry.encoding !== 'base64' || !entry.content) {
+    throw new Error('Не удалось прочитать конфигурацию объекта перед удалением материала.');
+  }
+  const config = JSON.parse(decodeGithubContent(entry.content));
+  const brand = config && typeof config.brand === 'object' ? config.brand : {};
+  let changed = false;
+  for (const listName of ['additional_logos', 'additional_renders']) {
+    if (!Array.isArray(brand[listName])) continue;
+    const filtered = brand[listName].filter((item) => !item || String(item.filename || '') !== filename);
+    if (filtered.length !== brand[listName].length) {
+      brand[listName] = filtered;
+      changed = true;
+    }
+  }
+  for (const role of ['logo', 'key_render', 'background_render']) {
+    if (String(brand[role] || '') !== filename) continue;
+    const replacement = String(materialSettings[role] || '');
+    if (replacement && replacement !== filename) brand[role] = replacement;
+    else delete brand[role];
+    changed = true;
+  }
+  if (!changed) return;
+  await github(env, `/contents/${encodedPath(path)}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      message: `Remove deleted brand material reference for ${project}`,
+      content: bytesToBase64(new TextEncoder().encode(`${JSON.stringify(config, null, 2)}\n`)),
+      sha: entry.sha,
+      branch
+    })
+  });
 }
 
 async function deleteMaterial(request, env, origin) {
@@ -336,10 +384,12 @@ async function deleteMaterial(request, env, origin) {
   const project = String(payload && payload.project || '').trim();
   const filename = String(payload && payload.filename || '').trim();
   if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
-  if (!/^uploads\/mat-[a-z0-9-]+\.(?:jpe?g|png|webp|svg)$/i.test(filename)) {
-    return json({ error: 'Удалять можно только материалы, загруженные через интерфейс.' }, 400, origin, env);
+  const parts = filename.split('/');
+  const validLocation = parts.length === 1 || (parts.length === 2 && parts[0] === 'uploads');
+  if (!safeStorageKey(filename) || !validLocation || !/\.(?:jpe?g|png|webp|svg)$/i.test(filename)) {
+    return json({ error: 'Можно удалить только файл изображения из библиотеки материалов.' }, 400, origin, env);
   }
-  const references = await publishedMaterialReferences(env, project);
+  const { references, materialSettings } = await publishedMaterialState(env, project);
   if (references.has(filename)) {
     return json({ error: 'Материал используется опубликованными настройками. Сначала назначьте другой материал и примените изменения к фиду.' }, 409, origin, env);
   }
@@ -356,6 +406,9 @@ async function deleteMaterial(request, env, origin) {
   }
   if (!entry || !/^[0-9a-f]{40}$/i.test(String(entry.sha || ''))) {
     return json({ error: 'Не удалось подтвердить файл перед удалением.' }, 502, origin, env);
+  }
+  if (parts.length === 1) {
+    await removeMaterialFromProjectConfig(env, project, filename, branch, materialSettings);
   }
   await github(env, `/contents/${encodedPath(path)}`, {
     method: 'DELETE',
@@ -375,34 +428,38 @@ async function listMaterials(request, env, origin) {
     return json({ error: 'Неизвестный объект.' }, 400, origin, env);
   }
   const branch = env.GITHUB_SOURCE_BRANCH || 'main';
-  const directory = `projects/${project}/assets/uploads`;
-  const encoded = directory.split('/').map(encodeURIComponent).join('/');
-  const response = await fetch(
-    `https://api.github.com/repos/${env.GITHUB_REPOSITORY}/contents/${encoded}?ref=${encodeURIComponent(branch)}`,
-    {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        Authorization: `Bearer ${env.GITHUB_TOKEN}`,
-        'User-Agent': 'indigo-feed-studio-upload',
-        'X-GitHub-Api-Version': '2022-11-28'
-      }
-    }
-  );
-  if (response.status === 404) return json({ items: [] }, 200, origin, env);
-  if (!response.ok) throw new Error(`GitHub material list failed: ${response.status}`);
-  const entries = await response.json();
-  const items = (Array.isArray(entries) ? entries : [])
+  const rootDirectory = `projects/${project}/assets`;
+  const uploadDirectory = `${rootDirectory}/uploads`;
+  const rootEntries = await github(env, `/contents/${encodedPath(rootDirectory)}?ref=${encodeURIComponent(branch)}`);
+  let uploadEntries = [];
+  try {
+    uploadEntries = await github(env, `/contents/${encodedPath(uploadDirectory)}?ref=${encodeURIComponent(branch)}`);
+  } catch (error) {
+    if (!/GitHub 404:/.test(String(error && error.message || ''))) throw error;
+  }
+  const rootItems = (Array.isArray(rootEntries) ? rootEntries : [])
+    .filter((entry) => entry.type === 'file' && /\.(?:jpe?g|png|webp|svg)$/i.test(entry.name))
+    .map((entry) => ({
+      id: String(entry.name).replace(/\.[^.]+$/, ''),
+      name: String(entry.name).replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '),
+      filename: String(entry.name),
+      url: rawGithubUrl(env, branch, `${rootDirectory}/${entry.name}`),
+      size: Number(entry.size || 0),
+      uploaded: false,
+      active_for: []
+    }));
+  const uploadedItems = (Array.isArray(uploadEntries) ? uploadEntries : [])
     .filter((entry) => entry.type === 'file' && /\.(?:jpe?g|png|webp|svg)$/i.test(entry.name))
     .map((entry) => ({
       id: String(entry.name).replace(/\.[^.]+$/, ''),
       name: String(entry.name).replace(/^mat-[^-]+-[^-]+-/, '').replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '),
       filename: `uploads/${entry.name}`,
-      url: rawGithubUrl(env, branch, `${directory}/${entry.name}`),
+      url: rawGithubUrl(env, branch, `${uploadDirectory}/${entry.name}`),
       size: Number(entry.size || 0),
       uploaded: true,
       active_for: []
     }));
-  return json({ items }, 200, origin, env);
+  return json({ items: rootItems.concat(uploadedItems) }, 200, origin, env);
 }
 
 function allowedProjects(env) {
