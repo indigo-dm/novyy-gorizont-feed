@@ -18,17 +18,17 @@
       "uploaded": false
     },
     {
-      "key": "asset-7e67fc37689b",
+      "key": "asset-543c056bebe6",
       "name": "Логотип",
       "description": "Основной логотип объекта для брендированных карточек.",
-      "filename": "logo-orion-gradient.png",
+      "filename": "uploads/mat-mv98xebb-5355b70af7-mask-group.png",
       "required": true,
       "exists": true,
-      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-gradient.png",
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/uploads/mat-mv98xebb-5355b70af7-mask-group.png",
       "active_for": [
         "logo"
       ],
-      "uploaded": false
+      "uploaded": true
     },
     {
       "key": "asset-329bd8bf7d98",
@@ -38,6 +38,17 @@
       "required": false,
       "exists": true,
       "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-black.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-7e67fc37689b",
+      "name": "Logo Orion Gradient",
+      "description": "Загруженный фирменный материал объекта.",
+      "filename": "logo-orion-gradient.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/orion/assets/logo-orion-gradient.png",
       "active_for": [],
       "uploaded": false
     },
@@ -87,7 +98,7 @@
     }
   ],
   "current": {
-    "logo": "logo-orion-gradient.png",
+    "logo": "uploads/mat-mv98xebb-5355b70af7-mask-group.png",
     "key_render": "key-render.jpg",
     "background_render": ""
   },
@@ -103,10 +114,6 @@
     "font": "Gilroy",
     "palette": [
       {
-        "name": "Текст",
-        "value": "#FFFFFF"
-      },
-      {
         "name": "Основной фиолетовый",
         "value": "#3F245C"
       },
@@ -121,6 +128,10 @@
       {
         "name": "Чёрный",
         "value": "#1D1D1B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
       }
     ]
   }

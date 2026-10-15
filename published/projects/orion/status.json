@@ -1,12 +1,12 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-10-15T10:46:50+03:00",
+  "checked_at": "2026-10-15T11:02:04+03:00",
   "source_ads": 162,
   "full_ads": 162,
   "excluded_ads": 0,
   "unique_plans": 49,
   "active_promotions": 0,
   "publish_ready": false,
-  "mode": "fast-data"
+  "mode": "full-demo"
 }
