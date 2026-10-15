@@ -53,5 +53,11 @@
       }
     ]
   },
-  "pending_upload_deletions": []
+  "pending_upload_deletions": [],
+  "card_settings": {
+    "show_key_render": true,
+    "show_house_badge": true,
+    "show_decoration": true,
+    "show_logo_panel": false
+  }
 }

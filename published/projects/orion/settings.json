@@ -112,7 +112,8 @@
   "card_settings": {
     "show_key_render": true,
     "show_house_badge": false,
-    "show_decoration": false
+    "show_decoration": false,
+    "show_logo_panel": false
   },
   "pending_upload_deletions": []
 }
