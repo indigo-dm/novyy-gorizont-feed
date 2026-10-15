@@ -1,7 +1,7 @@
 {
   "slug": "truda-12-3",
   "project": "ЖК Труда 12/3",
-  "checked_at": "2026-10-15T11:53:08+03:00",
+  "checked_at": "2026-10-15T17:45:55+03:00",
   "source_ads": 16,
   "full_ads": 16,
   "excluded_ads": 0,
@@ -47,23 +47,22 @@
         "2",
         "3",
         "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20"
+        "5"
       ],
+      "supported": true
+    },
+    {
+      "tag": "NewDevelopmentId",
+      "name": "ID новостройки",
+      "kind": "text",
+      "max": 200,
+      "supported": true
+    },
+    {
+      "tag": "Address",
+      "name": "Адрес",
+      "kind": "text",
+      "max": 500,
       "supported": true
     },
     {
