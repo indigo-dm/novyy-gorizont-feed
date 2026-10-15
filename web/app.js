@@ -75,6 +75,10 @@
     }).format(date);
   };
   var DESCRIPTION_TAG = 'Description';
+  var REQUIRED_PARAMETER_CATALOG = [
+    { tag: 'NewDevelopmentId', name: 'ID новостройки', kind: 'text', max: 200, supported: true },
+    { tag: 'Address', name: 'Адрес', kind: 'text', max: 500, supported: true }
+  ];
   var DESCRIPTION_TAGS = ['P', 'BR', 'STRONG', 'EM', 'UL', 'OL', 'LI'];
   var shortcodeLabels = {
     Id: 'ID лота', NewDevelopmentId: 'ID новостройки', Rooms: 'Комнат', Square: 'Площадь',
@@ -946,12 +950,20 @@
     });
   }
 
+  function parameterCatalog() {
+    var catalog = (state.inventory.parameter_catalog || []).slice();
+    REQUIRED_PARAMETER_CATALOG.forEach(function (required) {
+      if (!catalog.some(function (item) { return item.tag === required.tag; })) catalog.push(required);
+    });
+    return catalog;
+  }
+
   function supportedParameters() {
-    return (state.inventory.parameter_catalog || []).filter(function (item) { return item.supported; });
+    return parameterCatalog().filter(function (item) { return item.supported; });
   }
 
   function parameterByTag(tag) {
-    return (state.inventory.parameter_catalog || []).find(function (item) { return item.tag === tag; });
+    return parameterCatalog().find(function (item) { return item.tag === tag; });
   }
 
   function effectiveParameters(item) {
@@ -1064,7 +1076,7 @@
     var selectedBulkTag = $('#bulk-parameter-tag').value;
     $('#bulk-parameter-tag').innerHTML = bulkCatalogOptions;
     if (selectedBulkTag && parameterByTag(selectedBulkTag)) $('#bulk-parameter-tag').value = selectedBulkTag;
-    var deferred = (state.inventory.parameter_catalog || []).filter(function (catalog) { return !catalog.supported; }).map(function (catalog) { return catalog.tag; });
+    var deferred = parameterCatalog().filter(function (catalog) { return !catalog.supported; }).map(function (catalog) { return catalog.tag; });
     $('#parameter-catalog-note').textContent = deferred.length ? 'После сверки справочника Avito добавим: ' + deferred.join(', ') + '.' : '';
     if (!item) {
       renderDescriptionEditor(null);
