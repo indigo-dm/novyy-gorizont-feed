@@ -33,14 +33,14 @@
     },
     "bulk_rules": [
       {
-        "id": "image-rule-1792053305745",
+        "id": "image-rule-1792055002074",
         "name": "Перестановка 14 → 3",
         "enabled": true,
         "house_ids": [],
         "rooms": [],
         "floors": [],
         "plan_ids": [
-          "plan-f75c53e64126"
+          "plan-3e4af95e551c"
         ],
         "area_min": null,
         "area_max": null,
