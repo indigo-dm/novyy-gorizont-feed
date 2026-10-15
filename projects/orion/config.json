@@ -9,7 +9,7 @@
     "gray": "#48277F",
     "white": "#FFFFFF",
     "font": "Gilroy",
-    "logo": "logo-orion-gradient.png",
+    "logo": "uploads/mat-mv98xebb-5355b70af7-mask-group.png",
     "logo_panel": "light",
     "key_render": "key-render.jpg",
     "additional_renders": [
@@ -38,10 +38,6 @@
     ],
     "palette": [
       {
-        "name": "Текст",
-        "value": "#FFFFFF"
-      },
-      {
         "name": "Основной фиолетовый",
         "value": "#3F245C"
       },
@@ -56,6 +52,10 @@
       {
         "name": "Чёрный",
         "value": "#1D1D1B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
       }
     ],
     "background_render": "",
@@ -63,8 +63,8 @@
     "text_color": "#FFFFFF",
     "subtitle_color": "#48277F",
     "show_key_render": true,
-    "show_house_badge": true,
-    "show_decoration": true
+    "show_house_badge": false,
+    "show_decoration": false
   },
   "houses": {}
 }
