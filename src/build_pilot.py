@@ -72,6 +72,9 @@ def active_promotion(item: dict[str, object], rules: list[dict[str, object]], to
     item_id = str(item["id"])
     house_id = str(item["house_id"])
     rooms = str(item["rooms"])
+    floor = str(item.get("floor") or "")
+    values = item.get("source_values") if isinstance(item.get("source_values"), dict) else {}
+    apartment_number = str(values.get("ApartmentNumber") or "")
     area = float(str(item["area"] or 0))
     for rule in rules:
         if not rule.get("enabled"):
@@ -93,6 +96,12 @@ def active_promotion(item: dict[str, object], rules: list[dict[str, object]], to
             continue
         room_values = {str(value) for value in rule.get("rooms", [])}
         if room_values and rooms not in room_values:
+            continue
+        floors = {str(value) for value in rule.get("floors", [])}
+        if floors and floor not in floors:
+            continue
+        apartment_numbers = {str(value) for value in rule.get("apartment_numbers", [])}
+        if apartment_numbers and apartment_number not in apartment_numbers:
             continue
         area_min = rule.get("area_min")
         area_max = rule.get("area_max")
@@ -124,6 +133,10 @@ def rule_matches(item: dict[str, object], rule: dict[str, object]) -> bool:
         return False
     floors = {str(value) for value in rule.get("floors", [])}
     if floors and str(item["floor"]) not in floors:
+        return False
+    apartment_numbers = {str(value) for value in rule.get("apartment_numbers", [])}
+    source = item.get("source_values") if isinstance(item.get("source_values"), dict) else {}
+    if apartment_numbers and str(source.get("ApartmentNumber") or "") not in apartment_numbers:
         return False
     plans = {str(value) for value in rule.get("plan_ids", [])}
     if plans and str(item["plan_id"]) not in plans:

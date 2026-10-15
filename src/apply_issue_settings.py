@@ -55,11 +55,16 @@ def text(value: object, name: str, maximum: int, default: str = "") -> str:
     return result
 
 
-def string_list(value: object, name: str, allowed: set[str] | None = None) -> list[str]:
+def string_list(
+    value: object,
+    name: str,
+    allowed: set[str] | None = None,
+    maximum: int = 250,
+) -> list[str]:
     if not isinstance(value, list):
         raise ValueError(f"{name} must be a list")
     result = list(dict.fromkeys(str(item).strip() for item in value if str(item).strip()))
-    if len(result) > 250:
+    if len(result) > maximum:
         raise ValueError(f"{name} contains too many values")
     if allowed is not None and not set(result).issubset(allowed):
         raise ValueError(f"{name} contains unsupported values")
@@ -406,6 +411,9 @@ def promotion_signature(
     item_id = str(item.get("id") or "")
     house_id = str(item.get("house_id") or "")
     rooms = str(item.get("rooms") or "")
+    floor = str(item.get("floor") or "")
+    source_values = item.get("source_values") if isinstance(item.get("source_values"), dict) else {}
+    apartment_number = str(source_values.get("ApartmentNumber") or "")
     area = float(str(item.get("area") or 0))
     for rule in rules:
         if not rule.get("enabled"):
@@ -426,6 +434,12 @@ def promotion_signature(
             continue
         room_values = {str(value) for value in rule.get("rooms", [])}
         if room_values and rooms not in room_values:
+            continue
+        floors = {str(value) for value in rule.get("floors", [])}
+        if floors and floor not in floors:
+            continue
+        apartment_numbers = {str(value) for value in rule.get("apartment_numbers", [])}
+        if apartment_numbers and apartment_number not in apartment_numbers:
             continue
         if rule.get("area_min") is not None and area < float(str(rule["area_min"])):
             continue
@@ -561,8 +575,14 @@ def validate(
             raise ValueError(f"Rule {rule_id}: starts_at is after ends_at")
         include_ids = string_list(source.get("include_ids", []), "include_ids")
         exclude_ids = string_list(source.get("exclude_ids", []), "exclude_ids")
+        floors = string_list(source.get("floors", []), "floors")
+        apartment_numbers = string_list(source.get("apartment_numbers", []), "apartment_numbers", maximum=1000)
         if any(not value.isdigit() for value in include_ids + exclude_ids):
             raise ValueError(f"Rule {rule_id}: lot ids must contain digits only")
+        if any(not value.isdigit() or not 1 <= int(value) <= 300 for value in floors):
+            raise ValueError(f"Rule {rule_id}: floors must contain numbers between 1 and 300")
+        if any(len(value) > 40 for value in apartment_numbers):
+            raise ValueError(f"Rule {rule_id}: apartment numbers must not exceed 40 characters")
         rules.append({
             "id": rule_id,
             "name": text(source.get("name"), "name", 80, "Акция"),
@@ -571,6 +591,8 @@ def validate(
             "text": text(source.get("text"), "text", 60),
             "house_ids": string_list(source.get("house_ids", []), "house_ids", allowed_houses),
             "rooms": string_list(source.get("rooms", []), "rooms", ALLOWED_ROOMS),
+            "floors": floors,
+            "apartment_numbers": apartment_numbers,
             "area_min": area_min,
             "area_max": area_max,
             "starts_at": starts_at,
