@@ -8,6 +8,7 @@
     "gold": "#CEAD75",
     "white": "#FFFFFF",
     "font": "Manrope",
+    "show_logo_panel": false,
     "logo": "logo-gold.svg",
     "key_render": "selected-render.jpg",
     "palette": [

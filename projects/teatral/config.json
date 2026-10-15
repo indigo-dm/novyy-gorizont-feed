@@ -9,6 +9,7 @@
     "gray": "#717B7D",
     "white": "#F2F1EC",
     "font": "Manrope",
+    "show_logo_panel": false,
     "logo": "logo-teatral-light.png",
     "key_render": "key-render.jpg",
     "additional_logos": [

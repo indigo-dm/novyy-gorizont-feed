@@ -9,8 +9,8 @@
     "gray": "#9B9B9B",
     "white": "#FFFFFF",
     "font": "Manrope",
+    "show_logo_panel": true,
     "logo": "logo-truda.png",
-    "logo_panel": "light",
     "key_render": "key-render.jpg",
     "key_render_align": "right",
     "additional_renders": [

@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ALLOWED_ROOMS = {"1", "2", "3", "4", "5"}
+ALLOWED_ROOMS = {"Студия", *{str(value) for value in range(1, 21)}}
 ALLOWED_PARAMETERS = {
     "Description",
     "Rooms",
@@ -165,6 +165,8 @@ def parameter_value(tag: str, value: object, name: str) -> object:
     if tag == "Description":
         return description_template(value, name)
     if tag == "Rooms":
+        if str(value).strip().casefold() == "студия":
+            return "Студия"
         result = int(str(value))
         if result < 1 or result > 20:
             raise ValueError(f"{name} is outside the allowed range")
@@ -385,10 +387,16 @@ def card_settings(value: object, config: dict[str, object]) -> dict[str, bool]:
     source = value if isinstance(value, dict) else {}
     brand = config.get("brand") if isinstance(config.get("brand"), dict) else {}
     result: dict[str, bool] = {}
-    for field in ("show_key_render", "show_house_badge", "show_decoration"):
+    defaults = {
+        "show_key_render": brand.get("show_key_render", True) is not False,
+        "show_house_badge": brand.get("show_house_badge", True) is not False,
+        "show_decoration": brand.get("show_decoration", True) is not False,
+        "show_logo_panel": brand.get("show_logo_panel", brand.get("logo_panel") == "light") is True,
+    }
+    for field in ("show_key_render", "show_house_badge", "show_decoration", "show_logo_panel"):
         if field in source and not isinstance(source[field], bool):
             raise ValueError(f"card_settings.{field} must be a boolean")
-        result[field] = source.get(field, brand.get(field, True)) is not False
+        result[field] = source.get(field, defaults[field]) is True
     return result
 
 
@@ -450,6 +458,73 @@ def promotion_render_ids(
         and item.get("id") is not None
         and promotion_signature(item, previous_rules, today)
         != promotion_signature(item, selected_rules, today)
+    ]
+
+
+def parameter_room_value(item: dict[str, object], settings: object) -> str:
+    source = settings if isinstance(settings, dict) else {}
+    value = str(item.get("rooms") or "")
+    item_id = str(item.get("id") or "")
+    house_id = str(item.get("house_id") or "")
+    floor = str(item.get("floor") or "")
+    plan = str(item.get("plan_id") or "")
+    area = float(str(item.get("area") or 0))
+    for rule in source.get("bulk_rules", []):
+        if not isinstance(rule, dict) or rule.get("enabled") is False:
+            continue
+        if item_id in {str(entry) for entry in rule.get("exclude_ids", [])}:
+            continue
+        included = {str(entry) for entry in rule.get("include_ids", [])}
+        if included and item_id not in included:
+            continue
+        houses = {str(entry) for entry in rule.get("house_ids", [])}
+        if houses and house_id not in houses:
+            continue
+        rooms = {str(entry) for entry in rule.get("rooms", [])}
+        if rooms and str(item.get("rooms") or "") not in rooms:
+            continue
+        floors = {str(entry) for entry in rule.get("floors", [])}
+        if floors and floor not in floors:
+            continue
+        plans = {str(entry) for entry in rule.get("plan_ids", [])}
+        if plans and plan not in plans:
+            continue
+        if rule.get("area_min") is not None and area < float(str(rule["area_min"])):
+            continue
+        if rule.get("area_max") is not None and area > float(str(rule["area_max"])):
+            continue
+        values = rule.get("values") if isinstance(rule.get("values"), dict) else {}
+        if "Rooms" in values:
+            value = str(values["Rooms"])
+    lot_values = source.get("lot_values") if isinstance(source.get("lot_values"), dict) else {}
+    individual = lot_values.get(item_id) if isinstance(lot_values.get(item_id), dict) else {}
+    if "Rooms" in individual:
+        value = str(individual["Rooms"])
+    return value
+
+
+def parameter_room_render_ids(
+    previous_settings: object,
+    selected_settings: object,
+    project_slug: str,
+) -> list[str] | None:
+    inventory_root = os.environ.get("PUBLISHED_INVENTORY_ROOT", "").strip()
+    if not inventory_root:
+        return None
+    inventory_path = Path(inventory_root) / "projects" / project_slug / "inventory.json"
+    if not inventory_path.is_file():
+        return None
+    inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
+    items = inventory.get("items") if isinstance(inventory, dict) else None
+    if not isinstance(items, list):
+        return None
+    return [
+        str(item.get("id"))
+        for item in items
+        if isinstance(item, dict)
+        and item.get("id") is not None
+        and parameter_room_value(item, previous_settings)
+        != parameter_room_value(item, selected_settings)
     ]
 
 
@@ -555,13 +630,34 @@ def main() -> None:
         for field in render_material_fields
     ) or previous_card_settings != selected_card_settings
     rules_changed = previous.get("rules", []) != validated["rules"]
+    room_parameters_changed = (
+        previous.get("parameter_settings", {}) != validated["parameter_settings"]
+    )
     affected_ids: list[str] | None = []
     if global_render_change:
         affected_ids = None
-    elif rules_changed:
-        affected_ids = promotion_render_ids(
-            previous.get("rules", []), validated["rules"], project_slug
-        )
+    else:
+        changed_ids: set[str] = set()
+        if rules_changed:
+            promotion_ids = promotion_render_ids(
+                previous.get("rules", []), validated["rules"], project_slug
+            )
+            if promotion_ids is None:
+                affected_ids = None
+            else:
+                changed_ids.update(promotion_ids)
+        if affected_ids is not None and room_parameters_changed:
+            room_ids = parameter_room_render_ids(
+                previous.get("parameter_settings", {}),
+                validated["parameter_settings"],
+                project_slug,
+            )
+            if room_ids is None:
+                affected_ids = None
+            else:
+                changed_ids.update(room_ids)
+        if affected_ids is not None:
+            affected_ids = sorted(changed_ids)
     mode = "full" if affected_ids is None or bool(affected_ids) else "fast"
     render_ids = "all" if affected_ids is None else ",".join(affected_ids)
     if not isinstance(config.get("brand"), dict):
@@ -577,6 +673,8 @@ def main() -> None:
     config["brand"]["show_key_render"] = selected_card_settings["show_key_render"]
     config["brand"]["show_house_badge"] = selected_card_settings["show_house_badge"]
     config["brand"]["show_decoration"] = selected_card_settings["show_decoration"]
+    config["brand"]["show_logo_panel"] = selected_card_settings["show_logo_panel"]
+    config["brand"].pop("logo_panel", None)
     (project_dir / "config.json").write_text(
         json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

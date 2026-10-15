@@ -50,7 +50,7 @@ const sourceImageUrl = (item) => {
 };
 const cardSignature = (item) => JSON.stringify({
   house: String(item.house || ''),
-  rooms: String(item.rooms || ''),
+  rooms: String(item.feed_parameters?.Rooms ?? item.rooms ?? ''),
   area: String(item.area || ''),
   floor: String(item.floor || ''),
   floors: String(item.floors || ''),
@@ -92,7 +92,8 @@ const esc = (value) => String(value ?? '')
   .replaceAll('"', '&quot;');
 const formatNumber = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 2 }).format(Number(value));
 const formatPrice = (value) => new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 }).format(Number(value)) + ' ₽';
-const roomTitle = (rooms) => `${rooms}-комнатная квартира`;
+const isStudio = (rooms) => String(rooms || '').trim().toLocaleLowerCase('ru-RU') === 'студия';
+const roomTitle = (rooms) => isStudio(rooms) ? 'Квартира-студия' : `${rooms}-комнатная квартира`;
 
 async function ensurePlanFile(item) {
   const destination = path.join(workDir, item.plan_file);
@@ -155,7 +156,8 @@ const backgroundRenderPath = config.brand.background_render
 const logoUrl = fs.existsSync(logoPath) ? dataUrl(logoPath) : '';
 const renderUrl = fs.existsSync(renderPath) ? dataUrl(renderPath) : '';
 const backgroundRenderUrl = backgroundRenderPath && fs.existsSync(backgroundRenderPath) ? dataUrl(backgroundRenderPath) : '';
-const logoClass = config.brand.logo_panel === 'light' ? 'logo logo-light-panel' : 'logo';
+const cardVisibility = visibility(config.brand);
+const logoClass = cardVisibility.showLogoPanel ? 'logo logo-light-panel' : 'logo';
 const renderPosition = {
   left: 'left center',
   right: 'right center',
@@ -167,6 +169,9 @@ const darkenHex = (value, factor = 0.72) => {
 };
 
 function htmlFor(item, includePromotion = true) {
+  const effectiveRooms = item.feed_parameters && item.feed_parameters.Rooms != null
+    ? item.feed_parameters.Rooms
+    : item.rooms;
   const planUrl = dataUrl(path.join(workDir, item.plan_file));
   const logo = logoUrl
     ? `<img class="${logoClass}" src="${logoUrl}">`
@@ -179,13 +184,14 @@ function htmlFor(item, includePromotion = true) {
     ? `<div class="promo"><span>${esc(item.promotion.label)}</span>${esc(item.promotion.text)}</div>`
     : '';
   const { houseBadge, decoration } = optionalElements(config.brand, item, esc);
-  const cardVisibility = visibility(config.brand);
   const render = cardVisibility.showKeyRender ? `<div class="render">${keyRender}</div>` : '';
   const primary = config.brand.green || '#00605C';
   const background = config.brand.background_color || primary;
   const textColor = config.brand.text_color || config.brand.white || '#FFFFFF';
   const subtitleColor = config.brand.subtitle_color || config.brand.gray || '#9B9B9B';
   const darkBackground = darkenHex(background);
+  const roomsMetricClass = isStudio(effectiveRooms) ? 'value value-studio' : 'value';
+  const roomsMetricLabel = isStudio(effectiveRooms) ? 'Тип' : 'Комнат';
   return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
   @font-face{font-family:Manrope;src:url('${fontUrl}') format('truetype');font-weight:200 800;font-style:normal}
   :root{--primary:${primary};--bg:${background};--bg-dark:${darkBackground};--text:${textColor};--subtitle:${subtitleColor};--ink:${config.brand.green_dark || primary}}
@@ -200,8 +206,8 @@ function htmlFor(item, includePromotion = true) {
   .card{position:absolute;top:54px;right:56px;width:560px;height:792px;background:#fff;color:var(--ink);box-shadow:0 20px 55px rgba(0,33,31,.2)}
   .plan{position:absolute;top:24px;left:30px;width:500px;height:606px;display:flex;align-items:center;justify-content:center;overflow:hidden}.plan img{max-width:100%;max-height:100%;object-fit:contain;display:block}
   .rule{position:absolute;left:30px;right:30px;top:644px;height:1px;background:#dfe5e3}.metrics{position:absolute;left:28px;right:28px;bottom:26px;height:106px;display:grid;grid-template-columns:.85fr 1.35fr 1fr;align-items:center}
-  .metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid #dfe5e3}.label{margin-bottom:6px;font-size:16px;line-height:1;font-weight:600;color:var(--subtitle);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.value{font-size:43px;line-height:1;font-weight:800;color:var(--primary);white-space:nowrap}.value small{font-size:23px;font-weight:700}
-  </style></head><body><main class="canvas">${backgroundRender}<section class="left">${logo}${houseBadge}${promo}${render}<div class="lot">${esc(roomTitle(item.rooms))}</div>${decoration}<div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">Комнат</div><div class="value">${esc(item.rooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
+  .metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid #dfe5e3}.label{margin-bottom:6px;font-size:16px;line-height:1;font-weight:600;color:var(--subtitle);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.value{font-size:43px;line-height:1;font-weight:800;color:var(--primary);white-space:nowrap}.value-studio{font-size:27px}.value small{font-size:23px;font-weight:700}
+  </style></head><body><main class="canvas">${backgroundRender}<section class="left">${logo}${houseBadge}${promo}${render}<div class="lot">${esc(roomTitle(effectiveRooms))}</div>${decoration}<div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">${roomsMetricLabel}</div><div class="${roomsMetricClass}">${esc(effectiveRooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
 }
 
 (async () => {

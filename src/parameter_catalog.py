@@ -9,10 +9,8 @@ PARAMETER_CATALOG = [
     {
         "tag": "Rooms",
         "name": "Количество комнат",
-        "kind": "number",
-        "min": 1,
-        "max": 20,
-        "step": 1,
+        "kind": "select",
+        "values": ["Студия", *[str(value) for value in range(1, 21)]],
         "supported": True,
     },
     {

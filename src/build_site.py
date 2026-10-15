@@ -17,6 +17,7 @@ from project_context import (
 )
 from parameter_catalog import PARAMETER_CATALOG
 from material_catalog import build_material_catalog
+from apply_issue_settings import card_settings
 
 
 SITE = ROOT / "site"
@@ -28,6 +29,10 @@ ASSET_ROOT = os.environ.get(
 manifest = json.loads((OUTPUT_DIR / "full-manifest.json").read_text(encoding="utf-8"))
 rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))
 config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+public_settings = {
+    **rules,
+    "card_settings": card_settings(rules.get("card_settings", {}), config),
+}
 
 if PROJECT_SITE.exists():
     shutil.rmtree(PROJECT_SITE)
@@ -134,7 +139,7 @@ assets_manifest = {
 
 for filename, payload in (
     ("inventory.json", inventory),
-    ("settings.json", rules),
+    ("settings.json", public_settings),
     ("status.json", status),
     ("assets.json", assets_manifest),
 ):

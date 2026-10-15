@@ -5,7 +5,9 @@ function visibility(brand) {
   return {
     showKeyRender: settings.show_key_render !== false,
     showHouseBadge: settings.show_house_badge !== false,
-    showDecoration: settings.show_decoration !== false
+    showDecoration: settings.show_decoration !== false,
+    showLogoPanel: settings.show_logo_panel === true ||
+      (settings.show_logo_panel == null && settings.logo_panel === 'light')
   };
 }
 

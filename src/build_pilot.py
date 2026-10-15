@@ -8,6 +8,7 @@ import os
 import re
 import time
 from datetime import datetime, timedelta, timezone
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
@@ -139,8 +140,21 @@ def source_image_id(url: str) -> str:
     return "src-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
 
 
-def plan_id(url: str) -> str:
-    return "plan-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+def normalized_square(value: object) -> str:
+    raw = str(value or "").strip().replace(",", ".")
+    try:
+        number = Decimal(raw)
+    except InvalidOperation as error:
+        raise ValueError(f"Invalid Square value: {value}") from error
+    if not number.is_finite() or number <= 0:
+        raise ValueError(f"Invalid Square value: {value}")
+    normalized = format(number.normalize(), "f")
+    return normalized.rstrip("0").rstrip(".") if "." in normalized else normalized
+
+
+def plan_id(square: object) -> str:
+    key = f"square:{normalized_square(square)}"
+    return "plan-" + hashlib.sha1(key.encode("utf-8")).hexdigest()[:12]
 
 
 SHORTCODE_PATTERN = re.compile(r"\{\{([A-Za-z][A-Za-z0-9_:-]{0,63})\}\}")
@@ -331,18 +345,19 @@ def main() -> None:
         ):
             download(plan_url, plan_path)
         house_id = node_text(ad, "NewDevelopmentId")
+        square = node_text(ad, "Square")
         item: dict[str, object] = {
             "id": ad_id,
             "house_id": house_id,
             "house": config["houses"].get(house_id, f"Дом {house_id}"),
             "rooms": node_text(ad, "Rooms"),
-            "area": node_text(ad, "Square"),
+            "area": square,
             "floor": node_text(ad, "Floor"),
             "floors": node_text(ad, "Floors"),
             "price": node_text(ad, "Price"),
             "decoration": node_text(ad, "Decoration") or "Без отделки",
             "plan_url": plan_url,
-            "plan_id": plan_id(plan_url),
+            "plan_id": plan_id(square),
             "plan_file": plan_file,
             "output_file": f"images/{ad_id}.png",
             "source_images": urls,
@@ -360,7 +375,7 @@ def main() -> None:
     feed_items = [item for item in items if not item["excluded_from_feed"]]
     representatives: dict[str, dict[str, object]] = {}
     for item in feed_items:
-        representatives.setdefault(str(item["plan_url"]), item)
+        representatives.setdefault(str(item["plan_id"]), item)
     pilot_items = sorted((copy.deepcopy(item) for item in representatives.values()), key=sort_key)
     checked_at = datetime.now(timezone(timedelta(hours=3))).isoformat(timespec="seconds")
     today = checked_at[:10]

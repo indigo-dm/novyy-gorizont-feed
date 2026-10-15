@@ -9,8 +9,8 @@
     "gray": "#48277F",
     "white": "#FFFFFF",
     "font": "Gilroy",
+    "show_logo_panel": false,
     "logo": "uploads/mat-mv98xebb-5355b70af7-mask-group.png",
-    "logo_panel": "light",
     "key_render": "key-render.jpg",
     "additional_renders": [
       {
