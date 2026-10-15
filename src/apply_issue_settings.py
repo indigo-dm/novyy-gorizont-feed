@@ -168,7 +168,7 @@ def parameter_value(tag: str, value: object, name: str) -> object:
         if str(value).strip().casefold() == "студия":
             return "Студия"
         result = int(str(value))
-        if result < 1 or result > 20:
+        if result < 1 or result > 5:
             raise ValueError(f"{name} is outside the allowed range")
         return str(result)
     if tag in MULTI_PARAMETERS:
