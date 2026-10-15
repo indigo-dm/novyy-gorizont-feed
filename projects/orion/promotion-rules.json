@@ -75,6 +75,44 @@
         "area_max": null,
         "include_ids": [],
         "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1792054562403",
+        "name": "Санузел",
+        "enabled": true,
+        "values": {
+          "BathroomMulti": [
+            "Совмещенный"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [
+          "plan-f75c53e64126"
+        ],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1792054574125",
+        "name": "Высота потолков",
+        "enabled": true,
+        "values": {
+          "CeilingHeight": "2.85"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [
+          "plan-f75c53e64126"
+        ],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
       }
     ]
   },
@@ -112,7 +150,8 @@
   "card_settings": {
     "show_key_render": true,
     "show_house_badge": false,
-    "show_decoration": false
+    "show_decoration": false,
+    "show_logo_panel": false
   },
   "pending_upload_deletions": []
 }
