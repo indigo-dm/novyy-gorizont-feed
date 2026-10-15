@@ -103,6 +103,10 @@
     "font": "Gilroy",
     "palette": [
       {
+        "name": "Текст",
+        "value": "#FFFFFF"
+      },
+      {
         "name": "Основной фиолетовый",
         "value": "#3F245C"
       },
@@ -117,10 +121,6 @@
       {
         "name": "Чёрный",
         "value": "#1D1D1B"
-      },
-      {
-        "name": "Белый",
-        "value": "#FFFFFF"
       }
     ]
   }

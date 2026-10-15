@@ -1,10 +1,26 @@
 {
-  "version": 2,
+  "version": 4,
   "rules": [],
   "excluded_lot_ids": [],
   "image_settings": {
     "lot_overrides": {},
-    "bulk_rules": []
+    "bulk_rules": [
+      {
+        "id": "image-rule-1792043554302",
+        "name": "Перестановка 14 → 10",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "from_position": 14,
+        "to_position": 10
+      }
+    ]
   },
   "parameter_settings": {
     "lot_values": {},
@@ -13,8 +29,16 @@
   "material_settings": {
     "logo": "logo-orion-gradient.png",
     "key_render": "key-render.jpg",
+    "background_render": "",
     "primary_color": "#3F245C",
+    "background_color": "#3F245C",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#48277F",
     "palette": [
+      {
+        "name": "Текст",
+        "value": "#FFFFFF"
+      },
       {
         "name": "Основной фиолетовый",
         "value": "#3F245C"
@@ -30,12 +54,13 @@
       {
         "name": "Чёрный",
         "value": "#1D1D1B"
-      },
-      {
-        "name": "Белый",
-        "value": "#FFFFFF"
       }
     ]
+  },
+  "card_settings": {
+    "show_key_render": true,
+    "show_house_badge": true,
+    "show_decoration": true
   },
   "pending_upload_deletions": []
 }
