@@ -38,6 +38,10 @@
     ],
     "palette": [
       {
+        "name": "Текст",
+        "value": "#FFFFFF"
+      },
+      {
         "name": "Основной фиолетовый",
         "value": "#3F245C"
       },
@@ -52,12 +56,15 @@
       {
         "name": "Чёрный",
         "value": "#1D1D1B"
-      },
-      {
-        "name": "Белый",
-        "value": "#FFFFFF"
       }
-    ]
+    ],
+    "background_render": "",
+    "background_color": "#3F245C",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#48277F",
+    "show_key_render": true,
+    "show_house_badge": true,
+    "show_decoration": true
   },
   "houses": {}
 }
