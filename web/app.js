@@ -980,6 +980,10 @@
       return '<input type="number" data-' + prefix + '-value="' + esc(catalog.tag) + '" min="' + esc(catalog.min) + '" max="' +
         esc(catalog.max) + '" step="' + esc(catalog.step) + '" value="' + esc(value || catalog.min) + '">';
     }
+    if (catalog.kind === 'text') {
+      return '<input type="text" data-' + prefix + '-value="' + esc(catalog.tag) + '" maxlength="' + esc(catalog.max || 500) +
+        '" value="' + esc(value || '') + '" placeholder="Введите значение">';
+    }
     return '<select data-' + prefix + '-value="' + esc(catalog.tag) + '">' + (catalog.values || []).map(function (option) {
       return '<option value="' + esc(option) + '" ' + (String(value) === String(option) ? 'selected' : '') + '>' + esc(option) + '</option>';
     }).join('') + '</select>';
@@ -1597,6 +1601,7 @@
       var value = readParameterControl($('#bulk-parameter-value'), catalog, 'bulk-param');
       if (catalog.kind === 'multi' && !value.length) { showToast('Выберите хотя бы одно значение.'); return; }
       if (catalog.kind === 'richtext' && !String(value).replace(/<[^>]*>/g, '').trim()) { showToast('Описание не может быть пустым.'); return; }
+      if (catalog.kind === 'text' && !String(value).trim()) { showToast('Значение не может быть пустым.'); return; }
       var values = {}; values[catalog.tag] = value;
       state.parameterSettings.bulk_rules.push(Object.assign({
         id: 'parameter-rule-' + Date.now(),

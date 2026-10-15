@@ -14,6 +14,8 @@ ALLOWED_ROOMS = {"Студия", *{str(value) for value in range(1, 21)}}
 ALLOWED_PARAMETERS = {
     "Description",
     "Rooms",
+    "NewDevelopmentId",
+    "Address",
     "ViewFromWindows",
     "PassengerElevator",
     "FreightElevator",
@@ -176,6 +178,11 @@ def parameter_value(tag: str, value: object, name: str) -> object:
         if result < 1 or result > 5:
             raise ValueError(f"{name} is outside the allowed range")
         return str(result)
+    if tag in {"NewDevelopmentId", "Address"}:
+        result = text(value, name, 200 if tag == "NewDevelopmentId" else 500)
+        if not result:
+            raise ValueError(f"{name} must not be empty")
+        return result
     if tag in MULTI_PARAMETERS:
         values = string_list(value, name)
         if not values or len(values) > 12:

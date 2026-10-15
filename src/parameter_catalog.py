@@ -14,6 +14,20 @@ PARAMETER_CATALOG = [
         "supported": True,
     },
     {
+        "tag": "NewDevelopmentId",
+        "name": "ID новостройки",
+        "kind": "text",
+        "max": 200,
+        "supported": True,
+    },
+    {
+        "tag": "Address",
+        "name": "Адрес",
+        "kind": "text",
+        "max": 500,
+        "supported": True,
+    },
+    {
         "tag": "ViewFromWindows",
         "name": "Вид из окон",
         "kind": "multi",
