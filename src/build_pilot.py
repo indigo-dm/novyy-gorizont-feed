@@ -233,17 +233,21 @@ def output_images(
         "url": url,
         "kind": "source",
     } for url in item["source_images"])
-    for rule in image_config.get("bulk_rules", []):
-        if rule.get("enabled") and rule_matches(item, rule):
-            move_image(images, int(rule.get("from_position", 0)), int(rule.get("to_position", 0)))
     override = image_config.get("lot_overrides", {}).get(str(item["id"]), {})
     for added in override.get("added", []):
         images.append({"id": str(added["id"]), "url": str(added["url"]), "kind": "added"})
     hidden = {str(value) for value in override.get("hidden", [])}
     images = [image for image in images if image["id"] not in hidden]
-    order = {str(image_id): index for index, image_id in enumerate(override.get("order", []))}
-    original = {image["id"]: index for index, image in enumerate(images)}
-    images.sort(key=lambda image: (order.get(image["id"], len(order) + original[image["id"]])))
+    natural_ids = [image["id"] for image in images]
+    ordered_ids = [str(image_id) for image_id in override.get("order", []) if str(image_id) in natural_ids]
+    has_individual_order = bool(ordered_ids) and ordered_ids != natural_ids
+    for rule in image_config.get("bulk_rules", []):
+        if rule.get("enabled") and rule_matches(item, rule):
+            move_image(images, int(rule.get("from_position", 0)), int(rule.get("to_position", 0)))
+    if has_individual_order:
+        order = {image_id: index for index, image_id in enumerate(ordered_ids)}
+        original = {image["id"]: index for index, image in enumerate(images)}
+        images.sort(key=lambda image: (order.get(image["id"], len(order) + original[image["id"]])))
     return images
 
 
