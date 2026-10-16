@@ -210,47 +210,6 @@
   <AdStatus>Free</AdStatus>
  </Ad>
  <Ad>
-  <Id>11923636</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся просторная 2-комнатная квартира 70,9 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•7 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>8011700</Price>
-  <Square>70.9</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>7</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>16.15</KitchenSpace>
-  <LivingSpace>32.59</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68cacaff944c0.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
   <Id>11923651</Id>
   <ContactMethod>По телефону и в сообщениях</ContactMethod>
   <ManagerName>Отдел продаж</ManagerName>
@@ -318,47 +277,6 @@
   </BalconyOrLoggiaMulti>
   <Images>
    <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62fba704c88b5.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
-  <Id>11923656</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся просторная 2-комнатная квартира 70,9 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•11 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>10103250</Price>
-  <Square>70.9</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>11</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>16.15</KitchenSpace>
-  <LivingSpace>32.59</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68cacaff944c0.png"/>
    <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
    <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
    <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
@@ -1138,88 +1056,6 @@
   </BalconyOrLoggiaMulti>
   <Images>
    <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/62fba7084a55d.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
-  <Id>11923747</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся 2-комнатная квартира 66,42 кв.м в шаге от ТРЦ «Горизонт» и зелёной рощи СКА — удачное сочетание комфорта и природы.<br><br>О квартире:<br>•Удобная планировка «бабочка» — хорошее естественное освещение и вентиляция<br>•Кухня 11 кв.м — светлая, с выходом на лоджию<br>•2 отдельные спальни: 13 и 18 кв.м, одна с выходом на лоджию<br>•Санузел раздельный <br>•Предусмотрена зона под гардероб в прихожей<br>•9 этаж<br>•Улучшенная черновая отделка: выполнена стяжка и установлены перегородки<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>9265590</Price>
-  <Square>66.42</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>9</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>11.52</KitchenSpace>
-  <LivingSpace>32.21</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68caca1c95c80.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
-  <Id>11923752</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся 2-комнатная квартира 66,42 кв.м в шаге от ТРЦ «Горизонт» и зелёной рощи СКА — удачное сочетание комфорта и природы.<br><br>О квартире:<br>•Удобная планировка «бабочка» — хорошее естественное освещение и вентиляция<br>•Кухня 11 кв.м — светлая, с выходом на лоджию<br>•2 отдельные спальни: 13 и 18 кв.м, одна с выходом на лоджию<br>•Санузел раздельный <br>•Предусмотрена зона под гардероб в прихожей<br>•10 этаж<br>•Улучшенная черновая отделка: выполнена стяжка и установлены перегородки<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>9464850</Price>
-  <Square>66.42</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>10</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>11.52</KitchenSpace>
-  <LivingSpace>32.21</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68caca1c95c80.png"/>
    <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
    <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
    <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
@@ -3900,47 +3736,6 @@
   <AdStatus>Free</AdStatus>
  </Ad>
  <Ad>
-  <Id>11924066</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся просторная 2-комнатная квартира 70,9 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•9 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>9890550</Price>
-  <Square>70.9</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>9</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>16.15</KitchenSpace>
-  <LivingSpace>32.59</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68cacaff944c0.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
   <Id>11924068</Id>
   <ContactMethod>По телефону и в сообщениях</ContactMethod>
   <ManagerName>Отдел продаж</ManagerName>
@@ -4951,47 +4746,6 @@
   </BalconyOrLoggiaMulti>
   <Images>
    <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68cacaff944c0.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
-  <Id>11924162</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся 2-комнатная квартира 66,42 кв.м в шаге от ТРЦ «Горизонт» и зелёной рощи СКА — удачное сочетание комфорта и природы.<br><br>О квартире:<br>•Удобная планировка «бабочка» — хорошее естественное освещение и вентиляция<br>•Кухня 11 кв.м — светлая, с выходом на лоджию<br>•2 отдельные спальни: 13 и 18 кв.м, одна с выходом на лоджию<br>•Санузел раздельный <br>•Предусмотрена зона под гардероб в прихожей<br>•8 этаж<br>•Улучшенная черновая отделка: выполнена стяжка и установлены перегородки<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>7505460</Price>
-  <Square>66.42</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>8</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>11.52</KitchenSpace>
-  <LivingSpace>32.21</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68caca1c95c80.png"/>
    <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
    <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
    <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
@@ -6524,47 +6278,6 @@
   <AdStatus>Free</AdStatus>
  </Ad>
  <Ad>
-  <Id>11924276</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся просторная 2-комнатная квартира 70,9 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•9 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>9961450</Price>
-  <Square>70.9</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>9</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>16.15</KitchenSpace>
-  <LivingSpace>32.59</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68cacaff944c0.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
   <Id>11924281</Id>
   <ContactMethod>По телефону и в сообщениях</ContactMethod>
   <ManagerName>Отдел продаж</ManagerName>
@@ -7480,47 +7193,6 @@
   <Square>66.42</Square>
   <Decoration>Без отделки</Decoration>
   <Floor>4</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>3379674</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace>11.52</KitchenSpace>
-  <LivingSpace>32.21</LivingSpace>
-  <Floors>22</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <BalconyOrLoggiaMulti>
-   <Option>Лоджия</Option>
-  </BalconyOrLoggiaMulti>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/68caca1c95c80.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg"/>
-  </Images>
-  <RoomType>
-   <Option>Изолированные</Option>
-  </RoomType>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
-  <Id>11924357</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+7 (999) 449-90-80</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Ростов-на-Дону, Ростовская область, Тибетская</Address>
-  <Description><![CDATA[Продаётся 2-комнатная квартира 66,42 кв.м в шаге от ТРЦ «Горизонт» и зелёной рощи СКА — удачное сочетание комфорта и природы.<br><br>О квартире:<br>•Удобная планировка «бабочка» — хорошее естественное освещение и вентиляция<br>•Кухня 11 кв.м — светлая, с выходом на лоджию<br>•2 отдельные спальни: 13 и 18 кв.м, одна с выходом на лоджию<br>•Санузел раздельный <br>•Предусмотрена зона под гардероб в прихожей<br>•5 этаж<br>•Улучшенная черновая отделка: выполнена стяжка и установлены перегородки<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!]]></Description>
-  <Price>7505460</Price>
-  <Square>66.42</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>5</Floor>
   <Status>Квартира</Status>
   <MarketType>Новостройка</MarketType>
   <NewDevelopmentId>3379674</NewDevelopmentId>
