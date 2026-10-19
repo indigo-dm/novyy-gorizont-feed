@@ -10526,41 +10526,6 @@
     <AdStatus>Free</AdStatus>
   </Ad>
   <Ad>
-    <Id>17195863</Id>
-    <ContactMethod>По телефону и в сообщениях</ContactMethod>
-    <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632098967</ContactPhone>
-    <Category>Квартиры</Category>
-    <OperationType>Продам</OperationType>
-    <PropertyRights>Застройщик</PropertyRights>
-    <Description />
-    <Price>7935100</Price>
-    <Square>54.35</Square>
-    <Decoration>Без отделки</Decoration>
-    <Floor>3</Floor>
-    <Status>Квартира</Status>
-    <MarketType>Новостройка</MarketType>
-    <NewDevelopmentId>9464402</NewDevelopmentId>
-    <Rooms>2</Rooms>
-    <KitchenSpace />
-    <LivingSpace />
-    <Floors>4</Floors>
-    <HouseType>Кирпичный</HouseType>
-    <Images>
-      <Image url="https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/17195863.png" />
-      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/69b7b3cce0091.png" />
-      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/69b7ad5cc42b9.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/facade/12296/69b7b53c9167d.png" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/69b7afcadd558.jpg" />
-    </Images>
-    <AdStatus>Free</AdStatus>
-  </Ad>
-  <Ad>
     <Id>17195869</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>
