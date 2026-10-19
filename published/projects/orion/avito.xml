@@ -32,13 +32,30 @@
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg" />
-      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg" />
-      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg" />
-      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf67oyr-b7e952b3b9.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf67s8x-3e3abbb174.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf6823m-b5f81e47f2.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68l0l-64f7c734be.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68qk3-df60744a8a.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68w2f-0fab1877b8.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68zkw-eb0ff5c00a.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf694ck-9fe1c53bcd.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf6996o-21d3757a71.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69b6z-67cce81168.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69f1e-f256ca282a.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf67dc2-d6ef19ef58.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7kubn-20bd9c73fd.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69m3s-ee2a74307f.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69pb0-8ef6318140.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69syo-d0fa53fa1c.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7k3a2-314dc31622.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7k7w6-23fc9294a8.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7kcue-cb84b0820e.jpg" />
+      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7ki4a-5a8cfdbfb5.jpg" />
     </Images>
     <Address>Ростовская область, Ростов-на-Дону, </Address>
     <ApartmentNumber>334</ApartmentNumber>
@@ -5402,7 +5419,6 @@
     <Images>
       <Image url="https://feed-api.indigo-dm.ru/media/projects/orion/images/407635661.png" />
       <Image url="https://maximum.abc-dev.ru/storage/2025/07/25/8f34822d3049d1d830ec76b777dedd1adaf732dd.jpg" />
-      <Image url="https://feed-api.indigo-dm.ru/media/uploads/orion/407635661/add-mv9a9bhx-b7e952b3b9.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg" />
@@ -5507,6 +5523,52 @@
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg" />
     </Images>
     <ApartmentNumber>8</ApartmentNumber>
+    <Status>Квартира</Status>
+    <Decoration>Без отделки</Decoration>
+    <CompanyName>Орион</CompanyName>
+  </Ad>
+  <Ad>
+    <Id>407635736</Id>
+    <AdStatus>Free</AdStatus>
+    <ContactPhone>+7 (863) 333-26-38</ContactPhone>
+    <ContactMethod>По телефону</ContactMethod>
+    <NewDevelopmentId>10189300</NewDevelopmentId>
+    <Description>ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.
+Вентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.
+В квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!
+ЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.
+
+Социальная и внутренняя инфраструктура:
+ЖК «Орион» - полностью благоустроенный жилой комплекс.
+Придомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.
+Для детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.
+Для автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.</Description>
+    <Category>Квартиры</Category>
+    <OperationType>Продам</OperationType>
+    <Price>9441420</Price>
+    <Rooms>2</Rooms>
+    <Square>59.38</Square>
+    <Floor>7</Floor>
+    <Floors>20</Floors>
+    <HouseType>Монолитный</HouseType>
+    <MarketType>Новостройка</MarketType>
+    <PropertyRights>Застройщик</PropertyRights>
+    <Images>
+      <Image url="https://feed-api.indigo-dm.ru/media/projects/orion/images/407635736.png" />
+      <Image url="https://maximum.abc-dev.ru/storage/2025/07/25/8f34822d3049d1d830ec76b777dedd1adaf732dd.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg" />
+      <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg" />
+    </Images>
+    <ApartmentNumber>68</ApartmentNumber>
     <Status>Квартира</Status>
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
