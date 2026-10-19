@@ -4,52 +4,149 @@
   "excluded_lot_ids": [],
   "image_settings": {
     "lot_overrides": {
-      "407635661": {
+      "408236193": {
         "order": [
           "brand-card",
-          "src-f75c53e64126",
+          "src-55d5cab1fcba",
           "src-076d776e1543",
           "src-90e6a4ccf8d6",
           "src-7cab611efc16",
           "src-9d5328ff27f7",
-          "src-37ea5d298181",
-          "src-a8e124ab67c8",
-          "src-122880f50bee",
+          "add-mvf67oyr-b7e952b3b9",
+          "add-mvf67s8x-3e3abbb174",
+          "add-mvf6823m-b5f81e47f2",
+          "add-mvf68l0l-64f7c734be",
+          "add-mvf68qk3-df60744a8a",
+          "add-mvf68w2f-0fab1877b8",
+          "add-mvf68zkw-eb0ff5c00a",
+          "add-mvf694ck-9fe1c53bcd",
+          "add-mvf6996o-21d3757a71",
+          "add-mvf69b6z-67cce81168",
+          "add-mvf69f1e-f256ca282a",
           "src-72809fab8046",
           "src-08c7a6610b27",
           "src-5c8508a9b0ed",
           "src-26f7b8b3e333",
-          "add-mv9a9bhx-b7e952b3b9"
+          "add-mvf67dc2-d6ef19ef58",
+          "add-mvf7kubn-20bd9c73fd",
+          "add-mvf69m3s-ee2a74307f",
+          "add-mvf69pb0-8ef6318140",
+          "add-mvf69syo-d0fa53fa1c",
+          "add-mvf7k3a2-314dc31622",
+          "add-mvf7k7w6-23fc9294a8",
+          "add-mvf7kcue-cb84b0820e",
+          "add-mvf7ki4a-5a8cfdbfb5"
         ],
-        "hidden": [],
+        "hidden": [
+          "src-37ea5d298181",
+          "src-a8e124ab67c8",
+          "src-122880f50bee"
+        ],
         "added": [
           {
-            "id": "add-mv9a9bhx-b7e952b3b9",
-            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/407635661/add-mv9a9bhx-b7e952b3b9.jpg",
-            "path": "uploads/orion/407635661/add-mv9a9bhx-b7e952b3b9.jpg"
+            "id": "add-mvf67dc2-d6ef19ef58",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf67dc2-d6ef19ef58.jpg",
+            "path": "uploads/orion/408236193/add-mvf67dc2-d6ef19ef58.jpg"
+          },
+          {
+            "id": "add-mvf67oyr-b7e952b3b9",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf67oyr-b7e952b3b9.jpg",
+            "path": "uploads/orion/408236193/add-mvf67oyr-b7e952b3b9.jpg"
+          },
+          {
+            "id": "add-mvf67s8x-3e3abbb174",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf67s8x-3e3abbb174.jpg",
+            "path": "uploads/orion/408236193/add-mvf67s8x-3e3abbb174.jpg"
+          },
+          {
+            "id": "add-mvf6823m-b5f81e47f2",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf6823m-b5f81e47f2.jpg",
+            "path": "uploads/orion/408236193/add-mvf6823m-b5f81e47f2.jpg"
+          },
+          {
+            "id": "add-mvf68l0l-64f7c734be",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68l0l-64f7c734be.jpg",
+            "path": "uploads/orion/408236193/add-mvf68l0l-64f7c734be.jpg"
+          },
+          {
+            "id": "add-mvf68qk3-df60744a8a",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68qk3-df60744a8a.jpg",
+            "path": "uploads/orion/408236193/add-mvf68qk3-df60744a8a.jpg"
+          },
+          {
+            "id": "add-mvf68w2f-0fab1877b8",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68w2f-0fab1877b8.jpg",
+            "path": "uploads/orion/408236193/add-mvf68w2f-0fab1877b8.jpg"
+          },
+          {
+            "id": "add-mvf68zkw-eb0ff5c00a",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf68zkw-eb0ff5c00a.jpg",
+            "path": "uploads/orion/408236193/add-mvf68zkw-eb0ff5c00a.jpg"
+          },
+          {
+            "id": "add-mvf694ck-9fe1c53bcd",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf694ck-9fe1c53bcd.jpg",
+            "path": "uploads/orion/408236193/add-mvf694ck-9fe1c53bcd.jpg"
+          },
+          {
+            "id": "add-mvf6996o-21d3757a71",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf6996o-21d3757a71.jpg",
+            "path": "uploads/orion/408236193/add-mvf6996o-21d3757a71.jpg"
+          },
+          {
+            "id": "add-mvf69b6z-67cce81168",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69b6z-67cce81168.jpg",
+            "path": "uploads/orion/408236193/add-mvf69b6z-67cce81168.jpg"
+          },
+          {
+            "id": "add-mvf69f1e-f256ca282a",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69f1e-f256ca282a.jpg",
+            "path": "uploads/orion/408236193/add-mvf69f1e-f256ca282a.jpg"
+          },
+          {
+            "id": "add-mvf69m3s-ee2a74307f",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69m3s-ee2a74307f.jpg",
+            "path": "uploads/orion/408236193/add-mvf69m3s-ee2a74307f.jpg"
+          },
+          {
+            "id": "add-mvf69pb0-8ef6318140",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69pb0-8ef6318140.jpg",
+            "path": "uploads/orion/408236193/add-mvf69pb0-8ef6318140.jpg"
+          },
+          {
+            "id": "add-mvf69syo-d0fa53fa1c",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf69syo-d0fa53fa1c.jpg",
+            "path": "uploads/orion/408236193/add-mvf69syo-d0fa53fa1c.jpg"
+          },
+          {
+            "id": "add-mvf7k3a2-314dc31622",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7k3a2-314dc31622.jpg",
+            "path": "uploads/orion/408236193/add-mvf7k3a2-314dc31622.jpg"
+          },
+          {
+            "id": "add-mvf7k7w6-23fc9294a8",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7k7w6-23fc9294a8.jpg",
+            "path": "uploads/orion/408236193/add-mvf7k7w6-23fc9294a8.jpg"
+          },
+          {
+            "id": "add-mvf7kcue-cb84b0820e",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7kcue-cb84b0820e.jpg",
+            "path": "uploads/orion/408236193/add-mvf7kcue-cb84b0820e.jpg"
+          },
+          {
+            "id": "add-mvf7ki4a-5a8cfdbfb5",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7ki4a-5a8cfdbfb5.jpg",
+            "path": "uploads/orion/408236193/add-mvf7ki4a-5a8cfdbfb5.jpg"
+          },
+          {
+            "id": "add-mvf7kubn-20bd9c73fd",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/408236193/add-mvf7kubn-20bd9c73fd.jpg",
+            "path": "uploads/orion/408236193/add-mvf7kubn-20bd9c73fd.jpg"
           }
         ]
       }
     },
-    "bulk_rules": [
-      {
-        "id": "image-rule-1792055002074",
-        "name": "Перестановка 14 → 3",
-        "enabled": true,
-        "house_ids": [],
-        "rooms": [],
-        "floors": [],
-        "plan_ids": [
-          "plan-3e4af95e551c"
-        ],
-        "area_min": null,
-        "area_max": null,
-        "include_ids": [],
-        "exclude_ids": [],
-        "from_position": 14,
-        "to_position": 3
-      }
-    ]
+    "bulk_rules": []
   },
   "parameter_settings": {
     "lot_values": {
