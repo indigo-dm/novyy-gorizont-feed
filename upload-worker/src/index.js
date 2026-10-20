@@ -282,6 +282,265 @@ async function bulkUpload(request, env, origin) {
   return json({ id: imageId, url, path, size: file.size }, 201, origin, env);
 }
 
+function imageLibraryPrefix(project) {
+  return `uploads/${project}/library/`;
+}
+
+function imageLibraryItem(request, env, object) {
+  const metadata = object.customMetadata || {};
+  const filename = String(object.key || '').split('/').pop() || '';
+  const id = String(metadata.imageId || filename.replace(/\.[^.]+$/, ''));
+  return {
+    id,
+    name: String(metadata.originalName || metadata.name || 'Изображение'),
+    url: `${publicBase(request, env)}/media/${encodedPath(object.key)}`,
+    path: String(object.key || ''),
+    size: Number(object.size || 0),
+    digest: String(metadata.digest || ''),
+    perceptual_hash: String(metadata.perceptualHash || ''),
+    width: Number(metadata.width || 0),
+    height: Number(metadata.height || 0),
+    uploaded_at: object.uploaded instanceof Date ? object.uploaded.toISOString() : String(object.uploaded || ''),
+    source: 'library'
+  };
+}
+
+async function listImageLibraryObjects(env, project) {
+  if (!r2Available(env)) return [];
+  const objects = [];
+  let cursor;
+  do {
+    const page = await env.FEED_STORAGE.list({
+      prefix: imageLibraryPrefix(project),
+      cursor,
+      limit: 1000,
+      include: ['customMetadata']
+    });
+    objects.push(...(page.objects || []));
+    cursor = page.truncated ? page.cursor : undefined;
+  } while (cursor);
+  return objects.filter((object) => /\.(?:jpe?g|png|webp)$/i.test(String(object.key || '')));
+}
+
+function perceptualDistance(left, right) {
+  if (!/^[0-9a-f]{16}$/i.test(String(left || '')) || !/^[0-9a-f]{16}$/i.test(String(right || ''))) return 65;
+  let value = BigInt(`0x${left}`) ^ BigInt(`0x${right}`);
+  let distance = 0;
+  while (value) {
+    distance += Number(value & 1n);
+    value >>= 1n;
+  }
+  return distance;
+}
+
+function similarLibraryItems(items, perceptualHash, width, height) {
+  const ratio = width > 0 && height > 0 ? width / height : 0;
+  return items.filter((item) => {
+    const itemRatio = item.width > 0 && item.height > 0 ? item.width / item.height : 0;
+    if (!ratio || !itemRatio || Math.abs(ratio - itemRatio) / Math.max(ratio, itemRatio) > 0.12) return false;
+    return perceptualDistance(perceptualHash, item.perceptual_hash) <= 8;
+  }).slice(0, 6);
+}
+
+async function listImageLibrary(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  const project = String(new URL(request.url).searchParams.get('project') || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
+  const items = (await listImageLibraryObjects(env, project)).map((object) => imageLibraryItem(request, env, object));
+  items.sort((left, right) => String(right.uploaded_at).localeCompare(String(left.uploaded_at)));
+  return json({ project, items }, 200, origin, env);
+}
+
+async function imageLibraryUpload(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
+  const form = await request.formData();
+  const project = String(form.get('project') || '').trim();
+  const file = form.get('file');
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  if (!(file instanceof File)) return json({ error: 'Файл не найден.' }, 400, origin, env);
+  const allowedTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
+  const maxBytes = Math.min(Number(env.MAX_FILE_BYTES || 10485760), 5 * 1024 * 1024);
+  if (!allowedTypes.has(file.type) || file.size < 1 || file.size > maxBytes) {
+    return json({ error: 'После оптимизации файл должен быть JPG, PNG или WebP размером до 5 МБ.' }, 400, origin, env);
+  }
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  if (!validMagic(bytes, file.type)) return json({ error: 'Содержимое файла не соответствует формату изображения.' }, 400, origin, env);
+  const digest = await sha256Hex(bytes);
+  const extension = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
+  const imageId = `lib-${digest.slice(0, 20)}`;
+  const path = `${imageLibraryPrefix(project)}${imageId}.${extension}`;
+  const width = Math.max(0, Math.min(20000, Number(form.get('width') || 0)));
+  const height = Math.max(0, Math.min(20000, Number(form.get('height') || 0)));
+  const perceptualHash = String(form.get('perceptual_hash') || '').toLowerCase();
+  if (perceptualHash && !/^[0-9a-f]{16}$/.test(perceptualHash)) {
+    return json({ error: 'Некорректный отпечаток изображения.' }, 400, origin, env);
+  }
+  const currentObjects = await listImageLibraryObjects(env, project);
+  const currentItems = currentObjects.map((object) => imageLibraryItem(request, env, object));
+  const exact = currentItems.find((item) => item.digest === digest || item.id === imageId);
+  if (exact) return json({ error: 'Такое изображение уже есть в библиотеке объекта.', code: 'duplicate', match: exact }, 409, origin, env);
+  const similar = similarLibraryItems(currentItems, perceptualHash, width, height);
+  if (similar.length && String(form.get('confirm_similar') || '') !== 'true') {
+    return json({
+      error: 'В библиотеке найдено похожее изображение. Подтвердите загрузку отдельной копии.',
+      code: 'similar_confirmation_required',
+      matches: similar
+    }, 409, origin, env);
+  }
+  const originalName = String(file.name || 'Изображение').replace(/[\u0000-\u001f]/g, '').slice(0, 120);
+  await env.FEED_STORAGE.put(path, bytes, {
+    httpMetadata: { contentType: file.type, cacheControl: 'public, max-age=300, must-revalidate' },
+    customMetadata: {
+      project,
+      scope: 'library',
+      imageId,
+      originalName,
+      digest,
+      perceptualHash,
+      width: String(Math.round(width)),
+      height: String(Math.round(height)),
+      uploadedAt: new Date().toISOString()
+    }
+  });
+  return json({
+    id: imageId,
+    name: originalName,
+    url: `${publicBase(request, env)}/media/${encodedPath(path)}`,
+    path,
+    size: file.size,
+    digest,
+    perceptual_hash: perceptualHash,
+    width: Math.round(width),
+    height: Math.round(height),
+    source: 'library',
+    storage: 'r2'
+  }, 201, origin, env);
+}
+
+async function migrateImageLibrary(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
+  const payload = await request.json().catch(() => ({}));
+  const project = String(payload && payload.project || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  const prefix = `uploads/${project}/`;
+  const legacyObjects = [];
+  let cursor;
+  do {
+    const page = await env.FEED_STORAGE.list({ prefix, cursor, limit: 1000, include: ['customMetadata'] });
+    legacyObjects.push(...(page.objects || []).filter((object) =>
+      !String(object.key || '').startsWith(imageLibraryPrefix(project)) && /\.(?:jpe?g|png|webp)$/i.test(String(object.key || ''))
+    ));
+    cursor = page.truncated ? page.cursor : undefined;
+  } while (cursor);
+  const existing = await listImageLibraryObjects(env, project);
+  const existingById = new Map(existing.map((object) => [imageLibraryItem(request, env, object).id, object]));
+  const mappings = [];
+  const canonicalCreated = new Set();
+  for (const object of legacyObjects) {
+    const stored = await env.FEED_STORAGE.get(object.key);
+    if (!stored) continue;
+    const bytes = new Uint8Array(await stored.arrayBuffer());
+    const digest = await sha256Hex(bytes);
+    const extensionMatch = String(object.key).match(/\.([A-Za-z0-9]+)$/);
+    const extension = extensionMatch ? extensionMatch[1].toLowerCase().replace('jpeg', 'jpg') : 'jpg';
+    const imageId = `lib-${digest.slice(0, 20)}`;
+    const canonicalPath = `${imageLibraryPrefix(project)}${imageId}.${extension}`;
+    if (!existingById.has(imageId) && !canonicalCreated.has(canonicalPath)) {
+      const contentType = extension === 'png' ? 'image/png' : extension === 'webp' ? 'image/webp' : 'image/jpeg';
+      const oldMetadata = object.customMetadata || {};
+      await env.FEED_STORAGE.put(canonicalPath, bytes, {
+        httpMetadata: { contentType, cacheControl: 'public, max-age=300, must-revalidate' },
+        customMetadata: {
+          project,
+          scope: 'library',
+          imageId,
+          originalName: String(oldMetadata.originalName || object.key.split('/').pop() || 'Изображение').slice(0, 120),
+          digest,
+          perceptualHash: String(oldMetadata.perceptualHash || ''),
+          width: String(oldMetadata.width || ''),
+          height: String(oldMetadata.height || ''),
+          uploadedAt: new Date().toISOString(),
+          migratedFrom: String(object.key)
+        }
+      });
+      canonicalCreated.add(canonicalPath);
+    }
+    const oldFilename = String(object.key).split('/').pop() || '';
+    const oldId = String((object.customMetadata || {}).imageId || oldFilename.replace(/\.[^.]+$/, ''));
+    mappings.push({
+      old_id: oldId,
+      old_path: String(object.key),
+      old_url: `${publicBase(request, env)}/media/${encodedPath(object.key)}`,
+      id: imageId,
+      path: canonicalPath,
+      url: `${publicBase(request, env)}/media/${encodedPath(canonicalPath)}`,
+      digest
+    });
+  }
+  const groups = new Map();
+  mappings.forEach((item) => {
+    if (!groups.has(item.id)) groups.set(item.id, []);
+    groups.get(item.id).push(item.old_path);
+  });
+  const result = {
+    project,
+    scanned: legacyObjects.length,
+    canonical_created: canonicalCreated.size,
+    exact_duplicate_files: Array.from(groups.values()).reduce((total, paths) => total + Math.max(0, paths.length - 1), 0),
+    mappings
+  };
+  if (payload.publish === true && mappings.length) {
+    const storedSettings = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
+    if (!storedSettings) return json({ error: 'Опубликованные настройки объекта не найдены.' }, 404, origin, env);
+    const settings = await storedSettings.json();
+    const byPath = new Map(mappings.map((item) => [item.old_path, item]));
+    const idMap = new Map(mappings.map((item) => [item.old_id, item.id]));
+    const replaceImage = (image) => {
+      const replacement = byPath.get(String(image && image.path || ''));
+      return replacement ? {
+        id: replacement.id,
+        name: String(image && image.name || 'Изображение').slice(0, 120),
+        url: replacement.url,
+        path: replacement.path
+      } : image;
+    };
+    const uniqueImages = (images) => (Array.isArray(images) ? images : []).map(replaceImage).filter((image, index, all) =>
+      all.findIndex((candidate) => String(candidate && candidate.id || '') === String(image && image.id || '')) === index
+    );
+    const replaceIds = (values) => Array.from(new Set((Array.isArray(values) ? values : []).map((value) => idMap.get(String(value)) || String(value))));
+    const imageSettings = settings.image_settings && typeof settings.image_settings === 'object' ? settings.image_settings : {};
+    const overrides = imageSettings.lot_overrides && typeof imageSettings.lot_overrides === 'object' ? imageSettings.lot_overrides : {};
+    for (const override of Object.values(overrides)) {
+      override.added = uniqueImages(override && override.added);
+      override.order = replaceIds(override && override.order);
+      override.hidden = replaceIds(override && override.hidden);
+    }
+    for (const rule of Array.isArray(imageSettings.bulk_rules) ? imageSettings.bulk_rules : []) {
+      if (rule && rule.action === 'add') rule.images = uniqueImages(rule.images);
+    }
+    settings.project = project;
+    settings.version = Number(settings.version || 4);
+    settings.pending_library_deletions = mappings.map((item) => ({ id: item.old_id, path: item.old_path }));
+    const serialized = JSON.stringify(settings, null, 2);
+    if (serialized.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической миграции.' }, 413, origin, env);
+    const issueBody = 'Запрос на перенос изображений в общую библиотеку объекта.\n\n' +
+      'FEED_SETTINGS_JSON_START\n' + serialized + '\nFEED_SETTINGS_JSON_END\n\n' +
+      'Запрос создан Feed Studio автоматически. Ручное подтверждение не требуется.';
+    const issue = await github(env, '/issues', {
+      method: 'POST',
+      body: JSON.stringify({ title: `[feed-settings] ${project}: перенести изображения в общую библиотеку`, body: issueBody })
+    });
+    await rememberOperation(env, issue.number, project, settings);
+    result.request = issue.number;
+    result.status = 'queued';
+    result.createdAt = issue.created_at;
+  }
+  return json(result, 200, origin, env);
+}
+
 function cleanMaterialName(value) {
   const source = String(value || 'material').replace(/\.[^.]+$/, '');
   const alphabet = {
@@ -650,13 +909,19 @@ async function projectSetup(request, env, origin) {
 
 function pendingDeletionPaths(payload, project) {
   const source = Array.isArray(payload && payload.pending_upload_deletions) ? payload.pending_upload_deletions : [];
-  return source.slice(0, 50).map((item) => {
+  const individual = source.slice(0, 50).map((item) => {
     const lot = String(item && item.lot || '');
     const id = String(item && item.id || '');
     const path = safeStorageKey(item && item.path);
     const expected = new RegExp(`^uploads/${project.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/${lot.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\.(?:jpg|jpeg|png|webp)$`, 'i');
     return /^\d{1,20}$/.test(lot) && /^add-[A-Za-z0-9_-]+$/.test(id) && expected.test(path) ? path : '';
   }).filter(Boolean);
+  const escapedProject = project.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const libraryMigrations = (Array.isArray(payload && payload.pending_library_deletions) ? payload.pending_library_deletions : [])
+    .slice(0, 500)
+    .map((item) => safeStorageKey(item && item.path))
+    .filter((path) => new RegExp(`^uploads/${escapedProject}/(?:bulk|\\d{1,20})/[A-Za-z0-9_-]+\\.(?:jpg|jpeg|png|webp)$`, 'i').test(path));
+  return Array.from(new Set(individual.concat(libraryMigrations)));
 }
 
 async function rememberOperation(env, issueNumber, project, payload) {
@@ -727,6 +992,7 @@ async function cleanupOrphanUploads(env) {
     const stale = [];
     for (const object of page.objects || []) {
       scanned += 1;
+      if (/^uploads\/[^/]+\/library\//.test(String(object.key || ''))) continue;
       const uploaded = object.uploaded instanceof Date ? object.uploaded.getTime() : new Date(object.uploaded || 0).getTime();
       if (!referenced.has(object.key) && uploaded && uploaded < cutoff) stale.push(object.key);
     }
@@ -1022,6 +1288,9 @@ export default {
     try {
       if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
       if (request.method === 'POST' && path === '/bulk-upload') return await bulkUpload(request, env, origin);
+      if (request.method === 'GET' && path === '/image-library') return await listImageLibrary(request, env, origin);
+      if (request.method === 'POST' && path === '/image-library/upload') return await imageLibraryUpload(request, env, origin);
+      if (request.method === 'POST' && path === '/image-library/migrate') return await migrateImageLibrary(request, env, origin);
       if (request.method === 'POST' && path === '/materials/upload') return await materialUpload(request, env, origin);
       if (request.method === 'DELETE' && path === '/materials') return await deleteMaterial(request, env, origin);
       if (request.method === 'GET' && path === '/materials') return await listMaterials(request, env, origin);

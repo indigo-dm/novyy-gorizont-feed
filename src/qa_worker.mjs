@@ -34,7 +34,12 @@ class FakeR2 {
   }
   async list({ prefix = '' } = {}) {
     return {
-      objects: Array.from(this.objects.values()).filter((item) => item.key.startsWith(prefix)).map((item) => ({ key: item.key, uploaded: item.uploaded })),
+      objects: Array.from(this.objects.values()).filter((item) => item.key.startsWith(prefix)).map((item) => ({
+        key: item.key,
+        uploaded: item.uploaded,
+        size: item.bytes.length,
+        customMetadata: item.options.customMetadata || {}
+      })),
       truncated: false
     };
   }
@@ -65,6 +70,8 @@ await feedStorage.put('media/projects/novyy-gorizont/images/qa-generated.png', n
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-test.jpg', 'delete-me', '2026-09-01T00:00:00Z');
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-orphan.jpg', 'orphan', '2026-09-01T00:00:00Z');
 feedStorage.seed('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg', 'keep-me', '2026-09-01T00:00:00Z');
+feedStorage.seed('uploads/novyy-gorizont/9301142/add-migrate-a.jpg', 'same-image', '2026-10-19T00:00:00Z');
+feedStorage.seed('uploads/novyy-gorizont/9301143/add-migrate-b.jpg', 'same-image', '2026-10-19T00:00:00Z');
 feedStorage.seed('operations/999.json', '{}', '2026-09-01T00:00:00Z');
 feedStorage.seed('refresh-operations/refresh-stale-marker.json', '{}', '2026-09-01T00:00:00Z');
 const env = {
@@ -245,6 +252,42 @@ const bulkImageUploadResponse = await worker.fetch(new Request('https://worker.e
 }), env);
 const bulkImageUpload = await bulkImageUploadResponse.json();
 const bulkMediaResponse = await worker.fetch(new Request(bulkImageUpload.url), env);
+const libraryBody = new FormData();
+libraryBody.append('project', 'novyy-gorizont');
+libraryBody.append('file', new File([new Uint8Array([0xff, 0xd8, 0xff, 0xdb, 0x01])], 'library.jpg', { type: 'image/jpeg' }));
+libraryBody.append('width', '1200');
+libraryBody.append('height', '800');
+libraryBody.append('perceptual_hash', '0123456789abcdef');
+const libraryUploadResponse = await worker.fetch(new Request('https://worker.example/image-library/upload', {
+  method: 'POST', headers: { Origin: env.ALLOWED_ORIGIN, Authorization: `Bearer ${password}` }, body: libraryBody
+}), env);
+const libraryUpload = await libraryUploadResponse.json();
+const duplicateBody = new FormData();
+duplicateBody.append('project', 'novyy-gorizont');
+duplicateBody.append('file', new File([new Uint8Array([0xff, 0xd8, 0xff, 0xdb, 0x01])], 'library-copy.jpg', { type: 'image/jpeg' }));
+duplicateBody.append('width', '1200');
+duplicateBody.append('height', '800');
+duplicateBody.append('perceptual_hash', '0123456789abcdef');
+const libraryDuplicateResponse = await worker.fetch(new Request('https://worker.example/image-library/upload', {
+  method: 'POST', headers: { Origin: env.ALLOWED_ORIGIN, Authorization: `Bearer ${password}` }, body: duplicateBody
+}), env);
+const libraryDuplicate = await libraryDuplicateResponse.json();
+const similarBody = new FormData();
+similarBody.append('project', 'novyy-gorizont');
+similarBody.append('file', new File([new Uint8Array([0xff, 0xd8, 0xff, 0xdb, 0x02])], 'library-similar.jpg', { type: 'image/jpeg' }));
+similarBody.append('width', '1210');
+similarBody.append('height', '805');
+similarBody.append('perceptual_hash', '0123456789abcdee');
+const librarySimilarResponse = await worker.fetch(new Request('https://worker.example/image-library/upload', {
+  method: 'POST', headers: { Origin: env.ALLOWED_ORIGIN, Authorization: `Bearer ${password}` }, body: similarBody
+}), env);
+const librarySimilar = await librarySimilarResponse.json();
+const libraryListResponse = await worker.fetch(new Request('https://worker.example/image-library?project=novyy-gorizont', { headers }), env);
+const libraryList = await libraryListResponse.json();
+const libraryMigrationResponse = await worker.fetch(new Request('https://worker.example/image-library/migrate', {
+  method: 'POST', headers, body: JSON.stringify({ project: 'novyy-gorizont', publish: false })
+}), env);
+const libraryMigration = await libraryMigrationResponse.json();
 const generatedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png'), env);
 
 const materialBody = new FormData();
@@ -333,6 +376,12 @@ const result = {
     feedStorage.objects.has('private/source-feeds/novyy-gorizont.json') &&
     imageUploadResponse.status === 201 && imageUpload.storage === 'r2' && imageUpload.url.startsWith('https://worker.example/media/uploads/') && mediaResponse.status === 200 &&
     bulkImageUploadResponse.status === 201 && bulkImageUpload.storage === 'r2' && /^bulk-/.test(bulkImageUpload.id) && bulkImageUpload.path.startsWith('uploads/novyy-gorizont/bulk/') && bulkMediaResponse.status === 200 &&
+    libraryUploadResponse.status === 201 && /^lib-/.test(libraryUpload.id) && libraryUpload.path.includes('/library/') &&
+    libraryDuplicateResponse.status === 409 && libraryDuplicate.code === 'duplicate' && libraryDuplicate.match.id === libraryUpload.id &&
+    librarySimilarResponse.status === 409 && librarySimilar.code === 'similar_confirmation_required' && librarySimilar.matches.length === 1 &&
+    libraryListResponse.status === 200 && libraryList.items.length === 1 &&
+    libraryMigrationResponse.status === 200 && libraryMigration.exact_duplicate_files >= 1 &&
+    libraryMigration.mappings.filter((item) => item.old_path.includes('add-migrate-')).every((item, index, matches) => item.id === matches[0].id) &&
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
@@ -363,6 +412,10 @@ const result = {
   image_storage: imageUpload.storage,
   bulk_image_upload_status: bulkImageUploadResponse.status,
   bulk_image_storage: bulkImageUpload.storage,
+  library_statuses: [libraryUploadResponse.status, libraryDuplicateResponse.status, librarySimilarResponse.status, libraryListResponse.status],
+  library_duplicate_blocked: libraryDuplicate.code === 'duplicate',
+  library_similar_needs_confirmation: librarySimilar.code === 'similar_confirmation_required',
+  library_migration: { status: libraryMigrationResponse.status, scanned: libraryMigration.scanned, exact_duplicates: libraryMigration.exact_duplicate_files },
   bulk_image_reference_kept: feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg'),
   media_status: mediaResponse.status,
   generated_media_status: generatedMediaResponse.status,

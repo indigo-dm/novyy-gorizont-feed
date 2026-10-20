@@ -231,10 +231,14 @@ def image_settings(value: object, allowed_houses: set[str], project_slug: str) -
             if not re.fullmatch(r"[A-Za-z0-9_-]+", image_id):
                 raise ValueError(f"Added image {index} for lot {lot_id} has an invalid id")
             clean_item = {"id": image_id, "url": http_url(item.get("url"), "image url")}
+            if item.get("name"):
+                clean_item["name"] = str(item.get("name"))[:120]
             path = str(item.get("path") or "").strip()
             if path:
-                expected = rf"uploads/{re.escape(project_slug)}/{re.escape(lot_id)}/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
-                if not re.fullmatch(expected, path, flags=re.IGNORECASE):
+                legacy = rf"uploads/{re.escape(project_slug)}/{re.escape(lot_id)}/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+                library = rf"uploads/{re.escape(project_slug)}/library/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+                material = r"assets/[A-Za-z0-9][A-Za-z0-9._/-]*\.(?:jpg|jpeg|png|webp)"
+                if not (re.fullmatch(legacy, path, flags=re.IGNORECASE) or re.fullmatch(library, path, flags=re.IGNORECASE) or re.fullmatch(material, path, flags=re.IGNORECASE)):
                     raise ValueError(f"Added image {index} for lot {lot_id} has an invalid managed path")
                 clean_item["path"] = path
             clean_added.append(clean_item)
@@ -268,11 +272,13 @@ def image_settings(value: object, allowed_houses: set[str], project_slug: str) -
                 if not isinstance(item, dict):
                     raise ValueError(f"Image rule {index} image {image_index} is invalid")
                 image_id = text(item.get("id"), f"Image rule {index} image id", 80)
-                if not re.fullmatch(r"bulk-[A-Za-z0-9_-]+", image_id):
+                if not re.fullmatch(r"(?:bulk|lib|asset)-[A-Za-z0-9_-]+", image_id):
                     raise ValueError(f"Image rule {index} image {image_index} has an invalid id")
                 path = text(item.get("path"), f"Image rule {index} image path", 260)
-                expected = rf"uploads/{re.escape(project_slug)}/bulk/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
-                if not re.fullmatch(expected, path, flags=re.IGNORECASE):
+                legacy = rf"uploads/{re.escape(project_slug)}/bulk/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+                library = rf"uploads/{re.escape(project_slug)}/library/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+                material = r"assets/[A-Za-z0-9][A-Za-z0-9._/-]*\.(?:jpg|jpeg|png|webp)"
+                if not (re.fullmatch(legacy, path, flags=re.IGNORECASE) or re.fullmatch(library, path, flags=re.IGNORECASE) or re.fullmatch(material, path, flags=re.IGNORECASE)):
                     raise ValueError(f"Image rule {index} image {image_index} has an invalid managed path")
                 clean_images.append({
                     "id": image_id,

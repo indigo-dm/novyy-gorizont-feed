@@ -31,6 +31,12 @@ IMAGE = {
     "path": "uploads/orion/bulk/bulk-qa-one.jpg",
     "name": "QA image",
 }
+LIBRARY_IMAGE = {
+    "id": "lib-0123456789abcdefabcd",
+    "url": "https://cdn.example/library.jpg",
+    "path": "uploads/orion/library/lib-0123456789abcdefabcd.jpg",
+    "name": "Library image",
+}
 
 
 def add_config(mode: str, position: int = 1) -> dict[str, object]:
@@ -57,10 +63,21 @@ orders = {
 }
 legacy = {"lot_overrides": {}, "bulk_rules": [{**SCOPE, "from_position": 3, "to_position": 1}]}
 orders["legacy_move"] = ids(legacy)
+library_rule = {
+    **SCOPE,
+    "id": "image-add-library",
+    "name": "Add library",
+    "action": "add",
+    "images": [LIBRARY_IMAGE],
+    "position_mode": "end",
+    "position": 1,
+}
+orders["library"] = ids(image_settings({"lot_overrides": {}, "bulk_rules": [library_rule]}, set(), "orion"))
 
 assert orders["start"][0] == IMAGE["id"]
 assert orders["position"][1] == IMAGE["id"]
 assert orders["end"][-1] == IMAGE["id"]
 assert orders["legacy_move"][0].startswith("src-")
+assert orders["library"][-1] == LIBRARY_IMAGE["id"]
 
 print(orders)
