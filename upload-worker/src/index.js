@@ -245,6 +245,43 @@ async function upload(request, env, origin) {
   return json({ id: imageId, url, path, size: file.size }, 201, origin, env);
 }
 
+async function bulkUpload(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль загрузки.' }, 401, origin, env);
+  const form = await request.formData();
+  const project = String(form.get('project') || '').trim();
+  const file = form.get('file');
+  const allowedProjects = new Set(String(env.ALLOWED_PROJECTS || '').split(',').map((value) => value.trim()).filter(Boolean));
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) || (allowedProjects.size && !allowedProjects.has(project))) {
+    return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  }
+  if (!(file instanceof File)) return json({ error: 'Файл не найден.' }, 400, origin, env);
+  const allowedTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
+  const maxBytes = Math.min(Number(env.MAX_FILE_BYTES || 10485760), 5 * 1024 * 1024);
+  if (!allowedTypes.has(file.type) || file.size < 1 || file.size > maxBytes) {
+    return json({ error: 'После оптимизации файл должен быть JPG, PNG или WebP размером до 5 МБ.' }, 400, origin, env);
+  }
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  if (!validMagic(bytes, file.type)) return json({ error: 'Содержимое файла не соответствует формату изображения.' }, 400, origin, env);
+  const extension = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
+  const digest = await sha256Hex(bytes);
+  const imageId = `bulk-${Date.now().toString(36)}-${digest.slice(0, 10)}`;
+  const path = `uploads/${project}/bulk/${imageId}.${extension}`;
+  if (r2Available(env)) {
+    await env.FEED_STORAGE.put(path, bytes, {
+      httpMetadata: { contentType: file.type, cacheControl: 'public, max-age=300, must-revalidate' },
+      customMetadata: { project, scope: 'bulk', imageId, uploadedAt: new Date().toISOString() }
+    });
+    return json({ id: imageId, url: `${publicBase(request, env)}/media/${encodedPath(path)}`, path, size: file.size, storage: 'r2' }, 201, origin, env);
+  }
+  const branch = await ensureMediaBranch(env);
+  await github(env, `/contents/${path.split('/').map(encodeURIComponent).join('/')}`, {
+    method: 'PUT',
+    body: JSON.stringify({ message: `Upload shared image for ${project}`, content: bytesToBase64(bytes), branch })
+  });
+  const url = `https://raw.githubusercontent.com/${env.GITHUB_REPOSITORY}/${encodeURIComponent(branch)}/${encodedPath(path)}`;
+  return json({ id: imageId, url, path, size: file.size }, 201, origin, env);
+}
+
 function cleanMaterialName(value) {
   const source = String(value || 'material').replace(/\.[^.]+$/, '');
   const alphabet = {
@@ -651,9 +688,17 @@ async function completeOperation(env, issueNumber) {
 
 function collectReferencedUploads(settings, referenced) {
   const overrides = settings && settings.image_settings && settings.image_settings.lot_overrides;
-  if (!overrides || typeof overrides !== 'object') return;
-  for (const override of Object.values(overrides)) {
-    for (const image of Array.isArray(override && override.added) ? override.added : []) {
+  if (overrides && typeof overrides === 'object') {
+    for (const override of Object.values(overrides)) {
+      for (const image of Array.isArray(override && override.added) ? override.added : []) {
+        const path = safeStorageKey(image && image.path);
+        if (/^uploads\//.test(path)) referenced.add(path);
+      }
+    }
+  }
+  const bulkRules = settings && settings.image_settings && settings.image_settings.bulk_rules;
+  for (const rule of Array.isArray(bulkRules) ? bulkRules : []) {
+    for (const image of Array.isArray(rule && rule.images) ? rule.images : []) {
       const path = safeStorageKey(image && image.path);
       if (/^uploads\//.test(path)) referenced.add(path);
     }
@@ -976,6 +1021,7 @@ export default {
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders(origin, env.ALLOWED_ORIGIN) });
     try {
       if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
+      if (request.method === 'POST' && path === '/bulk-upload') return await bulkUpload(request, env, origin);
       if (request.method === 'POST' && path === '/materials/upload') return await materialUpload(request, env, origin);
       if (request.method === 'DELETE' && path === '/materials') return await deleteMaterial(request, env, origin);
       if (request.method === 'GET' && path === '/materials') return await listMaterials(request, env, origin);

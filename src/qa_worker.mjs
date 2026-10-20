@@ -49,6 +49,10 @@ await feedStorage.put('published/projects/novyy-gorizont/avito.xml', '<?xml vers
   httpMetadata: { contentType: 'application/xml; charset=utf-8' }
 });
 await feedStorage.put('published/projects/novyy-gorizont/settings.json', JSON.stringify({
+  image_settings: {
+    lot_overrides: {},
+    bulk_rules: [{ action: 'add', images: [{ path: 'uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg' }] }]
+  },
   material_settings: {
     logo: 'logo-gold.svg',
     key_render: 'selected-render.jpg',
@@ -60,6 +64,7 @@ await feedStorage.put('media/projects/novyy-gorizont/images/qa-generated.png', n
 });
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-test.jpg', 'delete-me', '2026-09-01T00:00:00Z');
 feedStorage.seed('uploads/novyy-gorizont/9301142/add-orphan.jpg', 'orphan', '2026-09-01T00:00:00Z');
+feedStorage.seed('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg', 'keep-me', '2026-09-01T00:00:00Z');
 feedStorage.seed('operations/999.json', '{}', '2026-09-01T00:00:00Z');
 feedStorage.seed('refresh-operations/refresh-stale-marker.json', '{}', '2026-09-01T00:00:00Z');
 const env = {
@@ -230,6 +235,16 @@ const imageUploadResponse = await worker.fetch(new Request('https://worker.examp
 }), env);
 const imageUpload = await imageUploadResponse.json();
 const mediaResponse = await worker.fetch(new Request(imageUpload.url), env);
+const bulkImageBody = new FormData();
+bulkImageBody.append('project', 'novyy-gorizont');
+bulkImageBody.append('file', new File([new Uint8Array([0xff, 0xd8, 0xff, 0xdb])], 'shared.jpg', { type: 'image/jpeg' }));
+const bulkImageUploadResponse = await worker.fetch(new Request('https://worker.example/bulk-upload', {
+  method: 'POST',
+  headers: { Origin: env.ALLOWED_ORIGIN, Authorization: `Bearer ${password}` },
+  body: bulkImageBody
+}), env);
+const bulkImageUpload = await bulkImageUploadResponse.json();
+const bulkMediaResponse = await worker.fetch(new Request(bulkImageUpload.url), env);
 const generatedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png'), env);
 
 const materialBody = new FormData();
@@ -317,6 +332,7 @@ const result = {
     sourceStatusResponse.status === 200 && sourceStatus.configured === true && sourceStatus.hostname === 'profitbase.example' && !JSON.stringify(sourceStatus).includes('qa-secret') &&
     feedStorage.objects.has('private/source-feeds/novyy-gorizont.json') &&
     imageUploadResponse.status === 201 && imageUpload.storage === 'r2' && imageUpload.url.startsWith('https://worker.example/media/uploads/') && mediaResponse.status === 200 &&
+    bulkImageUploadResponse.status === 201 && bulkImageUpload.storage === 'r2' && /^bulk-/.test(bulkImageUpload.id) && bulkImageUpload.path.startsWith('uploads/novyy-gorizont/bulk/') && bulkMediaResponse.status === 200 &&
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
@@ -324,6 +340,7 @@ const result = {
     refreshDeploying.status === 'deploying' && refreshPublished.status === 'published' && frontendDeployDispatched &&
     !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-test.jpg') &&
     !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg') &&
+    feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg') &&
     !feedStorage.objects.has('operations/999.json') &&
     !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json'),
   settings_status: settingsResponse.status,
@@ -344,6 +361,9 @@ const result = {
   source_feed_masked: !JSON.stringify(sourceStatus).includes('qa-secret'),
   image_upload_status: imageUploadResponse.status,
   image_storage: imageUpload.storage,
+  bulk_image_upload_status: bulkImageUploadResponse.status,
+  bulk_image_storage: bulkImageUpload.storage,
+  bulk_image_reference_kept: feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg'),
   media_status: mediaResponse.status,
   generated_media_status: generatedMediaResponse.status,
   generated_media_storage: generatedMediaResponse.headers.get('X-Feed-Storage'),

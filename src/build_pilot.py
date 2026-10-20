@@ -256,7 +256,26 @@ def output_images(
     has_individual_order = bool(ordered_ids) and ordered_ids != natural_ids
     for rule in image_config.get("bulk_rules", []):
         if rule.get("enabled") and rule_matches(item, rule):
-            move_image(images, int(rule.get("from_position", 0)), int(rule.get("to_position", 0)))
+            if rule.get("action") == "add":
+                existing_ids = {str(image["id"]) for image in images}
+                additions = [
+                    {"id": str(image["id"]), "url": str(image["url"]), "kind": "bulk-added"}
+                    for image in rule.get("images", [])
+                    if str(image.get("id") or "") not in existing_ids
+                    and str(image.get("id") or "") not in hidden
+                ]
+                mode = str(rule.get("position_mode") or "end")
+                if mode == "start":
+                    insert_at = 0
+                elif mode == "position":
+                    insert_at = max(0, min(len(images), int(rule.get("position") or 1) - 1))
+                else:
+                    insert_at = len(images)
+                if len(images) + len(additions) > 40:
+                    raise ValueError(f"Bulk image rule {rule.get('id')} creates more than 40 images for ad {item['id']}")
+                images[insert_at:insert_at] = additions
+            else:
+                move_image(images, int(rule.get("from_position", 0)), int(rule.get("to_position", 0)))
     if has_individual_order:
         order = {image_id: index for index, image_id in enumerate(ordered_ids)}
         original = {image["id"]: index for index, image in enumerate(images)}

@@ -7,7 +7,7 @@ export async function onRequest(context) {
     // A multipart body forwarded as the original request stream can arrive at a
     // service binding without its opening boundary. Rebuild upload forms here
     // so the runtime generates a fresh Content-Type boundary matching the body.
-    if (request.method === 'POST' && (path === '/' || path === '/upload' || path === '/materials/upload')) {
+    if (request.method === 'POST' && (path === '/' || path === '/upload' || path === '/bulk-upload' || path === '/materials/upload')) {
       const form = await request.formData();
       const headers = new Headers(request.headers);
       headers.delete('Content-Type');

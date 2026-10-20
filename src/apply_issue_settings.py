@@ -258,10 +258,42 @@ def image_settings(value: object, allowed_houses: set[str], project_slug: str) -
         }
         if not re.fullmatch(r"[A-Za-z0-9_-]+", str(rule["id"])):
             raise ValueError(f"Image rule {index} has an invalid id")
-        rule["from_position"] = int(raw.get("from_position", 0))
-        rule["to_position"] = int(raw.get("to_position", 0))
-        if not 1 <= rule["from_position"] <= 40 or not 1 <= rule["to_position"] <= 40:
-            raise ValueError(f"Image rule {index} contains an invalid position")
+        action = str(raw.get("action") or "move")
+        if action == "add":
+            raw_images = raw.get("images", [])
+            if not isinstance(raw_images, list) or not 1 <= len(raw_images) <= 10:
+                raise ValueError(f"Image rule {index} must contain from 1 to 10 images")
+            clean_images = []
+            for image_index, item in enumerate(raw_images, start=1):
+                if not isinstance(item, dict):
+                    raise ValueError(f"Image rule {index} image {image_index} is invalid")
+                image_id = text(item.get("id"), f"Image rule {index} image id", 80)
+                if not re.fullmatch(r"bulk-[A-Za-z0-9_-]+", image_id):
+                    raise ValueError(f"Image rule {index} image {image_index} has an invalid id")
+                path = text(item.get("path"), f"Image rule {index} image path", 260)
+                expected = rf"uploads/{re.escape(project_slug)}/bulk/{re.escape(image_id)}\.(?:jpg|jpeg|png|webp)"
+                if not re.fullmatch(expected, path, flags=re.IGNORECASE):
+                    raise ValueError(f"Image rule {index} image {image_index} has an invalid managed path")
+                clean_images.append({
+                    "id": image_id,
+                    "url": http_url(item.get("url"), f"Image rule {index} image url"),
+                    "path": path,
+                    "name": str(item.get("name") or "Изображение")[:120],
+                })
+            position_mode = str(raw.get("position_mode") or "end")
+            if position_mode not in {"start", "end", "position"}:
+                raise ValueError(f"Image rule {index} has an invalid position mode")
+            position = int(raw.get("position") or 1)
+            if position_mode == "position" and not 1 <= position <= 40:
+                raise ValueError(f"Image rule {index} contains an invalid position")
+            rule.update({"action": "add", "images": clean_images, "position_mode": position_mode, "position": position})
+        elif action == "move":
+            rule["from_position"] = int(raw.get("from_position", 0))
+            rule["to_position"] = int(raw.get("to_position", 0))
+            if not 1 <= rule["from_position"] <= 40 or not 1 <= rule["to_position"] <= 40:
+                raise ValueError(f"Image rule {index} contains an invalid position")
+        else:
+            raise ValueError(f"Image rule {index} has an invalid action")
         rules.append(rule)
     return {"lot_overrides": overrides, "bulk_rules": rules}
 
