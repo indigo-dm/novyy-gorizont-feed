@@ -13,7 +13,8 @@ on:
     types: [profitbase-refresh]
   schedule:
     # GitHub Actions cron is evaluated in UTC. Moscow is UTC+3 year-round.
-    - cron: "0 10,21 * * *"
+    # Avoid minute 0: GitHub documents elevated scheduler load at the start of each hour.
+    - cron: "17 10,21 * * *"
 
 permissions:
   contents: write
