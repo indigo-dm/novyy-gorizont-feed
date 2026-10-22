@@ -1,7 +1,7 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-10-22T03:00:20+03:00",
+  "checked_at": "2026-10-22T11:13:44+03:00",
   "source_ads": 163,
   "full_ads": 163,
   "excluded_ads": 0,
@@ -250,146 +250,6 @@
           "id": "src-55d5cab1fcba",
           "url": "https://maximum.abc-dev.ru/storage/2026/09/22/92119c868eefafb207ccd4234aa76e2de6b1f67a.png",
           "kind": "source"
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "kind": "source"
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-7cab611efc16",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9d5328ff27f7",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "lib-b7e952b3b9d692e4262d",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-b7e952b3b9d692e4262d.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-3e3abbb174c9282f47bc",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-3e3abbb174c9282f47bc.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-b5f81e47f2b91281458f",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-b5f81e47f2b91281458f.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-64f7c734be9f108a3b04",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-64f7c734be9f108a3b04.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-df60744a8a200383dab2",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-df60744a8a200383dab2.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-0fab1877b8b47f8e5758",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-0fab1877b8b47f8e5758.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-eb0ff5c00ac7e976e76e",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-eb0ff5c00ac7e976e76e.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-9fe1c53bcd6dc01f5956",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-9fe1c53bcd6dc01f5956.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-21d3757a71424e0c6915",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-21d3757a71424e0c6915.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-67cce81168813d08ab21",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-67cce81168813d08ab21.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-f256ca282aaabf1ba265",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-f256ca282aaabf1ba265.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "src-72809fab8046",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-08c7a6610b27",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c8508a9b0ed",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-26f7b8b3e333",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "lib-d6ef19ef58659a005150",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-d6ef19ef58659a005150.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-20bd9c73fd03eda5767e",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-20bd9c73fd03eda5767e.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-ee2a74307f8fdb24375d",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-ee2a74307f8fdb24375d.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-8ef631814078d33c7cb7",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-8ef631814078d33c7cb7.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-d0fa53fa1cf395c43ade",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-d0fa53fa1cf395c43ade.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-314dc316222ec0cbdafa",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-314dc316222ec0cbdafa.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-23fc9294a8f75c855dc1",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-23fc9294a8f75c855dc1.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-cb84b0820e992d74b41c",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-cb84b0820e992d74b41c.jpg",
-          "kind": "added"
-        },
-        {
-          "id": "lib-5a8cfdbfb5abc1d26551",
-          "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-5a8cfdbfb5abc1d26551.jpg",
-          "kind": "added"
         }
       ],
       "feed_parameters": {
@@ -528,11 +388,6 @@
         {
           "id": "src-55d5cab1fcba",
           "url": "https://maximum.abc-dev.ru/storage/2026/09/22/92119c868eefafb207ccd4234aa76e2de6b1f67a.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
           "kind": "source"
         },
         {
