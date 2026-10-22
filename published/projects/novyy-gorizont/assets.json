@@ -41,6 +41,8 @@
     "background_color": "#00605C",
     "text_color": "#FFFFFF",
     "subtitle_color": "#9B9B9B",
+    "promotion_frame_color": "#00605C",
+    "promotion_text_color": "#FFFFFF",
     "green_dark": "#004C49",
     "gold": "#CEAD75",
     "gray": "#9B9B9B",

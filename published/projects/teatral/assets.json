@@ -96,6 +96,8 @@
     "background_color": "#1F334B",
     "text_color": "#F2F1EC",
     "subtitle_color": "#717B7D",
+    "promotion_frame_color": "#1F334B",
+    "promotion_text_color": "#F2F1EC",
     "green_dark": "#0A0A0A",
     "gold": "#F2F1EC",
     "gray": "#717B7D",
