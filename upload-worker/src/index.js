@@ -352,6 +352,39 @@ async function listImageLibrary(request, env, origin) {
   return json({ project, items }, 200, origin, env);
 }
 
+async function deleteImageLibrary(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
+  const payload = await request.json().catch(() => ({}));
+  const project = String(payload && payload.project || '').trim();
+  const imageId = String(payload && payload.image_id || '').trim();
+  if (!validProject(project, env)) return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  if (!/^lib-[A-Za-z0-9_-]+$/.test(imageId)) return json({ error: 'Некорректный ID изображения.' }, 400, origin, env);
+  const objects = await listImageLibraryObjects(env, project);
+  const object = objects.find((entry) => imageLibraryItem(request, env, entry).id === imageId);
+  if (!object) return json({ error: 'Изображение не найдено в библиотеке.' }, 404, origin, env);
+  const referenced = new Set();
+  const storedSettings = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
+  if (storedSettings) {
+    try {
+      collectReferencedUploads(await storedSettings.json(), referenced);
+    } catch (error) {
+      console.error(`Cannot parse settings for ${project}`, error);
+      return json({ error: 'Не удалось проверить использование изображения. Удаление отменено.' }, 503, origin, env);
+    }
+  }
+  if (referenced.has(String(object.key || ''))) {
+    return json({
+      error: 'Изображение используется в опубликованных настройках. Сначала удалите назначения и опубликуйте изменения.',
+      code: 'image_in_use',
+      image_id: imageId,
+      path: String(object.key || '')
+    }, 409, origin, env);
+  }
+  await env.FEED_STORAGE.delete(object.key);
+  return json({ deleted: true, project, image_id: imageId, path: String(object.key || '') }, 200, origin, env);
+}
+
 async function imageLibraryUpload(request, env, origin) {
   if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
   if (!r2Available(env)) return json({ error: 'Защищённое хранилище временно недоступно.' }, 503, origin, env);
@@ -1289,6 +1322,7 @@ export default {
       if (request.method === 'POST' && (path === '/' || path === '/upload')) return await upload(request, env, origin);
       if (request.method === 'POST' && path === '/bulk-upload') return await bulkUpload(request, env, origin);
       if (request.method === 'GET' && path === '/image-library') return await listImageLibrary(request, env, origin);
+      if (request.method === 'DELETE' && path === '/image-library') return await deleteImageLibrary(request, env, origin);
       if (request.method === 'POST' && path === '/image-library/upload') return await imageLibraryUpload(request, env, origin);
       if (request.method === 'POST' && path === '/image-library/migrate') return await migrateImageLibrary(request, env, origin);
       if (request.method === 'POST' && path === '/materials/upload') return await materialUpload(request, env, origin);

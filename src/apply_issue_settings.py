@@ -265,8 +265,8 @@ def image_settings(value: object, allowed_houses: set[str], project_slug: str) -
         action = str(raw.get("action") or "move")
         if action == "add":
             raw_images = raw.get("images", [])
-            if not isinstance(raw_images, list) or not 1 <= len(raw_images) <= 10:
-                raise ValueError(f"Image rule {index} must contain from 1 to 10 images")
+            if not isinstance(raw_images, list) or not 1 <= len(raw_images) <= 20:
+                raise ValueError(f"Image rule {index} must contain from 1 to 20 images")
             clean_images = []
             for image_index, item in enumerate(raw_images, start=1):
                 if not isinstance(item, dict):
@@ -293,6 +293,18 @@ def image_settings(value: object, allowed_houses: set[str], project_slug: str) -
             if position_mode == "position" and not 1 <= position <= 40:
                 raise ValueError(f"Image rule {index} contains an invalid position")
             rule.update({"action": "add", "images": clean_images, "position_mode": position_mode, "position": position})
+        elif action == "hide":
+            raw_image_ids = raw.get("image_ids", [])
+            if not isinstance(raw_image_ids, list) or not 1 <= len(raw_image_ids) <= 40:
+                raise ValueError(f"Image rule {index} must contain from 1 to 40 image ids")
+            clean_image_ids = []
+            for image_id in raw_image_ids:
+                clean_id = text(image_id, f"Image rule {index} image id", 80)
+                if not re.fullmatch(r"[A-Za-z0-9_-]+", clean_id):
+                    raise ValueError(f"Image rule {index} has an invalid image id")
+                if clean_id not in clean_image_ids:
+                    clean_image_ids.append(clean_id)
+            rule.update({"action": "hide", "image_ids": clean_image_ids})
         elif action == "move":
             rule["from_position"] = int(raw.get("from_position", 0))
             rule["to_position"] = int(raw.get("to_position", 0))

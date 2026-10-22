@@ -274,6 +274,9 @@ def output_images(
                 if len(images) + len(additions) > 40:
                     raise ValueError(f"Bulk image rule {rule.get('id')} creates more than 40 images for ad {item['id']}")
                 images[insert_at:insert_at] = additions
+            elif rule.get("action") == "hide":
+                hidden_by_rule = {str(image_id) for image_id in rule.get("image_ids", [])}
+                images = [image for image in images if str(image["id"]) not in hidden_by_rule]
             else:
                 move_image(images, int(rule.get("from_position", 0)), int(rule.get("to_position", 0)))
     if has_individual_order:

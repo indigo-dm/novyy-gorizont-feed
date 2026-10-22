@@ -288,6 +288,26 @@ const libraryMigrationResponse = await worker.fetch(new Request('https://worker.
   method: 'POST', headers, body: JSON.stringify({ project: 'novyy-gorizont', publish: false })
 }), env);
 const libraryMigration = await libraryMigrationResponse.json();
+await feedStorage.put('published/projects/novyy-gorizont/settings.json', JSON.stringify({
+  image_settings: { lot_overrides: {}, bulk_rules: [{ action: 'add', images: [
+    { path: 'uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg' }, { path: libraryUpload.path }
+  ] }] },
+  material_settings: { logo: 'logo-gold.svg', key_render: 'selected-render.jpg', background_render: 'uploads/mat-qa-active.png' }
+}), { httpMetadata: { contentType: 'application/json; charset=utf-8' } });
+const libraryDeleteBlockedResponse = await worker.fetch(new Request('https://worker.example/image-library', {
+  method: 'DELETE', headers, body: JSON.stringify({ project: 'novyy-gorizont', image_id: libraryUpload.id })
+}), env);
+const libraryDeleteBlocked = await libraryDeleteBlockedResponse.json();
+await feedStorage.put('published/projects/novyy-gorizont/settings.json', JSON.stringify({
+  image_settings: { lot_overrides: {}, bulk_rules: [{ action: 'add', images: [
+    { path: 'uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg' }
+  ] }] },
+  material_settings: { logo: 'logo-gold.svg', key_render: 'selected-render.jpg', background_render: 'uploads/mat-qa-active.png' }
+}), { httpMetadata: { contentType: 'application/json; charset=utf-8' } });
+const libraryDeleteResponse = await worker.fetch(new Request('https://worker.example/image-library', {
+  method: 'DELETE', headers, body: JSON.stringify({ project: 'novyy-gorizont', image_id: libraryUpload.id })
+}), env);
+const libraryDeleted = await libraryDeleteResponse.json();
 const generatedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png'), env);
 
 const materialBody = new FormData();
@@ -382,6 +402,8 @@ const result = {
     libraryListResponse.status === 200 && libraryList.items.length === 1 &&
     libraryMigrationResponse.status === 200 && libraryMigration.exact_duplicate_files >= 1 &&
     libraryMigration.mappings.filter((item) => item.old_path.includes('add-migrate-')).every((item, index, matches) => item.id === matches[0].id) &&
+    libraryDeleteBlockedResponse.status === 409 && libraryDeleteBlocked.code === 'image_in_use' &&
+    libraryDeleteResponse.status === 200 && libraryDeleted.deleted === true && !feedStorage.objects.has(libraryUpload.path) &&
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
@@ -416,6 +438,7 @@ const result = {
   library_duplicate_blocked: libraryDuplicate.code === 'duplicate',
   library_similar_needs_confirmation: librarySimilar.code === 'similar_confirmation_required',
   library_migration: { status: libraryMigrationResponse.status, scanned: libraryMigration.scanned, exact_duplicates: libraryMigration.exact_duplicate_files },
+  library_delete_statuses: [libraryDeleteBlockedResponse.status, libraryDeleteResponse.status],
   bulk_image_reference_kept: feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg'),
   media_status: mediaResponse.status,
   generated_media_status: generatedMediaResponse.status,

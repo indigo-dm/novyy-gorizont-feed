@@ -73,11 +73,21 @@ library_rule = {
     "position": 1,
 }
 orders["library"] = ids(image_settings({"lot_overrides": {}, "bulk_rules": [library_rule]}, set(), "orion"))
+hide_target = orders["end"][1]
+hide_rule = {
+    **SCOPE,
+    "id": "image-hide-source",
+    "name": "Hide source image",
+    "action": "hide",
+    "image_ids": [hide_target],
+}
+orders["hide"] = ids(image_settings({"lot_overrides": {}, "bulk_rules": [hide_rule]}, set(), "orion"))
 
 assert orders["start"][0] == IMAGE["id"]
 assert orders["position"][1] == IMAGE["id"]
 assert orders["end"][-1] == IMAGE["id"]
 assert orders["legacy_move"][0].startswith("src-")
 assert orders["library"][-1] == LIBRARY_IMAGE["id"]
+assert hide_target not in orders["hide"]
 
 print(orders)
