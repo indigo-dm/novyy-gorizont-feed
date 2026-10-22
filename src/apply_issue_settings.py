@@ -410,6 +410,8 @@ def material_settings(value: object, project_dir: Path, config: dict[str, object
         "background_color": hex_color(source.get("background_color"), "material_settings.background_color", str(brand.get("background_color") or brand.get("green") or "#000000")),
         "text_color": hex_color(source.get("text_color"), "material_settings.text_color", str(brand.get("text_color") or brand.get("white") or "#FFFFFF")),
         "subtitle_color": hex_color(source.get("subtitle_color"), "material_settings.subtitle_color", str(brand.get("subtitle_color") or brand.get("gray") or "#9B9B9B")),
+        "promotion_frame_color": hex_color(source.get("promotion_frame_color"), "material_settings.promotion_frame_color", str(brand.get("promotion_frame_color") or brand.get("green") or "#000000")),
+        "promotion_text_color": hex_color(source.get("promotion_text_color"), "material_settings.promotion_text_color", str(brand.get("promotion_text_color") or brand.get("text_color") or brand.get("white") or "#FFFFFF")),
     }
     fallback_palette = brand.get("palette")
     if not isinstance(fallback_palette, list) or not fallback_palette:
@@ -703,6 +705,7 @@ def main() -> None:
     render_material_fields = (
         "logo", "key_render", "background_render", "primary_color",
         "background_color", "text_color", "subtitle_color",
+        "promotion_frame_color", "promotion_text_color",
     )
     global_render_change = any(
         previous_materials[field] != selected_materials[field]
@@ -748,6 +751,8 @@ def main() -> None:
     config["brand"]["background_color"] = selected_materials["background_color"]
     config["brand"]["text_color"] = selected_materials["text_color"]
     config["brand"]["subtitle_color"] = selected_materials["subtitle_color"]
+    config["brand"]["promotion_frame_color"] = selected_materials["promotion_frame_color"]
+    config["brand"]["promotion_text_color"] = selected_materials["promotion_text_color"]
     config["brand"]["palette"] = selected_materials["palette"]
     config["brand"]["show_key_render"] = selected_card_settings["show_key_render"]
     config["brand"]["show_house_badge"] = selected_card_settings["show_house_badge"]

@@ -128,6 +128,8 @@ assets_manifest = {
         "background_color": config["brand"].get("background_color", config["brand"]["green"]),
         "text_color": config["brand"].get("text_color", config["brand"].get("white", "#FFFFFF")),
         "subtitle_color": config["brand"].get("subtitle_color", config["brand"].get("gray", "#9B9B9B")),
+        "promotion_frame_color": config["brand"].get("promotion_frame_color", config["brand"]["green"]),
+        "promotion_text_color": config["brand"].get("promotion_text_color", config["brand"].get("text_color", config["brand"].get("white", "#FFFFFF"))),
         "green_dark": config["brand"]["green_dark"],
         "gold": config["brand"]["gold"],
         "gray": config["brand"].get("gray", "#9B9B9B"),

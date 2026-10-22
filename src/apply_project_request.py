@@ -60,6 +60,8 @@ def main() -> None:
             "white": "#FFFFFF",
             "text_color": "#FFFFFF",
             "subtitle_color": "#9B9B9B",
+            "promotion_frame_color": "#00605C",
+            "promotion_text_color": "#FFFFFF",
             "font": "Manrope",
             "logo": "logo.svg",
             "key_render": "key-render.jpg",
