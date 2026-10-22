@@ -1,18 +1,33 @@
 {
   "version": 4,
-  "rules": [],
+  "rules": [
+    {
+      "id": "promotion-1792658401983",
+      "name": "Тестовая",
+      "enabled": true,
+      "label": "Скидка",
+      "text": "−10 000 ₽/м²",
+      "house_ids": [],
+      "rooms": [],
+      "floors": [],
+      "apartment_numbers": [],
+      "area_min": null,
+      "area_max": null,
+      "starts_at": "",
+      "ends_at": "",
+      "include_ids": [
+        "408236237"
+      ],
+      "exclude_ids": []
+    }
+  ],
   "excluded_lot_ids": [],
   "image_settings": {
     "lot_overrides": {
       "408236193": {
         "order": [
           "brand-card",
-          "src-55d5cab1fcba"
-        ],
-        "hidden": [
-          "src-37ea5d298181",
-          "src-a8e124ab67c8",
-          "src-122880f50bee",
+          "src-55d5cab1fcba",
           "src-076d776e1543",
           "src-90e6a4ccf8d6",
           "src-7cab611efc16",
@@ -41,6 +56,11 @@
           "lib-23fc9294a8f75c855dc1",
           "lib-cb84b0820e992d74b41c",
           "lib-5a8cfdbfb5abc1d26551"
+        ],
+        "hidden": [
+          "src-37ea5d298181",
+          "src-a8e124ab67c8",
+          "src-122880f50bee"
         ],
         "added": [
           {
@@ -164,60 +184,9 @@
             "path": "uploads/orion/library/lib-20bd9c73fd03eda5767e.jpg"
           }
         ]
-      },
-      "408236198": {
-        "order": [
-          "brand-card",
-          "src-55d5cab1fcba",
-          "src-90e6a4ccf8d6",
-          "src-7cab611efc16",
-          "src-9d5328ff27f7",
-          "src-37ea5d298181",
-          "src-a8e124ab67c8",
-          "src-122880f50bee",
-          "src-72809fab8046",
-          "src-08c7a6610b27",
-          "src-5c8508a9b0ed",
-          "src-26f7b8b3e333"
-        ],
-        "hidden": [
-          "src-076d776e1543"
-        ],
-        "added": []
       }
     },
-    "bulk_rules": [
-      {
-        "id": "image-rule-1792656762114",
-        "name": "Перестановка 1 → 2",
-        "enabled": true,
-        "house_ids": [],
-        "rooms": [],
-        "floors": [],
-        "plan_ids": [],
-        "area_min": null,
-        "area_max": null,
-        "include_ids": [],
-        "exclude_ids": [],
-        "from_position": 1,
-        "to_position": 2
-      },
-      {
-        "id": "image-rule-1792656773580",
-        "name": "Перестановка 2 → 1",
-        "enabled": true,
-        "house_ids": [],
-        "rooms": [],
-        "floors": [],
-        "plan_ids": [],
-        "area_min": null,
-        "area_max": null,
-        "include_ids": [],
-        "exclude_ids": [],
-        "from_position": 2,
-        "to_position": 1
-      }
-    ]
+    "bulk_rules": []
   },
   "parameter_settings": {
     "lot_values": {
