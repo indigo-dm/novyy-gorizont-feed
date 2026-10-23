@@ -64,7 +64,9 @@
     "subtitle_color": "#48277F",
     "show_key_render": true,
     "show_house_badge": false,
-    "show_decoration": false
+    "show_decoration": false,
+    "promotion_frame_color": "#3F245C",
+    "promotion_text_color": "#FFFFFF"
   },
   "houses": {}
 }
