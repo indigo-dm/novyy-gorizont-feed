@@ -3637,42 +3637,6 @@
     <AdStatus>Free</AdStatus>
   </Ad>
   <Ad>
-    <Id>12346763</Id>
-    <ContactMethod>По телефону и в сообщениях</ContactMethod>
-    <ManagerName>Отдел продаж</ManagerName>
-    <ContactPhone>+78632098967</ContactPhone>
-    <Category>Квартиры</Category>
-    <OperationType>Продам</OperationType>
-    <PropertyRights>Застройщик</PropertyRights>
-    <Latitude>47.280587</Latitude>
-    <Longitude>39.861212</Longitude>
-    <Description>Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.&lt;br&gt;&lt;br&gt;Проект ЖК Вишневый сад разработан с учетом современных подходов к строительству. &lt;br&gt;&lt;br&gt;На территории комплекса запроектировано множество деревьев и декоративных растений, которые станут украшением двора. В тени деревьев можно будет отдыхать летом, а на специализированных зонах отдыха для взрослых и детской площадке 365 дней в году. &lt;br&gt;ЖК “Вишневый сад” - это место, где будет комфортно всем, как молодым семьям, так и пожилым людям. Магазины, салоны красоты и другие компании из сферы услуг - все в шаговой доступности. &lt;br&gt;&lt;br&gt;Здесь всегда рады гостям, поэтому у каждого дома есть парковка. &lt;br&gt;&lt;br&gt;Покупайте квартиру в жилом комплексе, который соответствует современным трендам!</Description>
-    <Price>6873000</Price>
-    <Square>47.4</Square>
-    <Decoration>Без отделки</Decoration>
-    <Floor>9</Floor>
-    <Status>Квартира</Status>
-    <MarketType>Новостройка</MarketType>
-    <NewDevelopmentId>8276823</NewDevelopmentId>
-    <Rooms>1</Rooms>
-    <KitchenSpace>0</KitchenSpace>
-    <LivingSpace>0</LivingSpace>
-    <Floors>9</Floors>
-    <HouseType>Монолитно-кирпичный</HouseType>
-    <Images>
-      <Image url="https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346763.png" />
-      <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/64ec9ddb618fa.png" />
-      <Image url="https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg" />
-      <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png" />
-    </Images>
-    <AdStatus>Free</AdStatus>
-  </Ad>
-  <Ad>
     <Id>12346721</Id>
     <ContactMethod>По телефону и в сообщениях</ContactMethod>
     <ManagerName>Отдел продаж</ManagerName>

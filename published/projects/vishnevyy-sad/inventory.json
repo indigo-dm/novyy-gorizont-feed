@@ -1,36 +1,36 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-10-24T02:51:30+03:00",
-  "source_ads": 300,
-  "full_ads": 300,
+  "checked_at": "2026-10-24T17:00:47+03:00",
+  "source_ads": 299,
+  "full_ads": 299,
   "excluded_ads": 0,
   "unique_plans": 83,
   "source_tag_counts": {
-    "AdStatus": 300,
-    "Address": 300,
-    "Category": 300,
-    "ContactMethod": 300,
-    "ContactPhone": 300,
-    "Decoration": 300,
-    "Description": 300,
-    "Floor": 300,
-    "Floors": 300,
-    "HouseType": 300,
-    "Id": 300,
-    "KitchenSpace": 300,
-    "Latitude": 270,
-    "LivingSpace": 300,
-    "Longitude": 270,
-    "ManagerName": 300,
-    "MarketType": 300,
-    "NewDevelopmentId": 300,
-    "OperationType": 300,
-    "Price": 300,
-    "PropertyRights": 300,
-    "Rooms": 300,
-    "Square": 300,
-    "Status": 300
+    "AdStatus": 299,
+    "Address": 299,
+    "Category": 299,
+    "ContactMethod": 299,
+    "ContactPhone": 299,
+    "Decoration": 299,
+    "Description": 299,
+    "Floor": 299,
+    "Floors": 299,
+    "HouseType": 299,
+    "Id": 299,
+    "KitchenSpace": 299,
+    "Latitude": 269,
+    "LivingSpace": 299,
+    "Longitude": 269,
+    "ManagerName": 299,
+    "MarketType": 299,
+    "NewDevelopmentId": 299,
+    "OperationType": 299,
+    "Price": 299,
+    "PropertyRights": 299,
+    "Rooms": 299,
+    "Square": 299,
+    "Status": 299
   },
   "parameter_catalog": [
     {
@@ -16311,166 +16311,6 @@
         "Square": "47.4",
         "Decoration": "Без отделки",
         "Floor": "4",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "8276823",
-        "Rooms": "1",
-        "KitchenSpace": "0",
-        "LivingSpace": "0",
-        "Floors": "9",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.<br><br>Проект ЖК Вишневый сад разработан с учетом современных подходов к строительству. <br><br>На территории комплекса запроектировано множество деревьев и декоративных растений, которые станут украшением двора. В тени деревьев можно будет отдыхать летом, а на специализированных зонах отдыха для взрослых и детской площадке 365 дней в году. <br>ЖК “Вишневый сад” - это место, где будет комфортно всем, как молодым семьям, так и пожилым людям. Магазины, салоны красоты и другие компании из сферы услуг - все в шаговой доступности. <br><br>Здесь всегда рады гостям, поэтому у каждого дома есть парковка. <br><br>Покупайте квартиру в жилом комплексе, который соответствует современным трендам!",
-      "excluded_from_feed": false
-    },
-    {
-      "id": "12346763",
-      "house_id": "8276823",
-      "house": "Дом · ID 8276823",
-      "rooms": "1",
-      "area": "47.4",
-      "floor": "9",
-      "floors": "9",
-      "price": "6873000",
-      "decoration": "Без отделки",
-      "plan_id": "plan-02de32d8d494",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12346763.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12346763.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346763.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-185e107fc292",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64ec9ddb618fa.png",
-          "position": 1
-        },
-        {
-          "id": "src-7b2d65bbcd45",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-1f3fb1972c5a",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346763.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-185e107fc292",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64ec9ddb618fa.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-7b2d65bbcd45",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-1f3fb1972c5a",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "12346763",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+78632098967",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Аксай, Аксайский район, Ростовская область",
-        "Latitude": "47.280587",
-        "Longitude": "39.861212",
-        "Description": "Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.<br><br>Проект ЖК Вишневый сад разработан с учетом современных подходов к строительству. <br><br>На территории комплекса запроектировано множество деревьев и декоративных растений, которые станут украшением двора. В тени деревьев можно будет отдыхать летом, а на специализированных зонах отдыха для взрослых и детской площадке 365 дней в году. <br>ЖК “Вишневый сад” - это место, где будет комфортно всем, как молодым семьям, так и пожилым людям. Магазины, салоны красоты и другие компании из сферы услуг - все в шаговой доступности. <br><br>Здесь всегда рады гостям, поэтому у каждого дома есть парковка. <br><br>Покупайте квартиру в жилом комплексе, который соответствует современным трендам!",
-        "Price": "6873000",
-        "Square": "47.4",
-        "Decoration": "Без отделки",
-        "Floor": "9",
         "Status": "Квартира",
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
