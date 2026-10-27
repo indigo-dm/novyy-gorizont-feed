@@ -311,11 +311,7 @@
     ]
   },
   "parameter_settings": {
-    "lot_values": {
-      "408236193": {
-        "Rooms": "1"
-      }
-    },
+    "lot_values": {},
     "bulk_rules": [
       {
         "id": "parameter-rule-1793103415053",
