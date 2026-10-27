@@ -283,6 +283,30 @@
         ],
         "position_mode": "end",
         "position": 1
+      },
+      {
+        "id": "image-add-rule-1793102580091",
+        "name": "Из библиотеки · 1 изобр.",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "add",
+        "images": [
+          {
+            "id": "lib-586fc6e1d53eb54053e5",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
+            "path": "uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
+            "name": "Ночь-1-1-.jpg"
+          }
+        ],
+        "position_mode": "position",
+        "position": 16
       }
     ]
   },
