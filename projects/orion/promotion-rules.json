@@ -133,6 +133,90 @@
         ],
         "position_mode": "end",
         "position": 1
+      },
+      {
+        "id": "image-add-rule-1793102290371",
+        "name": "Из библиотеки · 11 изобр.",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "add",
+        "images": [
+          {
+            "id": "lib-b6045b33a035b25ebc79",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
+            "path": "uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
+            "name": "10.jpg"
+          },
+          {
+            "id": "lib-4a33cbeac7289ecd2186",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
+            "path": "uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
+            "name": "11.jpg"
+          },
+          {
+            "id": "lib-0f855bd4136be326e6ad",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
+            "path": "uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
+            "name": "12.jpg"
+          },
+          {
+            "id": "lib-6cbba2b44de2716b5d3e",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
+            "path": "uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
+            "name": "13.jpg"
+          },
+          {
+            "id": "lib-de5b435af264dd907e63",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-de5b435af264dd907e63.jpg",
+            "path": "uploads/orion/library/lib-de5b435af264dd907e63.jpg",
+            "name": "14.jpg"
+          },
+          {
+            "id": "lib-2ecba48e7447484b2697",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
+            "path": "uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
+            "name": "15.jpg"
+          },
+          {
+            "id": "lib-24a8ee9421c833df011d",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
+            "path": "uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
+            "name": "16.jpg"
+          },
+          {
+            "id": "lib-34b85dbaaa2668416be8",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
+            "path": "uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
+            "name": "17.jpg"
+          },
+          {
+            "id": "lib-7cf056e85990628ff84c",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
+            "path": "uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
+            "name": "18.jpg"
+          },
+          {
+            "id": "lib-dcb24c79562a47c2d135",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
+            "path": "uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
+            "name": "19.jpg"
+          },
+          {
+            "id": "lib-bc47092575f59019e6a9",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
+            "path": "uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
+            "name": "20.jpg"
+          }
+        ],
+        "position_mode": "end",
+        "position": 1
       }
     ]
   },
