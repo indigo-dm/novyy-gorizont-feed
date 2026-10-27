@@ -312,40 +312,7 @@
   },
   "parameter_settings": {
     "lot_values": {},
-    "bulk_rules": [
-      {
-        "id": "parameter-rule-1793103415053",
-        "name": "ID новостройки",
-        "enabled": true,
-        "values": {
-          "NewDevelopmentId": "10189300"
-        },
-        "house_ids": [],
-        "rooms": [],
-        "floors": [],
-        "plan_ids": [],
-        "area_min": null,
-        "area_max": null,
-        "include_ids": [],
-        "exclude_ids": []
-      },
-      {
-        "id": "parameter-rule-1793103428971",
-        "name": "Адрес",
-        "enabled": true,
-        "values": {
-          "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2"
-        },
-        "house_ids": [],
-        "rooms": [],
-        "floors": [],
-        "plan_ids": [],
-        "area_min": null,
-        "area_max": null,
-        "include_ids": [],
-        "exclude_ids": []
-      }
-    ]
+    "bulk_rules": []
   },
   "material_settings": {
     "logo": "uploads/mat-mv98xebb-5355b70af7-mask-group.png",
