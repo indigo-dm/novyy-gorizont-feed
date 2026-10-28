@@ -294,6 +294,11 @@ def output_parameters(item: dict[str, object], parameter_config: dict[str, objec
     values.update(parameter_config.get("lot_values", {}).get(str(item["id"]), {}))
     if "Description" in values:
         values["Description"] = render_description(values["Description"], item, values)
+    # NewDevelopmentId may come from either the source feed or a Feed Studio
+    # override. write_feed() removes the redundant Address in both cases, so
+    # the manifest must describe the same outgoing XML.
+    if (item.get("house_id") or values.get("NewDevelopmentId")) and "Address" in values:
+        values.pop("Address")
     return values
 
 

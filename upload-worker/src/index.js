@@ -1106,6 +1106,128 @@ async function settingsStatus(request, env, origin) {
   return json({ request: issue.number, status: 'building', updatedAt: issue.updated_at }, 200, origin, env);
 }
 
+function validationLatestKey(project) {
+  return `validations/${project}/latest.json`;
+}
+
+function validationResultKey(requestNumber) {
+  return `validation-results/${requestNumber}.json`;
+}
+
+function validSettingsRequest(payload) {
+  return payload && [2, 3, 4].includes(payload.version) && Array.isArray(payload.rules) &&
+    Array.isArray(payload.excluded_lot_ids || []) && typeof payload.image_settings === 'object' &&
+    typeof payload.parameter_settings === 'object' &&
+    (payload.version < 3 || typeof payload.material_settings === 'object');
+}
+
+async function createFeedValidationRequest(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Хранилище протоколов временно недоступно.' }, 503, origin, env);
+  const payload = await request.json().catch(() => null);
+  const project = String(payload && payload.project || '').trim();
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) || (allowedProjects(env).size && !allowedProjects(env).has(project))) {
+    return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  }
+  if (!validSettingsRequest(payload)) return json({ error: 'Некорректный формат настроек.' }, 400, origin, env);
+  const settings = JSON.stringify(payload, null, 2);
+  if (settings.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической обработки.' }, 413, origin, env);
+
+  const previousObject = await env.FEED_STORAGE.get(validationLatestKey(project));
+  if (previousObject) {
+    const previous = await previousObject.json().catch(() => null);
+    const requestedAt = Date.parse(previous && previous.requested_at || '');
+    if (previous && ['queued', 'checking'].includes(previous.status) && Number.isFinite(requestedAt) && Date.now() - requestedAt < 20 * 60 * 1000) {
+      return json({ error: 'Проверка этого объекта уже выполняется.', validation: previous }, 409, origin, env);
+    }
+  }
+
+  const settingsHash = await sha256Hex(JSON.stringify(payload));
+  const requestedAt = new Date().toISOString();
+  const meta = JSON.stringify({ settings_hash: settingsHash, requested_at: requestedAt }, null, 2);
+  const body = 'Запрос на проверку исходящего XML официальным валидатором Авито. Публикация фида не требуется.\n\n' +
+    'FEED_SETTINGS_JSON_START\n' + settings + '\nFEED_SETTINGS_JSON_END\n\n' +
+    'FEED_VALIDATION_META_START\n' + meta + '\nFEED_VALIDATION_META_END\n\n' +
+    'Запрос создан Feed Studio автоматически.';
+  const issue = await github(env, '/issues', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: `[feed-validation] ${project}: проверить исходящий XML`,
+      body
+    })
+  });
+  const marker = {
+    version: 1,
+    request: issue.number,
+    project,
+    status: 'queued',
+    settings_hash: settingsHash,
+    requested_at: requestedAt
+  };
+  await env.FEED_STORAGE.put(validationLatestKey(project), JSON.stringify(marker), {
+    httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+  });
+  return json(marker, 202, origin, env);
+}
+
+async function feedValidationStatus(request, env, origin) {
+  if (!(await authorize(request, env))) return json({ error: 'Неверный пароль Feed Studio.' }, 401, origin, env);
+  if (!r2Available(env)) return json({ error: 'Хранилище протоколов временно недоступно.' }, 503, origin, env);
+  const project = String(new URL(request.url).searchParams.get('project') || '').trim();
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project) || (allowedProjects(env).size && !allowedProjects(env).has(project))) {
+    return json({ error: 'Неизвестный объект.' }, 400, origin, env);
+  }
+  const markerObject = await env.FEED_STORAGE.get(validationLatestKey(project));
+  if (!markerObject) return json({ version: 1, project, status: 'not_run' }, 200, origin, env);
+  const marker = await markerObject.json();
+  const requestNumber = String(marker.request || '');
+  if (!/^\d{1,12}$/.test(requestNumber)) return json({ error: 'Повреждён статус проверки.' }, 500, origin, env);
+
+  const resultObject = await env.FEED_STORAGE.get(validationResultKey(requestNumber));
+  if (resultObject) {
+    const result = await resultObject.json();
+    await env.FEED_STORAGE.put(validationLatestKey(project), JSON.stringify(result), {
+      httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+    });
+    return json(result, 200, origin, env);
+  }
+  if (['passed', 'has_errors', 'technical_error'].includes(marker.status)) return json(marker, 200, origin, env);
+
+  const issue = await github(env, `/issues/${requestNumber}`);
+  if (!String(issue.title || '').startsWith('[feed-validation]')) return json({ error: 'Операция не относится к валидации фида.' }, 404, origin, env);
+  const comments = await github(env, `/issues/${requestNumber}/comments?per_page=30`);
+  const failure = comments.find((comment) => /VALIDATION_FAILED:/i.test(String(comment.body || '')));
+  if (failure) {
+    const failed = {
+      ...marker,
+      status: 'technical_error',
+      completed_at: issue.closed_at || issue.updated_at,
+      message: 'Официальная проверка не завершилась. Повторите запрос.'
+    };
+    await env.FEED_STORAGE.put(validationLatestKey(project), JSON.stringify(failed), {
+      httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+    });
+    return json(failed, 200, origin, env);
+  }
+  if (issue.state === 'closed') {
+    const closedAt = Date.parse(issue.closed_at || issue.updated_at || '');
+    if (Number.isFinite(closedAt) && Date.now() - closedAt < 60 * 1000) {
+      return json({ ...marker, status: 'checking', updated_at: issue.updated_at }, 200, origin, env);
+    }
+    const failed = {
+      ...marker,
+      status: 'technical_error',
+      completed_at: issue.closed_at || issue.updated_at,
+      message: 'Протокол проверки не найден. Повторите запрос.'
+    };
+    await env.FEED_STORAGE.put(validationLatestKey(project), JSON.stringify(failed), {
+      httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
+    });
+    return json(failed, 200, origin, env);
+  }
+  return json({ ...marker, status: 'checking', updated_at: issue.updated_at }, 200, origin, env);
+}
+
 function refreshMarkerKey(requestId) {
   return `refresh-operations/${requestId}.json`;
 }
@@ -1333,6 +1455,8 @@ export default {
       if (request.method === 'POST' && path === '/source-feed') return await saveSourceFeed(request, env, origin);
       if (request.method === 'POST' && path === '/settings') return await createSettingsRequest(request, env, origin);
       if (request.method === 'GET' && path === '/status') return await settingsStatus(request, env, origin);
+      if (request.method === 'POST' && path === '/validation') return await createFeedValidationRequest(request, env, origin);
+      if (request.method === 'GET' && path === '/validation') return await feedValidationStatus(request, env, origin);
       if (request.method === 'POST' && path === '/refresh') return await createFeedRefreshRequest(request, env, origin);
       if (request.method === 'GET' && path === '/refresh/status') return await feedRefreshStatus(request, env, origin);
       return json({ error: 'Метод или адрес не поддерживается.' }, 405, origin, env);

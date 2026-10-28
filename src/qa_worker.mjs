@@ -90,6 +90,7 @@ const env = {
 
 let issueState = 'open';
 let createdBody = '';
+let validationBody = '';
 let materialUploadCreated = false;
 let materialUploadAttempts = 0;
 let materialDeleteRequests = 0;
@@ -120,7 +121,12 @@ let refreshRequestId = '';
 globalThis.fetch = async (url, options = {}) => {
   const value = String(url);
   if (value.endsWith('/issues') && options.method === 'POST') {
-    createdBody = JSON.parse(options.body).body;
+    const payload = JSON.parse(options.body);
+    if (String(payload.title || '').startsWith('[feed-validation]')) {
+      validationBody = payload.body;
+      return Response.json({ number: 18, created_at: '2026-10-28T17:20:00Z' }, { status: 201 });
+    }
+    createdBody = payload.body;
     return Response.json({ number: 17, created_at: '2026-09-26T10:00:00Z' }, { status: 201 });
   }
   if (value.includes('/contents/projects/novyy-gorizont/assets/uploads/') && options.method === 'PUT') {
@@ -201,6 +207,10 @@ globalThis.fetch = async (url, options = {}) => {
     return Response.json({ number: 17, state: issueState, title: '[feed-settings] novyy-gorizont: обновить настройки фида', closed_at: issueState === 'closed' ? '2026-09-26T10:30:00Z' : null });
   }
   if (value.includes('/issues/17/comments')) return Response.json([]);
+  if (value.endsWith('/issues/18')) {
+    return Response.json({ number: 18, state: 'open', title: '[feed-validation] novyy-gorizont: проверить исходящий XML', updated_at: '2026-10-28T17:20:10Z' });
+  }
+  if (value.includes('/issues/18/comments')) return Response.json([]);
   throw new Error(`Unexpected GitHub request: ${value}`);
 };
 
@@ -361,6 +371,41 @@ issueState = 'closed';
 const publishedResponse = await worker.fetch(new Request('https://worker.example/status?request=17', { headers }), env);
 const published = await publishedResponse.json();
 const settingsFrontendDeployDispatched = frontendDeployDispatched;
+
+const validationResponse = await worker.fetch(new Request('https://worker.example/validation', {
+  method: 'POST',
+  headers,
+  body: JSON.stringify({
+    version: 4,
+    project: 'novyy-gorizont',
+    rules: [],
+    excluded_lot_ids: [],
+    image_settings: { lot_overrides: {}, bulk_rules: [] },
+    parameter_settings: { lot_values: {}, bulk_rules: [] },
+    card_settings: { show_key_render: true, show_house_badge: true, show_decoration: true, show_logo_panel: true },
+    material_settings: {}
+  })
+}), env);
+const validationAccepted = await validationResponse.json();
+const validationCheckingResponse = await worker.fetch(new Request('https://worker.example/validation?project=novyy-gorizont', { headers }), env);
+const validationChecking = await validationCheckingResponse.json();
+await feedStorage.put('validation-results/18.json', JSON.stringify({
+  version: 1,
+  request: 18,
+  project: 'novyy-gorizont',
+  status: 'has_errors',
+  status_text: 'XML не полностью соответствует формату',
+  settings_hash: validationAccepted.settings_hash,
+  source_checked_at: '2026-10-28T20:20:00+03:00',
+  checked_ads: 1,
+  feed_ads: 1,
+  errors: 1,
+  warnings: 0,
+  issues: [{ ad_id: '9301142', severity: 'error', message: 'Проверьте обязательное поле' }],
+  completed_at: '2026-10-28T17:21:00Z'
+}));
+const validationCompleteResponse = await worker.fetch(new Request('https://worker.example/validation?project=novyy-gorizont', { headers }), env);
+const validationComplete = await validationCompleteResponse.json();
 const dataResponse = await worker.fetch(new Request('https://worker.example/data/projects/novyy-gorizont/avito.xml'), env);
 const dataXml = await dataResponse.text();
 const headResponse = await worker.fetch(new Request('https://worker.example/data/projects/novyy-gorizont/avito.xml', { method: 'HEAD' }), env);
@@ -406,6 +451,9 @@ const result = {
     libraryDeleteResponse.status === 200 && libraryDeleted.deleted === true && !feedStorage.objects.has(libraryUpload.path) &&
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
+    validationResponse.status === 202 && validationAccepted.request === 18 && validationAccepted.status === 'queued' && /^[a-f0-9]{64}$/.test(validationAccepted.settings_hash) &&
+    validationBody.includes('FEED_VALIDATION_META_START') && validationBody.includes('FEED_SETTINGS_JSON_START') &&
+    validationChecking.status === 'checking' && validationComplete.status === 'has_errors' && validationComplete.issues[0].ad_id === '9301142' &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
     refreshResponse.status === 202 && refreshDispatchInputs?.project === 'novyy-gorizont' && refreshDispatchInputs?.render_ids === 'changed' && refreshDispatchInputs?.request_id === refreshAccepted.request &&
     refreshDeploying.status === 'deploying' && refreshPublished.status === 'published' && frontendDeployDispatched &&
@@ -417,6 +465,8 @@ const result = {
   settings_status: settingsResponse.status,
   building_status: building.status,
   published_status: published.status,
+  validation_statuses: [validationChecking.status, validationComplete.status],
+  validation_issue: validationAccepted.request,
   frontend_deploy_dispatched: frontendDeployDispatched,
   deletion_forwarded: createdBody.includes('uploads/novyy-gorizont/9301142/add-test.jpg'),
   excluded_lot_forwarded: createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"'),

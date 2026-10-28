@@ -1,0 +1,106 @@
+name: Validate feed in Avito
+run-name: "Avito validation ${{ github.event.issue.number }}"
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  validate:
+    if: github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-validation]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout application source
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Checkout current published inventory
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          path: .feed-data
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate and apply candidate settings without committing
+        id: settings
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          PUBLISHED_INVENTORY_ROOT: .feed-data/published
+        run: python src/apply_issue_settings.py
+
+      - name: Load protected Profitbase source addresses
+        env:
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
+        run: |
+          mkdir -p .source-feeds
+          aws s3 sync s3://indigo-feed-studio/private/source-feeds .source-feeds --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" --only-show-errors
+          python src/prepare_source_feeds.py --source .source-feeds
+
+      - name: Build isolated outgoing XML
+        env:
+          PROJECT_SLUG: ${{ steps.settings.outputs.project }}
+          PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
+          FEED_STUDIO_UPLOAD_URL: https://feed-api.indigo-dm.ru
+        run: python src/build_fast.py
+
+      - name: Send candidate XML to the official Avito checker
+        env:
+          PROJECT_SLUG: ${{ steps.settings.outputs.project }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python src/validate_avito.py \
+            --xml "work/${PROJECT_SLUG}/output/avito.xml" \
+            --manifest "work/${PROJECT_SLUG}/output/full-manifest.json" \
+            --output "work/${PROJECT_SLUG}/output/avito-validation.json"
+
+      - name: Save validation protocol
+        env:
+          PROJECT_SLUG: ${{ steps.settings.outputs.project }}
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: indigo-feed-studio
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          aws s3 cp "work/${PROJECT_SLUG}/output/avito-validation.json" \
+            "s3://${R2_BUCKET}/validation-results/${ISSUE_NUMBER}.json" \
+            --content-type "application/json; charset=utf-8" \
+            --cache-control "no-store, max-age=0" \
+            --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --only-show-errors
+
+      - name: Complete validation request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "VALIDATION_COMPLETE: официальный валидатор Авито вернул протокол. Результат доступен в Feed Studio."
+          gh issue close "$ISSUE_NUMBER"
+
+  report-failure:
+    if: always() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-validation]') && needs.validate.result == 'failure'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report technical failure
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "VALIDATION_FAILED: техническая проверка не завершилась. Повторите запрос из Feed Studio."
+          gh issue close "$ISSUE_NUMBER"
