@@ -3,7 +3,7 @@
   "source_feed_key": "orion",
   "public_image_base_url": "https://feed-api.indigo-dm.ru/media/projects/orion/images",
   "brand": {
-    "green": "#3F245C",
+    "green": "#924694",
     "green_dark": "#1D1D1B",
     "gold": "#924694",
     "gray": "#48277F",
@@ -65,7 +65,7 @@
     "show_key_render": true,
     "show_house_badge": false,
     "show_decoration": false,
-    "promotion_frame_color": "#3F245C",
+    "promotion_frame_color": "#924694",
     "promotion_text_color": "#FFFFFF"
   },
   "houses": {}
