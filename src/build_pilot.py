@@ -346,7 +346,7 @@ def write_feed(
         for tag, value in item.get("feed_parameters", {}).items():
             set_parameter(clone, str(tag), value)
         address = clone.find("Address")
-        if address is not None and clone.find("NewDevelopmentId") is not None:
+        if address is not None and node_text(clone, "NewDevelopmentId"):
             clone.remove(address)
         output_root.append(clone)
     ET.indent(output_root, space="  ")

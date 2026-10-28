@@ -1,5 +1,11 @@
-from build_pilot import output_parameters
-from validate_avito import parse_report
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
+from urllib.error import URLError
+from xml.etree import ElementTree as ET
+
+from build_pilot import output_parameters, write_feed
+from validate_avito import parse_report, request
 
 
 PASSED = """
@@ -17,6 +23,40 @@ WARNINGS = """
 </tbody></table>
 """
 
+DUPLICATE_ERRORS = """
+<article><span class="status_warnings is-yellow">XML не полностью соответствует формату</span>
+<fieldset><label>Проверено объявлений</label>1</fieldset></article>
+<table><tbody><tr><td><a name="ad_408036106"></a>1</td><td>408036106</td><td>
+<div class="message"><span class="is-yellow">Address</span>
+<div>Элементы были проигнорированы. Данные об адресе и координатах были получены по значению элемента NewDevelopmentId / Id новостройки.</div></div>
+<div class="message"><span class="is-red">Id новостройки: не задано</span>
+<div>Не заполнен обязательный параметр NewDevelopmentId.</div><div>Укажите его значение по правилам.</div><a>Подробнее...</a></div>
+<div class="message"><span class="is-red">Ошибка параметра</span>
+<div>Неправильно заполнен обязательный параметр — Адрес.</div><div>Неверный формат. Правила: Address / Адрес. Если ошибка повторяется, попробуйте другие способы исправления.</div><a>Подробнее...</a></div>
+<div class="message"><span class="is-red">Ошибка параметра</span>
+<div>Неправильно заполнен обязательный параметр — Адрес.</div><div>Введите значение параметра. Правила: Address / Адрес. Если ошибка повторяется, попробуйте другие способы исправления.</div><a>Подробнее...</a></div>
+</td></tr></tbody></table>
+"""
+
+
+class FakeHeaders:
+    def get_content_type(self) -> str:
+        return "application/json"
+
+
+class FakeResponse:
+    status = 200
+    headers = FakeHeaders()
+
+    def __enter__(self) -> "FakeResponse":
+        return self
+
+    def __exit__(self, *args: object) -> None:
+        return None
+
+    def read(self) -> bytes:
+        return b'{}'
+
 
 def main() -> None:
     passed = parse_report(PASSED)
@@ -33,6 +73,24 @@ def main() -> None:
     assert warnings["issues"][0]["ad_id"] == "408036106"
     assert "Не заполнено поле" in warnings["issues"][0]["message"]
 
+    duplicate_errors = parse_report(DUPLICATE_ERRORS)
+    assert duplicate_errors["errors"] == 1
+    assert duplicate_errors["warnings"] == 0
+    assert duplicate_errors["issues"][0]["messages"] == [
+        "Не заполнен NewDevelopmentId (ID новостройки).",
+        "Address (адрес) не заполнен или имеет неверный формат.",
+    ]
+    assert "Подробнее" not in duplicate_errors["issues"][0]["message"]
+
+    with (
+        patch("validate_avito.urlopen", side_effect=[URLError("temporary"), FakeResponse()]) as mocked_urlopen,
+        patch("validate_avito.time.sleep") as mocked_sleep,
+    ):
+        status, content_type, body = request("https://example.test/", accept="application/json")
+    assert (status, content_type, body) == (200, "application/json", b"{}")
+    assert mocked_urlopen.call_count == 2
+    mocked_sleep.assert_called_once_with(1)
+
     outgoing = output_parameters(
         {"id": "1", "house_id": "", "source_values": {}},
         {
@@ -48,6 +106,24 @@ def main() -> None:
         {"bulk_rules": [], "lot_values": {"2": {"Address": "Ростов-на-Дону"}}},
     )
     assert "Address" not in source_development
+
+    source_root = ET.fromstring(
+        "<Ads><Ad><Id>3</Id><NewDevelopmentId></NewDevelopmentId>"
+        "<Address>Ростов-на-Дону</Address><Images /></Ad></Ads>"
+    )
+    source_ad = source_root.find("Ad")
+    assert source_ad is not None
+    with TemporaryDirectory() as directory:
+        destination = Path(directory) / "avito.xml"
+        write_feed(
+            source_root,
+            {"3": source_ad},
+            [{"id": "3", "feed_images": [], "feed_parameters": {}}],
+            destination,
+        )
+        written = ET.parse(destination).getroot().find("Ad")
+        assert written is not None
+        assert written.findtext("Address") == "Ростов-на-Дону"
     print("Avito validation parser QA passed")
 
 

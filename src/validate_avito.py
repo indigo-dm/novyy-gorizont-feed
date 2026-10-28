@@ -29,7 +29,7 @@ class ReportParser(HTMLParser):
         self.row_parts: list[str] = []
         self.row_html_classes: set[str] = set()
         self.row_ad_id = ""
-        self.rows: list[dict[str, str]] = []
+        self.rows: list[dict[str, object]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attributes = {key: value or "" for key, value in attrs}
@@ -86,6 +86,48 @@ def clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", unescape(value)).strip()
 
 
+def concise_issue_messages(value: str) -> list[str]:
+    """Turn Avito's repeated row text into unique operator-facing causes."""
+    text = clean_text(value)
+    messages: list[str] = []
+
+    def add(message: str) -> None:
+        if message and message not in messages:
+            messages.append(message)
+
+    missing_development = bool(re.search(
+        r"Id новостройки:\s*не задано|Не заполнен обязательный параметр NewDevelopmentId",
+        text,
+        flags=re.IGNORECASE,
+    ))
+    address_error = "Неправильно заполнен обязательный параметр — Адрес" in text
+    address_missing = address_error and "Введите значение параметра" in text
+    address_format = address_error and "Неверный формат" in text
+
+    if missing_development:
+        add("Не заполнен NewDevelopmentId (ID новостройки).")
+    if address_missing and address_format:
+        add("Address (адрес) не заполнен или имеет неверный формат.")
+    elif address_missing:
+        add("Не заполнен Address (адрес).")
+    elif address_format:
+        add("Address (адрес) имеет неверный формат.")
+
+    # The official report also emits an informational "Address ignored" block
+    # for the same geolocation problem. It adds no action when one of the two
+    # actionable causes above is already present.
+    if not messages and "Элементы были проигнорированы" in text and "NewDevelopmentId" in text:
+        add("Address проигнорирован: геопривязка определяется по NewDevelopmentId.")
+
+    if messages:
+        return messages
+
+    fallback = re.sub(r"^\d+\s+[A-Za-z0-9_-]+\s+", "", text)
+    fallback = re.sub(r"\s*Подробнее\.\.\.", "", fallback)
+    fallback = clean_text(fallback)
+    return [fallback[:1000]] if fallback else []
+
+
 def parse_report(source: str) -> dict[str, object]:
     parser = ReportParser()
     parser.feed(source)
@@ -100,6 +142,10 @@ def parse_report(source: str) -> dict[str, object]:
     accepted_match = re.search(r"Файл принят\s*(\d{1,2}\.\d{1,2}\.\d{4}\s+\d{1,2}:\d{2}:\d{2})", text, flags=re.IGNORECASE)
     errors = sum(1 for row in parser.rows if row["severity"] == "error")
     warnings = len(parser.rows) - errors
+    for row in parser.rows:
+        messages = concise_issue_messages(str(row["message"]))
+        row["messages"] = messages
+        row["message"] = " ".join(messages)
     return {
         "status": "passed" if passed else "has_errors",
         "status_text": status_text or ("XML соответствует формату" if passed else "Авито вернул замечания"),
@@ -111,20 +157,31 @@ def parse_report(source: str) -> dict[str, object]:
     }
 
 
-def request(url: str, *, data: bytes | None = None, accept: str) -> tuple[int, str, bytes]:
+def request(
+    url: str,
+    *,
+    data: bytes | None = None,
+    accept: str,
+    attempts: int = 3,
+) -> tuple[int, str, bytes]:
     headers = {
         "Accept": accept,
         "User-Agent": "indigo-feed-studio-validation/1.0",
     }
     if data is not None:
         headers["Content-Type"] = "application/xml; charset=utf-8"
-    try:
-        with urlopen(Request(url, data=data, headers=headers), timeout=45) as response:
-            return response.status, response.headers.get_content_type(), response.read()
-    except HTTPError as error:
-        return error.code, error.headers.get_content_type(), error.read()
-    except (URLError, TimeoutError) as error:
-        raise RuntimeError(f"Official Avito validator is unavailable: {error}") from error
+    last_error: URLError | TimeoutError | None = None
+    for attempt in range(max(1, attempts)):
+        try:
+            with urlopen(Request(url, data=data, headers=headers), timeout=45) as response:
+                return response.status, response.headers.get_content_type(), response.read()
+        except HTTPError as error:
+            return error.code, error.headers.get_content_type(), error.read()
+        except (URLError, TimeoutError) as error:
+            last_error = error
+            if attempt + 1 < max(1, attempts):
+                time.sleep(2 ** attempt)
+    raise RuntimeError(f"Official Avito validator is unavailable after {attempts} attempts: {last_error}") from last_error
 
 
 def official_validation(xml: bytes) -> tuple[str, dict[str, object]]:
