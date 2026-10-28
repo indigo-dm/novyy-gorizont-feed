@@ -13,6 +13,7 @@ assert "secrets: inherit" in workflow
 assert "--data-only" not in workflow
 assert "src/build_fast.py" not in workflow
 assert "uses: ./.github/workflows/build-fast-data.yml" in refresh
+assert "actions: read" in refresh
 
 print({
     "safe_refresh": True,
