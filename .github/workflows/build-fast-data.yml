@@ -1,4 +1,4 @@
-name: Build fast feed data
+name: Build safe feed data
 
 on:
   workflow_call:
@@ -17,6 +17,7 @@ on:
         default: ""
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: feed-data
@@ -24,69 +25,12 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout application source
-        uses: actions/checkout@v7
-        with:
-          ref: main
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-
-      - name: Load protected Profitbase source addresses
-        env:
-          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          PROFITBASE_FEEDS_JSON: ${{ secrets.PROFITBASE_FEEDS_JSON }}
-        run: |
-          mkdir -p .source-feeds
-          aws s3 sync s3://indigo-feed-studio/private/source-feeds .source-feeds --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" --only-show-errors
-          python src/prepare_source_feeds.py --source .source-feeds
-
-      - name: Build XML and interface data without rendering images
-        env:
-          PROJECT_SLUG: ${{ inputs.project }}
-          PROFITBASE_FEED_URL: ${{ secrets.PROFITBASE_FEED_URL }}
-          FEED_STUDIO_UPLOAD_URL: https://feed-api.indigo-dm.ru
-        run: python src/build_fast.py
-
-      - name: Checkout fast data branch
-        uses: actions/checkout@v7
-        with:
-          ref: feed-data
-          path: .feed-data
-
-      - name: Update published data
-        env:
-          PROJECT_SLUG: ${{ inputs.project }}
-        run: |
-          args=(--source fast-site --destination .feed-data/published)
-          if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
-          python src/sync_fast_data.py "${args[@]}"
-          git -C .feed-data config user.name "github-actions[bot]"
-          git -C .feed-data config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git -C .feed-data add published
-          if git -C .feed-data diff --cached --quiet; then
-            echo "Fast feed data is already current."
-          else
-            git -C .feed-data commit -m "Publish fast feed data"
-            git -C .feed-data push origin feed-data
-          fi
-
-      - name: Publish changed project data to Cloudflare R2
-        env:
-          PROJECT_SLUG: ${{ inputs.project }}
-          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
-          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_BUCKET: indigo-feed-studio
-        run: |
-          # Use the merged feed-data checkout so a project-only refresh keeps
-          # every other active project available in the public registry.
-          args=(--source .feed-data/published --data-only)
-          if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
-          python src/publish_r2.py "${args[@]}"
+    # Keep the reusable workflow entry point for existing callers, but route it
+    # through the incremental renderer. Cached cards are reused; changed, new,
+    # or remotely missing cards are rendered and validated before XML is
+    # published. This prevents data-only refreshes from creating dead media URLs.
+    uses: ./.github/workflows/deploy-pages.yml
+    with:
+      project: ${{ inputs.project }}
+      render_ids: changed
+    secrets: inherit
