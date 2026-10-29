@@ -81,9 +81,6 @@ def main() -> None:
                     actual_value = (node.text or "").strip() if node is not None else ""
                 if actual_value != expected_value:
                     errors.append(f"Parameter {tag} does not match manifest for ad {expected_id} in {path.name}")
-            if ad.find("NewDevelopmentId") is not None and ad.find("Address") is not None:
-                errors.append(f"Redundant Address remains for ad {expected_id} in {path.name}")
-
     if not fast_build and not selective_render:
         for item in full["items"]:
             plan = WORK_DIR / str(item["plan_file"])

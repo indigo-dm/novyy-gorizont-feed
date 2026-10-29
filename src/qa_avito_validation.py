@@ -99,13 +99,41 @@ def main() -> None:
         },
     )
     assert outgoing["NewDevelopmentId"] == "10189300"
-    assert "Address" not in outgoing
+    assert outgoing["Address"] == "Ростов-на-Дону"
 
     source_development = output_parameters(
         {"id": "2", "house_id": "10189300", "source_values": {}},
         {"bulk_rules": [], "lot_values": {"2": {"Address": "Ростов-на-Дону"}}},
     )
-    assert "Address" not in source_development
+    assert source_development["Address"] == "Ростов-на-Дону"
+
+    source_with_development = ET.fromstring(
+        "<Ads><Ad><Id>2</Id><NewDevelopmentId>10189300</NewDevelopmentId>"
+        "<Address>Старый адрес</Address><Images /></Ad></Ads>"
+    )
+    source_with_development_ad = source_with_development.find("Ad")
+    assert source_with_development_ad is not None
+    with TemporaryDirectory() as directory:
+        destination = Path(directory) / "avito.xml"
+        write_feed(
+            source_with_development,
+            {"2": source_with_development_ad},
+            [{
+                "id": "2",
+                "feed_images": [],
+                "feed_parameters": {
+                    "NewDevelopmentId": "10189300",
+                    "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
+                },
+            }],
+            destination,
+        )
+        written = ET.parse(destination).getroot().find("Ad")
+        assert written is not None
+        assert written.findtext("NewDevelopmentId") == "10189300"
+        assert written.findtext("Address") == (
+            "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2"
+        )
 
     source_root = ET.fromstring(
         "<Ads><Ad><Id>3</Id><NewDevelopmentId></NewDevelopmentId>"
