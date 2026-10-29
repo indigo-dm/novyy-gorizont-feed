@@ -328,6 +328,22 @@
         "area_max": null,
         "include_ids": [],
         "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793251688428",
+        "name": "Адрес",
+        "enabled": true,
+        "values": {
+          "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
       }
     ]
   },
