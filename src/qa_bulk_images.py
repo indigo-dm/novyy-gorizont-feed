@@ -6,6 +6,7 @@ from build_pilot import output_images
 
 ITEM = {
     "id": "1",
+    "card_version": "qa-card-version",
     "house_id": "",
     "rooms": "1",
     "floor": "2",
@@ -56,6 +57,10 @@ def ids(config: dict[str, object]) -> list[str]:
     return [str(image["id"]) for image in output_images(ITEM, config, "https://cdn.example/generated")]
 
 
+def urls(config: dict[str, object]) -> list[str]:
+    return [str(image["url"]) for image in output_images(ITEM, config, "https://cdn.example/generated")]
+
+
 orders = {
     "start": ids(add_config("start")),
     "position": ids(add_config("position", 2)),
@@ -89,5 +94,24 @@ assert orders["end"][-1] == IMAGE["id"]
 assert orders["legacy_move"][0].startswith("src-")
 assert orders["library"][-1] == LIBRARY_IMAGE["id"]
 assert hide_target not in orders["hide"]
+assert urls(add_config("end"))[0] == "https://cdn.example/generated/1.png?v=qa-card-version"
+
+direct_media_rule = {
+    **SCOPE,
+    "id": "image-add-direct-media",
+    "name": "Direct media",
+    "action": "add",
+    "images": [{
+        **LIBRARY_IMAGE,
+        "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-0123456789abcdefabcd.jpg",
+    }],
+    "position_mode": "end",
+    "position": 1,
+}
+direct_media_urls = urls(image_settings({"lot_overrides": {}, "bulk_rules": [direct_media_rule]}, set(), "orion"))
+assert direct_media_urls[-1] == (
+    "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/"
+    "lib-0123456789abcdefabcd.jpg"
+)
 
 print(orders)

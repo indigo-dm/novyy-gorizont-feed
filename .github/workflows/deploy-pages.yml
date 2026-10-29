@@ -126,6 +126,7 @@ jobs:
           FEED_STUDIO_PASSWORD_HASH: ${{ secrets.FEED_STUDIO_PASSWORD_HASH }}
           FEED_STUDIO_UPLOAD_URL: https://feed-api.indigo-dm.ru
           FEED_ASSET_PUBLIC_ROOT: https://feed-api.indigo-dm.ru/media
+          FEED_MEDIA_PUBLIC_ROOT: https://indigo-feed-studio-gateway.pages.dev/media
         run: python src/build_all.py
 
       - name: Update generated data branch

@@ -15,6 +15,7 @@ class FakeR2 {
     const response = new Response(record.bytes);
     return {
       key: record.key,
+      size: record.bytes.length,
       body: includeBody ? response.body : undefined,
       uploaded: record.uploaded,
       httpEtag: `"qa-${record.bytes.length}"`,
@@ -27,7 +28,15 @@ class FakeR2 {
       async json() { return JSON.parse(new TextDecoder().decode(record.bytes)); }
     };
   }
-  async get(key) { return this.object(this.objects.get(key), true); }
+  async get(key, options = {}) {
+    const record = this.objects.get(key);
+    if (!record) return null;
+    const range = options.range;
+    if (!range) return this.object(record, true);
+    const offset = Number(range.offset || 0);
+    const length = Number(range.length || Math.max(0, record.bytes.length - offset));
+    return this.object({ ...record, bytes: record.bytes.slice(offset, offset + length) }, true);
+  }
   async head(key) { return this.object(this.objects.get(key), false); }
   async delete(keys) {
     for (const key of Array.isArray(keys) ? keys : [keys]) this.objects.delete(key);
@@ -319,6 +328,9 @@ const libraryDeleteResponse = await worker.fetch(new Request('https://worker.exa
 }), env);
 const libraryDeleted = await libraryDeleteResponse.json();
 const generatedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png'), env);
+const generatedMediaHeadResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png', { method: 'HEAD' }), env);
+const generatedMediaRangeResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png', { headers: { Range: 'bytes=1-2' } }), env);
+const generatedMediaRangeBytes = new Uint8Array(await generatedMediaRangeResponse.arrayBuffer());
 
 const materialBody = new FormData();
 materialBody.append('project', 'novyy-gorizont');
@@ -449,7 +461,9 @@ const result = {
     libraryMigration.mappings.filter((item) => item.old_path.includes('add-migrate-')).every((item, index, matches) => item.id === matches[0].id) &&
     libraryDeleteBlockedResponse.status === 409 && libraryDeleteBlocked.code === 'image_in_use' &&
     libraryDeleteResponse.status === 200 && libraryDeleted.deleted === true && !feedStorage.objects.has(libraryUpload.path) &&
-    generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' &&
+    generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' && generatedMediaResponse.headers.get('Accept-Ranges') === 'bytes' && generatedMediaResponse.headers.get('Content-Length') === '4' &&
+    generatedMediaHeadResponse.status === 200 && generatedMediaHeadResponse.headers.get('Content-Length') === '4' &&
+    generatedMediaRangeResponse.status === 206 && generatedMediaRangeResponse.headers.get('Content-Range') === 'bytes 1-2/4' && generatedMediaRangeResponse.headers.get('Content-Length') === '2' && generatedMediaRangeBytes[0] === 0x50 && generatedMediaRangeBytes[1] === 0x4e &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
     validationResponse.status === 202 && validationAccepted.request === 18 && validationAccepted.status === 'queued' && /^[a-f0-9]{64}$/.test(validationAccepted.settings_hash) &&
     validationBody.includes('FEED_VALIDATION_META_START') && validationBody.includes('FEED_SETTINGS_JSON_START') &&
@@ -493,6 +507,11 @@ const result = {
   media_status: mediaResponse.status,
   generated_media_status: generatedMediaResponse.status,
   generated_media_storage: generatedMediaResponse.headers.get('X-Feed-Storage'),
+  generated_media_headers: {
+    length: generatedMediaResponse.headers.get('Content-Length'),
+    ranges: generatedMediaResponse.headers.get('Accept-Ranges'),
+    partial: generatedMediaRangeResponse.headers.get('Content-Range')
+  },
   public_data_status: dataResponse.status,
   public_data_head_status: headResponse.status,
   refresh_statuses: [refreshDeploying.status, refreshPublished.status],

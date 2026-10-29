@@ -11,17 +11,21 @@ from datetime import datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
-from project_context import CONFIG_PATH, INPUT_DIR, OUTPUT_DIR, RULES_PATH, WORK_DIR
+from project_context import ASSETS_DIR, CONFIG_PATH, INPUT_DIR, OUTPUT_DIR, ROOT, RULES_PATH, WORK_DIR
 
 INPUT_XML = INPUT_DIR / "avito.xml"
 PILOT_MANIFEST_PATH = OUTPUT_DIR / "pilot-manifest.json"
 FULL_MANIFEST_PATH = OUTPUT_DIR / "full-manifest.json"
 PILOT_XML_PATH = OUTPUT_DIR / "pilot-avito.xml"
 FULL_XML_PATH = OUTPUT_DIR / "avito.xml"
+MEDIA_PUBLIC_ROOT = os.environ.get(
+    "FEED_MEDIA_PUBLIC_ROOT",
+    "https://indigo-feed-studio-gateway.pages.dev/media",
+).rstrip("/")
 
 
 def node_text(parent: ET.Element, name: str, default: str = "") -> str:
@@ -153,6 +157,68 @@ def source_image_id(url: str) -> str:
     return "src-" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
 
 
+def canonical_media_url(value: object) -> str:
+    """Use the direct Cloudflare Pages endpoint for public feed media.
+
+    The branded feed used to point at feed-api.indigo-dm.ru, where requests pass
+    through an additional external proxy before reaching Pages, the Worker and
+    R2. Avito downloads do not need that compatibility hostname.
+    """
+    url = str(value or "").strip()
+    parsed = urlparse(url)
+    if parsed.scheme not in {"http", "https"} or parsed.path != "/media" and not parsed.path.startswith("/media/"):
+        return url
+    if parsed.hostname not in {"feed-api.indigo-dm.ru", "indigo-feed-studio-gateway.pages.dev"}:
+        return url
+    root = urlparse(MEDIA_PUBLIC_ROOT)
+    suffix = parsed.path[len("/media"):]
+    return urlunparse((root.scheme, root.netloc, f"{root.path.rstrip('/')}{suffix}", "", parsed.query, ""))
+
+
+def file_digest(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else "missing"
+
+
+def renderer_digest(config: dict[str, object]) -> str:
+    brand = dict(config.get("brand", {}))
+    payload: dict[str, object] = {
+        "renderer": {
+            filename: file_digest(ROOT / "src" / filename)
+            for filename in ("render_pilot.cjs", "card_layout.cjs")
+        },
+        "brand": brand,
+        "assets": {},
+    }
+    for field in ("logo", "key_render", "background_render"):
+        filename = str(brand.get(field) or "").strip()
+        if filename:
+            payload["assets"][field] = {
+                "filename": filename,
+                "digest": file_digest(ASSETS_DIR / filename),
+            }
+    source = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(source.encode("utf-8")).hexdigest()
+
+
+def card_version(item: dict[str, object], render_digest: str) -> str:
+    plan_path = WORK_DIR / str(item.get("plan_file") or "")
+    payload = {
+        "renderer": render_digest,
+        "house": str(item.get("house") or ""),
+        "rooms": str(dict(item.get("feed_parameters", {})).get("Rooms", item.get("rooms", ""))),
+        "area": str(item.get("area") or ""),
+        "floor": str(item.get("floor") or ""),
+        "floors": str(item.get("floors") or ""),
+        "price": str(item.get("price") or ""),
+        "decoration": str(item.get("decoration") or ""),
+        "plan_url": str(item.get("plan_url") or ""),
+        "plan_digest": file_digest(plan_path),
+        "promotion": item.get("promotion"),
+    }
+    source = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(source.encode("utf-8")).hexdigest()[:16]
+
+
 def normalized_square(value: object) -> str:
     raw = str(value or "").strip().replace(",", ".")
     try:
@@ -236,9 +302,13 @@ def move_image(images: list[dict[str, str]], from_position: int, to_position: in
 def output_images(
     item: dict[str, object], image_config: dict[str, object], public_base: str
 ) -> list[dict[str, str]]:
+    version = str(item.get("card_version") or "").strip()
+    generated_url = f"{public_base}/{item['id']}.png"
+    if version:
+        generated_url += f"?v={version}"
     images = [{
         "id": "brand-card",
-        "url": f"{public_base}/{item['id']}.png",
+        "url": generated_url,
         "kind": "generated",
     }]
     images.extend({
@@ -248,7 +318,7 @@ def output_images(
     } for url in item["source_images"])
     override = image_config.get("lot_overrides", {}).get(str(item["id"]), {})
     for added in override.get("added", []):
-        images.append({"id": str(added["id"]), "url": str(added["url"]), "kind": "added"})
+        images.append({"id": str(added["id"]), "url": canonical_media_url(added["url"]), "kind": "added"})
     hidden = {str(value) for value in override.get("hidden", [])}
     images = [image for image in images if image["id"] not in hidden]
     natural_ids = [image["id"] for image in images]
@@ -259,7 +329,7 @@ def output_images(
             if rule.get("action") == "add":
                 existing_ids = {str(image["id"]) for image in images}
                 additions = [
-                    {"id": str(image["id"]), "url": str(image["url"]), "kind": "bulk-added"}
+                    {"id": str(image["id"]), "url": canonical_media_url(image["url"]), "kind": "bulk-added"}
                     for image in rule.get("images", [])
                     if str(image.get("id") or "") not in existing_ids
                     and str(image.get("id") or "") not in hidden
@@ -415,24 +485,25 @@ def main() -> None:
     pilot_items = sorted((copy.deepcopy(item) for item in representatives.values()), key=sort_key)
     checked_at = datetime.now(timezone(timedelta(hours=3))).isoformat(timespec="seconds")
     today = checked_at[:10]
-    public_base = config["public_image_base_url"].rstrip("/")
-    for item in items:
+    public_base = canonical_media_url(config["public_image_base_url"]).rstrip("/")
+    current_renderer_digest = renderer_digest(config)
+
+    def decorate_item(item: dict[str, object]) -> None:
         item["promotion"] = active_promotion(item, rules, today)
         item["source_image_items"] = [
             {"id": source_image_id(url), "url": url, "position": index}
             for index, url in enumerate(item["source_images"], start=1)
         ]
-        item["feed_images"] = output_images(item, image_config, public_base)
         item["feed_parameters"] = output_parameters(item, parameter_config)
+        item["card_version"] = card_version(item, current_renderer_digest)
+        item["feed_images"] = output_images(item, image_config, public_base)
+
+    for item in items:
+        decorate_item(item)
     promotions_by_id = {str(item["id"]): item.get("promotion") for item in items}
     for item in pilot_items:
+        decorate_item(item)
         item["promotion"] = promotions_by_id[str(item["id"])]
-        item["source_image_items"] = [
-            {"id": source_image_id(url), "url": url, "position": index}
-            for index, url in enumerate(item["source_images"], start=1)
-        ]
-        item["feed_images"] = output_images(item, image_config, public_base)
-        item["feed_parameters"] = output_parameters(item, parameter_config)
 
     source_tag_counts: dict[str, int] = {}
     for item in items:

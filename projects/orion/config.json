@@ -68,5 +68,7 @@
     "promotion_frame_color": "#924694",
     "promotion_text_color": "#FFFFFF"
   },
-  "houses": {}
+  "houses": {
+    "10189300": "Дом"
+  }
 }

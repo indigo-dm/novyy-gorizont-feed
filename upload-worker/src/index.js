@@ -62,17 +62,41 @@ function mimeForKey(key) {
   return 'application/octet-stream';
 }
 
-function objectResponse(object, request, cacheControl) {
+function objectResponse(object, request, cacheControl, options = {}) {
   const headers = new Headers({
     'Access-Control-Allow-Origin': '*',
     'X-Content-Type-Options': 'nosniff',
     'Cache-Control': cacheControl,
-    'X-Feed-Storage': 'r2'
+    'X-Feed-Storage': 'r2',
+    'Accept-Ranges': 'bytes'
   });
   if (object && typeof object.writeHttpMetadata === 'function') object.writeHttpMetadata(headers);
   if (!headers.has('Content-Type')) headers.set('Content-Type', mimeForKey(object && object.key));
   if (object && object.httpEtag) headers.set('ETag', object.httpEtag);
-  return new Response(request.method === 'HEAD' ? null : object.body, { status: 200, headers });
+  const length = Number(options.length ?? (object && object.size));
+  if (Number.isFinite(length) && length >= 0) headers.set('Content-Length', String(length));
+  if (options.contentRange) headers.set('Content-Range', options.contentRange);
+  return new Response(request.method === 'HEAD' ? null : object.body, { status: options.status || 200, headers });
+}
+
+function byteRange(value, size) {
+  if (!value) return null;
+  const match = /^bytes=(\d*)-(\d*)$/.exec(String(value).trim());
+  if (!match || (!match[1] && !match[2]) || !Number.isFinite(size) || size < 1) return false;
+  let start;
+  let end;
+  if (!match[1]) {
+    const suffix = Number(match[2]);
+    if (!Number.isInteger(suffix) || suffix < 1) return false;
+    start = Math.max(0, size - suffix);
+    end = size - 1;
+  } else {
+    start = Number(match[1]);
+    end = match[2] ? Number(match[2]) : size - 1;
+    if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || start >= size || end < start) return false;
+    end = Math.min(end, size - 1);
+  }
+  return { offset: start, length: end - start + 1, end };
 }
 
 function validMagic(bytes, mime) {
@@ -1391,10 +1415,37 @@ async function publicMedia(request, env, path) {
   if (!allowed) return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });
   if (r2Available(env)) {
     const storageKey = /^projects\//.test(key) ? `media/${key}` : key;
-    const object = request.method === 'HEAD'
-      ? await env.FEED_STORAGE.head(storageKey)
-      : await env.FEED_STORAGE.get(storageKey);
-    if (object) return objectResponse(object, request, 'public, max-age=300, must-revalidate');
+    const rangeHeader = request.headers.get('Range');
+    if (rangeHeader) {
+      const head = await env.FEED_STORAGE.head(storageKey);
+      if (head) {
+        const range = byteRange(rangeHeader, Number(head.size));
+        if (!range) {
+          return new Response(null, {
+            status: 416,
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Accept-Ranges': 'bytes',
+              'Content-Range': `bytes */${head.size}`,
+              'Cache-Control': 'no-store'
+            }
+          });
+        }
+        const object = request.method === 'HEAD'
+          ? head
+          : await env.FEED_STORAGE.get(storageKey, { range: { offset: range.offset, length: range.length } });
+        if (object) return objectResponse(object, request, 'public, max-age=300, must-revalidate', {
+          status: 206,
+          length: range.length,
+          contentRange: `bytes ${range.offset}-${range.end}/${head.size}`
+        });
+      }
+    } else {
+      const object = request.method === 'HEAD'
+        ? await env.FEED_STORAGE.head(storageKey)
+        : await env.FEED_STORAGE.get(storageKey);
+      if (object) return objectResponse(object, request, 'public, max-age=300, must-revalidate');
+    }
   }
   if (/^projects\//.test(key) && env.LEGACY_MEDIA_ROOT) {
     const legacy = await fetch(`${String(env.LEGACY_MEDIA_ROOT).replace(/\/+$/, '')}/${encodedPath(key)}`);
