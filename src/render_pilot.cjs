@@ -201,7 +201,7 @@ function htmlFor(item, includePromotion = true) {
   .canvas{position:relative;width:1200px;height:900px;color:var(--text);background:linear-gradient(145deg,var(--bg),var(--bg-dark))}.canvas:after{content:'';position:absolute;inset:0;background:var(--bg);opacity:.6}.background-render{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.46}
   .left,.card{z-index:1}.left{position:absolute;left:56px;top:54px;width:470px;height:792px}.logo{width:350px;height:111px;object-fit:contain;object-position:left top}.logo-light-panel{padding:12px 18px;border-radius:14px;background:#fff}.logo-fallback{display:flex;flex-direction:column;justify-content:center;color:var(--primary);font-size:35px;line-height:1;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.logo-fallback small{margin-top:11px;color:var(--subtitle);font-size:14px;font-weight:700;letter-spacing:.26em}
   .house{position:absolute;top:126px;left:0;height:42px;display:flex;align-items:center;padding:0 18px;border:1px solid currentColor;border-radius:100px;font-size:19px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-  .promo{position:absolute;top:121px;right:0;height:52px;max-width:470px;display:flex;align-items:center;padding:0 19px;border-radius:100px;background:var(--promo-frame);color:var(--promo-text);font-size:28px;line-height:1;font-weight:800;white-space:nowrap;overflow:hidden}.promo span{flex:0 0 auto;margin-right:10px;font-size:28px;line-height:1;letter-spacing:.035em;text-transform:uppercase}
+  .promo{position:absolute;top:117px;right:0;height:60px;max-width:470px;display:flex;align-items:center;padding:0 19px;border-radius:100px;background:var(--promo-frame);color:var(--promo-text);font-size:34px;line-height:1;font-weight:800;white-space:nowrap;overflow:hidden}.promo span{flex:0 0 auto;margin-right:10px;font-size:34px;line-height:1;letter-spacing:.035em;text-transform:uppercase}
   .render{position:absolute;top:181px;width:470px;height:405px;padding:8px;border:2px solid var(--primary);background:rgba(255,255,255,.1)}.render img{width:100%;height:100%;display:block;object-fit:cover;object-position:${renderPosition}}.render-fallback{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.08))}.render-fallback:before{content:'◆';margin-bottom:28px;color:var(--primary);font-size:54px}.render-fallback span{margin-bottom:13px;color:var(--subtitle);font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.render-fallback strong{font-size:34px;line-height:1.12;text-transform:uppercase}
   .lot{position:absolute;top:616px;width:470px;font-size:28px;line-height:1.15;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.finish{position:absolute;top:660px;font-size:18px;color:var(--subtitle)}
   .price{position:absolute;left:0;bottom:0;width:405px;height:92px;display:flex;align-items:center;justify-content:center;background:var(--primary);color:var(--text);font-size:36px;font-weight:800;letter-spacing:-.02em}
@@ -222,14 +222,14 @@ async function fitPromotionBadge(page) {
       ? Math.max(140, 470 - house.offsetWidth - 12)
       : 470;
     badge.style.maxWidth = `${availableWidth}px`;
-    let valueSize = 28;
-    let labelSize = 28;
+    let valueSize = 34;
+    let labelSize = 34;
     const applySizes = () => {
       badge.style.fontSize = `${valueSize}px`;
       if (label) label.style.fontSize = `${labelSize}px`;
     };
     applySizes();
-    while (badge.scrollWidth > badge.clientWidth + 1 && valueSize > 14) {
+    while (badge.scrollWidth > badge.clientWidth + 1 && valueSize > 18) {
       valueSize -= 1;
       labelSize = valueSize;
       applySizes();
