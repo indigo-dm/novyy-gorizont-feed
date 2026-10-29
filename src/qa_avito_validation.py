@@ -66,8 +66,9 @@ def main() -> None:
     assert passed["issues"] == []
 
     warnings = parse_report(WARNINGS)
-    assert warnings["status"] == "has_errors"
+    assert warnings["status"] == "has_warnings"
     assert warnings["checked_ads"] == 2
+    assert warnings["errors"] == 0
     assert warnings["warnings"] == 1
     assert len(warnings["issues"]) == 1
     assert warnings["issues"][0]["ad_id"] == "408036106"

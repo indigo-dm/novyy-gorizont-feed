@@ -201,7 +201,7 @@ function htmlFor(item, includePromotion = true) {
   .canvas{position:relative;width:1200px;height:900px;color:var(--text);background:linear-gradient(145deg,var(--bg),var(--bg-dark))}.canvas:after{content:'';position:absolute;inset:0;background:var(--bg);opacity:.6}.background-render{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.46}
   .left,.card{z-index:1}.left{position:absolute;left:56px;top:54px;width:470px;height:792px}.logo{width:350px;height:111px;object-fit:contain;object-position:left top}.logo-light-panel{padding:12px 18px;border-radius:14px;background:#fff}.logo-fallback{display:flex;flex-direction:column;justify-content:center;color:var(--primary);font-size:35px;line-height:1;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.logo-fallback small{margin-top:11px;color:var(--subtitle);font-size:14px;font-weight:700;letter-spacing:.26em}
   .house{position:absolute;top:126px;left:0;height:42px;display:flex;align-items:center;padding:0 18px;border:1px solid currentColor;border-radius:100px;font-size:19px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-  .promo{position:absolute;top:126px;right:0;height:42px;display:flex;align-items:center;padding:0 17px;border-radius:100px;background:var(--promo-frame);color:var(--promo-text);font-size:18px;font-weight:800;white-space:nowrap}.promo span{margin-right:8px;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .promo{position:absolute;top:121px;right:0;height:52px;max-width:470px;display:flex;align-items:center;padding:0 19px;border-radius:100px;background:var(--promo-frame);color:var(--promo-text);font-size:28px;line-height:1;font-weight:800;white-space:nowrap;overflow:hidden}.promo span{flex:0 0 auto;margin-right:10px;font-size:28px;line-height:1;letter-spacing:.035em;text-transform:uppercase}
   .render{position:absolute;top:181px;width:470px;height:405px;padding:8px;border:2px solid var(--primary);background:rgba(255,255,255,.1)}.render img{width:100%;height:100%;display:block;object-fit:cover;object-position:${renderPosition}}.render-fallback{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.08))}.render-fallback:before{content:'◆';margin-bottom:28px;color:var(--primary);font-size:54px}.render-fallback span{margin-bottom:13px;color:var(--subtitle);font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.render-fallback strong{font-size:34px;line-height:1.12;text-transform:uppercase}
   .lot{position:absolute;top:616px;width:470px;font-size:28px;line-height:1.15;font-weight:800;letter-spacing:.035em;text-transform:uppercase}.finish{position:absolute;top:660px;font-size:18px;color:var(--subtitle)}
   .price{position:absolute;left:0;bottom:0;width:405px;height:92px;display:flex;align-items:center;justify-content:center;background:var(--primary);color:var(--text);font-size:36px;font-weight:800;letter-spacing:-.02em}
@@ -210,6 +210,31 @@ function htmlFor(item, includePromotion = true) {
   .rule{position:absolute;left:30px;right:30px;top:644px;height:1px;background:#dfe5e3}.metrics{position:absolute;left:28px;right:28px;bottom:26px;height:106px;display:grid;grid-template-columns:.85fr 1.35fr 1fr;align-items:center}
   .metric{text-align:center;min-width:0}.metric+.metric{border-left:1px solid #dfe5e3}.label{margin-bottom:6px;font-size:16px;line-height:1;font-weight:600;color:var(--subtitle);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.value{font-size:43px;line-height:1;font-weight:800;color:var(--primary);white-space:nowrap}.value-studio{font-size:27px}.value small{font-size:23px;font-weight:700}
   </style></head><body><main class="canvas">${backgroundRender}<section class="left">${logo}${houseBadge}${promo}${render}<div class="lot">${esc(roomTitle(effectiveRooms))}</div>${decoration}<div class="price">${esc(formatPrice(item.price))}</div></section><section class="card"><div class="plan"><img src="${planUrl}"></div><div class="rule"></div><div class="metrics"><div class="metric"><div class="label">${roomsMetricLabel}</div><div class="${roomsMetricClass}">${esc(effectiveRooms)}</div></div><div class="metric"><div class="label">Площадь</div><div class="value">${esc(formatNumber(item.area))} <small>м²</small></div></div><div class="metric"><div class="label">Этаж</div><div class="value">${esc(item.floor)}<small>/${esc(item.floors)}</small></div></div></div></section></main></body></html>`;
+}
+
+async function fitPromotionBadge(page) {
+  await page.evaluate(() => {
+    const badge = document.querySelector('.promo');
+    if (!badge) return;
+    const label = badge.querySelector('span');
+    const house = document.querySelector('.house');
+    const availableWidth = house
+      ? Math.max(140, 470 - house.offsetWidth - 12)
+      : 470;
+    badge.style.maxWidth = `${availableWidth}px`;
+    let valueSize = 28;
+    let labelSize = 28;
+    const applySizes = () => {
+      badge.style.fontSize = `${valueSize}px`;
+      if (label) label.style.fontSize = `${labelSize}px`;
+    };
+    applySizes();
+    while (badge.scrollWidth > badge.clientWidth + 1 && valueSize > 14) {
+      valueSize -= 1;
+      labelSize = valueSize;
+      applySizes();
+    }
+  });
 }
 
 (async () => {
@@ -229,6 +254,7 @@ function htmlFor(item, includePromotion = true) {
     if (item.promotion) {
       await page.setContent(htmlFor(item, true), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready);
+      await fitPromotionBadge(page);
     }
     await page.screenshot({ path: path.join(outputDir, `${item.id}.png`), type: 'png' });
   }

@@ -146,8 +146,9 @@ def parse_report(source: str) -> dict[str, object]:
         messages = concise_issue_messages(str(row["message"]))
         row["messages"] = messages
         row["message"] = " ".join(messages)
+    status = "passed" if passed else ("has_errors" if errors else ("has_warnings" if warnings else "has_errors"))
     return {
-        "status": "passed" if passed else "has_errors",
+        "status": status,
         "status_text": status_text or ("XML соответствует формату" if passed else "Авито вернул замечания"),
         "accepted_at": accepted_match.group(1) if accepted_match else "",
         "checked_ads": int(checked_match.group(1)) if checked_match else None,
