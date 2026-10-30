@@ -1,37 +1,37 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-10-30T03:58:19+03:00",
-  "source_ads": 193,
-  "full_ads": 193,
+  "checked_at": "2026-10-30T19:43:05+03:00",
+  "source_ads": 192,
+  "full_ads": 192,
   "excluded_ads": 0,
   "unique_plans": 11,
   "source_tag_counts": {
-    "AdStatus": 193,
-    "Address": 193,
-    "BalconyOrLoggiaMulti": 193,
-    "Category": 193,
-    "ContactMethod": 193,
-    "ContactPhone": 193,
+    "AdStatus": 192,
+    "Address": 192,
+    "BalconyOrLoggiaMulti": 192,
+    "Category": 192,
+    "ContactMethod": 192,
+    "ContactPhone": 192,
     "DealType": 4,
-    "Decoration": 193,
-    "Description": 193,
-    "Floor": 193,
-    "Floors": 193,
-    "HouseType": 193,
-    "Id": 193,
-    "KitchenSpace": 193,
-    "LivingSpace": 193,
-    "ManagerName": 193,
-    "MarketType": 193,
-    "NewDevelopmentId": 193,
-    "OperationType": 193,
-    "Price": 193,
-    "PropertyRights": 193,
-    "RoomType": 193,
-    "Rooms": 193,
-    "Square": 193,
-    "Status": 193
+    "Decoration": 192,
+    "Description": 192,
+    "Floor": 192,
+    "Floors": 192,
+    "HouseType": 192,
+    "Id": 192,
+    "KitchenSpace": 192,
+    "LivingSpace": 192,
+    "ManagerName": 192,
+    "MarketType": 192,
+    "NewDevelopmentId": 192,
+    "OperationType": 192,
+    "Price": 192,
+    "PropertyRights": 192,
+    "RoomType": 192,
+    "Rooms": 192,
+    "Square": 192,
+    "Status": 192
   },
   "parameter_catalog": [
     {
@@ -132,6 +132,24 @@
       "supported": true
     },
     {
+      "tag": "KitchenSpace",
+      "name": "Площадь кухни",
+      "kind": "number",
+      "min": 2,
+      "max": 100,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "LivingSpace",
+      "name": "Жилая площадь",
+      "kind": "number",
+      "min": 5,
+      "max": 5000,
+      "step": 0.01,
+      "supported": true
+    },
+    {
       "tag": "Courtyard",
       "name": "Двор",
       "kind": "multi",
@@ -156,8 +174,46 @@
       "supported": true
     },
     {
+      "tag": "RoomType",
+      "name": "Тип комнат",
+      "kind": "multi",
+      "values": [
+        "Изолированные",
+        "Смежные"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "ContactMethod",
+      "name": "Способ связи",
+      "kind": "select",
+      "values": [
+        "По телефону и в сообщениях",
+        "По телефону"
+      ],
+      "default": "По телефону",
+      "supported": true
+    },
+    {
+      "tag": "BalconyOrLoggiaMulti",
+      "name": "Балкон или лоджия",
+      "kind": "multi",
+      "values": [
+        "Балкон",
+        "Лоджия"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "VideoURL",
+      "name": "Видео",
+      "kind": "url",
+      "max": 1500,
+      "supported": true
+    },
+    {
       "tag": "NDAdditionally",
-      "name": "Дополнительно о новостройке",
+      "name": "Дополнительно о планировке",
       "kind": "multi",
       "values": [
         "Гардеробная",
@@ -232,7 +288,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290600.png?v=fe2803bc028f6864",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290600/2a6e321905414587.png",
           "kind": "generated"
         },
         {
@@ -402,7 +458,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290769.png?v=e9bd4c0dfe895fcf",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290769/f5b47d4a641920d3.png",
           "kind": "generated"
         },
         {
@@ -572,7 +628,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301557.png?v=f808d09fe582509e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301557/fc1a28bed1522eca.png",
           "kind": "generated"
         },
         {
@@ -742,7 +798,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301142.png?v=aba7b690f34cd61b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301142/9061b17b26c61990.png",
           "kind": "generated"
         },
         {
@@ -912,7 +968,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923960.png?v=9d0ed61150d82a06",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923960/ac740d939094e124.png",
           "kind": "generated"
         },
         {
@@ -1080,7 +1136,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923755.png?v=7cffc4773896525c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923755/0dd2e9f6bbf7c450.png",
           "kind": "generated"
         },
         {
@@ -1248,7 +1304,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923860.png?v=9e0ab92dbcb9ebbe",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923860/c1e82e3192ffce07.png",
           "kind": "generated"
         },
         {
@@ -1416,7 +1472,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923655.png?v=8f8563ce356cc015",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923655/e3f89804ebe32917.png",
           "kind": "generated"
         },
         {
@@ -1584,7 +1640,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923760.png?v=bf2bf008bb844c6e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923760/42fa8db087ca51ff.png",
           "kind": "generated"
         },
         {
@@ -1752,7 +1808,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923865.png?v=8f8563ce356cc015",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923865/e3f89804ebe32917.png",
           "kind": "generated"
         },
         {
@@ -1920,7 +1976,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924075.png?v=8f8563ce356cc015",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924075/e3f89804ebe32917.png",
           "kind": "generated"
         },
         {
@@ -2088,7 +2144,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924180.png?v=bf2bf008bb844c6e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924180/42fa8db087ca51ff.png",
           "kind": "generated"
         },
         {
@@ -2256,7 +2312,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924285.png?v=8f8563ce356cc015",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924285/e3f89804ebe32917.png",
           "kind": "generated"
         },
         {
@@ -2424,7 +2480,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924390.png?v=bf2bf008bb844c6e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924390/42fa8db087ca51ff.png",
           "kind": "generated"
         },
         {
@@ -2592,7 +2648,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923660.png?v=8263e0f0433f51df",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923660/3a11b10d60aa065e.png",
           "kind": "generated"
         },
         {
@@ -2760,7 +2816,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923765.png?v=5be513755e62553c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923765/86c1a1f1b13db8a6.png",
           "kind": "generated"
         },
         {
@@ -2928,7 +2984,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923870.png?v=8263e0f0433f51df",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923870/3a11b10d60aa065e.png",
           "kind": "generated"
         },
         {
@@ -3096,7 +3152,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923975.png?v=5be513755e62553c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923975/86c1a1f1b13db8a6.png",
           "kind": "generated"
         },
         {
@@ -3264,7 +3320,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924080.png?v=8263e0f0433f51df",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924080/3a11b10d60aa065e.png",
           "kind": "generated"
         },
         {
@@ -3432,7 +3488,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924185.png?v=5be513755e62553c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924185/86c1a1f1b13db8a6.png",
           "kind": "generated"
         },
         {
@@ -3600,7 +3656,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924395.png?v=5be513755e62553c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924395/86c1a1f1b13db8a6.png",
           "kind": "generated"
         },
         {
@@ -3768,7 +3824,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923875.png?v=e543f6d6ae46d95f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923875/90fa5b50a1cf0994.png",
           "kind": "generated"
         },
         {
@@ -3936,7 +3992,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924085.png?v=e543f6d6ae46d95f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924085/90fa5b50a1cf0994.png",
           "kind": "generated"
         },
         {
@@ -4104,7 +4160,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924190.png?v=fac005d660134102",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924190/d1d6ba3562aea91e.png",
           "kind": "generated"
         },
         {
@@ -4272,7 +4328,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924295.png?v=e543f6d6ae46d95f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924295/90fa5b50a1cf0994.png",
           "kind": "generated"
         },
         {
@@ -4440,7 +4496,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924400.png?v=fac005d660134102",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924400/d1d6ba3562aea91e.png",
           "kind": "generated"
         },
         {
@@ -4608,7 +4664,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923670.png?v=85cfd5e6101335bc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923670/5ca6dc9f29e018f1.png",
           "kind": "generated"
         },
         {
@@ -4776,7 +4832,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923775.png?v=76065a79ac697b0c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923775/6f5614ec82dbb9d0.png",
           "kind": "generated"
         },
         {
@@ -4944,7 +5000,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924090.png?v=85cfd5e6101335bc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924090/5ca6dc9f29e018f1.png",
           "kind": "generated"
         },
         {
@@ -5112,7 +5168,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924195.png?v=76065a79ac697b0c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924195/6f5614ec82dbb9d0.png",
           "kind": "generated"
         },
         {
@@ -5280,7 +5336,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924300.png?v=85cfd5e6101335bc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924300/5ca6dc9f29e018f1.png",
           "kind": "generated"
         },
         {
@@ -5448,7 +5504,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924405.png?v=76065a79ac697b0c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924405/6f5614ec82dbb9d0.png",
           "kind": "generated"
         },
         {
@@ -5616,7 +5672,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923675.png?v=22ae5c3c498d8d7c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923675/5915843e4376dc86.png",
           "kind": "generated"
         },
         {
@@ -5784,7 +5840,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923780.png?v=fde652e528ac1b47",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923780/bd5f4e9ef84c6947.png",
           "kind": "generated"
         },
         {
@@ -5952,7 +6008,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923885.png?v=22ae5c3c498d8d7c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923885/5915843e4376dc86.png",
           "kind": "generated"
         },
         {
@@ -6120,7 +6176,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923990.png?v=fde652e528ac1b47",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923990/bd5f4e9ef84c6947.png",
           "kind": "generated"
         },
         {
@@ -6288,7 +6344,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924305.png?v=22ae5c3c498d8d7c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924305/5915843e4376dc86.png",
           "kind": "generated"
         },
         {
@@ -6456,7 +6512,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924410.png?v=fde652e528ac1b47",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924410/bd5f4e9ef84c6947.png",
           "kind": "generated"
         },
         {
@@ -6624,7 +6680,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923680.png?v=dc62bf84cf9ba35e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923680/eeb32ec8e456833e.png",
           "kind": "generated"
         },
         {
@@ -6792,7 +6848,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923785.png?v=0834f49ba95439c7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923785/816fda91ea8f846c.png",
           "kind": "generated"
         },
         {
@@ -6960,7 +7016,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924100.png?v=dc62bf84cf9ba35e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924100/eeb32ec8e456833e.png",
           "kind": "generated"
         },
         {
@@ -7128,7 +7184,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924205.png?v=0834f49ba95439c7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924205/816fda91ea8f846c.png",
           "kind": "generated"
         },
         {
@@ -7296,7 +7352,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923790.png?v=6758cbd4d5dda12a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923790/d19ed8303d8099bc.png",
           "kind": "generated"
         },
         {
@@ -7464,7 +7520,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924105.png?v=316e0127cfeeeed6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924105/aa530282ecde25bd.png",
           "kind": "generated"
         },
         {
@@ -7632,7 +7688,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924110.png?v=710ecd80e8117d20",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924110/7f3d03a8400e6bc5.png",
           "kind": "generated"
         },
         {
@@ -7800,7 +7856,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924320.png?v=710ecd80e8117d20",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924320/7f3d03a8400e6bc5.png",
           "kind": "generated"
         },
         {
@@ -7968,7 +8024,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924225.png?v=fdd0a212767c841d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924225/f1ca79c7f75fed68.png",
           "kind": "generated"
         },
         {
@@ -8136,7 +8192,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924335.png?v=8aff56727d8d02de",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924335/4022a2e3d5761028.png",
           "kind": "generated"
         },
         {
@@ -8304,7 +8360,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923858.png?v=20d5ed2ff26057b5",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923858/afcb75cbcc3855aa.png",
           "kind": "generated"
         },
         {
@@ -8472,7 +8528,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923758.png?v=675e783b5859b647",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923758/3c0b563af57a177e.png",
           "kind": "generated"
         },
         {
@@ -8640,7 +8696,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923863.png?v=f5e59016fbd02d16",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923863/5a4da60a2be15f53.png",
           "kind": "generated"
         },
         {
@@ -8808,7 +8864,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923968.png?v=9445ff6d806d71cd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923968/ee4d5caac9bb5158.png",
           "kind": "generated"
         },
         {
@@ -8976,7 +9032,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924073.png?v=f5e59016fbd02d16",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924073/5a4da60a2be15f53.png",
           "kind": "generated"
         },
         {
@@ -9144,7 +9200,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923763.png?v=29cd5eda7466ac24",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923763/9d78c261347a6334.png",
           "kind": "generated"
         },
         {
@@ -9312,7 +9368,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923868.png?v=614a4fc6a76d46c8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923868/6d27e51321895e99.png",
           "kind": "generated"
         },
         {
@@ -9480,7 +9536,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923973.png?v=cabf3146911235c1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923973/18e87fc6e0c7f6e9.png",
           "kind": "generated"
         },
         {
@@ -9648,7 +9704,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924078.png?v=614a4fc6a76d46c8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924078/6d27e51321895e99.png",
           "kind": "generated"
         },
         {
@@ -9816,7 +9872,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924183.png?v=29cd5eda7466ac24",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924183/9d78c261347a6334.png",
           "kind": "generated"
         },
         {
@@ -9984,7 +10040,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924393.png?v=29cd5eda7466ac24",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924393/9d78c261347a6334.png",
           "kind": "generated"
         },
         {
@@ -10152,7 +10208,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923873.png?v=f977e36e44ee4381",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923873/e0e6ff672deee061.png",
           "kind": "generated"
         },
         {
@@ -10320,7 +10376,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923978.png?v=06055f1814611b86",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923978/4195840594662c53.png",
           "kind": "generated"
         },
         {
@@ -10488,7 +10544,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924083.png?v=f977e36e44ee4381",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924083/e0e6ff672deee061.png",
           "kind": "generated"
         },
         {
@@ -10656,7 +10712,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924188.png?v=339ab878553689f9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924188/a0690214f09cb2d6.png",
           "kind": "generated"
         },
         {
@@ -10824,7 +10880,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924293.png?v=f977e36e44ee4381",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924293/e0e6ff672deee061.png",
           "kind": "generated"
         },
         {
@@ -10992,7 +11048,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924398.png?v=339ab878553689f9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924398/a0690214f09cb2d6.png",
           "kind": "generated"
         },
         {
@@ -11160,7 +11216,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923668.png?v=44f5f2ff3e356fd2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923668/2001c36bf662635f.png",
           "kind": "generated"
         },
         {
@@ -11328,7 +11384,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923773.png?v=a7bab4fe85a36386",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923773/34f7a3621187eac8.png",
           "kind": "generated"
         },
         {
@@ -11496,7 +11552,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924088.png?v=44f5f2ff3e356fd2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924088/2001c36bf662635f.png",
           "kind": "generated"
         },
         {
@@ -11664,7 +11720,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924193.png?v=a7bab4fe85a36386",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924193/34f7a3621187eac8.png",
           "kind": "generated"
         },
         {
@@ -11832,7 +11888,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924298.png?v=44f5f2ff3e356fd2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924298/2001c36bf662635f.png",
           "kind": "generated"
         },
         {
@@ -12000,7 +12056,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924403.png?v=a7bab4fe85a36386",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924403/34f7a3621187eac8.png",
           "kind": "generated"
         },
         {
@@ -12168,7 +12224,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923673.png?v=cc9c14b5cbecf5fc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923673/975d3b3c6982fe2d.png",
           "kind": "generated"
         },
         {
@@ -12336,7 +12392,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923778.png?v=f857bff02bacee56",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923778/45f24cb896c58648.png",
           "kind": "generated"
         },
         {
@@ -12504,7 +12560,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923883.png?v=cc9c14b5cbecf5fc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923883/975d3b3c6982fe2d.png",
           "kind": "generated"
         },
         {
@@ -12672,7 +12728,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923988.png?v=833c529d95201030",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923988/7b76e75c0b094431.png",
           "kind": "generated"
         },
         {
@@ -12840,7 +12896,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924303.png?v=cc9c14b5cbecf5fc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924303/975d3b3c6982fe2d.png",
           "kind": "generated"
         },
         {
@@ -13008,7 +13064,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924408.png?v=f857bff02bacee56",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924408/45f24cb896c58648.png",
           "kind": "generated"
         },
         {
@@ -13176,7 +13232,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923678.png?v=e410ab95b6132886",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923678/08ec74aac5ba7e90.png",
           "kind": "generated"
         },
         {
@@ -13344,7 +13400,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923783.png?v=4462b04b65f3c843",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923783/9ed9bf0ef1bcdf06.png",
           "kind": "generated"
         },
         {
@@ -13512,7 +13568,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924098.png?v=e410ab95b6132886",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924098/08ec74aac5ba7e90.png",
           "kind": "generated"
         },
         {
@@ -13680,7 +13736,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924203.png?v=4462b04b65f3c843",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924203/9ed9bf0ef1bcdf06.png",
           "kind": "generated"
         },
         {
@@ -13848,7 +13904,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923683.png?v=ff8f6836228fd0c1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923683/2b5a86936eaed751.png",
           "kind": "generated"
         },
         {
@@ -14016,7 +14072,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924223.png?v=01af5bdcf0ebb783",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924223/c3225147ae349dfc.png",
           "kind": "generated"
         },
         {
@@ -14184,7 +14240,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924189.png?v=833df1d38fca36d3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924189/d0c644f555a4ebad.png",
           "kind": "generated"
         },
         {
@@ -14352,7 +14408,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924194.png?v=4ed2268ee97ccd99",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924194/1d68743e77e15cb9.png",
           "kind": "generated"
         },
         {
@@ -14520,7 +14576,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924204.png?v=b507f3f9554e2f66",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924204/9da9cb2e7c534c02.png",
           "kind": "generated"
         },
         {
@@ -14688,7 +14744,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923899.png?v=a435b21c829988a8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923899/cb46c7aba60c7be3.png",
           "kind": "generated"
         },
         {
@@ -14792,174 +14848,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "11924219",
-      "house_id": "3379674",
-      "house": "Дом 4",
-      "rooms": "2",
-      "area": "46.13",
-      "floor": "19",
-      "floors": "22",
-      "price": "5858510",
-      "decoration": "Без отделки",
-      "plan_id": "plan-8374fd32d683",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924219.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924219.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924219.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-26e658f015bc",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba7084a55d.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "position": 9
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924219.png?v=c13c13af0a09e2e9",
-          "kind": "generated"
-        },
-        {
-          "id": "src-26e658f015bc",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba7084a55d.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "BalconyOrLoggiaMulti",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "LivingSpace",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "RoomType",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "11924219",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+7 (999) 449-90-80",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Ростов-на-Дону, Ростовская область, Тибетская",
-        "Description": "ЖК Новый Горизонт 4 дом! <br> <br><br><br>▪️ Приятные цены  <br><br>▪️ 5 квартир на этаже  <br><br>▪️ Комфортные планировки  <br><br>▪️ 2 комн. квартиры с прекрасными видовыми характеристиками  <br><br>▪️ Абсолютное отсутствие студий  <br><br>▪️ Размещение инфраструктуры на 1ом этаже",
-        "Price": "5858510",
-        "Square": "46.13",
-        "Decoration": "Без отделки",
-        "Floor": "19",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "3379674",
-        "Rooms": "2",
-        "KitchenSpace": "7.24",
-        "LivingSpace": "26.05",
-        "Floors": "22",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "ЖК Новый Горизонт 4 дом! <br> <br><br><br>▪️ Приятные цены  <br><br>▪️ 5 квартир на этаже  <br><br>▪️ Комфортные планировки  <br><br>▪️ 2 комн. квартиры с прекрасными видовыми характеристиками  <br><br>▪️ Абсолютное отсутствие студий  <br><br>▪️ Размещение инфраструктуры на 1ом этаже",
-      "excluded_from_feed": false
-    },
-    {
       "id": "11924224",
       "house_id": "3379674",
       "house": "Дом 4",
@@ -15024,7 +14912,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924224.png?v=45ffd8818ed3ea6f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924224/c706dac63e27bf0f.png",
           "kind": "generated"
         },
         {
@@ -15192,7 +15080,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923862.png?v=be4f969220624c86",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923862/f9ff59eafa0c81f3.png",
           "kind": "generated"
         },
         {
@@ -15360,7 +15248,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924072.png?v=be4f969220624c86",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924072/f9ff59eafa0c81f3.png",
           "kind": "generated"
         },
         {
@@ -15528,7 +15416,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924282.png?v=20fc7dff1c4ce140",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924282/5ab94ed400b51472.png",
           "kind": "generated"
         },
         {
@@ -15696,7 +15584,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923657.png?v=84a31b87eae1b3c6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923657/02b74cf487fd93b8.png",
           "kind": "generated"
         },
         {
@@ -15864,7 +15752,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924077.png?v=84a31b87eae1b3c6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924077/02b74cf487fd93b8.png",
           "kind": "generated"
         },
         {
@@ -16032,7 +15920,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923872.png?v=fe416ed91fc43fb7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923872/e8a3536c485ab9d6.png",
           "kind": "generated"
         },
         {
@@ -16200,7 +16088,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924082.png?v=fe416ed91fc43fb7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924082/e8a3536c485ab9d6.png",
           "kind": "generated"
         },
         {
@@ -16368,7 +16256,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924292.png?v=755b046d87c723aa",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924292/89657b6034eb7309.png",
           "kind": "generated"
         },
         {
@@ -16536,7 +16424,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923667.png?v=df95e26473262fd1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923667/80132e1999962179.png",
           "kind": "generated"
         },
         {
@@ -16704,7 +16592,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924087.png?v=df95e26473262fd1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924087/80132e1999962179.png",
           "kind": "generated"
         },
         {
@@ -16872,7 +16760,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924297.png?v=1d521aa6cf7ce33c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924297/74c6b201036a6982.png",
           "kind": "generated"
         },
         {
@@ -17040,7 +16928,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923672.png?v=55b96874bb8b707c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923672/702fd82f4b7ce6c8.png",
           "kind": "generated"
         },
         {
@@ -17208,7 +17096,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923882.png?v=55b96874bb8b707c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923882/702fd82f4b7ce6c8.png",
           "kind": "generated"
         },
         {
@@ -17376,7 +17264,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924302.png?v=de5d9a5536df5112",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924302/3d7b506851eefbb3.png",
           "kind": "generated"
         },
         {
@@ -17544,7 +17432,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923677.png?v=41759fa53cf6b22f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923677/0538e3f023e1dc72.png",
           "kind": "generated"
         },
         {
@@ -17712,7 +17600,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924097.png?v=41759fa53cf6b22f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924097/0538e3f023e1dc72.png",
           "kind": "generated"
         },
         {
@@ -17880,7 +17768,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924337.png?v=be2f6bc10a002a38",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924337/1e715784b1c51290.png",
           "kind": "generated"
         },
         {
@@ -18048,7 +17936,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924352.png?v=19c58004ee2b0751",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924352/d0701b5ba939f13f.png",
           "kind": "generated"
         },
         {
@@ -18216,7 +18104,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923957.png?v=e5c905137bb4f64a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923957/c44b0810ee74c147.png",
           "kind": "generated"
         },
         {
@@ -18384,7 +18272,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924167.png?v=e5c905137bb4f64a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924167/c44b0810ee74c147.png",
           "kind": "generated"
         },
         {
@@ -18552,7 +18440,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923962.png?v=f7b388000da12091",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923962/0f859a9aa8b920e7.png",
           "kind": "generated"
         },
         {
@@ -18720,7 +18608,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924172.png?v=f7b388000da12091",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924172/0f859a9aa8b920e7.png",
           "kind": "generated"
         },
         {
@@ -18888,7 +18776,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924382.png?v=deb256a94b1f2c09",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924382/53eecf7e0ffc3f57.png",
           "kind": "generated"
         },
         {
@@ -19056,7 +18944,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923757.png?v=5bbb2b6d68f2bb01",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923757/2b035d2b392e9e07.png",
           "kind": "generated"
         },
         {
@@ -19224,7 +19112,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923967.png?v=5bbb2b6d68f2bb01",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923967/2b035d2b392e9e07.png",
           "kind": "generated"
         },
         {
@@ -19392,7 +19280,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924387.png?v=34bfe8019a86aaac",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924387/01d7a554c4f06a3b.png",
           "kind": "generated"
         },
         {
@@ -19560,7 +19448,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923762.png?v=39bd5d33d7e00da8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923762/dffc5d0244d67544.png",
           "kind": "generated"
         },
         {
@@ -19728,7 +19616,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923972.png?v=39bd5d33d7e00da8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923972/dffc5d0244d67544.png",
           "kind": "generated"
         },
         {
@@ -19896,7 +19784,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924182.png?v=39bd5d33d7e00da8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924182/dffc5d0244d67544.png",
           "kind": "generated"
         },
         {
@@ -20064,7 +19952,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924392.png?v=2ea87da574f41679",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924392/63bc700aba20ab83.png",
           "kind": "generated"
         },
         {
@@ -20232,7 +20120,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923977.png?v=3c035c06f732438f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923977/063c05dedefb73ce.png",
           "kind": "generated"
         },
         {
@@ -20400,7 +20288,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924187.png?v=3c035c06f732438f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924187/063c05dedefb73ce.png",
           "kind": "generated"
         },
         {
@@ -20568,7 +20456,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924397.png?v=514a05ab57cf7849",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924397/ac5faa89b8aee0f1.png",
           "kind": "generated"
         },
         {
@@ -20736,7 +20624,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923772.png?v=a1a4e3b31a435b76",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923772/a53f8057528d2746.png",
           "kind": "generated"
         },
         {
@@ -20904,7 +20792,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924192.png?v=a1a4e3b31a435b76",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924192/a53f8057528d2746.png",
           "kind": "generated"
         },
         {
@@ -21072,7 +20960,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924402.png?v=5a1ac5d04a78b9de",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924402/c8d6a991f15bab0d.png",
           "kind": "generated"
         },
         {
@@ -21240,7 +21128,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923987.png?v=ff4659a4b6cfe730",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923987/f345c58e9e068f71.png",
           "kind": "generated"
         },
         {
@@ -21408,7 +21296,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924407.png?v=4541329bb056f3bf",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924407/8bff6f18b2aa36d9.png",
           "kind": "generated"
         },
         {
@@ -21576,7 +21464,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924202.png?v=584806c8f78ae06d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924202/703546b76e5656ce.png",
           "kind": "generated"
         },
         {
@@ -21744,7 +21632,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923787.png?v=7b099e9735fcf7cc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923787/f02cb5bfbbea7ad2.png",
           "kind": "generated"
         },
         {
@@ -21912,7 +21800,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924207.png?v=7b099e9735fcf7cc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924207/f02cb5bfbbea7ad2.png",
           "kind": "generated"
         },
         {
@@ -22080,7 +21968,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924417.png?v=7b099e9735fcf7cc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924417/f02cb5bfbbea7ad2.png",
           "kind": "generated"
         },
         {
@@ -22248,7 +22136,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924002.png?v=ec78f5269a4a3d28",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924002/6b37660a453985f9.png",
           "kind": "generated"
         },
         {
@@ -22416,7 +22304,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924212.png?v=ec78f5269a4a3d28",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924212/6b37660a453985f9.png",
           "kind": "generated"
         },
         {
@@ -22584,7 +22472,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924422.png?v=ec78f5269a4a3d28",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924422/6b37660a453985f9.png",
           "kind": "generated"
         },
         {
@@ -22752,7 +22640,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924427.png?v=f11896425c3fd2b4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924427/8b18bfb165887de6.png",
           "kind": "generated"
         },
         {
@@ -22920,7 +22808,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924432.png?v=ea9cb4dc5b82d1c8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924432/44c72dc6c7838ce2.png",
           "kind": "generated"
         },
         {
@@ -23088,7 +22976,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923807.png?v=3de9708c5aecfd37",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923807/99e66d3bf8bd8aca.png",
           "kind": "generated"
         },
         {
@@ -23256,7 +23144,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924017.png?v=3de9708c5aecfd37",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924017/99e66d3bf8bd8aca.png",
           "kind": "generated"
         },
         {
@@ -23424,7 +23312,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924022.png?v=09470fe04eec5c52",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924022/9fcec79a292896c1.png",
           "kind": "generated"
         },
         {
@@ -23592,7 +23480,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924232.png?v=09470fe04eec5c52",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924232/9fcec79a292896c1.png",
           "kind": "generated"
         },
         {
@@ -23760,7 +23648,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924442.png?v=09470fe04eec5c52",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924442/9fcec79a292896c1.png",
           "kind": "generated"
         },
         {
@@ -23928,7 +23816,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923926.png?v=b7f3ee81d2f7d933",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923926/ac77a479348d2dc9.png",
           "kind": "generated"
         },
         {
@@ -24096,7 +23984,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924176.png?v=adef0e4e15aec4df",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924176/489cce833f9eae27.png",
           "kind": "generated"
         },
         {
@@ -24264,7 +24152,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924386.png?v=2df1f9d90e1a3183",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924386/706026bf830cca45.png",
           "kind": "generated"
         },
         {
@@ -24432,7 +24320,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923971.png?v=7419a04d059b44c9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923971/8f49b3f786da6533.png",
           "kind": "generated"
         },
         {
@@ -24600,7 +24488,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924391.png?v=c2e3da8377c9398f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924391/ee37367cd577a7ed.png",
           "kind": "generated"
         },
         {
@@ -24768,7 +24656,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923766.png?v=0f8c9aadf9244d16",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923766/bf112515422351b1.png",
           "kind": "generated"
         },
         {
@@ -24936,7 +24824,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923976.png?v=0f8c9aadf9244d16",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923976/bf112515422351b1.png",
           "kind": "generated"
         },
         {
@@ -25104,7 +24992,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924186.png?v=0f8c9aadf9244d16",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924186/bf112515422351b1.png",
           "kind": "generated"
         },
         {
@@ -25272,7 +25160,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924396.png?v=6237613c11361798",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924396/0c4d4d98dfc490e1.png",
           "kind": "generated"
         },
         {
@@ -25440,7 +25328,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923981.png?v=ae0df61f12bc0ecf",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923981/c2b64741404bc465.png",
           "kind": "generated"
         },
         {
@@ -25608,7 +25496,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924191.png?v=ae0df61f12bc0ecf",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924191/c2b64741404bc465.png",
           "kind": "generated"
         },
         {
@@ -25776,7 +25664,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924401.png?v=0f124801f6a8cd6d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924401/6e40cc10891475da.png",
           "kind": "generated"
         },
         {
@@ -25944,7 +25832,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923776.png?v=4aedfb83b23a7fc1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923776/bafd827fba693e87.png",
           "kind": "generated"
         },
         {
@@ -26112,7 +26000,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924196.png?v=4aedfb83b23a7fc1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924196/bafd827fba693e87.png",
           "kind": "generated"
         },
         {
@@ -26280,7 +26168,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924406.png?v=bec248e847f1bc36",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924406/9a8dfc7d8befadfc.png",
           "kind": "generated"
         },
         {
@@ -26448,7 +26336,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923781.png?v=34d8adb71d233a20",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923781/18a6a8811a155257.png",
           "kind": "generated"
         },
         {
@@ -26616,7 +26504,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924206.png?v=1ad081688d2b5b77",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924206/3f6fe9347d6b4a32.png",
           "kind": "generated"
         },
         {
@@ -26784,7 +26672,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924221.png?v=97d9bcc7c17eafb7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924221/9ebda4336b4700de.png",
           "kind": "generated"
         },
         {
@@ -26952,7 +26840,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924231.png?v=1224c45a036ff988",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924231/2112d90545b02eee.png",
           "kind": "generated"
         },
         {
@@ -27120,7 +27008,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924236.png?v=027c4f21331d1bdf",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924236/7d6cd611bf30e200.png",
           "kind": "generated"
         },
         {
@@ -27288,7 +27176,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923611.png?v=29f6f45bb3d7002c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923611/3404b19d792ea248.png",
           "kind": "generated"
         },
         {
@@ -27456,7 +27344,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923821.png?v=29f6f45bb3d7002c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923821/3404b19d792ea248.png",
           "kind": "generated"
         },
         {
@@ -27624,7 +27512,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923856.png?v=b606223fe039e589",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923856/dc557ba4d8f82401.png",
           "kind": "generated"
         },
         {
@@ -27792,7 +27680,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923651.png?v=7e6ca46868e6e952",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923651/ce720cff0cc9cbfe.png",
           "kind": "generated"
         },
         {
@@ -27960,7 +27848,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923861.png?v=7e6ca46868e6e952",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923861/ce720cff0cc9cbfe.png",
           "kind": "generated"
         },
         {
@@ -28128,7 +28016,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924071.png?v=7e6ca46868e6e952",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924071/ce720cff0cc9cbfe.png",
           "kind": "generated"
         },
         {
@@ -28296,7 +28184,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924281.png?v=a8518c111fdd057a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924281/9f3f85d4a924d60e.png",
           "kind": "generated"
         },
         {
@@ -28464,7 +28352,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923866.png?v=fdd605ee45768967",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923866/f374edf41c8c6067.png",
           "kind": "generated"
         },
         {
@@ -28632,7 +28520,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924076.png?v=fdd605ee45768967",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924076/f374edf41c8c6067.png",
           "kind": "generated"
         },
         {
@@ -28800,7 +28688,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924286.png?v=480042b420a2b8b3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924286/f79dab0e5ae0efaf.png",
           "kind": "generated"
         },
         {
@@ -28968,7 +28856,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923661.png?v=50ead739089aba77",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923661/aebdc656bd7c12c9.png",
           "kind": "generated"
         },
         {
@@ -29136,7 +29024,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923871.png?v=50ead739089aba77",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923871/aebdc656bd7c12c9.png",
           "kind": "generated"
         },
         {
@@ -29304,7 +29192,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924081.png?v=50ead739089aba77",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924081/aebdc656bd7c12c9.png",
           "kind": "generated"
         },
         {
@@ -29472,7 +29360,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923876.png?v=18708408f6f9dd7f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923876/b266024896c9e799.png",
           "kind": "generated"
         },
         {
@@ -29640,7 +29528,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924086.png?v=18708408f6f9dd7f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924086/b266024896c9e799.png",
           "kind": "generated"
         },
         {
@@ -29808,7 +29696,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924296.png?v=213fde77906233f7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924296/91266e1dbba6724e.png",
           "kind": "generated"
         },
         {
@@ -29976,7 +29864,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923671.png?v=3ead769a6015c3f4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923671/0e7d3598a1a27c2e.png",
           "kind": "generated"
         },
         {
@@ -30144,7 +30032,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924091.png?v=3ead769a6015c3f4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924091/0e7d3598a1a27c2e.png",
           "kind": "generated"
         },
         {
@@ -30312,7 +30200,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924301.png?v=b60cd97542921ac8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924301/dedfd23ada8970a4.png",
           "kind": "generated"
         },
         {
@@ -30480,7 +30368,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923886.png?v=c82e18b48bb98eab",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923886/b8b44b4b2ffd6772.png",
           "kind": "generated"
         },
         {
@@ -30648,7 +30536,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924306.png?v=1690dbcdefaaeb16",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924306/2e5f53f788ac4d7d.png",
           "kind": "generated"
         },
         {
@@ -30816,7 +30704,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923681.png?v=e3a20e28b31b2ea7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923681/305ba52c160e941d.png",
           "kind": "generated"
         },
         {
@@ -30984,7 +30872,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924101.png?v=e3a20e28b31b2ea7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924101/305ba52c160e941d.png",
           "kind": "generated"
         },
         {
@@ -31152,7 +31040,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923686.png?v=b5594acaab8ce846",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923686/2a12437fc61f9d95.png",
           "kind": "generated"
         },
         {
@@ -31320,7 +31208,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923696.png?v=de1a197467eccae7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923696/715708c416c29ae3.png",
           "kind": "generated"
         },
         {
@@ -31488,7 +31376,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924326.png?v=de1a197467eccae7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924326/715708c416c29ae3.png",
           "kind": "generated"
         },
         {
@@ -31656,7 +31544,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923911.png?v=3f79ef2738db4358",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923911/38d6b56d931257ca.png",
           "kind": "generated"
         },
         {
@@ -31824,7 +31712,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923706.png?v=76a8e18ff5516ab0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923706/49443e22bbe8fec9.png",
           "kind": "generated"
         },
         {
@@ -31992,7 +31880,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923916.png?v=76a8e18ff5516ab0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923916/49443e22bbe8fec9.png",
           "kind": "generated"
         },
         {
@@ -32160,7 +32048,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923921.png?v=d432b065a2642092",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923921/0d7f94d91b2c4c73.png",
           "kind": "generated"
         },
         {
@@ -32328,7 +32216,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924131.png?v=d432b065a2642092",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924131/0d7f94d91b2c4c73.png",
           "kind": "generated"
         },
         {
@@ -32496,7 +32384,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924341.png?v=d432b065a2642092",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924341/0d7f94d91b2c4c73.png",
           "kind": "generated"
         },
         {

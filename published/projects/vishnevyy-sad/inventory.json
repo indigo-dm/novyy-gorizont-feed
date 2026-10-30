@@ -1,36 +1,36 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-10-30T03:58:22+03:00",
-  "source_ads": 299,
-  "full_ads": 299,
+  "checked_at": "2026-10-30T19:44:25+03:00",
+  "source_ads": 297,
+  "full_ads": 297,
   "excluded_ads": 0,
   "unique_plans": 83,
   "source_tag_counts": {
-    "AdStatus": 299,
-    "Address": 299,
-    "Category": 299,
-    "ContactMethod": 299,
-    "ContactPhone": 299,
-    "Decoration": 299,
-    "Description": 299,
-    "Floor": 299,
-    "Floors": 299,
-    "HouseType": 299,
-    "Id": 299,
-    "KitchenSpace": 299,
-    "Latitude": 268,
-    "LivingSpace": 299,
-    "Longitude": 268,
-    "ManagerName": 299,
-    "MarketType": 299,
-    "NewDevelopmentId": 299,
-    "OperationType": 299,
-    "Price": 299,
-    "PropertyRights": 299,
-    "Rooms": 299,
-    "Square": 299,
-    "Status": 299
+    "AdStatus": 297,
+    "Address": 297,
+    "Category": 297,
+    "ContactMethod": 297,
+    "ContactPhone": 297,
+    "Decoration": 297,
+    "Description": 297,
+    "Floor": 297,
+    "Floors": 297,
+    "HouseType": 297,
+    "Id": 297,
+    "KitchenSpace": 297,
+    "Latitude": 266,
+    "LivingSpace": 297,
+    "Longitude": 266,
+    "ManagerName": 297,
+    "MarketType": 297,
+    "NewDevelopmentId": 297,
+    "OperationType": 297,
+    "Price": 297,
+    "PropertyRights": 297,
+    "Rooms": 297,
+    "Square": 297,
+    "Status": 297
   },
   "parameter_catalog": [
     {
@@ -131,6 +131,24 @@
       "supported": true
     },
     {
+      "tag": "KitchenSpace",
+      "name": "Площадь кухни",
+      "kind": "number",
+      "min": 2,
+      "max": 100,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "LivingSpace",
+      "name": "Жилая площадь",
+      "kind": "number",
+      "min": 5,
+      "max": 5000,
+      "step": 0.01,
+      "supported": true
+    },
+    {
       "tag": "Courtyard",
       "name": "Двор",
       "kind": "multi",
@@ -155,8 +173,46 @@
       "supported": true
     },
     {
+      "tag": "RoomType",
+      "name": "Тип комнат",
+      "kind": "multi",
+      "values": [
+        "Изолированные",
+        "Смежные"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "ContactMethod",
+      "name": "Способ связи",
+      "kind": "select",
+      "values": [
+        "По телефону и в сообщениях",
+        "По телефону"
+      ],
+      "default": "По телефону",
+      "supported": true
+    },
+    {
+      "tag": "BalconyOrLoggiaMulti",
+      "name": "Балкон или лоджия",
+      "kind": "multi",
+      "values": [
+        "Балкон",
+        "Лоджия"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "VideoURL",
+      "name": "Видео",
+      "kind": "url",
+      "max": 1500,
+      "supported": true
+    },
+    {
       "tag": "NDAdditionally",
-      "name": "Дополнительно о новостройке",
+      "name": "Дополнительно о планировке",
       "kind": "multi",
       "values": [
         "Гардеробная",
@@ -226,7 +282,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340311.png?v=ff8f01799734dae0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340311/e29da269bc995a0f.png",
           "kind": "generated"
         },
         {
@@ -386,7 +442,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340411.png?v=5e27dc2325243fbf",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340411/ca638de5881e7169.png",
           "kind": "generated"
         },
         {
@@ -546,7 +602,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340280.png?v=b6a3ec792b9d578b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340280/33d46fc054e67fb5.png",
           "kind": "generated"
         },
         {
@@ -706,7 +762,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340228.png?v=a60880798a97b906",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340228/22eeb6982f708b8d.png",
           "kind": "generated"
         },
         {
@@ -866,7 +922,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340366.png?v=3cdbf0621ee649c7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340366/c1c5ef524c40686b.png",
           "kind": "generated"
         },
         {
@@ -1026,7 +1082,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340242.png?v=5765d0b91b92340f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340242/84af0896b462b99f.png",
           "kind": "generated"
         },
         {
@@ -1186,7 +1242,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340359.png?v=9c4bf404335e30c2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340359/e005c660b8e6687a.png",
           "kind": "generated"
         },
         {
@@ -1346,7 +1402,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340331.png?v=df507d56e28190d2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340331/1bd60821152ac2c6.png",
           "kind": "generated"
         },
         {
@@ -1506,7 +1562,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340235.png?v=19079afef7cca372",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340235/1f2fbbf2f40df665.png",
           "kind": "generated"
         },
         {
@@ -1666,7 +1722,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340340.png?v=bb6dca29de14afda",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340340/113b353428a2fb01.png",
           "kind": "generated"
         },
         {
@@ -1826,7 +1882,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340313.png?v=738e7bcd8d23b4f4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340313/0110dbf5181caedc.png",
           "kind": "generated"
         },
         {
@@ -1986,7 +2042,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340261.png?v=5331d7972cbb9604",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340261/ed397939857adfe8.png",
           "kind": "generated"
         },
         {
@@ -2146,7 +2202,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340326.png?v=d9a53454e237f5d7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340326/e90f7d5c9bcfda64.png",
           "kind": "generated"
         },
         {
@@ -2306,7 +2362,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340354.png?v=d0b8174aff3856fd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340354/acd35cf7aee1beaf.png",
           "kind": "generated"
         },
         {
@@ -2466,7 +2522,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340230.png?v=cad11aed30695ad2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340230/a3e497b1583e1f5e.png",
           "kind": "generated"
         },
         {
@@ -2626,7 +2682,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340251.png?v=b6f4a3d665b62267",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340251/cf0f0d982425bb3e.png",
           "kind": "generated"
         },
         {
@@ -2786,7 +2842,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340365.png?v=82e17155fd01e764",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340365/a3af009497166c29.png",
           "kind": "generated"
         },
         {
@@ -2946,7 +3002,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340312.png?v=ab1565b32b766354",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340312/d682f18716c4e366.png",
           "kind": "generated"
         },
         {
@@ -3106,7 +3162,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340310.png?v=45dc46aedfa89129",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340310/8dc6e0910a7c47d8.png",
           "kind": "generated"
         },
         {
@@ -3266,7 +3322,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340237.png?v=facc0484c9a28223",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340237/2c2649ae2ffe03df.png",
           "kind": "generated"
         },
         {
@@ -3426,7 +3482,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340361.png?v=57de659d3018d8b1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340361/3f77e23f2ac5666b.png",
           "kind": "generated"
         },
         {
@@ -3586,7 +3642,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340306.png?v=4170c8ad592db197",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340306/acb0a83840f9e807.png",
           "kind": "generated"
         },
         {
@@ -3746,7 +3802,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340374.png?v=3e99cf4902224df1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340374/95d5898c1c908a6a.png",
           "kind": "generated"
         },
         {
@@ -3906,7 +3962,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340274.png?v=57e79c8aa0b37de2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340274/7cebf58b643e134c.png",
           "kind": "generated"
         },
         {
@@ -4066,7 +4122,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340267.png?v=e19e22f580533d70",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340267/aeef25270d34c658.png",
           "kind": "generated"
         },
         {
@@ -4226,7 +4282,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340295.png?v=875d9983d836321b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340295/99b04660988dcb1f.png",
           "kind": "generated"
         },
         {
@@ -4386,7 +4442,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340281.png?v=a23842ed9d70bcfb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340281/62f9412ab85c8ddc.png",
           "kind": "generated"
         },
         {
@@ -4546,7 +4602,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340296.png?v=927d299aa83c39b7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340296/d056a5dd38319b8d.png",
           "kind": "generated"
         },
         {
@@ -4706,7 +4762,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340288.png?v=cf46414192ccfb5a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340288/2cfc5a5662c88455.png",
           "kind": "generated"
         },
         {
@@ -4866,7 +4922,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340412.png?v=9635505d804172c9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340412/1b3ae09a6c8b8063.png",
           "kind": "generated"
         },
         {
@@ -5026,7 +5082,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340254.png?v=0287c07ddbd533eb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340254/d53687d16ef84ffb.png",
           "kind": "generated"
         },
         {
@@ -5186,7 +5242,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340413.png?v=f20c4bdc21b0f232",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340413/42b17de5c63660fc.png",
           "kind": "generated"
         },
         {
@@ -5346,7 +5402,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340364.png?v=2ef8604d2ff8f58d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340364/00a13f5d1fe21fa0.png",
           "kind": "generated"
         },
         {
@@ -5506,7 +5562,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340353.png?v=efdd51fca36dd6de",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340353/a45e2844b83d61a9.png",
           "kind": "generated"
         },
         {
@@ -5666,7 +5722,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340325.png?v=a2e62b5b1ab822fd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340325/5ca3d0d6f3d275c2.png",
           "kind": "generated"
         },
         {
@@ -5826,7 +5882,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340367.png?v=4202d459a75eb492",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340367/6e72649efc210142.png",
           "kind": "generated"
         },
         {
@@ -5986,7 +6042,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340257.png?v=c9bafa278286fe53",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340257/6f2d84665c664b0c.png",
           "kind": "generated"
         },
         {
@@ -6146,7 +6202,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340389.png?v=1d06f4aba4843fc6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340389/30eefb789941578d.png",
           "kind": "generated"
         },
         {
@@ -6306,7 +6362,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340403.png?v=9a3a05d9ed1fa0cb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340403/76bb75a73712e22d.png",
           "kind": "generated"
         },
         {
@@ -6466,7 +6522,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340375.png?v=c0900feba69cb47d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340375/6eb49c0f4cb92f41.png",
           "kind": "generated"
         },
         {
@@ -6626,7 +6682,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340410.png?v=3c75a683ddb4d0e4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340410/53e42b4bb5fee751.png",
           "kind": "generated"
         },
         {
@@ -6786,7 +6842,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340382.png?v=634f2b6aebb8c347",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340382/429ec228d2a50116.png",
           "kind": "generated"
         },
         {
@@ -6946,7 +7002,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340396.png?v=878cb52b77201b73",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340396/ef14465e43d44dd4.png",
           "kind": "generated"
         },
         {
@@ -7106,7 +7162,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340265.png?v=0a563ff863c14893",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340265/e0e164f95e5c739b.png",
           "kind": "generated"
         },
         {
@@ -7266,7 +7322,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340279.png?v=01f5da83465396e8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340279/7fe46c0226e83e8e.png",
           "kind": "generated"
         },
         {
@@ -7426,7 +7482,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340300.png?v=b0f4cbaa8ba83566",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340300/c32b57aecffc3046.png",
           "kind": "generated"
         },
         {
@@ -7586,7 +7642,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340368.png?v=bf05d1a944510e0f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340368/568a39a31e4f9b46.png",
           "kind": "generated"
         },
         {
@@ -7746,7 +7802,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340272.png?v=fdda334b658c1d90",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340272/8c40f123bc5a7f09.png",
           "kind": "generated"
         },
         {
@@ -7906,7 +7962,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340258.png?v=fe65c7a901bcbde7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340258/944fbb12e64c5003.png",
           "kind": "generated"
         },
         {
@@ -8066,7 +8122,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340252.png?v=8c8d711052fd8f23",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340252/9cba79d92effbf23.png",
           "kind": "generated"
         },
         {
@@ -8226,7 +8282,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340238.png?v=2bdf4e822794ab1b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340238/4b26a105d919a996.png",
           "kind": "generated"
         },
         {
@@ -8386,7 +8442,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340362.png?v=d783f6e20fcd5bb2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340362/e85048d5dd13dc64.png",
           "kind": "generated"
         },
         {
@@ -8546,7 +8602,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340415.png?v=301c941dc4e261c0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340415/9e62df0538f8a87f.png",
           "kind": "generated"
         },
         {
@@ -8704,7 +8760,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340348.png?v=d9804a0f557ccbd7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340348/0f9b3320830a75d9.png",
           "kind": "generated"
         },
         {
@@ -8864,7 +8920,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340401.png?v=2beda16c80d10ee2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340401/e9c1b9e3a8f2efc8.png",
           "kind": "generated"
         },
         {
@@ -9024,7 +9080,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340298.png?v=997e8256b156fa24",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340298/df604ae79e526c9d.png",
           "kind": "generated"
         },
         {
@@ -9125,166 +9181,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "12346654",
-      "house_id": "8276823",
-      "house": "Дом · ID 8276823",
-      "rooms": "1",
-      "area": "34",
-      "floor": "9",
-      "floors": "9",
-      "price": "4964000",
-      "decoration": "Без отделки",
-      "plan_id": "plan-8a1cc90331c3",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12346654.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12346654.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12346654.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-b55151b20586",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/6938317004b21.png",
-          "position": 1
-        },
-        {
-          "id": "src-7b2d65bbcd45",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-1f3fb1972c5a",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346654.png?v=0a8b24366bee64a3",
-          "kind": "generated"
-        },
-        {
-          "id": "src-b55151b20586",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/6938317004b21.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-7b2d65bbcd45",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88ea00d08a.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-1f3fb1972c5a",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64e88fe34f5e2.png",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "12346654",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+78632098967",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Аксай, Аксайский район, Ростовская область",
-        "Latitude": "47.280587",
-        "Longitude": "39.861212",
-        "Description": "Продаётся 1-комнатная квартира 34 кв. м в центре Аксая, 5 км до Ростова. Дом сдан!<br><br>О квартире:<br>•  Просторная кухня-гостиная, которую удобно зонировать<br>•  Отдельная спальня правильной квадратной формы<br>•  Прихожая с нишей под гардероб<br>•  Совместный санузел<br>• Расширенные окна Рехау, квартира очень светлая<br>•  9 этаж<br><br>ЖК «Вишневый сад»:<br>•  Прочный монолитный дом с кирпичной облицовкой<br>•  Мало- и среднеэтажная застройка: от 4 до 9 этажей <br>•  Теплые дома с экономией на коммунальных платежах до 60%<br>•  Индивидуальное отопление<br>•  Просторные квартиры с потолками до 3 м<br>•  Современные  планировки с гардеробными и 2 санузлами<br>•  Всего 5–7 квартир на этаже <br>•  Витражное или расширенное остекление <br>•  Просторный двор с детской площадкой и ландшафтным озеленением<br>•  Парковка рядом с домом — без проблем с местом<br>•  Внутри ЖК предусмотрены магазины, салоны красоты, ПВЗ — всё для жизни<br>•  Дом сдан<br><br>Расположение:<br>• Удобный выезд, 10 минут на авто до Ростова-на-Дону<br>• Рядом 4 садика, 2 школы, секции, бассейн, ледовая арена и современные парки <br><br>Почему выбирают «Вишнёвый сад»:<br>Готовый комфорт, продуманные планировки, тихий двор и надёжные дома — всё, что нужно для жизни и семьи. Жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.<br><br>Свяжитесь с нами, чтобы подобрать подходящую квартиру!",
-        "Price": "4964000",
-        "Square": "34",
-        "Decoration": "Без отделки",
-        "Floor": "9",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "8276823",
-        "Rooms": "1",
-        "KitchenSpace": "0",
-        "LivingSpace": "0",
-        "Floors": "9",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "Продаётся 1-комнатная квартира 34 кв. м в центре Аксая, 5 км до Ростова. Дом сдан!<br><br>О квартире:<br>•  Просторная кухня-гостиная, которую удобно зонировать<br>•  Отдельная спальня правильной квадратной формы<br>•  Прихожая с нишей под гардероб<br>•  Совместный санузел<br>• Расширенные окна Рехау, квартира очень светлая<br>•  9 этаж<br><br>ЖК «Вишневый сад»:<br>•  Прочный монолитный дом с кирпичной облицовкой<br>•  Мало- и среднеэтажная застройка: от 4 до 9 этажей <br>•  Теплые дома с экономией на коммунальных платежах до 60%<br>•  Индивидуальное отопление<br>•  Просторные квартиры с потолками до 3 м<br>•  Современные  планировки с гардеробными и 2 санузлами<br>•  Всего 5–7 квартир на этаже <br>•  Витражное или расширенное остекление <br>•  Просторный двор с детской площадкой и ландшафтным озеленением<br>•  Парковка рядом с домом — без проблем с местом<br>•  Внутри ЖК предусмотрены магазины, салоны красоты, ПВЗ — всё для жизни<br>•  Дом сдан<br><br>Расположение:<br>• Удобный выезд, 10 минут на авто до Ростова-на-Дону<br>• Рядом 4 садика, 2 школы, секции, бассейн, ледовая арена и современные парки <br><br>Почему выбирают «Вишнёвый сад»:<br>Готовый комфорт, продуманные планировки, тихий двор и надёжные дома — всё, что нужно для жизни и семьи. Жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.<br><br>Свяжитесь с нами, чтобы подобрать подходящую квартиру!",
-      "excluded_from_feed": false
-    },
-    {
       "id": "12346764",
       "house_id": "8276823",
       "house": "Дом · ID 8276823",
@@ -9344,7 +9240,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346764.png?v=e469d486a448e6f6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346764/3f63f5cd01dbf1d5.png",
           "kind": "generated"
         },
         {
@@ -9504,7 +9400,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346664.png?v=ce1d21773a0dc943",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346664/7ccfd830ec363eac.png",
           "kind": "generated"
         },
         {
@@ -9664,7 +9560,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346581.png?v=62e0ecd59448c694",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346581/5d04d5c1d5d92c76.png",
           "kind": "generated"
         },
         {
@@ -9824,7 +9720,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346602.png?v=6bc61625a29c6e07",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346602/d1b21e772951016b.png",
           "kind": "generated"
         },
         {
@@ -9984,7 +9880,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346595.png?v=847a0fe72e1e969f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346595/c8fa59e55bbcbc41.png",
           "kind": "generated"
         },
         {
@@ -10144,7 +10040,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346574.png?v=309a77821d5fcd69",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346574/016f00cff0a37970.png",
           "kind": "generated"
         },
         {
@@ -10304,7 +10200,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346666.png?v=0759d2fb5922fcc3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346666/5a999aaa15299eb1.png",
           "kind": "generated"
         },
         {
@@ -10464,7 +10360,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346614.png?v=aa40d4fed4445f9c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346614/32ffae33a2aa66bf.png",
           "kind": "generated"
         },
         {
@@ -10624,7 +10520,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346588.png?v=2bd7431ffc054d35",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346588/dd14d9d9e741ab97.png",
           "kind": "generated"
         },
         {
@@ -10784,7 +10680,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346707.png?v=f4a739be197978a8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346707/3dc31d29b488a18c.png",
           "kind": "generated"
         },
         {
@@ -10944,7 +10840,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346672.png?v=8e1c5dfc05bf4141",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346672/352ecb727e812f3e.png",
           "kind": "generated"
         },
         {
@@ -11104,7 +11000,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346660.png?v=a69718b2f5894eae",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346660/dd4347c38362e2d8.png",
           "kind": "generated"
         },
         {
@@ -11264,7 +11160,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346597.png?v=9df25480fbb2655c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346597/d08ead2906a269a5.png",
           "kind": "generated"
         },
         {
@@ -11424,7 +11320,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346550.png?v=d847cca4b123a8a8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346550/b2450ab0c1608a12.png",
           "kind": "generated"
         },
         {
@@ -11584,7 +11480,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346555.png?v=16769dd54c6da0b5",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346555/6cedf69cddb40955.png",
           "kind": "generated"
         },
         {
@@ -11744,7 +11640,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346604.png?v=a69015757f42c816",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346604/35e461e7c7929a34.png",
           "kind": "generated"
         },
         {
@@ -11904,7 +11800,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346608.png?v=6dd55f90ebb456d9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346608/095162c0ebf4b980.png",
           "kind": "generated"
         },
         {
@@ -12064,7 +11960,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346553.png?v=ae1978a93096c24c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346553/aa3377c08c42c635.png",
           "kind": "generated"
         },
         {
@@ -12224,7 +12120,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346665.png?v=136d4cb485c8026c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346665/5485297f77ede316.png",
           "kind": "generated"
         },
         {
@@ -12384,7 +12280,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346714.png?v=89173591f8d3d5a6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346714/92f6e8494bf9e176.png",
           "kind": "generated"
         },
         {
@@ -12544,7 +12440,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346769.png?v=dae0860ec2f25e4f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346769/f4f6914e6da62af3.png",
           "kind": "generated"
         },
         {
@@ -12704,7 +12600,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346727.png?v=2636c97ac0dbcab5",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346727/f9961788249f6f42.png",
           "kind": "generated"
         },
         {
@@ -12864,7 +12760,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346734.png?v=e498ed0aa14aebfb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346734/6c482cbf0b8de707.png",
           "kind": "generated"
         },
         {
@@ -13024,7 +12920,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346648.png?v=5911bc2b72d14ad6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346648/47fd31d68568e7d5.png",
           "kind": "generated"
         },
         {
@@ -13184,7 +13080,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346765.png?v=cfe4b5b032f79e0d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346765/a647e05e76ec36d1.png",
           "kind": "generated"
         },
         {
@@ -13344,7 +13240,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346766.png?v=a7a48bc15bb537c8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346766/db5de1f740e1d517.png",
           "kind": "generated"
         },
         {
@@ -13504,7 +13400,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346607.png?v=b80cfeedfa3497da",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346607/eeeacfdf499db4c3.png",
           "kind": "generated"
         },
         {
@@ -13664,7 +13560,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346692.png?v=c5350f5c9bf975f3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346692/b88528f95980dbd7.png",
           "kind": "generated"
         },
         {
@@ -13824,7 +13720,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346596.png?v=b58513ef68c2dd7a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346596/1346921d3e8a8ef3.png",
           "kind": "generated"
         },
         {
@@ -13984,7 +13880,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346568.png?v=ba4f5dbec0e4e06a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346568/6fb4b3d3b013c351.png",
           "kind": "generated"
         },
         {
@@ -14144,7 +14040,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346706.png?v=0c690dbbe32513de",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346706/d3e07889975a257b.png",
           "kind": "generated"
         },
         {
@@ -14304,7 +14200,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346610.png?v=50a4e8c0773b639f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346610/6a052631ee09923e.png",
           "kind": "generated"
         },
         {
@@ -14464,7 +14360,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346678.png?v=f9c76d8dab92a29d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346678/45ffc0210a42500c.png",
           "kind": "generated"
         },
         {
@@ -14624,7 +14520,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346699.png?v=b13cf2c588893491",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346699/02191567ca50ddc7.png",
           "kind": "generated"
         },
         {
@@ -14784,7 +14680,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346720.png?v=afa5217c79fe502d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346720/e412062264263dd0.png",
           "kind": "generated"
         },
         {
@@ -14944,7 +14840,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346713.png?v=0b16d61b49a06985",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346713/4b49592ceabc4759.png",
           "kind": "generated"
         },
         {
@@ -15104,7 +15000,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346685.png?v=31b1fec559a81e25",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346685/aa49c986ba2eb11f.png",
           "kind": "generated"
         },
         {
@@ -15264,7 +15160,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346756.png?v=dce5edac5240ade9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346756/3c09fb5280796f03.png",
           "kind": "generated"
         },
         {
@@ -15424,7 +15320,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346742.png?v=9c1fcecc6f08fcc4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346742/70ee098d190a06c9.png",
           "kind": "generated"
         },
         {
@@ -15584,7 +15480,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346618.png?v=79b411dfc78ab118",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346618/6bdddbaaf45bfb8f.png",
           "kind": "generated"
         },
         {
@@ -15744,7 +15640,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346632.png?v=033bef18b10a9a01",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346632/5bf7f5189faeac95.png",
           "kind": "generated"
         },
         {
@@ -15904,7 +15800,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346749.png?v=e0a408294de0d70c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346749/ccb10ee30a3cde29.png",
           "kind": "generated"
         },
         {
@@ -16064,7 +15960,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346646.png?v=5674b882c4927ec9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346646/84dcdb3d27ade559.png",
           "kind": "generated"
         },
         {
@@ -16224,7 +16120,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346728.png?v=e95703d14cf1c810",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346728/33dc7bf3958a3c67.png",
           "kind": "generated"
         },
         {
@@ -16384,7 +16280,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346721.png?v=551110454d35dfce",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346721/86831f4207468d78.png",
           "kind": "generated"
         },
         {
@@ -16544,7 +16440,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346611.png?v=34f0919aa3184c87",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346611/f6316531529ce891.png",
           "kind": "generated"
         },
         {
@@ -16704,7 +16600,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346639.png?v=b76818d6b5d92b6f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346639/348ddddd31bd82bd.png",
           "kind": "generated"
         },
         {
@@ -16864,7 +16760,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346653.png?v=41addf5384c50fa3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346653/1ff85c0e78df2cbb.png",
           "kind": "generated"
         },
         {
@@ -17024,7 +16920,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346735.png?v=adb8fe214f980ee6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346735/f0595c8c04cc377a.png",
           "kind": "generated"
         },
         {
@@ -17184,7 +17080,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346768.png?v=1a86fd48d279a73a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346768/c9cf0fd8f5fc915e.png",
           "kind": "generated"
         },
         {
@@ -17344,7 +17240,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346551.png?v=8cd1b73bb23faba3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346551/886f668b2b8bd7ee.png",
           "kind": "generated"
         },
         {
@@ -17504,7 +17400,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346661.png?v=7e63cf4637534f9d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346661/3777ee4ebe4895cc.png",
           "kind": "generated"
         },
         {
@@ -17664,7 +17560,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346616.png?v=673efe84c88d8866",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346616/2d36c7caea874801.png",
           "kind": "generated"
         },
         {
@@ -17824,7 +17720,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346733.png?v=1eff8a74055947e8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346733/9c17fbd46aea521e.png",
           "kind": "generated"
         },
         {
@@ -17984,7 +17880,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346658.png?v=948c3b35c113eb71",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346658/5498f89ca848e35a.png",
           "kind": "generated"
         },
         {
@@ -18144,7 +18040,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346715.png?v=3e7fca6f98b54ac1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346715/15f8c335145371b0.png",
           "kind": "generated"
         },
         {
@@ -18304,7 +18200,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346726.png?v=3e16afda171edfab",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346726/a6210bc9eebf38d1.png",
           "kind": "generated"
         },
         {
@@ -18464,7 +18360,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346605.png?v=89f13b2391f1a898",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12346605/44da2dfdf8abd0ab.png",
           "kind": "generated"
         },
         {
@@ -18624,7 +18520,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826315.png?v=2b51bf2a2acb351c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826315/7252123501a82009.png",
           "kind": "generated"
         },
         {
@@ -18782,7 +18678,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826339.png?v=94875ac1eabb169d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826339/8392c5a916c80fd0.png",
           "kind": "generated"
         },
         {
@@ -18940,7 +18836,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826375.png?v=9dd3f6a4579dba13",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826375/4a4e166b40f9403c.png",
           "kind": "generated"
         },
         {
@@ -19098,7 +18994,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826387.png?v=6492d17b6400e800",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826387/1c02a72c36bfac48.png",
           "kind": "generated"
         },
         {
@@ -19256,7 +19152,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826399.png?v=3c5351b43a4f5d96",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826399/c924977ebd8dfb87.png",
           "kind": "generated"
         },
         {
@@ -19414,7 +19310,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826411.png?v=829a213f72930352",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826411/ddc8659038fdfcf8.png",
           "kind": "generated"
         },
         {
@@ -19572,7 +19468,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826402.png?v=5aff6128761481e3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826402/4aa7bd28a8464e84.png",
           "kind": "generated"
         },
         {
@@ -19730,7 +19626,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826316.png?v=e350888a971c8fde",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826316/a69b07499998d279.png",
           "kind": "generated"
         },
         {
@@ -19888,7 +19784,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826364.png?v=75bde79bc48ff5c0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826364/d1497fd08a0216f6.png",
           "kind": "generated"
         },
         {
@@ -20046,7 +19942,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826376.png?v=3cb51b8b4228b5c7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826376/70d4051128dddb1e.png",
           "kind": "generated"
         },
         {
@@ -20204,7 +20100,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826388.png?v=98ff3c9b9f8129e2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826388/ad2950fcb2f4eceb.png",
           "kind": "generated"
         },
         {
@@ -20362,7 +20258,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826400.png?v=1181fc8787fe6ad1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826400/82aaa59751156c90.png",
           "kind": "generated"
         },
         {
@@ -20520,7 +20416,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826412.png?v=b98f196587077595",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826412/76e54d2f546822ef.png",
           "kind": "generated"
         },
         {
@@ -20678,7 +20574,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826311.png?v=78096ccef5f0c1df",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826311/f4b2326dbfbdb2dd.png",
           "kind": "generated"
         },
         {
@@ -20836,7 +20732,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826395.png?v=c8a55f0090f55f2c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826395/f8b56338d4e06cdb.png",
           "kind": "generated"
         },
         {
@@ -20994,7 +20890,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826407.png?v=27eb5cd6c7ee47dd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826407/a453793ebce5c144.png",
           "kind": "generated"
         },
         {
@@ -21152,7 +21048,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826413.png?v=2dcdb674c38fef60",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826413/92f655d390adb046.png",
           "kind": "generated"
         },
         {
@@ -21310,7 +21206,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826312.png?v=ce3617297d107d68",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826312/74b19305b33a6239.png",
           "kind": "generated"
         },
         {
@@ -21468,7 +21364,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826360.png?v=320e12038ffd2457",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826360/f37fc24c34d810bd.png",
           "kind": "generated"
         },
         {
@@ -21626,7 +21522,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826408.png?v=d0c46b08dab8399d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826408/55c077110f59d8b4.png",
           "kind": "generated"
         },
         {
@@ -21784,7 +21680,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826405.png?v=35908a30fc08ab5a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826405/fe7440f51a62c011.png",
           "kind": "generated"
         },
         {
@@ -21942,7 +21838,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826314.png?v=1e177e550878db41",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826314/0217b52e33222c4a.png",
           "kind": "generated"
         },
         {
@@ -22100,7 +21996,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826374.png?v=772986f4c4bc51b1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826374/ba37df3a2b591979.png",
           "kind": "generated"
         },
         {
@@ -22258,7 +22154,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826398.png?v=153c5247b20d6790",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826398/eac620f9a7368b8f.png",
           "kind": "generated"
         },
         {
@@ -22416,7 +22312,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826410.png?v=1b9d77f9c77db939",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826410/deaec6bf15df9b6b.png",
           "kind": "generated"
         },
         {
@@ -22574,7 +22470,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826403.png?v=123df1181d7ce554",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826403/433e4d2bd891afd7.png",
           "kind": "generated"
         },
         {
@@ -22732,7 +22628,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826310.png?v=e3f2da7412980e19",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826310/92d0e171575cce30.png",
           "kind": "generated"
         },
         {
@@ -22890,7 +22786,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826406.png?v=af466dd645e05249",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826406/c6565591a9f20790.png",
           "kind": "generated"
         },
         {
@@ -23048,7 +22944,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826313.png?v=17e056725dc01f25",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826313/1593c536014fda55.png",
           "kind": "generated"
         },
         {
@@ -23206,7 +23102,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826337.png?v=6a74fc87047c4f11",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826337/25722da21edfaeec.png",
           "kind": "generated"
         },
         {
@@ -23364,7 +23260,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826373.png?v=b3caa6cc0a216240",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826373/5505a182e9f03e4b.png",
           "kind": "generated"
         },
         {
@@ -23522,7 +23418,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826397.png?v=e0dccd70e809bd1b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826397/ec982a3cf31759f2.png",
           "kind": "generated"
         },
         {
@@ -23680,7 +23576,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826409.png?v=0c3320768b9554a9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826409/a5871785fc75f033.png",
           "kind": "generated"
         },
         {
@@ -23838,7 +23734,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826404.png?v=5d880bf449628fd9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13826404/09be4b8d63a21694.png",
           "kind": "generated"
         },
         {
@@ -23996,7 +23892,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832108.png?v=dc0b4a64736bb95a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832108/b70395e05a4d3616.png",
           "kind": "generated"
         },
         {
@@ -24154,7 +24050,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832132.png?v=696ed3014168358e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832132/77ec5dcde2ca2a9d.png",
           "kind": "generated"
         },
         {
@@ -24312,7 +24208,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832144.png?v=638d78f82466550a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832144/6f5f608ecc4e06cf.png",
           "kind": "generated"
         },
         {
@@ -24470,7 +24366,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832156.png?v=467d5a56d6ae919b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832156/3f64cbbfee4273f8.png",
           "kind": "generated"
         },
         {
@@ -24628,7 +24524,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832168.png?v=1d731800b25e5f1e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832168/3b451641dbb41b3e.png",
           "kind": "generated"
         },
         {
@@ -24786,7 +24682,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832204.png?v=e9fca538c9cbb69d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832204/af5bf571eea86185.png",
           "kind": "generated"
         },
         {
@@ -24944,7 +24840,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832099.png?v=fbf808659d257e08",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832099/60c2210592d957c3.png",
           "kind": "generated"
         },
         {
@@ -25102,7 +24998,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832111.png?v=4ee49e45e9e5715a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832111/caec0f354e286e91.png",
           "kind": "generated"
         },
         {
@@ -25260,7 +25156,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832135.png?v=85ea4fdf3b1c402f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832135/db1ee1ed4152994d.png",
           "kind": "generated"
         },
         {
@@ -25418,7 +25314,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832147.png?v=49d30d9591db486b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832147/ea3327faf0bfc05e.png",
           "kind": "generated"
         },
         {
@@ -25576,7 +25472,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832159.png?v=178a7ea950510e6b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832159/7b2814ff6ef3877f.png",
           "kind": "generated"
         },
         {
@@ -25734,7 +25630,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832171.png?v=b19c649b2fe935db",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832171/eca5613b89c8e2b4.png",
           "kind": "generated"
         },
         {
@@ -25892,7 +25788,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832195.png?v=f030ab35daaec7b1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832195/e3ee570b72b22d7a.png",
           "kind": "generated"
         },
         {
@@ -26050,7 +25946,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832109.png?v=47fc793d4c051298",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832109/54957d134a6e89ed.png",
           "kind": "generated"
         },
         {
@@ -26208,7 +26104,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832145.png?v=5f08b1cc873a14ce",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832145/350ae75cb47b3fa2.png",
           "kind": "generated"
         },
         {
@@ -26366,7 +26262,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832157.png?v=1fe6809f77287389",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832157/a81c4a2e0ab7270a.png",
           "kind": "generated"
         },
         {
@@ -26524,7 +26420,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832169.png?v=c28023df6d0a2acb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832169/91ff45f519f1ad70.png",
           "kind": "generated"
         },
         {
@@ -26682,7 +26578,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832205.png?v=35b8da6c65dfd9a2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832205/565d2eabe692ec8f.png",
           "kind": "generated"
         },
         {
@@ -26840,7 +26736,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832104.png?v=c1322aab3f07f417",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832104/60c4de0472e9c01d.png",
           "kind": "generated"
         },
         {
@@ -26998,7 +26894,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832116.png?v=b5642f64f8209b29",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832116/4baa5eb24c6aedf0.png",
           "kind": "generated"
         },
         {
@@ -27156,7 +27052,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832128.png?v=756e83e7117a2373",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832128/716a576d1d230d4c.png",
           "kind": "generated"
         },
         {
@@ -27314,7 +27210,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832140.png?v=41ed60a13a9c8ddc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832140/9a524c41275d08c7.png",
           "kind": "generated"
         },
         {
@@ -27472,7 +27368,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832164.png?v=f045a9469fa707d1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832164/e4bdb67c42177ce4.png",
           "kind": "generated"
         },
         {
@@ -27630,7 +27526,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832200.png?v=b9041078f2453b18",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832200/7d08aacfff1c6182.png",
           "kind": "generated"
         },
         {
@@ -27788,7 +27684,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832110.png?v=e520b5e0d5e02c1c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832110/1448af1cf9bd9d54.png",
           "kind": "generated"
         },
         {
@@ -27946,7 +27842,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832105.png?v=25850669c330d9ac",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832105/8754a1796c729b7d.png",
           "kind": "generated"
         },
         {
@@ -28104,7 +28000,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832117.png?v=46656393f00f2192",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832117/9374cc3d89be8aae.png",
           "kind": "generated"
         },
         {
@@ -28262,7 +28158,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832141.png?v=7cf425a3ba6dbb2a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832141/d18cc7df362176f2.png",
           "kind": "generated"
         },
         {
@@ -28420,7 +28316,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832153.png?v=733e409d7e7ab11a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832153/275e58f5ed46a86b.png",
           "kind": "generated"
         },
         {
@@ -28578,7 +28474,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832165.png?v=cd228fcb1ae11b94",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832165/f168d0be91e89e27.png",
           "kind": "generated"
         },
         {
@@ -28736,7 +28632,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832177.png?v=79b878e6b65ea6fa",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832177/38164b1bfca7a07c.png",
           "kind": "generated"
         },
         {
@@ -28894,7 +28790,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832201.png?v=82f957cb2cc09b7a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832201/eefcefe77c4001e8.png",
           "kind": "generated"
         },
         {
@@ -29052,7 +28948,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832102.png?v=12eadf6b6a614459",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832102/b7c77c861684c260.png",
           "kind": "generated"
         },
         {
@@ -29210,7 +29106,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832114.png?v=7d8af56a3c8e7e6d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832114/e00d54d8da500f35.png",
           "kind": "generated"
         },
         {
@@ -29368,7 +29264,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832198.png?v=c01458b11eb12590",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832198/b251d6f25757e2a0.png",
           "kind": "generated"
         },
         {
@@ -29526,7 +29422,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832107.png?v=6b00697ed9623410",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832107/12e67a538050f083.png",
           "kind": "generated"
         },
         {
@@ -29684,7 +29580,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832203.png?v=d6e9ca440a0deab8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832203/db9ec675c11f4bae.png",
           "kind": "generated"
         },
         {
@@ -29842,7 +29738,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832196.png?v=51239e838c95a673",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832196/22535e7b1f500e8d.png",
           "kind": "generated"
         },
         {
@@ -30000,7 +29896,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832103.png?v=b1eedb71a247fbc3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832103/d03d51601caa696e.png",
           "kind": "generated"
         },
         {
@@ -30158,7 +30054,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832199.png?v=32acef0cbfb2a4bc",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832199/bb786c0c1b68fa36.png",
           "kind": "generated"
         },
         {
@@ -30316,7 +30212,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832106.png?v=8879b8ef215b8fd3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832106/708920ceb52bb6f9.png",
           "kind": "generated"
         },
         {
@@ -30474,7 +30370,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832130.png?v=327740a0e098f8b7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832130/3359752a2600c075.png",
           "kind": "generated"
         },
         {
@@ -30632,7 +30528,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832142.png?v=a3eaa2d14ce6398c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832142/3e5bcb8550ca1645.png",
           "kind": "generated"
         },
         {
@@ -30790,7 +30686,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832154.png?v=56accf592b8f28f1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832154/910bb09f7b2dd0b6.png",
           "kind": "generated"
         },
         {
@@ -30948,7 +30844,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832166.png?v=f32cf3f05f9a721f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832166/a1903fa5aea8efdc.png",
           "kind": "generated"
         },
         {
@@ -31106,7 +31002,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832178.png?v=533929a4be4a58fa",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832178/41ac661fc0cabf26.png",
           "kind": "generated"
         },
         {
@@ -31264,7 +31160,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832202.png?v=40e6c4ad64d0111d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832202/da333bc108263279.png",
           "kind": "generated"
         },
         {
@@ -31422,7 +31318,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832101.png?v=5cae3b7c476b5eae",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832101/5171a527c62ae647.png",
           "kind": "generated"
         },
         {
@@ -31580,7 +31476,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832161.png?v=83eca03c3a3c7c62",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832161/52ec48980a6d53c1.png",
           "kind": "generated"
         },
         {
@@ -31738,7 +31634,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832173.png?v=b48d3a37bd26f143",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832173/ce6ab7ec30822106.png",
           "kind": "generated"
         },
         {
@@ -31896,7 +31792,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832197.png?v=a003905cc80335c0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832197/f2690f55eb351496.png",
           "kind": "generated"
         },
         {
@@ -32054,7 +31950,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832779.png?v=6f7ecc1b6f74f905",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832779/d14e4e95413ae64d.png",
           "kind": "generated"
         },
         {
@@ -32212,7 +32108,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832803.png?v=e483e41626cd2c48",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832803/6f5d235bc94dde37.png",
           "kind": "generated"
         },
         {
@@ -32370,7 +32266,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832815.png?v=45515c89f208540f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832815/e594b62fc1da30c5.png",
           "kind": "generated"
         },
         {
@@ -32528,7 +32424,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832827.png?v=9e395d1259b70912",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832827/96cb30a8dd92db67.png",
           "kind": "generated"
         },
         {
@@ -32686,7 +32582,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832839.png?v=800eb434d35b734f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832839/430a0ac0ca5ebb70.png",
           "kind": "generated"
         },
         {
@@ -32844,7 +32740,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832851.png?v=20f82b84f10eb04a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832851/afc210a6e9ac11cc.png",
           "kind": "generated"
         },
         {
@@ -33002,7 +32898,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832746.png?v=68580703d3eca2a9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832746/8fe229c13658a187.png",
           "kind": "generated"
         },
         {
@@ -33160,7 +33056,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832758.png?v=9c598e81d622581d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832758/93822e887fe12211.png",
           "kind": "generated"
         },
         {
@@ -33318,7 +33214,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832770.png?v=290f5c9e0c23b6f2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832770/c1f3b1187951cd3b.png",
           "kind": "generated"
         },
         {
@@ -33476,7 +33372,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832794.png?v=346ed1858e20b2aa",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832794/e8b63c8d04b8863d.png",
           "kind": "generated"
         },
         {
@@ -33634,7 +33530,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832806.png?v=c2980ec1d266b2f3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832806/65993d7e1a5c7ab4.png",
           "kind": "generated"
         },
         {
@@ -33792,7 +33688,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832830.png?v=c183ee00d6f60457",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832830/25d8e480e940ff37.png",
           "kind": "generated"
         },
         {
@@ -33950,7 +33846,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832842.png?v=27f452b2ad7a88e8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832842/ca417145c9ddd6f7.png",
           "kind": "generated"
         },
         {
@@ -34108,7 +34004,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832756.png?v=c70d3f0fd1bcef79",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832756/19941d610695c80a.png",
           "kind": "generated"
         },
         {
@@ -34266,7 +34162,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832780.png?v=1c35326c324e62a1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832780/c92817b69d8f66f9.png",
           "kind": "generated"
         },
         {
@@ -34424,7 +34320,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832804.png?v=653ca08b251a30bb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832804/1b82a2922cc7cbb3.png",
           "kind": "generated"
         },
         {
@@ -34582,7 +34478,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832816.png?v=17ab4ca4178781dd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832816/df6f47f0e7a5925b.png",
           "kind": "generated"
         },
         {
@@ -34740,7 +34636,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832828.png?v=79a51a9065a435b8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832828/d96bdbab16eb5eb5.png",
           "kind": "generated"
         },
         {
@@ -34898,7 +34794,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832840.png?v=2a651b3752764d5a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832840/f961f83f3922424c.png",
           "kind": "generated"
         },
         {
@@ -35056,7 +34952,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832852.png?v=4b1b90aac5a27326",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832852/712b9b02c5ac4c00.png",
           "kind": "generated"
         },
         {
@@ -35214,7 +35110,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832751.png?v=dac30bc4fecca672",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832751/d19f3efaf3477f0f.png",
           "kind": "generated"
         },
         {
@@ -35372,7 +35268,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832775.png?v=fe13e230ffaa3853",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832775/ba60456df117a03e.png",
           "kind": "generated"
         },
         {
@@ -35530,7 +35426,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832799.png?v=a5b637b30cb420fb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832799/05b6c1d7e834f470.png",
           "kind": "generated"
         },
         {
@@ -35688,7 +35584,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832811.png?v=8d90446259f4698c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832811/c59dc0b25d40bc19.png",
           "kind": "generated"
         },
         {
@@ -35846,7 +35742,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832823.png?v=be6ec1860baa1281",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832823/7cd6afd4e7ac97be.png",
           "kind": "generated"
         },
         {
@@ -36004,7 +35900,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832835.png?v=47c70b5b06bd627a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832835/ccb7ca528c75c8b4.png",
           "kind": "generated"
         },
         {
@@ -36162,7 +36058,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832847.png?v=db25a46e7bfcb1be",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832847/10dd52c44a283e8b.png",
           "kind": "generated"
         },
         {
@@ -36320,7 +36216,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832757.png?v=f441eb8e48a1a55d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832757/92046b8299a08d90.png",
           "kind": "generated"
         },
         {
@@ -36478,7 +36374,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832805.png?v=067d0788ab598c4c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832805/512bb1f539c13b68.png",
           "kind": "generated"
         },
         {
@@ -36636,7 +36532,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832829.png?v=f7dd59bfa890db52",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832829/2b52b07977a05ba5.png",
           "kind": "generated"
         },
         {
@@ -36794,7 +36690,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832841.png?v=8bcb38a3a419d31e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832841/93a16f6cc8d6ac1b.png",
           "kind": "generated"
         },
         {
@@ -36952,7 +36848,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832853.png?v=e9df3ae6cbbf7e65",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832853/31cebc62159e2d1a.png",
           "kind": "generated"
         },
         {
@@ -37110,7 +37006,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832752.png?v=6ac21707df3610f8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832752/0a49f431f75c677a.png",
           "kind": "generated"
         },
         {
@@ -37268,7 +37164,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832788.png?v=3f3abab3622e9961",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832788/3a634af33832a9c9.png",
           "kind": "generated"
         },
         {
@@ -37426,7 +37322,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832800.png?v=b212bc576569eea5",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832800/0765c6801890875e.png",
           "kind": "generated"
         },
         {
@@ -37584,7 +37480,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832812.png?v=ccb6d2eb524db0ad",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832812/ab4ecdc2f306d2dc.png",
           "kind": "generated"
         },
         {
@@ -37742,7 +37638,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832824.png?v=577235d738f2715e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832824/3038fa8e879a0a5c.png",
           "kind": "generated"
         },
         {
@@ -37900,7 +37796,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832836.png?v=ea304e5f999dc75f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832836/3364f4945aa79958.png",
           "kind": "generated"
         },
         {
@@ -38058,7 +37954,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832848.png?v=ccf6873c5834bd2e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832848/5650278d9f8cd9c3.png",
           "kind": "generated"
         },
         {
@@ -38216,7 +38112,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832749.png?v=39f0755b29e0b70a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832749/f4491a98db20c1f4.png",
           "kind": "generated"
         },
         {
@@ -38374,7 +38270,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832761.png?v=61f846bf32416c27",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832761/dd2a5b52d5d01c16.png",
           "kind": "generated"
         },
         {
@@ -38532,7 +38428,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832797.png?v=b3ee3ef6a028a202",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832797/68e92a39cf8bc7f1.png",
           "kind": "generated"
         },
         {
@@ -38690,7 +38586,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832809.png?v=73ab4fb6e7d40214",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832809/b22cc8f814ae3e2f.png",
           "kind": "generated"
         },
         {
@@ -38848,7 +38744,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832833.png?v=04b24bfea47c0655",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832833/bb605da4a267a6ab.png",
           "kind": "generated"
         },
         {
@@ -39006,7 +38902,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832845.png?v=0a41661323b845e2",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832845/843456c854d73751.png",
           "kind": "generated"
         },
         {
@@ -39164,7 +39060,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832754.png?v=4a1ce672b351ef3e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832754/f4e73ce5341c0c5c.png",
           "kind": "generated"
         },
         {
@@ -39322,7 +39218,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832814.png?v=04eaf363579bc2f3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832814/cbb1ced708329777.png",
           "kind": "generated"
         },
         {
@@ -39480,7 +39376,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832826.png?v=e518a451d41366ad",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832826/e259eec84ac3c366.png",
           "kind": "generated"
         },
         {
@@ -39638,7 +39534,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832838.png?v=519a6d0cd8efeab6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832838/f5a6438e33adf99a.png",
           "kind": "generated"
         },
         {
@@ -39796,7 +39692,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832850.png?v=92de1573494dee35",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832850/6ca83d226f1802e9.png",
           "kind": "generated"
         },
         {
@@ -39954,7 +39850,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832747.png?v=ac9e4785688a3dd7",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832747/4e8c0126f317c7c8.png",
           "kind": "generated"
         },
         {
@@ -40053,164 +39949,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "13832759",
-      "house_id": "9464279",
-      "house": "Дом · ID 9464279",
-      "rooms": "2",
-      "area": "52.34",
-      "floor": "2",
-      "floors": "9",
-      "price": "7327600",
-      "decoration": "Без отделки",
-      "plan_id": "plan-daf54115eb6d",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/13832759.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/13832759.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/13832759.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-a4513bdd204c",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/2a359bd1bee59cabf8450e816e3726cd.png",
-          "position": 1
-        },
-        {
-          "id": "src-5cb60c6fd14f",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-994afcc9bf88",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832759.png?v=9a9ddd2311989472",
-          "kind": "generated"
-        },
-        {
-          "id": "src-a4513bdd204c",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/2a359bd1bee59cabf8450e816e3726cd.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-5cb60c6fd14f",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/cb2f2d9a492d23b3f3fb1a428b48daeb.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-994afcc9bf88",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/307ddda48d058ec445e3427889684809.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "13832759",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+78632098967",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Аксай, Аксайский район, Ростовская область, Ленина",
-        "Latitude": "47.282374",
-        "Longitude": "39.862154",
-        "Description": "Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.",
-        "Price": "7327600",
-        "Square": "52.34",
-        "Decoration": "Без отделки",
-        "Floor": "2",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "9464279",
-        "Rooms": "2",
-        "Floors": "9",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.",
-      "excluded_from_feed": false
-    },
-    {
       "id": "13832807",
       "house_id": "9464279",
       "house": "Дом · ID 9464279",
@@ -40270,7 +40008,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832807.png?v=1d719a529a5e38c1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832807/87e8c8d950e268ca.png",
           "kind": "generated"
         },
         {
@@ -40428,7 +40166,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832750.png?v=f78055b772309bef",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832750/7d147ef240d8e3b2.png",
           "kind": "generated"
         },
         {
@@ -40586,7 +40324,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832846.png?v=9617057d014a88de",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832846/92ce73d4c9531634.png",
           "kind": "generated"
         },
         {
@@ -40744,7 +40482,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832753.png?v=5cc7cbbff904d4b9",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832753/79d7c27630c6c3ca.png",
           "kind": "generated"
         },
         {
@@ -40902,7 +40640,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832777.png?v=377543c27d62ffde",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832777/629fb757c270603d.png",
           "kind": "generated"
         },
         {
@@ -41060,7 +40798,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832801.png?v=fff66df35f0e76da",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832801/a04c363c8cc3e271.png",
           "kind": "generated"
         },
         {
@@ -41218,7 +40956,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832813.png?v=5d31460e271fb840",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832813/91576083dcde15f8.png",
           "kind": "generated"
         },
         {
@@ -41376,7 +41114,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832837.png?v=3c14b8b7261e7f33",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832837/d0e3e9ca8cdee34d.png",
           "kind": "generated"
         },
         {
@@ -41534,7 +41272,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832849.png?v=f7dd7ca2823a6ee1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832849/732f25497840a8dd.png",
           "kind": "generated"
         },
         {
@@ -41692,7 +41430,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832748.png?v=bfdd7dbcf9915a91",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832748/592fd695e3051f4e.png",
           "kind": "generated"
         },
         {
@@ -41850,7 +41588,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832760.png?v=de25441decfb45fd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832760/bc4ba139006c32e0.png",
           "kind": "generated"
         },
         {
@@ -42008,7 +41746,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832772.png?v=993ea1b9afa07b0b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832772/dc3485b0bf4f3c6c.png",
           "kind": "generated"
         },
         {
@@ -42166,7 +41904,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832796.png?v=f615fd10f5b340a8",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832796/3d9b7193106741f3.png",
           "kind": "generated"
         },
         {
@@ -42324,7 +42062,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832808.png?v=429eee7f43a0f0cd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832808/98172ed9c57bff64.png",
           "kind": "generated"
         },
         {
@@ -42482,7 +42220,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832832.png?v=db2ac28d8a3a4842",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832832/1c4e340408da0c88.png",
           "kind": "generated"
         },
         {
@@ -42640,7 +42378,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832844.png?v=c1cfa144a1f5771c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/13832844/98ee6c9fa23f3171.png",
           "kind": "generated"
         },
         {
@@ -42803,7 +42541,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195870.png?v=78af53a565dc2256",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195870/1901cb46a9eb8fb1.png",
           "kind": "generated"
         },
         {
@@ -42966,7 +42704,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195853.png?v=bf9cc58a26d835ef",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195853/436f9b4b36655272.png",
           "kind": "generated"
         },
         {
@@ -43129,7 +42867,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195859.png?v=71252610972fab26",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195859/af7e13fe1b3fc938.png",
           "kind": "generated"
         },
         {
@@ -43292,7 +43030,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195865.png?v=5e6e0e35d950619a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195865/fe4462059e3a4aa6.png",
           "kind": "generated"
         },
         {
@@ -43455,7 +43193,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195871.png?v=0fe008d8459a9feb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195871/dc12d6e789d9aee5.png",
           "kind": "generated"
         },
         {
@@ -43618,7 +43356,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195849.png?v=ee9279d20ab47e7c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195849/9f6a58a2c05113ef.png",
           "kind": "generated"
         },
         {
@@ -43781,7 +43519,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195877.png?v=ef96584904c52da3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195877/893e36cc47da48cb.png",
           "kind": "generated"
         },
         {
@@ -43944,7 +43682,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195855.png?v=33a205d1a239949e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195855/7fb0a30e48ecfe54.png",
           "kind": "generated"
         },
         {
@@ -44107,7 +43845,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195861.png?v=8d8620585ddbe7b3",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195861/459434692b82e659.png",
           "kind": "generated"
         },
         {
@@ -44270,7 +44008,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195887.png?v=f4e65323e810f0dd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195887/ddde21d40f09ba86.png",
           "kind": "generated"
         },
         {
@@ -44433,7 +44171,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195867.png?v=72e019e0bb974c6c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195867/6cfb4e38ad4aae9e.png",
           "kind": "generated"
         },
         {
@@ -44596,7 +44334,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195892.png?v=9fa9beda3ec24652",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195892/152c94aee5c2da54.png",
           "kind": "generated"
         },
         {
@@ -44759,7 +44497,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195854.png?v=30bfe135b2d815f1",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195854/b62f2cfeb2dd2133.png",
           "kind": "generated"
         },
         {
@@ -44922,7 +44660,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195866.png?v=108dba789efcbb45",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195866/719eaf85fb83fc24.png",
           "kind": "generated"
         },
         {
@@ -45085,7 +44823,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195872.png?v=3d999dfbe774bcbd",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195872/213a210d4abfad8e.png",
           "kind": "generated"
         },
         {
@@ -45248,7 +44986,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195876.png?v=c0dbe1e53b1ce1fe",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195876/e536f24f015131bb.png",
           "kind": "generated"
         },
         {
@@ -45411,7 +45149,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195886.png?v=b887caee50ccb1fa",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195886/3a275b284f85c177.png",
           "kind": "generated"
         },
         {
@@ -45574,7 +45312,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195891.png?v=c813026522bfabb5",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195891/89b96b650644c5c0.png",
           "kind": "generated"
         },
         {
@@ -45737,7 +45475,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195850.png?v=8aec655ae5c10b66",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195850/711b9a8c0fb30dea.png",
           "kind": "generated"
         },
         {
@@ -45900,7 +45638,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195856.png?v=61d061aacb374fc5",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195856/7c5b4af7c3c02abc.png",
           "kind": "generated"
         },
         {
@@ -46063,7 +45801,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195862.png?v=5a980110b8ab39d6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195862/2d42ad1c6a6eeaaf.png",
           "kind": "generated"
         },
         {
@@ -46226,7 +45964,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195868.png?v=f2249f56bc24518c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195868/43ad197a751273a4.png",
           "kind": "generated"
         },
         {
@@ -46389,7 +46127,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195851.png?v=c13f17e9ad2a23c4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195851/a34bb2c156059582.png",
           "kind": "generated"
         },
         {
@@ -46552,7 +46290,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195863.png?v=83ad99e07100f1fe",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195863/8ce16564c1dfc519.png",
           "kind": "generated"
         },
         {
@@ -46715,7 +46453,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195869.png?v=cdef5b3c51f686ef",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195869/76b641dba636532a.png",
           "kind": "generated"
         },
         {
@@ -46878,7 +46616,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195874.png?v=70d9a34208751079",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195874/9d547c8f70456b69.png",
           "kind": "generated"
         },
         {
@@ -47041,7 +46779,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195889.png?v=990c39088edf361e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195889/186916cb94cd3f0a.png",
           "kind": "generated"
         },
         {
@@ -47204,7 +46942,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195873.png?v=87bc277ebee5980d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195873/5d8d7b06fb217232.png",
           "kind": "generated"
         },
         {
@@ -47367,7 +47105,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195878.png?v=8e2c23ffedc5796e",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195878/e0c43009160871e5.png",
           "kind": "generated"
         },
         {
@@ -47530,7 +47268,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195883.png?v=b84b214b1f49ba53",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195883/9d66703632d5c1ee.png",
           "kind": "generated"
         },
         {
@@ -47693,7 +47431,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195888.png?v=193933b11f2c9a7d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/17195888/46bf3382026a92d3.png",
           "kind": "generated"
         },
         {

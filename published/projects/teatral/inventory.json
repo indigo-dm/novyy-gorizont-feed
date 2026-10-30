@@ -1,7 +1,7 @@
 {
   "slug": "teatral",
   "project": "ЖК Театрал",
-  "checked_at": "2026-10-30T03:58:27+03:00",
+  "checked_at": "2026-10-30T19:46:36+03:00",
   "source_ads": 20,
   "full_ads": 20,
   "excluded_ads": 0,
@@ -135,6 +135,24 @@
       "supported": true
     },
     {
+      "tag": "KitchenSpace",
+      "name": "Площадь кухни",
+      "kind": "number",
+      "min": 2,
+      "max": 100,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "LivingSpace",
+      "name": "Жилая площадь",
+      "kind": "number",
+      "min": 5,
+      "max": 5000,
+      "step": 0.01,
+      "supported": true
+    },
+    {
       "tag": "Courtyard",
       "name": "Двор",
       "kind": "multi",
@@ -159,8 +177,46 @@
       "supported": true
     },
     {
+      "tag": "RoomType",
+      "name": "Тип комнат",
+      "kind": "multi",
+      "values": [
+        "Изолированные",
+        "Смежные"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "ContactMethod",
+      "name": "Способ связи",
+      "kind": "select",
+      "values": [
+        "По телефону и в сообщениях",
+        "По телефону"
+      ],
+      "default": "По телефону",
+      "supported": true
+    },
+    {
+      "tag": "BalconyOrLoggiaMulti",
+      "name": "Балкон или лоджия",
+      "kind": "multi",
+      "values": [
+        "Балкон",
+        "Лоджия"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "VideoURL",
+      "name": "Видео",
+      "kind": "url",
+      "max": 1500,
+      "supported": true
+    },
+    {
       "tag": "NDAdditionally",
-      "name": "Дополнительно о новостройке",
+      "name": "Дополнительно о планировке",
       "kind": "multi",
       "values": [
         "Гардеробная",
@@ -240,7 +296,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479461.png?v=a6c08bebd6f15e51",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479461/9e19b94799b3b34d.png",
           "kind": "generated"
         },
         {
@@ -422,7 +478,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479545.png?v=99c21e24d13177ef",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479545/4f29d7e116ecdd49.png",
           "kind": "generated"
         },
         {
@@ -605,7 +661,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479550.png?v=a9319f8371dbcbe6",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479550/3c8b08ba524a8c38.png",
           "kind": "generated"
         },
         {
@@ -788,7 +844,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479560.png?v=ba2ee20619409887",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479560/a4f85adc8d9eb042.png",
           "kind": "generated"
         },
         {
@@ -971,7 +1027,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479540.png?v=27ca83e4ed335a90",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479540/8d01b54521dc01f3.png",
           "kind": "generated"
         },
         {
@@ -1154,7 +1210,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479454.png?v=782af533876dffaa",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479454/222b9e45e65e0f9a.png",
           "kind": "generated"
         },
         {
@@ -1337,7 +1393,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479448.png?v=8ccd50203cea671d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479448/fe6435fd3c7fb88c.png",
           "kind": "generated"
         },
         {
@@ -1519,7 +1575,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479496.png?v=edc27bd58e6765bb",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479496/cadec052418a891b.png",
           "kind": "generated"
         },
         {
@@ -1702,7 +1758,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479460.png?v=8ea469b2b66ba5af",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479460/1d090eb1dcbdac11.png",
           "kind": "generated"
         },
         {
@@ -1885,7 +1941,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479478.png?v=1158ea4a2726015d",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479478/3b9783555fe3a2de.png",
           "kind": "generated"
         },
         {
@@ -2067,7 +2123,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479549.png?v=04fa3d23aaa2283f",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479549/415e697dced73a53.png",
           "kind": "generated"
         },
         {
@@ -2250,7 +2306,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479544.png?v=e51923ea8994d320",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479544/2769240b7233fcee.png",
           "kind": "generated"
         },
         {
@@ -2430,7 +2486,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479480.png?v=4069a13bb9a53bce",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479480/64b886a7af85f2e8.png",
           "kind": "generated"
         },
         {
@@ -2613,7 +2669,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479462.png?v=14230068e31c691c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479462/1300e890a2a1e501.png",
           "kind": "generated"
         },
         {
@@ -2796,7 +2852,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479492.png?v=ce77f0c227dc5961",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479492/72a0c9eb3bc19aac.png",
           "kind": "generated"
         },
         {
@@ -2979,7 +3035,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479468.png?v=3bea89969efd05f0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479468/25adc4101c83280c.png",
           "kind": "generated"
         },
         {
@@ -3162,7 +3218,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479474.png?v=15ecee5eb7827927",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479474/2ec66dd72f7dfd33.png",
           "kind": "generated"
         },
         {
@@ -3345,7 +3401,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479504.png?v=5e6d6d35fcf91026",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479504/3a73259bcaf9ece9.png",
           "kind": "generated"
         },
         {
@@ -3528,7 +3584,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479510.png?v=56cd875447d2a715",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479510/017783d5bb1ad598.png",
           "kind": "generated"
         },
         {
@@ -3711,7 +3767,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479450.png?v=e26e2adc3ae53ef4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479450/dbebc4e181cea9f9.png",
           "kind": "generated"
         },
         {

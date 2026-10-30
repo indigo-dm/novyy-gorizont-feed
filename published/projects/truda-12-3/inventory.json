@@ -1,7 +1,7 @@
 {
   "slug": "truda-12-3",
   "project": "ЖК Труда 12/3",
-  "checked_at": "2026-10-30T03:58:25+03:00",
+  "checked_at": "2026-10-30T19:46:22+03:00",
   "source_ads": 17,
   "full_ads": 17,
   "excluded_ads": 0,
@@ -128,6 +128,24 @@
       "supported": true
     },
     {
+      "tag": "KitchenSpace",
+      "name": "Площадь кухни",
+      "kind": "number",
+      "min": 2,
+      "max": 100,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "LivingSpace",
+      "name": "Жилая площадь",
+      "kind": "number",
+      "min": 5,
+      "max": 5000,
+      "step": 0.01,
+      "supported": true
+    },
+    {
       "tag": "Courtyard",
       "name": "Двор",
       "kind": "multi",
@@ -152,8 +170,46 @@
       "supported": true
     },
     {
+      "tag": "RoomType",
+      "name": "Тип комнат",
+      "kind": "multi",
+      "values": [
+        "Изолированные",
+        "Смежные"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "ContactMethod",
+      "name": "Способ связи",
+      "kind": "select",
+      "values": [
+        "По телефону и в сообщениях",
+        "По телефону"
+      ],
+      "default": "По телефону",
+      "supported": true
+    },
+    {
+      "tag": "BalconyOrLoggiaMulti",
+      "name": "Балкон или лоджия",
+      "kind": "multi",
+      "values": [
+        "Балкон",
+        "Лоджия"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "VideoURL",
+      "name": "Видео",
+      "kind": "url",
+      "max": 1500,
+      "supported": true
+    },
+    {
       "tag": "NDAdditionally",
-      "name": "Дополнительно о новостройке",
+      "name": "Дополнительно о планировке",
       "kind": "multi",
       "values": [
         "Гардеробная",
@@ -218,7 +274,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597052.png?v=bd84ab9e92fa8867",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597052/3bc5f15291bdcd04.png",
           "kind": "generated"
         },
         {
@@ -360,7 +416,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597038.png?v=185264d3498516ea",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597038/2a2b1255d387dc90.png",
           "kind": "generated"
         },
         {
@@ -502,7 +558,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597044.png?v=7a492dd3453918d4",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597044/19da17d9ec21d091.png",
           "kind": "generated"
         },
         {
@@ -644,7 +700,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597050.png?v=74a13302e19782b0",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597050/318b131605eb0e9d.png",
           "kind": "generated"
         },
         {
@@ -786,7 +842,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597053.png?v=5759cfbeccfc1e84",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597053/e112179bb37a5dd9.png",
           "kind": "generated"
         },
         {
@@ -928,7 +984,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597030.png?v=4fbf8a19cddbe020",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597030/c604835e1a01a208.png",
           "kind": "generated"
         },
         {
@@ -1070,7 +1126,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597048.png?v=8cd263e7442f5a6c",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597048/6314d14b0792a574.png",
           "kind": "generated"
         },
         {
@@ -1212,7 +1268,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597054.png?v=04265b4f56e542db",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597054/7b32b081838c6cba.png",
           "kind": "generated"
         },
         {
@@ -1354,7 +1410,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597025.png?v=ed04194192df0676",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597025/0eb050954f687de9.png",
           "kind": "generated"
         },
         {
@@ -1496,7 +1552,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597031.png?v=42d763a863033086",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597031/aad368e66d73841a.png",
           "kind": "generated"
         },
         {
@@ -1638,7 +1694,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597043.png?v=8143f76411069d6b",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597043/8d29ce25bf5879d7.png",
           "kind": "generated"
         },
         {
@@ -1780,7 +1836,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597049.png?v=febfe90a8200ec4a",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597049/6eb685a070970549.png",
           "kind": "generated"
         },
         {
@@ -1922,7 +1978,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597010.png?v=5d008fbfa8886508",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597010/4f6403f847327cdb.png",
           "kind": "generated"
         },
         {
@@ -2064,7 +2120,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597011.png?v=8a3c817bbfbb6999",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597011/ffa8d244dfaa5820.png",
           "kind": "generated"
         },
         {
@@ -2206,7 +2262,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597013.png?v=a26afb52cdceb416",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597013/dc854e25b884e1df.png",
           "kind": "generated"
         },
         {
@@ -2348,7 +2404,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597020.png?v=2897fb6353d8f355",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597020/18d7a6a6e396f88f.png",
           "kind": "generated"
         },
         {
@@ -2490,7 +2546,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597012.png?v=fcf0619a12204002",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597012/3506b4a39ffd1d37.png",
           "kind": "generated"
         },
         {
