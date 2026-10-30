@@ -49,6 +49,7 @@ const sourceImageUrl = (item) => {
   return String(first && typeof first === 'object' ? first.url : first || '');
 };
 const cardSignature = (item) => JSON.stringify({
+  card_version: String(item.card_version || ''),
   house: String(item.house || ''),
   rooms: String(item.feed_parameters?.Rooms ?? item.rooms ?? ''),
   area: String(item.area || ''),

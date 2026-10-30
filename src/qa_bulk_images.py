@@ -94,7 +94,7 @@ assert orders["end"][-1] == IMAGE["id"]
 assert orders["legacy_move"][0].startswith("src-")
 assert orders["library"][-1] == LIBRARY_IMAGE["id"]
 assert hide_target not in orders["hide"]
-assert urls(add_config("end"))[0] == "https://cdn.example/generated/1.png?v=qa-card-version"
+assert urls(add_config("end"))[0] == "https://cdn.example/generated/1/qa-card-version.png"
 
 direct_media_rule = {
     **SCOPE,

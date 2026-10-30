@@ -305,7 +305,7 @@ def output_images(
     version = str(item.get("card_version") or "").strip()
     generated_url = f"{public_base}/{item['id']}.png"
     if version:
-        generated_url += f"?v={version}"
+        generated_url = f"{public_base}/{item['id']}/{version}.png"
     images = [{
         "id": "brand-card",
         "url": generated_url,

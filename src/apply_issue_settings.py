@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from decimal import Decimal, InvalidOperation
 from html.parser import HTMLParser
 from datetime import date
 from pathlib import Path
@@ -23,6 +24,12 @@ ALLOWED_PARAMETERS = {
     "Parking",
     "BathroomMulti",
     "CeilingHeight",
+    "KitchenSpace",
+    "LivingSpace",
+    "RoomType",
+    "ContactMethod",
+    "BalconyOrLoggiaMulti",
+    "VideoURL",
     "NDAdditionally",
 }
 ALLOWED_DESCRIPTION_TAGS = {"p", "br", "strong", "em", "ul", "ol", "li"}
@@ -31,6 +38,8 @@ MULTI_PARAMETERS = {
     "Courtyard",
     "Parking",
     "BathroomMulti",
+    "RoomType",
+    "BalconyOrLoggiaMulti",
     "NDAdditionally",
 }
 PARAMETER_OPTIONS = {
@@ -44,8 +53,11 @@ PARAMETER_OPTIONS = {
         "Гостевая",
     },
     "BathroomMulti": {"Раздельный", "Совмещенный"},
+    "RoomType": {"Изолированные", "Смежные"},
+    "BalconyOrLoggiaMulti": {"Балкон", "Лоджия"},
     "NDAdditionally": {"Гардеробная", "Панорамные окна"},
 }
+CONTACT_METHODS = {"По телефону и в сообщениях", "По телефону"}
 
 
 def text(value: object, name: str, maximum: int, default: str = "") -> str:
@@ -94,6 +106,27 @@ def http_url(value: object, name: str) -> str:
     parsed = urlparse(result)
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         raise ValueError(f"{name} must be an HTTP(S) URL")
+    return result
+
+
+def bounded_decimal(value: object, name: str, minimum: str, maximum: str) -> str:
+    try:
+        result = Decimal(str(value).strip().replace(",", "."))
+    except InvalidOperation as error:
+        raise ValueError(f"{name} must be a number") from error
+    if not result.is_finite() or result < Decimal(minimum) or result > Decimal(maximum):
+        raise ValueError(f"{name} is outside the allowed range")
+    return format(result.normalize(), "f")
+
+
+def avito_video_url(value: object, name: str) -> str:
+    result = http_url(value, name)
+    parsed = urlparse(result)
+    host = parsed.hostname.casefold() if parsed.hostname else ""
+    vk_video = parsed.scheme == "https" and host == "vkvideo.ru" and re.fullmatch(r"/video-[^/\s?#]+/?", parsed.path)
+    rutube_video = parsed.scheme == "https" and host == "rutube.ru" and re.fullmatch(r"/video/[^/\s?#]+/?", parsed.path)
+    if not (vk_video or rutube_video):
+        raise ValueError(f"{name} must be a VK Video or Rutube video URL")
     return result
 
 
@@ -183,6 +216,8 @@ def parameter_value(tag: str, value: object, name: str) -> object:
         if not result:
             raise ValueError(f"{name} must not be empty")
         return result
+    if tag == "VideoURL":
+        return avito_video_url(value, name)
     if tag in MULTI_PARAMETERS:
         values = string_list(value, name)
         if not values or len(values) > 12:
@@ -195,10 +230,18 @@ def parameter_value(tag: str, value: object, name: str) -> object:
         if result < 1 or result > 8:
             raise ValueError(f"{name} is outside the allowed range")
         return str(result)
-    result = float(str(value).replace(",", "."))
-    if result < 2 or result > 10:
-        raise ValueError(f"{name} is outside the allowed range")
-    return str(result).rstrip("0").rstrip(".")
+    if tag == "ContactMethod":
+        result = str(value).strip()
+        if result not in CONTACT_METHODS:
+            raise ValueError(f"{name} contains an unsupported value")
+        return result
+    ranges = {
+        "CeilingHeight": ("2", "10"),
+        "KitchenSpace": ("2", "100"),
+        "LivingSpace": ("5", "5000"),
+    }
+    minimum, maximum = ranges[tag]
+    return bounded_decimal(value, name, minimum, maximum)
 
 
 def settings_map(value: object, name: str) -> dict[str, object]:

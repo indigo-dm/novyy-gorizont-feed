@@ -328,6 +328,10 @@ const libraryDeleteResponse = await worker.fetch(new Request('https://worker.exa
 }), env);
 const libraryDeleted = await libraryDeleteResponse.json();
 const generatedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png'), env);
+const versionedGeneratedMediaResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated/0123456789abcdef.png'), env);
+const versionedGeneratedMediaHeadResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated/0123456789abcdef.png', { method: 'HEAD' }), env);
+const versionedGeneratedMediaRangeResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated/0123456789abcdef.png', { headers: { Range: 'bytes=1-2' } }), env);
+const versionedGeneratedMediaRangeBytes = new Uint8Array(await versionedGeneratedMediaRangeResponse.arrayBuffer());
 const generatedMediaHeadResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png', { method: 'HEAD' }), env);
 const generatedMediaRangeResponse = await worker.fetch(new Request('https://worker.example/media/projects/novyy-gorizont/images/qa-generated.png', { headers: { Range: 'bytes=1-2' } }), env);
 const generatedMediaRangeBytes = new Uint8Array(await generatedMediaRangeResponse.arrayBuffer());
@@ -462,6 +466,9 @@ const result = {
     libraryDeleteBlockedResponse.status === 409 && libraryDeleteBlocked.code === 'image_in_use' &&
     libraryDeleteResponse.status === 200 && libraryDeleted.deleted === true && !feedStorage.objects.has(libraryUpload.path) &&
     generatedMediaResponse.status === 200 && generatedMediaResponse.headers.get('X-Feed-Storage') === 'r2' && generatedMediaResponse.headers.get('Accept-Ranges') === 'bytes' && generatedMediaResponse.headers.get('Content-Length') === '4' &&
+    versionedGeneratedMediaResponse.status === 200 && versionedGeneratedMediaResponse.headers.get('Content-Length') === '4' &&
+    versionedGeneratedMediaHeadResponse.status === 200 && versionedGeneratedMediaHeadResponse.headers.get('Content-Length') === '4' &&
+    versionedGeneratedMediaRangeResponse.status === 206 && versionedGeneratedMediaRangeResponse.headers.get('Content-Range') === 'bytes 1-2/4' && versionedGeneratedMediaRangeBytes[0] === 0x50 && versionedGeneratedMediaRangeBytes[1] === 0x4e &&
     generatedMediaHeadResponse.status === 200 && generatedMediaHeadResponse.headers.get('Content-Length') === '4' &&
     generatedMediaRangeResponse.status === 206 && generatedMediaRangeResponse.headers.get('Content-Range') === 'bytes 1-2/4' && generatedMediaRangeResponse.headers.get('Content-Length') === '2' && generatedMediaRangeBytes[0] === 0x50 && generatedMediaRangeBytes[1] === 0x4e &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&

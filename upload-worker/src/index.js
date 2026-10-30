@@ -1410,7 +1410,11 @@ async function publicMedia(request, env, path) {
   } catch {
     decoded = '';
   }
-  const key = safeStorageKey(decoded);
+  const requestedKey = safeStorageKey(decoded);
+  const key = requestedKey.replace(
+    /^(projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/images\/[^/]+)\/[a-f0-9]{16}\.png$/,
+    '$1.png'
+  );
   const allowed = /^(?:projects\/[a-z0-9]+(?:-[a-z0-9]+)*\/(?:images|previews|thumbnails|assets)\/|uploads\/)/.test(key);
   if (!allowed) return new Response('Not found', { status: 404, headers: { 'Access-Control-Allow-Origin': '*' } });
   if (r2Available(env)) {
