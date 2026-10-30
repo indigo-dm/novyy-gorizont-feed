@@ -66,6 +66,7 @@
       <Option>На улицу</Option>
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
+    <LivingSpace>23.75</LivingSpace>
   </Ad>
   <Ad>
     <Id>408236195</Id>
@@ -202,6 +203,7 @@
       <Option>На улицу</Option>
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
+    <LivingSpace>23.82</LivingSpace>
   </Ad>
   <Ad>
     <Id>408236184</Id>
@@ -269,6 +271,7 @@
       <Option>На улицу</Option>
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
+    <LivingSpace>23.82</LivingSpace>
   </Ad>
   <Ad>
     <Id>408236190</Id>
@@ -816,6 +819,7 @@
       <Option>На улицу</Option>
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
+    <LivingSpace>25.49</LivingSpace>
   </Ad>
   <Ad>
     <Id>408236225</Id>

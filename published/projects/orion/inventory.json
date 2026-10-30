@@ -1,7 +1,7 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-10-30T12:49:35+03:00",
+  "checked_at": "2026-10-30T12:57:51+03:00",
   "source_ads": 163,
   "full_ads": 163,
   "excluded_ads": 0,
@@ -483,7 +483,8 @@
         "ViewFromWindows": [
           "На улицу"
         ],
-        "KitchenSpace": "8.92"
+        "KitchenSpace": "8.92",
+        "LivingSpace": "23.75"
       },
       "source_tags": [
         "AdStatus",
@@ -796,7 +797,8 @@
         "ViewFromWindows": [
           "На улицу"
         ],
-        "KitchenSpace": "8.92"
+        "KitchenSpace": "8.92",
+        "LivingSpace": "23.75"
       },
       "source_tags": [
         "AdStatus",
@@ -1109,7 +1111,8 @@
         "ViewFromWindows": [
           "На улицу"
         ],
-        "KitchenSpace": "8.92"
+        "KitchenSpace": "8.92",
+        "LivingSpace": "23.75"
       },
       "source_tags": [
         "AdStatus",
@@ -2642,7 +2645,8 @@
         "ViewFromWindows": [
           "На улицу"
         ],
-        "KitchenSpace": "8.92"
+        "KitchenSpace": "8.92",
+        "LivingSpace": "23.82"
       },
       "source_tags": [
         "AdStatus",
@@ -2955,7 +2959,8 @@
         "ViewFromWindows": [
           "На улицу"
         ],
-        "KitchenSpace": "8.92"
+        "KitchenSpace": "8.92",
+        "LivingSpace": "23.82"
       },
       "source_tags": [
         "AdStatus",
@@ -8488,7 +8493,8 @@
         "ViewFromWindows": [
           "На улицу"
         ],
-        "KitchenSpace": "8.92"
+        "KitchenSpace": "8.92",
+        "LivingSpace": "25.49"
       },
       "source_tags": [
         "AdStatus",

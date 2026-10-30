@@ -455,6 +455,63 @@
           "408236213"
         ],
         "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793354067161",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "23.82"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236188",
+          "408236184"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793354103385",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "23.75"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236193",
+          "408236198",
+          "408236203"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793354179243",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "25.49"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236213"
+        ],
+        "exclude_ids": []
       }
     ]
   },
