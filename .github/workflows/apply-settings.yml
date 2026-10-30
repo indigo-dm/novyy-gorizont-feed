@@ -1,0 +1,111 @@
+name: Apply feed settings
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+  actions: read
+
+jobs:
+  apply:
+    if: github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]')
+    runs-on: ubuntu-latest
+    outputs:
+      project: ${{ steps.settings.outputs.project }}
+      mode: ${{ steps.settings.outputs.mode }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate and apply settings
+        id: settings
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python src/apply_issue_settings.py
+
+      - name: Commit settings
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add projects/*/promotion-rules.json
+          if git diff --cached --quiet; then
+            echo "Settings are already current."
+          else
+            git commit -m "Apply feed settings from issue #${ISSUE_NUMBER}"
+            git push origin main
+          fi
+
+  fast-deploy:
+    needs: apply
+    uses: ./.github/workflows/build-fast-data.yml
+    with:
+      project: ${{ needs.apply.outputs.project }}
+    secrets: inherit
+
+  full-deploy:
+    if: needs.apply.outputs.mode == 'full'
+    needs: apply
+    uses: ./.github/workflows/deploy-pages.yml
+    secrets: inherit
+
+  cleanup-uploads:
+    if: always() && needs.apply.result == 'success' && needs.fast-deploy.result == 'success' && (needs.full-deploy.result == 'success' || needs.full-deploy.result == 'skipped')
+    needs: [apply, fast-deploy, full-deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Delete uploaded images removed from the feed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_MEDIA_BRANCH: media
+        run: python src/cleanup_uploaded_images.py
+
+  complete:
+    if: always() && needs.cleanup-uploads.result == 'success'
+    needs: [cleanup-uploads]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm and close request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Настройки проверены и применены. Готовый фид успешно пересобран."
+          gh issue close "$ISSUE_NUMBER"
+
+  report-failure:
+    if: always() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-settings]') && (needs.apply.result == 'failure' || needs.fast-deploy.result == 'failure' || needs.full-deploy.result == 'failure' || needs.cleanup-uploads.result == 'failure')
+    needs: [apply, fast-deploy, full-deploy, cleanup-uploads]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report failure
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Настройки не применены: автоматическая проверка или сборка завершилась ошибкой. Запрос оставлен открытым для проверки."

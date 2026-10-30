@@ -1,0 +1,14 @@
+{
+  "name": "indigo-feed-studio",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "render": "node src/render_pilot.cjs",
+    "build:all": "python src/build_all.py",
+    "qa:site": "node src/qa_site.cjs",
+    "qa:worker": "node src/qa_worker.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}

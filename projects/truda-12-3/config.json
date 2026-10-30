@@ -1,0 +1,34 @@
+{
+  "project": "ЖК Труда 12/3",
+  "source_feed_key": "truda-12-3",
+  "public_image_base_url": "https://indigo-dm.github.io/novyy-gorizont-feed/projects/truda-12-3/images",
+  "brand": {
+    "green": "#194820",
+    "green_dark": "#194820",
+    "gold": "#72C451",
+    "gray": "#9B9B9B",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "logo": "logo-truda.png",
+    "logo_panel": "light",
+    "key_render": "key-render.jpg",
+    "key_render_align": "right",
+    "additional_renders": [
+      {
+        "name": "Интерьер кухни",
+        "filename": "render-kitchen.jpg"
+      },
+      {
+        "name": "Интерьер ванной",
+        "filename": "render-bathroom.jpg"
+      },
+      {
+        "name": "Гардеробная",
+        "filename": "render-storage.jpg"
+      }
+    ]
+  },
+  "houses": {
+    "11849962": "Дом 12/3"
+  }
+}

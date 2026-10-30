@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "default_project": "novyy-gorizont",
+  "projects": [
+    {
+      "slug": "novyy-gorizont",
+      "name": "ЖК Новый Горизонт",
+      "status": "active",
+      "source_feed_secret": "PROFITBASE_FEED_URL",
+      "compatibility_root": true
+    },
+    {
+      "slug": "vishnevyy-sad",
+      "name": "ЖК Вишнёвый сад",
+      "status": "active",
+      "source_feed_key": "vishnevyy-sad",
+      "compatibility_root": false
+    },
+    {
+      "slug": "truda-12-3",
+      "name": "ЖК Труда 12/3",
+      "status": "active",
+      "source_feed_key": "truda-12-3",
+      "compatibility_root": false
+    },
+    {
+      "slug": "teatral",
+      "name": "ЖК Театрал",
+      "status": "active",
+      "source_feed_key": "teatral",
+      "compatibility_root": false
+    }
+  ]
+}

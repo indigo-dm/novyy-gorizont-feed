@@ -1,0 +1,2581 @@
+{
+  "slug": "truda-12-3",
+  "project": "ЖК Труда 12/3",
+  "checked_at": "2026-10-30T03:58:25+03:00",
+  "source_ads": 17,
+  "full_ads": 17,
+  "excluded_ads": 0,
+  "unique_plans": 8,
+  "source_tag_counts": {
+    "AdStatus": 17,
+    "Address": 17,
+    "Category": 17,
+    "ContactMethod": 17,
+    "ContactPhone": 17,
+    "Description": 17,
+    "Floor": 17,
+    "Floors": 17,
+    "HouseType": 17,
+    "Id": 17,
+    "KitchenSpace": 17,
+    "LivingSpace": 17,
+    "ManagerName": 17,
+    "MarketType": 17,
+    "NewDevelopmentId": 17,
+    "OperationType": 17,
+    "Price": 17,
+    "PropertyRights": 17,
+    "Rooms": 17,
+    "Square": 17,
+    "Status": 17
+  },
+  "parameter_catalog": [
+    {
+      "tag": "Description",
+      "name": "Описание",
+      "kind": "richtext",
+      "max": 7500,
+      "supported": true
+    },
+    {
+      "tag": "Rooms",
+      "name": "Количество комнат",
+      "kind": "select",
+      "values": [
+        "Студия",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "NewDevelopmentId",
+      "name": "ID новостройки",
+      "kind": "text",
+      "max": 200,
+      "supported": true
+    },
+    {
+      "tag": "Address",
+      "name": "Адрес",
+      "kind": "text",
+      "max": 500,
+      "supported": true
+    },
+    {
+      "tag": "ViewFromWindows",
+      "name": "Вид из окон",
+      "kind": "multi",
+      "values": [
+        "Во двор",
+        "На улицу",
+        "На солнечную сторону"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "PassengerElevator",
+      "name": "Пассажирские лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "FreightElevator",
+      "name": "Грузовые лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "BathroomMulti",
+      "name": "Санузел",
+      "kind": "multi",
+      "values": [
+        "Раздельный",
+        "Совмещенный"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "CeilingHeight",
+      "name": "Высота потолков",
+      "kind": "number",
+      "min": 2,
+      "max": 10,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "Courtyard",
+      "name": "Двор",
+      "kind": "multi",
+      "values": [
+        "Закрытая территория",
+        "Детская площадка",
+        "Спортивная площадка"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "Parking",
+      "name": "Парковка",
+      "kind": "multi",
+      "values": [
+        "Подземная",
+        "Наземная многоуровневая",
+        "Открытая во дворе",
+        "За шлагбаумом во дворе",
+        "Гостевая"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "NDAdditionally",
+      "name": "Дополнительно о новостройке",
+      "kind": "multi",
+      "values": [
+        "Гардеробная",
+        "Панорамные окна"
+      ],
+      "supported": true
+    }
+  ],
+  "items": [
+    {
+      "id": "15597052",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "1",
+      "area": "42.5",
+      "floor": "10",
+      "floors": "10",
+      "price": "6800000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-ff4fd906cff2",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597052.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597052.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597052.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-1d4469c677fe",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a561ad1c5.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597052.png?v=bd84ab9e92fa8867",
+          "kind": "generated"
+        },
+        {
+          "id": "src-1d4469c677fe",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a561ad1c5.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597052",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br><br><br>Продаётся просторная 1-комнатная квартира 42,5 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, поликлиника, остановки, магазины, ПВЗ и т.д.<br><br><br><br><br>О квартире:<br><br><br>— большая кухня 14,7 кв.м.<br><br><br>— 1 изолированная спальня<br><br><br>— продуманные места для хранения<br><br><br>— просторный балкон<br><br><br>— 10 этаж<br><br><br><br><br>ЖК «Труда 12/3»:<br><br><br>• камерный дом<br><br><br>• всего 46 квартир<br><br><br>• 4-6 квартир на этаже<br><br><br>• увеличенное остекление<br><br><br>• подземный паркинг<br><br><br>• колясочная<br><br><br>• технический этаж<br><br><br><br><br>Расположение:<br><br><br>— 200 м. до проспекта Ленина<br><br><br>— остановка рядом с домом<br><br><br>— 1 мин. пешком до школы, 6 мин. – до садика<br><br><br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br><br><br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br><br><br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "6800000",
+        "Square": "42.5",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "1",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br><br><br>Продаётся просторная 1-комнатная квартира 42,5 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, поликлиника, остановки, магазины, ПВЗ и т.д.<br><br><br><br><br>О квартире:<br><br><br>— большая кухня 14,7 кв.м.<br><br><br>— 1 изолированная спальня<br><br><br>— продуманные места для хранения<br><br><br>— просторный балкон<br><br><br>— 10 этаж<br><br><br><br><br>ЖК «Труда 12/3»:<br><br><br>• камерный дом<br><br><br>• всего 46 квартир<br><br><br>• 4-6 квартир на этаже<br><br><br>• увеличенное остекление<br><br><br>• подземный паркинг<br><br><br>• колясочная<br><br><br>• технический этаж<br><br><br><br><br>Расположение:<br><br><br>— 200 м. до проспекта Ленина<br><br><br>— остановка рядом с домом<br><br><br>— 1 мин. пешком до школы, 6 мин. – до садика<br><br><br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br><br><br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br><br><br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597038",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "55.9",
+      "floor": "8",
+      "floors": "10",
+      "price": "7826000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-23316703296f",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597038.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597038.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597038.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597038.png?v=185264d3498516ea",
+          "kind": "generated"
+        },
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597038",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 55,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 8 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "7826000",
+        "Square": "55.9",
+        "Floor": "8",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 55,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 8 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597044",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "55.9",
+      "floor": "9",
+      "floors": "10",
+      "price": "7826000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-23316703296f",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597044.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597044.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597044.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597044.png?v=7a492dd3453918d4",
+          "kind": "generated"
+        },
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597044",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 55,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 9 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "7826000",
+        "Square": "55.9",
+        "Floor": "9",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 55,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 9 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597050",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "55.9",
+      "floor": "10",
+      "floors": "10",
+      "price": "7826000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-23316703296f",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597050.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597050.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597050.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597050.png?v=74a13302e19782b0",
+          "kind": "generated"
+        },
+        {
+          "id": "src-5e2d84f09f6c",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a5603ce07.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597050",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 55,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "7826000",
+        "Square": "55.9",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 55,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597053",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "56",
+      "floor": "10",
+      "floors": "10",
+      "price": "7840000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-1bb02c686095",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597053.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597053.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597053.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-515bdfe484f6",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a562b877a.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597053.png?v=5759cfbeccfc1e84",
+          "kind": "generated"
+        },
+        {
+          "id": "src-515bdfe484f6",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a562b877a.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597053",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 56 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "7840000",
+        "Square": "56",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся 2-комнатная квартира 56 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,7 кв.м. с выходом на балкон<br>— 2 изолированные спальни<br>— большой санузел<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597030",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.3",
+      "floor": "6",
+      "floors": "10",
+      "price": "8410500",
+      "decoration": "Без отделки",
+      "plan_id": "plan-5f41a1a50f13",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597030.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597030.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597030.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597030.png?v=4fbf8a19cddbe020",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597030",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,3 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 6 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8410500",
+        "Square": "62.3",
+        "Floor": "6",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,3 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 6 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597048",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.3",
+      "floor": "9",
+      "floors": "10",
+      "price": "8722000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-5f41a1a50f13",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597048.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597048.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597048.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597048.png?v=8cd263e7442f5a6c",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597048",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,3 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 9 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8722000",
+        "Square": "62.3",
+        "Floor": "9",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,3 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 9 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597054",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.3",
+      "floor": "10",
+      "floors": "10",
+      "price": "8722000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-5f41a1a50f13",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597054.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597054.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597054.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597054.png?v=04265b4f56e542db",
+          "kind": "generated"
+        },
+        {
+          "id": "src-b801ef46b5c2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a56321002.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597054",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,3 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8722000",
+        "Square": "62.3",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,3 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597025",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "6",
+      "floors": "10",
+      "price": "8424000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-80749daace23",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597025.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597025.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597025.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597025.png?v=ed04194192df0676",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597025",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 6 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8424000",
+        "Square": "62.4",
+        "Floor": "6",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 6 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597031",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "7",
+      "floors": "10",
+      "price": "8736000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-80749daace23",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597031.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597031.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597031.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597031.png?v=42d763a863033086",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597031",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 7 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8736000",
+        "Square": "62.4",
+        "Floor": "7",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 7 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597043",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "9",
+      "floors": "10",
+      "price": "8736000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-80749daace23",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597043.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597043.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597043.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597043.png?v=8143f76411069d6b",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597043",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 9 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8736000",
+        "Square": "62.4",
+        "Floor": "9",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 9 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597049",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "62.4",
+      "floor": "10",
+      "floors": "10",
+      "price": "8736000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-80749daace23",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597049.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597049.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597049.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597049.png?v=febfe90a8200ec4a",
+          "kind": "generated"
+        },
+        {
+          "id": "src-46f625d1e652",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b7a55fcb7e8.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a553a6b363f9",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/67b5f1e8170b9.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597049",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "8736000",
+        "Square": "62.4",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 62,4 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 17,6 кв.м. с выходом на балкон<br>— спальня и мастер-спальня с гардеробной<br>— удобный раздельный санузел<br>— продуманные места для хранения<br>— 10 этаж<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597010",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "70.9",
+      "floor": "2",
+      "floors": "10",
+      "price": "9571500",
+      "decoration": "Без отделки",
+      "plan_id": "plan-d43638350f1b",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597010.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597010.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597010.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-763a505afaf2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc62d2bda.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597010.png?v=5d008fbfa8886508",
+          "kind": "generated"
+        },
+        {
+          "id": "src-763a505afaf2",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc62d2bda.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597010",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 70,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 16 кв.м. с выходом на балкон<br>— 2 большие спальни<br>— удобный раздельный санузел<br>— просторные гардеробные<br>— 2 балкона<br>— 2 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "9571500",
+        "Square": "70.9",
+        "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 70,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 16 кв.м. с выходом на балкон<br>— 2 большие спальни<br>— удобный раздельный санузел<br>— просторные гардеробные<br>— 2 балкона<br>— 2 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597011",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "2",
+      "area": "70.9",
+      "floor": "2",
+      "floors": "10",
+      "price": "9571500",
+      "decoration": "Без отделки",
+      "plan_id": "plan-d43638350f1b",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597011.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597011.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597011.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-8c3d5734c159",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc626e9df.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597011.png?v=8a3c817bbfbb6999",
+          "kind": "generated"
+        },
+        {
+          "id": "src-8c3d5734c159",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc626e9df.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597011",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 70,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 16 кв.м. с выходом на балкон<br>— 2 большие спальни<br>— удобный раздельный санузел<br>— просторные гардеробные<br>— 2 балкона<br>— 2 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "9571500",
+        "Square": "70.9",
+        "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "2",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная евро 3-комнатная квартира 70,9 кв.м. у проспекта Ленина! Отличное место, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— светлая кухня-гостиная 16 кв.м. с выходом на балкон<br>— 2 большие спальни<br>— удобный раздельный санузел<br>— просторные гардеробные<br>— 2 балкона<br>— 2 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597013",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "3",
+      "area": "91.3",
+      "floor": "3",
+      "floors": "10",
+      "price": "12325500",
+      "decoration": "Без отделки",
+      "plan_id": "plan-8581f5386c60",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597013.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597013.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597013.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-33088c18113f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/69148f56d6414.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597013.png?v=a26afb52cdceb416",
+          "kind": "generated"
+        },
+        {
+          "id": "src-33088c18113f",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/69148f56d6414.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597013",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся большая 3-комнатная квартира 91,3 кв.м. у проспекта Ленина! Один из самых удобных районов Ростова, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— кухня-гостиная 17,8 кв.м. с выходом на лоджию<br>— 3 просторные спальни<br>— прачечная<br>— 2 санузла: совместный и гостевой<br>— гардеробные<br>— 3 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "12325500",
+        "Square": "91.3",
+        "Floor": "3",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "3",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся большая 3-комнатная квартира 91,3 кв.м. у проспекта Ленина! Один из самых удобных районов Ростова, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— кухня-гостиная 17,8 кв.м. с выходом на лоджию<br>— 3 просторные спальни<br>— прачечная<br>— 2 санузла: совместный и гостевой<br>— гардеробные<br>— 3 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597020",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "3",
+      "area": "91.3",
+      "floor": "4",
+      "floors": "10",
+      "price": "12325500",
+      "decoration": "Без отделки",
+      "plan_id": "plan-8581f5386c60",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597020.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597020.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597020.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-0a03a90e9950",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5e4470cee7.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597020.png?v=2897fb6353d8f355",
+          "kind": "generated"
+        },
+        {
+          "id": "src-0a03a90e9950",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5e4470cee7.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-0e4c5b617521",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148e10d2520.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597020",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся большая 3-комнатная квартира 91,3 кв.м. у проспекта Ленина! Один из самых удобных районов Ростова, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— кухня-гостиная 17,8 кв.м. с выходом на лоджию<br>— 3 просторные спальни<br>— прачечная<br>— 2 санузла: совместный и гостевой<br>— гардеробные<br>— 4 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "12325500",
+        "Square": "91.3",
+        "Floor": "4",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "3",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся большая 3-комнатная квартира 91,3 кв.м. у проспекта Ленина! Один из самых удобных районов Ростова, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д.<br><br>О квартире:<br>— кухня-гостиная 17,8 кв.м. с выходом на лоджию<br>— 3 просторные спальни<br>— прачечная<br>— 2 санузла: совместный и гостевой<br>— гардеробные<br>— 4 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "15597012",
+      "house_id": "11849962",
+      "house": "Дом 12/3",
+      "rooms": "3",
+      "area": "93.6",
+      "floor": "2",
+      "floors": "10",
+      "price": "12636000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-f2290e0d1a03",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597012.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597012.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597012.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-a186a6037ba7",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc63434cf.jpg",
+          "position": 1
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "position": 2
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "position": 3
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "position": 4
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "position": 5
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "position": 6
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "position": 7
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597012.png?v=fcf0619a12204002",
+          "kind": "generated"
+        },
+        {
+          "id": "src-a186a6037ba7",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/67b5dc63434cf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-83df9ff2c47c",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/67b5dfa33a971.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-4639c389df76",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cbec7e581.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-6e2e40838f9b",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc156decd.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-15b13c1e28d2",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc6fc20ef.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-104cb4f2ced3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6810cc822a4cf.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-a0c4d27e47a6",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/69148d9306856.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "15597012",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (928) 113-14-25",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Труда, 12/3",
+        "Description": "Сдача в 2026!<br>Продаётся просторная 3-комнатная квартира 93,6 кв.м. у проспекта Ленина. Один из самых удобных районов Ростова, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д. Всего 2 квартиры с такой планировкой в доме!<br><br>О квартире:<br>— светлая кухня-гостиная 17,8 кв.м.<br>— мастер-спальня 20,5 кв.м. с выходом на невероятный балкон<br>— 3 просторные спальни<br>— прачечная<br>— 2 санузла: совместный и гостевой<br>— гардеробные<br>— 2 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+        "Price": "12636000",
+        "Square": "93.6",
+        "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "11849962",
+        "Rooms": "3",
+        "Floors": "10",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Сдача в 2026!<br>Продаётся просторная 3-комнатная квартира 93,6 кв.м. у проспекта Ленина. Один из самых удобных районов Ростова, всё рядом: школа, детские сады, остановки, магазины, ПВЗ, поликлиника и т.д. Всего 2 квартиры с такой планировкой в доме!<br><br>О квартире:<br>— светлая кухня-гостиная 17,8 кв.м.<br>— мастер-спальня 20,5 кв.м. с выходом на невероятный балкон<br>— 3 просторные спальни<br>— прачечная<br>— 2 санузла: совместный и гостевой<br>— гардеробные<br>— 2 этаж<br>— потолки 3 м.<br><br>ЖК «Труда 12/3»:<br>• камерный дом<br>• всего 46 квартир<br>• 4-6 квартир на этаже<br>• увеличенное остекление<br>• подземный паркинг<br>• колясочная<br>• технический этаж<br><br>Расположение:<br>— 200 м. до проспекта Ленина<br>— остановка рядом с домом<br>— 1 мин. пешком до школы, 6 мин. – до садика<br>— всё в шаговой доступности: супермаркеты, аптеки, ПВЗ, поликлиника, больница и пр.<br><br>Уютный жилой комплекс без студий и посторонних внутри. Дом находится в тихом месте, где нет шумного потока автомобилей или прохожих. Локация идеальна для жизни: всё необходимое «под рукой», а до центра всего 10 минут.<br><br>☎️ Звоните — расскажем подробнее об этой и других квартирах!",
+      "excluded_from_feed": false
+    }
+  ]
+}

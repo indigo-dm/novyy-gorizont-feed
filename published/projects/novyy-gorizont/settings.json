@@ -1,0 +1,63 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "id": "demo-discount",
+      "name": "Демонстрационная скидка",
+      "enabled": false,
+      "label": "Скидка",
+      "text": "−10 000 ₽/м²",
+      "house_ids": [
+        "3379674"
+      ],
+      "rooms": [
+        "1"
+      ],
+      "area_min": null,
+      "area_max": null,
+      "starts_at": "",
+      "ends_at": "",
+      "include_ids": [],
+      "exclude_ids": []
+    }
+  ],
+  "excluded_lot_ids": [],
+  "image_settings": {
+    "lot_overrides": {},
+    "bulk_rules": []
+  },
+  "parameter_settings": {
+    "lot_values": {},
+    "bulk_rules": []
+  },
+  "material_settings": {
+    "logo": "logo-gold.svg",
+    "key_render": "selected-render.jpg",
+    "primary_color": "#00605C",
+    "palette": [
+      {
+        "name": "Основной",
+        "value": "#00605C"
+      },
+      {
+        "name": "Акцент",
+        "value": "#CEAD75"
+      },
+      {
+        "name": "Серый",
+        "value": "#9B9B9B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  },
+  "pending_upload_deletions": [],
+  "card_settings": {
+    "show_key_render": true,
+    "show_house_badge": true,
+    "show_decoration": true,
+    "show_logo_panel": false
+  }
+}

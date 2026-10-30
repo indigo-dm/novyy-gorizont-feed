@@ -1,0 +1,3828 @@
+{
+  "slug": "teatral",
+  "project": "ЖК Театрал",
+  "checked_at": "2026-10-30T03:58:27+03:00",
+  "source_ads": 20,
+  "full_ads": 20,
+  "excluded_ads": 0,
+  "unique_plans": 15,
+  "source_tag_counts": {
+    "AdStatus": 20,
+    "Address": 20,
+    "BalconyOrLoggiaMulti": 18,
+    "Category": 20,
+    "ContactMethod": 20,
+    "ContactPhone": 20,
+    "Decoration": 20,
+    "Description": 20,
+    "Floor": 20,
+    "Floors": 20,
+    "HouseType": 20,
+    "Id": 20,
+    "KitchenSpace": 20,
+    "Latitude": 20,
+    "LivingSpace": 20,
+    "Longitude": 20,
+    "ManagerName": 20,
+    "MarketType": 20,
+    "NewDevelopmentId": 20,
+    "OperationType": 20,
+    "Price": 20,
+    "PropertyRights": 20,
+    "RoomType": 20,
+    "Rooms": 20,
+    "Square": 20,
+    "Status": 20,
+    "VideoURL": 19,
+    "BathroomMulti": 18
+  },
+  "parameter_catalog": [
+    {
+      "tag": "Description",
+      "name": "Описание",
+      "kind": "richtext",
+      "max": 7500,
+      "supported": true
+    },
+    {
+      "tag": "Rooms",
+      "name": "Количество комнат",
+      "kind": "select",
+      "values": [
+        "Студия",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "NewDevelopmentId",
+      "name": "ID новостройки",
+      "kind": "text",
+      "max": 200,
+      "supported": true
+    },
+    {
+      "tag": "Address",
+      "name": "Адрес",
+      "kind": "text",
+      "max": 500,
+      "supported": true
+    },
+    {
+      "tag": "ViewFromWindows",
+      "name": "Вид из окон",
+      "kind": "multi",
+      "values": [
+        "Во двор",
+        "На улицу",
+        "На солнечную сторону"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "PassengerElevator",
+      "name": "Пассажирские лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "FreightElevator",
+      "name": "Грузовые лифты",
+      "kind": "select",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "BathroomMulti",
+      "name": "Санузел",
+      "kind": "multi",
+      "values": [
+        "Раздельный",
+        "Совмещенный"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "CeilingHeight",
+      "name": "Высота потолков",
+      "kind": "number",
+      "min": 2,
+      "max": 10,
+      "step": 0.01,
+      "supported": true
+    },
+    {
+      "tag": "Courtyard",
+      "name": "Двор",
+      "kind": "multi",
+      "values": [
+        "Закрытая территория",
+        "Детская площадка",
+        "Спортивная площадка"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "Parking",
+      "name": "Парковка",
+      "kind": "multi",
+      "values": [
+        "Подземная",
+        "Наземная многоуровневая",
+        "Открытая во дворе",
+        "За шлагбаумом во дворе",
+        "Гостевая"
+      ],
+      "supported": true
+    },
+    {
+      "tag": "NDAdditionally",
+      "name": "Дополнительно о новостройке",
+      "kind": "multi",
+      "values": [
+        "Гардеробная",
+        "Панорамные окна"
+      ],
+      "supported": true
+    }
+  ],
+  "items": [
+    {
+      "id": "10479461",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "60.3",
+      "floor": "4",
+      "floors": "17",
+      "price": "14472000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-7aae14107c6a",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479461.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479461.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479461.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-f72636c6b791",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bea7411f575.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479461.png?v=a6c08bebd6f15e51",
+          "kind": "generated"
+        },
+        {
+          "id": "src-f72636c6b791",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bea7411f575.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479461",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "<p>Закрытие продаж! Последние квартиры в статусной локации Ростова.</p><p><br></p><p>Продается большая 1-комнатная квартира 60,3 кв.м. в новостройке в центре Ростова. Дом сдан.</p><p><br></p><p><br></p><p>Планировка</p><p><br></p><p>– спальня 19 кв.м.</p><p><br></p><p>– кухня-гостиная 19,1 кв.м.</p><p><br></p><p>– продуманные зоны хранения</p><p><br></p><p>– санузел 6 кв.м.</p><p><br></p><p>– панорамные окна</p><p><br></p><p>– 4 этаж</p><p><br></p><p><br></p><p>Локация</p><p><br></p><p>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:</p><p><br></p><p>– Школа - 2 мин.</p><p><br></p><p>– Детский сад - 5 мин.</p><p><br></p><p>– Медицинский центр - 3 мин.</p><p><br></p><p>– Ул. Пушкинская - 3 мин.</p><p><br></p><p>– Парк Революции - 4 мин.</p><p><br></p><p><br></p><p>ЖК \"Театрал\"</p><p><br></p><p>Дом бизнес-класса с выразительной архитектурой в центре Ростова. </p><p><br></p><p>• Премиум локация</p><p><br></p><p>• Собственная котельная</p><p><br></p><p>• 5-6 квартир на этаже</p><p><br></p><p>• Закрытая территория</p><p><br></p><p>• Впечатляющие стильные холлы</p><p><br></p><p>• Подземный паркинг</p><p><br></p><p>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов</p><p><br></p><p>• Кафе, супермаркеты на 1 этаже</p><p><br></p><p><br></p><p>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</p>",
+        "Price": "14472000",
+        "Square": "60.3",
+        "Decoration": "Без отделки",
+        "Floor": "4",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "2",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/shorts/7be4773ee5b4df5bc5fcdcb451f0d046/"
+      },
+      "source_description": "<p>Закрытие продаж! Последние квартиры в статусной локации Ростова.</p><p><br></p><p>Продается большая 1-комнатная квартира 60,3 кв.м. в новостройке в центре Ростова. Дом сдан.</p><p><br></p><p><br></p><p>Планировка</p><p><br></p><p>– спальня 19 кв.м.</p><p><br></p><p>– кухня-гостиная 19,1 кв.м.</p><p><br></p><p>– продуманные зоны хранения</p><p><br></p><p>– санузел 6 кв.м.</p><p><br></p><p>– панорамные окна</p><p><br></p><p>– 4 этаж</p><p><br></p><p><br></p><p>Локация</p><p><br></p><p>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:</p><p><br></p><p>– Школа - 2 мин.</p><p><br></p><p>– Детский сад - 5 мин.</p><p><br></p><p>– Медицинский центр - 3 мин.</p><p><br></p><p>– Ул. Пушкинская - 3 мин.</p><p><br></p><p>– Парк Революции - 4 мин.</p><p><br></p><p><br></p><p>ЖК \"Театрал\"</p><p><br></p><p>Дом бизнес-класса с выразительной архитектурой в центре Ростова. </p><p><br></p><p>• Премиум локация</p><p><br></p><p>• Собственная котельная</p><p><br></p><p>• 5-6 квартир на этаже</p><p><br></p><p>• Закрытая территория</p><p><br></p><p>• Впечатляющие стильные холлы</p><p><br></p><p>• Подземный паркинг</p><p><br></p><p>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов</p><p><br></p><p>• Кафе, супермаркеты на 1 этаже</p><p><br></p><p><br></p><p>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!</p>",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479545",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70",
+      "floor": "3",
+      "floors": "17",
+      "price": "17010000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-1a8655c613bb",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479545.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479545.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479545.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479545.png?v=99c21e24d13177ef",
+          "kind": "generated"
+        },
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479545",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,6 кв.м.<br>– 2 санузла<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "17010000",
+        "Square": "70",
+        "Decoration": "Без отделки",
+        "Floor": "3",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "2",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/shorts/5ceb3098f27243772def9b3f3b5ef6a6/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,6 кв.м.<br>– 2 санузла<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479550",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70.2",
+      "floor": "4",
+      "floors": "17",
+      "price": "17058600",
+      "decoration": "Без отделки",
+      "plan_id": "plan-fdab7ad4fcca",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479550.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479550.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479550.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479550.png?v=a9319f8371dbcbe6",
+          "kind": "generated"
+        },
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479550",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70,2 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,6 кв.м.<br>– 2 санузла<br>– панорамные окна<br>– 4 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "17058600",
+        "Square": "70.2",
+        "Decoration": "Без отделки",
+        "Floor": "4",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "2",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/shorts/5ceb3098f27243772def9b3f3b5ef6a6/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70,2 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,6 кв.м.<br>– 2 санузла<br>– панорамные окна<br>– 4 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479560",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70.2",
+      "floor": "6",
+      "floors": "17",
+      "price": "17199000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-fdab7ad4fcca",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479560.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479560.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479560.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479560.png?v=ba2ee20619409887",
+          "kind": "generated"
+        },
+        {
+          "id": "src-7e3f9a852352",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62beaad9bd078.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479560",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70,2 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,6 кв.м.<br>– 2 санузла<br>– панорамные окна<br>– 6 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "17199000",
+        "Square": "70.2",
+        "Decoration": "Без отделки",
+        "Floor": "6",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "2",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/shorts/5ceb3098f27243772def9b3f3b5ef6a6/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70,2 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,6 кв.м.<br>– 2 санузла<br>– панорамные окна<br>– 6 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479540",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "2",
+      "area": "70.7",
+      "floor": "2",
+      "floors": "17",
+      "price": "17180100",
+      "decoration": "Без отделки",
+      "plan_id": "plan-77e0f0e577fb",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479540.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479540.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479540.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-d1f8cf4dc8ae",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda77cd1771.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479540.png?v=27ca83e4ed335a90",
+          "kind": "generated"
+        },
+        {
+          "id": "src-d1f8cf4dc8ae",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda77cd1771.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479540",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70,7 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,3 кв.м.<br>– 2 санузла<br>– 2 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "17180100",
+        "Square": "70.7",
+        "Decoration": "Без отделки",
+        "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "2",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/shorts/5ceb3098f27243772def9b3f3b5ef6a6/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается большая светлая 2-комнатная квартира 70,7 кв.м. в новостройке в центре Ростова. Дом сдан.<br><br>Планировка<br>– 2 изолированные комнаты<br>– кухня 15,3 кв.м.<br>– 2 санузла<br>– 2 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479454",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "88.4",
+      "floor": "3",
+      "floors": "17",
+      "price": "21923200",
+      "decoration": "Без отделки",
+      "plan_id": "plan-0802fc878438",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479454.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479454.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479454.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479454.png?v=782af533876dffaa",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479454",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 88,4 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– юго-восточная сторона<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "21923200",
+        "Square": "88.4",
+        "Decoration": "Без отделки",
+        "Floor": "3",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 88,4 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– юго-восточная сторона<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479448",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.2",
+      "floor": "2",
+      "floors": "17",
+      "price": "20516000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-4a207bb71294",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479448.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479448.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479448.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-8dad2fc3447d",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78b24e27.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479448.png?v=8ccd50203cea671d",
+          "kind": "generated"
+        },
+        {
+          "id": "src-8dad2fc3447d",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78b24e27.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479448",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 89,2 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– увеличенное остекление<br>– юго-восточная сторона<br>– 2 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br><br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br><br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Подземный паркинг<br>• Впечатляющие стильные холлы<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "20516000",
+        "Square": "89.2",
+        "Decoration": "Без отделки",
+        "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 89,2 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– увеличенное остекление<br>– юго-восточная сторона<br>– 2 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br><br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br><br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Подземный паркинг<br>• Впечатляющие стильные холлы<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479496",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.4",
+      "floor": "10",
+      "floors": "17",
+      "price": "24138000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-ed875b5467e4",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479496.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479496.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479496.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479496.png?v=edc27bd58e6765bb",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479496",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 89,4 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– панорамные окна<br>– юго-восточная сторона<br>– 10 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "24138000",
+        "Square": "89.4",
+        "Decoration": "Без отделки",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 89,4 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– панорамные окна<br>– юго-восточная сторона<br>– 10 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479460",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.6",
+      "floor": "4",
+      "floors": "17",
+      "price": "22220800",
+      "decoration": "Без отделки",
+      "plan_id": "plan-cfe44fa590d5",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479460.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479460.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479460.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479460.png?v=8ea469b2b66ba5af",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479460",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 89,6 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– панорамные окна<br>– юго-восточная сторона<br>– 4 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "22220800",
+        "Square": "89.6",
+        "Decoration": "Без отделки",
+        "Floor": "4",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 3-комнатная квартира 89,6 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– свободная планировка – создайте свое индивидуальное пространство<br>– панорамные окна<br>– юго-восточная сторона<br>– 4 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479478",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "89.6",
+      "floor": "7",
+      "floors": "17",
+      "price": "23744000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-cfe44fa590d5",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479478.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479478.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479478.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479478.png?v=1158ea4a2726015d",
+          "kind": "generated"
+        },
+        {
+          "id": "src-756977247714",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bee11e4576f.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479478",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Продается просторная 3-комнатная квартира 89,6 кв.м. в новостройке у парка Революции. Дом сдан. Осталось всего 30 квартир!<br><br><br>Планировка<br>– 3 изолированные комнаты<br>– кухня 13,7 кв.м.<br>– 2 санузла<br>– увеличенное остекление<br>– прихожая с большим гардеробом 3 кв.м.<br>– юго-восточная сторона<br>– 7 этаж<br><br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "23744000",
+        "Square": "89.6",
+        "Decoration": "Без отделки",
+        "Floor": "7",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/ef275edc4b0aae16125311bd07f3a9de/"
+      },
+      "source_description": "Продается просторная 3-комнатная квартира 89,6 кв.м. в новостройке у парка Революции. Дом сдан. Осталось всего 30 квартир!<br><br><br>Планировка<br>– 3 изолированные комнаты<br>– кухня 13,7 кв.м.<br>– 2 санузла<br>– увеличенное остекление<br>– прихожая с большим гардеробом 3 кв.м.<br>– юго-восточная сторона<br>– 7 этаж<br><br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479549",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "106",
+      "floor": "3",
+      "floors": "17",
+      "price": "23320000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-351c669efcb9",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479549.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479549.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479549.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-f4528203d537",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda787cf2ea.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479549.png?v=04fa3d23aaa2283f",
+          "kind": "generated"
+        },
+        {
+          "id": "src-f4528203d537",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda787cf2ea.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479549",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная светлая 3-комнатная квартира 106 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– 3 изолированные комнаты<br>– мастер-спальня (со своим с/у)<br>– 2 санузла<br>– 3 лоджии по 5 кв.м.<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "23320000",
+        "Square": "106",
+        "Decoration": "Без отделки",
+        "Floor": "3",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/be51779a1bec7e277fe2ca6d8bc29c66/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная светлая 3-комнатная квартира 106 кв.м. в новостройке у парка Революции. Дом сдан.<br><br>Планировка<br>– 3 изолированные комнаты<br>– мастер-спальня (со своим с/у)<br>– 2 санузла<br>– 3 лоджии по 5 кв.м.<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479544",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "3",
+      "area": "186.2",
+      "floor": "2",
+      "floors": "17",
+      "price": "30397709",
+      "decoration": "Без отделки",
+      "plan_id": "plan-af2718f0245b",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479544.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479544.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479544.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-9bbde0104175",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78519180.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479544.png?v=e51923ea8994d320",
+          "kind": "generated"
+        },
+        {
+          "id": "src-9bbde0104175",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda78519180.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-441c4f8d7180",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef46b91986.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "10479544",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж дома в премиальной локации!<br>Продается эксклюзивная квартира с террасой площадью 186,2 кв.м. Новый ЖК бизнес-класса в центре Ростова. Дом сдан!<br><br>Планировка<br>– терраса 88,7 кв.м.<br>– 2 изолированные спальни<br>– просторная мастер-спальня (со своим с/у)<br>– большая кухня-гостиная 27,6 кв.м.<br>– 2 санузла<br>– 2 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "30397709",
+        "Square": "186.2",
+        "Decoration": "Без отделки",
+        "Floor": "2",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "3",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Закрытие продаж дома в премиальной локации!<br>Продается эксклюзивная квартира с террасой площадью 186,2 кв.м. Новый ЖК бизнес-класса в центре Ростова. Дом сдан!<br><br>Планировка<br>– терраса 88,7 кв.м.<br>– 2 изолированные спальни<br>– просторная мастер-спальня (со своим с/у)<br>– большая кухня-гостиная 27,6 кв.м.<br>– 2 санузла<br>– 2 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479480",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.2",
+      "floor": "8",
+      "floors": "17",
+      "price": "28644000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-f17472d331ac",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479480.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479480.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479480.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479480.png?v=4069a13bb9a53bce",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479480",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,2 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 8 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "28644000",
+        "Square": "130.2",
+        "Decoration": "Без отделки",
+        "Floor": "8",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,2 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 8 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479462",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.3",
+      "floor": "5",
+      "floors": "17",
+      "price": "28666000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-074b209776f7",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479462.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479462.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479462.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479462.png?v=14230068e31c691c",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479462",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,3 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 5 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "28666000",
+        "Square": "130.3",
+        "Decoration": "Без отделки",
+        "Floor": "5",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,3 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 5 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479492",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.3",
+      "floor": "10",
+      "floors": "17",
+      "price": "29317500",
+      "decoration": "Без отделки",
+      "plan_id": "plan-074b209776f7",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479492.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479492.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479492.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479492.png?v=ce77f0c227dc5961",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479492",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,3 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 10 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "29317500",
+        "Square": "130.3",
+        "Decoration": "Без отделки",
+        "Floor": "10",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,3 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 10 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479468",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.5",
+      "floor": "6",
+      "floors": "17",
+      "price": "28710000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-3bff3bd90114",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479468.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479468.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479468.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479468.png?v=3bea89969efd05f0",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479468",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,5 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 6 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "28710000",
+        "Square": "130.5",
+        "Decoration": "Без отделки",
+        "Floor": "6",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,5 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 6 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479474",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.5",
+      "floor": "7",
+      "floors": "17",
+      "price": "28710000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-3bff3bd90114",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479474.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479474.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479474.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479474.png?v=15ecee5eb7827927",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479474",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,5 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– увеличенное остекление<br>– 2 лоджии по 6,3 кв.м.<br>– 7 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "28710000",
+        "Square": "130.5",
+        "Decoration": "Без отделки",
+        "Floor": "7",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,5 кв.м. в новом ЖК у парка Революции. Дом сдан.<br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– увеличенное остекление<br>– 2 лоджии по 6,3 кв.м.<br>– 7 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479504",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.6",
+      "floor": "12",
+      "floors": "17",
+      "price": "29385000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-f8fbc0c790ae",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479504.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479504.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479504.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479504.png?v=5e6d6d35fcf91026",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479504",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,6 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 12 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "29385000",
+        "Square": "130.6",
+        "Decoration": "Без отделки",
+        "Floor": "12",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,6 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 12 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479510",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "130.6",
+      "floor": "13",
+      "floors": "17",
+      "price": "29385000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-f8fbc0c790ae",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479510.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479510.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479510.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479510.png?v=56cd875447d2a715",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479510",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,6 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 13 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "29385000",
+        "Square": "130.6",
+        "Decoration": "Без отделки",
+        "Floor": "13",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 130,6 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– панорамные окна<br>– 2 лоджии по 6,3 кв.м.<br>– 13 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "10479450",
+      "house_id": "4974615",
+      "house": "Дом · ID 4974615",
+      "rooms": "4",
+      "area": "131.6",
+      "floor": "3",
+      "floors": "17",
+      "price": "28952000",
+      "decoration": "Без отделки",
+      "plan_id": "plan-98fb4304458d",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479450.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479450.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479450.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "position": 1
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "position": 9
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "position": 10
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479450.png?v=e26e2adc3ae53ef4",
+          "kind": "generated"
+        },
+        {
+          "id": "src-70d1212891ec",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62bda790c7c20.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-427a0d6778af",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/62a047cd2e4b5.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-5d07aab49d43",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/631746ab9a20d.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-cbbe195ba5fc",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c822f481.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-b12a0daa35d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593c9ef2f01.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-d3aa6e2792f7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cb07028e.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-284c513156d3",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593cbf7d684.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-618eb5e848eb",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/67593ce227fbf.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f4bd804dade9",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/675942d897cf8.JPG",
+          "kind": "source"
+        },
+        {
+          "id": "src-c2119a2dd5b1",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/62bef48708247.png",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BathroomMulti",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "Latitude",
+        "LivingSpace",
+        "Longitude",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status",
+        "VideoURL"
+      ],
+      "source_values": {
+        "Id": "10479450",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+78632043586",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, улица Максима Горького, 295, Ростовская область",
+        "Latitude": "47.232951",
+        "Longitude": "39.742723",
+        "Description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 131,6 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– 2 лоджии по 6,3 кв.м.<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+        "Price": "28952000",
+        "Square": "131.6",
+        "Decoration": "Без отделки",
+        "Floor": "3",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "4974615",
+        "Rooms": "4",
+        "Floors": "17",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free",
+        "VideoURL": "https://rutube.ru/video/7f7b900fc3d59900cbcb5161edfd5f05/"
+      },
+      "source_description": "Закрытие продаж! Последние квартиры в статусной локации Ростова.<br>Продается просторная 4-комнатная квартира 131,6 кв.м. в новом ЖК у парка Революции. Дом сдан. <br><br>Планировка<br>– 4 изолированные светлые комнаты<br>– большая кухня-гостиная 26,3 кв.м.<br>– 3 санузла<br>– 2 лоджии по 6,3 кв.м.<br>– 3 этаж<br><br>Локация<br>Угол ул. М. Горького/ул. Ченцова. В шаговой доступности:<br>– Школа - 2 мин.<br>– Детский сад - 5 мин.<br>– Медицинский центр - 3 мин.<br>– Ул. Пушкинская - 3 мин.<br>– Парк Революции - 4 мин.<br><br>ЖК \"Театрал\"<br>Дом бизнес-класса с выразительной архитектурой в центре Ростова. <br>• Премиум локация<br>• Собственная котельная<br>• 5-6 квартир на этаже<br>• Закрытая территория<br>• Впечатляющие стильные холлы<br>• Подземный паркинг<br>• Ландшафтный дизайн внутреннего пространства, зоны отдыха из природных материалов для жителей всех возрастов<br>• Кафе, супермаркеты на 1 этаже<br><br>Напишите или позвоните нам, и менеджер отдела продаж подберет идеальный вариант для нового сценария вашей жизни!",
+      "excluded_from_feed": false
+    }
+  ]
+}

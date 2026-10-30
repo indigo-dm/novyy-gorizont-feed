@@ -1,0 +1,478 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "id": "promotion-1792658401983",
+      "name": "Тестовая",
+      "enabled": true,
+      "label": "Скидка",
+      "text": "−10 000 ₽/м²",
+      "house_ids": [],
+      "rooms": [],
+      "floors": [],
+      "apartment_numbers": [],
+      "area_min": null,
+      "area_max": null,
+      "starts_at": "",
+      "ends_at": "",
+      "include_ids": [
+        "408236237"
+      ],
+      "exclude_ids": []
+    }
+  ],
+  "excluded_lot_ids": [],
+  "image_settings": {
+    "lot_overrides": {},
+    "bulk_rules": [
+      {
+        "id": "image-hide-rule-1793102162777",
+        "name": "Исключить 9 изображений",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "hide",
+        "image_ids": [
+          "src-7cab611efc16",
+          "src-9d5328ff27f7",
+          "src-37ea5d298181",
+          "src-a8e124ab67c8",
+          "src-122880f50bee",
+          "src-72809fab8046",
+          "src-08c7a6610b27",
+          "src-5c8508a9b0ed",
+          "src-26f7b8b3e333"
+        ]
+      },
+      {
+        "id": "image-add-rule-1793102187600",
+        "name": "Из библиотеки · 11 изобр.",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "add",
+        "images": [
+          {
+            "id": "lib-470d3ee26ec1974929f9",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-470d3ee26ec1974929f9.jpg",
+            "path": "uploads/orion/library/lib-470d3ee26ec1974929f9.jpg",
+            "name": "1---Главное-фото-1.jpg"
+          },
+          {
+            "id": "lib-e4c4ab70737295056605",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-e4c4ab70737295056605.jpg",
+            "path": "uploads/orion/library/lib-e4c4ab70737295056605.jpg",
+            "name": "1---Главное-фото-2.jpg"
+          },
+          {
+            "id": "lib-bc0a1613a01c76e80a59",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-bc0a1613a01c76e80a59.jpg",
+            "path": "uploads/orion/library/lib-bc0a1613a01c76e80a59.jpg",
+            "name": "1---Главное-фото-3.jpg"
+          },
+          {
+            "id": "lib-00e95c9daf254f4f2a98",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-00e95c9daf254f4f2a98.jpg",
+            "path": "uploads/orion/library/lib-00e95c9daf254f4f2a98.jpg",
+            "name": "2.jpg"
+          },
+          {
+            "id": "lib-531324681ac44bdfc656",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-531324681ac44bdfc656.jpg",
+            "path": "uploads/orion/library/lib-531324681ac44bdfc656.jpg",
+            "name": "3.jpg"
+          },
+          {
+            "id": "lib-5f7ae6df27c49e5d71f1",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-5f7ae6df27c49e5d71f1.jpg",
+            "path": "uploads/orion/library/lib-5f7ae6df27c49e5d71f1.jpg",
+            "name": "4.jpg"
+          },
+          {
+            "id": "lib-74be2254ce52984aa93c",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-74be2254ce52984aa93c.jpg",
+            "path": "uploads/orion/library/lib-74be2254ce52984aa93c.jpg",
+            "name": "5.jpg"
+          },
+          {
+            "id": "lib-ae03d5b0452296f9f397",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-ae03d5b0452296f9f397.jpg",
+            "path": "uploads/orion/library/lib-ae03d5b0452296f9f397.jpg",
+            "name": "6.jpg"
+          },
+          {
+            "id": "lib-b14bca2da0506bc80d34",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-b14bca2da0506bc80d34.jpg",
+            "path": "uploads/orion/library/lib-b14bca2da0506bc80d34.jpg",
+            "name": "7.jpg"
+          },
+          {
+            "id": "lib-1224457f967653196a75",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-1224457f967653196a75.jpg",
+            "path": "uploads/orion/library/lib-1224457f967653196a75.jpg",
+            "name": "8.jpg"
+          },
+          {
+            "id": "lib-5f786d5e8a9219b88b0b",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-5f786d5e8a9219b88b0b.jpg",
+            "path": "uploads/orion/library/lib-5f786d5e8a9219b88b0b.jpg",
+            "name": "9.jpg"
+          }
+        ],
+        "position_mode": "end",
+        "position": 1
+      },
+      {
+        "id": "image-add-rule-1793102290371",
+        "name": "Из библиотеки · 11 изобр.",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "add",
+        "images": [
+          {
+            "id": "lib-b6045b33a035b25ebc79",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
+            "path": "uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
+            "name": "10.jpg"
+          },
+          {
+            "id": "lib-4a33cbeac7289ecd2186",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
+            "path": "uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
+            "name": "11.jpg"
+          },
+          {
+            "id": "lib-0f855bd4136be326e6ad",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
+            "path": "uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
+            "name": "12.jpg"
+          },
+          {
+            "id": "lib-6cbba2b44de2716b5d3e",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
+            "path": "uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
+            "name": "13.jpg"
+          },
+          {
+            "id": "lib-de5b435af264dd907e63",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-de5b435af264dd907e63.jpg",
+            "path": "uploads/orion/library/lib-de5b435af264dd907e63.jpg",
+            "name": "14.jpg"
+          },
+          {
+            "id": "lib-2ecba48e7447484b2697",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
+            "path": "uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
+            "name": "15.jpg"
+          },
+          {
+            "id": "lib-24a8ee9421c833df011d",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
+            "path": "uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
+            "name": "16.jpg"
+          },
+          {
+            "id": "lib-34b85dbaaa2668416be8",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
+            "path": "uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
+            "name": "17.jpg"
+          },
+          {
+            "id": "lib-7cf056e85990628ff84c",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
+            "path": "uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
+            "name": "18.jpg"
+          },
+          {
+            "id": "lib-dcb24c79562a47c2d135",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
+            "path": "uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
+            "name": "19.jpg"
+          },
+          {
+            "id": "lib-bc47092575f59019e6a9",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
+            "path": "uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
+            "name": "20.jpg"
+          }
+        ],
+        "position_mode": "end",
+        "position": 1
+      },
+      {
+        "id": "image-add-rule-1793102448687",
+        "name": "Из библиотеки · 8 изобр.",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "add",
+        "images": [
+          {
+            "id": "lib-d78e2a7f08030fdeb091",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-d78e2a7f08030fdeb091.jpg",
+            "path": "uploads/orion/library/lib-d78e2a7f08030fdeb091.jpg",
+            "name": "21.jpg"
+          },
+          {
+            "id": "lib-bf707560910d84650ecb",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-bf707560910d84650ecb.jpg",
+            "path": "uploads/orion/library/lib-bf707560910d84650ecb.jpg",
+            "name": "22.jpg"
+          },
+          {
+            "id": "lib-fa76f1a5600679a881dc",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-fa76f1a5600679a881dc.jpg",
+            "path": "uploads/orion/library/lib-fa76f1a5600679a881dc.jpg",
+            "name": "23.jpg"
+          },
+          {
+            "id": "lib-0083f972d97e7d7aa1db",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-0083f972d97e7d7aa1db.jpg",
+            "path": "uploads/orion/library/lib-0083f972d97e7d7aa1db.jpg",
+            "name": "24-cens.jpg"
+          },
+          {
+            "id": "lib-2de5ba6e6841d8281839",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-2de5ba6e6841d8281839.jpg",
+            "path": "uploads/orion/library/lib-2de5ba6e6841d8281839.jpg",
+            "name": "25.jpg"
+          },
+          {
+            "id": "lib-ea86be5954aec64420a0",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-ea86be5954aec64420a0.jpg",
+            "path": "uploads/orion/library/lib-ea86be5954aec64420a0.jpg",
+            "name": "26-cens.jpg"
+          },
+          {
+            "id": "lib-283e765d72d4597345b9",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-283e765d72d4597345b9.jpg",
+            "path": "uploads/orion/library/lib-283e765d72d4597345b9.jpg",
+            "name": "27.jpg"
+          },
+          {
+            "id": "lib-b999c97931ed5d3bde11",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-b999c97931ed5d3bde11.jpg",
+            "path": "uploads/orion/library/lib-b999c97931ed5d3bde11.jpg",
+            "name": "212131-cens.jpg"
+          }
+        ],
+        "position_mode": "end",
+        "position": 1
+      },
+      {
+        "id": "image-add-rule-1793102580091",
+        "name": "Из библиотеки · 1 изобр.",
+        "enabled": true,
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": [],
+        "action": "add",
+        "images": [
+          {
+            "id": "lib-586fc6e1d53eb54053e5",
+            "url": "https://feed-api.indigo-dm.ru/media/uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
+            "path": "uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
+            "name": "Ночь-1-1-.jpg"
+          }
+        ],
+        "position_mode": "position",
+        "position": 16
+      }
+    ]
+  },
+  "parameter_settings": {
+    "lot_values": {},
+    "bulk_rules": [
+      {
+        "id": "parameter-rule-1793251368866",
+        "name": "ID новостройки",
+        "enabled": true,
+        "values": {
+          "NewDevelopmentId": "10189300"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793251688428",
+        "name": "Адрес",
+        "enabled": true,
+        "values": {
+          "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793252558266",
+        "name": "Описание",
+        "enabled": true,
+        "values": {
+          "Description": "Продается светлая евро 2-комнатная квартира {{Square}} кв. м в доме бизнес-класса у парка «Сказка». Центр Западного: все рядом — школы, детские сады, магазины, парки. Удобный выезд на пр. Стачки, до центра города — 15 минут.<br><br>🏠 О квартире:<br>• Просторная кухня-гостиная с выходом на лоджию<br>• Спальня правильной формы<br>• Совмещенный санузел<br>• Прихожая с нишей под гардероб<br>• {{Floor}} этаж<br>• Улучшенная черновая отделка: выполнена стяжка пола, установлены межкомнатные перегородки и остеклен балкон.<br><br>🏢 О жилом комплексе:<br>• Бизнес-класс: панорамное остекление, потолки до 3 м, фасады с подсветкой<br>• Камерный проект: 411 квартир, секции от 6 этажей — приватность и тишина<br>• Закрытая территория с охраной, видеонаблюдением, «умный дом»<br>• Ландшафтный дизайн с автополивом, безопасные детские и спортплощадки<br>• Премиальные холлы, колясочные, скоростные лифты до паркинга<br>• Подземный паркинг с зарядками и гостевая парковка<br>• Современные планировки с просторными комнатами<br><br>📍 Расположение:<br>• «Концепция 5-минутного города» — все для жизни рядом: до ТЦ, МФЦ, кинотеатра и спортклуба — не более 5 минут.<br>• До школ и садика меньше 2 минут пешком, рядом поликлиника и Южный Федеральный университет.<br>• 3 зеленых парка в пешей доступности — «Сказка», «Плевен», «Аллея Роз».<br>• Обжитой зеленый район — нет плотной высотной застройки, приятно гулять и дышать.<br>• Удобный выезд на проспект Стачки, до центра Ростова — 15 минут.<br><br>📞 Позвоните нам — менеджер отправит буклет жилого комплекса и каталог планировок!"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236193",
+          "408236198",
+          "408236203",
+          "408236188",
+          "408236184",
+          "408236218",
+          "408236223",
+          "408236228",
+          "408236233",
+          "408236238",
+          "408236213"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793339717943",
+        "name": "Санузел",
+        "enabled": true,
+        "values": {
+          "BathroomMulti": [
+            "Совмещенный"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236193",
+          "408236198",
+          "408236203",
+          "408236188",
+          "408236184",
+          "408236218",
+          "408236223",
+          "408236228",
+          "408236233",
+          "408236238",
+          "408236213"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793339732439",
+        "name": "Вид из окон",
+        "enabled": true,
+        "values": {
+          "ViewFromWindows": [
+            "На улицу"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236193",
+          "408236198",
+          "408236203",
+          "408236188",
+          "408236184",
+          "408236218",
+          "408236223",
+          "408236228",
+          "408236233",
+          "408236238",
+          "408236213"
+        ],
+        "exclude_ids": []
+      }
+    ]
+  },
+  "material_settings": {
+    "logo": "uploads/mat-mv98xebb-5355b70af7-mask-group.png",
+    "key_render": "key-render.jpg",
+    "background_render": "",
+    "primary_color": "#924694",
+    "background_color": "#3F245C",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#48277F",
+    "promotion_frame_color": "#924694",
+    "promotion_text_color": "#FFFFFF",
+    "palette": [
+      {
+        "name": "Основной фиолетовый",
+        "value": "#3F245C"
+      },
+      {
+        "name": "Промежуточный фиолетовый",
+        "value": "#48277F"
+      },
+      {
+        "name": "Акцентный фиолетовый",
+        "value": "#924694"
+      },
+      {
+        "name": "Чёрный",
+        "value": "#1D1D1B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  },
+  "card_settings": {
+    "show_key_render": true,
+    "show_house_badge": false,
+    "show_decoration": false,
+    "show_logo_panel": false
+  },
+  "pending_upload_deletions": []
+}

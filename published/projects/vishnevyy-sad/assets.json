@@ -1,0 +1,103 @@
+{
+  "project": "ЖК Вишнёвый сад",
+  "slug": "vishnevyy-sad",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/vishnevyy-sad/assets",
+  "upload_service_url": "https://feed-api.indigo-dm.ru",
+  "items": [
+    {
+      "key": "asset-1f87bc35b802",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "key-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/assets/key-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-2ddfcca3116b",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-vishnevyy-sad.png",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/assets/logo-vishnevyy-sad.png",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-768702bb2d5e",
+      "name": "Фирменный знак",
+      "description": "Дополнительный вариант фирменного логотипа объекта.",
+      "filename": "logo-mark.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/assets/logo-mark.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-8763072bb24f",
+      "name": "Вид на территорию",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-aerial.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/assets/render-aerial.jpg",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-4e01f6a28f9d",
+      "name": "Фасад комплекса",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-facade.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/assets/render-facade.jpg",
+      "active_for": [],
+      "uploaded": false
+    }
+  ],
+  "current": {
+    "logo": "logo-vishnevyy-sad.png",
+    "key_render": "key-render.jpg",
+    "background_render": ""
+  },
+  "brand": {
+    "green": "#221E20",
+    "background_color": "#221E20",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#A5A7A7",
+    "promotion_frame_color": "#221E20",
+    "promotion_text_color": "#FFFFFF",
+    "green_dark": "#221E20",
+    "gold": "#E21049",
+    "gray": "#A5A7A7",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "palette": [
+      {
+        "name": "Графитовый",
+        "value": "#221E20"
+      },
+      {
+        "name": "Вишнёвый",
+        "value": "#E21049"
+      },
+      {
+        "name": "Серый",
+        "value": "#A5A7A7"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  }
+}
