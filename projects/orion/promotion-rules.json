@@ -432,6 +432,29 @@
           "408236213"
         ],
         "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1793353691600",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "8.92"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236193",
+          "408236198",
+          "408236203",
+          "408236188",
+          "408236184",
+          "408236213"
+        ],
+        "exclude_ids": []
       }
     ]
   },
