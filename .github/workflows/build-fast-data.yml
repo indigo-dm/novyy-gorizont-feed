@@ -17,7 +17,7 @@ on:
         default: ""
 permissions:
   contents: write
-  actions: read
+  actions: write
 
 concurrency:
   group: feed-data

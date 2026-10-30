@@ -1027,38 +1027,10 @@ function collectReferencedUploads(settings, referenced) {
   }
 }
 
-async function cleanupOrphanUploads(env) {
-  if (!r2Available(env)) return { scanned: 0, deleted: 0 };
-  const referenced = new Set();
-  for (const project of allowedProjects(env)) {
-    const settings = await env.FEED_STORAGE.get(`published/projects/${project}/settings.json`);
-    if (!settings) continue;
-    try {
-      collectReferencedUploads(await settings.json(), referenced);
-    } catch (error) {
-      console.error(`Cannot parse settings for ${project}`, error);
-    }
-  }
-  const retentionDays = Math.max(1, Number(env.ORPHAN_RETENTION_DAYS || 7));
+async function cleanupServiceRecords(env) {
+  if (!r2Available(env)) return { markerScanned: 0, markerDeleted: 0, validationScanned: 0, validationDeleted: 0 };
+  const retentionDays = Math.max(1, Number(env.OPERATION_RETENTION_DAYS || env.ORPHAN_RETENTION_DAYS || 7));
   const cutoff = Date.now() - retentionDays * 86400000;
-  let cursor;
-  let scanned = 0;
-  let deleted = 0;
-  do {
-    const page = await env.FEED_STORAGE.list({ prefix: 'uploads/', cursor, limit: 1000 });
-    const stale = [];
-    for (const object of page.objects || []) {
-      scanned += 1;
-      if (/^uploads\/[^/]+\/library\//.test(String(object.key || ''))) continue;
-      const uploaded = object.uploaded instanceof Date ? object.uploaded.getTime() : new Date(object.uploaded || 0).getTime();
-      if (!referenced.has(object.key) && uploaded && uploaded < cutoff) stale.push(object.key);
-    }
-    if (stale.length) {
-      await env.FEED_STORAGE.delete(stale);
-      deleted += stale.length;
-    }
-    cursor = page.truncated ? page.cursor : undefined;
-  } while (cursor);
   let markerScanned = 0;
   let markerDeleted = 0;
   for (const prefix of ['operations/', 'refresh-operations/']) {
@@ -1078,7 +1050,41 @@ async function cleanupOrphanUploads(env) {
       markerCursor = page.truncated ? page.cursor : undefined;
     } while (markerCursor);
   }
-  return { scanned, deleted, markerScanned, markerDeleted };
+
+  const retainedValidationResults = new Set();
+  let validationStateSafe = true;
+  for (const project of allowedProjects(env)) {
+    const latest = await env.FEED_STORAGE.get(validationLatestKey(project));
+    if (!latest) continue;
+    try {
+      const marker = await latest.json();
+      const requestNumber = String(marker && marker.request || '');
+      if (!/^\d{1,12}$/.test(requestNumber)) throw new Error('Invalid validation request number');
+      retainedValidationResults.add(validationResultKey(requestNumber));
+    } catch (error) {
+      validationStateSafe = false;
+      console.error(`Cannot parse latest validation for ${project}; old protocols are retained`, error);
+    }
+  }
+  let validationScanned = 0;
+  let validationDeleted = 0;
+  if (validationStateSafe) {
+    let validationCursor;
+    do {
+      const page = await env.FEED_STORAGE.list({ prefix: 'validation-results/', cursor: validationCursor, limit: 1000 });
+      const stale = [];
+      for (const object of page.objects || []) {
+        validationScanned += 1;
+        if (!retainedValidationResults.has(String(object.key || ''))) stale.push(object.key);
+      }
+      if (stale.length) {
+        await env.FEED_STORAGE.delete(stale);
+        validationDeleted += stale.length;
+      }
+      validationCursor = page.truncated ? page.cursor : undefined;
+    } while (validationCursor);
+  }
+  return { markerScanned, markerDeleted, validationScanned, validationDeleted };
 }
 
 async function createSettingsRequest(request, env, origin) {
@@ -1158,8 +1164,10 @@ async function createFeedValidationRequest(request, env, origin) {
   if (settings.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической обработки.' }, 413, origin, env);
 
   const previousObject = await env.FEED_STORAGE.get(validationLatestKey(project));
+  let previousRequestNumber = '';
   if (previousObject) {
     const previous = await previousObject.json().catch(() => null);
+    previousRequestNumber = /^\d{1,12}$/.test(String(previous && previous.request || '')) ? String(previous.request) : '';
     const requestedAt = Date.parse(previous && previous.requested_at || '');
     if (previous && ['queued', 'checking'].includes(previous.status) && Number.isFinite(requestedAt) && Date.now() - requestedAt < 20 * 60 * 1000) {
       return json({ error: 'Проверка этого объекта уже выполняется.', validation: previous }, 409, origin, env);
@@ -1191,6 +1199,9 @@ async function createFeedValidationRequest(request, env, origin) {
   await env.FEED_STORAGE.put(validationLatestKey(project), JSON.stringify(marker), {
     httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' }
   });
+  if (previousRequestNumber && previousRequestNumber !== String(issue.number)) {
+    await env.FEED_STORAGE.delete(validationResultKey(previousRequestNumber));
+  }
   return json(marker, 202, origin, env);
 }
 
@@ -1521,6 +1532,6 @@ export default {
     }
   },
   async scheduled(controller, env, ctx) {
-    ctx.waitUntil(cleanupOrphanUploads(env).then((result) => console.log(JSON.stringify({ event: 'r2-cleanup', ...result }))));
+    ctx.waitUntil(cleanupServiceRecords(env).then((result) => console.log(JSON.stringify({ event: 'r2-service-cleanup', ...result }))));
   }
 };

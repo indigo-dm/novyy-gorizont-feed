@@ -37,7 +37,7 @@ on:
         default: ""
 permissions:
   contents: write
-  actions: read
+  actions: write
 
 concurrency:
   group: pages-${{ inputs.project || github.event.client_payload.project || 'explicit-all-projects' }}
@@ -158,3 +158,36 @@ jobs:
           args=(--source site)
           if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
           python src/publish_r2.py "${args[@]}"
+
+      # actions/cache saves the current run's immutable cache in its post-job
+      # hook. Keep one previous generation now; after the post-job save there
+      # will be at most two rendered-card caches available for rollback/reuse.
+      - name: Remove obsolete rendered card caches
+        continue-on-error: true
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const prefix = `${process.env.RUNNER_OS}-rendered-cards-`;
+            const caches = [];
+            for (let page = 1; ; page += 1) {
+              const { data } = await github.rest.actions.getActionsCacheList({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                per_page: 100,
+                page
+              });
+              caches.push(...data.actions_caches);
+              if (data.actions_caches.length < 100) break;
+            }
+            const obsolete = caches
+              .filter((cache) => cache.key.startsWith(prefix))
+              .sort((left, right) => Date.parse(right.created_at) - Date.parse(left.created_at))
+              .slice(1);
+            for (const cache of obsolete) {
+              await github.rest.actions.deleteActionsCacheById({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                cache_id: cache.id
+              });
+            }
+            core.info(`Deleted ${obsolete.length} obsolete rendered-card caches.`);

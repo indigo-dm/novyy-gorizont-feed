@@ -1,0 +1,38 @@
+name: Compact current feed data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # The feed-data branch is a generated current-state snapshot. Compact it
+    # monthly between the regular refresh windows; force-with-lease prevents a
+    # concurrent publisher from being overwritten.
+    - cron: "43 3 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-data-compaction
+  cancel-in-progress: false
+
+jobs:
+  compact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current generated snapshot
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          fetch-depth: 1
+
+      - name: Replace history with the current snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected_sha="$(git rev-parse HEAD)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan feed-data-compacted
+          git add -A
+          git commit -m "Compact current feed data"
+          git push origin HEAD:feed-data --force-with-lease="refs/heads/feed-data:${expected_sha}"

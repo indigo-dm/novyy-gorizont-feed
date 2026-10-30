@@ -83,6 +83,14 @@ feedStorage.seed('uploads/novyy-gorizont/9301142/add-migrate-a.jpg', 'same-image
 feedStorage.seed('uploads/novyy-gorizont/9301143/add-migrate-b.jpg', 'same-image', '2026-10-19T00:00:00Z');
 feedStorage.seed('operations/999.json', '{}', '2026-09-01T00:00:00Z');
 feedStorage.seed('refresh-operations/refresh-stale-marker.json', '{}', '2026-09-01T00:00:00Z');
+await feedStorage.put('validations/novyy-gorizont/latest.json', JSON.stringify({
+  version: 1,
+  request: 17,
+  project: 'novyy-gorizont',
+  status: 'has_errors',
+  requested_at: '2026-10-27T17:21:00Z'
+}));
+await feedStorage.put('validation-results/17.json', JSON.stringify({ request: 17, project: 'novyy-gorizont', status: 'has_errors' }));
 const env = {
   PUBLIC_ACCESS_PASSWORD_HASH: passwordHash,
   ALLOWED_ORIGIN: 'https://indigo-dm.github.io',
@@ -93,7 +101,7 @@ const env = {
   GITHUB_TOKEN: 'qa-token',
   PUBLIC_BASE_URL: 'https://worker.example',
   FRONTEND_FEED_ROOT: 'https://frontend.example/feeds',
-  ORPHAN_RETENTION_DAYS: '7',
+  OPERATION_RETENTION_DAYS: '7',
   FEED_STORAGE: feedStorage
 };
 
@@ -479,8 +487,9 @@ const result = {
     refreshResponse.status === 202 && refreshDispatchInputs?.project === 'novyy-gorizont' && refreshDispatchInputs?.render_ids === 'changed' && refreshDispatchInputs?.request_id === refreshAccepted.request &&
     refreshDeploying.status === 'deploying' && refreshPublished.status === 'published' && frontendDeployDispatched &&
     !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-test.jpg') &&
-    !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg') &&
+    feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg') &&
     feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg') &&
+    !feedStorage.objects.has('validation-results/17.json') &&
     !feedStorage.objects.has('operations/999.json') &&
     !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json'),
   settings_status: settingsResponse.status,
@@ -523,7 +532,8 @@ const result = {
   public_data_head_status: headResponse.status,
   refresh_statuses: [refreshDeploying.status, refreshPublished.status],
   refresh_changed_only: refreshDispatchInputs?.render_ids === 'changed',
-  orphan_cleanup: !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg'),
+  unused_upload_retained: feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg'),
+  previous_validation_deleted: !feedStorage.objects.has('validation-results/17.json'),
   operation_cleanup: !feedStorage.objects.has('operations/999.json') && !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json')
 };
 console.log(JSON.stringify(result, null, 2));

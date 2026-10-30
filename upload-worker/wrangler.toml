@@ -15,7 +15,7 @@ PUBLIC_ACCESS_PASSWORD_HASH = "8dce592bb594f861bf4b21de5955aa5b64a5547763b0b7ee9
 PUBLIC_BASE_URL = "https://feed-api.indigo-dm.ru"
 FRONTEND_FEED_ROOT = "https://indigo-dm.github.io/feed-studio/feeds"
 LEGACY_MEDIA_ROOT = "https://indigo-dm.github.io/novyy-gorizont-feed"
-ORPHAN_RETENTION_DAYS = "7"
+OPERATION_RETENTION_DAYS = "7"
 
 [[r2_buckets]]
 binding = "FEED_STORAGE"
