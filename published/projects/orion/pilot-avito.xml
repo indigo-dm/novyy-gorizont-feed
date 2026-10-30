@@ -67,6 +67,9 @@
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
     <LivingSpace>23.75</LivingSpace>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
   </Ad>
   <Ad>
     <Id>408236195</Id>
@@ -204,6 +207,9 @@
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
     <LivingSpace>23.82</LivingSpace>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
   </Ad>
   <Ad>
     <Id>408236184</Id>
@@ -272,6 +278,9 @@
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
     <LivingSpace>23.82</LivingSpace>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
   </Ad>
   <Ad>
     <Id>408236190</Id>
@@ -752,6 +761,9 @@
     <ViewFromWindows>
       <Option>На улицу</Option>
     </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
   </Ad>
   <Ad>
     <Id>408236213</Id>
@@ -820,6 +832,9 @@
     </ViewFromWindows>
     <KitchenSpace>8.92</KitchenSpace>
     <LivingSpace>25.49</LivingSpace>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
   </Ad>
   <Ad>
     <Id>408236225</Id>

@@ -1,7 +1,7 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-10-30T12:57:51+03:00",
+  "checked_at": "2026-10-30T13:01:50+03:00",
   "source_ads": 163,
   "full_ads": 163,
   "excluded_ads": 0,
@@ -484,7 +484,10 @@
           "На улицу"
         ],
         "KitchenSpace": "8.92",
-        "LivingSpace": "23.75"
+        "LivingSpace": "23.75",
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
+        ]
       },
       "source_tags": [
         "AdStatus",
@@ -798,7 +801,10 @@
           "На улицу"
         ],
         "KitchenSpace": "8.92",
-        "LivingSpace": "23.75"
+        "LivingSpace": "23.75",
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
+        ]
       },
       "source_tags": [
         "AdStatus",
@@ -1112,7 +1118,10 @@
           "На улицу"
         ],
         "KitchenSpace": "8.92",
-        "LivingSpace": "23.75"
+        "LivingSpace": "23.75",
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
+        ]
       },
       "source_tags": [
         "AdStatus",
@@ -2646,7 +2655,10 @@
           "На улицу"
         ],
         "KitchenSpace": "8.92",
-        "LivingSpace": "23.82"
+        "LivingSpace": "23.82",
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
+        ]
       },
       "source_tags": [
         "AdStatus",
@@ -2960,7 +2972,10 @@
           "На улицу"
         ],
         "KitchenSpace": "8.92",
-        "LivingSpace": "23.82"
+        "LivingSpace": "23.82",
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
+        ]
       },
       "source_tags": [
         "AdStatus",
@@ -6932,6 +6947,9 @@
         ],
         "ViewFromWindows": [
           "На улицу"
+        ],
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
         ]
       },
       "source_tags": [
@@ -7244,6 +7262,9 @@
         ],
         "ViewFromWindows": [
           "На улицу"
+        ],
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
         ]
       },
       "source_tags": [
@@ -7556,6 +7577,9 @@
         ],
         "ViewFromWindows": [
           "На улицу"
+        ],
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
         ]
       },
       "source_tags": [
@@ -7868,6 +7892,9 @@
         ],
         "ViewFromWindows": [
           "На улицу"
+        ],
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
         ]
       },
       "source_tags": [
@@ -8180,6 +8207,9 @@
         ],
         "ViewFromWindows": [
           "На улицу"
+        ],
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
         ]
       },
       "source_tags": [
@@ -8494,7 +8524,10 @@
           "На улицу"
         ],
         "KitchenSpace": "8.92",
-        "LivingSpace": "25.49"
+        "LivingSpace": "25.49",
+        "BalconyOrLoggiaMulti": [
+          "Лоджия"
+        ]
       },
       "source_tags": [
         "AdStatus",
