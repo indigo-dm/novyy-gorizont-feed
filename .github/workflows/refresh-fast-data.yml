@@ -1,0 +1,12 @@
+name: Refresh fast feed data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    uses: ./.github/workflows/build-fast-data.yml
+    secrets: inherit

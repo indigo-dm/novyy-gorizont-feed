@@ -1,0 +1,108 @@
+{
+  "project": "ЖК Труда 12/3",
+  "slug": "truda-12-3",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/truda-12-3/assets",
+  "upload_service_url": "https://feed-api.indigo-dm.ru",
+  "items": [
+    {
+      "key": "asset-1f87bc35b802",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "key-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/key-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-b604f86c5b2e",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-truda.png",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/logo-truda.png",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-25ae1d644651",
+      "name": "Logo Truda Stacked",
+      "description": "Загруженный фирменный материал объекта.",
+      "filename": "logo-truda-stacked.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/logo-truda-stacked.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-8e6ce6d8a886",
+      "name": "Logo Truda White",
+      "description": "Загруженный фирменный материал объекта.",
+      "filename": "logo-truda-white.png",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/logo-truda-white.png",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-4e57c584baf2",
+      "name": "Интерьер ванной",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-bathroom.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/render-bathroom.jpg",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-6f9819941dea",
+      "name": "Интерьер кухни",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-kitchen.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/render-kitchen.jpg",
+      "active_for": [],
+      "uploaded": false
+    },
+    {
+      "key": "asset-090e98370bd8",
+      "name": "Гардеробная",
+      "description": "Дополнительный фирменный рендер объекта.",
+      "filename": "render-storage.jpg",
+      "required": false,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/assets/render-storage.jpg",
+      "active_for": [],
+      "uploaded": false
+    }
+  ],
+  "current": {
+    "logo": "logo-truda.png",
+    "key_render": "key-render.jpg",
+    "background_render": ""
+  },
+  "brand": {
+    "green": "#194820",
+    "background_color": "#194820",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#9B9B9B",
+    "promotion_frame_color": "#194820",
+    "promotion_text_color": "#FFFFFF",
+    "green_dark": "#194820",
+    "gold": "#72C451",
+    "gray": "#9B9B9B",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "palette": null
+  }
+}

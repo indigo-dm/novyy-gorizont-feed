@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "rules": [],
+  "image_settings": {
+    "lot_overrides": {},
+    "bulk_rules": []
+  },
+  "parameter_settings": {
+    "lot_values": {},
+    "bulk_rules": []
+  },
+  "card_settings": {
+    "show_key_render": true,
+    "show_house_badge": true,
+    "show_decoration": true,
+    "show_logo_panel": false
+  }
+}

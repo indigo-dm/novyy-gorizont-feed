@@ -1,0 +1,70 @@
+{
+  "project": "ЖК Новый Горизонт",
+  "slug": "novyy-gorizont",
+  "upload_url": "https://github.com/indigo-dm/novyy-gorizont-feed/upload/main/projects/novyy-gorizont/assets",
+  "upload_service_url": "https://feed-api.indigo-dm.ru",
+  "items": [
+    {
+      "key": "asset-b8b92609b165",
+      "name": "Логотип",
+      "description": "Основной логотип объекта для брендированных карточек.",
+      "filename": "logo-gold.svg",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/assets/logo-gold.svg",
+      "active_for": [
+        "logo"
+      ],
+      "uploaded": false
+    },
+    {
+      "key": "asset-e467147b5001",
+      "name": "Ключевой рендер",
+      "description": "Главное изображение проекта в левой части макета.",
+      "filename": "selected-render.jpg",
+      "required": true,
+      "exists": true,
+      "url": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/assets/selected-render.jpg",
+      "active_for": [
+        "key_render"
+      ],
+      "uploaded": false
+    }
+  ],
+  "current": {
+    "logo": "logo-gold.svg",
+    "key_render": "selected-render.jpg",
+    "background_render": ""
+  },
+  "brand": {
+    "green": "#00605C",
+    "background_color": "#00605C",
+    "text_color": "#FFFFFF",
+    "subtitle_color": "#9B9B9B",
+    "promotion_frame_color": "#00605C",
+    "promotion_text_color": "#FFFFFF",
+    "green_dark": "#004C49",
+    "gold": "#CEAD75",
+    "gray": "#9B9B9B",
+    "white": "#FFFFFF",
+    "font": "Manrope",
+    "palette": [
+      {
+        "name": "Основной",
+        "value": "#00605C"
+      },
+      {
+        "name": "Акцент",
+        "value": "#CEAD75"
+      },
+      {
+        "name": "Серый",
+        "value": "#9B9B9B"
+      },
+      {
+        "name": "Белый",
+        "value": "#FFFFFF"
+      }
+    ]
+  }
+}
