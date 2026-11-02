@@ -1,37 +1,37 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-11-02T03:43:14+03:00",
-  "source_ads": 192,
-  "full_ads": 192,
+  "checked_at": "2026-11-02T23:21:40+03:00",
+  "source_ads": 191,
+  "full_ads": 191,
   "excluded_ads": 0,
   "unique_plans": 11,
   "source_tag_counts": {
-    "AdStatus": 192,
-    "Address": 192,
-    "BalconyOrLoggiaMulti": 192,
-    "Category": 192,
-    "ContactMethod": 192,
-    "ContactPhone": 192,
+    "AdStatus": 191,
+    "Address": 191,
+    "BalconyOrLoggiaMulti": 191,
+    "Category": 191,
+    "ContactMethod": 191,
+    "ContactPhone": 191,
     "DealType": 4,
-    "Decoration": 192,
-    "Description": 192,
-    "Floor": 192,
-    "Floors": 192,
-    "HouseType": 192,
-    "Id": 192,
-    "KitchenSpace": 192,
-    "LivingSpace": 192,
-    "ManagerName": 192,
-    "MarketType": 192,
-    "NewDevelopmentId": 192,
-    "OperationType": 192,
-    "Price": 192,
-    "PropertyRights": 192,
-    "RoomType": 192,
-    "Rooms": 192,
-    "Square": 192,
-    "Status": 192
+    "Decoration": 191,
+    "Description": 191,
+    "Floor": 191,
+    "Floors": 191,
+    "HouseType": 191,
+    "Id": 191,
+    "KitchenSpace": 191,
+    "LivingSpace": 191,
+    "ManagerName": 191,
+    "MarketType": 191,
+    "NewDevelopmentId": 191,
+    "OperationType": 191,
+    "Price": 191,
+    "PropertyRights": 191,
+    "RoomType": 191,
+    "Rooms": 191,
+    "Square": 191,
+    "Status": 191
   },
   "parameter_catalog": [
     {
@@ -14173,174 +14173,6 @@
         "AdStatus": "Free"
       },
       "source_description": "ЖК Новый Горизонт 4 дом! <br> <br><br><br>▪️ Приятные цены  <br><br>▪️ 5 квартир на этаже  <br><br>▪️ Комфортные планировки  <br><br>▪️ 2 комн. квартиры с прекрасными видовыми характеристиками  <br><br>▪️ Абсолютное отсутствие студий  <br><br>▪️ Размещение инфраструктуры на 1ом этаже",
-      "excluded_from_feed": false
-    },
-    {
-      "id": "11924189",
-      "house_id": "3379674",
-      "house": "Дом 4",
-      "rooms": "2",
-      "area": "46.13",
-      "floor": "13",
-      "floors": "22",
-      "price": "6850305",
-      "decoration": "Без отделки",
-      "plan_id": "plan-8374fd32d683",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924189.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924189.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924189.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-26e658f015bc",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba7084a55d.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "position": 9
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924189/d0c644f555a4ebad.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-26e658f015bc",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/62fba7084a55d.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9a6d563e8b80",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-789df0983ac5",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c171c42b470d",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c0e35a50e7a8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-f3dab7ff7fd7",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-88f1dd8da582",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-48ba4aab152e",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-c3f2cb3b6179",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "BalconyOrLoggiaMulti",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "LivingSpace",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "RoomType",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "11924189",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+7 (999) 449-90-80",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Ростов-на-Дону, Ростовская область, Тибетская",
-        "Description": "Продаётся уютная евро 2-комнатная квартира 46,13 кв.м. Идеальное расположение рядом с ТРЦ «Горизонт» и рощей СКА для тех, кто ценит комфорт и природу.<br><br>О квартире:<br>•Удобная кухня-гостиная 20 кв. м. с выходом на просторную лоджию<br>•Спальня 14 кв. м. с местом под гардероб<br>•Санузел совмещённый<br>•Выделена зона под гардероб в прихожей<br>•13 этаж <br>•Улучшенная черновая отделка: выполнена стяжка пола и установлены межкомнатные перегородки<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!",
-        "Price": "6850305",
-        "Square": "46.13",
-        "Decoration": "Без отделки",
-        "Floor": "13",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "3379674",
-        "Rooms": "2",
-        "KitchenSpace": "7.24",
-        "LivingSpace": "26.05",
-        "Floors": "22",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "Продаётся уютная евро 2-комнатная квартира 46,13 кв.м. Идеальное расположение рядом с ТРЦ «Горизонт» и рощей СКА для тех, кто ценит комфорт и природу.<br><br>О квартире:<br>•Удобная кухня-гостиная 20 кв. м. с выходом на просторную лоджию<br>•Спальня 14 кв. м. с местом под гардероб<br>•Санузел совмещённый<br>•Выделена зона под гардероб в прихожей<br>•13 этаж <br>•Улучшенная черновая отделка: выполнена стяжка пола и установлены межкомнатные перегородки<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!",
       "excluded_from_feed": false
     },
     {

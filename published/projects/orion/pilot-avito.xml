@@ -3942,7 +3942,7 @@
     <CompanyName>Орион</CompanyName>
   </Ad>
   <Ad>
-    <Id>407635860</Id>
+    <Id>407635908</Id>
     <AdStatus>Free</AdStatus>
     <ContactPhone>+7 (863) 333-26-38</ContactPhone>
     <ContactMethod>По телефону</ContactMethod>
@@ -3959,16 +3959,16 @@
 Для автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.</Description>
     <Category>Квартиры</Category>
     <OperationType>Продам</OperationType>
-    <Price>8310600</Price>
+    <Price>8213400</Price>
     <Rooms>1</Rooms>
     <Square>48.6</Square>
-    <Floor>16</Floor>
+    <Floor>20</Floor>
     <Floors>20</Floors>
     <HouseType>Монолитный</HouseType>
     <MarketType>Новостройка</MarketType>
     <PropertyRights>Застройщик</PropertyRights>
     <Images>
-      <Image url="https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635860/14e2cb8f2e3b95fd.png" />
+      <Image url="https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635908/5ccbee4e75cbc573.png" />
       <Image url="https://maximum.abc-dev.ru/storage/2025/07/25/49398ec48280b70aec3aec9acc4c360c44d6edf4.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg" />
@@ -4005,7 +4005,7 @@
       <Image url="https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b999c97931ed5d3bde11.jpg" />
     </Images>
     <Address>Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2</Address>
-    <ApartmentNumber>172</ApartmentNumber>
+    <ApartmentNumber>216</ApartmentNumber>
     <Status>Квартира</Status>
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
