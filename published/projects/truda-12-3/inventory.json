@@ -1,7 +1,7 @@
 {
   "slug": "truda-12-3",
   "project": "ЖК Труда 12/3",
-  "checked_at": "2026-11-03T05:57:07+03:00",
+  "checked_at": "2026-11-03T20:54:33+03:00",
   "source_ads": 17,
   "full_ads": 17,
   "excluded_ads": 0,
@@ -9,6 +9,7 @@
   "source_tag_counts": {
     "AdStatus": 17,
     "Address": 17,
+    "BuiltYear": 17,
     "Category": 17,
     "ContactMethod": 17,
     "ContactPhone": 17,
@@ -317,6 +318,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -354,6 +356,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "1",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -459,6 +462,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -496,6 +500,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -601,6 +606,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -638,6 +644,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -743,6 +750,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -780,6 +788,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -885,6 +894,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -922,6 +932,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1027,6 +1038,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1064,6 +1076,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1169,6 +1182,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1206,6 +1220,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1311,6 +1326,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1348,6 +1364,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1453,6 +1470,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1490,6 +1508,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1595,6 +1614,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1632,6 +1652,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1737,6 +1758,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1774,6 +1796,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -1879,6 +1902,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1916,6 +1940,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -2021,6 +2046,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2058,6 +2084,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -2163,6 +2190,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2200,6 +2228,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "2",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -2305,6 +2334,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2342,6 +2372,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "3",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -2447,6 +2478,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2484,6 +2516,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "3",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -2589,6 +2622,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2626,6 +2660,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "11849962",
         "Rooms": "3",
+        "BuiltYear": "2027",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"

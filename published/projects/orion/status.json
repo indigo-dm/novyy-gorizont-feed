@@ -1,11 +1,11 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-11-03T05:57:30+03:00",
-  "source_ads": 162,
-  "full_ads": 162,
+  "checked_at": "2026-11-03T20:54:59+03:00",
+  "source_ads": 161,
+  "full_ads": 161,
   "excluded_ads": 0,
-  "unique_plans": 91,
+  "unique_plans": 90,
   "active_promotions": 1,
   "publish_ready": false,
   "mode": "full-demo"
