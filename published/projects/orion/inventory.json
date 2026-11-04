@@ -1,33 +1,33 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-11-04T04:22:27+03:00",
-  "source_ads": 161,
-  "full_ads": 161,
+  "checked_at": "2026-11-04T21:02:51+03:00",
+  "source_ads": 160,
+  "full_ads": 160,
   "excluded_ads": 0,
   "unique_plans": 90,
   "source_tag_counts": {
-    "AdStatus": 161,
-    "Address": 161,
-    "ApartmentNumber": 161,
-    "Category": 161,
-    "CompanyName": 161,
-    "ContactMethod": 161,
-    "ContactPhone": 161,
-    "Decoration": 161,
-    "Description": 161,
-    "Floor": 161,
-    "Floors": 161,
-    "HouseType": 161,
-    "Id": 161,
-    "MarketType": 161,
-    "OperationType": 161,
-    "Price": 161,
-    "PropertyRights": 161,
-    "Rooms": 161,
-    "Square": 161,
-    "Status": 161,
-    "NewDevelopmentId": 77
+    "AdStatus": 160,
+    "Address": 160,
+    "ApartmentNumber": 160,
+    "Category": 160,
+    "CompanyName": 160,
+    "ContactMethod": 160,
+    "ContactPhone": 160,
+    "Decoration": 160,
+    "Description": 160,
+    "Floor": 160,
+    "Floors": 160,
+    "HouseType": 160,
+    "Id": 160,
+    "MarketType": 160,
+    "OperationType": 160,
+    "Price": 160,
+    "PropertyRights": 160,
+    "Rooms": 160,
+    "Square": 160,
+    "Status": 160,
+    "NewDevelopmentId": 76
   },
   "parameter_catalog": [
     {
@@ -34555,313 +34555,6 @@
         "PropertyRights": "Застройщик",
         "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
         "ApartmentNumber": "69",
-        "Status": "Квартира",
-        "Decoration": "Без отделки",
-        "CompanyName": "Орион"
-      },
-      "source_description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
-      "excluded_from_feed": false
-    },
-    {
-      "id": "407635821",
-      "house_id": "10189300",
-      "house": "Дом",
-      "rooms": "2",
-      "area": "53.28",
-      "floor": "13",
-      "floors": "20",
-      "price": "9270720",
-      "decoration": "Без отделки",
-      "plan_id": "plan-3bfac4ddd17e",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635821.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635821.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635821.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-a612102c7eff",
-          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/662457d5fff9dec2e6f1bb0dfbcec4842cc0f506.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "position": 2
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-7cab611efc16",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-9d5328ff27f7",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-37ea5d298181",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-a8e124ab67c8",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-122880f50bee",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-72809fab8046",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
-          "position": 9
-        },
-        {
-          "id": "src-08c7a6610b27",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
-          "position": 10
-        },
-        {
-          "id": "src-5c8508a9b0ed",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
-          "position": 11
-        },
-        {
-          "id": "src-26f7b8b3e333",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
-          "position": 12
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635821/b88be9d09dc2765c.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-a612102c7eff",
-          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/662457d5fff9dec2e6f1bb0dfbcec4842cc0f506.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "kind": "source"
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "lib-470d3ee26ec1974929f9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-470d3ee26ec1974929f9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-e4c4ab70737295056605",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-e4c4ab70737295056605.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bc0a1613a01c76e80a59",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bc0a1613a01c76e80a59.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-00e95c9daf254f4f2a98",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-00e95c9daf254f4f2a98.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-531324681ac44bdfc656",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-531324681ac44bdfc656.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-5f7ae6df27c49e5d71f1",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-5f7ae6df27c49e5d71f1.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-74be2254ce52984aa93c",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-74be2254ce52984aa93c.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-ae03d5b0452296f9f397",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-ae03d5b0452296f9f397.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b14bca2da0506bc80d34",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b14bca2da0506bc80d34.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-1224457f967653196a75",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-1224457f967653196a75.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-5f786d5e8a9219b88b0b",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-5f786d5e8a9219b88b0b.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-586fc6e1d53eb54053e5",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b6045b33a035b25ebc79",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-4a33cbeac7289ecd2186",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-0f855bd4136be326e6ad",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-6cbba2b44de2716b5d3e",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-de5b435af264dd907e63",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-de5b435af264dd907e63.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-2ecba48e7447484b2697",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-24a8ee9421c833df011d",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-34b85dbaaa2668416be8",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-7cf056e85990628ff84c",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-dcb24c79562a47c2d135",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bc47092575f59019e6a9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-d78e2a7f08030fdeb091",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-d78e2a7f08030fdeb091.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bf707560910d84650ecb",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bf707560910d84650ecb.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-fa76f1a5600679a881dc",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-fa76f1a5600679a881dc.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-0083f972d97e7d7aa1db",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-0083f972d97e7d7aa1db.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-2de5ba6e6841d8281839",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-2de5ba6e6841d8281839.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-ea86be5954aec64420a0",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-ea86be5954aec64420a0.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-283e765d72d4597345b9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-283e765d72d4597345b9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b999c97931ed5d3bde11",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b999c97931ed5d3bde11.jpg",
-          "kind": "bulk-added"
-        }
-      ],
-      "feed_parameters": {
-        "NewDevelopmentId": "10189300",
-        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2"
-      },
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "ApartmentNumber",
-        "Category",
-        "CompanyName",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "407635821",
-        "AdStatus": "Free",
-        "ContactPhone": "+7 (863) 333-26-38",
-        "ContactMethod": "По телефону",
-        "NewDevelopmentId": "10189300",
-        "Description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "Price": "9270720",
-        "Rooms": "2",
-        "Square": "53.28",
-        "Floor": "13",
-        "Floors": "20",
-        "HouseType": "Монолитный",
-        "MarketType": "Новостройка",
-        "PropertyRights": "Застройщик",
-        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
-        "ApartmentNumber": "136",
         "Status": "Квартира",
         "Decoration": "Без отделки",
         "CompanyName": "Орион"
