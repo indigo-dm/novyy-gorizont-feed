@@ -1,7 +1,7 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-11-06T14:23:08+03:00",
+  "checked_at": "2026-11-06T14:43:18+03:00",
   "source_ads": 158,
   "full_ads": 158,
   "excluded_ads": 0,
@@ -555,7 +555,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236198.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236198.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236198.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -621,7 +626,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236198/9be1ddbc23bebf0d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236198/054f895d88de2548.png",
           "kind": "generated"
         },
         {
@@ -1504,7 +1509,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236200.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236200.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236200.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -1570,7 +1580,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236200/d2ee53370ee4e4da.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236200/fa74a815de6efbbc.png",
           "kind": "generated"
         },
         {
@@ -2119,7 +2129,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236210.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236210.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236210.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -2185,7 +2200,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236210/db55533c56f51c5e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236210/cd43688d62c37319.png",
           "kind": "generated"
         },
         {
@@ -2424,7 +2439,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236188.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236188.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236188.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -2490,7 +2510,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236188/5a431b531e19cecf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236188/bcea9b6c58e96d1b.png",
           "kind": "generated"
         },
         {
@@ -3063,7 +3083,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236190.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236190.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236190.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -3129,7 +3154,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236190/61e240af20276c36.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236190/3720f8d157846c58.png",
           "kind": "generated"
         },
         {
@@ -3678,7 +3703,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036118.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036118.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036118.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-d88d627d28df",
@@ -3744,7 +3774,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036118/0900cfb4440931a6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036118/895a23f10f78b4b8.png",
           "kind": "generated"
         },
         {
@@ -4293,7 +4323,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036128.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036128.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036128.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-d88d627d28df",
@@ -4359,7 +4394,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036128/8cfbd30f33667bf3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036128/6dc0980a93a7c094.png",
           "kind": "generated"
         },
         {
@@ -5218,7 +5253,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036116.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036116.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036116.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c9d11af680ef",
@@ -5284,7 +5324,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036116/f0e61e8aaa4e3900.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036116/b7cadc2dc4f758ed.png",
           "kind": "generated"
         },
         {
@@ -5833,7 +5873,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036126.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036126.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036126.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c9d11af680ef",
@@ -5899,7 +5944,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036126/1ca7bc163f5ae6ca.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036126/b54d169db7c5f322.png",
           "kind": "generated"
         },
         {
@@ -6138,7 +6183,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036108.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036108.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036108.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-b23f41334ff1",
@@ -6204,7 +6254,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036108/561805fbcc59089a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036108/fde05489d0b2e193.png",
           "kind": "generated"
         },
         {
@@ -6443,7 +6493,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036106.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036106.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036106.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-0e3897dc2aaf",
@@ -6509,7 +6564,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036106/bc2607f6195ab4b1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036106/c744b700adb1f556.png",
           "kind": "generated"
         },
         {
@@ -6748,7 +6803,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236218.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236218.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236218.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -6814,7 +6874,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236218/e58c64719679ea1e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236218/b9eab01d62473957.png",
           "kind": "generated"
         },
         {
@@ -7383,7 +7443,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236228.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236228.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236228.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -7449,7 +7514,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236228/918f507484fdf09c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236228/8de53af52c702815.png",
           "kind": "generated"
         },
         {
@@ -8018,7 +8083,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236238.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236238.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236238.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -8084,7 +8154,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236238/4a66646e396b3148.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236238/ec2e1a48ce876109.png",
           "kind": "generated"
         },
         {
@@ -8965,7 +9035,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236230.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236230.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236230.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -9031,7 +9106,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236230/a71322e534d40e26.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236230/e80aef39ea9f5e4d.png",
           "kind": "generated"
         },
         {
@@ -9580,7 +9655,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236240.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236240.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236240.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -9646,7 +9726,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236240/fa49863a4b5c21b3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236240/be9bd154f7086cac.png",
           "kind": "generated"
         },
         {
@@ -9885,7 +9965,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236220.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236220.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236220.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -9951,7 +10036,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236220/72e7de0ea10f466a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236220/c5c1f9adf03daef1.png",
           "kind": "generated"
         },
         {
@@ -10810,7 +10895,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236199.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236199.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236199.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -10876,7 +10966,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236199/915d84af96d9a26a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236199/4e83917ec4616918.png",
           "kind": "generated"
         },
         {
@@ -11425,7 +11515,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236209.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236209.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236209.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -11491,7 +11586,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236209/2e63a31c70fd73b7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236209/a66bcf73f7e1e522.png",
           "kind": "generated"
         },
         {
@@ -12040,7 +12135,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236189.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236189.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236189.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -12106,7 +12206,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236189/780b2a808bf958ef.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236189/1a2b388a56eed4a2.png",
           "kind": "generated"
         },
         {
@@ -12655,7 +12755,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036117.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036117.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036117.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-dfc885cdf6d0",
@@ -12721,7 +12826,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036117/4e77ec47e49890bc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036117/589f160e349b0cd9.png",
           "kind": "generated"
         },
         {
@@ -13270,7 +13375,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036127.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036127.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036127.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-dfc885cdf6d0",
@@ -13336,7 +13446,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036127/0d1354364cd7a271.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036127/e7a8866209f0e31c.png",
           "kind": "generated"
         },
         {
@@ -13885,7 +13995,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036107.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036107.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036107.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-3f8664532aa7",
@@ -13951,7 +14066,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036107/feb0c08fc9c9268a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036107/c16813c572e190ac.png",
           "kind": "generated"
         },
         {
@@ -14190,7 +14305,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236219.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236219.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236219.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -14256,7 +14376,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236219/e21226b78ec9f11a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236219/5fc6bcf4105affea.png",
           "kind": "generated"
         },
         {
@@ -14805,7 +14925,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236229.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236229.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236229.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -14871,7 +14996,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236229/7937cae8c70efe88.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236229/c512b21baf54fcb8.png",
           "kind": "generated"
         },
         {
@@ -15420,7 +15545,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236239.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236239.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236239.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -15486,7 +15616,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236239/a1cac778edd72f6a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236239/0e94bd3d2ad40206.png",
           "kind": "generated"
         },
         {
@@ -16965,7 +17095,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036115.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036115.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036115.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6fc845211979",
@@ -17031,7 +17166,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036115/2f462be7b2c55181.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036115/9152220b26e03803.png",
           "kind": "generated"
         },
         {
@@ -17580,7 +17715,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036125.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036125.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036125.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6fc845211979",
@@ -17646,7 +17786,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036125/3d2ee04c383b677a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036125/039064a0323f1bb2.png",
           "kind": "generated"
         },
         {
@@ -17885,7 +18025,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036105.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036105.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036105.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-c114f3b06bbf",
@@ -17951,7 +18096,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036105/e6c854d084547a6a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036105/ee5c0486c7be3b4f.png",
           "kind": "generated"
         },
         {
@@ -18500,7 +18645,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236201.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236201.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236201.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -18566,7 +18716,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236201/fe86ec026c1da89b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236201/2ad23c941d5c05dd.png",
           "kind": "generated"
         },
         {
@@ -19115,7 +19265,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236211.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236211.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236211.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -19181,7 +19336,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236211/af7d3673e2906642.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236211/3b8fc2ce9ec9d233.png",
           "kind": "generated"
         },
         {
@@ -20040,7 +20195,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036129.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036129.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036129.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-803d685dbf63",
@@ -20106,7 +20266,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036129/11f30309c11d169f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036129/d45231ef3798e958.png",
           "kind": "generated"
         },
         {
@@ -20345,7 +20505,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236191.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236191.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236191.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -20411,7 +20576,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236191/894c83a579e7e268.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236191/1552703206811198.png",
           "kind": "generated"
         },
         {
@@ -20650,7 +20815,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036109.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036109.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036109.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-7757f61c24fd",
@@ -20716,7 +20886,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036109/be91b2c80355ad92.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036109/d3d12d1ab6c0eda9.png",
           "kind": "generated"
         },
         {
@@ -21265,7 +21435,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236197.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236197.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236197.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -21331,7 +21506,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236197/627539a3b9db9226.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236197/cd3970c218b6657b.png",
           "kind": "generated"
         },
         {
@@ -21880,7 +22055,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236207.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236207.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236207.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -21946,7 +22126,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236207/67afb9052f1a3077.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236207/60b7917546595985.png",
           "kind": "generated"
         },
         {
@@ -22495,7 +22675,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236187.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236187.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236187.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -22561,7 +22746,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236187/4c6b192b6d24ea87.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236187/137264d72ccdc007.png",
           "kind": "generated"
         },
         {
@@ -22800,7 +22985,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236221.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236221.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236221.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -22866,7 +23056,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236221/20b021b857822921.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236221/e6259c136a271cc0.png",
           "kind": "generated"
         },
         {
@@ -23725,7 +23915,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236231.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236231.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236231.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -23791,7 +23986,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236231/40470090d0360455.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236231/6b2ffd0c81bf16d9.png",
           "kind": "generated"
         },
         {
@@ -24340,7 +24535,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236241.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236241.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236241.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -24406,7 +24606,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236241/1087a610cd3422b3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236241/08a2f5e712379d7c.png",
           "kind": "generated"
         },
         {
@@ -24955,7 +25155,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236227.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236227.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236227.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -25021,7 +25226,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236227/7086b046c9608929.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236227/f4cdcfc991de7e2c.png",
           "kind": "generated"
         },
         {
@@ -25570,7 +25775,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236237.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236237.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236237.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -25636,7 +25846,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236237/0d2d2aefe3084ebe.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236237/8583dd467dfdfaec.png",
           "kind": "generated"
         },
         {
@@ -25875,7 +26085,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236217.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236217.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236217.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -25941,7 +26156,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236217/7cc6deb579be44a4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236217/ae627eb9006e5de7.png",
           "kind": "generated"
         },
         {
@@ -26180,7 +26395,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635865.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635865.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635865.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-21b4cc7d07b7",
@@ -26246,7 +26466,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635865/43f27a463d055fb0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635865/3f5875981ed4827f.png",
           "kind": "generated"
         },
         {
@@ -26487,7 +26707,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635636.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635636.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635636.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-a0dd997a32e0",
@@ -26553,7 +26778,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635636/9853b796d40a1664.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635636/b4068c6269444f38.png",
           "kind": "generated"
         },
         {
@@ -27730,7 +27955,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635781.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635781.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635781.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-21b4cc7d07b7",
@@ -27796,7 +28026,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635781/b4dea1b7ea71ccff.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635781/928e7da5fab81ee6.png",
           "kind": "generated"
         },
         {
@@ -28037,7 +28267,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635640.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635640.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635640.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-825b65069466",
@@ -28103,7 +28338,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635640/6cedf5c9243a3323.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635640/ded985b1a67f08a4.png",
           "kind": "generated"
         },
         {
@@ -28968,7 +29203,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635750.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635750.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635750.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-7471026eb726",
@@ -29034,7 +29274,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635750/a69e9059529c8139.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635750/39256c358e58fe4e.png",
           "kind": "generated"
         },
         {
@@ -29275,7 +29515,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635751.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635751.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635751.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-825b65069466",
@@ -29341,7 +29586,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635751/3cf7d1506ad900c3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635751/21210a01b1ccbe69.png",
           "kind": "generated"
         },
         {
@@ -29582,7 +29827,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635811.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635811.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635811.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-825b65069466",
@@ -29648,7 +29898,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635811/370ed7d7a8f5d70c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635811/d59ebf9ce320323e.png",
           "kind": "generated"
         },
         {
@@ -31137,7 +31387,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735948.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735948.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735948.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-ed4706fdd5f9",
@@ -31203,7 +31458,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735948/db2f9f8916f2e9a1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735948/16be0b4c00b8bd79.png",
           "kind": "generated"
         },
         {
@@ -33004,7 +33259,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636043.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636043.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636043.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-b1c38c0b2674",
@@ -33070,7 +33330,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636043/22b3d19544a2557b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636043/c9cf237bc1128fa0.png",
           "kind": "generated"
         },
         {
@@ -33311,7 +33571,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636063.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636063.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636063.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-b1c38c0b2674",
@@ -33377,7 +33642,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636063/a31c459378ee3adc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636063/05b5a7b4086ab579.png",
           "kind": "generated"
         },
         {
@@ -33930,7 +34195,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635638.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635638.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635638.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-ef6a8068e940",
@@ -33996,7 +34266,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635638/5802682edd43f6e1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635638/9950082a3cc8c42d.png",
           "kind": "generated"
         },
         {
@@ -35173,7 +35443,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635809.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635809.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635809.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-a612102c7eff",
@@ -35239,7 +35514,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635809/0b851c62062ec12d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635809/5723197384a65629.png",
           "kind": "generated"
         },
         {
@@ -35792,7 +36067,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635724.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635724.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635724.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-f75c53e64126",
@@ -35858,7 +36138,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635724/a1eedf8859712a3f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635724/c5d6b3c6d1c3b55b.png",
           "kind": "generated"
         },
         {
@@ -36099,7 +36379,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635637.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635637.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635637.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-f75c53e64126",
@@ -36165,7 +36450,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635637/14e82955b2359d38.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635637/d041d1a71c6df6d5.png",
           "kind": "generated"
         },
         {
@@ -36718,7 +37003,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735957.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735957.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735957.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-7aeb6ce449d5",
@@ -36784,7 +37074,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735957/9519770e08b263dc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735957/3aa093478104cd97.png",
           "kind": "generated"
         },
         {
@@ -37337,7 +37627,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636050.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636050.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636050.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-5ba0fb7e4d80",
@@ -37403,7 +37698,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636050/cbc69c3928b207e3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636050/0b3538e432105ef2.png",
           "kind": "generated"
         },
         {
@@ -37956,7 +38251,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636049.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636049.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636049.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-9418ead62a0f",
@@ -38022,7 +38322,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636049/625c51e9d68a40af.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636049/5077a71f531d9d35.png",
           "kind": "generated"
         },
         {
@@ -38575,7 +38875,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636069.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636069.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636069.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-9418ead62a0f",
@@ -38641,7 +38946,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636069/1c6a6d8df2c26887.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636069/aee41b73fc0fa5fc.png",
           "kind": "generated"
         },
         {
@@ -39194,7 +39499,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636067.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636067.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636067.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-33093952776a",
@@ -39260,7 +39570,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636067/70bf2ab1466aa9fa.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636067/bbfa239dc8e6b71a.png",
           "kind": "generated"
         },
         {
@@ -40125,7 +40435,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735918.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735918.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735918.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-99403fe6157b",
@@ -40191,7 +40506,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735918/65071a70dabdb2e7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735918/1896502bd7e11b45.png",
           "kind": "generated"
         },
         {
@@ -41056,7 +41371,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735937.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735937.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735937.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-407a2d2fdca0",
@@ -41122,7 +41442,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735937/bb211a72877276c8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735937/62a14fe802c487dc.png",
           "kind": "generated"
         },
         {
@@ -41363,7 +41683,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735917.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735917.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735917.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-407a2d2fdca0",
@@ -41429,7 +41754,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735917/19ddb928b616a7f6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735917/d1fff7cc83ce881d.png",
           "kind": "generated"
         },
         {
@@ -41982,7 +42307,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735926.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735926.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735926.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-f600d4d636f7",
@@ -42048,7 +42378,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735926/ff98449a98c10463.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735926/99ef974a50a4f509.png",
           "kind": "generated"
         },
         {
@@ -42601,7 +42931,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735916.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735916.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735916.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-f600d4d636f7",
@@ -42667,7 +43002,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735916/8d668400c991afbc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735916/4798bb5f4b020b12.png",
           "kind": "generated"
         },
         {
@@ -43220,7 +43555,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735920.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735920.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735920.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-0d870e9eb8c0",
@@ -43286,7 +43626,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735920/2b3d984c7220d399.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735920/b292d19b7e1e2bd4.png",
           "kind": "generated"
         },
         {
@@ -43527,7 +43867,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735949.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735949.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735949.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-0d870e9eb8c0",
@@ -43593,7 +43938,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735949/c3e1c4f2f576f7e7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735949/642aa010324d7eb6.png",
           "kind": "generated"
         },
         {
@@ -44770,7 +45115,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635839.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635839.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635839.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-b0c8779829a1",
@@ -44836,7 +45186,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635839/b42e5fef7e0f13e7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635839/d1ad190ca0e4ffc0.png",
           "kind": "generated"
         },
         {
@@ -45389,7 +45739,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635887.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635887.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635887.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-b0c8779829a1",
@@ -45455,7 +45810,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635887/90f537f2faa6ee88.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635887/2158731e5642c063.png",
           "kind": "generated"
         },
         {
@@ -46008,7 +46363,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635630.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635630.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635630.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -46074,7 +46434,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635630/c683cf1d1e9ddb5b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635630/2a4f23932917a452.png",
           "kind": "generated"
         },
         {
@@ -46315,7 +46675,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635719.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635719.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635719.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -46381,7 +46746,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635719/022fa05d16fe892f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635719/ba71a1a686ea8cdf.png",
           "kind": "generated"
         },
         {
@@ -47246,7 +47611,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635840.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635840.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635840.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -47312,7 +47682,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635840/8991ebfd07b93dc8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635840/fdab23c9f53e5af4.png",
           "kind": "generated"
         },
         {
@@ -47865,7 +48235,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635888.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635888.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635888.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -47931,7 +48306,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635888/88ce3f806723f3b8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635888/f202d138a16365ba.png",
           "kind": "generated"
         },
         {
@@ -48484,7 +48859,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635780.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635780.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635780.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793964350839",
+        "name": "Ипотека без ПВ",
+        "label": "Ипотека",
+        "text": "без ПЕРВОГО ВЗНОСА"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -48550,7 +48930,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635780/29a10d97f775f46d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635780/2d6a47e5ea4e943f.png",
           "kind": "generated"
         },
         {
