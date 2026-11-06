@@ -28,6 +28,33 @@
       "ends_at": "",
       "include_ids": [],
       "exclude_ids": []
+    },
+    {
+      "id": "promotion-1793964350839",
+      "name": "Ипотека без ПВ",
+      "enabled": true,
+      "label": "Ипотека",
+      "text": "без ПЕРВОГО ВЗНОСА",
+      "house_ids": [],
+      "rooms": [],
+      "floors": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "15",
+        "17",
+        "19"
+      ],
+      "apartment_numbers": [],
+      "area_min": null,
+      "area_max": null,
+      "starts_at": "",
+      "ends_at": "",
+      "include_ids": [],
+      "exclude_ids": []
     }
   ],
   "excluded_lot_ids": [],
