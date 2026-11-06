@@ -1,7 +1,7 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-11-06T04:34:08+03:00",
+  "checked_at": "2026-11-06T14:23:08+03:00",
   "source_ads": 158,
   "full_ads": 158,
   "excluded_ads": 0,
@@ -233,7 +233,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236193.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236193.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236193.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -299,7 +304,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236193/03ae7e6c10ab3418.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236193/e00e3c87c45abcb5.png",
           "kind": "generated"
         },
         {
@@ -867,7 +872,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236203.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236203.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236203.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -933,7 +943,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236203/c2dc1ca839721470.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236203/571c9cb6164b0daf.png",
           "kind": "generated"
         },
         {
@@ -1184,7 +1194,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236195.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236195.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236195.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -1250,7 +1265,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236195/6917b5217f5f4ee1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236195/a06ef1098d6c14c4.png",
           "kind": "generated"
         },
         {
@@ -1794,7 +1809,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236205.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236205.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236205.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -1860,7 +1880,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236205/eed940d21a1d89f6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236205/08bd848e71840f72.png",
           "kind": "generated"
         },
         {
@@ -2721,7 +2741,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236184.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236184.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236184.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -2787,7 +2812,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236184/a0220a37b4062065.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236184/7af19a52ef4df766.png",
           "kind": "generated"
         },
         {
@@ -3343,7 +3368,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036113.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036113.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036113.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-d88d627d28df",
@@ -3409,7 +3439,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036113/018b194076a9be0d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036113/cc296edad32ab3c9.png",
           "kind": "generated"
         },
         {
@@ -3953,7 +3983,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036123.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036123.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036123.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-d88d627d28df",
@@ -4019,7 +4054,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036123/534076c7db51d014.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036123/db3d8e0b92229da4.png",
           "kind": "generated"
         },
         {
@@ -4563,7 +4598,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036103.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036103.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036103.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-57702fd6a5f0",
@@ -4629,7 +4669,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036103/c206abd8dfb000b1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036103/5dad37716f22ad7f.png",
           "kind": "generated"
         },
         {
@@ -4868,7 +4908,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036111.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036111.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036111.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c9d11af680ef",
@@ -4934,7 +4979,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036111/769ad8d0129d2844.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036111/00c25de735b98ed7.png",
           "kind": "generated"
         },
         {
@@ -5478,7 +5523,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036121.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036121.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036121.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c9d11af680ef",
@@ -5544,7 +5594,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036121/c7e1e2630e86ffa8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036121/fdb0f357d7730e9d.png",
           "kind": "generated"
         },
         {
@@ -7013,7 +7063,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236223.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236223.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236223.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -7079,7 +7134,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236223/8fed228e46bd928d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236223/550c0d2bbd331356.png",
           "kind": "generated"
         },
         {
@@ -7643,7 +7698,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236233.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236233.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236233.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -7709,7 +7769,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236233/0b2f2c266174c5ec.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236233/ffcc41098dfaa48e.png",
           "kind": "generated"
         },
         {
@@ -8273,7 +8333,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236213.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236213.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236213.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-55d5cab1fcba",
@@ -8339,7 +8404,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236213/6655cc1206dea9f1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236213/d75399f59d90df6a.png",
           "kind": "generated"
         },
         {
@@ -8590,7 +8655,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236225.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236225.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236225.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -8656,7 +8726,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236225/ee0978bea5725995.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236225/82634963e374f8c7.png",
           "kind": "generated"
         },
         {
@@ -9200,7 +9270,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236235.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236235.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236235.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -9266,7 +9341,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236235/50bc0e0584388b66.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236235/594d4838c5cfbd33.png",
           "kind": "generated"
         },
         {
@@ -10115,7 +10190,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236215.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236215.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236215.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-c2b1f5208a19",
@@ -10181,7 +10261,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236215/06e2cabff58e0c0d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236215/52db96451be80ccd.png",
           "kind": "generated"
         },
         {
@@ -10420,7 +10500,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236194.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236194.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236194.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -10486,7 +10571,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236194/36fcce868134d8d7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236194/3ec47d0ccf128d7f.png",
           "kind": "generated"
         },
         {
@@ -11030,7 +11115,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236204.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236204.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236204.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -11096,7 +11186,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236204/88e8b3bcc00c2b7a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236204/b0d2e5a34ba0a2a3.png",
           "kind": "generated"
         },
         {
@@ -11640,7 +11730,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236185.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236185.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236185.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -11706,7 +11801,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236185/82ea1240d8c34ba4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236185/2c1684703d274b6b.png",
           "kind": "generated"
         },
         {
@@ -12250,7 +12345,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036112.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036112.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036112.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-dfc885cdf6d0",
@@ -12316,7 +12416,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036112/069be86d83314550.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036112/2ffc7e8744af4f87.png",
           "kind": "generated"
         },
         {
@@ -12860,7 +12960,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036122.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036122.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036122.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-dfc885cdf6d0",
@@ -12926,7 +13031,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036122/f410aca12f27f0d0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036122/8b27b996b32f497e.png",
           "kind": "generated"
         },
         {
@@ -13470,7 +13575,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036102.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036102.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036102.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-06c82eda581f",
@@ -13536,7 +13646,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036102/7b05a525350fd0a2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036102/e9f3c6dfe2ef3923.png",
           "kind": "generated"
         },
         {
@@ -14385,7 +14495,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236224.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236224.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236224.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -14451,7 +14566,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236224/57d24c990bc35fd9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236224/844cd35abb087953.png",
           "kind": "generated"
         },
         {
@@ -14995,7 +15110,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236234.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236234.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236234.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-80cc12dd56ce",
@@ -15061,7 +15181,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236234/b699871aa722ff70.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236234/e0c0e3309a355c1d.png",
           "kind": "generated"
         },
         {
@@ -15605,7 +15725,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036104.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036104.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036104.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-50be1af086ad",
@@ -15671,7 +15796,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036104/84f188025d6b7565.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036104/2638661291ebd436.png",
           "kind": "generated"
         },
         {
@@ -15910,7 +16035,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236186.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236186.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236186.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-b48d35743196",
@@ -15976,7 +16106,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236186/9322808c03b7cd2e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236186/f5c77493d2bb11cc.png",
           "kind": "generated"
         },
         {
@@ -16215,7 +16345,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036101.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036101.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036101.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-d7b70c3353fa",
@@ -16281,7 +16416,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036101/147cd4af9380935f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036101/949c880fe6d500f3.png",
           "kind": "generated"
         },
         {
@@ -16520,7 +16655,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036110.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036110.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036110.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6fc845211979",
@@ -16586,7 +16726,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036110/d645762daf949aaf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036110/88f2267cb3c4e685.png",
           "kind": "generated"
         },
         {
@@ -17130,7 +17270,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036120.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036120.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036120.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6fc845211979",
@@ -17196,7 +17341,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036120/a251cc455a017224.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036120/f33cf5cb6085c552.png",
           "kind": "generated"
         },
         {
@@ -18045,7 +18190,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236196.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236196.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236196.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -18111,7 +18261,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236196/22d0fdd684364a4d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236196/ad1313e4f8de4af8.png",
           "kind": "generated"
         },
         {
@@ -18655,7 +18805,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236206.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236206.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236206.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -18721,7 +18876,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236206/9a42486a4f1c2e04.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236206/2afe8cf8ba6aed0b.png",
           "kind": "generated"
         },
         {
@@ -19265,7 +19420,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036114.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036114.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036114.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-803d685dbf63",
@@ -19331,7 +19491,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036114/f519e7d5c2f7a719.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036114/7bfbd53223a0123c.png",
           "kind": "generated"
         },
         {
@@ -19570,7 +19730,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036124.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036124.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036124.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-803d685dbf63",
@@ -19636,7 +19801,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036124/0f9f3967bce2a1c9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036124/b53bb4471b52569f.png",
           "kind": "generated"
         },
         {
@@ -20790,7 +20955,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236192.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236192.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236192.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -20856,7 +21026,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236192/3e0de4fabe738e94.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236192/5ea8ac020d0460f4.png",
           "kind": "generated"
         },
         {
@@ -21400,7 +21570,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236202.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236202.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236202.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -21466,7 +21641,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236202/05c8cee5b550106d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236202/c0d3360a5603b92c.png",
           "kind": "generated"
         },
         {
@@ -22010,7 +22185,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236183.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236183.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236183.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -22076,7 +22256,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236183/fcc0e4e4def6a183.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236183/93a5f219568f6f4e.png",
           "kind": "generated"
         },
         {
@@ -22925,7 +23105,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236216.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236216.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236216.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -22991,7 +23176,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236216/287d4650af0235b2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236216/fae5f27586d5a467.png",
           "kind": "generated"
         },
         {
@@ -23230,7 +23415,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236226.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236226.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236226.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -23296,7 +23486,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236226/597564b4bb248ff5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236226/83dc6e4e802cfe8f.png",
           "kind": "generated"
         },
         {
@@ -23840,7 +24030,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236236.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236236.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236236.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-28859eca7319",
@@ -23906,7 +24101,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236236/9b5f95f4f75a5947.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236236/2b956930cecb4c3f.png",
           "kind": "generated"
         },
         {
@@ -24450,7 +24645,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236222.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236222.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236222.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -24516,7 +24716,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236222/2eb14902bb86c1cd.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236222/06466656b1d09db5.png",
           "kind": "generated"
         },
         {
@@ -25060,7 +25260,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236232.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236232.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236232.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -25126,7 +25331,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236232/7e860c4c531fdb9b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236232/5d8a1d541ded38a7.png",
           "kind": "generated"
         },
         {
@@ -25365,12 +25570,7 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236237.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236237.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236237.png",
-      "promotion": {
-        "rule_id": "promotion-1792658401983",
-        "name": "Тестовая",
-        "label": "Скидка",
-        "text": "−10 000 ₽/м²"
-      },
+      "promotion": null,
       "source_images": [
         {
           "id": "src-6c86bba17370",
@@ -25436,7 +25636,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236237/0b86d284ef5829ac.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236237/0d2d2aefe3084ebe.png",
           "kind": "generated"
         },
         {
@@ -26594,7 +26794,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635758.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635758.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635758.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-f6b21ea504d2",
@@ -26660,7 +26865,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635758/1416d19440e2ead0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635758/b0cd70592528becd.png",
           "kind": "generated"
         },
         {
@@ -26901,7 +27106,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635861.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635861.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635861.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6322d3730259",
@@ -26967,7 +27177,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635861/70e2e0cd2472efeb.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635861/e560665a2e410855.png",
           "kind": "generated"
         },
         {
@@ -27208,7 +27418,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635909.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635909.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635909.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-6322d3730259",
@@ -27274,7 +27489,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635909/e009b43c40bfbdad.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635909/92fb872367adeb90.png",
           "kind": "generated"
         },
         {
@@ -28129,7 +28344,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635906.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635906.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635906.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-7471026eb726",
@@ -28195,7 +28415,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635906/96cd74dc3add30b4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635906/e57895f1383bd788.png",
           "kind": "generated"
         },
         {
@@ -28436,7 +28656,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635907.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635907.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635907.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-825b65069466",
@@ -28502,7 +28727,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635907/441f9c867213fd01.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635907/c866606e2eaaf364.png",
           "kind": "generated"
         },
         {
@@ -29664,7 +29889,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636036.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636036.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636036.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-d8279cdb6d2b",
@@ -29730,7 +29960,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636036/11c3e42340857504.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636036/b9993ba732477d55.png",
           "kind": "generated"
         },
         {
@@ -29971,7 +30201,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735914.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735914.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735914.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-ed4706fdd5f9",
@@ -30037,7 +30272,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735914/35d51163dc019ef4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735914/e0090b0a018d14dd.png",
           "kind": "generated"
         },
         {
@@ -30278,7 +30513,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636031.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636031.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636031.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-9dec555b5cf5",
@@ -30344,7 +30584,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636031/75b5cfdcce8939d2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636031/15d14babc20c9093.png",
           "kind": "generated"
         },
         {
@@ -30585,7 +30825,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735953.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735953.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735953.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-ed4706fdd5f9",
@@ -30651,7 +30896,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735953/d847a2bdd54978af.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735953/1cf3fb053ee98125.png",
           "kind": "generated"
         },
         {
@@ -31199,7 +31444,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636034.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636034.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636034.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-e4fc58abdec5",
@@ -31265,7 +31515,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636034/fc4fb5aea6b0f9f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636034/460e4afaeb30c599.png",
           "kind": "generated"
         },
         {
@@ -31506,7 +31756,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636035.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636035.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636035.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-2f155cb1c958",
@@ -31572,7 +31827,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636035/41eb9616f4f43edb.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636035/338c46a564f6c380.png",
           "kind": "generated"
         },
         {
@@ -31813,7 +32068,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635908.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635908.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635908.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-cb3d1afa41c9",
@@ -31879,7 +32139,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635908/5ccbee4e75cbc573.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635908/9158040b392700e7.png",
           "kind": "generated"
         },
         {
@@ -32120,7 +32380,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635764.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635764.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635764.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-cb3d1afa41c9",
@@ -32186,7 +32451,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635764/9fec974195abbba6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635764/044249ca911ea1cf.png",
           "kind": "generated"
         },
         {
@@ -32427,7 +32692,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636033.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636033.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636033.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-b1c38c0b2674",
@@ -32493,7 +32763,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636033/51c3d67f12ba89f6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636033/8df721de8abf1980.png",
           "kind": "generated"
         },
         {
@@ -33348,7 +33618,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636073.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636073.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636073.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-b1c38c0b2674",
@@ -33414,7 +33689,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636073/520a680bdd7d2cfe.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636073/737921a8a4124ea4.png",
           "kind": "generated"
         },
         {
@@ -33962,7 +34237,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635737.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635737.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635737.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-ef6a8068e940",
@@ -34028,7 +34308,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635737/477f8a902e9727f0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635737/6f3a772bb64ab0aa.png",
           "kind": "generated"
         },
         {
@@ -34269,7 +34549,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635857.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635857.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635857.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-a612102c7eff",
@@ -34335,7 +34620,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635857/21e707d332df4ef0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635857/6ad5ce72fc9dcbe4.png",
           "kind": "generated"
         },
         {
@@ -34576,7 +34861,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635760.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635760.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635760.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-a612102c7eff",
@@ -34642,7 +34932,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635760/fcf03e166ea49503.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635760/102f4bbace299fb5.png",
           "kind": "generated"
         },
         {
@@ -35190,7 +35480,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635661.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635661.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635661.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-f75c53e64126",
@@ -35256,7 +35551,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635661/c714669bb02b536d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635661/46edf4def3ccea8e.png",
           "kind": "generated"
         },
         {
@@ -36111,7 +36406,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635736.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635736.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635736.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-f75c53e64126",
@@ -36177,7 +36477,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635736/2f774f79d9bacdaf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635736/58571a6ff53f2dbf.png",
           "kind": "generated"
         },
         {
@@ -36725,7 +37025,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735962.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735962.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735962.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-7aeb6ce449d5",
@@ -36791,7 +37096,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735962/5aaddcb90705c567.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735962/3fe342c1409a86a5.png",
           "kind": "generated"
         },
         {
@@ -37339,7 +37644,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636038.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636038.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636038.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-880bb9e473e7",
@@ -37405,7 +37715,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636038/3a9a3d0caae18626.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636038/cb828b9bd7d0af32.png",
           "kind": "generated"
         },
         {
@@ -37953,7 +38263,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636059.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636059.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636059.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-9418ead62a0f",
@@ -38019,7 +38334,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636059/bf337d3703e8b447.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636059/c39211053d013bcb.png",
           "kind": "generated"
         },
         {
@@ -38567,7 +38882,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636037.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636037.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636037.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-33093952776a",
@@ -38633,7 +38953,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636037/dde41c20fe6871c0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636037/17c95ea8b0cc38e1.png",
           "kind": "generated"
         },
         {
@@ -39181,7 +39501,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636077.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636077.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636077.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-33093952776a",
@@ -39247,7 +39572,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636077/dcbeab4b49f865a6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636077/a4cf1a518833d4ab.png",
           "kind": "generated"
         },
         {
@@ -39488,7 +39813,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735913.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735913.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735913.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-99403fe6157b",
@@ -39554,7 +39884,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735913/f0bd1e9878f1541d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735913/898d1778aab25b70.png",
           "kind": "generated"
         },
         {
@@ -40102,7 +40432,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735922.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735922.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735922.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-407a2d2fdca0",
@@ -40168,7 +40503,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735922/cfda3c52dd808afa.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735922/ce19f7d006f9a604.png",
           "kind": "generated"
         },
         {
@@ -40409,7 +40744,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735932.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735932.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735932.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-407a2d2fdca0",
@@ -40475,7 +40815,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735932/f567b80e4529f9b9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735932/ea61add2b6666fa6.png",
           "kind": "generated"
         },
         {
@@ -41330,7 +41670,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735921.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735921.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735921.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-f600d4d636f7",
@@ -41396,7 +41741,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735921/307d5232a8164c3d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735921/6ed59ff94d5471dd.png",
           "kind": "generated"
         },
         {
@@ -41944,7 +42289,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735931.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735931.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735931.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-f600d4d636f7",
@@ -42010,7 +42360,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735931/52c769fb18586d81.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735931/fba72c541c1c1005.png",
           "kind": "generated"
         },
         {
@@ -42558,7 +42908,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735915.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735915.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735915.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-0d870e9eb8c0",
@@ -42624,7 +42979,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735915/d701cc0f5a102605.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735915/acd4a0a863e1172d.png",
           "kind": "generated"
         },
         {
@@ -43479,7 +43834,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735945.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735945.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735945.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-0d870e9eb8c0",
@@ -43545,7 +43905,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735945/a80ba3c780f57d34.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735945/1cbcc88229418227.png",
           "kind": "generated"
         },
         {
@@ -43786,7 +44146,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735964.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735964.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735964.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-0d870e9eb8c0",
@@ -43852,7 +44217,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735964/0e7ebf71bbc1a2db.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735964/eb3a19a2ced7e15a.png",
           "kind": "generated"
         },
         {
@@ -44093,7 +44458,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735912.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735912.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735912.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-d327ac819db2",
@@ -44159,7 +44529,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735912/954eb760acd48615.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735912/00cdd41cf6ccda94.png",
           "kind": "generated"
         },
         {
@@ -44707,7 +45077,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635875.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635875.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635875.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-b0c8779829a1",
@@ -44773,7 +45148,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635875/71a1453de9bf593d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635875/34166bb107a95da1.png",
           "kind": "generated"
         },
         {
@@ -45321,7 +45696,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635791.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635791.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635791.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-b0c8779829a1",
@@ -45387,7 +45767,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635791/28e53223db89956f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635791/02c8537ca4ab98f0.png",
           "kind": "generated"
         },
         {
@@ -46242,7 +46622,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635832.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635832.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635832.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-44abcdfd3e08",
@@ -46308,7 +46693,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635832/6319918eb66b700a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635832/b8202ae84b740f97.png",
           "kind": "generated"
         },
         {
@@ -46549,7 +46934,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635828.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635828.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635828.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -46615,7 +47005,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635828/03dfffbe6355ad3f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635828/85502405776eec90.png",
           "kind": "generated"
         },
         {
@@ -47163,7 +47553,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635876.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635876.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635876.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -47229,7 +47624,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635876/91d100d988556c3b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635876/a833fe5f6f9a3667.png",
           "kind": "generated"
         },
         {
@@ -47777,7 +48172,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635900.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635900.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635900.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -47843,7 +48243,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635900/ca8f79d84cda20b1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635900/f9e95ff660875f28.png",
           "kind": "generated"
         },
         {
@@ -48391,7 +48791,12 @@
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635792.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635792.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635792.png",
-      "promotion": null,
+      "promotion": {
+        "rule_id": "promotion-1793962205682",
+        "name": "Семейная ипотека 0,6%",
+        "label": "Семейная ипотека",
+        "text": "0,6%"
+      },
       "source_images": [
         {
           "id": "src-cb0c7a3d88e5",
@@ -48457,7 +48862,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635792/cdf1ae0fe312716f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635792/d97034f8de6793d9.png",
           "kind": "generated"
         },
         {
