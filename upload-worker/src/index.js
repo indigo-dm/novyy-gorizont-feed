@@ -33,6 +33,24 @@ function bytesToBase64(bytes) {
   return btoa(binary);
 }
 
+const MAX_ISSUE_SETTINGS_CHARS = 58000;
+const MAX_SETTINGS_JSON_CHARS = 2000000;
+
+async function settingsIssueBlock(payload, oversizedMessage = 'Настройки слишком объёмные для автоматической обработки.') {
+  const formatted = JSON.stringify(payload, null, 2);
+  if (formatted.length <= MAX_ISSUE_SETTINGS_CHARS) {
+    return 'FEED_SETTINGS_JSON_START\n' + formatted + '\nFEED_SETTINGS_JSON_END';
+  }
+  const compact = JSON.stringify(payload);
+  if (compact.length > MAX_SETTINGS_JSON_CHARS) throw new Response(oversizedMessage, { status: 413 });
+  const compressedStream = new Blob([compact]).stream().pipeThrough(new CompressionStream('gzip'));
+  const compressed = new Uint8Array(await new Response(compressedStream).arrayBuffer());
+  const encoded = bytesToBase64(compressed);
+  const block = 'FEED_SETTINGS_GZIP_BASE64_START\n' + encoded + '\nFEED_SETTINGS_GZIP_BASE64_END';
+  if (block.length > MAX_ISSUE_SETTINGS_CHARS) throw new Response(oversizedMessage, { status: 413 });
+  return block;
+}
+
 function encodedPath(path) {
   return String(path || '').split('/').map(encodeURIComponent).join('/');
 }
@@ -581,10 +599,15 @@ async function migrateImageLibrary(request, env, origin) {
     settings.project = project;
     settings.version = Number(settings.version || 4);
     settings.pending_library_deletions = mappings.map((item) => ({ id: item.old_id, path: item.old_path }));
-    const serialized = JSON.stringify(settings, null, 2);
-    if (serialized.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической миграции.' }, 413, origin, env);
+    let settingsBlock;
+    try {
+      settingsBlock = await settingsIssueBlock(settings, 'Настройки слишком объёмные для автоматической миграции.');
+    } catch (error) {
+      if (error instanceof Response && error.status === 413) return json({ error: await error.text() }, 413, origin, env);
+      throw error;
+    }
     const issueBody = 'Запрос на перенос изображений в общую библиотеку объекта.\n\n' +
-      'FEED_SETTINGS_JSON_START\n' + serialized + '\nFEED_SETTINGS_JSON_END\n\n' +
+      settingsBlock + '\n\n' +
       'Запрос создан Feed Studio автоматически. Ручное подтверждение не требуется.';
     const issue = await github(env, '/issues', {
       method: 'POST',
@@ -1097,10 +1120,15 @@ async function createSettingsRequest(request, env, origin) {
   if (!payload || ![2, 3, 4].includes(payload.version) || !Array.isArray(payload.rules) || !Array.isArray(payload.excluded_lot_ids || []) || typeof payload.image_settings !== 'object' || typeof payload.parameter_settings !== 'object' || (payload.version >= 3 && typeof payload.material_settings !== 'object')) {
     return json({ error: 'Некорректный формат настроек.' }, 400, origin, env);
   }
-  const settings = JSON.stringify(payload, null, 2);
-  if (settings.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической обработки.' }, 413, origin, env);
+  let settingsBlock;
+  try {
+    settingsBlock = await settingsIssueBlock(payload);
+  } catch (error) {
+    if (error instanceof Response && error.status === 413) return json({ error: await error.text() }, 413, origin, env);
+    throw error;
+  }
   const body = 'Запрос на автоматическое обновление настроек фида.\n\n' +
-    'FEED_SETTINGS_JSON_START\n' + settings + '\nFEED_SETTINGS_JSON_END\n\n' +
+    settingsBlock + '\n\n' +
     'Запрос создан Feed Studio автоматически. Ручное подтверждение не требуется.';
   const issue = await github(env, '/issues', {
     method: 'POST',
@@ -1161,7 +1189,13 @@ async function createFeedValidationRequest(request, env, origin) {
   }
   if (!validSettingsRequest(payload)) return json({ error: 'Некорректный формат настроек.' }, 400, origin, env);
   const settings = JSON.stringify(payload, null, 2);
-  if (settings.length > 58000) return json({ error: 'Настройки слишком объёмные для автоматической обработки.' }, 413, origin, env);
+  let settingsBlock;
+  try {
+    settingsBlock = await settingsIssueBlock(payload);
+  } catch (error) {
+    if (error instanceof Response && error.status === 413) return json({ error: await error.text() }, 413, origin, env);
+    throw error;
+  }
 
   const previousObject = await env.FEED_STORAGE.get(validationLatestKey(project));
   let previousRequestNumber = '';
@@ -1178,7 +1212,7 @@ async function createFeedValidationRequest(request, env, origin) {
   const requestedAt = new Date().toISOString();
   const meta = JSON.stringify({ settings_hash: settingsHash, requested_at: requestedAt }, null, 2);
   const body = 'Запрос на проверку исходящего XML официальным валидатором Авито. Публикация фида не требуется.\n\n' +
-    'FEED_SETTINGS_JSON_START\n' + settings + '\nFEED_SETTINGS_JSON_END\n\n' +
+    settingsBlock + '\n\n' +
     'FEED_VALIDATION_META_START\n' + meta + '\nFEED_VALIDATION_META_END\n\n' +
     'Запрос создан Feed Studio автоматически.';
   const issue = await github(env, '/issues', {

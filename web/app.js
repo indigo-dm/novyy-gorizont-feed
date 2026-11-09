@@ -1352,7 +1352,7 @@
   function validateSettings() {
     if (state.rules.length > 10) return 'Допускается не более 10 правил.';
     if (state.imageSettings.bulk_rules.length > 30) return 'Допускается не более 30 массовых правил изображений.';
-    if (state.parameterSettings.bulk_rules.length > 30) return 'Допускается не более 30 массовых правил параметров.';
+    if (state.parameterSettings.bulk_rules.length > 250) return 'Допускается не более 250 массовых правил параметров.';
     for (var i = 0; i < state.rules.length; i += 1) {
       var rule = state.rules[i];
       if (!rule.name.trim()) return 'У правила ' + (i + 1) + ' нет названия.';

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import base64
+import gzip
 import json
 import os
 import re
@@ -371,8 +373,8 @@ def parameter_settings(value: object, allowed_houses: set[str]) -> dict[str, obj
             raise ValueError("Invalid parameter lot id")
         lots[lot_id] = settings_map(values, f"parameter_settings.lot_values.{lot_id}")
     raw_rules = source.get("bulk_rules", [])
-    if not isinstance(raw_rules, list) or len(raw_rules) > 30:
-        raise ValueError("parameter_settings.bulk_rules must be a list with no more than 30 items")
+    if not isinstance(raw_rules, list) or len(raw_rules) > 250:
+        raise ValueError("parameter_settings.bulk_rules must be a list with no more than 250 items")
     rules = []
     for index, raw in enumerate(raw_rules, start=1):
         if not isinstance(raw, dict):
@@ -717,17 +719,33 @@ def validate(
     }
 
 
-def main() -> None:
-    body = os.environ.get("ISSUE_BODY", "")
+def issue_payload(body: str) -> dict[str, object]:
     match = re.search(
         r"FEED_SETTINGS_JSON_START\s*(\{.*?\})\s*FEED_SETTINGS_JSON_END",
         body,
         flags=re.DOTALL,
     )
-    if not match:
-        raise SystemExit("Settings JSON markers were not found in the issue body")
+    if match:
+        return json.loads(match.group(1))
+    compressed_match = re.search(
+        r"FEED_SETTINGS_GZIP_BASE64_START\s*([A-Za-z0-9+/=\s]+?)\s*FEED_SETTINGS_GZIP_BASE64_END",
+        body,
+        flags=re.DOTALL,
+    )
+    if compressed_match:
+        encoded = re.sub(r"\s+", "", compressed_match.group(1))
+        try:
+            decoded = gzip.decompress(base64.b64decode(encoded, validate=True)).decode("utf-8")
+        except (ValueError, OSError, UnicodeDecodeError) as error:
+            raise ValueError("Compressed feed settings are invalid") from error
+        return json.loads(decoded)
+    raise ValueError("Settings JSON markers were not found in the issue body")
+
+
+def main() -> None:
+    body = os.environ.get("ISSUE_BODY", "")
     try:
-        payload = json.loads(match.group(1))
+        payload = issue_payload(body)
         registry = json.loads((ROOT / "projects.json").read_text(encoding="utf-8"))
         project_slug = str(payload.get("project") or registry["default_project"])
         project = next((item for item in registry["projects"] if item.get("slug") == project_slug), None)
