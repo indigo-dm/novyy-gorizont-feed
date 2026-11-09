@@ -6036,7 +6036,7 @@
     <CompanyName>Орион</CompanyName>
   </Ad>
   <Ad>
-    <Id>407635828</Id>
+    <Id>407635840</Id>
     <AdStatus>Free</AdStatus>
     <ContactPhone>+7 (863) 333-26-38</ContactPhone>
     <ContactMethod>По телефону</ContactMethod>
@@ -6056,13 +6056,13 @@
     <Price>14037370</Price>
     <Rooms>3</Rooms>
     <Square>89.41</Square>
-    <Floor>14</Floor>
+    <Floor>15</Floor>
     <Floors>20</Floors>
     <HouseType>Монолитный</HouseType>
     <MarketType>Новостройка</MarketType>
     <PropertyRights>Застройщик</PropertyRights>
     <Images>
-      <Image url="https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635828/85502405776eec90.png" />
+      <Image url="https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635840/fdab23c9f53e5af4.png" />
       <Image url="https://maximum.abc-dev.ru/storage/2025/07/25/3bdce5231da4d6dc69a9fd2a39237a11b75ff0e5.jpg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg" />
       <Image url="https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg" />
@@ -6099,7 +6099,7 @@
       <Image url="https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b999c97931ed5d3bde11.jpg" />
     </Images>
     <Address>Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2</Address>
-    <ApartmentNumber>141</ApartmentNumber>
+    <ApartmentNumber>152</ApartmentNumber>
     <Status>Квартира</Status>
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
