@@ -1,7 +1,7 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-11-10T06:36:49+03:00",
+  "checked_at": "2026-11-10T20:49:49+03:00",
   "source_ads": 296,
   "full_ads": 296,
   "excluded_ads": 0,
@@ -9,6 +9,7 @@
   "source_tag_counts": {
     "AdStatus": 296,
     "Address": 296,
+    "BuiltYear": 145,
     "Category": 296,
     "ContactMethod": 296,
     "ContactPhone": 296,
@@ -330,6 +331,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -373,6 +375,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -490,6 +493,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -533,6 +537,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -650,6 +655,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -693,6 +699,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -810,6 +817,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -853,6 +861,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -970,6 +979,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1013,6 +1023,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -1130,6 +1141,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1173,6 +1185,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -1290,6 +1303,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1333,6 +1347,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -1450,6 +1465,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1493,6 +1509,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -1610,6 +1627,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1653,6 +1671,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -1770,6 +1789,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1813,6 +1833,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -1930,6 +1951,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -1973,6 +1995,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -2090,6 +2113,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2133,6 +2157,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -2250,6 +2275,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2293,6 +2319,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -2410,6 +2437,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2453,6 +2481,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -2570,6 +2599,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2613,6 +2643,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -2730,6 +2761,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2773,6 +2805,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -2890,6 +2923,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -2933,6 +2967,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -3050,6 +3085,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -3093,6 +3129,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -3210,6 +3247,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -3253,6 +3291,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -3370,6 +3409,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -3413,6 +3453,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -3530,6 +3571,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -3573,6 +3615,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -3690,6 +3733,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -3733,6 +3777,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -3850,6 +3895,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -3893,6 +3939,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4010,6 +4057,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -4053,6 +4101,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4170,6 +4219,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -4213,6 +4263,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4330,6 +4381,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -4373,6 +4425,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4490,6 +4543,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -4533,6 +4587,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4650,6 +4705,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -4693,6 +4749,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4810,6 +4867,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -4853,6 +4911,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -4970,6 +5029,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5013,6 +5073,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -5130,6 +5191,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5173,6 +5235,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -5290,6 +5353,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5333,6 +5397,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -5450,6 +5515,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5493,6 +5559,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -5610,6 +5677,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5653,6 +5721,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -5770,6 +5839,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5813,6 +5883,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -5930,6 +6001,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -5973,6 +6045,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -6090,6 +6163,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -6133,6 +6207,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -6250,6 +6325,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -6293,6 +6369,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -6410,6 +6487,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -6453,6 +6531,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -6570,6 +6649,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -6613,6 +6693,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -6730,6 +6811,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -6773,6 +6855,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -6890,6 +6973,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -6933,6 +7017,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -7050,6 +7135,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -7093,6 +7179,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -7210,6 +7297,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -7253,6 +7341,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -7370,6 +7459,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -7413,6 +7503,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -7530,6 +7621,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -7573,6 +7665,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -7690,6 +7783,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -7733,6 +7827,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -7850,6 +7945,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -7893,6 +7989,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -8010,6 +8107,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -8053,6 +8151,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -8170,6 +8269,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -8213,6 +8313,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -8330,6 +8431,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -8373,6 +8475,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -8490,6 +8593,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -8533,6 +8637,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -8650,6 +8755,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -8693,6 +8799,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "Floors": "10",
         "HouseType": "Монолитно-кирпичный",
         "AdStatus": "Free"
@@ -8808,6 +8915,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -8851,6 +8959,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -8968,6 +9077,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9011,6 +9121,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -9128,6 +9239,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9171,6 +9283,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276816",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "10",
@@ -9288,6 +9401,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9331,6 +9445,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -9448,6 +9563,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9491,6 +9607,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -9608,6 +9725,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9651,6 +9769,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -9768,6 +9887,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9811,6 +9931,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -9928,6 +10049,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -9971,6 +10093,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -10088,6 +10211,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -10131,6 +10255,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -10248,6 +10373,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -10291,6 +10417,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -10408,6 +10535,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -10451,6 +10579,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -10568,6 +10697,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -10611,6 +10741,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -10728,6 +10859,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -10771,6 +10903,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -10888,6 +11021,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -10931,6 +11065,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -11048,6 +11183,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -11091,6 +11227,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -11208,6 +11345,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -11251,6 +11389,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -11368,6 +11507,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -11411,6 +11551,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -11528,6 +11669,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -11571,6 +11713,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -11688,6 +11831,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -11731,6 +11875,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -11848,6 +11993,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -11891,6 +12037,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12008,6 +12155,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -12051,6 +12199,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12168,6 +12317,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -12211,6 +12361,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12328,6 +12479,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -12371,6 +12523,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12488,6 +12641,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -12531,6 +12685,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12648,6 +12803,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -12691,6 +12847,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12808,6 +12965,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -12851,6 +13009,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -12968,6 +13127,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13011,6 +13171,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -13128,6 +13289,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13171,6 +13333,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -13288,6 +13451,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13331,6 +13495,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -13448,6 +13613,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13491,6 +13657,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -13608,6 +13775,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13651,6 +13819,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -13768,6 +13937,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13811,6 +13981,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -13928,6 +14099,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -13971,6 +14143,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -14088,6 +14261,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -14131,6 +14305,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -14248,6 +14423,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -14291,6 +14467,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -14408,6 +14585,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -14451,6 +14629,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -14568,6 +14747,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -14611,6 +14791,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -14728,6 +14909,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -14771,6 +14953,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -14888,6 +15071,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -14931,6 +15115,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -15048,6 +15233,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -15091,6 +15277,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -15208,6 +15395,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -15251,6 +15439,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -15368,6 +15557,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -15411,6 +15601,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -15528,6 +15719,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -15571,6 +15763,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -15688,6 +15881,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -15731,6 +15925,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -15848,6 +16043,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -15891,6 +16087,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16008,6 +16205,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -16051,6 +16249,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16168,6 +16367,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -16211,6 +16411,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16328,6 +16529,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -16371,6 +16573,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16488,6 +16691,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -16531,6 +16735,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16648,6 +16853,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -16691,6 +16897,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16808,6 +17015,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -16851,6 +17059,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -16968,6 +17177,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17011,6 +17221,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "1",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -17128,6 +17339,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17171,6 +17383,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -17288,6 +17501,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17331,6 +17545,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -17448,6 +17663,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17491,6 +17707,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -17608,6 +17825,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17651,6 +17869,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -17768,6 +17987,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17811,6 +18031,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -17928,6 +18149,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -17971,6 +18193,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -18088,6 +18311,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -18131,6 +18355,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -18248,6 +18473,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -18291,6 +18517,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -18408,6 +18635,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -18451,6 +18679,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "8276823",
         "Rooms": "2",
+        "BuiltYear": "2025",
         "KitchenSpace": "0",
         "LivingSpace": "0",
         "Floors": "9",
@@ -42436,6 +42665,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -42474,6 +42704,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -42599,6 +42830,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -42637,6 +42869,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -42762,6 +42995,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -42800,6 +43034,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -42925,6 +43160,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -42963,6 +43199,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -43088,6 +43325,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -43126,6 +43364,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -43251,6 +43490,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -43289,6 +43529,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -43414,6 +43655,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -43452,6 +43694,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -43577,6 +43820,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -43615,6 +43859,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -43740,6 +43985,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -43778,6 +44024,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -43903,6 +44150,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -43941,6 +44189,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -44066,6 +44315,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -44104,6 +44354,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -44229,6 +44480,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -44267,6 +44519,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -44392,6 +44645,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -44430,6 +44684,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -44555,6 +44810,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -44593,6 +44849,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -44718,6 +44975,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -44756,6 +45014,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "1",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -44881,6 +45140,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -44919,6 +45179,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -45044,6 +45305,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -45082,6 +45344,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -45207,6 +45470,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -45245,6 +45509,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -45370,6 +45635,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -45408,6 +45674,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -45533,6 +45800,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -45571,6 +45839,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -45696,6 +45965,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -45734,6 +46004,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -45859,6 +46130,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -45897,6 +46169,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -46022,6 +46295,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -46060,6 +46334,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -46185,6 +46460,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -46223,6 +46499,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -46348,6 +46625,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -46386,6 +46664,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -46511,6 +46790,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -46549,6 +46829,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -46674,6 +46955,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -46712,6 +46994,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -46837,6 +47120,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -46875,6 +47159,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -47000,6 +47285,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -47038,6 +47324,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -47163,6 +47450,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -47201,6 +47489,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"
@@ -47326,6 +47615,7 @@
       "source_tags": [
         "AdStatus",
         "Address",
+        "BuiltYear",
         "Category",
         "ContactMethod",
         "ContactPhone",
@@ -47364,6 +47654,7 @@
         "MarketType": "Новостройка",
         "NewDevelopmentId": "9464402",
         "Rooms": "2",
+        "BuiltYear": "2026",
         "Floors": "4",
         "HouseType": "Кирпичный",
         "AdStatus": "Free"

@@ -1,38 +1,38 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-11-10T06:35:33+03:00",
-  "source_ads": 189,
-  "full_ads": 189,
+  "checked_at": "2026-11-10T20:48:34+03:00",
+  "source_ads": 190,
+  "full_ads": 190,
   "excluded_ads": 0,
   "unique_plans": 11,
   "source_tag_counts": {
-    "AdStatus": 189,
-    "Address": 189,
-    "BalconyOrLoggiaMulti": 189,
-    "BuiltYear": 189,
-    "Category": 189,
-    "ContactMethod": 189,
-    "ContactPhone": 189,
+    "AdStatus": 190,
+    "Address": 190,
+    "BalconyOrLoggiaMulti": 190,
+    "BuiltYear": 190,
+    "Category": 190,
+    "ContactMethod": 190,
+    "ContactPhone": 190,
     "DealType": 4,
-    "Decoration": 189,
-    "Description": 189,
-    "Floor": 189,
-    "Floors": 189,
-    "HouseType": 189,
-    "Id": 189,
-    "KitchenSpace": 189,
-    "LivingSpace": 189,
-    "ManagerName": 189,
-    "MarketType": 189,
-    "NewDevelopmentId": 189,
-    "OperationType": 189,
-    "Price": 189,
-    "PropertyRights": 189,
-    "RoomType": 189,
-    "Rooms": 189,
-    "Square": 189,
-    "Status": 189
+    "Decoration": 190,
+    "Description": 190,
+    "Floor": 190,
+    "Floors": 190,
+    "HouseType": 190,
+    "Id": 190,
+    "KitchenSpace": 190,
+    "LivingSpace": 190,
+    "ManagerName": 190,
+    "MarketType": 190,
+    "NewDevelopmentId": 190,
+    "OperationType": 190,
+    "Price": 190,
+    "PropertyRights": 190,
+    "RoomType": 190,
+    "Rooms": 190,
+    "Square": 190,
+    "Status": 190
   },
   "parameter_catalog": [
     {
@@ -23690,6 +23690,176 @@
         "AdStatus": "Free"
       },
       "source_description": "Продаётся просторная 2-комнатная квартира 69,78 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•2 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!",
+      "excluded_from_feed": false
+    },
+    {
+      "id": "11924351",
+      "house_id": "3379674",
+      "house": "Дом 4",
+      "rooms": "2",
+      "area": "69.78",
+      "floor": "3",
+      "floors": "22",
+      "price": "7885140",
+      "decoration": "Без отделки",
+      "plan_id": "plan-1978afeab0e1",
+      "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924351.webp",
+      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924351.webp",
+      "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924351.png",
+      "promotion": null,
+      "source_images": [
+        {
+          "id": "src-180f4eb392c3",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/68cacae4d23f1.png",
+          "position": 1
+        },
+        {
+          "id": "src-9a6d563e8b80",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
+          "position": 2
+        },
+        {
+          "id": "src-789df0983ac5",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
+          "position": 3
+        },
+        {
+          "id": "src-c171c42b470d",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
+          "position": 4
+        },
+        {
+          "id": "src-c0e35a50e7a8",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
+          "position": 5
+        },
+        {
+          "id": "src-f3dab7ff7fd7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
+          "position": 6
+        },
+        {
+          "id": "src-88f1dd8da582",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
+          "position": 7
+        },
+        {
+          "id": "src-48ba4aab152e",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
+          "position": 8
+        },
+        {
+          "id": "src-c3f2cb3b6179",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
+          "position": 9
+        }
+      ],
+      "feed_images": [
+        {
+          "id": "brand-card",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924351/984fcca0578805f3.png",
+          "kind": "generated"
+        },
+        {
+          "id": "src-180f4eb392c3",
+          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/68cacae4d23f1.png",
+          "kind": "source"
+        },
+        {
+          "id": "src-9a6d563e8b80",
+          "url": "https://pb12296.profitbase.ru/uploads/house/12296/8bf751f9628c096422e760e3a00ad483.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-789df0983ac5",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287752b5bdc6.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-c171c42b470d",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287756b661fa.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-c0e35a50e7a8",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287758230bab.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-f3dab7ff7fd7",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6287759bb0c47.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-88f1dd8da582",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc0878060.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-48ba4aab152e",
+          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/6385cc2aeaab2.jpg",
+          "kind": "source"
+        },
+        {
+          "id": "src-c3f2cb3b6179",
+          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/6450cdea235cb.jpg",
+          "kind": "source"
+        }
+      ],
+      "feed_parameters": {},
+      "source_tags": [
+        "AdStatus",
+        "Address",
+        "BalconyOrLoggiaMulti",
+        "BuiltYear",
+        "Category",
+        "ContactMethod",
+        "ContactPhone",
+        "Decoration",
+        "Description",
+        "Floor",
+        "Floors",
+        "HouseType",
+        "Id",
+        "KitchenSpace",
+        "LivingSpace",
+        "ManagerName",
+        "MarketType",
+        "NewDevelopmentId",
+        "OperationType",
+        "Price",
+        "PropertyRights",
+        "RoomType",
+        "Rooms",
+        "Square",
+        "Status"
+      ],
+      "source_values": {
+        "Id": "11924351",
+        "ContactMethod": "По телефону и в сообщениях",
+        "ManagerName": "Отдел продаж",
+        "ContactPhone": "+7 (999) 449-90-80",
+        "Category": "Квартиры",
+        "OperationType": "Продам",
+        "PropertyRights": "Застройщик",
+        "Address": "Ростов-на-Дону, Ростовская область, Тибетская",
+        "Description": "Продаётся просторная 2-комнатная квартира 69,78 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•3 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!",
+        "Price": "7885140",
+        "Square": "69.78",
+        "Decoration": "Без отделки",
+        "Floor": "3",
+        "Status": "Квартира",
+        "MarketType": "Новостройка",
+        "NewDevelopmentId": "3379674",
+        "Rooms": "2",
+        "BuiltYear": "2027",
+        "KitchenSpace": "16.15",
+        "LivingSpace": "32.02",
+        "Floors": "22",
+        "HouseType": "Монолитно-кирпичный",
+        "AdStatus": "Free"
+      },
+      "source_description": "Продаётся просторная 2-комнатная квартира 69,78 кв.м. у ТРЦ «Горизонт» в районе рощи СКА.<br><br>О квартире:<br>•Планировка «бабочка»: много света и хорошая вентиляция<br>•Просторная светлая кухня 16 кв. м с выходом на лоджию<br>•2 изолированные спальни: 13 и 18 кв.м (с выходом на лоджию)<br>•Раздельный санузел<br>•Выделена зона под гардероб в прихожей<br>•3 этаж<br>•Улучшенная черновая отделка: квартира сдается со стяжкой пола и межкомнатными перегородками<br><br>О жилом комплексе:<br>•Закрытая охраняемая территория — безопасно и комфортно для детей<br>•Рядом: 3 школы и 4 детских сада<br>•Благоустройство в экостиле: зоны отдыха, ландшафтный дизайн<br>•Просторные холлы с ресепшеном, колясочными и велопарковками<br>•Расширенный подземный паркинг с зарядными станциями для электромобилей и удобная гостевая парковка — места достаточно для всех<br>•В доме нет студий — меньше соседей, больше тишины и уюта<br><br>Расположение:<br>•Отличная транспортная доступность: рядом остановка, удобный выезд на Нагибина<br>•До центра 10 минут на автомобиле<br>•В 7 минутах пешком — аквапарк H2O и ТЦ «Горизонт» с кинотеатром, Ашаном и фитнес-центром<br>•Рядом роща СКА— отличное место для прогулок и отдыха<br><br>Почему выбирают «Новый Горизонт»:<br>Больше пространства за те же деньги, свежий воздух рядом с рощей СКА и развитая инфраструктура. <br><br>Свяжитесь с нами и выберите свою идеальную квартиру!",
       "excluded_from_feed": false
     },
     {
