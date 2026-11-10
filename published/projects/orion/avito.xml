@@ -4190,6 +4190,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.85</LivingSpace>
+    <KitchenSpace>8.54</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236197</Id>
@@ -4250,6 +4262,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.85</LivingSpace>
+    <KitchenSpace>8.54</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236202</Id>
@@ -4310,6 +4334,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.85</LivingSpace>
+    <KitchenSpace>8.54</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236207</Id>
@@ -4370,6 +4406,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.85</LivingSpace>
+    <KitchenSpace>8.54</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236183</Id>
@@ -4430,6 +4478,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.89</LivingSpace>
+    <KitchenSpace>8.58</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236187</Id>
@@ -4490,6 +4550,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.95</LivingSpace>
+    <KitchenSpace>8.58</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236221</Id>
@@ -4910,6 +4982,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>45.22</LivingSpace>
+    <KitchenSpace>9.08</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236227</Id>
@@ -4970,6 +5054,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>45.22</LivingSpace>
+    <KitchenSpace>9.08</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236232</Id>
@@ -5030,6 +5126,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>45.22</LivingSpace>
+    <KitchenSpace>9.08</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236237</Id>
@@ -5090,6 +5198,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>45.22</LivingSpace>
+    <KitchenSpace>9.08</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236217</Id>
@@ -5150,6 +5270,18 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+      <Option>На улицу</Option>
+    </ViewFromWindows>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>45.26</LivingSpace>
+    <KitchenSpace>9.08</KitchenSpace>
   </Ad>
   <Ad>
     <Id>407635865</Id>
