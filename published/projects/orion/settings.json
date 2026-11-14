@@ -356,9 +356,33 @@
         "LivingSpace": "42.95",
         "KitchenSpace": "8.58"
       },
+      "408236190": {
+        "LivingSpace": "18.44",
+        "KitchenSpace": "10.93"
+      },
+      "408236191": {
+        "LivingSpace": "42.73",
+        "KitchenSpace": "8.47"
+      },
+      "408236215": {
+        "LivingSpace": "19.2",
+        "KitchenSpace": "11.84"
+      },
+      "408236216": {
+        "LivingSpace": "43.53",
+        "KitchenSpace": "9.06"
+      },
       "408236217": {
         "LivingSpace": "45.26",
         "KitchenSpace": "9.08"
+      },
+      "408236218": {
+        "LivingSpace": "25.49",
+        "KitchenSpace": "8.92"
+      },
+      "408236220": {
+        "LivingSpace": "19.19",
+        "KitchenSpace": "11.83"
       }
     },
     "bulk_rules": [
@@ -1950,6 +1974,608 @@
           "408236227",
           "408236232",
           "408236237"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794681350055",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "25.33"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236223",
+          "408236228",
+          "408236233",
+          "408236238"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794681357917",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "9.06"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236223",
+          "408236228",
+          "408236233",
+          "408236238"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794681946115",
+        "name": "Санузел",
+        "enabled": true,
+        "values": {
+          "BathroomMulti": [
+            "Совмещенный"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236194",
+          "408236199",
+          "408236204",
+          "408236209",
+          "408236185",
+          "408236189",
+          "408236219",
+          "408236224",
+          "408236229",
+          "408236234",
+          "408236239"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794681961641",
+        "name": "Вид из окон",
+        "enabled": true,
+        "values": {
+          "ViewFromWindows": [
+            "На улицу"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236194",
+          "408236199",
+          "408236204",
+          "408236209",
+          "408236185",
+          "408236189",
+          "408236219",
+          "408236224",
+          "408236229",
+          "408236234",
+          "408236239"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794681992355",
+        "name": "Балкон или лоджия",
+        "enabled": true,
+        "values": {
+          "BalconyOrLoggiaMulti": [
+            "Лоджия"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236194",
+          "408236199",
+          "408236204",
+          "408236209",
+          "408236185",
+          "408236189",
+          "408236219",
+          "408236224",
+          "408236229",
+          "408236234",
+          "408236239"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682046319",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "24.64"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236185",
+          "408236189"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682053631",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "9.82"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236185",
+          "408236189"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682101855",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "24.58"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236194",
+          "408236199",
+          "408236204",
+          "408236209"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682116637",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "9.82"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236194",
+          "408236199",
+          "408236204",
+          "408236209"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682164839",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "26.61"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236219",
+          "408236224",
+          "408236229",
+          "408236234",
+          "408236239"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682175049",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "9.79"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236219",
+          "408236224",
+          "408236229",
+          "408236234",
+          "408236239"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682483026",
+        "name": "Санузел",
+        "enabled": true,
+        "values": {
+          "BathroomMulti": [
+            "Совмещенный"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236195",
+          "408236200",
+          "408236205",
+          "408236210",
+          "408236190",
+          "408236225",
+          "408236230",
+          "408236235",
+          "408236240",
+          "408236220",
+          "408236215"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682493950",
+        "name": "Вид из окон",
+        "enabled": true,
+        "values": {
+          "ViewFromWindows": [
+            "На улицу"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236195",
+          "408236200",
+          "408236205",
+          "408236210",
+          "408236190",
+          "408236225",
+          "408236230",
+          "408236235",
+          "408236240",
+          "408236220",
+          "408236215"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682518192",
+        "name": "Балкон или лоджия",
+        "enabled": true,
+        "values": {
+          "BalconyOrLoggiaMulti": [
+            "Лоджия"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236195",
+          "408236200",
+          "408236205",
+          "408236210",
+          "408236190",
+          "408236225",
+          "408236230",
+          "408236235",
+          "408236240",
+          "408236220",
+          "408236215"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682671210",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "18.44"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236195",
+          "408236200",
+          "408236205",
+          "408236210"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682679140",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "10.87"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236195",
+          "408236200",
+          "408236205",
+          "408236210"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682902084",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "19.19"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236225",
+          "408236230",
+          "408236235",
+          "408236240"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794682907522",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "11.83"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236225",
+          "408236230",
+          "408236235",
+          "408236240"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683073612",
+        "name": "Санузел",
+        "enabled": true,
+        "values": {
+          "BathroomMulti": [
+            "Раздельный"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236196",
+          "408236201",
+          "408236206",
+          "408236211",
+          "408236191",
+          "408236216",
+          "408236226",
+          "408236231",
+          "408236236",
+          "408236241"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683080430",
+        "name": "Вид из окон",
+        "enabled": true,
+        "values": {
+          "ViewFromWindows": [
+            "Во двор",
+            "На улицу"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236196",
+          "408236201",
+          "408236206",
+          "408236211",
+          "408236191",
+          "408236216",
+          "408236226",
+          "408236231",
+          "408236236",
+          "408236241"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683091644",
+        "name": "Балкон или лоджия",
+        "enabled": true,
+        "values": {
+          "BalconyOrLoggiaMulti": [
+            "Лоджия"
+          ]
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236196",
+          "408236201",
+          "408236206",
+          "408236211",
+          "408236191",
+          "408236216",
+          "408236226",
+          "408236231",
+          "408236236",
+          "408236241"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683167394",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "42.66"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236196",
+          "408236201",
+          "408236206",
+          "408236211"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683172114",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "8.43"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236196",
+          "408236201",
+          "408236206",
+          "408236211"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683236300",
+        "name": "Жилая площадь",
+        "enabled": true,
+        "values": {
+          "LivingSpace": "44.3"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236226",
+          "408236231",
+          "408236236",
+          "408236241"
+        ],
+        "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1794683242648",
+        "name": "Площадь кухни",
+        "enabled": true,
+        "values": {
+          "KitchenSpace": "9.06"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [
+          "408236226",
+          "408236231",
+          "408236236",
+          "408236241"
         ],
         "exclude_ids": []
       }
