@@ -414,6 +414,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <LivingSpace>25.8</LivingSpace>
+    <KitchenSpace>7.01</KitchenSpace>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
   </Ad>
   <Ad>
     <Id>408036103</Id>
@@ -474,6 +482,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>23.91</LivingSpace>
+    <KitchenSpace>8.91</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036111</Id>
@@ -534,6 +550,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>18.6</LivingSpace>
+    <KitchenSpace>10.51</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036108</Id>
@@ -594,6 +618,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <LivingSpace>25.78</LivingSpace>
+    <KitchenSpace>7.01</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036106</Id>
@@ -654,6 +686,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>18.6</LivingSpace>
+    <KitchenSpace>10.57</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236218</Id>
@@ -1211,6 +1251,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>26.74</LivingSpace>
+    <KitchenSpace>7.86</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036102</Id>
@@ -1271,6 +1319,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>24.75</LivingSpace>
+    <KitchenSpace>9.92</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036107</Id>
@@ -1331,6 +1387,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>26.8</LivingSpace>
+    <KitchenSpace>7.86</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236219</Id>
@@ -1533,6 +1597,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>36.15</LivingSpace>
+    <KitchenSpace>8.5</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236186</Id>
@@ -1593,6 +1665,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <ViewFromWindows>
+      <Option>Во двор</Option>
+    </ViewFromWindows>
+    <LivingSpace>41.54</LivingSpace>
+    <KitchenSpace>5.56</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036101</Id>
@@ -1653,6 +1733,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <BathroomMulti>
+      <Option>Совмещенный</Option>
+    </BathroomMulti>
+    <LivingSpace>41.79</LivingSpace>
+    <KitchenSpace>5.6</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036110</Id>
@@ -1713,6 +1801,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.93</LivingSpace>
+    <KitchenSpace>8.46</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408036105</Id>
@@ -1773,6 +1869,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <LivingSpace>42.99</LivingSpace>
+    <KitchenSpace>8.51</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236196</Id>
@@ -1905,6 +2009,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <LivingSpace>42.93</LivingSpace>
+    <KitchenSpace>8.46</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236191</Id>
@@ -2037,6 +2149,14 @@
     <Decoration>Без отделки</Decoration>
     <CompanyName>Орион</CompanyName>
     <NewDevelopmentId>10189300</NewDevelopmentId>
+    <BalconyOrLoggiaMulti>
+      <Option>Лоджия</Option>
+    </BalconyOrLoggiaMulti>
+    <BathroomMulti>
+      <Option>Раздельный</Option>
+    </BathroomMulti>
+    <LivingSpace>43.28</LivingSpace>
+    <KitchenSpace>8.62</KitchenSpace>
   </Ad>
   <Ad>
     <Id>408236192</Id>
