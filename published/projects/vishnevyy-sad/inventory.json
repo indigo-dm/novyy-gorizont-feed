@@ -1,37 +1,37 @@
 {
   "slug": "vishnevyy-sad",
   "project": "ЖК Вишнёвый сад",
-  "checked_at": "2026-11-16T04:01:50+03:00",
-  "source_ads": 294,
-  "full_ads": 294,
+  "checked_at": "2026-11-16T23:27:48+03:00",
+  "source_ads": 293,
+  "full_ads": 293,
   "excluded_ads": 0,
-  "unique_plans": 83,
+  "unique_plans": 82,
   "source_tag_counts": {
-    "AdStatus": 294,
-    "Address": 294,
-    "BuiltYear": 143,
-    "Category": 294,
-    "ContactMethod": 294,
-    "ContactPhone": 294,
-    "Decoration": 294,
-    "Description": 294,
-    "Floor": 294,
-    "Floors": 294,
-    "HouseType": 294,
-    "Id": 294,
-    "KitchenSpace": 294,
-    "Latitude": 265,
-    "LivingSpace": 294,
-    "Longitude": 265,
-    "ManagerName": 294,
-    "MarketType": 294,
-    "NewDevelopmentId": 294,
-    "OperationType": 294,
-    "Price": 294,
-    "PropertyRights": 294,
-    "Rooms": 294,
-    "Square": 294,
-    "Status": 294
+    "AdStatus": 293,
+    "Address": 293,
+    "BuiltYear": 142,
+    "Category": 293,
+    "ContactMethod": 293,
+    "ContactPhone": 293,
+    "Decoration": 293,
+    "Description": 293,
+    "Floor": 293,
+    "Floors": 293,
+    "HouseType": 293,
+    "Id": 293,
+    "KitchenSpace": 293,
+    "Latitude": 264,
+    "LivingSpace": 293,
+    "Longitude": 264,
+    "ManagerName": 293,
+    "MarketType": 293,
+    "NewDevelopmentId": 293,
+    "OperationType": 293,
+    "Price": 293,
+    "PropertyRights": 293,
+    "Rooms": 293,
+    "Square": 293,
+    "Status": 293
   },
   "parameter_catalog": [
     {
@@ -9129,168 +9129,6 @@
         "AdStatus": "Free"
       },
       "source_description": "Продаётся уютная 2-комнатная квартира 53,2 кв. м в доме в центре Аксая, 5 км до Ростова. Дом сдан!<br><br>О квартире:<br>•  2 изолированные комнаты с выходом на балкон<br>•  Удобная ниша на кухне для приготовления еды<br>•  Прихожая с местом под гардероб<br>•  Совмещенный санузел<br>•  Расширенные окна Рехау, квартира очень светлая<br>• 7 этаж<br><br>ЖК «Вишневый сад»:<br>•  Прочный монолитный дом с кирпичной облицовкой<br>•  Мало- и среднеэтажная застройка: от 4 до 9 этажей <br>•  Теплые дома с экономией на коммунальных платежах до 60%<br>•  Индивидуальное отопление<br>•  Просторные квартиры с потолками до 3 м<br>•  Современные планировки с гардеробными и 2 санузлами<br>•  Витражное или расширенное остекление <br>•  Просторный двор с детской площадкой и ландшафтным озеленением<br>•  Парковка рядом с домом — без проблем с местом<br>•  Внутри ЖК предусмотрены магазины, салоны красоты, ПВЗ — всё для жизни<br>•  Дом сдан<br><br>Расположение:<br>• Удобный выезд, 10 минут на авто до Ростова-на-Дону<br>• Рядом 4 садика, 2 школы, секции, бассейн, ледовая арена и современные парки<br> <br>Почему выбирают «Вишнёвый сад»:<br>Готовый комфорт, продуманные планировки, тихий двор и надежные дома — всё, что нужно для жизни и семьи.<br><br>Свяжитесь с нами, чтобы подобрать подходящую квартиру!<br>Количество квартир ограничено. Подробности уточняйте в отделе продаж.",
-      "excluded_from_feed": false
-    },
-    {
-      "id": "12340298",
-      "house_id": "8276816",
-      "house": "Дом · ID 8276816",
-      "rooms": "2",
-      "area": "53.3",
-      "floor": "8",
-      "floors": "10",
-      "price": "7568600",
-      "decoration": "Без отделки",
-      "plan_id": "plan-7cf5bad2b04f",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/previews/12340298.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/thumbnails/12340298.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/vishnevyy-sad/images/12340298.png",
-      "promotion": null,
-      "source_images": [
-        {
-          "id": "src-c25ef8da2bf7",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64df14021e6dc.png",
-          "position": 1
-        },
-        {
-          "id": "src-626c849a13cf",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88e8402f84.jpg",
-          "position": 2
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-eb015dce0731",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64db62b6a95d9.png",
-          "position": 8
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/vishnevyy-sad/images/12340298/df604ae79e526c9d.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-c25ef8da2bf7",
-          "url": "https://pb12296.profitbase.ru/uploads/preset/12296/64df14021e6dc.png",
-          "kind": "source"
-        },
-        {
-          "id": "src-626c849a13cf",
-          "url": "https://pb12296.profitbase.ru/uploads/house/12296/64e88e8402f84.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-b040c37e1715",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-9ead460df0d9",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-2edf9c52ac82",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5c37f3bbff91",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-5daac3957db8",
-          "url": "https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "src-eb015dce0731",
-          "url": "https://pb12296.profitbase.ru/uploads/layout/12296/64db62b6a95d9.png",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {},
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "BuiltYear",
-        "Category",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "KitchenSpace",
-        "Latitude",
-        "LivingSpace",
-        "Longitude",
-        "ManagerName",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "12340298",
-        "ContactMethod": "По телефону и в сообщениях",
-        "ManagerName": "Отдел продаж",
-        "ContactPhone": "+78632098967",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "PropertyRights": "Застройщик",
-        "Address": "Аксай, Аксайский район, Ростовская область",
-        "Latitude": "47.281047",
-        "Longitude": "39.860683",
-        "Description": "Продаётся уютная 2-комнатная квартира 53,3 кв. м в доме в центре Аксая, 5 км до Ростова. Дом сдан!<br><br>О квартире:<br>•  2 изолированные комнаты с выходом на балкон<br>•  Удобная ниша на кухне для приготовления еды<br>•  Прихожая с местом под гардероб<br>•  Совмещенный санузел<br>•  Расширенные окна Рехау, квартира очень светлая<br>• 8 этаж<br><br>ЖК «Вишневый сад»:<br>•  Прочный монолитный дом с кирпичной облицовкой<br>•  Мало- и среднеэтажная застройка: от 4 до 9 этажей <br>•  Теплые дома с экономией на коммунальных платежах до 60%<br>•  Индивидуальное отопление<br>•  Просторные квартиры с потолками до 3 м<br>•  Современные планировки с гардеробными и 2 санузлами<br>•  Витражное или расширенное остекление <br>•  Просторный двор с детской площадкой и ландшафтным озеленением<br>•  Парковка рядом с домом — без проблем с местом<br>•  Внутри ЖК предусмотрены магазины, салоны красоты, ПВЗ — всё для жизни<br>•  Дом сдан<br><br>Расположение:<br>• Удобный выезд, 10 минут на авто до Ростова-на-Дону<br>• Рядом 4 садика, 2 школы, секции, бассейн, ледовая арена и современные парки<br> <br>Почему выбирают «Вишнёвый сад»:<br>Готовый комфорт, продуманные планировки, тихий двор и надежные дома — всё, что нужно для жизни и семьи.<br><br>Свяжитесь с нами, чтобы подобрать подходящую квартиру!<br>Количество квартир ограничено. Подробности уточняйте в отделе продаж.",
-        "Price": "7568600",
-        "Square": "53.3",
-        "Decoration": "Без отделки",
-        "Floor": "8",
-        "Status": "Квартира",
-        "MarketType": "Новостройка",
-        "NewDevelopmentId": "8276816",
-        "Rooms": "2",
-        "BuiltYear": "2025",
-        "KitchenSpace": "0",
-        "LivingSpace": "0",
-        "Floors": "10",
-        "HouseType": "Монолитно-кирпичный",
-        "AdStatus": "Free"
-      },
-      "source_description": "Продаётся уютная 2-комнатная квартира 53,3 кв. м в доме в центре Аксая, 5 км до Ростова. Дом сдан!<br><br>О квартире:<br>•  2 изолированные комнаты с выходом на балкон<br>•  Удобная ниша на кухне для приготовления еды<br>•  Прихожая с местом под гардероб<br>•  Совмещенный санузел<br>•  Расширенные окна Рехау, квартира очень светлая<br>• 8 этаж<br><br>ЖК «Вишневый сад»:<br>•  Прочный монолитный дом с кирпичной облицовкой<br>•  Мало- и среднеэтажная застройка: от 4 до 9 этажей <br>•  Теплые дома с экономией на коммунальных платежах до 60%<br>•  Индивидуальное отопление<br>•  Просторные квартиры с потолками до 3 м<br>•  Современные планировки с гардеробными и 2 санузлами<br>•  Витражное или расширенное остекление <br>•  Просторный двор с детской площадкой и ландшафтным озеленением<br>•  Парковка рядом с домом — без проблем с местом<br>•  Внутри ЖК предусмотрены магазины, салоны красоты, ПВЗ — всё для жизни<br>•  Дом сдан<br><br>Расположение:<br>• Удобный выезд, 10 минут на авто до Ростова-на-Дону<br>• Рядом 4 садика, 2 школы, секции, бассейн, ледовая арена и современные парки<br> <br>Почему выбирают «Вишнёвый сад»:<br>Готовый комфорт, продуманные планировки, тихий двор и надежные дома — всё, что нужно для жизни и семьи.<br><br>Свяжитесь с нами, чтобы подобрать подходящую квартиру!<br>Количество квартир ограничено. Подробности уточняйте в отделе продаж.",
       "excluded_from_feed": false
     },
     {
