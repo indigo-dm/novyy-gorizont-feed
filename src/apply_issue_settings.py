@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
+MAX_SETTINGS_JSON_CHARS = 2_000_000
 ALLOWED_ROOMS = {"Студия", *{str(value) for value in range(1, 21)}}
 ALLOWED_PARAMETERS = {
     "Description",
@@ -373,8 +374,8 @@ def parameter_settings(value: object, allowed_houses: set[str]) -> dict[str, obj
             raise ValueError("Invalid parameter lot id")
         lots[lot_id] = settings_map(values, f"parameter_settings.lot_values.{lot_id}")
     raw_rules = source.get("bulk_rules", [])
-    if not isinstance(raw_rules, list) or len(raw_rules) > 250:
-        raise ValueError("parameter_settings.bulk_rules must be a list with no more than 250 items")
+    if not isinstance(raw_rules, list):
+        raise ValueError("parameter_settings.bulk_rules must be a list")
     rules = []
     for index, raw in enumerate(raw_rules, start=1):
         if not isinstance(raw, dict):
@@ -738,6 +739,8 @@ def issue_payload(body: str) -> dict[str, object]:
             decoded = gzip.decompress(base64.b64decode(encoded, validate=True)).decode("utf-8")
         except (ValueError, OSError, UnicodeDecodeError) as error:
             raise ValueError("Compressed feed settings are invalid") from error
+        if len(decoded) > MAX_SETTINGS_JSON_CHARS:
+            raise ValueError("Compressed feed settings exceed the maximum size")
         return json.loads(decoded)
     raise ValueError("Settings JSON markers were not found in the issue body")
 
