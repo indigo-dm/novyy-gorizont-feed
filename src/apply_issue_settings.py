@@ -748,7 +748,14 @@ def issue_payload(body: str) -> dict[str, object]:
 def main() -> None:
     body = os.environ.get("ISSUE_BODY", "")
     try:
-        payload = issue_payload(body)
+        settings_file = os.environ.get("SETTINGS_JSON_FILE", "").strip()
+        if settings_file:
+            source = Path(settings_file).read_text(encoding="utf-8")
+            if len(source) > MAX_SETTINGS_JSON_CHARS:
+                raise ValueError("Referenced feed settings exceed the maximum size")
+            payload = json.loads(source)
+        else:
+            payload = issue_payload(body)
         registry = json.loads((ROOT / "projects.json").read_text(encoding="utf-8"))
         project_slug = str(payload.get("project") or registry["default_project"])
         project = next((item for item in registry["projects"] if item.get("slug") == project_slug), None)

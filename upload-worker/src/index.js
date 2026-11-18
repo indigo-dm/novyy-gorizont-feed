@@ -33,22 +33,23 @@ function bytesToBase64(bytes) {
   return btoa(binary);
 }
 
-const MAX_ISSUE_SETTINGS_CHARS = 58000;
 const MAX_SETTINGS_JSON_CHARS = 2000000;
 
-async function settingsIssueBlock(payload, oversizedMessage = 'Настройки слишком объёмные для автоматической обработки.') {
-  const formatted = JSON.stringify(payload, null, 2);
-  if (formatted.length <= MAX_ISSUE_SETTINGS_CHARS) {
-    return 'FEED_SETTINGS_JSON_START\n' + formatted + '\nFEED_SETTINGS_JSON_END';
-  }
+async function settingsIssueReference(payload, env, kind, oversizedMessage) {
+  if (!r2Available(env)) throw new Response('Хранилище запросов временно недоступно.', { status: 503 });
   const compact = JSON.stringify(payload);
-  if (compact.length > MAX_SETTINGS_JSON_CHARS) throw new Response(oversizedMessage, { status: 413 });
-  const compressedStream = new Blob([compact]).stream().pipeThrough(new CompressionStream('gzip'));
-  const compressed = new Uint8Array(await new Response(compressedStream).arrayBuffer());
-  const encoded = bytesToBase64(compressed);
-  const block = 'FEED_SETTINGS_GZIP_BASE64_START\n' + encoded + '\nFEED_SETTINGS_GZIP_BASE64_END';
-  if (block.length > MAX_ISSUE_SETTINGS_CHARS) throw new Response(oversizedMessage, { status: 413 });
-  return block;
+  if (compact.length > MAX_SETTINGS_JSON_CHARS) {
+    throw new Response(oversizedMessage || 'Настройки слишком объёмные для автоматической обработки.', { status: 413 });
+  }
+  const project = String(payload && payload.project || 'unknown').replace(/[^a-z0-9-]+/g, '-');
+  const key = `settings-requests/${kind}/${project}/${crypto.randomUUID()}.json`;
+  const sha256 = await sha256Hex(compact);
+  await env.FEED_STORAGE.put(key, compact, {
+    httpMetadata: { contentType: 'application/json; charset=utf-8', cacheControl: 'no-store' },
+    customMetadata: { sha256, kind, project }
+  });
+  const reference = JSON.stringify({ version: 1, key, sha256 }, null, 2);
+  return 'FEED_SETTINGS_REF_START\n' + reference + '\nFEED_SETTINGS_REF_END';
 }
 
 function encodedPath(path) {
@@ -601,9 +602,9 @@ async function migrateImageLibrary(request, env, origin) {
     settings.pending_library_deletions = mappings.map((item) => ({ id: item.old_id, path: item.old_path }));
     let settingsBlock;
     try {
-      settingsBlock = await settingsIssueBlock(settings, 'Настройки слишком объёмные для автоматической миграции.');
+      settingsBlock = await settingsIssueReference(settings, env, 'apply', 'Настройки слишком объёмные для автоматической миграции.');
     } catch (error) {
-      if (error instanceof Response && error.status === 413) return json({ error: await error.text() }, 413, origin, env);
+      if (error instanceof Response) return json({ error: await error.text() }, error.status, origin, env);
       throw error;
     }
     const issueBody = 'Запрос на перенос изображений в общую библиотеку объекта.\n\n' +
@@ -1056,7 +1057,7 @@ async function cleanupServiceRecords(env) {
   const cutoff = Date.now() - retentionDays * 86400000;
   let markerScanned = 0;
   let markerDeleted = 0;
-  for (const prefix of ['operations/', 'refresh-operations/']) {
+  for (const prefix of ['operations/', 'refresh-operations/', 'settings-requests/']) {
     let markerCursor;
     do {
       const page = await env.FEED_STORAGE.list({ prefix, cursor: markerCursor, limit: 1000 });
@@ -1122,9 +1123,9 @@ async function createSettingsRequest(request, env, origin) {
   }
   let settingsBlock;
   try {
-    settingsBlock = await settingsIssueBlock(payload);
+    settingsBlock = await settingsIssueReference(payload, env, 'apply');
   } catch (error) {
-    if (error instanceof Response && error.status === 413) return json({ error: await error.text() }, 413, origin, env);
+    if (error instanceof Response) return json({ error: await error.text() }, error.status, origin, env);
     throw error;
   }
   const body = 'Запрос на автоматическое обновление настроек фида.\n\n' +
@@ -1188,12 +1189,11 @@ async function createFeedValidationRequest(request, env, origin) {
     return json({ error: 'Неизвестный объект.' }, 400, origin, env);
   }
   if (!validSettingsRequest(payload)) return json({ error: 'Некорректный формат настроек.' }, 400, origin, env);
-  const settings = JSON.stringify(payload, null, 2);
   let settingsBlock;
   try {
-    settingsBlock = await settingsIssueBlock(payload);
+    settingsBlock = await settingsIssueReference(payload, env, 'validation');
   } catch (error) {
-    if (error instanceof Response && error.status === 413) return json({ error: await error.text() }, 413, origin, env);
+    if (error instanceof Response) return json({ error: await error.text() }, error.status, origin, env);
     throw error;
   }
 

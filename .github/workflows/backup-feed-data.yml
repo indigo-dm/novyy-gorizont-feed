@@ -1,0 +1,50 @@
+name: Backup published feed data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 2 * * *"
+      timezone: "Europe/Moscow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-data-maintenance
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout application source
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Checkout backup branch
+        uses: actions/checkout@v7
+        with:
+          ref: feed-data
+          path: .feed-data
+
+      - name: Mirror current published data from R2
+        env:
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: indigo-feed-studio
+        run: |
+          aws s3 sync "s3://${R2_BUCKET}/published" .feed-data/published \
+            --delete \
+            --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --only-show-errors --no-progress
+          git -C .feed-data config user.name "github-actions[bot]"
+          git -C .feed-data config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C .feed-data add published
+          if git -C .feed-data diff --cached --quiet; then
+            echo "Backup is already current."
+          else
+            git -C .feed-data commit -m "Backup published feed data"
+            git -C .feed-data push origin feed-data
+          fi

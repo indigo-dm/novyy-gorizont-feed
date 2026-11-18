@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: feed-data-compaction
+  group: feed-data-maintenance
   cancel-in-progress: false
 
 jobs:

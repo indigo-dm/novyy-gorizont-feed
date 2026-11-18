@@ -30,10 +30,34 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Resolve referenced settings
+        id: settings-reference
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python src/resolve_settings_reference.py
+
+      - name: Download and verify referenced settings
+        if: steps.settings-reference.outputs.storage_key != ''
+        env:
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: indigo-feed-studio
+          STORAGE_KEY: ${{ steps.settings-reference.outputs.storage_key }}
+          EXPECTED_SHA256: ${{ steps.settings-reference.outputs.expected_sha256 }}
+        run: |
+          aws s3 cp "s3://${R2_BUCKET}/${STORAGE_KEY}" .settings-request.json \
+            --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --only-show-errors
+          python src/resolve_settings_reference.py \
+            --verify-file .settings-request.json \
+            --expected-sha256 "${EXPECTED_SHA256}"
+
       - name: Validate and apply candidate settings without committing
         id: settings
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
+          SETTINGS_JSON_FILE: ${{ steps.settings-reference.outputs.settings_file }}
           PUBLISHED_INVENTORY_ROOT: .feed-data/published
         run: python src/apply_issue_settings.py
 
@@ -87,9 +111,19 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GH_REPO: ${{ github.repository }}
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: indigo-feed-studio
+          STORAGE_KEY: ${{ steps.settings-reference.outputs.storage_key }}
         run: |
           gh issue comment "$ISSUE_NUMBER" --body "VALIDATION_COMPLETE: официальный валидатор Авито вернул протокол. Результат доступен в Feed Studio."
           gh issue close "$ISSUE_NUMBER"
+          if [ -n "$STORAGE_KEY" ]; then
+            aws s3 rm "s3://${R2_BUCKET}/${STORAGE_KEY}" \
+              --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+              --only-show-errors
+          fi
 
   report-failure:
     if: always() && github.actor == github.repository_owner && startsWith(github.event.issue.title, '[feed-validation]') && needs.validate.result == 'failure'

@@ -83,6 +83,7 @@ feedStorage.seed('uploads/novyy-gorizont/9301142/add-migrate-a.jpg', 'same-image
 feedStorage.seed('uploads/novyy-gorizont/9301143/add-migrate-b.jpg', 'same-image', '2026-10-19T00:00:00Z');
 feedStorage.seed('operations/999.json', '{}', '2026-09-01T00:00:00Z');
 feedStorage.seed('refresh-operations/refresh-stale-marker.json', '{}', '2026-09-01T00:00:00Z');
+feedStorage.seed('settings-requests/apply/novyy-gorizont/00000000-0000-0000-0000-000000000000.json', '{}', '2026-09-01T00:00:00Z');
 await feedStorage.put('validations/novyy-gorizont/latest.json', JSON.stringify({
   version: 1,
   request: 17,
@@ -257,6 +258,11 @@ const settingsResponse = await worker.fetch(new Request('https://worker.example/
   })
 }), env);
 const accepted = await settingsResponse.json();
+const createdReferenceMatch = createdBody.match(/FEED_SETTINGS_REF_START\s*(\{.*?\})\s*FEED_SETTINGS_REF_END/s);
+const createdReference = createdReferenceMatch ? JSON.parse(createdReferenceMatch[1]) : {};
+const storedSettingsRequest = createdReference.key && feedStorage.objects.has(createdReference.key)
+  ? JSON.parse(new TextDecoder().decode(feedStorage.objects.get(createdReference.key).bytes))
+  : null;
 
 const imageBody = new FormData();
 imageBody.append('project', 'novyy-gorizont');
@@ -411,6 +417,11 @@ const validationResponse = await worker.fetch(new Request('https://worker.exampl
   })
 }), env);
 const validationAccepted = await validationResponse.json();
+const validationReferenceMatch = validationBody.match(/FEED_SETTINGS_REF_START\s*(\{.*?\})\s*FEED_SETTINGS_REF_END/s);
+const validationReference = validationReferenceMatch ? JSON.parse(validationReferenceMatch[1]) : {};
+const storedValidationRequest = validationReference.key && feedStorage.objects.has(validationReference.key)
+  ? JSON.parse(new TextDecoder().decode(feedStorage.objects.get(validationReference.key).bytes))
+  : null;
 const validationCheckingResponse = await worker.fetch(new Request('https://worker.example/validation?project=novyy-gorizont', { headers }), env);
 const validationChecking = await validationCheckingResponse.json();
 await feedStorage.put('validation-results/18.json', JSON.stringify({
@@ -456,7 +467,9 @@ await worker.scheduled({}, env, { waitUntil(promise) { cleanupPromise = promise;
 await cleanupPromise;
 
 const result = {
-  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('pending_upload_deletions') && createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"') && createdBody.includes('"background_render": "selected-render.jpg"') && createdBody.includes('"card_settings"') && createdBody.includes('"show_key_render": false') && createdBody.includes('"show_house_badge": false') && createdBody.includes('"show_logo_panel": false') && createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"') &&
+  ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('FEED_SETTINGS_REF_START') && !createdBody.includes('pending_upload_deletions') &&
+    /^settings-requests\/apply\/novyy-gorizont\//.test(createdReference.key || '') && /^[a-f0-9]{64}$/.test(createdReference.sha256 || '') &&
+    storedSettingsRequest?.pending_upload_deletions?.[0]?.path === 'uploads/novyy-gorizont/9301142/add-test.jpg' && storedSettingsRequest?.material_settings?.primary_color === '#123ABC' && storedSettingsRequest?.card_settings?.show_house_badge === false && storedSettingsRequest?.excluded_lot_ids?.[0] === '9301142' &&
     materialUploadResponse.status === 201 && materialUploadCreated && materialUploadAttempts === 2 && /^uploads\//.test(materialUpload.filename) && materialListResponse.status === 200 && materialList.items.length === 5 &&
     materialDeleteResponse.status === 200 && materialDeleted.deleted === true && activeMaterialDeleteResponse.status === 409 && rootMaterialDeleteResponse.status === 200 && rootMaterialDeleted.deleted === true && materialDeleteRequests === 2 && projectConfigUpdates === 1 && !projectConfig.brand.additional_renders.some((item) => item.filename === 'unused-render.jpg') && materialListAfterDelete.items.length === 3 &&
     setupResponse.status === 200 && setup.assets.items.length === 2 && setup.assets.brand.green === '#00605C' && setup.assets.brand.background_color === '#00605C' &&
@@ -481,7 +494,8 @@ const result = {
     generatedMediaRangeResponse.status === 206 && generatedMediaRangeResponse.headers.get('Content-Range') === 'bytes 1-2/4' && generatedMediaRangeResponse.headers.get('Content-Length') === '2' && generatedMediaRangeBytes[0] === 0x50 && generatedMediaRangeBytes[1] === 0x4e &&
     building.status === 'building' && published.status === 'published' && settingsFrontendDeployDispatched &&
     validationResponse.status === 202 && validationAccepted.request === 18 && validationAccepted.status === 'queued' && /^[a-f0-9]{64}$/.test(validationAccepted.settings_hash) &&
-    validationBody.includes('FEED_VALIDATION_META_START') && validationBody.includes('FEED_SETTINGS_JSON_START') &&
+    validationBody.includes('FEED_VALIDATION_META_START') && validationBody.includes('FEED_SETTINGS_REF_START') && !validationBody.includes('"card_settings"') &&
+    /^settings-requests\/validation\/novyy-gorizont\//.test(validationReference.key || '') && storedValidationRequest?.card_settings?.show_key_render === true &&
     validationChecking.status === 'checking' && validationComplete.status === 'has_errors' && validationComplete.issues[0].ad_id === '9301142' &&
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
     refreshResponse.status === 202 && refreshDispatchInputs?.project === 'novyy-gorizont' && refreshDispatchInputs?.render_ids === 'changed' && refreshDispatchInputs?.request_id === refreshAccepted.request &&
@@ -491,17 +505,20 @@ const result = {
     feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg') &&
     !feedStorage.objects.has('validation-results/17.json') &&
     !feedStorage.objects.has('operations/999.json') &&
-    !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json'),
+    !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json') &&
+    !feedStorage.objects.has('settings-requests/apply/novyy-gorizont/00000000-0000-0000-0000-000000000000.json'),
   settings_status: settingsResponse.status,
   building_status: building.status,
   published_status: published.status,
   validation_statuses: [validationChecking.status, validationComplete.status],
   validation_issue: validationAccepted.request,
   frontend_deploy_dispatched: frontendDeployDispatched,
-  deletion_forwarded: createdBody.includes('uploads/novyy-gorizont/9301142/add-test.jpg'),
-  excluded_lot_forwarded: createdBody.includes('"excluded_lot_ids"') && createdBody.includes('"9301142"'),
-  material_settings_forwarded: createdBody.includes('material_settings') && createdBody.includes('"primary_color": "#123ABC"'),
-  card_settings_forwarded: createdBody.includes('"card_settings"') && createdBody.includes('"show_house_badge": false'),
+  settings_reference: createdReference.key,
+  settings_payload_hidden_from_issue: !createdBody.includes('pending_upload_deletions'),
+  deletion_forwarded: storedSettingsRequest?.pending_upload_deletions?.[0]?.path === 'uploads/novyy-gorizont/9301142/add-test.jpg',
+  excluded_lot_forwarded: storedSettingsRequest?.excluded_lot_ids?.[0] === '9301142',
+  material_settings_forwarded: storedSettingsRequest?.material_settings?.primary_color === '#123ABC',
+  card_settings_forwarded: storedSettingsRequest?.card_settings?.show_house_badge === false,
   material_upload_status: materialUploadResponse.status,
   material_list_status: materialListResponse.status,
   material_delete_statuses: [materialDeleteResponse.status, activeMaterialDeleteResponse.status, rootMaterialDeleteResponse.status],
@@ -534,7 +551,8 @@ const result = {
   refresh_changed_only: refreshDispatchInputs?.render_ids === 'changed',
   unused_upload_retained: feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg'),
   previous_validation_deleted: !feedStorage.objects.has('validation-results/17.json'),
-  operation_cleanup: !feedStorage.objects.has('operations/999.json') && !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json')
+  operation_cleanup: !feedStorage.objects.has('operations/999.json') && !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json'),
+  stale_settings_request_cleanup: !feedStorage.objects.has('settings-requests/apply/novyy-gorizont/00000000-0000-0000-0000-000000000000.json')
 };
 console.log(JSON.stringify(result, null, 2));
 if (!result.ok) process.exit(1);

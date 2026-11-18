@@ -17,7 +17,7 @@ on:
         default: ""
 
 permissions:
-  contents: write
+  contents: read
   actions: write
 
 concurrency:
@@ -80,16 +80,22 @@ jobs:
         with:
           ref: main
 
-      - name: Checkout current published data
-        uses: actions/checkout@v7
-        with:
-          ref: feed-data
-          path: .feed-data
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: Load current public registry from R2
+        env:
+          CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: indigo-feed-studio
+        run: |
+          mkdir -p .published
+          aws s3 cp "s3://${R2_BUCKET}/published/projects.json" .published/projects.json \
+            --endpoint-url "https://${CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --only-show-errors
 
       - name: Download independently built projects
         uses: actions/download-artifact@v7
@@ -101,21 +107,8 @@ jobs:
         run: >-
           python src/finalize_project_registry.py
           --source staged
-          --published .feed-data/published
+          --published .published
           --registry projects.json
-
-      - name: Update generated data snapshot once
-        run: |
-          python src/sync_fast_data.py --source staged --destination .feed-data/published
-          git -C .feed-data config user.name "github-actions[bot]"
-          git -C .feed-data config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git -C .feed-data add published
-          if git -C .feed-data diff --cached --quiet; then
-            echo "Generated feed data is already current."
-          else
-            git -C .feed-data commit -m "Publish generated feed data"
-            git -C .feed-data push origin feed-data
-          fi
 
       - name: Publish the completed registry to Cloudflare R2
         env:

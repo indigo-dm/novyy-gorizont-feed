@@ -52,17 +52,15 @@ with tempfile.TemporaryDirectory() as temporary:
     assert result["build_id"] == "qa-build"
     assert [item["slug"] for item in result["projects"] if item["available"]] == expected
     assert all((source / "projects" / slug / "inventory.json").is_file() for slug in expected)
-    subprocess.run([
-        PYTHON,
-        "src/sync_fast_data.py",
-        "--source", str(source),
-        "--destination", str(published),
-    ], cwd=ROOT, check=True)
-    assert all((published / "projects" / slug / "avito.xml").is_file() for slug in expected)
+    assert all(
+        {path.name for path in (source / "projects" / slug).iterdir()} == set(PROJECT_FILES)
+        for slug in expected
+    )
 
 print({
     "matrix_projects": expected,
     "parallel_artifacts_collected": True,
     "registry_finalized_once": True,
-    "snapshot_finalized_once": True,
+    "r2_registry_finalized_once": True,
+    "artifacts_exclude_rendered_media": True,
 })
