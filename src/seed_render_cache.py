@@ -47,11 +47,14 @@ def download(url: str, destination: Path) -> str:
 
 def main() -> None:
     registry = json.loads((PUBLISHED / "projects.json").read_text(encoding="utf-8"))
+    selected_project = os.environ.get("PROJECT_SLUG", "").strip()
     tasks: list[tuple[str, Path]] = []
     for project in registry.get("projects", []):
         if not project.get("available"):
             continue
         slug = str(project["slug"])
+        if selected_project and slug != selected_project:
+            continue
         inventory_path = PUBLISHED / "projects" / slug / "inventory.json"
         if not inventory_path.is_file():
             continue

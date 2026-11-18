@@ -102,13 +102,18 @@ def main() -> None:
     parser.add_argument("--source", required=True)
     parser.add_argument("--project")
     parser.add_argument("--data-only", action="store_true")
+    parser.add_argument("--skip-registry", action="store_true")
+    parser.add_argument("--registry-only", action="store_true")
     args = parser.parse_args()
+
+    if args.skip_registry and args.registry_only:
+        raise ValueError("--skip-registry and --registry-only cannot be combined")
 
     source = Path(args.source).resolve()
     registry_path = source / "projects.json"
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     available = [str(item["slug"]) for item in registry.get("projects", []) if item.get("available")]
-    selected = [args.project] if args.project else available
+    selected = [] if args.registry_only else ([args.project] if args.project else available)
     unknown = [slug for slug in selected if slug not in available]
     if unknown:
         raise ValueError(f"Unavailable projects requested for R2 publishing: {', '.join(unknown)}")
@@ -132,24 +137,27 @@ def main() -> None:
         if not args.data_only:
             sync_project_media(aws, endpoint, bucket, project_dir, slug, process_env)
 
-    registry_command = common(aws) + [
-        "cp",
-        str(registry_path),
-        f"s3://{bucket}/published/projects.json",
-        "--content-type",
-        "application/json; charset=utf-8",
-        "--cache-control",
-        "no-store, max-age=0",
-        "--endpoint-url",
-        endpoint,
-        "--only-show-errors",
-        "--no-progress",
-    ]
-    run(registry_command, process_env)
+    if not args.skip_registry:
+        registry_command = common(aws) + [
+            "cp",
+            str(registry_path),
+            f"s3://{bucket}/published/projects.json",
+            "--content-type",
+            "application/json; charset=utf-8",
+            "--cache-control",
+            "no-store, max-age=0",
+            "--endpoint-url",
+            endpoint,
+            "--only-show-errors",
+            "--no-progress",
+        ]
+        run(registry_command, process_env)
     print(json.dumps({
         "bucket": bucket,
         "projects": selected,
         "data_only": args.data_only,
+        "registry_only": args.registry_only,
+        "registry_published": not args.skip_registry,
     }, ensure_ascii=False))
 
 

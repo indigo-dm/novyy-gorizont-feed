@@ -19,6 +19,11 @@ on:
         required: false
         type: string
         default: ""
+      finalize:
+        description: Update the shared snapshot and public registry
+        required: false
+        type: boolean
+        default: true
   workflow_call:
     inputs:
       project:
@@ -35,6 +40,11 @@ on:
         required: false
         type: string
         default: ""
+      finalize:
+        description: Update the shared snapshot and public registry
+        required: false
+        type: boolean
+        default: true
 permissions:
   contents: write
   actions: write
@@ -80,16 +90,17 @@ jobs:
       - name: Restore rendered card cache
         uses: actions/cache@v5
         with:
-          path: render-cache
-          key: ${{ runner.os }}-rendered-cards-${{ github.run_id }}
+          path: ${{ (inputs.project || github.event.client_payload.project) && format('render-cache/{0}', inputs.project || github.event.client_payload.project) || 'render-cache' }}
+          key: ${{ runner.os }}-rendered-cards-${{ inputs.project || github.event.client_payload.project || 'all-projects' }}-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-rendered-cards-
+            ${{ runner.os }}-rendered-cards-${{ inputs.project || github.event.client_payload.project || 'all-projects' }}-
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
       - name: Seed unchanged rendered cards
         env:
+          PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
           PUBLISHED_DATA_DIR: .feed-data/published
           RENDER_CACHE_DIR: render-cache
           CURRENT_PAGES_ROOT: https://feed-api.indigo-dm.ru/media
@@ -130,6 +141,7 @@ jobs:
         run: python src/build_all.py
 
       - name: Update generated data branch
+        if: ${{ inputs.finalize }}
         env:
           PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
         run: |
@@ -153,11 +165,22 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: indigo-feed-studio
+          FINALIZE: ${{ inputs.finalize }}
         run: |
           aws --version
           args=(--source site)
           if [ -n "$PROJECT_SLUG" ]; then args+=(--project "$PROJECT_SLUG"); fi
+          if [ "$FINALIZE" != "true" ]; then args+=(--skip-registry); fi
           python src/publish_r2.py "${args[@]}"
+
+      - name: Preserve project data for registry finalization
+        if: ${{ !inputs.finalize }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: feed-project-${{ inputs.project }}
+          path: site/projects/${{ inputs.project }}
+          retention-days: 1
+          if-no-files-found: error
 
       # actions/cache saves the current run's immutable cache in its post-job
       # hook. Keep one previous generation now; after the post-job save there
@@ -165,9 +188,11 @@ jobs:
       - name: Remove obsolete rendered card caches
         continue-on-error: true
         uses: actions/github-script@v8
+        env:
+          CACHE_SCOPE: ${{ inputs.project || github.event.client_payload.project || 'all-projects' }}
         with:
           script: |
-            const prefix = `${process.env.RUNNER_OS}-rendered-cards-`;
+            const prefix = `${process.env.RUNNER_OS}-rendered-cards-${process.env.CACHE_SCOPE}-`;
             const caches = [];
             for (let page = 1; ; page += 1) {
               const { data } = await github.rest.actions.getActionsCacheList({
