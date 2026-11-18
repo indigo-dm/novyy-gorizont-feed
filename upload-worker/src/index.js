@@ -164,6 +164,31 @@ async function github(env, path, options = {}) {
   return githubRepository(env, env.GITHUB_REPOSITORY, path, options);
 }
 
+const SCHEDULED_FEED_REFRESH_CRONS = new Set(['17 10 * * *', '17 21 * * *']);
+
+function scheduledWindowId(controller) {
+  const scheduledTime = Number(controller && controller.scheduledTime);
+  const timestamp = Number.isFinite(scheduledTime) && scheduledTime > 0 ? scheduledTime : Date.now();
+  return new Date(timestamp).toISOString().slice(0, 16) + 'Z';
+}
+
+async function dispatchScheduledFeedRefresh(controller, env) {
+  const windowId = scheduledWindowId(controller);
+  await github(env, '/dispatches', {
+    method: 'POST',
+    body: JSON.stringify({
+      event_type: 'scheduled-profitbase-refresh',
+      client_payload: {
+        project: '',
+        render_ids: 'changed',
+        window_id: windowId,
+        trigger: 'cloudflare-cron'
+      }
+    })
+  });
+  return { windowId };
+}
+
 async function githubRaw(env, path, branch) {
   const encodedPath = path.split('/').map(encodeURIComponent).join('/');
   const response = await fetch(
@@ -1566,6 +1591,12 @@ export default {
     }
   },
   async scheduled(controller, env, ctx) {
+    if (SCHEDULED_FEED_REFRESH_CRONS.has(String(controller && controller.cron || ''))) {
+      ctx.waitUntil(dispatchScheduledFeedRefresh(controller, env).then((result) => {
+        console.log(JSON.stringify({ event: 'scheduled-feed-refresh', ...result }));
+      }));
+      return;
+    }
     ctx.waitUntil(cleanupServiceRecords(env).then((result) => console.log(JSON.stringify({ event: 'r2-service-cleanup', ...result }))));
   }
 };

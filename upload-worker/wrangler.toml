@@ -22,4 +22,4 @@ binding = "FEED_STORAGE"
 bucket_name = "indigo-feed-studio"
 
 [triggers]
-crons = ["17 1 * * *"]
+crons = ["17 1 * * *", "17 10 * * *", "17 21 * * *"]

@@ -1,5 +1,5 @@
 name: Refresh fast feed data
-run-name: "Fast feed refresh ${{ inputs.project || github.event.client_payload.project || 'all-projects' }}"
+run-name: "Fast feed refresh ${{ inputs.project || github.event.client_payload.project || 'all-projects' }} ${{ github.event.client_payload.window_id || '' }}"
 
 on:
   workflow_dispatch:
@@ -10,18 +10,40 @@ on:
         type: string
         default: ""
   repository_dispatch:
-    types: [profitbase-refresh]
+    types: [profitbase-refresh, scheduled-profitbase-refresh]
   schedule:
+    # Reserve trigger, 30 minutes after the primary Cloudflare cron.
     # GitHub Actions cron is evaluated in UTC. Moscow is UTC+3 year-round.
-    # Avoid minute 0: GitHub documents elevated scheduler load at the start of each hour.
-    - cron: "17 10,21 * * *"
+    - cron: "47 10,21 * * *"
 
 permissions:
   contents: write
   actions: write
 
 jobs:
+  decide:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.fallback.outputs.should_run }}
+      target_window: ${{ steps.fallback.outputs.target_window }}
+    steps:
+      - name: Checkout fallback decision code
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Decide whether the reserve trigger is needed
+        id: fallback
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          REPOSITORY: ${{ github.repository }}
+          WORKFLOW_FILE: refresh-fast-data.yml
+        run: python src/scheduled_fallback.py
+
   refresh:
+    needs: decide
+    if: ${{ needs.decide.outputs.should_run == 'true' }}
     uses: ./.github/workflows/build-fast-data.yml
     with:
       project: ${{ inputs.project || github.event.client_payload.project || '' }}

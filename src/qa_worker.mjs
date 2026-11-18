@@ -135,6 +135,7 @@ let projectConfig = {
 let frontendDeployDispatched = false;
 let frontendFeedPublished = false;
 let refreshDispatchInputs = null;
+let scheduledRefreshDispatchInputs = null;
 let refreshRequestId = '';
 globalThis.fetch = async (url, options = {}) => {
   const value = String(url);
@@ -210,6 +211,10 @@ globalThis.fetch = async (url, options = {}) => {
   }
   if (value.endsWith('/repos/indigo-dm/novyy-gorizont-feed/dispatches') && options.method === 'POST') {
     const payload = JSON.parse(options.body);
+    if (payload.event_type === 'scheduled-profitbase-refresh') {
+      scheduledRefreshDispatchInputs = payload.client_payload;
+      return new Response(null, { status: 204 });
+    }
     if (payload.event_type !== 'profitbase-refresh') return Response.json({ message: 'wrong event' }, { status: 422 });
     refreshDispatchInputs = payload.client_payload;
     refreshRequestId = refreshDispatchInputs.request_id;
@@ -463,8 +468,14 @@ const refreshPublishedResponse = await worker.fetch(new Request(`https://worker.
 const refreshPublished = await refreshPublishedResponse.json();
 
 let cleanupPromise;
-await worker.scheduled({}, env, { waitUntil(promise) { cleanupPromise = promise; } });
+await worker.scheduled({ cron: '17 1 * * *' }, env, { waitUntil(promise) { cleanupPromise = promise; } });
 await cleanupPromise;
+
+let scheduledRefreshPromise;
+await worker.scheduled({ cron: '17 10 * * *', scheduledTime: Date.parse('2026-11-19T10:17:00Z') }, env, {
+  waitUntil(promise) { scheduledRefreshPromise = promise; }
+});
+await scheduledRefreshPromise;
 
 const result = {
   ok: settingsResponse.status === 202 && accepted.request === 17 && createdBody.includes('FEED_SETTINGS_REF_START') && !createdBody.includes('pending_upload_deletions') &&
@@ -500,6 +511,7 @@ const result = {
     dataResponse.status === 200 && dataXml.includes('<Ads />') && headResponse.status === 200 &&
     refreshResponse.status === 202 && refreshDispatchInputs?.project === 'novyy-gorizont' && refreshDispatchInputs?.render_ids === 'changed' && refreshDispatchInputs?.request_id === refreshAccepted.request &&
     refreshDeploying.status === 'deploying' && refreshPublished.status === 'published' && frontendDeployDispatched &&
+    scheduledRefreshDispatchInputs?.window_id === '2026-11-19T10:17Z' && scheduledRefreshDispatchInputs?.trigger === 'cloudflare-cron' &&
     !feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-test.jpg') &&
     feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg') &&
     feedStorage.objects.has('uploads/novyy-gorizont/bulk/bulk-qa-referenced.jpg') &&
@@ -549,6 +561,7 @@ const result = {
   public_data_head_status: headResponse.status,
   refresh_statuses: [refreshDeploying.status, refreshPublished.status],
   refresh_changed_only: refreshDispatchInputs?.render_ids === 'changed',
+  scheduled_refresh: scheduledRefreshDispatchInputs,
   unused_upload_retained: feedStorage.objects.has('uploads/novyy-gorizont/9301142/add-orphan.jpg'),
   previous_validation_deleted: !feedStorage.objects.has('validation-results/17.json'),
   operation_cleanup: !feedStorage.objects.has('operations/999.json') && !feedStorage.objects.has('refresh-operations/refresh-stale-marker.json'),
