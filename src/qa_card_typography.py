@@ -11,6 +11,11 @@ assert "justify-content:center" in renderer.split(".promo{", 1)[1].split("}", 1)
 assert "border-radius:0" in renderer.split(".promo{", 1)[1].split("}", 1)[0]
 assert "font-size:34px" in renderer.split(".promo{", 1)[1].split("}", 1)[0]
 assert "font-size:34px" in renderer.split(".promo span{", 1)[1].split("}", 1)[0]
+assert ".meta{position:absolute;top:654px;left:0;width:470px;height:36px" in renderer
+assert "margin-left:auto" in renderer.split(".finish{", 1)[1].split("}", 1)[0]
+assert '<div class="meta">${houseBadge}${decoration}</div>' in renderer
+assert "${logo}${promo}${render}" in renderer
+assert "${logo}${houseBadge}${promo}${render}" not in renderer
 assert "font-size:28px" in renderer.split(".lot{", 1)[1].split("}", 1)[0]
 assert "text-align:center" in renderer.split(".lot{", 1)[1].split("}", 1)[0]
 assert "width:470px" in renderer.split(".price{", 1)[1].split("}", 1)[0]
