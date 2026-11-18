@@ -65,6 +65,7 @@ for item in manifest["items"]:
         "price": str(item["price"]),
         "decoration": item["decoration"],
         "plan_id": item["plan_id"],
+        "card_version": str(item.get("card_version") or ""),
         "image": absolute_asset(f"{prefix}/previews/{item['id']}.webp"),
         "thumbnail": absolute_asset(f"{prefix}/thumbnails/{item['id']}.webp"),
         "final_image": absolute_asset(f"{prefix}/images/{item['id']}.png"),

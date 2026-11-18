@@ -23,7 +23,8 @@ assert "Remove obsolete rendered card caches" in deploy
 assert ".slice(1)" in deploy
 assert "--force-with-lease" in compact
 assert "git checkout --orphan feed-data-compacted" in compact
-assert "card_version: String(item.card_version || '')" in renderer
+assert "card_version: publishedCardVersion(item)" in renderer
+assert "require('./card_version.cjs')" in renderer
 
 print({
     "safe_refresh": True,

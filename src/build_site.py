@@ -70,6 +70,7 @@ for item in manifest["items"]:
         "price": str(item["price"]),
         "decoration": item["decoration"],
         "plan_id": item["plan_id"],
+        "card_version": str(item.get("card_version") or ""),
         "image": f"{public_prefix}/previews/{item['id']}.webp",
         "thumbnail": f"{public_prefix}/thumbnails/{item['id']}.webp",
         "final_image": f"{public_prefix}/images/{item['id']}.png",

@@ -8,6 +8,7 @@ try {
 }
 const { chromium } = playwright;
 const { optionalElements, visibility } = require('./card_layout.cjs');
+const { publishedCardVersion } = require('./card_version.cjs');
 
 const root = path.resolve(__dirname, '..');
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'projects.json'), 'utf8'));
@@ -49,7 +50,7 @@ const sourceImageUrl = (item) => {
   return String(first && typeof first === 'object' ? first.url : first || '');
 };
 const cardSignature = (item) => JSON.stringify({
-  card_version: String(item.card_version || ''),
+  card_version: publishedCardVersion(item),
   house: String(item.house || ''),
   rooms: String(item.feed_parameters?.Rooms ?? item.rooms ?? ''),
   area: String(item.area || ''),
