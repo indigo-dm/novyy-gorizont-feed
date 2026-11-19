@@ -1,33 +1,33 @@
 {
   "slug": "orion",
   "project": "ЖК Орион",
-  "checked_at": "2026-11-18T05:56:38+03:00",
-  "source_ads": 160,
-  "full_ads": 160,
+  "checked_at": "2026-11-19T05:52:53+03:00",
+  "source_ads": 158,
+  "full_ads": 158,
   "excluded_ads": 0,
   "unique_plans": 90,
   "source_tag_counts": {
-    "AdStatus": 160,
-    "Address": 160,
-    "ApartmentNumber": 160,
-    "Category": 160,
-    "CompanyName": 160,
-    "ContactMethod": 160,
-    "ContactPhone": 160,
-    "Decoration": 160,
-    "Description": 160,
-    "Floor": 160,
-    "Floors": 160,
-    "HouseType": 160,
-    "Id": 160,
-    "MarketType": 160,
-    "OperationType": 160,
-    "Price": 160,
-    "PropertyRights": 160,
-    "Rooms": 160,
-    "Square": 160,
-    "Status": 160,
-    "NewDevelopmentId": 77
+    "AdStatus": 158,
+    "Address": 158,
+    "ApartmentNumber": 158,
+    "Category": 158,
+    "CompanyName": 158,
+    "ContactMethod": 158,
+    "ContactPhone": 158,
+    "Decoration": 158,
+    "Description": 158,
+    "Floor": 158,
+    "Floors": 158,
+    "HouseType": 158,
+    "Id": 158,
+    "MarketType": 158,
+    "OperationType": 158,
+    "Price": 158,
+    "PropertyRights": 158,
+    "Rooms": 158,
+    "Square": 158,
+    "Status": 158,
+    "NewDevelopmentId": 75
   },
   "parameter_catalog": [
     {
@@ -230,6 +230,7 @@
       "price": "7744560",
       "decoration": "Без отделки",
       "plan_id": "plan-dbc20a00289f",
+      "card_version": "8d6ed042d161f070",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236193.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236193.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236193.png",
@@ -469,7 +470,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236193/e00e3c87c45abcb5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236193/8d6ed042d161f070.png",
           "kind": "generated"
         },
         {
@@ -570,6 +571,7 @@
       "price": "7810700",
       "decoration": "Без отделки",
       "plan_id": "plan-dbc20a00289f",
+      "card_version": "6edd7ed65d30228e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236198.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236198.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236198.png",
@@ -809,7 +811,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236198/054f895d88de2548.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236198/6edd7ed65d30228e.png",
           "kind": "generated"
         },
         {
@@ -910,6 +912,7 @@
       "price": "7810700",
       "decoration": "Без отделки",
       "plan_id": "plan-dbc20a00289f",
+      "card_version": "62acd39b58ebfd66",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236203.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236203.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236203.png",
@@ -1149,7 +1152,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236203/571c9cb6164b0daf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236203/62acd39b58ebfd66.png",
           "kind": "generated"
         },
         {
@@ -1250,6 +1253,7 @@
       "price": "7748220",
       "decoration": "Без отделки",
       "plan_id": "plan-db0427408616",
+      "card_version": "1ad874c38fd84843",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236195.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236195.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236195.png",
@@ -1489,7 +1493,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236195/a06ef1098d6c14c4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236195/1ad874c38fd84843.png",
           "kind": "generated"
         },
         {
@@ -1590,6 +1594,7 @@
       "price": "7814400",
       "decoration": "Без отделки",
       "plan_id": "plan-db0427408616",
+      "card_version": "e1152c9b1ac671e8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236200.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236200.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236200.png",
@@ -1664,7 +1669,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236200/fa74a815de6efbbc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236200/e1152c9b1ac671e8.png",
           "kind": "generated"
         },
         {
@@ -1930,6 +1935,7 @@
       "price": "7814400",
       "decoration": "Без отделки",
       "plan_id": "plan-db0427408616",
+      "card_version": "b7963ac7fbb2123f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236205.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236205.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236205.png",
@@ -2004,7 +2010,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236205/08bd848e71840f72.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236205/b7963ac7fbb2123f.png",
           "kind": "generated"
         },
         {
@@ -2270,6 +2276,7 @@
       "price": "7814400",
       "decoration": "Без отделки",
       "plan_id": "plan-db0427408616",
+      "card_version": "12f31d2e153f83f4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236210.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236210.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236210.png",
@@ -2344,7 +2351,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236210/cd43688d62c37319.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236210/12f31d2e153f83f4.png",
           "kind": "generated"
         },
         {
@@ -2610,6 +2617,7 @@
       "price": "7744560",
       "decoration": "Без отделки",
       "plan_id": "plan-c48bee1b1a9e",
+      "card_version": "452d856c661e449c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236188.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236188.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236188.png",
@@ -2849,7 +2857,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236188/bcea9b6c58e96d1b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236188/452d856c661e449c.png",
           "kind": "generated"
         },
         {
@@ -2950,6 +2958,7 @@
       "price": "7746390",
       "decoration": "Без отделки",
       "plan_id": "plan-8da64c09bad4",
+      "card_version": "304924fe502ba9f6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236184.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236184.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236184.png",
@@ -3189,7 +3198,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236184/7af19a52ef4df766.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236184/304924fe502ba9f6.png",
           "kind": "generated"
         },
         {
@@ -3290,6 +3299,7 @@
       "price": "7748220",
       "decoration": "Без отделки",
       "plan_id": "plan-19787341ae6d",
+      "card_version": "bf7070986922ff63",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236190.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236190.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236190.png",
@@ -3364,7 +3374,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236190/3720f8d157846c58.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236190/bf7070986922ff63.png",
           "kind": "generated"
         },
         {
@@ -3630,6 +3640,7 @@
       "price": "7751880",
       "decoration": "Без отделки",
       "plan_id": "plan-2c03ebe5bfda",
+      "card_version": "75248b239c82a5a4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036113.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036113.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036113.png",
@@ -3869,7 +3880,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036113/cc296edad32ab3c9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036113/75248b239c82a5a4.png",
           "kind": "generated"
         },
         {
@@ -3967,6 +3978,7 @@
       "price": "7836600",
       "decoration": "Без отделки",
       "plan_id": "plan-2c03ebe5bfda",
+      "card_version": "ce85637b90e839c4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036118.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036118.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036118.png",
@@ -4206,7 +4218,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036118/895a23f10f78b4b8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036118/ce85637b90e839c4.png",
           "kind": "generated"
         },
         {
@@ -4304,6 +4316,7 @@
       "price": "7836600",
       "decoration": "Без отделки",
       "plan_id": "plan-2c03ebe5bfda",
+      "card_version": "b9cb72d12a5d6c81",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036123.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036123.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036123.png",
@@ -4378,7 +4391,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036123/db3d8e0b92229da4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036123/b9cb72d12a5d6c81.png",
           "kind": "generated"
         },
         {
@@ -4641,6 +4654,7 @@
       "price": "7836600",
       "decoration": "Без отделки",
       "plan_id": "plan-2c03ebe5bfda",
+      "card_version": "e356a25910cccb16",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036128.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036128.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036128.png",
@@ -4880,7 +4894,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036128/6dc0980a93a7c094.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036128/e356a25910cccb16.png",
           "kind": "generated"
         },
         {
@@ -4978,6 +4992,7 @@
       "price": "7753710",
       "decoration": "Без отделки",
       "plan_id": "plan-e87d0f1d71d3",
+      "card_version": "3b259daf9077b9da",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036103.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036103.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036103.png",
@@ -5217,7 +5232,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036103/5dad37716f22ad7f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036103/3b259daf9077b9da.png",
           "kind": "generated"
         },
         {
@@ -5315,6 +5330,7 @@
       "price": "7755540",
       "decoration": "Без отделки",
       "plan_id": "plan-cc3c8c290872",
+      "card_version": "13c30362382c08ad",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036111.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036111.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036111.png",
@@ -5389,7 +5405,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036111/00c25de735b98ed7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036111/13c30362382c08ad.png",
           "kind": "generated"
         },
         {
@@ -5652,6 +5668,7 @@
       "price": "7840300",
       "decoration": "Без отделки",
       "plan_id": "plan-cc3c8c290872",
+      "card_version": "09300bdc2c9ec125",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036116.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036116.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036116.png",
@@ -5726,7 +5743,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036116/b7cadc2dc4f758ed.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036116/09300bdc2c9ec125.png",
           "kind": "generated"
         },
         {
@@ -5989,6 +6006,7 @@
       "price": "7840300",
       "decoration": "Без отделки",
       "plan_id": "plan-cc3c8c290872",
+      "card_version": "72135c582504d42b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036121.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036121.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036121.png",
@@ -6063,7 +6081,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036121/fdb0f357d7730e9d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036121/72135c582504d42b.png",
           "kind": "generated"
         },
         {
@@ -6326,6 +6344,7 @@
       "price": "7840300",
       "decoration": "Без отделки",
       "plan_id": "plan-cc3c8c290872",
+      "card_version": "da1d3dc3a2437b92",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036126.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036126.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036126.png",
@@ -6400,7 +6419,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036126/b54d169db7c5f322.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036126/da1d3dc3a2437b92.png",
           "kind": "generated"
         },
         {
@@ -6663,6 +6682,7 @@
       "price": "7770180",
       "decoration": "Без отделки",
       "plan_id": "plan-9ec4a4df0160",
+      "card_version": "ef16363b46098bd8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036108.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036108.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036108.png",
@@ -6737,7 +6757,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036108/fde05489d0b2e193.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036108/ef16363b46098bd8.png",
           "kind": "generated"
         },
         {
@@ -7000,6 +7020,7 @@
       "price": "7772010",
       "decoration": "Без отделки",
       "plan_id": "plan-22c2b58f281a",
+      "card_version": "ce3b38eed6a0e1c1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036106.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036106.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036106.png",
@@ -7239,7 +7260,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036106/c744b700adb1f556.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036106/ce3b38eed6a0e1c1.png",
           "kind": "generated"
         },
         {
@@ -7337,6 +7358,7 @@
       "price": "8207430",
       "decoration": "Без отделки",
       "plan_id": "plan-1929cddf2d0d",
+      "card_version": "dd10a056f322c6d2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236218.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236218.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236218.png",
@@ -7411,7 +7433,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236218/b9eab01d62473957.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236218/dd10a056f322c6d2.png",
           "kind": "generated"
         },
         {
@@ -7677,6 +7699,7 @@
       "price": "8207430",
       "decoration": "Без отделки",
       "plan_id": "plan-1929cddf2d0d",
+      "card_version": "53c98321ed3896cf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236223.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236223.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236223.png",
@@ -7916,7 +7939,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236223/550c0d2bbd331356.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236223/53c98321ed3896cf.png",
           "kind": "generated"
         },
         {
@@ -8017,6 +8040,7 @@
       "price": "8291430",
       "decoration": "Без отделки",
       "plan_id": "plan-1929cddf2d0d",
+      "card_version": "42ae0d0868d73ada",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236228.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236228.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236228.png",
@@ -8091,7 +8115,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236228/8de53af52c702815.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236228/42ae0d0868d73ada.png",
           "kind": "generated"
         },
         {
@@ -8357,6 +8381,7 @@
       "price": "8291430",
       "decoration": "Без отделки",
       "plan_id": "plan-1929cddf2d0d",
+      "card_version": "4b6ceefae3222319",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236233.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236233.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236233.png",
@@ -8431,7 +8456,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236233/ffcc41098dfaa48e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236233/4b6ceefae3222319.png",
           "kind": "generated"
         },
         {
@@ -8697,6 +8722,7 @@
       "price": "8203690",
       "decoration": "Без отделки",
       "plan_id": "plan-1929cddf2d0d",
+      "card_version": "4f1de43755a8bee4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236238.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236238.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236238.png",
@@ -8771,7 +8797,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236238/ec2e1a48ce876109.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236238/4f1de43755a8bee4.png",
           "kind": "generated"
         },
         {
@@ -9037,6 +9063,7 @@
       "price": "8207430",
       "decoration": "Без отделки",
       "plan_id": "plan-32fdc1330459",
+      "card_version": "80644b7727935652",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236213.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236213.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236213.png",
@@ -9111,7 +9138,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236213/d75399f59d90df6a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236213/80644b7727935652.png",
           "kind": "generated"
         },
         {
@@ -9377,6 +9404,7 @@
       "price": "8220520",
       "decoration": "Без отделки",
       "plan_id": "plan-6a50abd00277",
+      "card_version": "e33ccd4f2a27fe7b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236225.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236225.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236225.png",
@@ -9451,7 +9479,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236225/82634963e374f8c7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236225/e33ccd4f2a27fe7b.png",
           "kind": "generated"
         },
         {
@@ -9717,6 +9745,7 @@
       "price": "8300880",
       "decoration": "Без отделки",
       "plan_id": "plan-6a50abd00277",
+      "card_version": "2316546e276a5ca2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236230.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236230.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236230.png",
@@ -9956,7 +9985,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236230/e80aef39ea9f5e4d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236230/2316546e276a5ca2.png",
           "kind": "generated"
         },
         {
@@ -10057,6 +10086,7 @@
       "price": "8300880",
       "decoration": "Без отделки",
       "plan_id": "plan-6a50abd00277",
+      "card_version": "2d6038906b5a87e7",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236235.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236235.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236235.png",
@@ -10296,7 +10326,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236235/594d4838c5cfbd33.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236235/2d6038906b5a87e7.png",
           "kind": "generated"
         },
         {
@@ -10397,6 +10427,7 @@
       "price": "8213040",
       "decoration": "Без отделки",
       "plan_id": "plan-6a50abd00277",
+      "card_version": "62a4bb3d1e188ff2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236240.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236240.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236240.png",
@@ -10636,7 +10667,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236240/be9bd154f7086cac.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236240/62a4bb3d1e188ff2.png",
           "kind": "generated"
         },
         {
@@ -10737,6 +10768,7 @@
       "price": "8220520",
       "decoration": "Без отделки",
       "plan_id": "plan-686f19683fa0",
+      "card_version": "4f5b4a1643a85377",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236220.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236220.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236220.png",
@@ -10976,7 +11008,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236220/c5c1f9adf03daef1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236220/4f5b4a1643a85377.png",
           "kind": "generated"
         },
         {
@@ -11077,6 +11109,7 @@
       "price": "8220520",
       "decoration": "Без отделки",
       "plan_id": "plan-3feae4ad1ea0",
+      "card_version": "d2788cf804a5820a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236215.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236215.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236215.png",
@@ -11316,7 +11349,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236215/52db96451be80ccd.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236215/d2788cf804a5820a.png",
           "kind": "generated"
         },
         {
@@ -11417,6 +11450,7 @@
       "price": "8101410",
       "decoration": "Без отделки",
       "plan_id": "plan-1a09794f0583",
+      "card_version": "0a08a8a0482718b7",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236194.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236194.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236194.png",
@@ -11491,7 +11525,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236194/3ec47d0ccf128d7f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236194/0a08a8a0482718b7.png",
           "kind": "generated"
         },
         {
@@ -11757,6 +11791,7 @@
       "price": "8173300",
       "decoration": "Без отделки",
       "plan_id": "plan-1a09794f0583",
+      "card_version": "5e3cfc5b29393206",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236199.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236199.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236199.png",
@@ -11996,7 +12031,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236199/4e83917ec4616918.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236199/5e3cfc5b29393206.png",
           "kind": "generated"
         },
         {
@@ -12097,6 +12132,7 @@
       "price": "8173300",
       "decoration": "Без отделки",
       "plan_id": "plan-1a09794f0583",
+      "card_version": "ed4447a1d072afe1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236204.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236204.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236204.png",
@@ -12171,7 +12207,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236204/b0d2e5a34ba0a2a3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236204/ed4447a1d072afe1.png",
           "kind": "generated"
         },
         {
@@ -12437,6 +12473,7 @@
       "price": "8173300",
       "decoration": "Без отделки",
       "plan_id": "plan-1a09794f0583",
+      "card_version": "dcb58d98fd9b41bf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236209.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236209.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236209.png",
@@ -12676,7 +12713,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236209/a66bcf73f7e1e522.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236209/dcb58d98fd9b41bf.png",
           "kind": "generated"
         },
         {
@@ -12776,6 +12813,7 @@
       "price": "8101410",
       "decoration": "Без отделки",
       "plan_id": "plan-27deb0488acb",
+      "card_version": "19dbefe9723a836d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236185.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236185.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236185.png",
@@ -12850,7 +12888,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236185/2c1684703d274b6b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236185/19dbefe9723a836d.png",
           "kind": "generated"
         },
         {
@@ -13116,6 +13154,7 @@
       "price": "8101410",
       "decoration": "Без отделки",
       "plan_id": "plan-27deb0488acb",
+      "card_version": "2fb0895bab0a5b1a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236189.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236189.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236189.png",
@@ -13355,7 +13394,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236189/1a2b388a56eed4a2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236189/2fb0895bab0a5b1a.png",
           "kind": "generated"
         },
         {
@@ -13456,6 +13495,7 @@
       "price": "8127030",
       "decoration": "Без отделки",
       "plan_id": "plan-808a56e397de",
+      "card_version": "a83425216cde1592",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036112.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036112.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036112.png",
@@ -13530,7 +13570,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036112/2ffc7e8744af4f87.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036112/a83425216cde1592.png",
           "kind": "generated"
         },
         {
@@ -13793,6 +13833,7 @@
       "price": "8215850",
       "decoration": "Без отделки",
       "plan_id": "plan-808a56e397de",
+      "card_version": "759e2edd5653b959",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036117.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036117.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036117.png",
@@ -13867,7 +13908,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036117/589f160e349b0cd9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036117/759e2edd5653b959.png",
           "kind": "generated"
         },
         {
@@ -14130,6 +14171,7 @@
       "price": "8215850",
       "decoration": "Без отделки",
       "plan_id": "plan-808a56e397de",
+      "card_version": "1b853c1c914a01da",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036122.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036122.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036122.png",
@@ -14204,7 +14246,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036122/8b27b996b32f497e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036122/1b853c1c914a01da.png",
           "kind": "generated"
         },
         {
@@ -14467,6 +14509,7 @@
       "price": "8215850",
       "decoration": "Без отделки",
       "plan_id": "plan-808a56e397de",
+      "card_version": "51e2c61301fe747f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036127.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036127.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036127.png",
@@ -14541,7 +14584,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036127/e7a8866209f0e31c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036127/51e2c61301fe747f.png",
           "kind": "generated"
         },
         {
@@ -14804,6 +14847,7 @@
       "price": "8139840",
       "decoration": "Без отделки",
       "plan_id": "plan-b92e0d40da06",
+      "card_version": "99d2bfc47331c510",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036102.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036102.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036102.png",
@@ -14878,7 +14922,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036102/e9f3c6dfe2ef3923.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036102/99d2bfc47331c510.png",
           "kind": "generated"
         },
         {
@@ -15141,6 +15185,7 @@
       "price": "8143500",
       "decoration": "Без отделки",
       "plan_id": "plan-6147732b3c56",
+      "card_version": "f0b792329d9bb6cb",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036107.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036107.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036107.png",
@@ -15380,7 +15425,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036107/c16813c572e190ac.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036107/f0b792329d9bb6cb.png",
           "kind": "generated"
         },
         {
@@ -15478,6 +15523,7 @@
       "price": "8592650",
       "decoration": "Без отделки",
       "plan_id": "plan-fed7bef6bebc",
+      "card_version": "389f00702033712a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236219.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236219.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236219.png",
@@ -15717,7 +15763,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236219/5fc6bcf4105affea.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236219/389f00702033712a.png",
           "kind": "generated"
         },
         {
@@ -15818,6 +15864,7 @@
       "price": "8592650",
       "decoration": "Без отделки",
       "plan_id": "plan-59d504c22ce5",
+      "card_version": "d323d3b27d7be3d4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236224.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236224.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236224.png",
@@ -16057,7 +16104,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236224/844cd35abb087953.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236224/d323d3b27d7be3d4.png",
           "kind": "generated"
         },
         {
@@ -16158,6 +16205,7 @@
       "price": "8724240",
       "decoration": "Без отделки",
       "plan_id": "plan-59d504c22ce5",
+      "card_version": "3451a32bc5591a8d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236229.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236229.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236229.png",
@@ -16232,7 +16280,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236229/c512b21baf54fcb8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236229/3451a32bc5591a8d.png",
           "kind": "generated"
         },
         {
@@ -16498,6 +16546,7 @@
       "price": "8724240",
       "decoration": "Без отделки",
       "plan_id": "plan-59d504c22ce5",
+      "card_version": "7f78a09692787a8a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236234.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236234.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236234.png",
@@ -16572,7 +16621,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236234/e0c0e3309a355c1d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236234/7f78a09692787a8a.png",
           "kind": "generated"
         },
         {
@@ -16838,6 +16887,7 @@
       "price": "8631920",
       "decoration": "Без отделки",
       "plan_id": "plan-59d504c22ce5",
+      "card_version": "466688c9566804fb",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236239.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236239.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236239.png",
@@ -16912,7 +16962,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236239/0e94bd3d2ad40206.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236239/466688c9566804fb.png",
           "kind": "generated"
         },
         {
@@ -17178,6 +17228,7 @@
       "price": "10871770",
       "decoration": "Без отделки",
       "plan_id": "plan-e58772134366",
+      "card_version": "abbff1a45517a9d0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036104.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036104.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036104.png",
@@ -17417,7 +17468,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036104/2638661291ebd436.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036104/abbff1a45517a9d0.png",
           "kind": "generated"
         },
         {
@@ -17515,6 +17566,7 @@
       "price": "10883600",
       "decoration": "Без отделки",
       "plan_id": "plan-54ac16b81f50",
+      "card_version": "6ecc78cddd48551c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236186.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236186.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236186.png",
@@ -17589,7 +17641,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236186/f5c77493d2bb11cc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236186/6ecc78cddd48551c.png",
           "kind": "generated"
         },
         {
@@ -17852,6 +17904,7 @@
       "price": "10973170",
       "decoration": "Без отделки",
       "plan_id": "plan-088c8195d806",
+      "card_version": "c3956002d1e7a362",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036101.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036101.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036101.png",
@@ -17926,7 +17979,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036101/949c880fe6d500f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036101/c3956002d1e7a362.png",
           "kind": "generated"
         },
         {
@@ -18189,6 +18242,7 @@
       "price": "11992240",
       "decoration": "Без отделки",
       "plan_id": "plan-8f8af87854f6",
+      "card_version": "b842e8a363d26152",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036110.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036110.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036110.png",
@@ -18428,7 +18482,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036110/88f2267cb3c4e685.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036110/b842e8a363d26152.png",
           "kind": "generated"
         },
         {
@@ -18526,6 +18580,7 @@
       "price": "12134160",
       "decoration": "Без отделки",
       "plan_id": "plan-8f8af87854f6",
+      "card_version": "95dc39245ec5114a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036115.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036115.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036115.png",
@@ -18600,7 +18655,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036115/9152220b26e03803.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036115/95dc39245ec5114a.png",
           "kind": "generated"
         },
         {
@@ -18863,6 +18918,7 @@
       "price": "12134160",
       "decoration": "Без отделки",
       "plan_id": "plan-8f8af87854f6",
+      "card_version": "5a5a1d80d1d1bbef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036120.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036120.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036120.png",
@@ -19102,7 +19158,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036120/f33cf5cb6085c552.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036120/5a5a1d80d1d1bbef.png",
           "kind": "generated"
         },
         {
@@ -19200,6 +19256,7 @@
       "price": "12134160",
       "decoration": "Без отделки",
       "plan_id": "plan-8f8af87854f6",
+      "card_version": "4c2b1e93186918bd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036125.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036125.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036125.png",
@@ -19439,7 +19496,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036125/039064a0323f1bb2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036125/4c2b1e93186918bd.png",
           "kind": "generated"
         },
         {
@@ -19537,6 +19594,7 @@
       "price": "12020970",
       "decoration": "Без отделки",
       "plan_id": "plan-ae82b99a1d17",
+      "card_version": "fed7f66de778016d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036105.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036105.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036105.png",
@@ -19611,7 +19669,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036105/ee5c0486c7be3b4f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036105/fed7f66de778016d.png",
           "kind": "generated"
         },
         {
@@ -19874,6 +19932,7 @@
       "price": "12090260",
       "decoration": "Без отделки",
       "plan_id": "plan-39d0eba96b8e",
+      "card_version": "f35abd3d65eac935",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236196.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236196.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236196.png",
@@ -20113,7 +20172,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236196/ad1313e4f8de4af8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236196/f35abd3d65eac935.png",
           "kind": "generated"
         },
         {
@@ -20215,6 +20274,7 @@
       "price": "12202560",
       "decoration": "Без отделки",
       "plan_id": "plan-39d0eba96b8e",
+      "card_version": "9255b294285a97a8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236201.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236201.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236201.png",
@@ -20289,7 +20349,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236201/2ad23c941d5c05dd.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236201/9255b294285a97a8.png",
           "kind": "generated"
         },
         {
@@ -20556,6 +20616,7 @@
       "price": "12202560",
       "decoration": "Без отделки",
       "plan_id": "plan-39d0eba96b8e",
+      "card_version": "095ca88d038c1a25",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236206.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236206.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236206.png",
@@ -20630,7 +20691,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236206/2afe8cf8ba6aed0b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236206/095ca88d038c1a25.png",
           "kind": "generated"
         },
         {
@@ -20897,6 +20958,7 @@
       "price": "12202560",
       "decoration": "Без отделки",
       "plan_id": "plan-39d0eba96b8e",
+      "card_version": "9719932e6218935c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236211.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236211.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236211.png",
@@ -20971,7 +21033,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236211/3b8fc2ce9ec9d233.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236211/9719932e6218935c.png",
           "kind": "generated"
         },
         {
@@ -21238,6 +21300,7 @@
       "price": "12088570",
       "decoration": "Без отделки",
       "plan_id": "plan-e797b3117a82",
+      "card_version": "d7b15c52ff510362",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036114.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036114.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036114.png",
@@ -21477,7 +21540,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036114/7bfbd53223a0123c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036114/d7b15c52ff510362.png",
           "kind": "generated"
         },
         {
@@ -21575,6 +21638,7 @@
       "price": "12231630",
       "decoration": "Без отделки",
       "plan_id": "plan-e797b3117a82",
+      "card_version": "80a1bce0d65f1d8b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036124.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036124.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036124.png",
@@ -21814,7 +21878,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036124/b53bb4471b52569f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036124/80a1bce0d65f1d8b.png",
           "kind": "generated"
         },
         {
@@ -21912,6 +21976,7 @@
       "price": "12231630",
       "decoration": "Без отделки",
       "plan_id": "plan-e797b3117a82",
+      "card_version": "4f519bb454994b4c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036129.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036129.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036129.png",
@@ -22151,7 +22216,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036129/d45231ef3798e958.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036129/4f519bb454994b4c.png",
           "kind": "generated"
         },
         {
@@ -22249,6 +22314,7 @@
       "price": "12090260",
       "decoration": "Без отделки",
       "plan_id": "plan-da9b95956466",
+      "card_version": "f8cf27b8d4791f8c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236191.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236191.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236191.png",
@@ -22323,7 +22389,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236191/1552703206811198.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236191/f8cf27b8d4791f8c.png",
           "kind": "generated"
         },
         {
@@ -22590,6 +22656,7 @@
       "price": "12102090",
       "decoration": "Без отделки",
       "plan_id": "plan-e066c80fc0b7",
+      "card_version": "046c74f514d804ac",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408036109.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408036109.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408036109.png",
@@ -22829,7 +22896,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036109/d3d12d1ab6c0eda9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408036109/046c74f514d804ac.png",
           "kind": "generated"
         },
         {
@@ -22927,6 +22994,7 @@
       "price": "12217010",
       "decoration": "Без отделки",
       "plan_id": "plan-a71e34d24dca",
+      "card_version": "1c1997296b2cf982",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236192.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236192.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236192.png",
@@ -23166,7 +23234,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236192/5ea8ac020d0460f4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236192/1c1997296b2cf982.png",
           "kind": "generated"
         },
         {
@@ -23268,6 +23336,7 @@
       "price": "12327390",
       "decoration": "Без отделки",
       "plan_id": "plan-a71e34d24dca",
+      "card_version": "4598c07ed1964188",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236197.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236197.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236197.png",
@@ -23342,7 +23411,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236197/cd3970c218b6657b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236197/4598c07ed1964188.png",
           "kind": "generated"
         },
         {
@@ -23609,6 +23678,7 @@
       "price": "12327390",
       "decoration": "Без отделки",
       "plan_id": "plan-a71e34d24dca",
+      "card_version": "46c742e9c849296d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236202.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236202.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236202.png",
@@ -23848,7 +23918,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236202/c0d3360a5603b92c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236202/46c742e9c849296d.png",
           "kind": "generated"
         },
         {
@@ -23950,6 +24020,7 @@
       "price": "12327390",
       "decoration": "Без отделки",
       "plan_id": "plan-a71e34d24dca",
+      "card_version": "e1754766dbe0c4f0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236207.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236207.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236207.png",
@@ -24189,7 +24260,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236207/60b7917546595985.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236207/e1754766dbe0c4f0.png",
           "kind": "generated"
         },
         {
@@ -24291,6 +24362,7 @@
       "price": "12210250",
       "decoration": "Без отделки",
       "plan_id": "plan-9ee73b1c3184",
+      "card_version": "7e832c84c9c8ac4e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236183.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236183.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236183.png",
@@ -24530,7 +24602,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236183/93a5f219568f6f4e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236183/7e832c84c9c8ac4e.png",
           "kind": "generated"
         },
         {
@@ -24632,6 +24704,7 @@
       "price": "12217010",
       "decoration": "Без отделки",
       "plan_id": "plan-8eb7036586b1",
+      "card_version": "c63cdd878d39fc13",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236187.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236187.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236187.png",
@@ -24706,7 +24779,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236187/137264d72ccdc007.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236187/c63cdd878d39fc13.png",
           "kind": "generated"
         },
         {
@@ -24973,6 +25046,7 @@
       "price": "12589210",
       "decoration": "Без отделки",
       "plan_id": "plan-890d53cdf6bb",
+      "card_version": "63c16a9985b0d3f4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236216.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236216.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236216.png",
@@ -25212,7 +25286,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236216/fae5f27586d5a467.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236216/63c16a9985b0d3f4.png",
           "kind": "generated"
         },
         {
@@ -25314,6 +25388,7 @@
       "price": "12589210",
       "decoration": "Без отделки",
       "plan_id": "plan-7587815dc891",
+      "card_version": "f723422990b4f415",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236226.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236226.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236226.png",
@@ -25553,7 +25628,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236226/83dc6e4e802cfe8f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236226/f723422990b4f415.png",
           "kind": "generated"
         },
         {
@@ -25655,6 +25730,7 @@
       "price": "12801250",
       "decoration": "Без отделки",
       "plan_id": "plan-7587815dc891",
+      "card_version": "84df29987ecf57f5",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236231.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236231.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236231.png",
@@ -25894,7 +25970,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236231/6b2ffd0c81bf16d9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236231/84df29987ecf57f5.png",
           "kind": "generated"
         },
         {
@@ -25996,6 +26072,7 @@
       "price": "12801250",
       "decoration": "Без отделки",
       "plan_id": "plan-7587815dc891",
+      "card_version": "e365a9f387cc4982",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236236.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236236.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236236.png",
@@ -26235,7 +26312,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236236/2b956930cecb4c3f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236236/e365a9f387cc4982.png",
           "kind": "generated"
         },
         {
@@ -26337,6 +26414,7 @@
       "price": "12654950",
       "decoration": "Без отделки",
       "plan_id": "plan-7587815dc891",
+      "card_version": "736799e065ec6b0e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236241.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236241.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236241.png",
@@ -26576,7 +26654,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236241/08a2f5e712379d7c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236241/736799e065ec6b0e.png",
           "kind": "generated"
         },
         {
@@ -26678,6 +26756,7 @@
       "price": "12961160",
       "decoration": "Без отделки",
       "plan_id": "plan-83c0b503468f",
+      "card_version": "66a15738b63cc566",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236222.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236222.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236222.png",
@@ -26752,7 +26831,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236222/06466656b1d09db5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236222/66a15738b63cc566.png",
           "kind": "generated"
         },
         {
@@ -27019,6 +27098,7 @@
       "price": "13104000",
       "decoration": "Без отделки",
       "plan_id": "plan-83c0b503468f",
+      "card_version": "2f81e04755fdf93d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236227.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236227.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236227.png",
@@ -27258,7 +27338,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236227/f4cdcfc991de7e2c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236227/2f81e04755fdf93d.png",
           "kind": "generated"
         },
         {
@@ -27360,6 +27440,7 @@
       "price": "13104000",
       "decoration": "Без отделки",
       "plan_id": "plan-83c0b503468f",
+      "card_version": "e223708599bfddb2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236232.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236232.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236232.png",
@@ -27434,7 +27515,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236232/5d8a1d541ded38a7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236232/e223708599bfddb2.png",
           "kind": "generated"
         },
         {
@@ -27701,6 +27782,7 @@
       "price": "12954240",
       "decoration": "Без отделки",
       "plan_id": "plan-83c0b503468f",
+      "card_version": "ea033d8d3c3e65cd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236237.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236237.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236237.png",
@@ -27775,7 +27857,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236237/8583dd467dfdfaec.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236237/ea033d8d3c3e65cd.png",
           "kind": "generated"
         },
         {
@@ -28042,6 +28124,7 @@
       "price": "12961160",
       "decoration": "Без отделки",
       "plan_id": "plan-341d5848cf24",
+      "card_version": "f5b00525aead9cf2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/408236217.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/408236217.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/408236217.png",
@@ -28116,7 +28199,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236217/ae627eb9006e5de7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/408236217/f5b00525aead9cf2.png",
           "kind": "generated"
         },
         {
@@ -28383,6 +28466,7 @@
       "price": "4828160",
       "decoration": "Без отделки",
       "plan_id": "plan-f070619fef39",
+      "card_version": "847779849c425f4d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635865.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635865.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635865.png",
@@ -28457,7 +28541,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635865/68597d9d2e49f8ee.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635865/847779849c425f4d.png",
           "kind": "generated"
         },
         {
@@ -28722,6 +28806,7 @@
       "price": "4726800",
       "decoration": "Без отделки",
       "plan_id": "plan-84680bd1e993",
+      "card_version": "e753965ab40b783f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635636.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635636.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635636.png",
@@ -28961,7 +29046,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635636/c47bc113c8127c25.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635636/e753965ab40b783f.png",
           "kind": "generated"
         },
         {
@@ -29061,6 +29146,7 @@
       "price": "4839200",
       "decoration": "Без отделки",
       "plan_id": "plan-bbc78710dcd1",
+      "card_version": "439b6ddfb380223d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635758.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635758.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635758.png",
@@ -29135,7 +29221,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635758/ba305e2b5714a2f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635758/439b6ddfb380223d.png",
           "kind": "generated"
         },
         {
@@ -29400,6 +29486,7 @@
       "price": "4844720",
       "decoration": "Без отделки",
       "plan_id": "plan-0323fa965304",
+      "card_version": "a81c0b9efa58c1ef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635861.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635861.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635861.png",
@@ -29474,7 +29561,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635861/7d97a9cfecdd103b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635861/a81c0b9efa58c1ef.png",
           "kind": "generated"
         },
         {
@@ -29739,6 +29826,7 @@
       "price": "4792060",
       "decoration": "Без отделки",
       "plan_id": "plan-0323fa965304",
+      "card_version": "0879cbf562dedf29",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635909.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635909.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635909.png",
@@ -29978,7 +30066,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635909/3afb5373718ef7ba.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635909/0879cbf562dedf29.png",
           "kind": "generated"
         },
         {
@@ -30078,6 +30166,7 @@
       "price": "4857600",
       "decoration": "Без отделки",
       "plan_id": "plan-a3f7f4f4ea48",
+      "card_version": "8919990ba28b4889",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635781.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635781.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635781.png",
@@ -30152,7 +30241,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635781/33d71dcdd5697505.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635781/8919990ba28b4889.png",
           "kind": "generated"
         },
         {
@@ -30417,6 +30506,7 @@
       "price": "6655200",
       "decoration": "Без отделки",
       "plan_id": "plan-03944a267b45",
+      "card_version": "31bb2f819c829664",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635640.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635640.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635640.png",
@@ -30491,7 +30581,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635640/ded985b1a67f08a4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635640/31bb2f819c829664.png",
           "kind": "generated"
         },
         {
@@ -30756,6 +30846,7 @@
       "price": "6759040",
       "decoration": "Без отделки",
       "plan_id": "plan-86386c18e760",
+      "card_version": "3088c25cc7b4857f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635906.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635906.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635906.png",
@@ -30995,7 +31086,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635906/e57895f1383bd788.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635906/3088c25cc7b4857f.png",
           "kind": "generated"
         },
         {
@@ -31095,6 +31186,7 @@
       "price": "6798420",
       "decoration": "Без отделки",
       "plan_id": "plan-270c562c7d34",
+      "card_version": "e3e35996f862ff7d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635907.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635907.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635907.png",
@@ -31169,7 +31261,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635907/c866606e2eaaf364.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635907/e3e35996f862ff7d.png",
           "kind": "generated"
         },
         {
@@ -31434,6 +31526,7 @@
       "price": "6805580",
       "decoration": "Без отделки",
       "plan_id": "plan-f22c2ebd9313",
+      "card_version": "35df3f964b6c6835",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635750.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635750.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635750.png",
@@ -31673,7 +31766,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635750/39256c358e58fe4e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635750/35df3f964b6c6835.png",
           "kind": "generated"
         },
         {
@@ -31773,6 +31866,7 @@
       "price": "6837800",
       "decoration": "Без отделки",
       "plan_id": "plan-c11853580eeb",
+      "card_version": "5f805be3f82d5567",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635751.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635751.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635751.png",
@@ -32012,7 +32106,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635751/21210a01b1ccbe69.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635751/5f805be3f82d5567.png",
           "kind": "generated"
         },
         {
@@ -32112,6 +32206,7 @@
       "price": "6961500",
       "decoration": "Без отделки",
       "plan_id": "plan-e34d093648b2",
+      "card_version": "baff2f31d6fdffc3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635811.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635811.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635811.png",
@@ -32351,7 +32446,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635811/d59ebf9ce320323e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635811/baff2f31d6fdffc3.png",
           "kind": "generated"
         },
         {
@@ -32451,6 +32546,7 @@
       "price": "7488000",
       "decoration": "Без отделки",
       "plan_id": "plan-da021b5b53f2",
+      "card_version": "f3803cfb5868ad8b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636036.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636036.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636036.png",
@@ -32690,7 +32786,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636036/b9993ba732477d55.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636036/f3803cfb5868ad8b.png",
           "kind": "generated"
         },
         {
@@ -32790,6 +32886,7 @@
       "price": "7637400",
       "decoration": "Без отделки",
       "plan_id": "plan-b3e566183163",
+      "card_version": "0ade4342fed62aa4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735914.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735914.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735914.png",
@@ -32864,7 +32961,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735914/e0090b0a018d14dd.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735914/0ade4342fed62aa4.png",
           "kind": "generated"
         },
         {
@@ -33129,6 +33226,7 @@
       "price": "7371530",
       "decoration": "Без отделки",
       "plan_id": "plan-f2f1191da6ab",
+      "card_version": "5d8a51636eb42d34",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636031.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636031.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636031.png",
@@ -33368,7 +33466,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636031/15d14babc20c9093.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636031/5d8a51636eb42d34.png",
           "kind": "generated"
         },
         {
@@ -33468,6 +33566,7 @@
       "price": "8092320",
       "decoration": "Без отделки",
       "plan_id": "plan-0ab6e62f2a35",
+      "card_version": "8098e1df7d19db5b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735953.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735953.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735953.png",
@@ -33542,7 +33641,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735953/1cf3fb053ee98125.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735953/8098e1df7d19db5b.png",
           "kind": "generated"
         },
         {
@@ -33807,6 +33906,7 @@
       "price": "8092320",
       "decoration": "Без отделки",
       "plan_id": "plan-0ab6e62f2a35",
+      "card_version": "44cf42638043e926",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735968.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735968.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735968.png",
@@ -33881,7 +33981,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735968/6509f7c56c78bb71.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735968/44cf42638043e926.png",
           "kind": "generated"
         },
         {
@@ -34146,6 +34246,7 @@
       "price": "7646600",
       "decoration": "Без отделки",
       "plan_id": "plan-865b964461b7",
+      "card_version": "267b7693e2ef9435",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636034.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636034.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636034.png",
@@ -34220,7 +34321,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636034/460e4afaeb30c599.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636034/267b7693e2ef9435.png",
           "kind": "generated"
         },
         {
@@ -34485,6 +34586,7 @@
       "price": "7738290",
       "decoration": "Без отделки",
       "plan_id": "plan-24a4f2ca6efa",
+      "card_version": "5e9885726cb925c2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636035.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636035.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636035.png",
@@ -34724,7 +34826,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636035/338c46a564f6c380.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636035/5e9885726cb925c2.png",
           "kind": "generated"
         },
         {
@@ -34824,6 +34926,7 @@
       "price": "8213400",
       "decoration": "Без отделки",
       "plan_id": "plan-f5d84376de15",
+      "card_version": "937e5c2d002624fd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635908.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635908.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635908.png",
@@ -34898,7 +35001,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635908/9158040b392700e7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635908/937e5c2d002624fd.png",
           "kind": "generated"
         },
         {
@@ -35163,6 +35266,7 @@
       "price": "8329410",
       "decoration": "Без отделки",
       "plan_id": "plan-aac5fdfe9d8a",
+      "card_version": "9cc6e6f911ebf1c9",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635764.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635764.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635764.png",
@@ -35402,7 +35506,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635764/044249ca911ea1cf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635764/9cc6e6f911ebf1c9.png",
           "kind": "generated"
         },
         {
@@ -35502,6 +35606,7 @@
       "price": "8628040",
       "decoration": "Без отделки",
       "plan_id": "plan-7b7be7ae983c",
+      "card_version": "d92f3a6e89a1cd62",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636033.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636033.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636033.png",
@@ -35741,7 +35846,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636033/8df721de8abf1980.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636033/d92f3a6e89a1cd62.png",
           "kind": "generated"
         },
         {
@@ -35841,6 +35946,7 @@
       "price": "8628040",
       "decoration": "Без отделки",
       "plan_id": "plan-7b7be7ae983c",
+      "card_version": "0642335f75689385",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636043.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636043.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636043.png",
@@ -36080,7 +36186,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636043/c9cf237bc1128fa0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636043/0642335f75689385.png",
           "kind": "generated"
         },
         {
@@ -36180,6 +36286,7 @@
       "price": "8759820",
       "decoration": "Без отделки",
       "plan_id": "plan-38f7fe26144a",
+      "card_version": "76ecdc14adcb22fa",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636063.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636063.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636063.png",
@@ -36419,7 +36526,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636063/05b5a7b4086ab579.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636063/76ecdc14adcb22fa.png",
           "kind": "generated"
         },
         {
@@ -36519,6 +36626,7 @@
       "price": "8865360",
       "decoration": "Без отделки",
       "plan_id": "plan-38f7fe26144a",
+      "card_version": "c29d89b2e33cde4f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636073.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636073.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636073.png",
@@ -36593,7 +36701,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636073/737921a8a4124ea4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636073/c29d89b2e33cde4f.png",
           "kind": "generated"
         },
         {
@@ -36858,6 +36966,7 @@
       "price": "8557380",
       "decoration": "Без отделки",
       "plan_id": "plan-dbaffcd309e4",
+      "card_version": "734dec73a523b644",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635638.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635638.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635638.png",
@@ -36932,7 +37041,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635638/9950082a3cc8c42d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635638/734dec73a523b644.png",
           "kind": "generated"
         },
         {
@@ -37197,6 +37306,7 @@
       "price": "8677900",
       "decoration": "Без отделки",
       "plan_id": "plan-b671f23f8274",
+      "card_version": "7b9cb277babf3c9e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635737.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635737.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635737.png",
@@ -37271,7 +37381,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635737/6f3a772bb64ab0aa.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635737/7b9cb277babf3c9e.png",
           "kind": "generated"
         },
         {
@@ -37536,6 +37646,7 @@
       "price": "9270720",
       "decoration": "Без отделки",
       "plan_id": "plan-3bfac4ddd17e",
+      "card_version": "5057f2ecea249605",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635821.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635821.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635821.png",
@@ -37770,7 +37881,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635821/b88be9d09dc2765c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635821/5057f2ecea249605.png",
           "kind": "generated"
         },
         {
@@ -37870,6 +37981,7 @@
       "price": "9217440",
       "decoration": "Без отделки",
       "plan_id": "plan-3bfac4ddd17e",
+      "card_version": "e84940fb32c7ad54",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635857.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635857.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635857.png",
@@ -37944,7 +38056,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635857/6ad5ce72fc9dcbe4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635857/e84940fb32c7ad54.png",
           "kind": "generated"
         },
         {
@@ -38209,6 +38321,7 @@
       "price": "9257230",
       "decoration": "Без отделки",
       "plan_id": "plan-0708e950ce3e",
+      "card_version": "7f5681e72990aaf8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635760.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635760.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635760.png",
@@ -38283,7 +38396,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635760/102f4bbace299fb5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635760/7f5681e72990aaf8.png",
           "kind": "generated"
         },
         {
@@ -38538,345 +38651,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "407635809",
-      "house_id": "10189300",
-      "house": "Дом",
-      "rooms": "2",
-      "area": "53.51",
-      "floor": "12",
-      "floors": "20",
-      "price": "9310740",
-      "decoration": "Без отделки",
-      "plan_id": "plan-0708e950ce3e",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635809.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635809.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635809.png",
-      "promotion": {
-        "rule_id": "promotion-1793964350839",
-        "name": "Ипотека без ПВ",
-        "label": "Ипотека",
-        "text": "без ПЕРВОГО ВЗНОСА"
-      },
-      "source_images": [
-        {
-          "id": "src-a612102c7eff",
-          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/662457d5fff9dec2e6f1bb0dfbcec4842cc0f506.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "position": 2
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-7cab611efc16",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-9d5328ff27f7",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-37ea5d298181",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-a8e124ab67c8",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-122880f50bee",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-72809fab8046",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
-          "position": 9
-        },
-        {
-          "id": "src-08c7a6610b27",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
-          "position": 10
-        },
-        {
-          "id": "src-5c8508a9b0ed",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
-          "position": 11
-        },
-        {
-          "id": "src-26f7b8b3e333",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
-          "position": 12
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635809/5723197384a65629.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "kind": "source"
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "lib-470d3ee26ec1974929f9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-470d3ee26ec1974929f9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-e4c4ab70737295056605",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-e4c4ab70737295056605.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bc0a1613a01c76e80a59",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bc0a1613a01c76e80a59.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-00e95c9daf254f4f2a98",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-00e95c9daf254f4f2a98.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-531324681ac44bdfc656",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-531324681ac44bdfc656.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-5f7ae6df27c49e5d71f1",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-5f7ae6df27c49e5d71f1.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-74be2254ce52984aa93c",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-74be2254ce52984aa93c.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-ae03d5b0452296f9f397",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-ae03d5b0452296f9f397.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b14bca2da0506bc80d34",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b14bca2da0506bc80d34.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-1224457f967653196a75",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-1224457f967653196a75.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-5f786d5e8a9219b88b0b",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-5f786d5e8a9219b88b0b.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-586fc6e1d53eb54053e5",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b6045b33a035b25ebc79",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-4a33cbeac7289ecd2186",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-0f855bd4136be326e6ad",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-6cbba2b44de2716b5d3e",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-de5b435af264dd907e63",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-de5b435af264dd907e63.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-2ecba48e7447484b2697",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-24a8ee9421c833df011d",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-34b85dbaaa2668416be8",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-7cf056e85990628ff84c",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-dcb24c79562a47c2d135",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bc47092575f59019e6a9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-d78e2a7f08030fdeb091",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-d78e2a7f08030fdeb091.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bf707560910d84650ecb",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bf707560910d84650ecb.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-fa76f1a5600679a881dc",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-fa76f1a5600679a881dc.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-0083f972d97e7d7aa1db",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-0083f972d97e7d7aa1db.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-2de5ba6e6841d8281839",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-2de5ba6e6841d8281839.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-ea86be5954aec64420a0",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-ea86be5954aec64420a0.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-283e765d72d4597345b9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-283e765d72d4597345b9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b999c97931ed5d3bde11",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b999c97931ed5d3bde11.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "src-a612102c7eff",
-          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/662457d5fff9dec2e6f1bb0dfbcec4842cc0f506.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {
-        "NewDevelopmentId": "10189300",
-        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
-        "Description": "<strong>Продается светлая 2-комнатная квартира 53.51 кв. м в доме бизнес-класса у парка «Сказка».</strong> Центр Западного: все рядом — школы, детские сады, магазины, парки. Удобный выезд на пр. Стачки, до центра города — 15 минут.<br><br><strong>🏠 О квартире:</strong><br>• Кухня правильной формы<br>• 2 изолированные комнаты<br>• Спальня с выходом на лоджию<br>• Совмещенный санузел<br>• Прихожая с нишей под гардероб<br>• 12 этаж<br>• Улучшенная черновая отделка: выполнена стяжка пола, установлены межкомнатные перегородки и остеклен балкон.<br><br><strong>🏢 О жилом комплексе:</strong><br>• Бизнес-класс: панорамное остекление, окна Рехау, потолки до 3 м, фасады с подсветкой<br>• Камерный проект: 411 квартир, секции от 6 этажей — приватность и тишина<br>• Закрытая территория с охраной, видеонаблюдением, «умный дом»<br>• Ландшафтный дизайн с автополивом, безопасные детские и спортплощадки<br>• Премиальные холлы, колясочные, скоростные лифты до паркинга<br>• Подземный паркинг с зарядками и гостевая парковка<br>• Современные планировки с просторными комнатами<br><br><strong>📍 Расположение:</strong><br>• «Концепция 5-минутного города» — все для жизни рядом: до ТЦ, МФЦ, кинотеатра и спортклуба — не более 5 минут.<br>• До школ и садика меньше 2 минут пешком, рядом поликлиника и Южный Федеральный университет.<br>• 3 зеленых парка в пешей доступности — «Сказка», «Плевен», «Аллея Роз».<br>• Обжитой зеленый район — нет плотной высотной застройки, приятно гулять и дышать.<br>• Удобный выезд на проспект Стачки, до центра Ростова — 15 минут.<br><br><strong>📞 Позвоните нам — менеджер отправит буклет ЖК «Орион» и каталог планировок!</strong>",
-        "Rooms": "2",
-        "BathroomMulti": [
-          "Совмещенный"
-        ],
-        "BalconyOrLoggiaMulti": [
-          "Лоджия"
-        ],
-        "LivingSpace": "24.66",
-        "KitchenSpace": "14.48",
-        "Courtyard": [
-          "Закрытая территория",
-          "Детская площадка",
-          "Спортивная площадка"
-        ],
-        "CeilingHeight": "3",
-        "NDAdditionally": [
-          "Панорамные окна"
-        ],
-        "Parking": [
-          "Подземная",
-          "За шлагбаумом во дворе"
-        ],
-        "PassengerElevator": "1",
-        "RoomType": [
-          "Изолированные"
-        ]
-      },
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "ApartmentNumber",
-        "Category",
-        "CompanyName",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "407635809",
-        "AdStatus": "Free",
-        "ContactPhone": "+7 (863) 333-26-38",
-        "ContactMethod": "По телефону",
-        "NewDevelopmentId": "10189300",
-        "Description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "Price": "9310740",
-        "Rooms": "2",
-        "Square": "53.51",
-        "Floor": "12",
-        "Floors": "20",
-        "HouseType": "Монолитный",
-        "MarketType": "Новостройка",
-        "PropertyRights": "Застройщик",
-        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
-        "ApartmentNumber": "125",
-        "Status": "Квартира",
-        "Decoration": "Без отделки",
-        "CompanyName": "Орион"
-      },
-      "source_description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
-      "excluded_from_feed": false
-    },
-    {
       "id": "407635661",
       "house_id": "10189300",
       "house": "Дом",
@@ -38887,6 +38661,7 @@
       "price": "9261430",
       "decoration": "Без отделки",
       "plan_id": "plan-3e4af95e551c",
+      "card_version": "64e94587fd42f4de",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635661.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635661.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635661.png",
@@ -39126,7 +38901,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635661/46edf4def3ccea8e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635661/64e94587fd42f4de.png",
           "kind": "generated"
         },
         {
@@ -39226,6 +39001,7 @@
       "price": "9379410",
       "decoration": "Без отделки",
       "plan_id": "plan-3e4af95e551c",
+      "card_version": "13ad8f6b20d5d1da",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635724.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635724.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635724.png",
@@ -39300,7 +39076,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635724/c5d6b3c6d1c3b55b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635724/13ad8f6b20d5d1da.png",
           "kind": "generated"
         },
         {
@@ -39565,6 +39341,7 @@
       "price": "9288120",
       "decoration": "Без отделки",
       "plan_id": "plan-afee313105d1",
+      "card_version": "ac71c2ff3ed252a1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635637.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635637.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635637.png",
@@ -39639,7 +39416,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635637/d041d1a71c6df6d5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635637/ac71c2ff3ed252a1.png",
           "kind": "generated"
         },
         {
@@ -39904,6 +39681,7 @@
       "price": "9441420",
       "decoration": "Без отделки",
       "plan_id": "plan-c00b8a60f598",
+      "card_version": "496c37f82c033607",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635736.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635736.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635736.png",
@@ -39978,7 +39756,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635736/58571a6ff53f2dbf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635736/496c37f82c033607.png",
           "kind": "generated"
         },
         {
@@ -40243,6 +40021,7 @@
       "price": "10671420",
       "decoration": "Без отделки",
       "plan_id": "plan-12e73f83d838",
+      "card_version": "888b8f514b3b501a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735957.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735957.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735957.png",
@@ -40482,7 +40261,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735957/3aa093478104cd97.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735957/888b8f514b3b501a.png",
           "kind": "generated"
         },
         {
@@ -40582,6 +40361,7 @@
       "price": "10671420",
       "decoration": "Без отделки",
       "plan_id": "plan-12e73f83d838",
+      "card_version": "9a31429d3083d191",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735962.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735962.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735962.png",
@@ -40821,7 +40601,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735962/3fe342c1409a86a5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735962/9a31429d3083d191.png",
           "kind": "generated"
         },
         {
@@ -40921,6 +40701,7 @@
       "price": "10763150",
       "decoration": "Без отделки",
       "plan_id": "plan-0fa77e1f17dd",
+      "card_version": "5ac349a066655fc0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636050.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636050.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636050.png",
@@ -40995,7 +40776,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636050/0b3538e432105ef2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636050/5ac349a066655fc0.png",
           "kind": "generated"
         },
         {
@@ -41260,6 +41041,7 @@
       "price": "10766490",
       "decoration": "Без отделки",
       "plan_id": "plan-428e7b2a9a03",
+      "card_version": "a29df9768be1caec",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636038.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636038.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636038.png",
@@ -41499,7 +41281,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636038/cb828b9bd7d0af32.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636038/a29df9768be1caec.png",
           "kind": "generated"
         },
         {
@@ -41599,6 +41381,7 @@
       "price": "10660000",
       "decoration": "Без отделки",
       "plan_id": "plan-91efb7aed103",
+      "card_version": "9a669ac2edcea1e1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636049.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636049.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636049.png",
@@ -41673,7 +41456,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636049/5077a71f531d9d35.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636049/9a669ac2edcea1e1.png",
           "kind": "generated"
         },
         {
@@ -41938,6 +41721,7 @@
       "price": "10790000",
       "decoration": "Без отделки",
       "plan_id": "plan-91efb7aed103",
+      "card_version": "91aea508da7e9840",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636059.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636059.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636059.png",
@@ -42177,7 +41961,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636059/c39211053d013bcb.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636059/91aea508da7e9840.png",
           "kind": "generated"
         },
         {
@@ -42277,6 +42061,7 @@
       "price": "10790000",
       "decoration": "Без отделки",
       "plan_id": "plan-91efb7aed103",
+      "card_version": "37f9b2a185b40bca",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636069.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636069.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636069.png",
@@ -42351,7 +42136,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636069/aee41b73fc0fa5fc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636069/37f9b2a185b40bca.png",
           "kind": "generated"
         },
         {
@@ -42616,6 +42401,7 @@
       "price": "10702640",
       "decoration": "Без отделки",
       "plan_id": "plan-8f2340d5325b",
+      "card_version": "04c6ee66894d77af",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636037.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636037.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636037.png",
@@ -42690,7 +42476,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636037/17c95ea8b0cc38e1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636037/04c6ee66894d77af.png",
           "kind": "generated"
         },
         {
@@ -42955,6 +42741,7 @@
       "price": "10834820",
       "decoration": "Без отделки",
       "plan_id": "plan-b697ed12af24",
+      "card_version": "4cddce3e29e72bbf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636067.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636067.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636067.png",
@@ -43029,7 +42816,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636067/bbfa239dc8e6b71a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636067/4cddce3e29e72bbf.png",
           "kind": "generated"
         },
         {
@@ -43294,6 +43081,7 @@
       "price": "10965360",
       "decoration": "Без отделки",
       "plan_id": "plan-b697ed12af24",
+      "card_version": "5c7f0b1cedc901e6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407636077.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407636077.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407636077.png",
@@ -43533,7 +43321,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636077/a4cf1a518833d4ab.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407636077/5c7f0b1cedc901e6.png",
           "kind": "generated"
         },
         {
@@ -43633,6 +43421,7 @@
       "price": "11001960",
       "decoration": "Без отделки",
       "plan_id": "plan-8fc52a3d1149",
+      "card_version": "11f9870be7aa77b9",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735913.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735913.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735913.png",
@@ -43707,7 +43496,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735913/898d1778aab25b70.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735913/11f9870be7aa77b9.png",
           "kind": "generated"
         },
         {
@@ -43972,6 +43761,7 @@
       "price": "11028680",
       "decoration": "Без отделки",
       "plan_id": "plan-2fb34bbd5dd8",
+      "card_version": "c895ab9ab206fd79",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735918.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735918.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735918.png",
@@ -44046,7 +43836,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735918/1896502bd7e11b45.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735918/c895ab9ab206fd79.png",
           "kind": "generated"
         },
         {
@@ -44311,6 +44101,7 @@
       "price": "11213300",
       "decoration": "Без отделки",
       "plan_id": "plan-fd3588f42b1c",
+      "card_version": "376779552e604e0b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735932.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735932.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735932.png",
@@ -44550,7 +44341,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735932/ea61add2b6666fa6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735932/376779552e604e0b.png",
           "kind": "generated"
         },
         {
@@ -44650,6 +44441,7 @@
       "price": "11213300",
       "decoration": "Без отделки",
       "plan_id": "plan-fd3588f42b1c",
+      "card_version": "5fd45c5b19c71172",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735937.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735937.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735937.png",
@@ -44889,7 +44681,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735937/62a14fe802c487dc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735937/5fd45c5b19c71172.png",
           "kind": "generated"
         },
         {
@@ -44989,6 +44781,7 @@
       "price": "11094600",
       "decoration": "Без отделки",
       "plan_id": "plan-ff5d47e1b4c8",
+      "card_version": "cab4cfc57134b291",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735917.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735917.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735917.png",
@@ -45228,7 +45021,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735917/d1fff7cc83ce881d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735917/cab4cfc57134b291.png",
           "kind": "generated"
         },
         {
@@ -45328,6 +45121,7 @@
       "price": "11716920",
       "decoration": "Без отделки",
       "plan_id": "plan-48a8e2fecb2d",
+      "card_version": "c986a0108a487ccc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735943.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735943.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735943.png",
@@ -45567,7 +45361,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735943/fc34eb5ffaf83912.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735943/c986a0108a487ccc.png",
           "kind": "generated"
         },
         {
@@ -45667,6 +45461,7 @@
       "price": "11776800",
       "decoration": "Без отделки",
       "plan_id": "plan-35ac9636bb94",
+      "card_version": "a1477c38b8c7937a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735942.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735942.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735942.png",
@@ -45906,7 +45701,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735942/7b51d6f365fb3e1a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735942/a1477c38b8c7937a.png",
           "kind": "generated"
         },
         {
@@ -46006,6 +45801,7 @@
       "price": "11794300",
       "decoration": "Без отделки",
       "plan_id": "plan-3b78d9c46494",
+      "card_version": "575fbdf5fd08fe6d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735921.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735921.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735921.png",
@@ -46245,7 +46041,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735921/6ed59ff94d5471dd.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735921/575fbdf5fd08fe6d.png",
           "kind": "generated"
         },
         {
@@ -46345,6 +46141,7 @@
       "price": "11936400",
       "decoration": "Без отделки",
       "plan_id": "plan-3b78d9c46494",
+      "card_version": "12f6fe43ac20a48a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735926.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735926.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735926.png",
@@ -46584,7 +46381,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735926/99ef974a50a4f509.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735926/12f6fe43ac20a48a.png",
           "kind": "generated"
         },
         {
@@ -46684,6 +46481,7 @@
       "price": "11936400",
       "decoration": "Без отделки",
       "plan_id": "plan-3b78d9c46494",
+      "card_version": "9fedca97994ab36f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735931.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735931.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735931.png",
@@ -46758,7 +46556,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735931/fba72c541c1c1005.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735931/9fedca97994ab36f.png",
           "kind": "generated"
         },
         {
@@ -47023,6 +46821,7 @@
       "price": "11809240",
       "decoration": "Без отделки",
       "plan_id": "plan-30df37172897",
+      "card_version": "72297770cd884f46",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735916.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735916.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735916.png",
@@ -47262,7 +47061,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735916/4798bb5f4b020b12.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735916/72297770cd884f46.png",
           "kind": "generated"
         },
         {
@@ -47362,6 +47161,7 @@
       "price": "11793240",
       "decoration": "Без отделки",
       "plan_id": "plan-623379a941b4",
+      "card_version": "582af483cbdc4c87",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735915.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735915.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735915.png",
@@ -47436,7 +47236,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735915/acd4a0a863e1172d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735915/582af483cbdc4c87.png",
           "kind": "generated"
         },
         {
@@ -47691,345 +47491,6 @@
       "excluded_from_feed": false
     },
     {
-      "id": "407735920",
-      "house_id": "10189300",
-      "house": "Дом",
-      "rooms": "2",
-      "area": "72.25",
-      "floor": "2",
-      "floors": "12",
-      "price": "11849000",
-      "decoration": "Без отделки",
-      "plan_id": "plan-9ee73b1c3184",
-      "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735920.webp",
-      "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735920.webp",
-      "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735920.png",
-      "promotion": {
-        "rule_id": "promotion-1793964350839",
-        "name": "Ипотека без ПВ",
-        "label": "Ипотека",
-        "text": "без ПЕРВОГО ВЗНОСА"
-      },
-      "source_images": [
-        {
-          "id": "src-0d870e9eb8c0",
-          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/c3538739f6a25622443116f6b67e513553ed6fbe.jpg",
-          "position": 1
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "position": 2
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "position": 3
-        },
-        {
-          "id": "src-7cab611efc16",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/0cb4d9d740a14d7b89b065cbb46a7bbd5ce6c34d.jpg",
-          "position": 4
-        },
-        {
-          "id": "src-9d5328ff27f7",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/25f014994d4e5f858c67a52bf173bb633661e998.jpg",
-          "position": 5
-        },
-        {
-          "id": "src-37ea5d298181",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/8a64ca55a732a23ccb5dcf06bf5f4ff27ecabfed.jpg",
-          "position": 6
-        },
-        {
-          "id": "src-a8e124ab67c8",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7521f9490c617dcf3b47943c3d792713110b0236.jpg",
-          "position": 7
-        },
-        {
-          "id": "src-122880f50bee",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/e0f7c988ce7d3db267eed01f5ce8ce7cdd7d9550.jpg",
-          "position": 8
-        },
-        {
-          "id": "src-72809fab8046",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/6de639819fa22df8d764aa237eec57af4b6fbe9b.jpg",
-          "position": 9
-        },
-        {
-          "id": "src-08c7a6610b27",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c0fb49722606feed422aa24de428af3c98cfdd89.jpg",
-          "position": 10
-        },
-        {
-          "id": "src-5c8508a9b0ed",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/c2fb1a322df1c06c64ff418793f6f09d9a2176a8.jpg",
-          "position": 11
-        },
-        {
-          "id": "src-26f7b8b3e333",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/31d5c5b5a01f87311a154c0fb123bd04c87eb3fa.jpg",
-          "position": 12
-        }
-      ],
-      "feed_images": [
-        {
-          "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735920/b292d19b7e1e2bd4.png",
-          "kind": "generated"
-        },
-        {
-          "id": "src-076d776e1543",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/15/0c42b48ae5bae8c172f0543527259668e278a618.jpeg",
-          "kind": "source"
-        },
-        {
-          "id": "src-90e6a4ccf8d6",
-          "url": "https://maximum.abc-dev.ru/storage/2024/05/17/7ddb76ed7d38321867cae73ab11cf19d013e2fcc.jpg",
-          "kind": "source"
-        },
-        {
-          "id": "lib-470d3ee26ec1974929f9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-470d3ee26ec1974929f9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-e4c4ab70737295056605",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-e4c4ab70737295056605.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bc0a1613a01c76e80a59",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bc0a1613a01c76e80a59.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-00e95c9daf254f4f2a98",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-00e95c9daf254f4f2a98.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-531324681ac44bdfc656",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-531324681ac44bdfc656.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-5f7ae6df27c49e5d71f1",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-5f7ae6df27c49e5d71f1.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-74be2254ce52984aa93c",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-74be2254ce52984aa93c.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-ae03d5b0452296f9f397",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-ae03d5b0452296f9f397.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b14bca2da0506bc80d34",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b14bca2da0506bc80d34.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-1224457f967653196a75",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-1224457f967653196a75.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-5f786d5e8a9219b88b0b",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-5f786d5e8a9219b88b0b.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-586fc6e1d53eb54053e5",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-586fc6e1d53eb54053e5.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b6045b33a035b25ebc79",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b6045b33a035b25ebc79.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-4a33cbeac7289ecd2186",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-4a33cbeac7289ecd2186.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-0f855bd4136be326e6ad",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-0f855bd4136be326e6ad.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-6cbba2b44de2716b5d3e",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-6cbba2b44de2716b5d3e.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-de5b435af264dd907e63",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-de5b435af264dd907e63.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-2ecba48e7447484b2697",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-2ecba48e7447484b2697.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-24a8ee9421c833df011d",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-24a8ee9421c833df011d.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-34b85dbaaa2668416be8",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-34b85dbaaa2668416be8.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-7cf056e85990628ff84c",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-7cf056e85990628ff84c.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-dcb24c79562a47c2d135",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-dcb24c79562a47c2d135.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bc47092575f59019e6a9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bc47092575f59019e6a9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-d78e2a7f08030fdeb091",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-d78e2a7f08030fdeb091.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-bf707560910d84650ecb",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-bf707560910d84650ecb.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-fa76f1a5600679a881dc",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-fa76f1a5600679a881dc.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-0083f972d97e7d7aa1db",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-0083f972d97e7d7aa1db.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-2de5ba6e6841d8281839",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-2de5ba6e6841d8281839.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-ea86be5954aec64420a0",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-ea86be5954aec64420a0.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-283e765d72d4597345b9",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-283e765d72d4597345b9.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "lib-b999c97931ed5d3bde11",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/uploads/orion/library/lib-b999c97931ed5d3bde11.jpg",
-          "kind": "bulk-added"
-        },
-        {
-          "id": "src-0d870e9eb8c0",
-          "url": "https://maximum.abc-dev.ru/storage/2025/07/25/c3538739f6a25622443116f6b67e513553ed6fbe.jpg",
-          "kind": "source"
-        }
-      ],
-      "feed_parameters": {
-        "NewDevelopmentId": "10189300",
-        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
-        "Description": "<strong>Продается светлая евро 3-комнатная квартира 72.25 кв. м в доме бизнес-класса у парка «Сказка».</strong> Центр Западного: все рядом — школы, детские сады, магазины, парки. Удобный выезд на пр. Стачки, до центра города — 15 минут.<br><br><strong>🏠 О квартире:</strong><br>• Кухня-гостиная 20 кв. м с выходом на лоджию<br>• Планировка «бабочка»<br>• 2 отдельные спальни<br>• 2 санузла<br>• Прихожая с местом под гардероб<br>• 2 этаж<br>• Улучшенная черновая отделка: выполнена стяжка пола, установлены межкомнатные перегородки и остеклен балкон.<br><br><strong>🏢 О жилом комплексе:</strong><br>• Бизнес-класс: панорамное остекление, окна Рехау, потолки до 3 м, фасады с подсветкой<br>• Камерный проект: 411 квартир, секции от 6 этажей — приватность и тишина<br>• Закрытая территория с охраной, видеонаблюдением, «умный дом»<br>• Ландшафтный дизайн с автополивом, безопасные детские и спортплощадки<br>• Премиальные холлы, колясочные, скоростные лифты до паркинга<br>• Подземный паркинг с зарядками и гостевая парковка<br>• Современные планировки с просторными комнатами<br><br><strong>📍 Расположение:</strong><br>• «Концепция 5-минутного города» — все для жизни рядом: до ТЦ, МФЦ, кинотеатра и спортклуба — не более 5 минут.<br>• До школ и садика меньше 2 минут пешком, рядом поликлиника и Южный Федеральный университет.<br>• 3 зеленых парка в пешей доступности — «Сказка», «Плевен», «Аллея Роз».<br>• Обжитой зеленый район — нет плотной высотной застройки, приятно гулять и дышать.<br>• Удобный выезд на проспект Стачки, до центра Ростова — 15 минут.<br><br><strong>📞 Позвоните нам — менеджер отправит буклет ЖК «Орион» и каталог планировок!</strong>",
-        "Rooms": "2",
-        "BathroomMulti": [
-          "Раздельный"
-        ],
-        "BalconyOrLoggiaMulti": [
-          "Лоджия"
-        ],
-        "Courtyard": [
-          "Закрытая территория",
-          "Детская площадка",
-          "Спортивная площадка"
-        ],
-        "CeilingHeight": "3",
-        "NDAdditionally": [
-          "Панорамные окна"
-        ],
-        "Parking": [
-          "Подземная",
-          "За шлагбаумом во дворе"
-        ],
-        "PassengerElevator": "1",
-        "RoomType": [
-          "Изолированные"
-        ],
-        "LivingSpace": "42.94",
-        "KitchenSpace": "8.59"
-      },
-      "source_tags": [
-        "AdStatus",
-        "Address",
-        "ApartmentNumber",
-        "Category",
-        "CompanyName",
-        "ContactMethod",
-        "ContactPhone",
-        "Decoration",
-        "Description",
-        "Floor",
-        "Floors",
-        "HouseType",
-        "Id",
-        "MarketType",
-        "NewDevelopmentId",
-        "OperationType",
-        "Price",
-        "PropertyRights",
-        "Rooms",
-        "Square",
-        "Status"
-      ],
-      "source_values": {
-        "Id": "407735920",
-        "AdStatus": "Free",
-        "ContactPhone": "+7 (863) 333-26-38",
-        "ContactMethod": "По телефону",
-        "NewDevelopmentId": "10189300",
-        "Description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
-        "Category": "Квартиры",
-        "OperationType": "Продам",
-        "Price": "11849000",
-        "Rooms": "2",
-        "Square": "72.25",
-        "Floor": "2",
-        "Floors": "12",
-        "HouseType": "Монолитный",
-        "MarketType": "Новостройка",
-        "PropertyRights": "Застройщик",
-        "Address": "Ростовская область, Ростов-на-Дону, пр-т Стачки, д. 231/2",
-        "ApartmentNumber": "278",
-        "Status": "Квартира",
-        "Decoration": "Без отделки",
-        "CompanyName": "Орион"
-      },
-      "source_description": "ЖК «Орион» - это монолитно-каркасный дом бизнес-класса, который расположен по адресу проспект Стачки, д. 231/2.\r\nВентилируемый фасад здания придает дому минималистичный стиль, а также хорошо сохраняет тепло и способствует звукоизоляции, значительно сокращает затраты на отопление, а также устойчив к атмосферным воздействиям.\r\nВ квартирах нового ЖК всегда будет светло благодаря высоким потолкам, остеклению лоджий. С высотных этажей жилого комплекса открывается живописный вид на городские окрестности!\r\nЖК «Орион» расположен в Западном жилом массиве. Район с отлично развитой инфраструктурой, неподалеку есть зоны для прогулок, где можно приятно провести время. Для детей в шаговой доступности детские садики и школы.\r\n\r\nСоциальная и внутренняя инфраструктура:\r\nЖК «Орион» - полностью благоустроенный жилой комплекс.\r\nПридомовая территория с ландшафтным озеленением и зонами отдыха для детей и взрослых.\r\nДля детей и взрослых предусмотрены полностью оборудованные игровые и спортивные площадки с тренажерами.\r\nДля автовладельцев предусмотрен большой подземный паркинг с лифтовым спуском и системами пожаротушения.",
-      "excluded_from_feed": false
-    },
-    {
       "id": "407735941",
       "house_id": "10189300",
       "house": "Дом",
@@ -48040,6 +47501,7 @@
       "price": "12542600",
       "decoration": "Без отделки",
       "plan_id": "plan-66a3e8146e62",
+      "card_version": "dd35009d08dfa386",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735941.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735941.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735941.png",
@@ -48114,7 +47576,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735941/3ebdeed020bbb6a0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735941/dd35009d08dfa386.png",
           "kind": "generated"
         },
         {
@@ -48379,6 +47841,7 @@
       "price": "12579840",
       "decoration": "Без отделки",
       "plan_id": "plan-83c0b503468f",
+      "card_version": "982e864b5af64e23",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735945.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735945.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735945.png",
@@ -48453,7 +47916,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735945/1cbcc88229418227.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735945/982e864b5af64e23.png",
           "kind": "generated"
         },
         {
@@ -48718,6 +48181,7 @@
       "price": "12733000",
       "decoration": "Без отделки",
       "plan_id": "plan-3f98cf5982e0",
+      "card_version": "50c442b73c115a70",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735964.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735964.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735964.png",
@@ -48792,7 +48256,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735964/eb3a19a2ced7e15a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735964/50c442b73c115a70.png",
           "kind": "generated"
         },
         {
@@ -49057,6 +48521,7 @@
       "price": "12583200",
       "decoration": "Без отделки",
       "plan_id": "plan-3f98cf5982e0",
+      "card_version": "339c895962cc262a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735969.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735969.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735969.png",
@@ -49131,7 +48596,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735969/8cdcc4953d1ebc92.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735969/339c895962cc262a.png",
           "kind": "generated"
         },
         {
@@ -49396,6 +48861,7 @@
       "price": "12509920",
       "decoration": "Без отделки",
       "plan_id": "plan-15b0790014ae",
+      "card_version": "b541d49074bd0ded",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407735912.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407735912.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407735912.png",
@@ -49635,7 +49101,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735912/00cdd41cf6ccda94.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407735912/b541d49074bd0ded.png",
           "kind": "generated"
         },
         {
@@ -49735,6 +49201,7 @@
       "price": "13599270",
       "decoration": "Без отделки",
       "plan_id": "plan-1002b7d57f34",
+      "card_version": "e87b68d0c30001d8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635839.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635839.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635839.png",
@@ -49974,7 +49441,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635839/d1ad190ca0e4ffc0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635839/e87b68d0c30001d8.png",
           "kind": "generated"
         },
         {
@@ -50074,6 +49541,7 @@
       "price": "13513740",
       "decoration": "Без отделки",
       "plan_id": "plan-1002b7d57f34",
+      "card_version": "5ca586347889fde3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635875.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635875.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635875.png",
@@ -50313,7 +49781,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635875/34166bb107a95da1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635875/5ca586347889fde3.png",
           "kind": "generated"
         },
         {
@@ -50413,6 +49881,7 @@
       "price": "13513740",
       "decoration": "Без отделки",
       "plan_id": "plan-1002b7d57f34",
+      "card_version": "cef28dbe64004d6c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635887.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635887.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635887.png",
@@ -50487,7 +49956,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635887/2158731e5642c063.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635887/cef28dbe64004d6c.png",
           "kind": "generated"
         },
         {
@@ -50752,6 +50221,7 @@
       "price": "13551660",
       "decoration": "Без отделки",
       "plan_id": "plan-699da72bcf4b",
+      "card_version": "63db795076525c80",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635791.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635791.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635791.png",
@@ -50991,7 +50461,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635791/02c8537ca4ab98f0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635791/63db795076525c80.png",
           "kind": "generated"
         },
         {
@@ -51091,6 +50561,7 @@
       "price": "13220730",
       "decoration": "Без отделки",
       "plan_id": "plan-b15170fda3eb",
+      "card_version": "b7476450789b92d6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635630.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635630.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635630.png",
@@ -51330,7 +50801,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635630/2a4f23932917a452.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635630/b7476450789b92d6.png",
           "kind": "generated"
         },
         {
@@ -51430,6 +50901,7 @@
       "price": "13307140",
       "decoration": "Без отделки",
       "plan_id": "plan-b15170fda3eb",
+      "card_version": "541ba085030cf9bc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635719.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635719.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635719.png",
@@ -51669,7 +51141,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635719/ba71a1a686ea8cdf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635719/541ba085030cf9bc.png",
           "kind": "generated"
         },
         {
@@ -51769,6 +51241,7 @@
       "price": "14459730",
       "decoration": "Без отделки",
       "plan_id": "plan-ab6e428ed4f1",
+      "card_version": "c6c419f3728413ae",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635832.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635832.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635832.png",
@@ -51843,7 +51316,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635832/b8202ae84b740f97.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635832/c6c419f3728413ae.png",
           "kind": "generated"
         },
         {
@@ -52108,6 +51581,7 @@
       "price": "14037370",
       "decoration": "Без отделки",
       "plan_id": "plan-3fada10e5473",
+      "card_version": "0ba3640d49d9f958",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635828.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635828.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635828.png",
@@ -52182,7 +51656,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635828/85502405776eec90.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635828/0ba3640d49d9f958.png",
           "kind": "generated"
         },
         {
@@ -52447,6 +51921,7 @@
       "price": "14037370",
       "decoration": "Без отделки",
       "plan_id": "plan-3fada10e5473",
+      "card_version": "28bfe22a9e4f4e17",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635840.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635840.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635840.png",
@@ -52686,7 +52161,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635840/fdab23c9f53e5af4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635840/28bfe22a9e4f4e17.png",
           "kind": "generated"
         },
         {
@@ -52786,6 +52261,7 @@
       "price": "13947960",
       "decoration": "Без отделки",
       "plan_id": "plan-3fada10e5473",
+      "card_version": "d47dc40f41ce5ead",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635876.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635876.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635876.png",
@@ -53025,7 +52501,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635876/a833fe5f6f9a3667.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635876/d47dc40f41ce5ead.png",
           "kind": "generated"
         },
         {
@@ -53125,6 +52601,7 @@
       "price": "13947960",
       "decoration": "Без отделки",
       "plan_id": "plan-3fada10e5473",
+      "card_version": "4fe4414383936822",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635888.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635888.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635888.png",
@@ -53199,7 +52676,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635888/f202d138a16365ba.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635888/4fe4414383936822.png",
           "kind": "generated"
         },
         {
@@ -53464,6 +52941,7 @@
       "price": "13769140",
       "decoration": "Без отделки",
       "plan_id": "plan-3fada10e5473",
+      "card_version": "ddfbddf6a440766c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635900.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635900.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635900.png",
@@ -53538,7 +53016,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635900/f9e95ff660875f28.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635900/ddfbddf6a440766c.png",
           "kind": "generated"
         },
         {
@@ -53803,6 +53281,7 @@
       "price": "13979160",
       "decoration": "Без отделки",
       "plan_id": "plan-434debc7d32d",
+      "card_version": "d81412d5574c0ccd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635780.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635780.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635780.png",
@@ -54042,7 +53521,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635780/2d6a47e5ea4e943f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635780/d81412d5574c0ccd.png",
           "kind": "generated"
         },
         {
@@ -54142,6 +53621,7 @@
       "price": "13979160",
       "decoration": "Без отделки",
       "plan_id": "plan-434debc7d32d",
+      "card_version": "a4644372843422c1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/orion/previews/407635792.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/orion/thumbnails/407635792.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/orion/images/407635792.png",
@@ -54381,7 +53861,7 @@
         },
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635792/d97034f8de6793d9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/orion/images/407635792/a4644372843422c1.png",
           "kind": "generated"
         },
         {

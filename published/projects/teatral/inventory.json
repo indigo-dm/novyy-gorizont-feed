@@ -1,7 +1,7 @@
 {
   "slug": "teatral",
   "project": "ЖК Театрал",
-  "checked_at": "2026-11-18T05:56:24+03:00",
+  "checked_at": "2026-11-18T19:52:30+03:00",
   "source_ads": 20,
   "full_ads": 20,
   "excluded_ads": 0,
@@ -238,6 +238,7 @@
       "price": "14472000",
       "decoration": "Без отделки",
       "plan_id": "plan-7aae14107c6a",
+      "card_version": "def1dbae68d15fe3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479461.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479461.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479461.png",
@@ -297,7 +298,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479461/9e19b94799b3b34d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479461/def1dbae68d15fe3.png",
           "kind": "generated"
         },
         {
@@ -422,6 +423,7 @@
       "price": "17010000",
       "decoration": "Без отделки",
       "plan_id": "plan-1a8655c613bb",
+      "card_version": "be8272a82bd5cadf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479545.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479545.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479545.png",
@@ -481,7 +483,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479545/4f29d7e116ecdd49.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479545/be8272a82bd5cadf.png",
           "kind": "generated"
         },
         {
@@ -607,6 +609,7 @@
       "price": "17058600",
       "decoration": "Без отделки",
       "plan_id": "plan-fdab7ad4fcca",
+      "card_version": "2e7be72dfc9a9fbc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479550.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479550.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479550.png",
@@ -666,7 +669,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479550/3c8b08ba524a8c38.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479550/2e7be72dfc9a9fbc.png",
           "kind": "generated"
         },
         {
@@ -792,6 +795,7 @@
       "price": "17199000",
       "decoration": "Без отделки",
       "plan_id": "plan-fdab7ad4fcca",
+      "card_version": "fc7aff857ed9d5b8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479560.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479560.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479560.png",
@@ -851,7 +855,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479560/a4f85adc8d9eb042.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479560/fc7aff857ed9d5b8.png",
           "kind": "generated"
         },
         {
@@ -977,6 +981,7 @@
       "price": "17180100",
       "decoration": "Без отделки",
       "plan_id": "plan-77e0f0e577fb",
+      "card_version": "631467ebf3ef52f1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479540.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479540.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479540.png",
@@ -1036,7 +1041,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479540/8d01b54521dc01f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479540/631467ebf3ef52f1.png",
           "kind": "generated"
         },
         {
@@ -1162,6 +1167,7 @@
       "price": "21923200",
       "decoration": "Без отделки",
       "plan_id": "plan-0802fc878438",
+      "card_version": "4cb7f3b2a37a3261",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479454.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479454.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479454.png",
@@ -1221,7 +1227,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479454/222b9e45e65e0f9a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479454/4cb7f3b2a37a3261.png",
           "kind": "generated"
         },
         {
@@ -1347,6 +1353,7 @@
       "price": "20516000",
       "decoration": "Без отделки",
       "plan_id": "plan-4a207bb71294",
+      "card_version": "3cea2ad580d22be2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479448.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479448.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479448.png",
@@ -1406,7 +1413,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479448/fe6435fd3c7fb88c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479448/3cea2ad580d22be2.png",
           "kind": "generated"
         },
         {
@@ -1531,6 +1538,7 @@
       "price": "24138000",
       "decoration": "Без отделки",
       "plan_id": "plan-ed875b5467e4",
+      "card_version": "6a165601e9a27488",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479496.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479496.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479496.png",
@@ -1590,7 +1598,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479496/cadec052418a891b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479496/6a165601e9a27488.png",
           "kind": "generated"
         },
         {
@@ -1716,6 +1724,7 @@
       "price": "22220800",
       "decoration": "Без отделки",
       "plan_id": "plan-cfe44fa590d5",
+      "card_version": "f3a15f3b159b4d39",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479460.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479460.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479460.png",
@@ -1775,7 +1784,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479460/1d090eb1dcbdac11.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479460/f3a15f3b159b4d39.png",
           "kind": "generated"
         },
         {
@@ -1901,6 +1910,7 @@
       "price": "23744000",
       "decoration": "Без отделки",
       "plan_id": "plan-cfe44fa590d5",
+      "card_version": "afd75421d033b0fb",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479478.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479478.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479478.png",
@@ -1960,7 +1970,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479478/3b9783555fe3a2de.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479478/afd75421d033b0fb.png",
           "kind": "generated"
         },
         {
@@ -2085,6 +2095,7 @@
       "price": "23320000",
       "decoration": "Без отделки",
       "plan_id": "plan-351c669efcb9",
+      "card_version": "7e62f1737eb41125",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479549.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479549.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479549.png",
@@ -2144,7 +2155,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479549/415e697dced73a53.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479549/7e62f1737eb41125.png",
           "kind": "generated"
         },
         {
@@ -2270,6 +2281,7 @@
       "price": "30397709",
       "decoration": "Без отделки",
       "plan_id": "plan-af2718f0245b",
+      "card_version": "bf9bf2955b89ea1a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479544.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479544.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479544.png",
@@ -2329,7 +2341,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479544/2769240b7233fcee.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479544/bf9bf2955b89ea1a.png",
           "kind": "generated"
         },
         {
@@ -2452,6 +2464,7 @@
       "price": "28644000",
       "decoration": "Без отделки",
       "plan_id": "plan-f17472d331ac",
+      "card_version": "cc906fea9f1dd25f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479480.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479480.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479480.png",
@@ -2511,7 +2524,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479480/64b886a7af85f2e8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479480/cc906fea9f1dd25f.png",
           "kind": "generated"
         },
         {
@@ -2637,6 +2650,7 @@
       "price": "28666000",
       "decoration": "Без отделки",
       "plan_id": "plan-074b209776f7",
+      "card_version": "cca6e9aef51391a2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479462.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479462.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479462.png",
@@ -2696,7 +2710,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479462/1300e890a2a1e501.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479462/cca6e9aef51391a2.png",
           "kind": "generated"
         },
         {
@@ -2822,6 +2836,7 @@
       "price": "29317500",
       "decoration": "Без отделки",
       "plan_id": "plan-074b209776f7",
+      "card_version": "4aeaff9e5083ed03",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479492.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479492.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479492.png",
@@ -2881,7 +2896,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479492/72a0c9eb3bc19aac.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479492/4aeaff9e5083ed03.png",
           "kind": "generated"
         },
         {
@@ -3007,6 +3022,7 @@
       "price": "28710000",
       "decoration": "Без отделки",
       "plan_id": "plan-3bff3bd90114",
+      "card_version": "d988de41015fca45",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479468.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479468.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479468.png",
@@ -3066,7 +3082,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479468/25adc4101c83280c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479468/d988de41015fca45.png",
           "kind": "generated"
         },
         {
@@ -3192,6 +3208,7 @@
       "price": "28710000",
       "decoration": "Без отделки",
       "plan_id": "plan-3bff3bd90114",
+      "card_version": "b6558693f8f4f1d3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479474.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479474.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479474.png",
@@ -3251,7 +3268,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479474/2ec66dd72f7dfd33.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479474/b6558693f8f4f1d3.png",
           "kind": "generated"
         },
         {
@@ -3377,6 +3394,7 @@
       "price": "29385000",
       "decoration": "Без отделки",
       "plan_id": "plan-f8fbc0c790ae",
+      "card_version": "0350c924608a0bef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479504.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479504.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479504.png",
@@ -3436,7 +3454,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479504/3a73259bcaf9ece9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479504/0350c924608a0bef.png",
           "kind": "generated"
         },
         {
@@ -3562,6 +3580,7 @@
       "price": "29385000",
       "decoration": "Без отделки",
       "plan_id": "plan-f8fbc0c790ae",
+      "card_version": "3ae4fc9f38f7abae",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479510.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479510.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479510.png",
@@ -3621,7 +3640,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479510/017783d5bb1ad598.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479510/3ae4fc9f38f7abae.png",
           "kind": "generated"
         },
         {
@@ -3747,6 +3766,7 @@
       "price": "28952000",
       "decoration": "Без отделки",
       "plan_id": "plan-98fb4304458d",
+      "card_version": "53bc4c5c63180414",
       "image": "https://feed-api.indigo-dm.ru/media/projects/teatral/previews/10479450.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/teatral/thumbnails/10479450.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/teatral/images/10479450.png",
@@ -3806,7 +3826,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479450/dbebc4e181cea9f9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/teatral/images/10479450/53bc4c5c63180414.png",
           "kind": "generated"
         },
         {

@@ -1,7 +1,7 @@
 {
   "slug": "truda-12-3",
   "project": "ЖК Труда 12/3",
-  "checked_at": "2026-11-18T05:56:18+03:00",
+  "checked_at": "2026-11-19T05:50:16+03:00",
   "source_ads": 17,
   "full_ads": 17,
   "excluded_ads": 0,
@@ -231,6 +231,7 @@
       "price": "6800000",
       "decoration": "Без отделки",
       "plan_id": "plan-ff4fd906cff2",
+      "card_version": "125b85b21c83a88a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597052.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597052.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597052.png",
@@ -275,7 +276,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597052/3bc5f15291bdcd04.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597052/125b85b21c83a88a.png",
           "kind": "generated"
         },
         {
@@ -375,6 +376,7 @@
       "price": "7826000",
       "decoration": "Без отделки",
       "plan_id": "plan-23316703296f",
+      "card_version": "c20a2436aa1b5117",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597038.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597038.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597038.png",
@@ -419,7 +421,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597038/2a2b1255d387dc90.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597038/c20a2436aa1b5117.png",
           "kind": "generated"
         },
         {
@@ -519,6 +521,7 @@
       "price": "7826000",
       "decoration": "Без отделки",
       "plan_id": "plan-23316703296f",
+      "card_version": "9e32f8f60c264ee8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597044.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597044.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597044.png",
@@ -563,7 +566,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597044/19da17d9ec21d091.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597044/9e32f8f60c264ee8.png",
           "kind": "generated"
         },
         {
@@ -663,6 +666,7 @@
       "price": "7826000",
       "decoration": "Без отделки",
       "plan_id": "plan-23316703296f",
+      "card_version": "2ce8a09d7bd176a4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597050.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597050.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597050.png",
@@ -707,7 +711,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597050/318b131605eb0e9d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597050/2ce8a09d7bd176a4.png",
           "kind": "generated"
         },
         {
@@ -807,6 +811,7 @@
       "price": "7840000",
       "decoration": "Без отделки",
       "plan_id": "plan-1bb02c686095",
+      "card_version": "28e7fe031fe76521",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597053.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597053.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597053.png",
@@ -851,7 +856,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597053/e112179bb37a5dd9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597053/28e7fe031fe76521.png",
           "kind": "generated"
         },
         {
@@ -951,6 +956,7 @@
       "price": "8410500",
       "decoration": "Без отделки",
       "plan_id": "plan-5f41a1a50f13",
+      "card_version": "a65ad6cadbeebdc1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597030.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597030.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597030.png",
@@ -995,7 +1001,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597030/c604835e1a01a208.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597030/a65ad6cadbeebdc1.png",
           "kind": "generated"
         },
         {
@@ -1095,6 +1101,7 @@
       "price": "8722000",
       "decoration": "Без отделки",
       "plan_id": "plan-5f41a1a50f13",
+      "card_version": "e135ca257a9be593",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597048.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597048.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597048.png",
@@ -1139,7 +1146,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597048/6314d14b0792a574.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597048/e135ca257a9be593.png",
           "kind": "generated"
         },
         {
@@ -1239,6 +1246,7 @@
       "price": "8722000",
       "decoration": "Без отделки",
       "plan_id": "plan-5f41a1a50f13",
+      "card_version": "34158acdd23590fc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597054.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597054.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597054.png",
@@ -1283,7 +1291,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597054/7b32b081838c6cba.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597054/34158acdd23590fc.png",
           "kind": "generated"
         },
         {
@@ -1383,6 +1391,7 @@
       "price": "8424000",
       "decoration": "Без отделки",
       "plan_id": "plan-80749daace23",
+      "card_version": "03ad826aa79722ad",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597025.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597025.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597025.png",
@@ -1427,7 +1436,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597025/0eb050954f687de9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597025/03ad826aa79722ad.png",
           "kind": "generated"
         },
         {
@@ -1527,6 +1536,7 @@
       "price": "8736000",
       "decoration": "Без отделки",
       "plan_id": "plan-80749daace23",
+      "card_version": "62d487a39aa448a3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597031.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597031.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597031.png",
@@ -1571,7 +1581,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597031/aad368e66d73841a.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597031/62d487a39aa448a3.png",
           "kind": "generated"
         },
         {
@@ -1671,6 +1681,7 @@
       "price": "8736000",
       "decoration": "Без отделки",
       "plan_id": "plan-80749daace23",
+      "card_version": "729c2ca9819ba7db",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597043.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597043.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597043.png",
@@ -1715,7 +1726,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597043/8d29ce25bf5879d7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597043/729c2ca9819ba7db.png",
           "kind": "generated"
         },
         {
@@ -1815,6 +1826,7 @@
       "price": "8736000",
       "decoration": "Без отделки",
       "plan_id": "plan-80749daace23",
+      "card_version": "3c6d7e68792ef5da",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597049.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597049.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597049.png",
@@ -1859,7 +1871,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597049/6eb685a070970549.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597049/3c6d7e68792ef5da.png",
           "kind": "generated"
         },
         {
@@ -1959,6 +1971,7 @@
       "price": "9571500",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "b118a35b30f74d8f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597010.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597010.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597010.png",
@@ -2003,7 +2016,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597010/4f6403f847327cdb.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597010/b118a35b30f74d8f.png",
           "kind": "generated"
         },
         {
@@ -2103,6 +2116,7 @@
       "price": "9571500",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "5cd974449283d4a3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597011.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597011.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597011.png",
@@ -2147,7 +2161,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597011/ffa8d244dfaa5820.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597011/5cd974449283d4a3.png",
           "kind": "generated"
         },
         {
@@ -2247,6 +2261,7 @@
       "price": "12325500",
       "decoration": "Без отделки",
       "plan_id": "plan-8581f5386c60",
+      "card_version": "8f00c73569ac3d17",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597013.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597013.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597013.png",
@@ -2291,7 +2306,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597013/dc854e25b884e1df.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597013/8f00c73569ac3d17.png",
           "kind": "generated"
         },
         {
@@ -2391,6 +2406,7 @@
       "price": "12325500",
       "decoration": "Без отделки",
       "plan_id": "plan-8581f5386c60",
+      "card_version": "d18f6a0bddd62396",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597020.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597020.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597020.png",
@@ -2435,7 +2451,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597020/18d7a6a6e396f88f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597020/d18f6a0bddd62396.png",
           "kind": "generated"
         },
         {
@@ -2535,6 +2551,7 @@
       "price": "12636000",
       "decoration": "Без отделки",
       "plan_id": "plan-f2290e0d1a03",
+      "card_version": "f124ddceb6cc18c5",
       "image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/previews/15597012.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/thumbnails/15597012.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/truda-12-3/images/15597012.png",
@@ -2579,7 +2596,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597012/3506b4a39ffd1d37.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/truda-12-3/images/15597012/f124ddceb6cc18c5.png",
           "kind": "generated"
         },
         {

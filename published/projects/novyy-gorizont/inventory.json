@@ -1,7 +1,7 @@
 {
   "slug": "novyy-gorizont",
   "project": "ЖК Новый Горизонт",
-  "checked_at": "2026-11-18T05:53:54+03:00",
+  "checked_at": "2026-11-19T05:50:25+03:00",
   "source_ads": 190,
   "full_ads": 190,
   "excluded_ads": 0,
@@ -235,6 +235,7 @@
       "price": "6163300",
       "decoration": "Без отделки",
       "plan_id": "plan-f0bd29313806",
+      "card_version": "6ddbbcb899314e3e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/9290600.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/9290600.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/9290600.png",
@@ -289,7 +290,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290600/2a6e321905414587.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290600/6ddbbcb899314e3e.png",
           "kind": "generated"
         },
         {
@@ -407,6 +408,7 @@
       "price": "7018000",
       "decoration": "Без отделки",
       "plan_id": "plan-df2727c4da38",
+      "card_version": "ddcaa7aaaaca334a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/9290769.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/9290769.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/9290769.png",
@@ -461,7 +463,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290769/c39c620f429b0381.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9290769/ddcaa7aaaaca334a.png",
           "kind": "generated"
         },
         {
@@ -579,6 +581,7 @@
       "price": "7249000",
       "decoration": "Без отделки",
       "plan_id": "plan-e1f213b220af",
+      "card_version": "6ec6d9a8e228e140",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/9301557.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/9301557.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/9301557.png",
@@ -633,7 +636,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301557/7ebf55436aebd525.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301557/6ec6d9a8e228e140.png",
           "kind": "generated"
         },
         {
@@ -751,6 +754,7 @@
       "price": "7470100",
       "decoration": "Без отделки",
       "plan_id": "plan-0ed69b13b1df",
+      "card_version": "c0fc476b3b000094",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/9301142.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/9301142.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/9301142.png",
@@ -805,7 +809,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301142/21fdd910c56f43c3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/9301142/c0fc476b3b000094.png",
           "kind": "generated"
         },
         {
@@ -923,6 +927,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "c4a39f64b94fea47",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923755.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923755.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923755.png",
@@ -977,7 +982,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923755/0dd2e9f6bbf7c450.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923755/c4a39f64b94fea47.png",
           "kind": "generated"
         },
         {
@@ -1093,6 +1098,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "5122b0bdc0c85df1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923860.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923860.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923860.png",
@@ -1147,7 +1153,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923860/c1e82e3192ffce07.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923860/5122b0bdc0c85df1.png",
           "kind": "generated"
         },
         {
@@ -1263,6 +1269,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "5ccea8034c8edb04",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923655.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923655.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923655.png",
@@ -1317,7 +1324,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923655/e3f89804ebe32917.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923655/5ccea8034c8edb04.png",
           "kind": "generated"
         },
         {
@@ -1433,6 +1440,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "ede4f3d955751db4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923760.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923760.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923760.png",
@@ -1487,7 +1495,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923760/42fa8db087ca51ff.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923760/ede4f3d955751db4.png",
           "kind": "generated"
         },
         {
@@ -1603,6 +1611,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "5ccea8034c8edb04",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923865.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923865.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923865.png",
@@ -1657,7 +1666,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923865/e3f89804ebe32917.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923865/5ccea8034c8edb04.png",
           "kind": "generated"
         },
         {
@@ -1773,6 +1782,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "5ccea8034c8edb04",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924075.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924075.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924075.png",
@@ -1827,7 +1837,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924075/e3f89804ebe32917.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924075/5ccea8034c8edb04.png",
           "kind": "generated"
         },
         {
@@ -1943,6 +1953,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "ede4f3d955751db4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924180.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924180.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924180.png",
@@ -1997,7 +2008,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924180/42fa8db087ca51ff.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924180/ede4f3d955751db4.png",
           "kind": "generated"
         },
         {
@@ -2113,6 +2124,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "5ccea8034c8edb04",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924285.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924285.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924285.png",
@@ -2167,7 +2179,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924285/e3f89804ebe32917.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924285/5ccea8034c8edb04.png",
           "kind": "generated"
         },
         {
@@ -2283,6 +2295,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "ede4f3d955751db4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924390.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924390.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924390.png",
@@ -2337,7 +2350,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924390/42fa8db087ca51ff.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924390/ede4f3d955751db4.png",
           "kind": "generated"
         },
         {
@@ -2453,6 +2466,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "b2ca58bf728c5e5a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923660.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923660.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923660.png",
@@ -2507,7 +2521,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923660/3a11b10d60aa065e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923660/b2ca58bf728c5e5a.png",
           "kind": "generated"
         },
         {
@@ -2623,6 +2637,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "3267cb483b2abc3b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923765.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923765.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923765.png",
@@ -2677,7 +2692,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923765/86c1a1f1b13db8a6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923765/3267cb483b2abc3b.png",
           "kind": "generated"
         },
         {
@@ -2793,6 +2808,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "b2ca58bf728c5e5a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923870.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923870.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923870.png",
@@ -2847,7 +2863,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923870/3a11b10d60aa065e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923870/b2ca58bf728c5e5a.png",
           "kind": "generated"
         },
         {
@@ -2963,6 +2979,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "3267cb483b2abc3b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923975.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923975.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923975.png",
@@ -3017,7 +3034,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923975/86c1a1f1b13db8a6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923975/3267cb483b2abc3b.png",
           "kind": "generated"
         },
         {
@@ -3133,6 +3150,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "b2ca58bf728c5e5a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924080.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924080.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924080.png",
@@ -3187,7 +3205,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924080/3a11b10d60aa065e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924080/b2ca58bf728c5e5a.png",
           "kind": "generated"
         },
         {
@@ -3303,6 +3321,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "3267cb483b2abc3b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924185.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924185.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924185.png",
@@ -3357,7 +3376,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924185/86c1a1f1b13db8a6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924185/3267cb483b2abc3b.png",
           "kind": "generated"
         },
         {
@@ -3473,6 +3492,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "3267cb483b2abc3b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924395.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924395.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924395.png",
@@ -3527,7 +3547,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924395/86c1a1f1b13db8a6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924395/3267cb483b2abc3b.png",
           "kind": "generated"
         },
         {
@@ -3643,6 +3663,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "d1488491f5799f3d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923875.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923875.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923875.png",
@@ -3697,7 +3718,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923875/90fa5b50a1cf0994.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923875/d1488491f5799f3d.png",
           "kind": "generated"
         },
         {
@@ -3813,6 +3834,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "d1488491f5799f3d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924085.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924085.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924085.png",
@@ -3867,7 +3889,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924085/90fa5b50a1cf0994.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924085/d1488491f5799f3d.png",
           "kind": "generated"
         },
         {
@@ -3983,6 +4005,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "9b63647ed9e128ce",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924190.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924190.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924190.png",
@@ -4037,7 +4060,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924190/d1d6ba3562aea91e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924190/9b63647ed9e128ce.png",
           "kind": "generated"
         },
         {
@@ -4153,6 +4176,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "d1488491f5799f3d",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924295.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924295.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924295.png",
@@ -4207,7 +4231,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924295/90fa5b50a1cf0994.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924295/d1488491f5799f3d.png",
           "kind": "generated"
         },
         {
@@ -4323,6 +4347,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "9b63647ed9e128ce",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924400.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924400.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924400.png",
@@ -4377,7 +4402,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924400/d1d6ba3562aea91e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924400/9b63647ed9e128ce.png",
           "kind": "generated"
         },
         {
@@ -4493,6 +4518,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "a6b307a92d4ff469",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923670.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923670.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923670.png",
@@ -4547,7 +4573,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923670/5ca6dc9f29e018f1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923670/a6b307a92d4ff469.png",
           "kind": "generated"
         },
         {
@@ -4663,6 +4689,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "565bd06b342a81e4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923775.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923775.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923775.png",
@@ -4717,7 +4744,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923775/6f5614ec82dbb9d0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923775/565bd06b342a81e4.png",
           "kind": "generated"
         },
         {
@@ -4833,6 +4860,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "a6b307a92d4ff469",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924090.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924090.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924090.png",
@@ -4887,7 +4915,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924090/5ca6dc9f29e018f1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924090/a6b307a92d4ff469.png",
           "kind": "generated"
         },
         {
@@ -5003,6 +5031,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "565bd06b342a81e4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924195.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924195.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924195.png",
@@ -5057,7 +5086,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924195/6f5614ec82dbb9d0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924195/565bd06b342a81e4.png",
           "kind": "generated"
         },
         {
@@ -5173,6 +5202,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "a6b307a92d4ff469",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924300.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924300.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924300.png",
@@ -5227,7 +5257,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924300/5ca6dc9f29e018f1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924300/a6b307a92d4ff469.png",
           "kind": "generated"
         },
         {
@@ -5343,6 +5373,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "565bd06b342a81e4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924405.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924405.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924405.png",
@@ -5397,7 +5428,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924405/6f5614ec82dbb9d0.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924405/565bd06b342a81e4.png",
           "kind": "generated"
         },
         {
@@ -5513,6 +5544,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "82e5b53bd4d16119",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923675.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923675.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923675.png",
@@ -5567,7 +5599,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923675/5915843e4376dc86.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923675/82e5b53bd4d16119.png",
           "kind": "generated"
         },
         {
@@ -5683,6 +5715,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "9be64466adcd2e02",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923780.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923780.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923780.png",
@@ -5737,7 +5770,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923780/bd5f4e9ef84c6947.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923780/9be64466adcd2e02.png",
           "kind": "generated"
         },
         {
@@ -5853,6 +5886,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "82e5b53bd4d16119",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923885.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923885.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923885.png",
@@ -5907,7 +5941,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923885/5915843e4376dc86.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923885/82e5b53bd4d16119.png",
           "kind": "generated"
         },
         {
@@ -6023,6 +6057,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "9be64466adcd2e02",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923990.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923990.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923990.png",
@@ -6077,7 +6112,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923990/bd5f4e9ef84c6947.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923990/9be64466adcd2e02.png",
           "kind": "generated"
         },
         {
@@ -6193,6 +6228,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "82e5b53bd4d16119",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924305.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924305.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924305.png",
@@ -6247,7 +6283,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924305/5915843e4376dc86.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924305/82e5b53bd4d16119.png",
           "kind": "generated"
         },
         {
@@ -6363,6 +6399,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "9be64466adcd2e02",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924410.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924410.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924410.png",
@@ -6417,7 +6454,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924410/bd5f4e9ef84c6947.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924410/9be64466adcd2e02.png",
           "kind": "generated"
         },
         {
@@ -6533,6 +6570,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "3ebd5d948f4541b0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923680.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923680.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923680.png",
@@ -6587,7 +6625,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923680/eeb32ec8e456833e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923680/3ebd5d948f4541b0.png",
           "kind": "generated"
         },
         {
@@ -6703,6 +6741,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "6c9aaf6316bccf20",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923785.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923785.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923785.png",
@@ -6757,7 +6796,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923785/816fda91ea8f846c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923785/6c9aaf6316bccf20.png",
           "kind": "generated"
         },
         {
@@ -6873,6 +6912,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "3ebd5d948f4541b0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924100.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924100.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924100.png",
@@ -6927,7 +6967,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924100/eeb32ec8e456833e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924100/3ebd5d948f4541b0.png",
           "kind": "generated"
         },
         {
@@ -7043,6 +7083,7 @@
       "price": "6441660",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "6c9aaf6316bccf20",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924205.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924205.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924205.png",
@@ -7097,7 +7138,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924205/816fda91ea8f846c.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924205/6c9aaf6316bccf20.png",
           "kind": "generated"
         },
         {
@@ -7213,6 +7254,7 @@
       "price": "5332500",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "5979bfbe6ba66158",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923790.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923790.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923790.png",
@@ -7267,7 +7309,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923790/d19ed8303d8099bc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923790/5979bfbe6ba66158.png",
           "kind": "generated"
         },
         {
@@ -7383,6 +7425,7 @@
       "price": "5332500",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "28aa5c394bfa6115",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924105.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924105.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924105.png",
@@ -7437,7 +7480,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924105/aa530282ecde25bd.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924105/28aa5c394bfa6115.png",
           "kind": "generated"
         },
         {
@@ -7553,6 +7596,7 @@
       "price": "5332500",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "70aff4688774861e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924110.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924110.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924110.png",
@@ -7607,7 +7651,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924110/7f3d03a8400e6bc5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924110/70aff4688774861e.png",
           "kind": "generated"
         },
         {
@@ -7723,6 +7767,7 @@
       "price": "5332500",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "70aff4688774861e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924320.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924320.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924320.png",
@@ -7777,7 +7822,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924320/7f3d03a8400e6bc5.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924320/70aff4688774861e.png",
           "kind": "generated"
         },
         {
@@ -7893,6 +7938,7 @@
       "price": "5332500",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "e92981b992b67061",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924225.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924225.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924225.png",
@@ -7947,7 +7993,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924225/f1ca79c7f75fed68.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924225/e92981b992b67061.png",
           "kind": "generated"
         },
         {
@@ -8063,6 +8109,7 @@
       "price": "5332500",
       "decoration": "Без отделки",
       "plan_id": "plan-7b193023d85a",
+      "card_version": "ec8f8389ba63dbd5",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924335.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924335.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924335.png",
@@ -8117,7 +8164,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924335/4022a2e3d5761028.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924335/ec8f8389ba63dbd5.png",
           "kind": "generated"
         },
         {
@@ -8233,6 +8280,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "9aa1b99318aaf4be",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923858.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923858.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923858.png",
@@ -8287,7 +8335,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923858/afcb75cbcc3855aa.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923858/9aa1b99318aaf4be.png",
           "kind": "generated"
         },
         {
@@ -8403,6 +8451,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "dd04733648c82704",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923758.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923758.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923758.png",
@@ -8457,7 +8506,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923758/3c0b563af57a177e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923758/dd04733648c82704.png",
           "kind": "generated"
         },
         {
@@ -8573,6 +8622,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "ef5f8992dd46a56b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923863.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923863.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923863.png",
@@ -8627,7 +8677,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923863/5a4da60a2be15f53.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923863/ef5f8992dd46a56b.png",
           "kind": "generated"
         },
         {
@@ -8743,6 +8793,7 @@
       "price": "6625080",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "cf1e81e877fb1b92",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923968.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923968.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923968.png",
@@ -8797,7 +8848,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923968/ee4d5caac9bb5158.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923968/cf1e81e877fb1b92.png",
           "kind": "generated"
         },
         {
@@ -8913,6 +8964,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "ef5f8992dd46a56b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924073.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924073.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924073.png",
@@ -8967,7 +9019,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924073/5a4da60a2be15f53.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924073/ef5f8992dd46a56b.png",
           "kind": "generated"
         },
         {
@@ -9083,6 +9135,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "f77309c7b9f89416",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923763.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923763.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923763.png",
@@ -9137,7 +9190,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923763/9d78c261347a6334.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923763/f77309c7b9f89416.png",
           "kind": "generated"
         },
         {
@@ -9253,6 +9306,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "f14ce8c3a951b227",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923868.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923868.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923868.png",
@@ -9307,7 +9361,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923868/6d27e51321895e99.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923868/f14ce8c3a951b227.png",
           "kind": "generated"
         },
         {
@@ -9423,6 +9477,7 @@
       "price": "6625080",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "3fd571edbf9c0c40",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923973.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923973.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923973.png",
@@ -9477,7 +9532,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923973/18e87fc6e0c7f6e9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923973/3fd571edbf9c0c40.png",
           "kind": "generated"
         },
         {
@@ -9593,6 +9648,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "f14ce8c3a951b227",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924078.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924078.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924078.png",
@@ -9647,7 +9703,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924078/6d27e51321895e99.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924078/f14ce8c3a951b227.png",
           "kind": "generated"
         },
         {
@@ -9763,6 +9819,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "f77309c7b9f89416",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924183.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924183.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924183.png",
@@ -9817,7 +9874,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924183/9d78c261347a6334.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924183/f77309c7b9f89416.png",
           "kind": "generated"
         },
         {
@@ -9933,6 +9990,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "f77309c7b9f89416",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924393.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924393.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924393.png",
@@ -9987,7 +10045,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924393/9d78c261347a6334.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924393/f77309c7b9f89416.png",
           "kind": "generated"
         },
         {
@@ -10103,6 +10161,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "46c859a1bd8ef6c6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923873.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923873.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923873.png",
@@ -10157,7 +10216,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923873/e0e6ff672deee061.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923873/46c859a1bd8ef6c6.png",
           "kind": "generated"
         },
         {
@@ -10273,6 +10332,7 @@
       "price": "6625080",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "a67d96faea23174b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923978.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923978.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923978.png",
@@ -10327,7 +10387,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923978/4195840594662c53.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923978/a67d96faea23174b.png",
           "kind": "generated"
         },
         {
@@ -10443,6 +10503,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "46c859a1bd8ef6c6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924083.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924083.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924083.png",
@@ -10497,7 +10558,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924083/e0e6ff672deee061.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924083/46c859a1bd8ef6c6.png",
           "kind": "generated"
         },
         {
@@ -10613,6 +10674,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "6000555140fc0df7",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924188.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924188.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924188.png",
@@ -10667,7 +10729,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924188/a0690214f09cb2d6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924188/6000555140fc0df7.png",
           "kind": "generated"
         },
         {
@@ -10783,6 +10845,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "46c859a1bd8ef6c6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924293.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924293.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924293.png",
@@ -10837,7 +10900,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924293/e0e6ff672deee061.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924293/46c859a1bd8ef6c6.png",
           "kind": "generated"
         },
         {
@@ -10953,6 +11016,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "6000555140fc0df7",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924398.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924398.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924398.png",
@@ -11007,7 +11071,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924398/a0690214f09cb2d6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924398/6000555140fc0df7.png",
           "kind": "generated"
         },
         {
@@ -11123,6 +11187,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "89919023c78843cc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923668.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923668.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923668.png",
@@ -11177,7 +11242,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923668/2001c36bf662635f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923668/89919023c78843cc.png",
           "kind": "generated"
         },
         {
@@ -11293,6 +11358,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "5fdd7992f0b9aec2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923773.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923773.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923773.png",
@@ -11347,7 +11413,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923773/34f7a3621187eac8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923773/5fdd7992f0b9aec2.png",
           "kind": "generated"
         },
         {
@@ -11463,6 +11529,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "89919023c78843cc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924088.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924088.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924088.png",
@@ -11517,7 +11584,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924088/2001c36bf662635f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924088/89919023c78843cc.png",
           "kind": "generated"
         },
         {
@@ -11633,6 +11700,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "5fdd7992f0b9aec2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924193.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924193.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924193.png",
@@ -11687,7 +11755,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924193/34f7a3621187eac8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924193/5fdd7992f0b9aec2.png",
           "kind": "generated"
         },
         {
@@ -11803,6 +11871,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "89919023c78843cc",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924298.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924298.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924298.png",
@@ -11857,7 +11926,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924298/2001c36bf662635f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924298/89919023c78843cc.png",
           "kind": "generated"
         },
         {
@@ -11973,6 +12042,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "5fdd7992f0b9aec2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924403.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924403.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924403.png",
@@ -12027,7 +12097,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924403/34f7a3621187eac8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924403/5fdd7992f0b9aec2.png",
           "kind": "generated"
         },
         {
@@ -12143,6 +12213,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "c5fbebf67e4d3f03",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923673.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923673.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923673.png",
@@ -12197,7 +12268,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923673/975d3b3c6982fe2d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923673/c5fbebf67e4d3f03.png",
           "kind": "generated"
         },
         {
@@ -12313,6 +12384,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "3840383f4ba1e93a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923778.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923778.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923778.png",
@@ -12367,7 +12439,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923778/45f24cb896c58648.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923778/3840383f4ba1e93a.png",
           "kind": "generated"
         },
         {
@@ -12483,6 +12555,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "c5fbebf67e4d3f03",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923883.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923883.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923883.png",
@@ -12537,7 +12610,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923883/975d3b3c6982fe2d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923883/c5fbebf67e4d3f03.png",
           "kind": "generated"
         },
         {
@@ -12653,6 +12726,7 @@
       "price": "6625080",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "03341a549bb96d62",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923988.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923988.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923988.png",
@@ -12707,7 +12781,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923988/7b76e75c0b094431.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923988/03341a549bb96d62.png",
           "kind": "generated"
         },
         {
@@ -12823,6 +12897,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "c5fbebf67e4d3f03",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924303.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924303.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924303.png",
@@ -12877,7 +12952,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924303/975d3b3c6982fe2d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924303/c5fbebf67e4d3f03.png",
           "kind": "generated"
         },
         {
@@ -12993,6 +13068,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "3840383f4ba1e93a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924408.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924408.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924408.png",
@@ -13047,7 +13123,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924408/45f24cb896c58648.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924408/3840383f4ba1e93a.png",
           "kind": "generated"
         },
         {
@@ -13163,6 +13239,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "b4a13f5d0d53a434",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923678.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923678.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923678.png",
@@ -13217,7 +13294,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923678/08ec74aac5ba7e90.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923678/b4a13f5d0d53a434.png",
           "kind": "generated"
         },
         {
@@ -13333,6 +13410,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "0a8061d11a592fc5",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923783.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923783.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923783.png",
@@ -13387,7 +13465,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923783/9ed9bf0ef1bcdf06.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923783/0a8061d11a592fc5.png",
           "kind": "generated"
         },
         {
@@ -13503,6 +13581,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "b4a13f5d0d53a434",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924098.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924098.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924098.png",
@@ -13557,7 +13636,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924098/08ec74aac5ba7e90.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924098/b4a13f5d0d53a434.png",
           "kind": "generated"
         },
         {
@@ -13673,6 +13752,7 @@
       "price": "6496020",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "0a8061d11a592fc5",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924203.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924203.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924203.png",
@@ -13727,7 +13807,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924203/9ed9bf0ef1bcdf06.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924203/0a8061d11a592fc5.png",
           "kind": "generated"
         },
         {
@@ -13843,6 +13923,7 @@
       "price": "5377500",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "6c2a6b07134eba17",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923683.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923683.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923683.png",
@@ -13897,7 +13978,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923683/2b5a86936eaed751.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923683/6c2a6b07134eba17.png",
           "kind": "generated"
         },
         {
@@ -14013,6 +14094,7 @@
       "price": "5377500",
       "decoration": "Без отделки",
       "plan_id": "plan-d5023151baf4",
+      "card_version": "3dec23941a733a41",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924223.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924223.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924223.png",
@@ -14067,7 +14149,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924223/c3225147ae349dfc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924223/3dec23941a733a41.png",
           "kind": "generated"
         },
         {
@@ -14183,6 +14265,7 @@
       "price": "6850305",
       "decoration": "Без отделки",
       "plan_id": "plan-8374fd32d683",
+      "card_version": "f10aaa254c09b65c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924194.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924194.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924194.png",
@@ -14237,7 +14320,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924194/1d68743e77e15cb9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924194/f10aaa254c09b65c.png",
           "kind": "generated"
         },
         {
@@ -14353,6 +14436,7 @@
       "price": "6850305",
       "decoration": "Без отделки",
       "plan_id": "plan-8374fd32d683",
+      "card_version": "9c54511bb1f2af24",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924204.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924204.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924204.png",
@@ -14407,7 +14491,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924204/9da9cb2e7c534c02.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924204/9c54511bb1f2af24.png",
           "kind": "generated"
         },
         {
@@ -14523,6 +14607,7 @@
       "price": "5858510",
       "decoration": "Без отделки",
       "plan_id": "plan-8374fd32d683",
+      "card_version": "b726d9cb6ca91e25",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923899.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923899.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923899.png",
@@ -14577,7 +14662,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923899/cb46c7aba60c7be3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923899/b726d9cb6ca91e25.png",
           "kind": "generated"
         },
         {
@@ -14693,6 +14778,7 @@
       "price": "5858510",
       "decoration": "Без отделки",
       "plan_id": "plan-8374fd32d683",
+      "card_version": "1d9e5e4969eed636",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924224.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924224.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924224.png",
@@ -14747,7 +14833,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924224/c706dac63e27bf0f.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924224/1d9e5e4969eed636.png",
           "kind": "generated"
         },
         {
@@ -14863,6 +14949,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "52821b3dec155b62",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923862.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923862.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923862.png",
@@ -14917,7 +15004,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923862/f9ff59eafa0c81f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923862/52821b3dec155b62.png",
           "kind": "generated"
         },
         {
@@ -15033,6 +15120,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "52821b3dec155b62",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924072.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924072.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924072.png",
@@ -15087,7 +15175,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924072/f9ff59eafa0c81f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924072/52821b3dec155b62.png",
           "kind": "generated"
         },
         {
@@ -15203,6 +15291,7 @@
       "price": "9370550",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "522834e8c7361022",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924282.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924282.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924282.png",
@@ -15257,7 +15346,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924282/5ab94ed400b51472.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924282/522834e8c7361022.png",
           "kind": "generated"
         },
         {
@@ -15373,6 +15462,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "68bec33722c98522",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923657.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923657.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923657.png",
@@ -15427,7 +15517,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923657/02b74cf487fd93b8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923657/68bec33722c98522.png",
           "kind": "generated"
         },
         {
@@ -15543,6 +15633,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "68bec33722c98522",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924077.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924077.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924077.png",
@@ -15597,7 +15688,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924077/02b74cf487fd93b8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924077/68bec33722c98522.png",
           "kind": "generated"
         },
         {
@@ -15713,6 +15804,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "c7f64b1504df9bef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923872.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923872.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923872.png",
@@ -15767,7 +15859,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923872/e8a3536c485ab9d6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923872/c7f64b1504df9bef.png",
           "kind": "generated"
         },
         {
@@ -15883,6 +15975,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "c7f64b1504df9bef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924082.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924082.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924082.png",
@@ -15937,7 +16030,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924082/e8a3536c485ab9d6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924082/c7f64b1504df9bef.png",
           "kind": "generated"
         },
         {
@@ -16053,6 +16146,7 @@
       "price": "9370550",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "90623ca0308e717c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924292.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924292.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924292.png",
@@ -16107,7 +16201,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924292/89657b6034eb7309.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924292/90623ca0308e717c.png",
           "kind": "generated"
         },
         {
@@ -16223,6 +16317,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "a7e48784316e32b3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923667.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923667.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923667.png",
@@ -16277,7 +16372,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923667/80132e1999962179.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923667/a7e48784316e32b3.png",
           "kind": "generated"
         },
         {
@@ -16393,6 +16488,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "a7e48784316e32b3",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924087.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924087.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924087.png",
@@ -16447,7 +16543,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924087/80132e1999962179.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924087/a7e48784316e32b3.png",
           "kind": "generated"
         },
         {
@@ -16563,6 +16659,7 @@
       "price": "9370550",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "5d8226c5c474ad7a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924297.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924297.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924297.png",
@@ -16617,7 +16714,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924297/74c6b201036a6982.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924297/5d8226c5c474ad7a.png",
           "kind": "generated"
         },
         {
@@ -16733,6 +16830,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "ffefb2383608beef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923672.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923672.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923672.png",
@@ -16787,7 +16885,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923672/702fd82f4b7ce6c8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923672/ffefb2383608beef.png",
           "kind": "generated"
         },
         {
@@ -16903,6 +17001,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "ffefb2383608beef",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923882.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923882.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923882.png",
@@ -16957,7 +17056,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923882/702fd82f4b7ce6c8.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923882/ffefb2383608beef.png",
           "kind": "generated"
         },
         {
@@ -17073,6 +17172,7 @@
       "price": "9370550",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "ba526a85f458802f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924302.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924302.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924302.png",
@@ -17127,7 +17227,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924302/3d7b506851eefbb3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924302/ba526a85f458802f.png",
           "kind": "generated"
         },
         {
@@ -17243,6 +17343,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "8dc4f588ebba5dbe",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923677.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923677.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923677.png",
@@ -17297,7 +17398,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923677/0538e3f023e1dc72.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923677/8dc4f588ebba5dbe.png",
           "kind": "generated"
         },
         {
@@ -17413,6 +17514,7 @@
       "price": "9305250",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "8dc4f588ebba5dbe",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924097.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924097.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924097.png",
@@ -17467,7 +17569,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924097/0538e3f023e1dc72.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924097/8dc4f588ebba5dbe.png",
           "kind": "generated"
         },
         {
@@ -17583,6 +17685,7 @@
       "price": "7378900",
       "decoration": "Без отделки",
       "plan_id": "plan-930aa8547ac4",
+      "card_version": "b08fb2f54c6cc880",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924337.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924337.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924337.png",
@@ -17637,7 +17740,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924337/1e715784b1c51290.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924337/b08fb2f54c6cc880.png",
           "kind": "generated"
         },
         {
@@ -17753,6 +17856,7 @@
       "price": "9265590",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "1ec2f091692a284b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923957.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923957.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923957.png",
@@ -17807,7 +17911,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923957/c44b0810ee74c147.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923957/1ec2f091692a284b.png",
           "kind": "generated"
         },
         {
@@ -17923,6 +18027,7 @@
       "price": "9265590",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "1ec2f091692a284b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924167.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924167.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924167.png",
@@ -17977,7 +18082,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924167/c44b0810ee74c147.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924167/1ec2f091692a284b.png",
           "kind": "generated"
         },
         {
@@ -18093,6 +18198,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "23a90acda4cdbf80",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923962.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923962.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923962.png",
@@ -18147,7 +18253,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923962/0f859a9aa8b920e7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923962/23a90acda4cdbf80.png",
           "kind": "generated"
         },
         {
@@ -18263,6 +18369,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "23a90acda4cdbf80",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924172.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924172.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924172.png",
@@ -18317,7 +18424,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924172/0f859a9aa8b920e7.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924172/23a90acda4cdbf80.png",
           "kind": "generated"
         },
         {
@@ -18433,6 +18540,7 @@
       "price": "9531270",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "e08c149c5b19bab7",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924382.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924382.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924382.png",
@@ -18487,7 +18595,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924382/53eecf7e0ffc3f57.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924382/e08c149c5b19bab7.png",
           "kind": "generated"
         },
         {
@@ -18603,6 +18711,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "580df787842541f2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923757.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923757.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923757.png",
@@ -18657,7 +18766,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923757/2b035d2b392e9e07.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923757/580df787842541f2.png",
           "kind": "generated"
         },
         {
@@ -18773,6 +18882,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "580df787842541f2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923967.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923967.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923967.png",
@@ -18827,7 +18937,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923967/2b035d2b392e9e07.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923967/580df787842541f2.png",
           "kind": "generated"
         },
         {
@@ -18943,6 +19053,7 @@
       "price": "9531270",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "f53114b1e5da1257",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924387.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924387.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924387.png",
@@ -18997,7 +19108,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924387/01d7a554c4f06a3b.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924387/f53114b1e5da1257.png",
           "kind": "generated"
         },
         {
@@ -19113,6 +19224,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "74dece916351c0dd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923762.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923762.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923762.png",
@@ -19167,7 +19279,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923762/dffc5d0244d67544.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923762/74dece916351c0dd.png",
           "kind": "generated"
         },
         {
@@ -19283,6 +19395,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "74dece916351c0dd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923972.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923972.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923972.png",
@@ -19337,7 +19450,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923972/dffc5d0244d67544.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923972/74dece916351c0dd.png",
           "kind": "generated"
         },
         {
@@ -19453,6 +19566,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "74dece916351c0dd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924182.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924182.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924182.png",
@@ -19507,7 +19621,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924182/dffc5d0244d67544.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924182/74dece916351c0dd.png",
           "kind": "generated"
         },
         {
@@ -19623,6 +19737,7 @@
       "price": "9531270",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "b6ce80422b1dbfec",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924392.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924392.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924392.png",
@@ -19677,7 +19792,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924392/63bc700aba20ab83.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924392/b6ce80422b1dbfec.png",
           "kind": "generated"
         },
         {
@@ -19793,6 +19908,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "758b3e7abf5404be",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923977.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923977.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923977.png",
@@ -19847,7 +19963,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923977/063c05dedefb73ce.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923977/758b3e7abf5404be.png",
           "kind": "generated"
         },
         {
@@ -19963,6 +20079,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "758b3e7abf5404be",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924187.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924187.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924187.png",
@@ -20017,7 +20134,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924187/063c05dedefb73ce.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924187/758b3e7abf5404be.png",
           "kind": "generated"
         },
         {
@@ -20133,6 +20250,7 @@
       "price": "9531270",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "832d4a65c615870b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924397.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924397.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924397.png",
@@ -20187,7 +20305,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924397/ac5faa89b8aee0f1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924397/832d4a65c615870b.png",
           "kind": "generated"
         },
         {
@@ -20303,6 +20421,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "bc3c52a0b8764b81",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923772.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923772.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923772.png",
@@ -20357,7 +20476,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923772/a53f8057528d2746.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923772/bc3c52a0b8764b81.png",
           "kind": "generated"
         },
         {
@@ -20473,6 +20592,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "bc3c52a0b8764b81",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924192.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924192.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924192.png",
@@ -20527,7 +20647,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924192/a53f8057528d2746.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924192/bc3c52a0b8764b81.png",
           "kind": "generated"
         },
         {
@@ -20643,6 +20763,7 @@
       "price": "9531270",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "481155c9c841029f",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924402.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924402.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924402.png",
@@ -20697,7 +20818,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924402/c8d6a991f15bab0d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924402/481155c9c841029f.png",
           "kind": "generated"
         },
         {
@@ -20813,6 +20934,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "d107ff091afb3ed4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923987.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923987.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923987.png",
@@ -20867,7 +20989,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923987/f345c58e9e068f71.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923987/d107ff091afb3ed4.png",
           "kind": "generated"
         },
         {
@@ -20983,6 +21105,7 @@
       "price": "9531270",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "1e4921de6094da50",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924407.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924407.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924407.png",
@@ -21037,7 +21160,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924407/8bff6f18b2aa36d9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924407/1e4921de6094da50.png",
           "kind": "generated"
         },
         {
@@ -21153,6 +21276,7 @@
       "price": "9464850",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "b4aed83dacf5b718",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924202.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924202.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924202.png",
@@ -21207,7 +21331,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924202/703546b76e5656ce.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924202/b4aed83dacf5b718.png",
           "kind": "generated"
         },
         {
@@ -21323,6 +21447,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "0558974e32752e2e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923787.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923787.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923787.png",
@@ -21377,7 +21502,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923787/f02cb5bfbbea7ad2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923787/0558974e32752e2e.png",
           "kind": "generated"
         },
         {
@@ -21493,6 +21618,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "0558974e32752e2e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924207.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924207.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924207.png",
@@ -21547,7 +21673,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924207/f02cb5bfbbea7ad2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924207/0558974e32752e2e.png",
           "kind": "generated"
         },
         {
@@ -21663,6 +21789,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "0558974e32752e2e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924417.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924417.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924417.png",
@@ -21717,7 +21844,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924417/f02cb5bfbbea7ad2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924417/0558974e32752e2e.png",
           "kind": "generated"
         },
         {
@@ -21833,6 +21960,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "891ed1b457516d51",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924002.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924002.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924002.png",
@@ -21887,7 +22015,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924002/6b37660a453985f9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924002/891ed1b457516d51.png",
           "kind": "generated"
         },
         {
@@ -22003,6 +22131,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "891ed1b457516d51",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924212.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924212.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924212.png",
@@ -22057,7 +22186,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924212/6b37660a453985f9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924212/891ed1b457516d51.png",
           "kind": "generated"
         },
         {
@@ -22173,6 +22302,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "891ed1b457516d51",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924422.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924422.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924422.png",
@@ -22227,7 +22357,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924422/6b37660a453985f9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924422/891ed1b457516d51.png",
           "kind": "generated"
         },
         {
@@ -22343,6 +22473,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "3674c3b5fa8f64a2",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924427.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924427.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924427.png",
@@ -22397,7 +22528,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924427/8b18bfb165887de6.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924427/3674c3b5fa8f64a2.png",
           "kind": "generated"
         },
         {
@@ -22513,6 +22644,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "a5225c17d5519198",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924432.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924432.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924432.png",
@@ -22567,7 +22699,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924432/44c72dc6c7838ce2.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924432/a5225c17d5519198.png",
           "kind": "generated"
         },
         {
@@ -22683,6 +22815,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "40f7a7a6a724aca0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923807.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923807.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923807.png",
@@ -22737,7 +22870,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923807/99e66d3bf8bd8aca.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923807/40f7a7a6a724aca0.png",
           "kind": "generated"
         },
         {
@@ -22853,6 +22986,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "40f7a7a6a724aca0",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924017.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924017.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924017.png",
@@ -22907,7 +23041,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924017/99e66d3bf8bd8aca.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924017/40f7a7a6a724aca0.png",
           "kind": "generated"
         },
         {
@@ -23023,6 +23157,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "178326f53212d6a8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924022.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924022.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924022.png",
@@ -23077,7 +23212,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924022/9fcec79a292896c1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924022/178326f53212d6a8.png",
           "kind": "generated"
         },
         {
@@ -23193,6 +23328,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "178326f53212d6a8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924232.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924232.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924232.png",
@@ -23247,7 +23383,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924232/9fcec79a292896c1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924232/178326f53212d6a8.png",
           "kind": "generated"
         },
         {
@@ -23363,6 +23499,7 @@
       "price": "7505460",
       "decoration": "Без отделки",
       "plan_id": "plan-1b9d9926da0c",
+      "card_version": "178326f53212d6a8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924442.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924442.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924442.png",
@@ -23417,7 +23554,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924442/9fcec79a292896c1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924442/178326f53212d6a8.png",
           "kind": "generated"
         },
         {
@@ -23533,6 +23670,7 @@
       "price": "7885140",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "64de53b2d473259e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923926.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923926.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923926.png",
@@ -23587,7 +23725,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923926/ac77a479348d2dc9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923926/64de53b2d473259e.png",
           "kind": "generated"
         },
         {
@@ -23703,6 +23841,7 @@
       "price": "7885140",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "628e8bd1c6389c94",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924351.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924351.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924351.png",
@@ -23757,7 +23896,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924351/984fcca0578805f3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924351/628e8bd1c6389c94.png",
           "kind": "generated"
         },
         {
@@ -23873,6 +24012,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "88ace75e2c121152",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924176.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924176.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924176.png",
@@ -23927,7 +24067,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924176/489cce833f9eae27.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924176/88ace75e2c121152.png",
           "kind": "generated"
         },
         {
@@ -24043,6 +24183,7 @@
       "price": "10013430",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "34a2785ca741c75a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924386.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924386.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924386.png",
@@ -24097,7 +24238,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924386/706026bf830cca45.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924386/34a2785ca741c75a.png",
           "kind": "generated"
         },
         {
@@ -24213,6 +24354,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "18c29332ad384ec4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923971.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923971.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923971.png",
@@ -24267,7 +24409,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923971/8f49b3f786da6533.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923971/18c29332ad384ec4.png",
           "kind": "generated"
         },
         {
@@ -24383,6 +24525,7 @@
       "price": "10013430",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "53bd418d4399f176",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924391.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924391.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924391.png",
@@ -24437,7 +24580,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924391/ee37367cd577a7ed.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924391/53bd418d4399f176.png",
           "kind": "generated"
         },
         {
@@ -24553,6 +24696,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "9b8436790ba6cee9",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923766.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923766.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923766.png",
@@ -24607,7 +24751,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923766/bf112515422351b1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923766/9b8436790ba6cee9.png",
           "kind": "generated"
         },
         {
@@ -24723,6 +24867,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "9b8436790ba6cee9",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923976.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923976.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923976.png",
@@ -24777,7 +24922,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923976/bf112515422351b1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923976/9b8436790ba6cee9.png",
           "kind": "generated"
         },
         {
@@ -24893,6 +25038,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "9b8436790ba6cee9",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924186.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924186.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924186.png",
@@ -24947,7 +25093,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924186/bf112515422351b1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924186/9b8436790ba6cee9.png",
           "kind": "generated"
         },
         {
@@ -25063,6 +25209,7 @@
       "price": "10013430",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "5c64b8fd1714c170",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924396.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924396.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924396.png",
@@ -25117,7 +25264,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924396/0c4d4d98dfc490e1.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924396/5c64b8fd1714c170.png",
           "kind": "generated"
         },
         {
@@ -25233,6 +25380,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "37703c3458a8eb53",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923981.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923981.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923981.png",
@@ -25287,7 +25435,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923981/c2b64741404bc465.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923981/37703c3458a8eb53.png",
           "kind": "generated"
         },
         {
@@ -25403,6 +25551,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "37703c3458a8eb53",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924191.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924191.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924191.png",
@@ -25457,7 +25606,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924191/c2b64741404bc465.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924191/37703c3458a8eb53.png",
           "kind": "generated"
         },
         {
@@ -25573,6 +25722,7 @@
       "price": "10013430",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "dde6031f5124130e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924401.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924401.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924401.png",
@@ -25627,7 +25777,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924401/6e40cc10891475da.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924401/dde6031f5124130e.png",
           "kind": "generated"
         },
         {
@@ -25743,6 +25893,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "d13419c691add066",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923776.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923776.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923776.png",
@@ -25797,7 +25948,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923776/bafd827fba693e87.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923776/d13419c691add066.png",
           "kind": "generated"
         },
         {
@@ -25913,6 +26064,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "d13419c691add066",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924196.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924196.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924196.png",
@@ -25967,7 +26119,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924196/bafd827fba693e87.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924196/d13419c691add066.png",
           "kind": "generated"
         },
         {
@@ -26083,6 +26235,7 @@
       "price": "10013430",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "76035a0b569f2b35",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924406.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924406.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924406.png",
@@ -26137,7 +26290,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924406/9a8dfc7d8befadfc.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924406/76035a0b569f2b35.png",
           "kind": "generated"
         },
         {
@@ -26253,6 +26406,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "a03aa4441166ba8c",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923781.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923781.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923781.png",
@@ -26307,7 +26461,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923781/18a6a8811a155257.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923781/a03aa4441166ba8c.png",
           "kind": "generated"
         },
         {
@@ -26423,6 +26577,7 @@
       "price": "9943650",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "039d431ed089d9c8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924206.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924206.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924206.png",
@@ -26477,7 +26632,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924206/3f6fe9347d6b4a32.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924206/039d431ed089d9c8.png",
           "kind": "generated"
         },
         {
@@ -26593,6 +26748,7 @@
       "price": "7885140",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "c57fe178577e5ca1",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924221.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924221.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924221.png",
@@ -26647,7 +26803,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924221/9ebda4336b4700de.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924221/c57fe178577e5ca1.png",
           "kind": "generated"
         },
         {
@@ -26763,6 +26919,7 @@
       "price": "7885140",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "fa8fb09b7e921c72",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924231.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924231.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924231.png",
@@ -26817,7 +26974,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924231/2112d90545b02eee.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924231/fa8fb09b7e921c72.png",
           "kind": "generated"
         },
         {
@@ -26933,6 +27090,7 @@
       "price": "7885140",
       "decoration": "Без отделки",
       "plan_id": "plan-1978afeab0e1",
+      "card_version": "f467d796ad77048a",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924236.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924236.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924236.png",
@@ -26987,7 +27145,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924236/7d6cd611bf30e200.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924236/f467d796ad77048a.png",
           "kind": "generated"
         },
         {
@@ -27103,6 +27261,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "ea892768886cbfbf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923611.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923611.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923611.png",
@@ -27157,7 +27316,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923611/3404b19d792ea248.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923611/ea892768886cbfbf.png",
           "kind": "generated"
         },
         {
@@ -27273,6 +27432,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "ea892768886cbfbf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923821.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923821.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923821.png",
@@ -27327,7 +27487,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923821/3404b19d792ea248.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923821/ea892768886cbfbf.png",
           "kind": "generated"
         },
         {
@@ -27443,6 +27603,7 @@
       "price": "9890550",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "83e944844090f859",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923856.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923856.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923856.png",
@@ -27497,7 +27658,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923856/dc557ba4d8f82401.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923856/83e944844090f859.png",
           "kind": "generated"
         },
         {
@@ -27613,6 +27774,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "fbdbb57aa32961cf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923651.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923651.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923651.png",
@@ -27667,7 +27829,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923651/ce720cff0cc9cbfe.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923651/fbdbb57aa32961cf.png",
           "kind": "generated"
         },
         {
@@ -27783,6 +27945,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "fbdbb57aa32961cf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923861.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923861.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923861.png",
@@ -27837,7 +28000,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923861/ce720cff0cc9cbfe.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923861/fbdbb57aa32961cf.png",
           "kind": "generated"
         },
         {
@@ -27953,6 +28116,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "fbdbb57aa32961cf",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924071.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924071.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924071.png",
@@ -28007,7 +28171,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924071/ce720cff0cc9cbfe.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924071/fbdbb57aa32961cf.png",
           "kind": "generated"
         },
         {
@@ -28123,6 +28287,7 @@
       "price": "10174150",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "7ee561c51dc99fdd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924281.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924281.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924281.png",
@@ -28177,7 +28342,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924281/9f3f85d4a924d60e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924281/7ee561c51dc99fdd.png",
           "kind": "generated"
         },
         {
@@ -28293,6 +28458,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "b52edd00e006bff8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923866.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923866.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923866.png",
@@ -28347,7 +28513,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923866/f374edf41c8c6067.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923866/b52edd00e006bff8.png",
           "kind": "generated"
         },
         {
@@ -28463,6 +28629,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "b52edd00e006bff8",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924076.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924076.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924076.png",
@@ -28517,7 +28684,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924076/f374edf41c8c6067.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924076/b52edd00e006bff8.png",
           "kind": "generated"
         },
         {
@@ -28633,6 +28800,7 @@
       "price": "10174150",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "566eb4de4f60b10e",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924286.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924286.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924286.png",
@@ -28687,7 +28855,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924286/f79dab0e5ae0efaf.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924286/566eb4de4f60b10e.png",
           "kind": "generated"
         },
         {
@@ -28803,6 +28971,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "d3338835fda22c12",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923661.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923661.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923661.png",
@@ -28857,7 +29026,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923661/aebdc656bd7c12c9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923661/d3338835fda22c12.png",
           "kind": "generated"
         },
         {
@@ -28973,6 +29142,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "d3338835fda22c12",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923871.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923871.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923871.png",
@@ -29027,7 +29197,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923871/aebdc656bd7c12c9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923871/d3338835fda22c12.png",
           "kind": "generated"
         },
         {
@@ -29143,6 +29313,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "d3338835fda22c12",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924081.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924081.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924081.png",
@@ -29197,7 +29368,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924081/aebdc656bd7c12c9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924081/d3338835fda22c12.png",
           "kind": "generated"
         },
         {
@@ -29313,6 +29484,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "48418e52a667cecd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923876.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923876.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923876.png",
@@ -29367,7 +29539,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923876/b266024896c9e799.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923876/48418e52a667cecd.png",
           "kind": "generated"
         },
         {
@@ -29483,6 +29655,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "48418e52a667cecd",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924086.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924086.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924086.png",
@@ -29537,7 +29710,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924086/b266024896c9e799.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924086/48418e52a667cecd.png",
           "kind": "generated"
         },
         {
@@ -29653,6 +29826,7 @@
       "price": "10174150",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "a8d4b39bb2aabc8b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924296.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924296.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924296.png",
@@ -29707,7 +29881,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924296/91266e1dbba6724e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924296/a8d4b39bb2aabc8b.png",
           "kind": "generated"
         },
         {
@@ -29823,6 +29997,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "a80ba4e16bc902c4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923671.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923671.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923671.png",
@@ -29877,7 +30052,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923671/0e7d3598a1a27c2e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923671/a80ba4e16bc902c4.png",
           "kind": "generated"
         },
         {
@@ -29993,6 +30168,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "a80ba4e16bc902c4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924091.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924091.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924091.png",
@@ -30047,7 +30223,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924091/0e7d3598a1a27c2e.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924091/a80ba4e16bc902c4.png",
           "kind": "generated"
         },
         {
@@ -30163,6 +30339,7 @@
       "price": "10174150",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "956df8b6ffd1de2b",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924301.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924301.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924301.png",
@@ -30217,7 +30394,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924301/dedfd23ada8970a4.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924301/956df8b6ffd1de2b.png",
           "kind": "generated"
         },
         {
@@ -30333,6 +30510,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "49c2204ab15439e4",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923886.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923886.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923886.png",
@@ -30387,7 +30565,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923886/b8b44b4b2ffd6772.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923886/49c2204ab15439e4.png",
           "kind": "generated"
         },
         {
@@ -30503,6 +30681,7 @@
       "price": "10174150",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "70ea6dc4b9237994",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924306.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924306.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924306.png",
@@ -30557,7 +30736,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924306/2e5f53f788ac4d7d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924306/70ea6dc4b9237994.png",
           "kind": "generated"
         },
         {
@@ -30673,6 +30852,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "225321afc1581994",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923681.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923681.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923681.png",
@@ -30727,7 +30907,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923681/305ba52c160e941d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923681/225321afc1581994.png",
           "kind": "generated"
         },
         {
@@ -30843,6 +31023,7 @@
       "price": "10103250",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "225321afc1581994",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924101.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924101.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924101.png",
@@ -30897,7 +31078,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924101/305ba52c160e941d.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924101/225321afc1581994.png",
           "kind": "generated"
         },
         {
@@ -31013,6 +31194,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "95bccd5018221014",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923686.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923686.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923686.png",
@@ -31067,7 +31249,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923686/2a12437fc61f9d95.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923686/95bccd5018221014.png",
           "kind": "generated"
         },
         {
@@ -31183,6 +31365,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "d8947cf62dda18ce",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923696.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923696.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923696.png",
@@ -31237,7 +31420,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923696/715708c416c29ae3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923696/d8947cf62dda18ce.png",
           "kind": "generated"
         },
         {
@@ -31353,6 +31536,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "d8947cf62dda18ce",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924326.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924326.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924326.png",
@@ -31407,7 +31591,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924326/715708c416c29ae3.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924326/d8947cf62dda18ce.png",
           "kind": "generated"
         },
         {
@@ -31523,6 +31707,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "d7243ed6bf182ab6",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923911.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923911.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923911.png",
@@ -31577,7 +31762,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923911/38d6b56d931257ca.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923911/d7243ed6bf182ab6.png",
           "kind": "generated"
         },
         {
@@ -31693,6 +31878,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "39e2b5099f752afb",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923706.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923706.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923706.png",
@@ -31747,7 +31933,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923706/49443e22bbe8fec9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923706/39e2b5099f752afb.png",
           "kind": "generated"
         },
         {
@@ -31863,6 +32049,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "39e2b5099f752afb",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923916.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923916.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923916.png",
@@ -31917,7 +32104,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923916/49443e22bbe8fec9.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923916/39e2b5099f752afb.png",
           "kind": "generated"
         },
         {
@@ -32033,6 +32220,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "4d48c94ec203bd30",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11923921.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11923921.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11923921.png",
@@ -32087,7 +32275,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923921/0d7f94d91b2c4c73.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11923921/4d48c94ec203bd30.png",
           "kind": "generated"
         },
         {
@@ -32203,6 +32391,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "4d48c94ec203bd30",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924131.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924131.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924131.png",
@@ -32257,7 +32446,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924131/0d7f94d91b2c4c73.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924131/4d48c94ec203bd30.png",
           "kind": "generated"
         },
         {
@@ -32373,6 +32562,7 @@
       "price": "8011700",
       "decoration": "Без отделки",
       "plan_id": "plan-d43638350f1b",
+      "card_version": "4d48c94ec203bd30",
       "image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/previews/11924341.webp",
       "thumbnail": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/thumbnails/11924341.webp",
       "final_image": "https://feed-api.indigo-dm.ru/media/projects/novyy-gorizont/images/11924341.png",
@@ -32427,7 +32617,7 @@
       "feed_images": [
         {
           "id": "brand-card",
-          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924341/0d7f94d91b2c4c73.png",
+          "url": "https://indigo-feed-studio-gateway.pages.dev/media/projects/novyy-gorizont/images/11924341/4d48c94ec203bd30.png",
           "kind": "generated"
         },
         {

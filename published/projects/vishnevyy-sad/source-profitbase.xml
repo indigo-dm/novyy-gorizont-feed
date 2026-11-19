@@ -5514,42 +5514,6 @@
   <AdStatus>Free</AdStatus>
  </Ad>
  <Ad>
-  <Id>13832103</Id>
-  <ContactMethod>По телефону и в сообщениях</ContactMethod>
-  <ManagerName>Отдел продаж</ManagerName>
-  <ContactPhone>+78632098967</ContactPhone>
-  <Category>Квартиры</Category>
-  <OperationType>Продам</OperationType>
-  <PropertyRights>Застройщик</PropertyRights>
-  <Address>Аксай, Аксайский район, Ростовская область, Ленина</Address>
-  <Latitude>47.282049</Latitude>
-  <Longitude>39.861714</Longitude>
-  <Description><![CDATA[Первый жилой комплекс в Аксае, созданный по принципам ответственного девелопмента.]]></Description>
-  <Price>8488300</Price>
-  <Square>58.54</Square>
-  <Decoration>Без отделки</Decoration>
-  <Floor>1</Floor>
-  <Status>Квартира</Status>
-  <MarketType>Новостройка</MarketType>
-  <NewDevelopmentId>9464277</NewDevelopmentId>
-  <Rooms>2</Rooms>
-  <KitchenSpace/>
-  <LivingSpace/>
-  <Floors>9</Floors>
-  <HouseType>Монолитно-кирпичный</HouseType>
-  <Images>
-   <Image url="https://pb12296.profitbase.ru/uploads/preset/12296/f3352c6fbceaf9843ff941c6378453b8.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/house/12296/0510ef9394c04bee8505255f0fb19d73.png"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a00c5930.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a1c6c351.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88a62242ee.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/64e88aa90acca.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/building_image/12296/678e47cf92ab4.jpg"/>
-   <Image url="https://pb12296.profitbase.ru/uploads/layout/12296/5cfeab771da8df3ed586f6259305f55a.jpg"/>
-  </Images>
-  <AdStatus>Free</AdStatus>
- </Ad>
- <Ad>
   <Id>13832104</Id>
   <ContactMethod>По телефону и в сообщениях</ContactMethod>
   <ManagerName>Отдел продаж</ManagerName>
