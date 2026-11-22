@@ -36,6 +36,9 @@ def download_feed(url: str, attempts: int, delays: list[int]) -> bytes:
                     raise ValueError("expected Ads root")
             except (ET.ParseError, ValueError):
                 if attempt >= attempts:
+                    if not content.strip():
+                        print("Source temporarily unavailable: empty response; keep the last publication", file=sys.stderr)
+                        raise SystemExit(75)
                     raise SystemExit(
                         f"Source returned invalid feed XML after {attempt} attempts (expected Ads root)"
                     ) from None

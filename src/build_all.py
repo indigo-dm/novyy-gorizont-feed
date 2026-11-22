@@ -13,6 +13,27 @@ def run(command: list[str], env: dict[str, str]) -> None:
     subprocess.run(command, cwd=ROOT, env=env, check=True)
 
 
+def preserve_unavailable_source(slug: str) -> None:
+    project_dir = ROOT / "site" / "projects" / slug
+    if not all((project_dir / name).is_file() for name in ("inventory.json", "status.json", "avito.xml")):
+        raise RuntimeError(f"{slug}: source unavailable and no previous publication exists")
+    outcome = {
+        "project": slug,
+        "status": "unavailable",
+        "reason": "empty_source_response",
+        "attempted_at": datetime.now(timezone.utc).isoformat(),
+    }
+    (project_dir / "refresh-outcome.json").write_text(json.dumps(outcome), encoding="utf-8")
+    message = f"{slug}: source temporarily unavailable; previous publication retained, checked_at unchanged."
+    print(message)
+    if os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+            handle.write("skip_publish=true\n")
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as handle:
+            handle.write(f"### Source refresh skipped\n\n{message}\n")
+
+
 def main() -> None:
     feeds: dict[str, str] = {}
     raw_feeds = os.environ.get("PROFITBASE_FEEDS_JSON", "").strip()
@@ -59,7 +80,10 @@ def main() -> None:
         env["PROFITBASE_FEED_URL"] = feed_url
         try:
             run([sys.executable, "src/fetch_feed.py"], env)
-        except subprocess.CalledProcessError:
+        except subprocess.CalledProcessError as error:
+            if error.returncode == 75 and requested_slug:
+                preserve_unavailable_source(slug)
+                return
             if requested_slug:
                 raise
             failed_projects.append(slug)

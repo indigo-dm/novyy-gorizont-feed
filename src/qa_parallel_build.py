@@ -31,6 +31,7 @@ with tempfile.TemporaryDirectory() as temporary:
     published = root / "published"
     published.mkdir(parents=True)
     (published / "projects.json").write_text(json.dumps({
+        "build_id": "previous-build",
         "projects": [{"slug": slug, "available": True} for slug in expected],
     }), encoding="utf-8")
     for slug in expected:
@@ -56,6 +57,22 @@ with tempfile.TemporaryDirectory() as temporary:
         {path.name for path in (source / "projects" / slug).iterdir()} == set(PROJECT_FILES)
         for slug in expected
     )
+
+    # An empty source retains old files and their checked_at rather than pretending to rebuild.
+    for slug in expected:
+        marker = source / "artifacts" / f"feed-project-{slug}" / "refresh-outcome.json"
+        marker.write_text(json.dumps({
+            "project": slug, "status": "unavailable", "reason": "empty_source_response",
+        }), encoding="utf-8")
+    command = [
+        PYTHON, "src/finalize_project_registry.py",
+        "--source", str(source), "--published", str(published),
+        "--registry", "projects.json", "--build-id", "new-attempt",
+    ]
+    subprocess.run(command, cwd=ROOT, check=True)
+    skipped_result = json.loads((source / "projects.json").read_text(encoding="utf-8"))
+    assert skipped_result["build_id"] == "previous-build"
+    assert all(item["available"] and item["source_refresh"]["status"] == "unavailable" for item in skipped_result["projects"])
 
 print({
     "matrix_projects": expected,

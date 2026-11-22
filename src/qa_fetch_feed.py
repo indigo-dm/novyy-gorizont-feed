@@ -28,6 +28,11 @@ class FeedDownloadTests(unittest.TestCase):
         with self.assertRaisesRegex(SystemExit, 'invalid feed XML after 2 attempts'):
             self.download(b'<html />', b'<html />')
 
+    def test_repeated_empty_response_has_temporary_unavailable_code(self):
+        with self.assertRaises(SystemExit) as caught:
+            self.download(b'', b'')
+        self.assertEqual(caught.exception.code, 75)
+
     def test_truncated_xml_is_rejected(self):
         with self.assertRaisesRegex(SystemExit, 'invalid feed XML'):
             self.download(b'<?xml version="1.0"?><Ads><Ad>')

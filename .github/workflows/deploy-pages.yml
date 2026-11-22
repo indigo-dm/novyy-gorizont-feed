@@ -149,6 +149,7 @@ jobs:
           python src/prepare_source_feeds.py --source .source-feeds
 
       - name: Build and validate affected project cards
+        id: build
         env:
           PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
           RENDER_IDS: ${{ inputs.render_ids || github.event.client_payload.render_ids || (github.event_name == 'schedule' && 'changed') || '' }}
@@ -163,6 +164,7 @@ jobs:
         run: python src/build_all.py
 
       - name: Publish changed project files to Cloudflare R2
+        if: steps.build.outputs.skip_publish != 'true'
         env:
           PROJECT_SLUG: ${{ inputs.project || github.event.client_payload.project || '' }}
           CLOUDFLARE_ACCOUNT_ID: a9cba5f7aab40d0c2af7d11c14d59811
@@ -190,6 +192,7 @@ jobs:
             site/projects/${{ inputs.project }}/source-profitbase.xml
             site/projects/${{ inputs.project }}/avito.xml
             site/projects/${{ inputs.project }}/pilot-avito.xml
+            site/projects/${{ inputs.project }}/refresh-outcome.json
           retention-days: 1
           if-no-files-found: error
 
