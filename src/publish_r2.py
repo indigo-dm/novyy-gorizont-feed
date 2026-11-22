@@ -126,6 +126,7 @@ def main() -> None:
         raise RuntimeError(f"AWS CLI is unavailable: {aws}")
 
     process_env = os.environ.copy()
+    process_env["AWS_REGION"] = "auto"
     process_env["AWS_DEFAULT_REGION"] = "auto"
     process_env["AWS_EC2_METADATA_DISABLED"] = "true"
 

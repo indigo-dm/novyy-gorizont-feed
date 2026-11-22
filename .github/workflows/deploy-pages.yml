@@ -45,6 +45,11 @@ on:
         required: false
         type: boolean
         default: true
+env:
+  AWS_REGION: auto
+  AWS_DEFAULT_REGION: auto
+  AWS_EC2_METADATA_DISABLED: "true"
+
 permissions:
   contents: read
   actions: write

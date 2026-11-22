@@ -6,6 +6,11 @@ on:
     - cron: "47 2 * * *"
       timezone: "Europe/Moscow"
 
+env:
+  AWS_REGION: auto
+  AWS_DEFAULT_REGION: auto
+  AWS_EC2_METADATA_DISABLED: "true"
+
 permissions:
   contents: write
 

@@ -4,6 +4,7 @@ import os
 import socket
 import sys
 import time
+import xml.etree.ElementTree as ET
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -28,7 +29,24 @@ def download_feed(url: str, attempts: int, delays: list[int]) -> bytes:
     for attempt in range(1, attempts + 1):
         try:
             with urlopen(request, timeout=90) as response:
-                return response.read()
+                content = response.read()
+            try:
+                root = ET.fromstring(content)
+                if root.tag != "Ads":
+                    raise ValueError("expected Ads root")
+            except (ET.ParseError, ValueError):
+                if attempt >= attempts:
+                    raise SystemExit(
+                        f"Source returned invalid feed XML after {attempt} attempts (expected Ads root)"
+                    ) from None
+                delay = delays[attempt - 1]
+                print(
+                    f"Source attempt {attempt}/{attempts} returned invalid feed XML; retrying in {delay}s",
+                    file=sys.stderr,
+                )
+                time.sleep(delay)
+                continue
+            return content
         except HTTPError as error:
             retryable = error.code in RETRYABLE_HTTP_CODES
             if not retryable or attempt >= attempts:
@@ -66,9 +84,6 @@ def main() -> None:
     except ValueError as error:
         raise SystemExit("PROFITBASE_FETCH_ATTEMPTS must be a whole number") from error
     content = download_feed(url, attempts, retry_delays(attempts))
-    if not content.lstrip().startswith(b"<?xml"):
-        raise SystemExit("Profitbase response is not XML")
-
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_bytes(content)
     print(f"Downloaded {len(content)} bytes to {destination}")

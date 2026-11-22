@@ -44,6 +44,9 @@ def main() -> None:
     if not github_env:
         raise RuntimeError("GITHUB_ENV is unavailable")
     value = json.dumps(feeds, ensure_ascii=False, separators=(",", ":"))
+    # Values loaded from R2 are not automatically masked as Actions secrets.
+    for url in feeds.values():
+        print(f"::add-mask::{url}")
     with Path(github_env).open("a", encoding="utf-8") as handle:
         handle.write(f"PROFITBASE_FEEDS_JSON={value}\n")
     print(f"Loaded protected source addresses for {len(feeds)} project(s).")

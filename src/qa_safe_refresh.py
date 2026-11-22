@@ -42,6 +42,9 @@ assert "--force-with-lease" in compact
 assert "git checkout --orphan feed-data-compacted" in compact
 assert "Mirror current published data from R2" in backup
 assert "cron: \"47 2 * * *\"" in backup
+for r2_workflow in (deploy, workflow, backup, apply_settings, validate_feed):
+    assert "AWS_REGION: auto" in r2_workflow
+    assert "AWS_DEFAULT_REGION: auto" in r2_workflow
 assert "card_version: publishedCardVersion(item)" in renderer
 assert "require('./card_version.cjs')" in renderer
 for settings_workflow in (apply_settings, validate_feed):
