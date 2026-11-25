@@ -6451,6 +6451,22 @@
         "area_max": null,
         "include_ids": [],
         "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1795587110787",
+        "name": "Способ связи",
+        "enabled": true,
+        "values": {
+          "ContactMethod": "По телефону и в сообщениях"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
       }
     ]
   },
