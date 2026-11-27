@@ -127,7 +127,7 @@ def avito_video_url(value: object, name: str) -> str:
     parsed = urlparse(result)
     host = parsed.hostname.casefold() if parsed.hostname else ""
     vk_video = parsed.scheme == "https" and host == "vkvideo.ru" and re.fullmatch(r"/video-[^/\s?#]+/?", parsed.path)
-    rutube_video = parsed.scheme == "https" and host == "rutube.ru" and re.fullmatch(r"/video/[^/\s?#]+/?", parsed.path)
+    rutube_video = parsed.scheme == "https" and host == "rutube.ru" and re.fullmatch(r"/(?:video|shorts)/[^/\s?#]+/?", parsed.path)
     if not (vk_video or rutube_video):
         raise ValueError(f"{name} must be a VK Video or Rutube video URL")
     return result

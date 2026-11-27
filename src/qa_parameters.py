@@ -31,6 +31,8 @@ assert parameter_value("ContactMethod", "По телефону", "ContactMethod"
 assert parameter_value("BalconyOrLoggiaMulti", ["Лоджия"], "BalconyOrLoggiaMulti") == ["Лоджия"]
 assert parameter_value("VideoURL", "https://vkvideo.ru/video-123_456", "VideoURL") == "https://vkvideo.ru/video-123_456"
 assert parameter_value("VideoURL", "https://rutube.ru/video/abcdef123456/", "VideoURL") == "https://rutube.ru/video/abcdef123456/"
+shorts_url = "https://rutube.ru/shorts/6eb93920d73f3fda6d3c7c5a6c340db1/"
+assert parameter_value("VideoURL", shorts_url, "VideoURL") == shorts_url
 
 for tag, value in (("KitchenSpace", "1.99"), ("LivingSpace", "5000.01")):
     try:
@@ -40,7 +42,7 @@ for tag, value in (("KitchenSpace", "1.99"), ("LivingSpace", "5000.01")):
     else:
         raise AssertionError(f"{tag} accepted an out-of-range value")
 
-for value in ("https://example.com/video/123", "http://vkvideo.ru/video-123_456", "https://vkvideo.ru/clip123", "https://rutube.ru/channel/123"):
+for value in ("https://example.com/video/123", "http://vkvideo.ru/video-123_456", "https://vkvideo.ru/clip123", "https://rutube.ru/channel/123", "https://rutube.ru/shorts/", "http://rutube.ru/shorts/123", "https://rutube.ru.example.com/shorts/123"):
     try:
         parameter_value("VideoURL", value, "VideoURL")
     except ValueError:
