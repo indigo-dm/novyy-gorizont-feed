@@ -6467,6 +6467,22 @@
         "area_max": null,
         "include_ids": [],
         "exclude_ids": []
+      },
+      {
+        "id": "parameter-rule-1795709897040",
+        "name": "Видео",
+        "enabled": true,
+        "values": {
+          "VideoURL": "https://rutube.ru/shorts/6eb93920d73f3fda6d3c7c5a6c340db1/"
+        },
+        "house_ids": [],
+        "rooms": [],
+        "floors": [],
+        "plan_ids": [],
+        "area_min": null,
+        "area_max": null,
+        "include_ids": [],
+        "exclude_ids": []
       }
     ]
   },
